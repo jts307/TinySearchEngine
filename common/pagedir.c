@@ -35,6 +35,9 @@ static char* getFilePath(const char *pageDir, const char *fileName);
 /**************** isValidDirectory() ****************/
 int isValidDirectory(const char *pageDir)
 {
+  // checking if pageDir is NULL, exiting if it is
+  assertp((char*)pageDir, "isValidDirectory gets NULL pageDir");
+
   // dummy file to be created in directory	
   const char *fileName = ".crawler"; 
 
@@ -54,19 +57,38 @@ int isValidDirectory(const char *pageDir)
   }
 }
 /**************** webpageToPageFile() ****************/
-void pageSaver(const char *pageDir, webpage_t *wp)
+int pageSaver(const char *pageDir, webpage_t *wp)
 {
-  // checking arguments are not NULL.
+  // exit status
+  int status=0;
+
+  // checking if pageDir is NULL if it is then exit
   assertp((char*)pageDir, "pageSaver gets NULL pageDir\n");
-  assertp(wp, "pageSaver gets NULL wp\n");
-  assertp(webpage_getURL(wp), "pageSaver gets NULL wp->url\n");
-  assertp(webpage_getHTML(wp), "pageSaver gets NULL wp->html\n");
+
+  // checking arguments other than pageDir are not NULL.
+  // Upon a NULL argument, it is logged and function returns
+  if (wp == NULL) {
+    fprintf(stderr, "pageSaver gets NULL wp\n");
+    status = 1;
+    return status;
+  }
+  if (webpage_getURL(wp) == NULL) {
+    fprintf(stderr, "pageSaver gets NULL wp->url\n");
+    status = 2;
+    return status;
+  }
+  if (webpage_getHTML(wp) ==  NULL) {
+    fprintf(stderr, "pageSaver gets NULL wp->html\n");
+    status = 3;
+    return status;
+  }
   
   // checking if saved depth is positive
   if (webpage_getDepth(wp) < 0) {
     // on error log it, return and continue	  
     fprintf(stderr, "The depth for a webpage is not positive. Webpage URL: %s\n", webpage_getURL(wp));
-    return;
+    status = 4;
+    return status;
   }
 
   int numDigits=0;       // number of digits that file id has
@@ -101,35 +123,39 @@ void pageSaver(const char *pageDir, webpage_t *wp)
   if ((fp = fopen(filePath, "w")) == NULL) {
     // on error log and continue	  
     fprintf(stderr, "Problem creating %s\n", filePath);
+    status = 5;
   }
   
   // writing url to first line of file
   if (fprintf(fp, "%s\n", webpage_getURL(wp)) < 0) {
     // on error log and continue	  
     fprintf(stderr, "Problem writing url to %s\n", filePath); 	  
+    status = 5;
   }
 
   // writing depth to second line of file
   if (fprintf(fp, "%d\n", webpage_getDepth(wp)) < 0) {
     // on error log and continue
     fprintf(stderr, "Problem writing depth to %s\n", filePath); 
+    status = 5;
   }
 
   // writing html to third line onwards of file
   if (fprintf(fp, "%s", webpage_getHTML(wp)) < 0) {
     // on error log and continue
     fprintf(stderr, "Problem writing HTML to %s\n", filePath); 
+    status = 5;
   }
   count_free((char*)filePath);
   fclose(fp);
+  return status;
 }
 
-/**************** webpageToPageFile() ****************/
+/**************** getFilePath() ****************/
 static char* getFilePath(const char *pageDir, const char *fileName)
 {       	
-  // checking that arguments are not NULL.
+  // checking that directory is not NULL.
   assertp((char*)pageDir, "getFilePath gets NULL pageDir\n");
-  assertp((char*)fileName, "getFilePath gets NULL fileName\n");
 
   // allocating space for filePath pointer  
   char *filePath = count_malloc(strlen(pageDir) + strlen(fileName) + 2);
