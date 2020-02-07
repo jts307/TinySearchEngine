@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "webpage.h"
 
 /**************** global types ****************/
@@ -49,6 +50,6 @@ int isValidDirectory(const char *pageDir);
  *   	6 - failed to create filePath String
  *   	7 - Error creating or writing to page file 	 
  */
-void pageSaver(const char *pageDir, webpage_t *wp);
+int pageSaver(const char *pageDir, webpage_t *wp);
 
 #endif // __PAGEDIR_H

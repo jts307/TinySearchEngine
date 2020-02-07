@@ -22,8 +22,8 @@ int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth);
 
 int main(const int argc, const char *argv[]){
 
-  status=0;		// exit status    	
-  reqNumArgs=3; 	// required number of arguments
+  int status=0;		// exit status    	
+  int reqNumArgs=3; 	// required number of arguments
 
   // checking numbers of arguments passed
   if (argc != reqNumArgs) {
@@ -40,12 +40,12 @@ int main(const int argc, const char *argv[]){
           status+=2;
 	  fprintf(stderr, "Error: maxDepth must be numerical.\n");	    
       // checking if seedURL is internal and valid (i.e. can be parsed and contains html) 
-      } else if (!IsInternalURL(argv[1])) {
+      } else if (!IsInternalURL((char*)argv[1])) {
           // if not then return error
           fprintf(stderr, "seedURL is not internal or valid.");
           status+=3;
       // checking if pageDirectory is a valid and writable directory 
-      } else if (!IsValidDirectory(argv[2])) {
+      } else if (!isValidDirectory(argv[2])) {
           // if not then return error
           fprintf(stderr, "pageDirectory is not a valid and writable directory.");
           status+=4;	    
@@ -67,7 +67,7 @@ int main(const int argc, const char *argv[]){
 */
 int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth) {
   
-  status=0; 			   // exit status
+  int status=0; 	           // exit status
   bag_t *toBeVisited=NULL; 	   // webpages that have not been crawled
   hashtable_t *visitedURLs=NULL;   // urls that have already been crawled
   webpage_t *seedWp=NULL;	   // webpage for seed URL
@@ -90,7 +90,7 @@ int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth) 
       status+=7;
 
   // making a webpage for seedURL marked with depth of 0 and NULL html.
-  } else if ((seedWp = webpage_new(seedURL, 0, NULL)) == NULL) {
+  } else if ((seedWp = webpage_new((char*)seedURL, 0, NULL)) == NULL) {
       // if error then increment status, log error
       fprintf(stderr, "Error creating a webpage type for the seed URL.");
       status+=8;
@@ -110,11 +110,11 @@ int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth) 
 	// fetch HTML for current webpage
         if(!webpage_fetch(currWp)) {
           // if error, increment status and log it
-	  fprintf(stderr, "There was an error fetching webpage html for %s", webpage_getURL());
+	  fprintf(stderr, "There was an error fetching webpage html for %s", webpage_getURL(currWp));
 	  status=10;    
         }
 	// writing an output file for current webpage
-        if (pageSaver(pageDirectory,currWp) != NULL) {
+        if (pageSaver(pageDirectory,currWp) != 0) {
           // increment status (error already logged within pageSaver)
 	  status=11;
 	}
