@@ -26,7 +26,7 @@
  * returns:
  *   int with value of 0 if directory exists and is writable, 1 otherwise.
  * When pageDir is NULL or failed memory allocation, 
- * then an error is written to stderr and it exits.
+ * then an error is written to stderr and it exits with positive status.
  */
 int isValidDirectory(const char *pageDir);
 
@@ -39,14 +39,15 @@ int isValidDirectory(const char *pageDir);
  *   pageDir - directory page file will be saved to
  *   webpage - pointer to webpage type whose information will be written to a file.
  * returns:
- *   returns 0 on success and positive value on failure, except in the case where pageDir 
- *   is NULL or there is a failed memory allocation then function exits with positive status.
+ *   returns 0 on success and positive value on any error.
  *   Error statuses:
- *   	1 - NULL wp
- *   	2 - NULL wp->url
- *   	3 - NULL wp->html
- *   	4 - Negative wp->depth
- *   	5 - Error creating or writing to page file 	 
+ *      1 - NULL pageDir
+ *   	2 - NULL wp
+ *   	3 - NULL wp->url
+ *   	4 - NULL wp->html
+ *   	5 - Negative wp->depth
+ *   	6 - failed to create filePath String
+ *   	7 - Error creating or writing to page file 	 
  */
 void pageSaver(const char *pageDir, webpage_t *wp);
 

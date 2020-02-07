@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include <math.h>
 #include "webpage.h"
 #include "memory.h"
@@ -33,27 +34,28 @@ static char* getFilePath(const char *pageDir, const char *fileName);
 /**************** functions **********************/
 
 /**************** isValidDirectory() ****************/
-int isValidDirectory(const char *pageDir)
+bool isValidDirectory(const char *pageDir)
 {
   // checking if pageDir is NULL, exiting if it is
   assertp((char*)pageDir, "isValidDirectory gets NULL pageDir");
 
   // dummy file to be created in directory	
   const char *fileName = ".crawler"; 
-
+  
   // creating path inside directory for dummy file  
   const char *filePath = getFilePath(pageDir, fileName);
+  assertp((char*)filePath, "Error creating filePath string for directory.");
 
   // if dummy file is not created then the directory is invalid
   FILE *fp;
   if ((fp = fopen(filePath, "w")) == NULL) {
     count_free((char*)filePath);
-    return 1;
+    return false;
   // else the directory is valid
   } else {
     fclose(fp);
     count_free((char*)filePath);
-    return 0;
+    return true;
   }
 }
 /**************** webpageToPageFile() ****************/
@@ -62,24 +64,28 @@ int pageSaver(const char *pageDir, webpage_t *wp)
   // exit status
   int status=0;
 
-  // checking if pageDir is NULL if it is then exit
-  assertp((char*)pageDir, "pageSaver gets NULL pageDir\n");
+  if (pageDir == NULL) {
+    // if NULL return error
+    fprintf(stderr, "pageSaver gets NULL pageDir");
+    status++;
+    return status;
+  }
 
   // checking arguments other than pageDir are not NULL.
   // Upon a NULL argument, it is logged and function returns
   if (wp == NULL) {
     fprintf(stderr, "pageSaver gets NULL wp\n");
-    status = 1;
+    status = 2;
     return status;
   }
   if (webpage_getURL(wp) == NULL) {
     fprintf(stderr, "pageSaver gets NULL wp->url\n");
-    status = 2;
+    status = 3;
     return status;
   }
   if (webpage_getHTML(wp) ==  NULL) {
     fprintf(stderr, "pageSaver gets NULL wp->html\n");
-    status = 3;
+    status = 4;
     return status;
   }
   
@@ -87,7 +93,7 @@ int pageSaver(const char *pageDir, webpage_t *wp)
   if (webpage_getDepth(wp) < 0) {
     // on error log it, return and continue	  
     fprintf(stderr, "The depth for a webpage is not positive. Webpage URL: %s\n", webpage_getURL(wp));
-    status = 4;
+    status = 5;
     return status;
   }
 
@@ -106,6 +112,13 @@ int pageSaver(const char *pageDir, webpage_t *wp)
     
     // creating file path string from file id
     filePath = getFilePath(pageDir, stringId);
+
+    if (filePath == NULL) {
+      // log error and return
+      fprintf(stderr,"Error with creating filePath string for file id.");
+      status = 6;
+      return status; 
+    }
     count_free(stringId);
 
     // move on to next file id
@@ -123,28 +136,28 @@ int pageSaver(const char *pageDir, webpage_t *wp)
   if ((fp = fopen(filePath, "w")) == NULL) {
     // on error log and continue	  
     fprintf(stderr, "Problem creating %s\n", filePath);
-    status = 5;
+    status = 7;
   }
   
   // writing url to first line of file
   if (fprintf(fp, "%s\n", webpage_getURL(wp)) < 0) {
     // on error log and continue	  
     fprintf(stderr, "Problem writing url to %s\n", filePath); 	  
-    status = 5;
+    status = 7;
   }
 
   // writing depth to second line of file
   if (fprintf(fp, "%d\n", webpage_getDepth(wp)) < 0) {
     // on error log and continue
     fprintf(stderr, "Problem writing depth to %s\n", filePath); 
-    status = 5;
+    status = 7;
   }
 
   // writing html to third line onwards of file
   if (fprintf(fp, "%s", webpage_getHTML(wp)) < 0) {
     // on error log and continue
     fprintf(stderr, "Problem writing HTML to %s\n", filePath); 
-    status = 5;
+    status = 7;
   }
   count_free((char*)filePath);
   fclose(fp);
@@ -154,13 +167,19 @@ int pageSaver(const char *pageDir, webpage_t *wp)
 /**************** getFilePath() ****************/
 static char* getFilePath(const char *pageDir, const char *fileName)
 {       	
-  // checking that directory is not NULL.
-  assertp((char*)pageDir, "getFilePath gets NULL pageDir\n");
-
+  // return NULL if directory name is NULL.
+  if (pageDir == NULL) {
+    fprintf(stderr, "getFilePath gets NULL pageDir\n");
+    return NULL;
+  }
   // allocating space for filePath pointer  
   char *filePath = count_malloc(strlen(pageDir) + strlen(fileName) + 2);
-  assertp(filePath, "Failure to allocate space for filePath pointer.\n");
-
+  
+  // returning NULL if failure to allocate memory
+  if (filePath == NULL) {
+    fprintf(stderr, "Failure to allocate space for filePath pointer.\n");
+    return NULL;
+  }
   // creating directory path string from directory and file strings
   strcpy(filePath, pageDir);
   strcat(filePath, "/");
