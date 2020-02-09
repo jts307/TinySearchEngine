@@ -1,0 +1,847 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Graceful_degradation.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Graceful_degradation by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Fault tolerance - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Fault_tolerance" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Fault_tolerance" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Fault_tolerance","wgTitle":"Fault tolerance","wgCurRevisionId":599167039,"wgRevisionId":599167039,"wgArticleId":2091393,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from January 2008","All articles needing additional references","Wikipedia articles needing clarification from February 2009","Fault tolerance","Reliability engineering","Computer systems","Software","Control engineering","Systems engineering","Software quality","RAID"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Fault_tolerance","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Graceful_degradation","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q15260926"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Fault_tolerance skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Fault tolerance</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Graceful_degradation&amp;redirect=no" title="Graceful degradation">Graceful degradation</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(January 2008)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:258px;"><a href="http://en.wikipedia.org/wiki/File:Graceful_Degradation_of_Transparency.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graceful_Degradation_of_Transparency.png/256px-Graceful_Degradation_of_Transparency.png" width="256" height="111" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graceful_Degradation_of_Transparency.png/384px-Graceful_Degradation_of_Transparency.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graceful_Degradation_of_Transparency.png/512px-Graceful_Degradation_of_Transparency.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Graceful_Degradation_of_Transparency.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An example of graceful degradation by design in an image with transparency. The top two images are each the result of viewing the composite image in a viewer that recognises transparency. The bottom two images are the result in a viewer with no support for transparency. Because the transparency mask (centre bottom) is discarded, only the overlay (centre top) remains; the image on the left has been designed to degrade gracefully, hence is still meaningful without its transparency information.</div>
+</div>
+</div>
+<p><b>Fault-tolerance</b> or <b>graceful degradation</b> is the property that enables a <a href="http://en.wikipedia.org/wiki/System" title="System">system</a> to continue operating properly in the event of the failure of (or one or more faults within) some of its components. If its operating quality decreases at all, the decrease is proportional to the severity of the failure, as compared to a naïvely-designed system in which even a small failure can cause total breakdown. Fault-tolerance is particularly sought-after in <a href="http://en.wikipedia.org/wiki/High-availability" title="High-availability" class="mw-redirect">high-availability</a> or <a href="Life-critical_system.html" title="Life-critical system">life-critical systems</a>.</p>
+<p>A <b>fault-tolerant design</b> enables a system to continue its intended operation, possibly at a reduced level, rather than failing completely, when some part of the system <a href="http://en.wikipedia.org/wiki/Failure" title="Failure">fails</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The term is most commonly used to describe <a href="Computer_system.html" title="Computer system" class="mw-redirect">computer systems</a> designed to continue more or less fully operational with, perhaps, a reduction in <a href="http://en.wikipedia.org/wiki/Throughput" title="Throughput">throughput</a> or an increase in <a href="http://en.wikipedia.org/wiki/Response_time_(technology)" title="Response time (technology)">response time</a> in the event of some partial failure. That is, the system as a whole is not stopped due to problems either in the <a href="Computer_hardware.html" title="Computer hardware">hardware</a> or the <a href="Software.html" title="Software">software</a>. An example in another field is a motor vehicle designed so it will continue to be drivable if one of the tires is punctured. A structure is able to retain its integrity in the presence of damage due to causes such as <a href="http://en.wikipedia.org/wiki/Fatigue_(material)" title="Fatigue (material)">fatigue</a>, <a href="http://en.wikipedia.org/wiki/Corrosion" title="Corrosion">corrosion</a>, manufacturing flaws, or impact.</p>
+<p>Fault-tolerance is not just a property of individual machines; it may also characterise the rules by which they interact. For example, the <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">Transmission Control Protocol</a> (TCP) is designed to allow reliable two-way communication in a <a href="http://en.wikipedia.org/wiki/Packet-switched_network" title="Packet-switched network" class="mw-redirect">packet-switched network</a>, even in the presence of communications links which are imperfect or overloaded. It does this by requiring the endpoints of the communication to <i>expect</i> packet loss, duplication, reordering and corruption, so that these conditions do not damage data integrity, and only reduce throughput by a proportional amount.</p>
+<p>Recovery from errors in fault-tolerant systems can be characterised as either <b>roll-forward</b> or <b>roll-back</b>. When the system detects that it has made an error, roll-forward recovery takes the system state at that time and corrects it, to be able to move forward. Roll-back recovery reverts the system state back to some earlier, correct version, for example using <a href="http://en.wikipedia.org/wiki/Checkpointing" title="Checkpointing" class="mw-redirect">checkpointing</a>, and moves forward from there. Roll-back recovery requires that the operations between the checkpoint and the detected erroneous state can be made <a href="http://en.wikipedia.org/wiki/Idempotence_(computer_science)" title="Idempotence (computer science)" class="mw-redirect">idempotent</a>. Some systems make use of both roll-forward and roll-back recovery for different errors or different parts of one error.</p>
+<p>Within the scope of an <i>individual</i> system, fault-tolerance can be achieved by anticipating exceptional conditions and building the system to cope with them, and, in general, aiming for <a href="http://en.wikipedia.org/wiki/Self-stabilization" title="Self-stabilization">self-stabilization</a> so that the system converges towards an error-free state. However, if the consequences of a system failure are catastrophic, or the cost of making it sufficiently reliable is very high, a better solution may be to use some form of duplication. In any case, if the consequence of a system failure is so catastrophic, the system must be able to use reversion to fall back to a safe mode. This is similar to roll-back recovery but can be a human action if humans are present in the loop.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Components"><span class="tocnumber">1</span> <span class="toctext">Components</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Redundancy"><span class="tocnumber">2</span> <span class="toctext">Redundancy</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Criteria"><span class="tocnumber">3</span> <span class="toctext">Criteria</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Requirements"><span class="tocnumber">4</span> <span class="toctext">Requirements</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Replication"><span class="tocnumber">5</span> <span class="toctext">Replication</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Disadvantages"><span class="tocnumber">6</span> <span class="toctext">Disadvantages</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Examples"><span class="tocnumber">7</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Related_terms"><span class="tocnumber">8</span> <span class="toctext">Related terms</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Bibliography"><span class="tocnumber">11</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Components">Components</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=1" title="Edit section: Components">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If each component, in turn, can continue to function when one of its subcomponents fails, this will allow the total system to continue to operate, as well. Using a passenger vehicle as an example, a car can have <a href="http://en.wikipedia.org/wiki/Run-flat_tire" title="Run-flat tire">"run-flat" tires</a>, which each contain a solid rubber core, allowing them to be used even if a tire is punctured. The punctured "run-flat" tire may be used for a limited time at a reduced speed.</p>
+<h2><span class="mw-headline" id="Redundancy">Redundancy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=2" title="Edit section: Redundancy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Redundancy_(engineering)" title="Redundancy (engineering)">redundancy (engineering)</a></div>
+<p>Redundancy is the provision of functional capabilities that would be unnecessary in a fault-free environment.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> This can be backup components which automatically "kick in" should one component fail. For example, large cargo trucks can lose a tire without any major consequences. They have many tires, and no one tire is critical (with the exception of the front tires, which are used to steer). The idea of incorporating redundancy in order to improve the reliability of a system was pioneered by John von Neumann in the 1950s.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Two kinds of redundancy are possible:<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> space redundancy and time redundancy. Space redundancy provides additional components, functions, or data items that are unnecessary for fault-free operation. Space redundancy is further classified into hardware, software and information redundancy, depending on the type of redundant resources added to the system. In time redundancy the computation or data transmission is repeated and the result is compared to a stored copy of the previous result.</p>
+<h2><span class="mw-headline" id="Criteria">Criteria</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=3" title="Edit section: Criteria">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Providing fault-tolerant design for every component is normally not an option. Associated redundancy brings a number of penalties: increase in weight, size, power consumption, cost, as well as time to design, verify, and test. Therefore, a number of choices have to be examined to determine which components should be fault-tolerant:<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<ul>
+<li><b>How critical is the component?</b> In a car, the radio is not critical, so this component has less need for fault-tolerance.</li>
+</ul>
+<ul>
+<li><b>How likely is the component to fail?</b> Some components, like the drive shaft in a car, are not likely to fail, so no fault-tolerance is needed.</li>
+</ul>
+<ul>
+<li><b>How expensive is it to make the component fault-tolerant?</b> Requiring a redundant car engine, for example, would likely be too expensive both economically and in terms of weight and space, to be considered.</li>
+</ul>
+<p>An example of a component that passes all the tests is a car's occupant restraint system. While we do not normally think of the <i>primary</i> occupant restraint system, it is <a href="http://en.wikipedia.org/wiki/Gravity" title="Gravity" class="mw-redirect">gravity</a>. If the vehicle rolls over or undergoes severe g-forces, then this primary method of occupant restraint may fail. Restraining the occupants during such an accident is absolutely critical to safety, so we pass the first test. Accidents causing occupant ejection were quite common before <a href="http://en.wikipedia.org/wiki/Seat_belt" title="Seat belt">seat belts</a>, so we pass the second test. The cost of a redundant restraint method like seat belts is quite low, both economically and in terms or weight and space, so we pass the third test. Therefore, adding seat belts to all vehicles is an excellent idea. Other "supplemental restraint systems", such as <a href="http://en.wikipedia.org/wiki/Airbag" title="Airbag">airbags</a>, are more expensive and so pass that test by a smaller margin.</p>
+<h2><span class="mw-headline" id="Requirements">Requirements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=4" title="Edit section: Requirements">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The basic characteristics of fault tolerance require:</p>
+<ol>
+<li>No single point of failure - If a system experiences a failure, it must continue to operate without interruption during the repair process</li>
+<li>Fault isolation to the failing component - When a failure occurs, the system must be able to isolate the failure to the offending component. This requires the addition of dedicated failure detection mechanisms that exist only for the purpose of fault isolation. Recovery from a fault condition requires classifying the fault or failing component. The <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a> (NIST) categorizes faults based on Locality, Cause, Duration and Effect.</li>
+<li>Fault containment to prevent propagation of the failure - Some failure mechanisms can cause a system to fail by propagating the failure to the rest of the system. An example of this kind of failure is the "Rogue transmitter" which can swamp legitimate communication in a system and cause overall system failure. Mechanisms that isolate a rogue transmitter or failing component to protect the system are required.</li>
+<li>Availability of reversion modes</li>
+</ol>
+<p>In addition, fault tolerant systems are characterized in terms of both planned service outages and unplanned service outages. These are usually measured at the application level and not just at a hardware level. The figure of merit is called <a href="http://en.wikipedia.org/wiki/Availability" title="Availability">availability</a> and is expressed as a percentage. For example, a <a href="http://en.wikipedia.org/wiki/5_nines" title="5 nines" class="mw-redirect">five nines</a> system would statistically provide 99.999% availability.</p>
+<p>Fault-tolerant systems are typically based on the concept of redundancy.</p>
+<h2><span class="mw-headline" id="Replication">Replication</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=5" title="Edit section: Replication">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Spare components addresses the first fundamental characteristic of fault-tolerance in three ways:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Replication_(computer_science)" title="Replication (computer science)" class="mw-redirect">Replication</a>: Providing multiple identical instances of the same system or subsystem, directing tasks or requests to all of them in <a href="Parallel_computing.html" title="Parallel computing">parallel</a>, and choosing the correct result on the basis of a <a href="http://en.wikipedia.org/wiki/Quorum" title="Quorum">quorum</a>;</li>
+<li><a href="http://en.wikipedia.org/wiki/Redundancy_(engineering)" title="Redundancy (engineering)">Redundancy</a>: Providing multiple identical instances of the same system and switching to one of the remaining instances in case of a failure (<a href="http://en.wikipedia.org/wiki/Failover" title="Failover">failover</a>);</li>
+<li>Diversity: Providing multiple <i>different</i> implementations of the same specification, and using them like replicated systems to cope with errors in a specific implementation.</li>
+</ul>
+<p>All implementations of <a href="http://en.wikipedia.org/wiki/RAID" title="RAID">RAID</a>, <a href="http://en.wikipedia.org/wiki/RAID" title="RAID">redundant array of independent disks</a>, except RAID 0, are examples of a fault-tolerant <a href="http://en.wikipedia.org/wiki/Data_storage_device" title="Data storage device">storage device</a> that uses <a href="http://en.wikipedia.org/wiki/Data_redundancy" title="Data redundancy">data redundancy</a>.</p>
+<p>A <a href="http://en.wikipedia.org/wiki/Lockstep_(computing)" title="Lockstep (computing)">lockstep</a> fault-tolerant machine uses replicated elements operating in parallel. At any time, all the replications of each element should be in the same state. The same inputs are provided to each <a href="http://en.wikipedia.org/wiki/Replication_(computing)" title="Replication (computing)">replication</a>, and the same outputs are expected. The outputs of the replications are compared using a <a href="http://en.wikipedia.org/w/index.php?title=Voting_circuit&amp;action=edit&amp;redlink=1" class="new" title="Voting circuit (page does not exist)">voting circuit</a>. A machine with two replications of each element is termed <a href="http://en.wikipedia.org/wiki/Dual_modular_redundant" title="Dual modular redundant" class="mw-redirect">Dual Modular Redundant</a> (DMR). The voting circuit can then only detect a mismatch and recovery relies on other methods. A machine with three replications of each element is termed <a href="http://en.wikipedia.org/wiki/Triple_modular_redundancy" title="Triple modular redundancy">Triple Modular Redundancy</a> (TMR). The voting circuit can determine which replication is in error when a two-to-one vote is observed. In this case, the voting circuit can output the correct result, and discard the erroneous version. After this, the internal state of the erroneous replication is assumed to be different from that of the other two, and the voting circuit can switch to a DMR mode. This model can be applied to any larger number of replications.</p>
+<p><a href="http://en.wikipedia.org/wiki/Lockstep_(computing)" title="Lockstep (computing)">Lockstep</a> fault tolerant machines are most easily made fully <a href="http://en.wikipedia.org/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">synchronous</a>, with each gate of each replication making the same state transition on the same edge of the clock, and the clocks to the replications being exactly in phase. However, it is possible to build lockstep systems without this requirement.</p>
+<p>Bringing the replications into synchrony requires making their internal stored states the same. They can be started from a fixed initial state, such as the reset state. Alternatively, the internal state of one replica can be copied to another replica.</p>
+<p>One variant of DMR is <b>pair-and-spare</b>. Two replicated elements operate in lockstep as a pair, with a voting circuit that detects any mismatch between their operations and outputs a signal indicating that there is an error. Another pair operates exactly the same way. A final circuit selects the output of the pair that does not proclaim that it is in error. Pair-and-spare requires four replicas rather than the three of TMR, but has been used commercially.</p>
+<h2><span class="mw-headline" id="Disadvantages">Disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=6" title="Edit section: Disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Fault-tolerant design's advantages are obvious, while many of its disadvantages are not:</p>
+<ul>
+<li><b>Interference with fault detection in the same component.</b> To continue the above passenger vehicle example, it may not be obvious to the driver when a tire has been punctured, with either of the fault-tolerant systems. This is usually handled with a separate "automated fault detection system". In the case of the tire, an air pressure monitor detects the loss of pressure and notifies the driver. The alternative is a "manual fault detection system", such as manually inspecting all tires at each stop.</li>
+</ul>
+<ul>
+<li><b>Interference with fault detection in another component.</b> Another variation of this problem is when fault-tolerance in one component prevents fault detection in a different component. For example, if component B performs some operation based on the output from component A, then fault-tolerance in B can hide a problem with A. If component B is later changed (to a less fault-tolerant design) the system may fail suddenly, making it appear that the new component B is the problem. Only after the system has been carefully scrutinized will it become clear that the root problem is actually with component A.</li>
+</ul>
+<ul>
+<li><b>Reduction of priority of fault correction.</b> Even if the operator is aware of the fault, having a fault-tolerant system is likely to reduce the importance of repairing the fault. If the faults are not corrected, this will eventually lead to system failure, when the fault-tolerant component fails completely or when all redundant components have also failed.</li>
+</ul>
+<ul>
+<li><b>Test difficulty.</b> For certain critical fault-tolerant systems, such as a <a href="http://en.wikipedia.org/wiki/Nuclear_reactor" title="Nuclear reactor">nuclear reactor</a>, there is no easy way to verify that the backup components are functional. The most infamous example of this is <a href="http://en.wikipedia.org/wiki/Chernobyl_disaster" title="Chernobyl disaster">Chernobyl</a>, where operators tested the emergency backup cooling by disabling primary and secondary cooling. The backup failed, resulting in a core meltdown and massive release of radiation.</li>
+</ul>
+<ul>
+<li><b>Cost.</b> Both fault-tolerant components and redundant components tend to increase cost. This can be a purely economic cost or can include other measures, such as weight. <a href="http://en.wikipedia.org/wiki/Human_spaceflight" title="Human spaceflight">Manned spaceships</a>, for example, have so many redundant and fault-tolerant components that their weight is increased dramatically over unmanned systems, which don't require the same level of safety.</li>
+</ul>
+<ul>
+<li><b>Inferior components.</b> A fault-tolerant design may allow for the use of inferior components, which would have otherwise made the system inoperable. While this practice has the potential to mitigate the cost increase, use of multiple inferior components may lower the reliability of the system to a level equal to, or even worse than, a comparable non-fault-tolerant system.</li>
+</ul>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=7" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hardware fault-tolerance sometimes requires that broken parts can be taken out and replaced with new parts while the system is still operational (in computing known as <i><a href="http://en.wikipedia.org/wiki/Hot_swapping" title="Hot swapping">hot swapping</a></i>). Such a system implemented with a single backup is known as <b>single point tolerant</b>, and represents the vast majority of fault-tolerant systems. In such systems the <a href="http://en.wikipedia.org/wiki/Mean_time_between_failure" title="Mean time between failure" class="mw-redirect">mean time between failures</a> should be long enough for the operators to have time to fix the broken devices (<a href="http://en.wikipedia.org/wiki/Mean_time_to_repair" title="Mean time to repair">mean time to repair</a>) before the backup also fails. It helps if the time between failures is as long as possible, but this is not specifically required in a fault-tolerant system.</p>
+<p>Fault-tolerance is notably successful in computer applications. <a href="http://en.wikipedia.org/wiki/Tandem_Computers" title="Tandem Computers">Tandem Computers</a> built their entire business on such machines, which used single point tolerance to create their <b>NonStop</b> systems with <a href="Uptime.html" title="Uptime">uptimes</a> measured in years.</p>
+<p>Fail-safe architectures may encompass also the computer software, for example by process <a href="http://en.wikipedia.org/wiki/Replication_(computer_science)" title="Replication (computer science)" class="mw-redirect">replication (computer science)</a>.</p>
+<p>Data formats may also be designed to degrade gracefully. <a href="http://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a> for example, is designed to be <a href="http://en.wikipedia.org/wiki/Forward_compatibility" title="Forward compatibility">forward compatible</a>, allowing new HTML entities to be ignored by <a href="http://en.wikipedia.org/wiki/Web_browser" title="Web browser">Web browsers</a> which do not understand them without causing the document to be unusable.</p>
+<h2><span class="mw-headline" id="Related_terms">Related terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=8" title="Edit section: Related terms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There is a difference between fault tolerance and systems that rarely have problems. For instance, the <a href="http://en.wikipedia.org/wiki/Western_Electric" title="Western Electric">Western Electric</a> <a href="http://en.wikipedia.org/wiki/Crossbar_switch" title="Crossbar switch">crossbar</a> systems had failure rates of two hours per forty years, and therefore were highly <i>fault resistant</i>. But when a fault did occur they still stopped operating completely, and therefore were not <i>fault-tolerant</i>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Byzantine_fault_tolerance" title="Byzantine fault tolerance">Byzantine fault tolerance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Capillary_routing" title="Capillary routing" class="mw-redirect">Capillary routing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cluster_(computing)" title="Cluster (computing)" class="mw-redirect">Cluster (computing)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Control_reconfiguration" title="Control reconfiguration">Control reconfiguration</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Data_redundancy" title="Data redundancy">Data redundancy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Defence_in_depth" title="Defence in depth">Defence in depth</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Elegant_degradation" title="Elegant degradation">Elegant degradation</a></li>
+<li><a href="Error_detection_and_correction.html" title="Error detection and correction">Error detection and correction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Error-tolerant_design" title="Error-tolerant design">Error-tolerant design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fail_soft" title="Fail soft">Fail soft</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fail-fast" title="Fail-fast">Fail-fast</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fail-safe" title="Fail-safe">Fail-safe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Failure_transparency" title="Failure transparency">Failure transparency</a><sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (February 2009)">clarification needed</span></a></i>]</sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Fall_back_and_forward" title="Fall back and forward">fall back and forward</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fault-tolerant_computer_systems" title="Fault-tolerant computer systems" class="mw-redirect">Fault-tolerant computer systems</a></li>
+<li><a href="Graceful_degradation.html" title="Graceful degradation" class="mw-redirect">Graceful degradation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intrusion_tolerance" title="Intrusion tolerance">Intrusion tolerance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_system_quality_attributes" title="List of system quality attributes">List of system quality attributes</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Progressive_Enhancement" title="Progressive Enhancement" class="mw-redirect">Progressive Enhancement</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resilience_(ecology)" title="Resilience (ecology)">Resilience (ecology)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resilience_(network)" title="Resilience (network)">Resilience (network)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rhizome_(Philosophy)" title="Rhizome (Philosophy)" class="mw-redirect">Rhizome (Philosophy)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rollback_(data_management)" title="Rollback (data management)">Rollback</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Safe-life_design" title="Safe-life design">Safe-life design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Separation_of_protection_and_security" title="Separation of protection and security">Separation of protection and security</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Johnson, B. W. (1984). "Fault-Tolerant Microprocessor-Based Systems", IEEE Micro, vol. 4, no. 6, pp. 6-21</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Laprie, J. C. (1985). "Dependable Computing and Fault Tolerance: Concepts and Terminology", Proceedings of 15th International Symposium on Fault-Tolerant Computing (FTSC-15), pp. 2-11</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">von Neumann, J. (1956). "Probabilistic Logics and Synthesis of Reliable Organisms from Unreliable Components", in Automata Studies, eds. C. Shannon and J. McCarthy, Princeton University Press, pp. 43-98</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Avizienis, A. (1976). "Fault-Tolerant Systems", IEEE Transactions on Computers, vol. 25, no. 12, pp. 1304-1312</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Dubrova, E. (2013). "Fault-Tolerant Design", Springer, 2013, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9781461421122" class="internal mw-magiclink-isbn">ISBN 978-1-4614-2112-2</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=11" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Brian_Randell" title="Brian Randell">Brian Randell</a>, P.A. Lee, P. C. Treleaven (June 1978). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=356729&amp;coll=&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618">"Reliability Issues in Computing System Design"</a>. <i><a href="http://en.wikipedia.org/wiki/ACM_Computing_Surveys" title="ACM Computing Surveys">ACM Computing Surveys</a> (CSUR)</i> <b>10</b> (2): 123–165. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F356725.356729">10.1145/356725.356729</a>. <a href="International_Standard_Serial_Number.html" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0360-0300">0360-0300</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFault+tolerance&amp;rft.atitle=Reliability+Issues+in+Computing+System+Design&amp;rft.au=Brian+Randell%2C+P.A.+Lee%2C+P.+C.+Treleaven&amp;rft.aulast=Brian+Randell%2C+P.A.+Lee%2C+P.+C.+Treleaven&amp;rft.date=June+1978&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D356729%26coll%3D%26dl%3DACM%26CFID%3D15151515%26CFTOKEN%3D6184618&amp;rft_id=info%3Adoi%2F10.1145%2F356725.356729&amp;rft.issn=0360-0300&amp;rft.issue=2&amp;rft.jtitle=ACM+Computing+Surveys+%28CSUR%29&amp;rft.pages=123%E2%80%93165&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=10" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="http://en.wikipedia.org/wiki/P._J._Denning" title="P. J. Denning" class="mw-redirect">P. J. Denning</a> (December 1976). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=356680&amp;dl=ACM&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618">"Fault tolerant operating systems"</a>. <i>ACM Computing Surveys (CSUR)</i> <b>8</b> (4): 359–389. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F356678.356680">10.1145/356678.356680</a>. <a href="International_Standard_Serial_Number.html" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0360-0300">0360-0300</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFault+tolerance&amp;rft.atitle=Fault+tolerant+operating+systems&amp;rft.aulast=P.+J.+Denning&amp;rft.au=P.+J.+Denning&amp;rft.date=December+1976&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D356680%26dl%3DACM%26coll%3D%26CFID%3D15151515%26CFTOKEN%3D6184618&amp;rft_id=info%3Adoi%2F10.1145%2F356678.356680&amp;rft.issn=0360-0300&amp;rft.issue=4&amp;rft.jtitle=ACM+Computing+Surveys+%28CSUR%29&amp;rft.pages=359%E2%80%93389&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=8" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal">Theodore A. Linden (December 1976). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=356682&amp;coll=&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618">"Operating System Structures to Support Security and Reliable Software"</a>. <i>ACM Computing Surveys (CSUR)</i> <b>8</b> (4): 409–445. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F356678.356682">10.1145/356678.356682</a>. <a href="International_Standard_Serial_Number.html" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0360-0300">0360-0300</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFault+tolerance&amp;rft.atitle=Operating+System+Structures+to+Support+Security+and+Reliable+Software&amp;rft.aulast=Theodore+A.+Linden&amp;rft.au=Theodore+A.+Linden&amp;rft.date=December+1976&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D356682%26coll%3D%26dl%3DACM%26CFID%3D15151515%26CFTOKEN%3D6184618&amp;rft_id=info%3Adoi%2F10.1145%2F356678.356682&amp;rft.issn=0360-0300&amp;rft.issue=4&amp;rft.jtitle=ACM+Computing+Surveys+%28CSUR%29&amp;rft.pages=409%E2%80%93445&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=8" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=779417">Implementation and evaluation of failsafe computer-controlled systems</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.rutgers.edu/~iftode/seminar04_papers.htm">Seminar on Self-Healing Systems</a></li>
+<li>Interview with <a href="http://en.wikipedia.org/w/index.php?title=Robert_Hanmer&amp;action=edit&amp;redlink=1" class="new" title="Robert Hanmer (page does not exist)">Robert Hanmer</a> about his book <i>Patterns for Fault Tolerant Software</i> (<a rel="nofollow" class="external text" href="http://se-radio.net/podcast/2007-11/episode-77-fault-tolerance-bob-hanmer-pt-1">Part One</a>, <a rel="nofollow" class="external text" href="http://se-radio.net/podcast/2007-11/episode-78-fault-tolerance-bob-hanmer-pt-2">Part Two</a>) (Podcast)</li>
+<li>Article "<a rel="nofollow" class="external text" href="http://citeseer.csail.mit.edu/677518.html">Practical Considerations in Making CORBA Services Fault-Tolerant</a>" by <a href="http://en.wikipedia.org/wiki/Priya_Narasimhan" title="Priya Narasimhan">Priya Narasimhan</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.embedded.com.au/pages/TMR.html">Article about TMR</a> with reference to TMR usage in avionics and industry</li>
+<li>Article "<a rel="nofollow" class="external text" href="http://doi.ieeecomputersociety.org/10.1109/TC.2004.1275293">Experiences, Strategies and Challenges in Building Fault-Tolerant CORBA Systems</a>" by <a href="http://en.wikipedia.org/w/index.php?title=Pascal_Felber&amp;action=edit&amp;redlink=1" class="new" title="Pascal Felber (page does not exist)">Pascal Felber</a> and <a href="http://en.wikipedia.org/wiki/Priya_Narasimhan" title="Priya Narasimhan">Priya Narasimhan</a></li>
+<li><a rel="nofollow" class="external text" href="http://rodin.cs.ncl.ac.uk/Publications/avizienis.pdf">Dependability And Its Threats: A Taxonomy</a> by Algirdas Avizienis, Jean-Claude Laprie, <a href="http://en.wikipedia.org/wiki/Brian_Randell" title="Brian Randell">B. Randell</a></li>
+<li>EU funded research project <a rel="nofollow" class="external text" href="http://www.hpc4u.org/">HPC4U</a> addressing development of fault tolerant technologies for Grid computing environments</li>
+<li><a rel="nofollow" class="external text" href="http://www.sohar.com/services/fault_tolerance/">Fault Tolerance and High Availability Systems</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.jumpsoft.net/solutions/highavailability/index.cfm">High Availability Software</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.rkbexplorer.com/explorer/#display=mechanism-{http://resex.rkbexplorer.com/id/resilience-mechanism-736676d7}">Graceful Degradation in the RKBExplorer</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.resilience.com/">Fault Tolerance and High Availability Systems for Check Point Firewall and VPN networks with Resilience line of FCR appliances</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Engineering_approaches" title="Template:Engineering approaches"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Engineering_approaches" title="Template talk:Engineering approaches"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Engineering_approaches&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">Engineering approaches</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="text-align: left;;">School</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Empathic_design" title="Empathic design">Empathic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Frugal_innovation" title="Frugal innovation">Frugal innovation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kansei_engineering" title="Kansei engineering">Kansei engineering</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KISS_principle" title="KISS principle">Keep It Simple Stupid</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Minimalism" title="Minimalism">Minimalism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Use-centered_design" title="Use-centered design">Use-centered design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User-centered_design" title="User-centered design">User-centered design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="text-align: left;;">Concepts</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><i><a href="http://en.wikipedia.org/wiki/Ornament_and_Crime" title="Ornament and Crime">Ornament and Crime</a></i></li>
+<li><a href="http://en.wikipedia.org/wiki/Planned_obsolescence" title="Planned obsolescence">Planned obsolescence</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sustainability" title="Sustainability">Sustainability</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Theory_of_constraints" title="Theory of constraints">Theory of constraints</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Usability" title="Usability">Usability</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Design" title="Template:Design"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Design" title="Template talk:Design"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Design&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Design" title="Design">Design</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Portal:Design" title="Portal:Design">Portal</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Outline_of_design" title="Outline of design">Outline of design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Designer" title="Designer">Designer</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Disciplines</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Communication_design" title="Communication design">Communication design</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Advertising.html" title="Advertising">Advertising</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Book_design" title="Book design">Book design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Corporate_design" title="Corporate design">Corporate design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Environmental_graphic_design" title="Environmental graphic design">Environmental graphic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exhibit_design" title="Exhibit design">Exhibit design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Graphic_design" title="Graphic design">Graphic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Illustration" title="Illustration">Illustration</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Information_design" title="Information design">Information design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instructional_design" title="Instructional design">Instructional design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/News_design" title="News design">News design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Photography" title="Photography">Photography</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Retail_design" title="Retail design">Retail design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Signage" title="Signage">Signage</a> / <a href="http://en.wikipedia.org/wiki/Traffic_sign_design" title="Traffic sign design">Traffic sign design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sustainable_graphic_design" title="Sustainable graphic design">Sustainable graphic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Typography" title="Typography">Typography</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Video_design" title="Video design">Video design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Visual_merchandising" title="Visual merchandising">Visual merchandising</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Environmental_design" title="Environmental design">Environmental design</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Architectural_lighting_design" title="Architectural lighting design">Architectural lighting design</a></li>
+<li><a href="Ecological_design.html" title="Ecological design">Ecological design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Environmental_impact_design" title="Environmental impact design">Environmental impact design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garden_design" title="Garden design">Garden design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interior_architecture" title="Interior architecture">Interior architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interior_design" title="Interior design">Interior design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Keyline_design" title="Keyline design">Keyline design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Landscape_architecture" title="Landscape architecture">Landscape architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Landscape_design" title="Landscape design">Landscape design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Passive_solar_building_design" title="Passive solar building design">Passive solar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sustainable_landscape_architecture" title="Sustainable landscape architecture">Sustainable landscape architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Urban_design" title="Urban design">Urban design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Fashion_design" title="Fashion design">Fashion design</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Costume_design" title="Costume design">Costume design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jewelry_design" title="Jewelry design">Jewelry design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Industrial_design" title="Industrial design">Industrial design</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Automotive_design" title="Automotive design">Automotive design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Furniture" title="Furniture">Furniture design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Packaging_and_labeling" title="Packaging and labeling">Packaging and labeling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Product_design" title="Product design">Product design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sensory_design" title="Sensory design">Sensory design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Service_design" title="Service design">Service design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Interaction_design" title="Interaction design">Interaction design</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Experience_design" title="Experience design">Experience design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Game_design" title="Game design">Game design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Icon_design" title="Icon design">Icon design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Immersive_design" title="Immersive design">Immersive design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Information_design" title="Information design">Information design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Level_design" title="Level design">Level design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Motion_graphic_design" title="Motion graphic design">Motion graphic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sonic_interaction_design" title="Sonic interaction design">Sonic interaction design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User_experience_design" title="User experience design">User experience design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User_interface_design" title="User interface design">User interface design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Web_design" title="Web design">Web design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Other design disciplines</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Art_design" title="Art design" class="mw-redirect">Art design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Architecture" title="Architecture">Architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Building_design" title="Building design">Building design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Landscape_architecture" title="Landscape architecture">Landscape design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Public_art" title="Public art">Public art design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ceramic_art" title="Ceramic art">Ceramic</a> / <a href="http://en.wikipedia.org/wiki/Glass_art" title="Glass art">glass design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Database_design" title="Database design">Database design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Floral_design" title="Floral design">Floral design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Production_design" title="Production design" class="mw-redirect">Production design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Game_art_design" title="Game art design">Game art design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Organization_design" title="Organization design" class="mw-redirect">Organization design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Process_design" title="Process design">Process design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Protein_design" title="Protein design">Protein design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scenic_design" title="Scenic design">Scenic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Social_design" title="Social design">Social design</a></li>
+<li><a href="Software_design.html" title="Software design">Software design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sound_design" title="Sound design">Sound design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Systems_design" title="Systems design">Systems design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Textile_design" title="Textile design">Textile design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Job_design" title="Job design" class="mw-redirect">Job design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Approaches</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Activity-centered_design" title="Activity-centered design">Activity-centered design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C-K_theory" title="C-K theory">C-K theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Co-design" title="Co-design">Co-design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Contextual_design" title="Contextual design">Contextual design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cradle-to-cradle_design" title="Cradle-to-cradle design">Cradle-to-cradle design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Creative_problem_solving" title="Creative problem solving">Creative problem solving</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Creativity_techniques" title="Creativity techniques">Creativity techniques</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Critical_design" title="Critical design">Critical design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design–bid–build" title="Design–bid–build">Design–bid–build</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design–build" title="Design–build">Design–build</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Architect-led_design–build" title="Architect-led design–build">Architect-led design–build</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Design_closure" title="Design closure">Design closure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_for_Six_Sigma" title="Design for Six Sigma">Design for Six Sigma</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_for_X" title="Design for X">Design for X</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_leadership" title="Design leadership">Design leadership</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_management" title="Design management">Design management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_methods" title="Design methods">Design methods</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_pattern" title="Design pattern">Design pattern</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_research" title="Design research">Design research</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_science" title="Design science">Design science</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_strategy" title="Design strategy">Design strategy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_thinking" title="Design thinking">Design thinking</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ecodesign" title="Ecodesign">Ecodesign</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Empathic_design" title="Empathic design">Empathic design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Engineering_design_process" title="Engineering design process">Engineering design process</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Error-tolerant_design" title="Error-tolerant design">Error-tolerant design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fault-tolerant_design" title="Fault-tolerant design" class="mw-redirect">Fault-tolerant design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Functional_design" title="Functional design">Functional design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KISS_principle" title="KISS principle">KISS principle</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metadesign" title="Metadesign">Metadesign</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mind_map" title="Mind map">Mind mapping</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Modular_design" title="Modular design">Modular design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_design" title="Open design">Open design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Participatory_design" title="Participatory design">Participatory design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Regenerative_design" title="Regenerative design">Regenerative design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reliability_engineering" title="Reliability engineering">Reliability engineering</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Safe-life_design" title="Safe-life design">Safe-life design</a></li>
+<li><a href="Sustainable_design.html" title="Sustainable design">Sustainable design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Theory_of_constraints" title="Theory of constraints">Theory of constraints</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Transformation_design" title="Transformation design">Transformation design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Transgenerational_design" title="Transgenerational design">Transgenerational design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TRIZ" title="TRIZ">TRIZ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_design" title="Universal design">Universal design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Usage-centered_design" title="Usage-centered design">Usage-centered design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Use-centered_design" title="Use-centered design">Use-centered design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User-centered_design" title="User-centered design">User-centered design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User_innovation" title="User innovation">User innovation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Awards</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/European_Design_Award" title="European Design Award">European Design Award</a></li>
+<li><a href="http://en.wikipedia.org/wiki/German_Design_Award" title="German Design Award">German Design Award</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Good_Design_Awards_(Chicago)" title="Good Design Awards (Chicago)" class="mw-redirect">Good Design Awards (Chicago)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Good_Design_Awards_(Japan)" title="Good Design Awards (Japan)" class="mw-redirect">Good Design Awards (Japan)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IF_product_design_award" title="IF product design award">IF product design award</a></li>
+<li><a href="http://en.wikipedia.org/wiki/James_Dyson_Award" title="James Dyson Award">James Dyson Award</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prince_Philip_Designers_Prize" title="Prince Philip Designers Prize">Prince Philip Designers Prize</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Intellectual property</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Community_design" title="Community design">Community design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_patent" title="Design patent">Design patent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Geschmacksmuster" title="Geschmacksmuster">Geschmacksmuster</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Industrial_design_right" title="Industrial design right">Industrial design rights</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Industrial_design_rights_in_the_European_Union" title="Industrial design rights in the European Union">European Union</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Organizations</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AIGA" title="AIGA">AIGA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chartered_Society_of_Designers" title="Chartered Society of Designers">Chartered Society of Designers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_and_Industries_Association" title="Design and Industries Association">Design and Industries Association</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_Council" title="Design Council">Design Council</a></li>
+<li><a href="http://en.wikipedia.org/wiki/International_Forum_Design" title="International Forum Design">International Forum Design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/The_Design_Society" title="The Design Society">The Design Society</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Tools</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Blueprint" title="Blueprint">Blueprint</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comprehensive_layout" title="Comprehensive layout">Comprehensive layout</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">Computer-aided design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flowchart" title="Flowchart">Flowchart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mockup" title="Mockup">Mockup</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Product_design_specification" title="Product design specification">Product design specification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prototype" title="Prototype">Prototype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sketch_(drawing)" title="Sketch (drawing)">Sketch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Storyboard" title="Storyboard">Storyboard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Technical_drawing" title="Technical drawing">Technical drawing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Website_wireframe" title="Website wireframe">Website wireframe</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color: LemonChiffon;">Related topics</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Aesthetics" title="Aesthetics">Aesthetics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Applied_arts" title="Applied arts">Applied arts</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concept_art" title="Concept art">Concept art</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Creative_industries" title="Creative industries">Creative industries</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cultural_icon" title="Cultural icon">Cultural icon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_brief" title="Design brief">Design brief</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_education" title="Design education">Design education</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_elements_and_principles" title="Design elements and principles">Design elements and principles</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_engineer" title="Design engineer">Design engineer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_firm" title="Design firm">Design firm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_life" title="Design life">Design life</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_museum" title="Design museum">Design museum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_rationale" title="Design rationale">Design rationale</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_review" title="Design review">Design review</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_specification" title="Design specification">Design specification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Design_technology" title="Design technology">Design technology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Enterprise_architecture" title="Enterprise architecture">Enterprise architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Futures_studies" title="Futures studies">Futures studies</a></li>
+<li><a href="http://en.wikipedia.org/wiki/New_product_development" title="New product development">New product development</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Philosophy_of_design" title="Philosophy of design">Philosophy of design</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Process_simulation" title="Process simulation">Process simulation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Slow_design" title="Slow design">Slow design</a></li>
+<li><a href="Visualization_(computer_graphics).html" title="Visualization (computer graphics)">Visualization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wicked_problem" title="Wicked problem">Wicked problem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><i>See also: <a href="http://commons.wikimedia.org/wiki/category:Design" class="extiw" title="commons:category:Design">Commons</a></i></li>
+<li><i><a href="http://en.wikibooks.org/wiki/Design" class="extiw" title="wikibooks:Design">Wikibooks</a></i></li>
+<li><i><a href="http://en.wikinews.org/wiki/Special:Search/Design" class="extiw" title="wikinews:Special:Search/Design">Wikinews</a></i></li>
+<li><i><a href="http://en.wikiquote.org/wiki/Design" class="extiw" title="wikiquote:Design">Wikiquote</a></i></li>
+<li><i><a href="http://en.wikisource.org/wiki/Category:Design" class="extiw" title="wikisource:Category:Design">Wikisource</a></i></li>
+<li><i><a href="http://en.wiktionary.org/wiki/Design" class="extiw" title="wiktionary:Design">Wiktionary</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1019
+CPU time usage: 0.732 seconds
+Real time usage: 0.794 seconds
+Preprocessor visited node count: 1136/1000000
+Preprocessor generated node count: 6200/1500000
+Post‐expand include size: 61634/2048000 bytes
+Template argument size: 2573/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 7/500
+Lua time usage: 0.087/10.000 seconds
+Lua memory usage: 2.03 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2091393-0!*!0!!en!4!* and timestamp 20140325043839
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;oldid=599167039">http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;oldid=599167039</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Fault_tolerance" title="Category:Fault tolerance">Fault tolerance</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Reliability_engineering" title="Category:Reliability engineering">Reliability engineering</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_systems" title="Category:Computer systems">Computer systems</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software" title="Category:Software">Software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Control_engineering" title="Category:Control engineering">Control engineering</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Systems_engineering" title="Category:Systems engineering">Systems engineering</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_quality" title="Category:Software quality">Software quality</a></li><li><a href="http://en.wikipedia.org/wiki/Category:RAID" title="Category:RAID">RAID</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_January_2008" title="Category:Articles needing additional references from January 2008">Articles needing additional references from January 2008</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_February_2009" title="Category:Wikipedia articles needing clarification from February 2009">Wikipedia articles needing clarification from February 2009</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Fault+tolerance&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Fault+tolerance" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Fault_tolerance"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Fault_tolerance"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Fault_tolerance" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Fault_tolerance" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Fault_tolerance" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;oldid=599167039" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q15260926" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Fault_tolerance&amp;id=599167039" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Fault+tolerance">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Fault+tolerance&amp;oldid=599167039&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Fault_tolerance&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Fehlertolerantes_Regelsystem" title="Fehlertolerantes Regelsystem – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Diseño_de_tolerancia_a_fallos" title="Diseño de tolerancia a fallos – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q15260926#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 11 March 2014 at 18:11.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Fault_tolerance" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1187 in 0.312 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Graceful_degradation by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+</html>

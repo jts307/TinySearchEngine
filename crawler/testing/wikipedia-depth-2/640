@@ -1,0 +1,425 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Disk_partitioning.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Disk_partitioning by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Disk partitioning - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Disk_partitioning" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Disk_partitioning.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Disk_partitioning","wgTitle":"Disk partitioning","wgCurRevisionId":598139571,"wgRevisionId":598139571,"wgArticleId":55380,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from January 2013","CS1 errors: dates","Articles prone to spam from October 2012","Disk file systems","DOS on IBM PC compatibles","IBM PC compatibles","Utility software types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Disk_partitioning","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q624167"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Disk_partitioning skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Disk partitioning</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:GParted.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/GParted.png/300px-GParted.png" width="300" height="202" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/GParted.png/450px-GParted.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/GParted.png/600px-GParted.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:GParted.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+<a href="http://en.wikipedia.org/wiki/GParted" title="GParted">GParted</a> is a popular utility used for disk partitioning</div>
+</div>
+</div>
+<p><b>Disk partitioning</b> is the act of dividing a <a href="http://en.wikipedia.org/wiki/Hard_disk_drive" title="Hard disk drive">hard disk drive</a> (HDD) into multiple logical storage units referred to as <i>partitions</i>, to treat one physical disk drive as if it were multiple disks, so that different <a href="File_system.html" title="File system">file systems</a> can be used on each partition.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>A <a href="http://en.wikipedia.org/wiki/Partition_editor" title="Partition editor" class="mw-redirect">partition editor</a> software program can be used to create, resize, delete, and manipulate these partitions on the HDD. A partition consists of a range of <a href="http://en.wikipedia.org/wiki/Cylinder_(disk_drive)" title="Cylinder (disk drive)">cylinders</a> of HDD—i.e. each partition is defined by both a start and end cylinder (the size of cylinders varying from disk to disk).<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Benefits_of_multiple_partitions"><span class="tocnumber">1</span> <span class="toctext">Benefits of multiple partitions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Disadvantages_of_multiple_partitions"><span class="tocnumber">2</span> <span class="toctext">Disadvantages of multiple partitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#PC_partition_types"><span class="tocnumber">3</span> <span class="toctext">PC partition types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Primary_partition"><span class="tocnumber">3.1</span> <span class="toctext">Primary partition</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Extended_partition"><span class="tocnumber">3.2</span> <span class="toctext">Extended partition</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Partitioning_schemes"><span class="tocnumber">4</span> <span class="toctext">Partitioning schemes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#DOS.2C_Windows.2C_and_OS.2F2"><span class="tocnumber">4.1</span> <span class="toctext">DOS, Windows, and OS/2</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Unix-like_systems"><span class="tocnumber">4.2</span> <span class="toctext">Unix-like systems</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Multi-boot_and_mixed-boot_systems"><span class="tocnumber">4.3</span> <span class="toctext">Multi-boot and mixed-boot systems</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#GUID_Partition_Table"><span class="tocnumber">4.4</span> <span class="toctext">GUID Partition Table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Partition_recovery"><span class="tocnumber">5</span> <span class="toctext">Partition recovery</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Compressed_disks"><span class="tocnumber">6</span> <span class="toctext">Compressed disks</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Further_reading"><span class="tocnumber">9</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Benefits_of_multiple_partitions">Benefits of multiple partitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=1" title="Edit section: Benefits of multiple partitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Harddrive-partition-extended-logical-volumes.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Harddrive-partition-extended-logical-volumes.png/300px-Harddrive-partition-extended-logical-volumes.png" width="300" height="374" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f9/Harddrive-partition-extended-logical-volumes.png/450px-Harddrive-partition-extended-logical-volumes.png 1.5x, //upload.wikimedia.org/wikipedia/en/f/f9/Harddrive-partition-extended-logical-volumes.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Harddrive-partition-extended-logical-volumes.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Logical partitions require extended partitions. In Windows, extended partitions can be used to create many logical partitions.</div>
+</div>
+</div>
+<p>Creating more than one partition has the following advantages:</p>
+<ul>
+<li>Separation of the <a href="Operating_system.html" title="Operating system">operating system</a> (OS) and program files from user files. This allows <a href="http://en.wikipedia.org/wiki/Disk_image" title="Disk image">image</a> <a href="http://en.wikipedia.org/wiki/Backup" title="Backup">backups</a> (or <a href="http://en.wikipedia.org/wiki/Disk_cloning" title="Disk cloning">clones</a>) to be made of only the operating system and installed software.</li>
+<li>Having a separate area for operating system <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> <a href="Paging.html" title="Paging">swapping/paging</a>.</li>
+<li>Keeping frequently used programs and data near each other.</li>
+<li>Having cache and log files separate from other files. These can change size dynamically and rapidly, potentially making a file system full.</li>
+<li>Use of <a href="http://en.wikipedia.org/wiki/Multi-boot" title="Multi-boot" class="mw-redirect">multi-boot</a> setups, which allow users to have more than one operating system on a single computer. For example, one could install <a href="Linux.html" title="Linux">Linux</a>, <a href="BSD.html" title="BSD" class="mw-redirect">BSD</a>, <a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a>, <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> or other operating systems on different partitions of the same HDD and have a choice of booting into any compatible operating system at power-up.</li>
+<li>Protecting or isolating files, to make it easier to recover a corrupted file system or operating system installation. If one partition is corrupted, other file systems may not be affected.</li>
+<li>Raising overall computer performance on systems where smaller file systems are more efficient. For instance, large HDDs with only one <a href="http://en.wikipedia.org/wiki/NTFS" title="NTFS">NTFS</a> file system typically have a very large <a href="Sequential_access.html" title="Sequential access">sequentially accessed</a> <a href="http://en.wikipedia.org/wiki/Master_File_Table" title="Master File Table" class="mw-redirect">Master File Table</a> (MFT) and it generally takes more time to read this MFT than the smaller MFTs of smaller partitions.</li>
+<li>"Short stroking", which aims to minimize performance-eating head repositioning delays by reducing the number of tracks used per HDD.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> The basic idea is that you make one partition approx. 20–25% of the total size of the drive. This partition is expected to: occupy the outer tracks of the HDD, and offer more than double the throughput — less than half the access time. If you limit capacity with short stroking, the minimum throughput stays much closer to the maximum. This technique, however, is not related to creating multiple partitions, but generally just creating a partition less than the disk size.
+<ul>
+<li>For example, a 1 TB disk may have an access time of 12 ms at 200 <a href="http://en.wikipedia.org/wiki/IOPS" title="IOPS">IOPS</a> (at a limited <a rel="nofollow" class="external text" href="http://publib.boulder.ibm.com/infocenter/svc/ic/index.jsp?topic=%2Fcom.ibm.storage.svc.console.doc%2Fsvc_configrecforlrgsans_1dcuwe.html">queue depth</a>) with an average throughput of 100 MB/s. When it is partitioned to 100 GB (and the rest left unallocated) access time <i>may</i> be decreased to 6 ms at 300 IOPS (with a bigger queue depth) with an average throughput of 200 MB/s.</li>
+</ul>
+</li>
+<li>Partitioning for significantly less than the full size available when disk space is not needed can reduce the time for diagnostic tools such as checkdisk to run or for full image backups to run.</li>
+</ul>
+<h2><span class="mw-headline" id="Disadvantages_of_multiple_partitions">Disadvantages of multiple partitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=2" title="Edit section: Disadvantages of multiple partitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Creating more than one partition has the following disadvantages, as compared to having a single partition spanning the same disk area:</p>
+<ul>
+<li>Reduces the total space available for user storage on the disk, as it forces the operating system to duplicate certain file system administration areas on the disk for each partition.</li>
+<li>Reduces overall disk performance on systems where data is accessed regularly and in parallel on multiple partitions, because it forces the disk's read/write head to move back and forth on the disk to access data on each partition<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> and to maintain and update file system administration areas on each partition. It also prevents disk optimizers from moving all frequently accessed files closer to each other on the disk, which could reduce the number and distance of required head movements. Files can still be moved closer to each other on each partition, but those areas themselves will still be far apart on the disk. (See "short stroking" considerations above.) This issue does not apply to <a href="http://en.wikipedia.org/wiki/Solid-state_drive" title="Solid-state drive">Solid-state drives</a> as access times on those are neither affected by nor dependent upon relative sector positions.</li>
+<li>Increases disk fragmentation because it lowers the average size of continuous free blocks on each partition - as compared to a single partition of the same overall size - after the same amount of data has been written to them.</li>
+<li>May prevent using the whole disk capacity, because it may break free capacities apart.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> For example, if you have a disk with two partitions, each with 3 GB free (hence 6 GB in total), you can't copy a 4 GB DVD image file on that disk, because none of the partitions will actually provide enough space for that - even though you have more than enough free capacity in total on the disk. If the same files on those two partitions would have been stored on a single partition spanning the whole disk, then the 4 GB file could be easily stored in the 6 GB of free space.</li>
+<li>Hurts portability and might impose constraints on how entities might be linked together inside the file system. For example, Unix file systems and the NTFS file system allow <a href="http://en.wikipedia.org/wiki/Hard_link" title="Hard link">hard links</a> to be created only as long as both the link and the referenced file reside inside the same volume/partition.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> Also under Windows if you're referencing a file on another partition, you can do that only by specifying the partition's assigned drive letter (or <a href="http://en.wikipedia.org/wiki/NTFS_volume_mount_point" title="NTFS volume mount point">mount point</a>) - which, however, might change with time and depending on the drives installed. This renders references invalid and dependent on actual drive letter assignment, which is not an issue if you have to reference files/directories only on the same partition, as in this case you can use directory-relative or root-relative references, without including the drive/partition letter.</li>
+</ul>
+<h2><span class="mw-headline" id="PC_partition_types">PC partition types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=3" title="Edit section: PC partition types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This section describes the <a href="http://en.wikipedia.org/wiki/Master_boot_record" title="Master boot record">master boot record</a> (MBR) partitioning scheme, as used in <a href="DOS.html" title="DOS">DOS</a>, <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> and <a href="Linux.html" title="Linux">Linux</a> among others on <a href="http://en.wikipedia.org/wiki/PC_compatible" title="PC compatible" class="mw-redirect">PC compatible</a> computer systems. For examples of partitioning schemes used in other operating systems, see the general article on <a href="http://en.wikipedia.org/wiki/Partition_table" title="Partition table">partition tables</a>.</p>
+<p>The total data storage space of a PC HDD can be divided into at most four <i>primary partitions</i>, or alternatively three primary partitions and an <i><a href="#Extended_partition">extended partition</a></i>. These partitions are described by 16-byte entries that constitute the <i>Partition Table</i>, located in the master boot record.</p>
+<p>The <i>partition type</i> is identified by a 1-byte code found in its partition table entry. Some of these codes (such as <tt><a href="http://en.wikipedia.org/wiki/Partition_type#PID_05h" title="Partition type">0x05</a></tt> and <tt><a href="http://en.wikipedia.org/wiki/Partition_type#PID_0Fh" title="Partition type">0x0F</a></tt>) may be used to indicate the presence of an <a href="http://en.wikipedia.org/wiki/Extended_boot_record" title="Extended boot record">extended partition</a>. Most are used by an operating system's bootloader (that examines partition tables) to decide if a partition contains a file system that can be used to <i>mount / access</i> for reading or writing data.</p>
+<h3><span class="mw-headline" id="Primary_partition">Primary partition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=4" title="Edit section: Primary partition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink">Further information: <a href="http://en.wikipedia.org/wiki/Partition_type" title="Partition type">Partition type</a></div>
+<p>A primary partition contains one file system. In <a href="DOS.html" title="DOS">DOS</a> and all versions of <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> systems, what <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a> calls the <a href="http://en.wikipedia.org/wiki/System_partition" title="System partition" class="mw-redirect">system partition</a> was required to be the first partition. All Windows operating systems from Windows 95 onwards can be located on ( almost ) any partition, but the boot files (io.sys, bootmgr, ntldr, etc.) must be on a primary partition. However, other factors, such as a PC's <a href="http://en.wikipedia.org/wiki/BIOS" title="BIOS">BIOS</a> (see <a href="http://en.wikipedia.org/wiki/Booting#Boot_sequence_on_standard_PC_.28IBM-PC_compatible.29" title="Booting">Boot sequence on standard PC</a>) may also impart specific requirements as to which partition must contain the primary OS.</p>
+<p>The partition type <i>code</i> for a primary partition can either correspond to a file system contained within (e.g. <tt><a href="http://en.wikipedia.org/wiki/Partition_type#PID_07h" title="Partition type">0x07</a></tt> means either an <a href="http://en.wikipedia.org/wiki/NTFS" title="NTFS">NTFS</a> or an OS/2 <a href="http://en.wikipedia.org/wiki/HPFS" title="HPFS" class="mw-redirect">HPFS</a> file system) or indicate that the partition has a special use (e.g. code <tt><a href="http://en.wikipedia.org/wiki/Partition_type#PID_82h" title="Partition type">0x82</a></tt> usually indicates a Linux <i>swap</i> partition). The <a href="http://en.wikipedia.org/wiki/FAT16" title="FAT16" class="mw-redirect">FAT16</a> and <a href="http://en.wikipedia.org/wiki/FAT32" title="FAT32" class="mw-redirect">FAT32</a> file systems have made use of a number of partition type codes due to the limits of various DOS and Windows OS versions. Though a Linux operating system may recognize a number of different file systems (<a href="http://en.wikipedia.org/wiki/Ext4" title="Ext4">ext4</a>, <a href="http://en.wikipedia.org/wiki/Ext3" title="Ext3">ext3</a>, <a href="http://en.wikipedia.org/wiki/Ext2" title="Ext2">ext2</a>, <a href="http://en.wikipedia.org/wiki/ReiserFS" title="ReiserFS">ReiserFS</a>, etc.), they have all consistently used the same partition type code: <tt><a href="http://en.wikipedia.org/wiki/Partition_type#PID_83h" title="Partition type">0x83</a></tt> (<a href="File_system.html#Linux" title="File system">Linux native file system</a>).</p>
+<h3><span class="mw-headline" id="Extended_partition">Extended partition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=5" title="Edit section: Extended partition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink">Further information: <a href="http://en.wikipedia.org/wiki/Extended_Boot_Record" title="Extended Boot Record" class="mw-redirect">Extended Boot Record</a></div>
+<p>An HDD may contain only one extended partition; the extended partition can be subdivided into multiple logical partitions. In DOS/Windows systems, each logical partition may then be assigned an additional drive letter.</p>
+<h2><span class="mw-headline" id="Partitioning_schemes">Partitioning schemes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=6" title="Edit section: Partitioning schemes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="DOS.2C_Windows.2C_and_OS.2F2">DOS, Windows, and OS/2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=7" title="Edit section: DOS, Windows, and OS/2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>With <a href="DOS.html" title="DOS">DOS</a>, <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a>, and <a href="OS/2.html" title="OS/2">OS/2</a>, a common practice is to use one primary partition for the active <a href="File_system.html" title="File system">file system</a> that will contain the operating system, the page/swap file, all utilities, applications, and user data. On most Windows consumer computers, the <a href="http://en.wikipedia.org/wiki/Drive_letter_assignment" title="Drive letter assignment">drive letter</a> C: is routinely assigned to this primary partition. Other partitions may exist on the HDD that may or may not be visible as drives, such as recovery partitions or partitions with diagnostic tools or data. (Microsoft drive letters do not correspond to partitions in a one-to-one fashion, so there may be more or fewer drive letters than partitions.)</p>
+<p>Microsoft <a href="http://en.wikipedia.org/wiki/Windows_2000" title="Windows 2000">Windows 2000</a>, <a href="http://en.wikipedia.org/wiki/Windows_XP" title="Windows XP">XP</a>, <a href="http://en.wikipedia.org/wiki/Windows_Vista" title="Windows Vista">Vista</a>, and <a href="http://en.wikipedia.org/wiki/Windows_7" title="Windows 7">Windows 7</a> include a '<a href="http://en.wikipedia.org/wiki/Logical_Disk_Manager" title="Logical Disk Manager">Disk Management</a>' program which allows for the creation, deletion and resizing of FAT and NTFS partitions. The Windows Disk Manager in Windows Vista and Windows 7 utilizes a new <a href="http://en.wikipedia.org/wiki/1_MB_partition_alignment" title="1 MB partition alignment" class="mw-redirect">1 MB partition alignment</a> scheme which is fundamentally <a href="http://en.wikipedia.org/wiki/Logical_Disk_Manager#Compatibility_problems" title="Logical Disk Manager">incompatible</a> with Windows 2000, XP, OS/2, DOS as well as many other operating systems.</p>
+<h3><span class="mw-headline" id="Unix-like_systems">Unix-like systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=8" title="Edit section: Unix-like systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On <a href="Unix.html" title="Unix">Unix</a>-based and <a href="Unix-like.html" title="Unix-like">Unix-like</a> operating systems such as <a href="http://en.wikipedia.org/wiki/GNU/Linux" title="GNU/Linux" class="mw-redirect">GNU/Linux</a>, <a href="OS_X.html" title="OS X">OS X</a>, <a href="BSD.html" title="BSD" class="mw-redirect">BSD</a>, and <a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a>, it is possible to use multiple partitions on a disk device. Each partition can be formatted with a <a href="File_system.html" title="File system">file system</a> or as a <a href="http://en.wikipedia.org/wiki/Swap_partition" title="Swap partition" class="mw-redirect">swap partition</a>.</p>
+<p>Multiple partitions allow directories such as <a href="http://en.wikipedia.org/wiki//tmp" title="/tmp" class="mw-redirect">/tmp</a>, <a href="http://en.wikipedia.org/wiki//usr" title="/usr" class="mw-redirect">/usr</a>, <a href="http://en.wikipedia.org/wiki//var" title="/var" class="mw-redirect">/var</a>, or <a href="http://en.wikipedia.org/wiki//home" title="/home" class="mw-redirect">/home</a> to be allocated their own filesystems. Such a scheme has a number of advantages:</p>
+<ul>
+<li>If one file system gets corrupted, the data outside that filesystem/partition may stay intact, minimizing data loss.</li>
+<li>Specific file systems can be mounted with different parameters e.g. <a href="http://en.wikipedia.org/wiki/File_system_permissions" title="File system permissions">read-only</a>, or with the execution of <a href="http://en.wikipedia.org/wiki/Setuid" title="Setuid">setuid</a> files disabled.</li>
+<li>A runaway program that uses up all available space on a non-system filesystem does not fill up critical filesystems.</li>
+</ul>
+<p>A common default for GNU/Linux desktop systems is to use two partitions: one holding a file system mounted on "/" (the <a href="http://en.wikipedia.org/wiki/Root_directory" title="Root directory">root directory</a>) and a <a href="http://en.wikipedia.org/wiki/Swap_partition" title="Swap partition" class="mw-redirect">swap partition</a>.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2013)">citation needed</span></a></i>]</sup></p>
+<p>By default, OS X systems also use a single partition for the entire filesystem and use a <a href="http://en.wikipedia.org/wiki/Swap_file" title="Swap file" class="mw-redirect">swap file</a> inside the file system (like Windows) rather than a swap partition.</p>
+<p>In Solaris, partitions are sometimes known as <b>slices</b>. This is a conceptual reference to the slicing of a cake into several pieces.</p>
+<p>The term "slice" is used in the <a href="FreeBSD.html" title="FreeBSD">FreeBSD</a> operating system to refer to <a href="http://en.wikipedia.org/wiki/Master_Boot_Record" title="Master Boot Record" class="mw-redirect">Master Boot Record</a> partitions, to avoid confusion with FreeBSD's own <a href="http://en.wikipedia.org/wiki/BSD_disklabel" title="BSD disklabel">disklabel</a>-based partitioning scheme. However, <a href="http://en.wikipedia.org/wiki/GUID_Partition_Table" title="GUID Partition Table">GUID Partition Table</a> partitions are referred to as "partition" world-wide.</p>
+<h3><span class="mw-headline" id="Multi-boot_and_mixed-boot_systems">Multi-boot and mixed-boot systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=9" title="Edit section: Multi-boot and mixed-boot systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Multi-boot" title="Multi-boot" class="mw-redirect">Multi-boot</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:GRUB_with_ubuntu_and_windows_vista.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/GRUB_with_ubuntu_and_windows_vista.png/400px-GRUB_with_ubuntu_and_windows_vista.png" width="400" height="222" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/GRUB_with_ubuntu_and_windows_vista.png/600px-GRUB_with_ubuntu_and_windows_vista.png 1.5x, //upload.wikimedia.org/wikipedia/commons/c/cf/GRUB_with_ubuntu_and_windows_vista.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:GRUB_with_ubuntu_and_windows_vista.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A <a href="http://en.wikipedia.org/wiki/GNU_GRUB" title="GNU GRUB">GRUB</a> startup menu showing <a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a> Linux (with three different boot modes) and <a href="http://en.wikipedia.org/wiki/Windows_Vista" title="Windows Vista">Windows Vista</a> options</div>
+</div>
+</div>
+<p>Multi-boot systems are computers where the user can boot into one of two or more distinct operating systems (OS) stored in separate storage devices or in separate partitions of the same storage device. In such systems a menu at <a href="http://en.wikipedia.org/wiki/Booting" title="Booting">startup</a> gives a choice of which OS to boot/start (and only one OS at a time is loaded).</p>
+<p>This is distinct from <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual operating systems</a>, in which one operating system is run as a self-contained virtual "program" within another already-running operating system. (An example is a Windows OS "virtual machine" running from within a Linux OS.)</p>
+<h3><span class="mw-headline" id="GUID_Partition_Table">GUID Partition Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=10" title="Edit section: GUID Partition Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/GUID_Partition_Table" title="GUID Partition Table">GUID Partition Table</a></div>
+<p>The <b>GUID Partition Table</b> (<a href="http://en.wikipedia.org/wiki/Globally_unique_identifier" title="Globally unique identifier"><b>G</b>lobally <b>U</b>nique <b>ID</b>entifier</a>) is a part of the <a href="http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface" title="Unified Extensible Firmware Interface">Unified Extensible Firmware Interface</a> (UEFI) standard for the layout of the <a href="http://en.wikipedia.org/wiki/Partition_table" title="Partition table">partition table</a> on a physical <a href="http://en.wikipedia.org/wiki/Hard_disk" title="Hard disk" class="mw-redirect">hard disk</a>. Many operating systems now support this standard.</p>
+<h2><span class="mw-headline" id="Partition_recovery">Partition recovery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=11" title="Edit section: Partition recovery">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When a partition is deleted, its entry is removed from a table and the data is no longer accessible. The data remains on the disk until being overwritten. <a href="http://en.wikipedia.org/wiki/Undeletion" title="Undeletion">Specialized recovery utilities</a>, (such as <a href="http://en.wikipedia.org/wiki/TestDisk" title="TestDisk">TestDisk</a> and <a href="http://en.wikipedia.org/wiki/Gpart" title="Gpart">gpart</a>), may be able to locate <i>lost</i> file systems and recreate a partition table which includes entries for these recovered file systems. Some disk utilities may overwrite a number of beginning sectors of a partition they delete. For example, if Windows Disk Management (Windows 2000/XP, etc.) is used to delete a partition, it will overwrite the first sector (relative sector 0) of the partition before removing it. It still may be possible to restore a <a href="http://en.wikipedia.org/wiki/File_Allocation_Table" title="File Allocation Table">FAT32</a> or <a href="http://en.wikipedia.org/wiki/NTFS" title="NTFS">NTFS</a> partition if a backup boot sector is available.</p>
+<h2><span class="mw-headline" id="Compressed_disks">Compressed disks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=12" title="Edit section: Compressed disks">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>HDDs can be compressed to create additional space. In DOS and early Microsoft Windows, programs such as <a href="http://en.wikipedia.org/wiki/Stac_Electronics" title="Stac Electronics">Stacker</a> (DR-DOS except 6.0), <a href="http://en.wikipedia.org/wiki/SuperStor" title="SuperStor" class="mw-redirect">SuperStor</a> (DR&#160;DOS 6.0), <a href="http://en.wikipedia.org/wiki/DoubleSpace" title="DoubleSpace" class="mw-redirect">DoubleSpace</a>, or <a href="http://en.wikipedia.org/wiki/DriveSpace" title="DriveSpace">DriveSpace</a> (Windows 95) were used. This compression was done by creating a very large file on the partition, then storing the disk's data in this file. At startup, device drivers opened this file and assigned it a separate letter. Frequently, to avoid confusion, the original partition and the compressed drive had their letters swapped, so that the compressed disk is C:, and the uncompressed area (often containing system files) is given a higher name.</p>
+<p>Versions of <a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a> using the NT kernel, including the most recent versions, XP and Vista, contain intrinsic disk compression capability. The use of separate disk compression utilities has declined sharply.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/File_System" title="File System" class="mw-redirect">File System</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RAID" title="RAID">RAID</a>, <a href="http://en.wikipedia.org/wiki/JBOD" title="JBOD" class="mw-redirect">JBOD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Disk_formatting" title="Disk formatting">Disk formatting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Master_boot_record" title="Master boot record">Master boot record</a> covers the partition table layout</li>
+<li><a href="http://en.wikipedia.org/wiki/Extended_boot_record" title="Extended boot record">Extended boot record</a> covers a <a href="Linux.html" title="Linux">Linux</a> partition naming convention</li>
+<li><a href="http://en.wikipedia.org/wiki/Amiga_Rigid_Disk_Block" title="Amiga Rigid Disk Block" class="mw-redirect">Amiga Rigid Disk Block</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_disk_partitioning_software" title="List of disk partitioning software">List of disk partitioning software</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation book">Mueller, Scott (2003). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=E1p2FDL7P5QC&amp;pg=PA613"><i>Upgrading and Repairing PCs</i></a>. Que Publishing. p.&#160;613. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/9780789729743" title="Special:BookSources/9780789729743">9780789729743</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aulast=Mueller%2C+Scott&amp;rft.au=Mueller%2C+Scott&amp;rft.btitle=Upgrading+and+Repairing+PCs&amp;rft.date=2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DE1p2FDL7P5QC%26pg%3DPA613&amp;rft.isbn=9780789729743&amp;rft.pages=613&amp;rft.pub=Que+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Partitions are also termed "<a href="http://en.wikipedia.org/wiki/Slice_(disk)" title="Slice (disk)" class="mw-redirect">slices</a>" for operating systems based on <a href="BSD.html" title="BSD" class="mw-redirect">BSD</a>, <a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a> or <a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a>.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation book">Ward, Brian (2004). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=wOGUuoHUyAEC&amp;pg=PA39"><i>How Linux Works: What Every SuperUser Should Know</i></a>. No Starch Press. p.&#160;39. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/9781593270353" title="Special:BookSources/9781593270353">9781593270353</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aulast=Ward%2C+Brian&amp;rft.au=Ward%2C+Brian&amp;rft.btitle=How+Linux+Works%3A+What+Every+SuperUser+Should+Know&amp;rft.date=2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DwOGUuoHUyAEC%26pg%3DPA39&amp;rft.isbn=9781593270353&amp;rft.pages=39&amp;rft.pub=No+Starch+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web">Schmid, Patrick; Roos, Achim (2009-03-05). <a rel="nofollow" class="external text" href="http://www.tomshardware.com/reviews/short-stroking-hdd,2157.html">"Accelerate Your Hard Drive By Short Stroking"</a>. Tomshardware.com<span class="reference-accessdate">. Retrieved 2012-10-24</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aulast=Schmid%2C+Patrick%3B+Roos%2C+Achim&amp;rft.au=Schmid%2C+Patrick%3B+Roos%2C+Achim&amp;rft.btitle=Accelerate+Your+Hard+Drive+By+Short+Stroking&amp;rft.date=2009-03-05&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.tomshardware.com%2Freviews%2Fshort-stroking-hdd%2C2157.html&amp;rft.pub=Tomshardware.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web">Kozierok, Charles M. (2001-04-17). <a rel="nofollow" class="external text" href="http://www.pcguide.com/ref/hdd/perf/perf/ext/filePart-c.html">"Partitioning and Volume Position"</a>. Pcguide.com<span class="reference-accessdate">. Retrieved 2012-10-24</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aufirst=Charles+M.&amp;rft.au=Kozierok%2C+Charles+M.&amp;rft.aulast=Kozierok&amp;rft.btitle=Partitioning+and+Volume+Position&amp;rft.date=2001-04-17&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.pcguide.com%2Fref%2Fhdd%2Fperf%2Fperf%2Fext%2FfilePart-c.html&amp;rft.pub=Pcguide.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web">Blake, Ken. <a rel="nofollow" class="external text" href="http://www.computorcompanion.com/LPMArticle.asp?ID=326">"Understanding Disk Partitioning"</a>. Computorcompanion.com<span class="reference-accessdate">. Retrieved 2012-10-24</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.au=Blake%2C+Ken&amp;rft.aufirst=Ken&amp;rft.aulast=Blake&amp;rft.btitle=Understanding+Disk+Partitioning&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.computorcompanion.com%2FLPMArticle.asp%3FID%3D326&amp;rft.pub=Computorcompanion.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation book">Smith, Roderick W. (2000-03-01). <a rel="nofollow" class="external text" href="http://books.google.co.uk/books?id=OuPtI5fHhBoC&amp;lpg=PA172&amp;ots=YFbyBztASR&amp;pg=PA178#v=onepage"><i>The Multi-Boot Configuration Handbook</i></a>. QUE. p.&#160;178. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7897-2283-6" title="Special:BookSources/0-7897-2283-6">0-7897-2283-6</a><span class="reference-accessdate">. Retrieved 2012-10-24</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aufirst=Roderick+W.&amp;rft.aulast=Smith&amp;rft.au=Smith%2C+Roderick+W.&amp;rft.btitle=The+Multi-Boot+Configuration+Handbook&amp;rft.date=2000-03-01&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.co.uk%2Fbooks%3Fid%3DOuPtI5fHhBoC%26lpg%3DPA172%26ots%3DYFbyBztASR%26pg%3DPA178%23v%3Donepage&amp;rft.isbn=0-7897-2283-6&amp;rft.pages=178&amp;rft.pub=QUE&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://www.kernel.org/doc/man-pages/online/pages/man2/link.2.html">link(2)</a></code></span>&#160;–&#160;<a href="Linux.html" title="Linux">Linux</a> Programmer's <a href="Manual_page_(Unix).html" title="Manual page (Unix)" class="mw-redirect">Manual</a> – System Calls</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://www.freebsd.org/cgi/man.cgi?query=link&amp;sektion=2&amp;manpath=4.4BSD+Lite2">link(2)</a></code></span>&#160;–&#160;<a href="BSD.html" title="BSD" class="mw-redirect">BSD</a> System Calls <a href="Manual_page_(Unix).html" title="Manual page (Unix)" class="mw-redirect">Manual</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://docs.oracle.com/cd/E26505_01/html/816-5167/link-2.html">link(2)</a></code></span>&#160;–&#160;<a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris 10</a> System Calls Reference <a href="Manual_page_(Unix).html" title="Manual page (Unix)" class="mw-redirect">Manual</a></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa363860(v=vs.85).aspx">"CreateHardLink function"</a>. Microsoft. 2013-04-16<span class="reference-accessdate">. Retrieved 2013-06-19</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.btitle=CreateHardLink+function&amp;rft.date=2013-04-16&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fwindows%2Fdesktop%2Faa363860%28v%3Dvs.85%29.aspx&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=15" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation journal">Stéphane Martineau, Jens Olsson, Nick Roberts (2002-11-02). <a rel="nofollow" class="external text" href="http://www.jensolsson.se/downloads/AODPS/AODPS.html"><i>The Alt-OS-Development Partition Specification (AODPS)</i></a>. 0.4.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aulast=St%C3%A9phane+Martineau%2C+Jens+Olsson%2C+Nick+Roberts&amp;rft.au=St%C3%A9phane+Martineau%2C+Jens+Olsson%2C+Nick+Roberts&amp;rft.btitle=The+Alt-OS-Development+Partition+Specification+%28AODPS%29&amp;rft.date=2002-11-02&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.jensolsson.se%2Fdownloads%2FAODPS%2FAODPS.html&amp;rft.series=0.4&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Andries_Brouwer" title="Andries Brouwer">Andries Brouwer</a> (1995–2004). <a rel="nofollow" class="external text" href="http://www.win.tue.nl/~aeb/partitions/partition_types-1.html"><i>List of partition identifiers for PCs</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.au=Andries+Brouwer&amp;rft.aulast=Andries+Brouwer&amp;rft.btitle=List+of+partition+identifiers+for+PCs&amp;rft.date=1995%26ndash%3B2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.win.tue.nl%2F~aeb%2Fpartitions%2Fpartition_types-1.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Check date values in: <code>|date=</code> (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_date" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation journal">Andries Brouwer (1999-09-16). <a rel="nofollow" class="external text" href="http://www.win.tue.nl/~aeb/partitions/partition_tables.html"><i>Minimal Partition Table Specification</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.au=Andries+Brouwer&amp;rft.aulast=Andries+Brouwer&amp;rft.btitle=Minimal+Partition+Table+Specification&amp;rft.date=1999-09-16&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.win.tue.nl%2F~aeb%2Fpartitions%2Fpartition_tables.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a rel="nofollow" class="external text" href="http://www.ranish.com/part/primer.htm"><i>partitioning primer</i></a>. Ranish. 1998-08-05.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.btitle=partitioning+primer&amp;rft.date=1998-08-05&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ranish.com%2Fpart%2Fprimer.htm&amp;rft.pub=Ranish&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal">Allen Smith. <a rel="nofollow" class="external text" href="http://www.allensmith.net/Storage/HDDlimit/Address.htm"><i>ATA (EIDE) Drive Capacity and Addressing</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.au=Allen+Smith&amp;rft.aulast=Allen+Smith&amp;rft.btitle=ATA+%28EIDE%29+Drive+Capacity+and+Addressing&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.allensmith.net%2FStorage%2FHDDlimit%2FAddress.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal">Microsoft (2005-06-03). <a rel="nofollow" class="external text" href="http://www.microsoft.com/whdc/device/storage/GPT-on-x64.mspx"><i>Using GPT Drives</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.aulast=Microsoft&amp;rft.au=Microsoft&amp;rft.btitle=Using+GPT+Drives&amp;rft.date=2005-06-03&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.microsoft.com%2Fwhdc%2Fdevice%2Fstorage%2FGPT-on-x64.mspx&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/69912">"MS-DOS Partitioning Summary"</a>. <i>Support</i>. <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADisk+partitioning&amp;rft.atitle=MS-DOS+Partitioning+Summary&amp;rft.genre=article&amp;rft_id=%2F%2Fsupport.microsoft.com%2Fkb%2F69912&amp;rft.jtitle=Support&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Guide_to_Unix" class="extiw" title="wikibooks:Guide to Unix">Guide to Unix</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Partitioning_Disks" class="extiw" title="wikibooks:Guide to Unix/Explanations/Partitioning Disks">Partitioning Disks</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://tldp.org/HOWTO/Partition/index.html">Linux Partition HOWTO</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/partition.html">Partition Definition</a> - by The Linux Information Project (LINFO)</li>
+<li><a rel="nofollow" class="external text" href="http://ubuntuguide.org/wiki/Multiple_OS_Installation">Multiple OS Installation in multiple partitions</a>—guide to using chainloaded bootloaders to enable multiple OSs to coexist</li>
+<li><a rel="nofollow" class="external text" href="http://www.lissot.net/partition/partition-03.html">Partition Types</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.win.tue.nl/~aeb/partitions/partition_types.html">Properties of partition tables</a></li>
+<li><a rel="nofollow" class="external text" href="http://viralpatel.net/taj/tutorial/partition_table.php">List of partition tables file system codes.</a></li>
+<li><a rel="nofollow" class="external text" href="http://partition.radified.com/">Guide with advantages and disadvantages to disk partitioning</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1163
+CPU time usage: 0.592 seconds
+Real time usage: 0.677 seconds
+Preprocessor visited node count: 1401/1000000
+Preprocessor generated node count: 6773/1500000
+Post‐expand include size: 27179/2048000 bytes
+Template argument size: 2656/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.062/10.000 seconds
+Lua memory usage: 2.65 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:55380-0!*!0!!en!4!* and timestamp 20140324124059
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;oldid=598139571">http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;oldid=598139571</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Disk_file_systems" title="Category:Disk file systems">Disk file systems</a></li><li><a href="http://en.wikipedia.org/wiki/Category:DOS_on_IBM_PC_compatibles" title="Category:DOS on IBM PC compatibles">DOS on IBM PC compatibles</a></li><li><a href="http://en.wikipedia.org/wiki/Category:IBM_PC_compatibles" title="Category:IBM PC compatibles">IBM PC compatibles</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Utility_software_types" title="Category:Utility software types">Utility software types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_January_2013" title="Category:Articles with unsourced statements from January 2013">Articles with unsourced statements from January 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:CS1_errors:_dates" title="Category:CS1 errors: dates">CS1 errors: dates</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_prone_to_spam_from_October_2012" title="Category:Articles prone to spam from October 2012">Articles prone to spam from October 2012</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Disk+partitioning&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Disk+partitioning" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Disk_partitioning.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Disk_partitioning"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Disk_partitioning.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Disk_partitioning" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Disk_partitioning" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;oldid=598139571" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q624167" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Disk_partitioning&amp;id=598139571" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Disk+partitioning">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Disk+partitioning&amp;oldid=598139571&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Disk_partitioning&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Partició_de_disc" title="Partició de disc – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Diskový_oddíl" title="Diskový oddíl – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Partition_(Datenträger)" title="Partition (Datenträger) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Partitsioon" title="Partitsioon – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Κατάτμηση_δίσκου" title="Κατάτμηση δίσκου – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Partición_de_disco" title="Partición de disco – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Disko-partizio" title="Disko-partizio – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/پارتیشن‌بندی" title="پارتیشن‌بندی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Partition_de_disque_dur" title="Partition de disque dur – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/디스크_파티션" title="디스크 파티션 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Partisi_(sistem_berkas)" title="Partisi (sistem berkas) – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Partizione_(informatica)" title="Partizione (informatica) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/מחיצה_(מחשב)" title="מחיצה (מחשב) – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Partíció" title="Partíció – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Partitie_(informatica)" title="Partitie (informatica) – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/パーティション" title="パーティション – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Partisjon_(informasjonsteknologi)" title="Partisjon (informasjonsteknologi) – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Partição" title="Partição – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Раздел_диска" title="Раздел диска – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Disk_partitioning" title="Disk partitioning – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Oddiel_(disk)" title="Oddiel (disk) – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Kiintolevyn_osiointi" title="Kiintolevyn osiointi – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Diskpartitionering" title="Diskpartitionering – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Disk_bölümlendirme" title="Disk bölümlendirme – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/硬盘分区" title="硬盘分区 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q624167#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 March 2014 at 18:26.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Disk_partitioning" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1081 in 0.378 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Disk_partitioning by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:29 GMT -->
+</html>

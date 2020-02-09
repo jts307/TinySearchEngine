@@ -1,0 +1,1057 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Circular_buffer.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Circular_buffer by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Circular buffer - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Circular_buffer" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Circular_buffer.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Circular_buffer","wgTitle":"Circular buffer","wgCurRevisionId":600431497,"wgRevisionId":600431497,"wgArticleId":11891734,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing style editing from April 2011","All articles needing style editing","Articles lacking sources from April 2011","All articles lacking sources","Self-contradictory articles from April 2013","All self-contradictory articles","All articles with unsourced statements","Articles with unsourced statements from April 2009","Computer memory","Arrays"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Circular_buffer","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ko-kr"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1224994"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Circular_buffer skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Circular buffer</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-Tone" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article's <b><a href="http://en.wikipedia.org/wiki/Wikipedia:TONE" title="Wikipedia:TONE" class="mw-redirect">tone</a> or style may not reflect the encyclopedic tone used on Wikipedia</b>. <span class="hide-when-compact">See Wikipedia's <a href="http://en.wikipedia.org/wiki/Wikipedia:Guide_to_writing_better_articles" title="Wikipedia:Guide to writing better articles" class="mw-redirect">guide to writing better articles</a> for suggestions.</span> <small><i>(April 2011)</i></small></span></td>
+</tr>
+</table>
+<table class="metadata plainlinks ambox ambox-content ambox-Unreferenced" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>does not <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">cite</a> any <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references or sources</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence" title="Wikipedia:Verifiability">removed</a>.</span> <small><i>(April 2011)</i></small></span></td>
+</tr>
+</table>
+<table class="metadata plainlinks ambox ambox-content" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="Exclamation mark with arrows pointing at each other" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/38px-Ambox_contradict.svg.png" width="38" height="38" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/57px-Ambox_contradict.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/76px-Ambox_contradict.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article or section <b>appears to contradict itself&#160;about the end pointer: it is confused with the next pointer, resulting in a contradiction.</b> <span class="hide-when-compact">Please see the <a href="http://en.wikipedia.org/wiki/Talk:Circular_buffer" title="Talk:Circular buffer">talk page</a> for more information.</span> <small><i>(April 2013)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="http://en.wikipedia.org/wiki/File:Circular_buffer.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Circular_buffer.svg/200px-Circular_buffer.svg.png" width="200" height="200" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Circular_buffer.svg/300px-Circular_buffer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Circular_buffer.svg/400px-Circular_buffer.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Circular_buffer.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A ring showing, conceptually, a circular buffer. This visually shows that the buffer has no real end and it can loop around the buffer. However, since memory is never physically created as a ring, a linear representation is generally used as is done below.</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="http://en.wikipedia.org/wiki/File:Ring_buffer.svg" class="image"><img alt="Ring buffer.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ring_buffer.svg/200px-Ring_buffer.svg.png" width="200" height="193" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ring_buffer.svg/300px-Ring_buffer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ring_buffer.svg/400px-Ring_buffer.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Ring_buffer.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+</div>
+</div>
+</div>
+<p>A <b>circular buffer</b>, <b>cyclic buffer</b> or <b>ring buffer</b> is a <a href="Data_structure.html" title="Data structure">data structure</a> that uses a single, fixed-size <a href="http://en.wikipedia.org/wiki/Buffer_(computer_science)" title="Buffer (computer science)" class="mw-redirect">buffer</a> as if it were connected end-to-end. This structure lends itself easily to buffering <a href="http://en.wikipedia.org/wiki/Data_stream" title="Data stream">data streams</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Uses"><span class="tocnumber">1</span> <span class="toctext">Uses</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#How_it_works"><span class="tocnumber">2</span> <span class="toctext">How it works</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Circular_buffer_mechanics"><span class="tocnumber">3</span> <span class="toctext">Circular buffer mechanics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Start_.2F_End_Pointers_.28Head.2FTail_.29"><span class="tocnumber">3.1</span> <span class="toctext">Start / End Pointers (Head/Tail )</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Difficulties"><span class="tocnumber">4</span> <span class="toctext">Difficulties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Full_.2F_Empty_Buffer_Distinction"><span class="tocnumber">4.1</span> <span class="toctext">Full / Empty Buffer Distinction</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Always_Keep_One_Slot_Open"><span class="tocnumber">4.1.1</span> <span class="toctext">Always Keep One Slot Open</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Use_a_Fill_Count"><span class="tocnumber">4.1.2</span> <span class="toctext">Use a Fill Count</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Mirroring"><span class="tocnumber">4.1.3</span> <span class="toctext">Mirroring</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Read_.2F_Write_Counts"><span class="tocnumber">4.1.4</span> <span class="toctext">Read / Write Counts</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Absolute_indices"><span class="tocnumber">4.1.5</span> <span class="toctext">Absolute indices</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Record_last_operation"><span class="tocnumber">4.1.6</span> <span class="toctext">Record last operation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Multiple_Read_Pointers"><span class="tocnumber">4.2</span> <span class="toctext">Multiple Read Pointers</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Chunked_Buffer"><span class="tocnumber">4.3</span> <span class="toctext">Chunked Buffer</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Optimization"><span class="tocnumber">5</span> <span class="toctext">Optimization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Optimized_POSIX_implementation"><span class="tocnumber">5.1</span> <span class="toctext">Optimized POSIX implementation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Variants"><span class="tocnumber">6</span> <span class="toctext">Variants</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Uses">Uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=1" title="Edit section: Uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The useful property of a circular buffer is that it does not need to have its elements shuffled around when one is consumed. (If a non-circular buffer were used then it would be necessary to shift all elements when one is consumed.) In other words, the circular buffer is well-suited as a <a href="FIFO_(computing).html" title="FIFO (computing)" class="mw-redirect">FIFO</a> buffer while a standard, non-circular buffer is well suited as a <a href="http://en.wikipedia.org/wiki/LIFO_(computing)" title="LIFO (computing)">LIFO</a> buffer.</p>
+<p>Circular buffering makes a good implementation strategy for a <a href="Queue_(data_structure).html" title="Queue (data structure)" class="mw-redirect">queue</a> that has fixed maximum size. Should a maximum size be adopted for a queue, then a circular buffer is a completely ideal implementation; all queue operations are constant time. However, expanding a circular buffer requires shifting memory, which is comparatively costly. For arbitrarily expanding queues, a <a href="Linked_list.html" title="Linked list">linked list</a> approach may be preferred instead.</p>
+<p>In some situations, overwriting circular buffer can be used, e.g. in multimedia. If the buffer is used as the bounded buffer in the <a href="http://en.wikipedia.org/wiki/Producer-consumer_problem" title="Producer-consumer problem" class="mw-redirect">producer-consumer problem</a> then it is probably desired for the producer (e.g., an audio generator) to overwrite old data if the consumer (e.g., the <a href="http://en.wikipedia.org/wiki/Sound_card" title="Sound card">sound card</a>) is unable to momentarily keep up. Also, the <a href="http://en.wikipedia.org/wiki/LZ77" title="LZ77" class="mw-redirect">LZ77</a> family of lossless data compression algorithms operates on the assumption that strings seen more recently in a data stream are more likely to occur soon in the stream. Implementations store the most recent data in a circular buffer.</p>
+<h2><span class="mw-headline" id="How_it_works">How it works</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=2" title="Edit section: How it works">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A circular buffer first starts empty and of some predefined length. For example, this is a 7-element buffer:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_empty.svg" class="image"><img alt="Circular buffer - empty.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Circular_buffer_-_empty.svg/250px-Circular_buffer_-_empty.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Circular_buffer_-_empty.svg/375px-Circular_buffer_-_empty.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Circular_buffer_-_empty.svg/500px-Circular_buffer_-_empty.svg.png 2x" /></a></dd>
+</dl>
+<p>Assume that a 1 is written into the middle of the buffer (exact starting location does not matter in a circular buffer):</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_XX1XXXX.svg" class="image"><img alt="Circular buffer - XX1XXXX.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Circular_buffer_-_XX1XXXX.svg/250px-Circular_buffer_-_XX1XXXX.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Circular_buffer_-_XX1XXXX.svg/375px-Circular_buffer_-_XX1XXXX.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Circular_buffer_-_XX1XXXX.svg/500px-Circular_buffer_-_XX1XXXX.svg.png 2x" /></a></dd>
+</dl>
+<p>Then assume that two more elements are added — 2 &amp; 3 — which get appended after the 1:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_XX123XX.svg" class="image"><img alt="Circular buffer - XX123XX.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Circular_buffer_-_XX123XX.svg/250px-Circular_buffer_-_XX123XX.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Circular_buffer_-_XX123XX.svg/375px-Circular_buffer_-_XX123XX.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Circular_buffer_-_XX123XX.svg/500px-Circular_buffer_-_XX123XX.svg.png 2x" /></a></dd>
+</dl>
+<p>If two elements are then removed from the buffer, the oldest values inside the buffer are removed. The two elements removed, in this case, are 1 &amp; 2, leaving the buffer with just a 3:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_XXXX3XX.svg" class="image"><img alt="Circular buffer - XXXX3XX.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Circular_buffer_-_XXXX3XX.svg/250px-Circular_buffer_-_XXXX3XX.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Circular_buffer_-_XXXX3XX.svg/375px-Circular_buffer_-_XXXX3XX.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Circular_buffer_-_XXXX3XX.svg/500px-Circular_buffer_-_XXXX3XX.svg.png 2x" /></a></dd>
+</dl>
+<p>If the buffer has 7 elements then it is completely full:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_6789345.svg" class="image"><img alt="Circular buffer - 6789345.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Circular_buffer_-_6789345.svg/250px-Circular_buffer_-_6789345.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/67/Circular_buffer_-_6789345.svg/375px-Circular_buffer_-_6789345.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/67/Circular_buffer_-_6789345.svg/500px-Circular_buffer_-_6789345.svg.png 2x" /></a></dd>
+</dl>
+<p>A consequence of the circular buffer is that when it is full and a subsequent write is performed, then it starts overwriting the oldest data. In this case, two more elements — A &amp; B — are added and they <i>overwrite</i> the 3 &amp; 4:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_6789AB5.svg" class="image"><img alt="Circular buffer - 6789AB5.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Circular_buffer_-_6789AB5.svg/250px-Circular_buffer_-_6789AB5.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Circular_buffer_-_6789AB5.svg/375px-Circular_buffer_-_6789AB5.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Circular_buffer_-_6789AB5.svg/500px-Circular_buffer_-_6789AB5.svg.png 2x" /></a></dd>
+</dl>
+<p>Alternatively, the routines that manage the buffer could prevent overwriting the data and return an error or raise an <a href="http://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">exception</a>. Whether or not data is overwritten is up to the semantics of the buffer routines or the application using the circular buffer.</p>
+<p>Finally, if two elements are now removed then what would be returned is <b>not</b> 3 &amp; 4 but 5 &amp; 6 because A &amp; B overwrote the 3 &amp; the 4 yielding the buffer with:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_X789ABX.svg" class="image"><img alt="Circular buffer - X789ABX.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Circular_buffer_-_X789ABX.svg/250px-Circular_buffer_-_X789ABX.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Circular_buffer_-_X789ABX.svg/375px-Circular_buffer_-_X789ABX.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/Circular_buffer_-_X789ABX.svg/500px-Circular_buffer_-_X789ABX.svg.png 2x" /></a></dd>
+</dl>
+<h2><span class="mw-headline" id="Circular_buffer_mechanics">Circular buffer mechanics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=3" title="Edit section: Circular buffer mechanics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>What is not shown in the example above is the mechanics of how the circular buffer is managed.</p>
+<h3><span class="mw-headline" id="Start_.2F_End_Pointers_.28Head.2FTail_.29">Start / End Pointers (Head/Tail )</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=4" title="Edit section: Start / End Pointers (Head/Tail )">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Generally, a circular buffer requires four <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a>:</p>
+<ul>
+<li>one to the actual buffer in memory</li>
+<li>one to the buffer end in memory (or alternately: the size of the buffer)</li>
+<li>one to point to the start of valid data (or alternately: amount of data written to the buffer)</li>
+<li>one to point to the end of valid data (or alternately: amount of data read from the buffer)</li>
+</ul>
+<p>Alternatively, a fixed-length buffer with two integers to keep track of indices can be used in languages that do not have pointers.</p>
+<p>Taking a couple of examples from above. (While there are numerous ways to label the pointers and exact semantics can vary, this is one way to do it.)</p>
+<p>This image shows a partially full buffer:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_XX123XX_with_pointers.svg" class="image"><img alt="Circular buffer - XX123XX with pointers.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circular_buffer_-_XX123XX_with_pointers.svg/250px-Circular_buffer_-_XX123XX_with_pointers.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circular_buffer_-_XX123XX_with_pointers.svg/375px-Circular_buffer_-_XX123XX_with_pointers.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circular_buffer_-_XX123XX_with_pointers.svg/500px-Circular_buffer_-_XX123XX_with_pointers.svg.png 2x" /></a></dd>
+</dl>
+<p>This image shows a full buffer with two elements having been overwritten:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_6789AB5_with_pointers.svg" class="image"><img alt="Circular buffer - 6789AB5 with pointers.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Circular_buffer_-_6789AB5_with_pointers.svg/250px-Circular_buffer_-_6789AB5_with_pointers.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Circular_buffer_-_6789AB5_with_pointers.svg/375px-Circular_buffer_-_6789AB5_with_pointers.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/05/Circular_buffer_-_6789AB5_with_pointers.svg/500px-Circular_buffer_-_6789AB5_with_pointers.svg.png 2x" /></a></dd>
+</dl>
+<p>What to note about the second one is that after each element is overwritten then the start pointer is incremented as well.</p>
+<h2><span class="mw-headline" id="Difficulties">Difficulties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=5" title="Edit section: Difficulties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Full_.2F_Empty_Buffer_Distinction">Full / Empty Buffer Distinction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=6" title="Edit section: Full / Empty Buffer Distinction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A small disadvantage of relying on pointers or relative indices of the start and end of data is, that in the case the buffer is entirely full, both pointers point to the same element:<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Cleanup" title="Wikipedia:Cleanup"><span title="this section treats the end pointer as a next pointer, resulting in a contradiction Please help to fix this. (April 2013)">contradiction</span></a></i>]</sup></p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_6789AB5_full.svg" class="image"><img alt="Circular buffer - 6789AB5 full.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Circular_buffer_-_6789AB5_full.svg/250px-Circular_buffer_-_6789AB5_full.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f4/Circular_buffer_-_6789AB5_full.svg/375px-Circular_buffer_-_6789AB5_full.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f4/Circular_buffer_-_6789AB5_full.svg/500px-Circular_buffer_-_6789AB5_full.svg.png 2x" /></a></dd>
+</dl>
+<p>This is exactly the same situation as when the buffer is empty:</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_6789AB5_empty.svg" class="image"><img alt="Circular buffer - 6789AB5 empty.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/1/11/Circular_buffer_-_6789AB5_empty.svg/250px-Circular_buffer_-_6789AB5_empty.svg.png" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/11/Circular_buffer_-_6789AB5_empty.svg/375px-Circular_buffer_-_6789AB5_empty.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/11/Circular_buffer_-_6789AB5_empty.svg/500px-Circular_buffer_-_6789AB5_empty.svg.png 2x" /></a></dd>
+</dl>
+<p>To solve this confusion there are a number of solutions:</p>
+<ul>
+<li><a href="Circular_buffer.html#Always_Keep_One_Slot_Open" title="Circular buffer">Always keep one slot open.</a></li>
+<li><a href="Circular_buffer.html#Use_a_Fill_Count" title="Circular buffer">Use a fill count to distinguish the two cases.</a></li>
+<li><a href="Circular_buffer.html#Mirroring" title="Circular buffer">Use an extra mirroring bit to distinguish the two cases.</a></li>
+<li><a href="Circular_buffer.html#Read_.2F_Write_Counts" title="Circular buffer">Use read and write counts to get the fill count from.</a></li>
+<li><a href="Circular_buffer.html#Absolute_indices" title="Circular buffer">Use absolute indices.</a></li>
+<li><a href="Circular_buffer.html#Record_last_operation" title="Circular buffer">Record last operation.</a></li>
+</ul>
+<h4><span class="mw-headline" id="Always_Keep_One_Slot_Open">Always Keep One Slot Open</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=7" title="Edit section: Always Keep One Slot Open">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This design always keeps one slot unallocated. A full buffer has at most <img class="tex" alt="(\text{size}-1)" src="http://upload.wikimedia.org/math/9/a/9/9a94255a14f31ab5f26d04c51d326fee.png" /> slots. If both pointers refer to the same slot, the buffer is empty. If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full.</p>
+<p>The advantage is:</p>
+<ul>
+<li>The solution is simple and robust.</li>
+</ul>
+<p>The disadvantages are:</p>
+<ul>
+<li>One slot is lost, so it is a bad compromise when the buffer size is small or the slot is big or is implemented in hardware.</li>
+<li>The full test requires a modulo operation</li>
+</ul>
+<p><b>Example implementation, <a href="C_(programming_language).html" title="C (programming language)">'C' language</a></b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Circular buffer example, keeps one slot open */</span>
+ 
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+ 
+<span class="coMULTI">/* Opaque buffer element type.  This would be defined by the application. */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span> <span class="kw4">int</span> value<span class="sy0">;</span> <span class="br0">}</span> ElemType<span class="sy0">;</span>
+ 
+<span class="coMULTI">/* Circular buffer object */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+    <span class="kw4">int</span>         size<span class="sy0">;</span>   <span class="coMULTI">/* maximum number of elements           */</span>
+    <span class="kw4">int</span>         start<span class="sy0">;</span>  <span class="coMULTI">/* index of oldest element              */</span>
+    <span class="kw4">int</span>         end<span class="sy0">;</span>    <span class="coMULTI">/* index at which to write new element  */</span>
+    ElemType   <span class="sy0">*</span>elems<span class="sy0">;</span>  <span class="coMULTI">/* vector of elements                   */</span>
+<span class="br0">}</span> CircularBuffer<span class="sy0">;</span>
+ 
+<span class="kw4">void</span> cbInit<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> size<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>size  <span class="sy0">=</span> size <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span> <span class="coMULTI">/* include empty elem */</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>end   <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>elems <span class="sy0">=</span> <span class="br0">(</span>ElemType <span class="sy0">*</span><span class="br0">)</span><span class="kw3">calloc</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span>ElemType<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbFree<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw3">free</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>elems<span class="br0">)</span><span class="sy0">;</span> <span class="coMULTI">/* OK if null */</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsFull<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>end <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsEmpty<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="coMULTI">/* Write an element, overwriting oldest element if buffer is full. App can
+   choose to avoid the overwrite by checking cbIsFull(). */</span>
+<span class="kw4">void</span> cbWrite<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>end<span class="br0">]</span> <span class="sy0">=</span> <span class="sy0">*</span>elem<span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>end <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>end <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start<span class="br0">)</span>
+        cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span> <span class="coMULTI">/* full, overwrite */</span>
+<span class="br0">}</span>
+ 
+<span class="coMULTI">/* Read oldest element. App must ensure !cbIsEmpty() first. */</span>
+<span class="kw4">void</span> cbRead<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">*</span>elem <span class="sy0">=</span> cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>start<span class="br0">]</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">**</span>argv<span class="br0">)</span> <span class="br0">{</span>
+    CircularBuffer cb<span class="sy0">;</span>
+    ElemType elem <span class="sy0">=</span> <span class="br0">{</span><span class="nu0">0</span><span class="br0">}</span><span class="sy0">;</span>
+ 
+    <span class="kw4">int</span> testBufferSize <span class="sy0">=</span> <span class="nu0">10</span><span class="sy0">;</span> <span class="coMULTI">/* arbitrary size */</span>
+    cbInit<span class="br0">(</span><span class="sy0">&amp;</span>cb<span class="sy0">,</span> testBufferSize<span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="coMULTI">/* Fill buffer with test elements 3 times */</span>
+    <span class="kw1">for</span> <span class="br0">(</span>elem.<span class="me1">value</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> elem.<span class="me1">value</span> <span class="sy0">&lt;</span> <span class="nu0">3</span> <span class="sy0">*</span> testBufferSize<span class="sy0">;</span> <span class="sy0">++</span> elem.<span class="me1">value</span><span class="br0">)</span>
+        cbWrite<span class="br0">(</span><span class="sy0">&amp;</span>cb<span class="sy0">,</span> <span class="sy0">&amp;</span>elem<span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="coMULTI">/* Remove and print all elements */</span>
+    <span class="kw1">while</span> <span class="br0">(</span><span class="sy0">!</span>cbIsEmpty<span class="br0">(</span><span class="sy0">&amp;</span>cb<span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+        cbRead<span class="br0">(</span><span class="sy0">&amp;</span>cb<span class="sy0">,</span> <span class="sy0">&amp;</span>elem<span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"%d<span class="es1">\n</span>"</span><span class="sy0">,</span> elem.<span class="me1">value</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    cbFree<span class="br0">(</span><span class="sy0">&amp;</span>cb<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Use_a_Fill_Count">Use a Fill Count</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=8" title="Edit section: Use a Fill Count">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This approach replaces the end pointer with a counter that tracks the number of readable items in the buffer. This unambiguously indicates when the buffer is empty or full and allows use of all buffer slots.</p>
+<p>The performance impact should be negligible, since this approach adds the costs of maintaining the counter and computing the tail slot on writes but eliminates the need to maintain the end pointer and simplifies the fullness test.</p>
+<p>The advantage is:</p>
+<ul>
+<li>The test for full/empty is simple</li>
+</ul>
+<p>The disadvantages are:</p>
+<ul>
+<li>You need modulo for read and write</li>
+<li>Read and write operation must share the counter field, so it requires synchronization in multi-threaded situation.</li>
+</ul>
+<p>Note: When using <a href="Semaphore_(programming).html" title="Semaphore (programming)">semaphores</a> in a <a href="http://en.wikipedia.org/wiki/Producer-consumer_problem" title="Producer-consumer problem" class="mw-redirect">Producer-consumer</a> model, the semaphores act as a fill count.</p>
+<p><b>Differences from previous example</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* This approach replaces the CircularBuffer 'end' field with the
+   'count' field and changes these functions: */</span>
+ 
+<span class="kw4">void</span> cbInit<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> size<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>size  <span class="sy0">=</span> size<span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>count <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>elems <span class="sy0">=</span> <span class="br0">(</span>ElemType <span class="sy0">*</span><span class="br0">)</span><span class="kw3">calloc</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span>ElemType<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsFull<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>count <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span> <span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsEmpty<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>count <span class="sy0">==</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbWrite<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw4">int</span> end <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">+</span> cb<span class="sy0">-&gt;</span>count<span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>end<span class="br0">]</span> <span class="sy0">=</span> <span class="sy0">*</span>elem<span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>count <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>size<span class="br0">)</span>
+        cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span> <span class="coMULTI">/* full, overwrite */</span>
+    <span class="kw1">else</span>
+        <span class="sy0">++</span> cb<span class="sy0">-&gt;</span>count<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbRead<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">*</span>elem <span class="sy0">=</span> cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>start<span class="br0">]</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">%</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">;</span>
+    <span class="sy0">--</span> cb<span class="sy0">-&gt;</span>count<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Mirroring">Mirroring</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=9" title="Edit section: Mirroring">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Another solution is to remember the number of times each read and write pointers have wrapped and compare this to distinguish empty and full situations. In fact only the parity of the number of wraps is necessary, so you only need to keep an extra bit. You can see this as if the buffer adds a virtual mirror and the pointers point either to the normal or to the mirrored buffer.</p>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Circular_buffer_-_mirror_solution_full_and_empty.svg" class="image"><img alt="Circular buffer - mirror solution full and empty.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Circular_buffer_-_mirror_solution_full_and_empty.svg/500px-Circular_buffer_-_mirror_solution_full_and_empty.svg.png" width="500" height="116" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/d2/Circular_buffer_-_mirror_solution_full_and_empty.svg/750px-Circular_buffer_-_mirror_solution_full_and_empty.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/d2/Circular_buffer_-_mirror_solution_full_and_empty.svg/1000px-Circular_buffer_-_mirror_solution_full_and_empty.svg.png 2x" /></a></dd>
+</dl>
+<p>It is easy to see above that when the pointers (including the extra msb bit) are equal, the buffer is empty, while if the pointers differ only by the extra msb bit, the buffer is full.</p>
+<p>The advantages are:</p>
+<ul>
+<li>The test for full/empty is simple</li>
+<li>No modulo operation is needed</li>
+<li>The source and sink of data can implement independent policies for dealing with a full buffer and overrun while adhering to the rule that only the source of data modifies the write count and only the sink of data modifies the read count. This can result in elegant and robust circular buffer implementations even in multi-threaded environments.</li>
+</ul>
+<p>The disadvantage is:</p>
+<ul>
+<li>You need one more bit for read and write pointer</li>
+</ul>
+<p><b>Differences from Always Keep One Slot Open example</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* This approach adds one bit to end and start pointers */</span>
+ 
+<span class="coMULTI">/* Circular buffer object */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+    <span class="kw4">int</span>         size<span class="sy0">;</span>   <span class="coMULTI">/* maximum number of elements           */</span>
+    <span class="kw4">int</span>         start<span class="sy0">;</span>  <span class="coMULTI">/* index of oldest element              */</span>
+    <span class="kw4">int</span>         end<span class="sy0">;</span>    <span class="coMULTI">/* index at which to write new element  */</span>
+    <span class="kw4">int</span>         s_msb<span class="sy0">;</span>
+    <span class="kw4">int</span>         e_msb<span class="sy0">;</span>
+    ElemType   <span class="sy0">*</span>elems<span class="sy0">;</span>  <span class="coMULTI">/* vector of elements                   */</span>
+<span class="br0">}</span> CircularBuffer<span class="sy0">;</span>
+ 
+<span class="kw4">void</span> cbInit<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> size<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>size  <span class="sy0">=</span> size<span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>end   <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>s_msb <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>e_msb <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>elems <span class="sy0">=</span> <span class="br0">(</span>ElemType <span class="sy0">*</span><span class="br0">)</span><span class="kw3">calloc</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span>ElemType<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsFull<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start <span class="sy0">&amp;&amp;</span> cb<span class="sy0">-&gt;</span>e_msb <span class="sy0">!=</span> cb<span class="sy0">-&gt;</span>s_msb<span class="sy0">;</span> <span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsEmpty<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start <span class="sy0">&amp;&amp;</span> cb<span class="sy0">-&gt;</span>e_msb <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>s_msb<span class="sy0">;</span> <span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbIncr<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> <span class="sy0">*</span>p<span class="sy0">,</span> <span class="kw4">int</span> <span class="sy0">*</span>msb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">*</span>p <span class="sy0">=</span> <span class="sy0">*</span>p <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">*</span>p <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>size<span class="br0">)</span> <span class="br0">{</span>
+        <span class="sy0">*</span>msb <span class="sy0">^=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="sy0">*</span>p <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbWrite<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>end<span class="br0">]</span> <span class="sy0">=</span> <span class="sy0">*</span>elem<span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>cbIsFull<span class="br0">(</span>cb<span class="br0">)</span><span class="br0">)</span> <span class="coMULTI">/* full, overwrite moves start pointer */</span>
+        cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>start<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>s_msb<span class="br0">)</span><span class="sy0">;</span>
+    cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>end<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>e_msb<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbRead<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">*</span>elem <span class="sy0">=</span> cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>start<span class="br0">]</span><span class="sy0">;</span>
+    cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>start<span class="sy0">,</span> <span class="sy0">&amp;</span>cb<span class="sy0">-&gt;</span>s_msb<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>If the size is a power of two, the implementation is simpler and the separate msb variables are no longer necessary, removing the disadvantage:</p>
+<p><b>Differences from Always Keep One Slot Open example</b></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* This approach adds one bit to end and start pointers */</span>
+ 
+<span class="coMULTI">/* Circular buffer object */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+    <span class="kw4">int</span>         size<span class="sy0">;</span>   <span class="coMULTI">/* maximum number of elements           */</span>
+    <span class="kw4">int</span>         start<span class="sy0">;</span>  <span class="coMULTI">/* index of oldest element              */</span>
+    <span class="kw4">int</span>         end<span class="sy0">;</span>    <span class="coMULTI">/* index at which to write new element  */</span>
+    ElemType   <span class="sy0">*</span>elems<span class="sy0">;</span>  <span class="coMULTI">/* vector of elements                   */</span>
+<span class="br0">}</span> CircularBuffer<span class="sy0">;</span>
+ 
+<span class="kw4">void</span> cbInit<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> size<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>size  <span class="sy0">=</span> size<span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>end   <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>elems <span class="sy0">=</span> <span class="br0">(</span>ElemType <span class="sy0">*</span><span class="br0">)</span><span class="kw3">calloc</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span>ElemType<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbPrint<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"size=0x%x, start=%d, end=%d<span class="es1">\n</span>"</span><span class="sy0">,</span> cb<span class="sy0">-&gt;</span>size<span class="sy0">,</span> cb<span class="sy0">-&gt;</span>start<span class="sy0">,</span> cb<span class="sy0">-&gt;</span>end<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsFull<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> <span class="br0">(</span>cb<span class="sy0">-&gt;</span>start <span class="sy0">^</span> cb<span class="sy0">-&gt;</span>size<span class="br0">)</span><span class="sy0">;</span> <span class="coMULTI">/* This inverts the most significant bit of start before comparison */</span> <span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIsEmpty<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> cb<span class="sy0">-&gt;</span>end <span class="sy0">==</span> cb<span class="sy0">-&gt;</span>start<span class="sy0">;</span> <span class="br0">}</span>
+ 
+<span class="kw4">int</span> cbIncr<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> <span class="kw4">int</span> p<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">return</span> <span class="br0">(</span>p <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">&amp;</span><span class="br0">(</span><span class="nu0">2</span><span class="sy0">*</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span> <span class="coMULTI">/* start and end pointers incrementation is done modulo 2*size */</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbWrite<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>end<span class="sy0">&amp;</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><span class="br0">]</span> <span class="sy0">=</span> <span class="sy0">*</span>elem<span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>cbIsFull<span class="br0">(</span>cb<span class="br0">)</span><span class="br0">)</span> <span class="coMULTI">/* full, overwrite moves start pointer */</span>
+        cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> cb<span class="sy0">-&gt;</span>start<span class="br0">)</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>end <span class="sy0">=</span> cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> cb<span class="sy0">-&gt;</span>end<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> cbRead<span class="br0">(</span>CircularBuffer <span class="sy0">*</span>cb<span class="sy0">,</span> ElemType <span class="sy0">*</span>elem<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">*</span>elem <span class="sy0">=</span> cb<span class="sy0">-&gt;</span>elems<span class="br0">[</span>cb<span class="sy0">-&gt;</span>start<span class="sy0">&amp;</span><span class="br0">(</span>cb<span class="sy0">-&gt;</span>size<span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><span class="br0">]</span><span class="sy0">;</span>
+    cb<span class="sy0">-&gt;</span>start <span class="sy0">=</span> cbIncr<span class="br0">(</span>cb<span class="sy0">,</span> cb<span class="sy0">-&gt;</span>start<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Read_.2F_Write_Counts">Read / Write Counts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=10" title="Edit section: Read / Write Counts">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Another solution is to keep counts of the number of items written to and read from the circular buffer. Both counts are stored in signed integer variables with numerical limits larger than the number of items that can be stored and are allowed to wrap freely.</p>
+<p>The unsigned difference (write_count - read_count) always yields the number of items placed in the buffer and not yet retrieved. This can indicate that the buffer is empty, partially full, completely full (without waste of a storage location) or in a state of overrun.</p>
+<p>The advantage is:</p>
+<ul>
+<li>The source and sink of data can implement independent policies for dealing with a full buffer and overrun while adhering to the rule that only the source of data modifies the write count and only the sink of data modifies the read count. This can result in elegant and robust circular buffer implementations even in multi-threaded environments.</li>
+</ul>
+<p>The disadvantage is:</p>
+<ul>
+<li>You need two additional variables.</li>
+</ul>
+<h4><span class="mw-headline" id="Absolute_indices">Absolute indices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=11" title="Edit section: Absolute indices">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>It is possible to optimize the previous solution by using indices instead of pointers: indices can store read/write counts instead of the offset from start of the buffer, the separate variables in the above solution are removed and relative indices are obtained on the fly by division <a href="Modulo_operation.html" title="Modulo operation">modulo</a> the buffer's length.</p>
+<p>The advantage is:</p>
+<ul>
+<li>No extra variables are needed.</li>
+</ul>
+<p>The disadvantages are:</p>
+<ul>
+<li>Every access needs an additional <i>modulo</i> operation.</li>
+<li>If counter wrap is possible, complex logic can be needed if the buffer's length is not a divisor of the counter's capacity.</li>
+</ul>
+<p>On binary computers, both of these disadvantages disappear if the buffer's length is a power of two—at the cost of a constraint on possible buffers lengths.</p>
+<h4><span class="mw-headline" id="Record_last_operation">Record last operation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=12" title="Edit section: Record last operation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Another solution is to keep a flag indicating whether the most recent operation was a read or a write. If the two pointers are equal, then the flag will show whether the buffer is full or empty: if the most recent operation was a write, the buffer must be full, and conversely if it was a read, it must be empty.</p>
+<p>The advantages are:</p>
+<ul>
+<li>Only a single bit needs to be stored (which may be particularly useful if the algorithm is implemented in hardware)</li>
+<li>The test for full/empty is simple</li>
+</ul>
+<p>The disadvantage is:</p>
+<ul>
+<li>You need an extra variable</li>
+<li>Read and write operation must share the flag, so it probably require synchronization in multi-threaded situation.</li>
+</ul>
+<h3><span class="mw-headline" id="Multiple_Read_Pointers">Multiple Read Pointers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=13" title="Edit section: Multiple Read Pointers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A little bit more complex are multiple read pointers on the same circular buffer. This is useful if you have <i>n</i> threads, which are reading from the same buffer, but <i>one</i> thread writing to the buffer.</p>
+<h3><span class="mw-headline" id="Chunked_Buffer">Chunked Buffer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=14" title="Edit section: Chunked Buffer">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Much more complex are different chunks of data in the same circular buffer. The writer is not only writing elements to the buffer, it also assigns these elements to chunks<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (April 2009)">citation needed</span></a></i>]</sup>.</p>
+<p>The reader should not only be able to read from the buffer, it should also get informed about the chunk borders.</p>
+<p>Example: The writer is reading data from small files, writing them into the same circular buffer. The reader is reading the data, but needs to know when and which file is starting at a given position.</p>
+<h2><span class="mw-headline" id="Optimization">Optimization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=15" title="Edit section: Optimization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A circular-buffer implementation may be optimized by <a href="http://en.wikipedia.org/wiki/Mmap" title="Mmap">mapping</a> the underlying buffer to two contiguous regions of <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a>. (Naturally, the underlying buffer‘s length must then equal some multiple of the system’s <a href="http://en.wikipedia.org/wiki/Page_(computing)" title="Page (computing)" class="mw-redirect">page size</a>.) Reading from and writing to the circular buffer may then be carried out with greater efficiency by means of direct memory access; those accesses which fall beyond the end of the first virtual-memory region will automatically wrap around to the beginning of the underlying buffer. When the read offset is advanced into the second virtual-memory region, both offsets—read and write—are decremented by the length of the underlying buffer.<sup id="cite_ref-cooke_1-0" class="reference"><a href="#cite_note-cooke-1"><span>[</span>1<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Optimized_POSIX_implementation">Optimized POSIX implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=16" title="Edit section: Optimized POSIX implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="co2">#include &lt;sys/mman.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;unistd.h&gt;</span>
+ 
+<span class="co2">#define report_exceptional_condition() abort ()</span>
+ 
+<span class="kw4">struct</span> ring_buffer
+<span class="br0">{</span>
+  <span class="kw4">void</span> <span class="sy0">*</span>address<span class="sy0">;</span>
+ 
+  <span class="kw4">unsigned</span> <span class="kw4">long</span> count_bytes<span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">long</span> write_offset_bytes<span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">long</span> read_offset_bytes<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+ 
+<span class="co1">//Warning order should be at least 12 for Linux</span>
+<span class="kw4">void</span>
+ring_buffer_create <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="sy0">,</span> <span class="kw4">unsigned</span> <span class="kw4">long</span> order<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw4">char</span> path<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st0">"/dev/shm/ring-buffer-XXXXXX"</span><span class="sy0">;</span>
+  <span class="kw4">int</span> file_descriptor<span class="sy0">;</span>
+  <span class="kw4">void</span> <span class="sy0">*</span>address<span class="sy0">;</span>
+  <span class="kw4">int</span> status<span class="sy0">;</span>
+ 
+  file_descriptor <span class="sy0">=</span> mkstemp <span class="br0">(</span>path<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>file_descriptor <span class="sy0">&lt;</span> <span class="nu0">0</span><span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  status <span class="sy0">=</span> unlink <span class="br0">(</span>path<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>status<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  buffer<span class="sy0">-&gt;</span>count_bytes <span class="sy0">=</span> 1UL <span class="sy0">&lt;&lt;</span> order<span class="sy0">;</span>
+  buffer<span class="sy0">-&gt;</span>write_offset_bytes <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+  buffer<span class="sy0">-&gt;</span>read_offset_bytes <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+ 
+  status <span class="sy0">=</span> ftruncate <span class="br0">(</span>file_descriptor<span class="sy0">,</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>status<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  buffer<span class="sy0">-&gt;</span>address <span class="sy0">=</span> mmap <span class="br0">(</span>NULL<span class="sy0">,</span> buffer<span class="sy0">-&gt;</span>count_bytes <span class="sy0">&lt;&lt;</span> <span class="nu0">1</span><span class="sy0">,</span> PROT_NONE<span class="sy0">,</span>
+                          MAP_ANONYMOUS <span class="sy0">|</span> MAP_PRIVATE<span class="sy0">,</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  <span class="kw1">if</span> <span class="br0">(</span>buffer<span class="sy0">-&gt;</span>address <span class="sy0">==</span> MAP_FAILED<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  address <span class="sy0">=</span>
+    mmap <span class="br0">(</span>buffer<span class="sy0">-&gt;</span>address<span class="sy0">,</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="sy0">,</span> PROT_READ <span class="sy0">|</span> PROT_WRITE<span class="sy0">,</span>
+          MAP_FIXED <span class="sy0">|</span> MAP_SHARED<span class="sy0">,</span> file_descriptor<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  <span class="kw1">if</span> <span class="br0">(</span>address <span class="sy0">!=</span> buffer<span class="sy0">-&gt;</span>address<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  address <span class="sy0">=</span> mmap <span class="br0">(</span>buffer<span class="sy0">-&gt;</span>address <span class="sy0">+</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="sy0">,</span>
+                  buffer<span class="sy0">-&gt;</span>count_bytes<span class="sy0">,</span> PROT_READ <span class="sy0">|</span> PROT_WRITE<span class="sy0">,</span>
+                  MAP_FIXED <span class="sy0">|</span> MAP_SHARED<span class="sy0">,</span> file_descriptor<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  <span class="kw1">if</span> <span class="br0">(</span>address <span class="sy0">!=</span> buffer<span class="sy0">-&gt;</span>address <span class="sy0">+</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+  status <span class="sy0">=</span> close <span class="br0">(</span>file_descriptor<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>status<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span>
+ring_buffer_free <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw4">int</span> status<span class="sy0">;</span>
+ 
+  status <span class="sy0">=</span> munmap <span class="br0">(</span>buffer<span class="sy0">-&gt;</span>address<span class="sy0">,</span> buffer<span class="sy0">-&gt;</span>count_bytes <span class="sy0">&lt;&lt;</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>status<span class="br0">)</span>
+    report_exceptional_condition <span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> <span class="sy0">*</span>
+ring_buffer_write_address <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="coMULTI">/*** void pointer arithmetic is a constraint violation. ***/</span>
+  <span class="kw1">return</span> buffer<span class="sy0">-&gt;</span>address <span class="sy0">+</span> buffer<span class="sy0">-&gt;</span>write_offset_bytes<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span>
+ring_buffer_write_advance <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="sy0">,</span>
+                           <span class="kw4">unsigned</span> <span class="kw4">long</span> count_bytes<span class="br0">)</span>
+<span class="br0">{</span>
+  buffer<span class="sy0">-&gt;</span>write_offset_bytes <span class="sy0">+=</span> count_bytes<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> <span class="sy0">*</span>
+ring_buffer_read_address <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw1">return</span> buffer<span class="sy0">-&gt;</span>address <span class="sy0">+</span> buffer<span class="sy0">-&gt;</span>read_offset_bytes<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span>
+ring_buffer_read_advance <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="sy0">,</span>
+                          <span class="kw4">unsigned</span> <span class="kw4">long</span> count_bytes<span class="br0">)</span>
+<span class="br0">{</span>
+  buffer<span class="sy0">-&gt;</span>read_offset_bytes <span class="sy0">+=</span> count_bytes<span class="sy0">;</span>
+ 
+  <span class="kw1">if</span> <span class="br0">(</span>buffer<span class="sy0">-&gt;</span>read_offset_bytes <span class="sy0">&gt;=</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="br0">)</span>
+    <span class="br0">{</span>
+      buffer<span class="sy0">-&gt;</span>read_offset_bytes <span class="sy0">-=</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="sy0">;</span>
+      buffer<span class="sy0">-&gt;</span>write_offset_bytes <span class="sy0">-=</span> buffer<span class="sy0">-&gt;</span>count_bytes<span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">unsigned</span> <span class="kw4">long</span>
+ring_buffer_count_bytes <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw1">return</span> buffer<span class="sy0">-&gt;</span>write_offset_bytes <span class="sy0">-</span> buffer<span class="sy0">-&gt;</span>read_offset_bytes<span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">unsigned</span> <span class="kw4">long</span>
+ring_buffer_count_free_bytes <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw1">return</span> buffer<span class="sy0">-&gt;</span>count_bytes <span class="sy0">-</span> ring_buffer_count_bytes <span class="br0">(</span>buffer<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span>
+ring_buffer_clear <span class="br0">(</span><span class="kw4">struct</span> ring_buffer <span class="sy0">*</span>buffer<span class="br0">)</span>
+<span class="br0">{</span>
+  buffer<span class="sy0">-&gt;</span>write_offset_bytes <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+  buffer<span class="sy0">-&gt;</span>read_offset_bytes <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="coMULTI">/*Note, that initial anonymous mmap() can be avoided - after initial mmap() for descriptor fd,
+you can try mmap() with hinted address as (buffer-&gt;address + buffer-&gt;count_bytes) and if it fails -
+another one with hinted address as (buffer-&gt;address - buffer-&gt;count_bytes).
+Make sure MAP_FIXED is not used in such case, as under certain situations it could end with segfault.
+The advantage of such approach is, that it avoids requirement to map twice the amount you need initially
+(especially useful e.g. if you want to use hugetlbfs and the allowed amount is limited)
+and in context of gcc/glibc - you can avoid certain feature macros
+(MAP_ANONYMOUS usually requires one of: _BSD_SOURCE, _SVID_SOURCE or _GNU_SOURCE).*/</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Variants">Variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=17" title="Edit section: Variants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Perhaps the most common version of the circular buffer uses 8-bit bytes as elements.</p>
+<p>Some implementations of the circular buffer use fixed-length elements that are bigger than 8-bit bytes -- 16-bit integers for audio buffers, 53-byte ATM cells for telecom buffers, etc. Each item is contiguous and has the correct <a href="http://en.wikipedia.org/wiki/Data_alignment" title="Data alignment" class="mw-redirect">data alignment</a>, so software reading and writing these values can be faster than software that handles non-contiguous and non-aligned values.</p>
+<p><a href="http://en.wikipedia.org/wiki/Ping-pong_buffer" title="Ping-pong buffer" class="mw-redirect">Ping-pong buffering</a> can be considered a very specialized circular buffer with exactly two large fixed-length elements.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Simon_Cooke#Inventions" title="Simon Cooke">Bip Buffer</a> is very similar to a circular buffer, except it always returns contiguous blocks (which can be variable length).<sup id="cite_ref-cooke_1-1" class="reference"><a href="#cite_note-cooke-1"><span>[</span>1<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit&amp;section=18" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-cooke-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-cooke_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-cooke_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/Simon_Cooke" title="Simon Cooke">Simon Cooke</a>. <a rel="nofollow" class="external text" href="http://www.codeproject.com/Articles/3479/The-Bip-Buffer-The-Circular-Buffer-with-a-Twist">"The Bip Buffer - The Circular Buffer with a Twist"</a>. 2003.</span></li>
+</ol>
+</div>
+<ul>
+<li><a href="http://c2.com/cgi/wiki?CircularBuffer" class="extiw" title="c2:CircularBuffer">CircularBuffer</a> at the <a href="http://en.wikipedia.org/wiki/Portland_Pattern_Repository" title="Portland Pattern Repository">Portland Pattern Repository</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.boost.org/doc/libs/1_39_0/libs/circular_buffer/doc/circular_buffer.html">Boost: Templated Circular Buffer Container</a></li>
+<li><a rel="nofollow" class="external free" href="http://www.dspguide.com/ch28/2.htm">http://www.dspguide.com/ch28/2.htm</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><strong class="selflink">Circular buffer</strong></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1215
+CPU time usage: 0.536 seconds
+Real time usage: 0.626 seconds
+Preprocessor visited node count: 719/1000000
+Preprocessor generated node count: 2774/1500000
+Post‐expand include size: 25924/2048000 bytes
+Template argument size: 1255/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 9/500
+Lua time usage: 0.062/10.000 seconds
+Lua memory usage: 1.54 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:11891734-0!*!0!!en!4!*!math=0 and timestamp 20140326031004
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;oldid=600431497">http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;oldid=600431497</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Computer_memory" title="Category:Computer memory">Computer memory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Arrays" title="Category:Arrays">Arrays</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_style_editing_from_April_2011" title="Category:Wikipedia articles needing style editing from April 2011">Wikipedia articles needing style editing from April 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_style_editing" title="Category:All articles needing style editing">All articles needing style editing</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_sources_from_April_2011" title="Category:Articles lacking sources from April 2011">Articles lacking sources from April 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_sources" title="Category:All articles lacking sources">All articles lacking sources</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Self-contradictory_articles_from_April_2013" title="Category:Self-contradictory articles from April 2013">Self-contradictory articles from April 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_self-contradictory_articles" title="Category:All self-contradictory articles">All self-contradictory articles</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_April_2009" title="Category:Articles with unsourced statements from April 2009">Articles with unsourced statements from April 2009</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Circular+buffer&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Circular+buffer" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Circular_buffer.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Circular_buffer"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Circular_buffer.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Circular_buffer" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Circular_buffer" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;oldid=600431497" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1224994" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Circular_buffer&amp;id=600431497" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Circular+buffer">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Circular+buffer&amp;oldid=600431497&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Circular_buffer&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Digitaler_Ringspeicher" title="Digitaler Ringspeicher – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Buffer_circular" title="Buffer circular – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Buffer_circulaire" title="Buffer circulaire – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/원형_버퍼" title="원형 버퍼 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/リングバッファ" title="リングバッファ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Bufor_cykliczny" title="Bufor cykliczny – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Кольцевой_буфер" title="Кольцевой буфер – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Rengaspuskuri" title="Rengaspuskuri – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/圆形缓冲区" title="圆形缓冲区 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1224994#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 March 2014 at 10:22.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Circular_buffer" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1050 in 0.322 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Circular_buffer by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+</html>

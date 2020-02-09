@@ -1,0 +1,1007 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Binary_search_tree.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Binary_search_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Binary search tree - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf18" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Binary_search_tree" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Binary_search_tree.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Binary_search_tree","wgTitle":"Binary search tree","wgCurRevisionId":601405036,"wgRevisionId":601405036,"wgArticleId":4320,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example C++ code","Articles with example Python code","Binary trees","Data types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Binary_search_tree","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q623818"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":
+false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:0378eace27e3aee431624f77f4809281 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000ff;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #666666;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #006699; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #FF0000;}
+.cpp.source-cpp .nu0 {color: #0000dd;}
+.cpp.source-cpp .nu6 {color: #208080;}
+.cpp.source-cpp .nu8 {color: #208080;}
+.cpp.source-cpp .nu12 {color: #208080;}
+.cpp.source-cpp .nu16 {color:#800080;}
+.cpp.source-cpp .nu17 {color:#800080;}
+.cpp.source-cpp .nu18 {color:#800080;}
+.cpp.source-cpp .nu19 {color:#800080;}
+.cpp.source-cpp .me1 {color: #007788;}
+.cpp.source-cpp .me2 {color: #007788;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf18/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Binary_search_tree skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Binary search tree</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="infobox" style="width: 22em">
+<tr>
+<th colspan="3" style="font-size: 125%; text-align: center;">Binary search tree</th>
+</tr>
+<tr>
+<th><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">Type</a></th>
+<td colspan="2"><a href="Tree_(data_structure).html" title="Tree (data structure)">Tree</a></td>
+</tr>
+<tr>
+<th>Invented</th>
+<td colspan="2">1960</td>
+</tr>
+<tr>
+<th>Invented by</th>
+<td colspan="2">P.F. Windley, A.D. Booth, A.J.T. Colin, and T.N. Hibbard</td>
+</tr>
+<tr>
+<th colspan="3" class="navbox-abovebelow"><a href="Time_complexity.html" title="Time complexity">Time complexity</a><br />
+in <a href="Big_O_notation.html" title="Big O notation">big O notation</a></th>
+</tr>
+<tr>
+<td></td>
+<td>Average</td>
+<td>Worst case</td>
+</tr>
+<tr>
+<th>Space</th>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<th>Search</th>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<th>Insert</th>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<th>Delete</th>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="http://en.wikipedia.org/wiki/File:Binary_search_tree.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png" width="200" height="167" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Binary_search_tree.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A binary search tree of size 9 and depth 3, with root 8 and leaves 1, 4, 7 and 13</div>
+</div>
+</div>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>binary search tree</b> (<b>BST</b>), sometimes also called an <b>ordered</b> or <b>sorted binary tree</b>, is a <a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">node</a>-based <a href="Binary_tree.html" title="Binary tree">binary tree</a> data structure which has the following properties:<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<ul>
+<li>The left <a href="Tree_(data_structure).html#Subtree" title="Tree (data structure)">subtree</a> of a node contains only nodes with keys less than the node's key.</li>
+<li>The right subtree of a node contains only nodes with keys greater than the node's key.</li>
+<li>The left and right subtree each must also be a binary search tree.</li>
+<li>There must be no duplicate nodes.</li>
+</ul>
+<p>Generally, the information represented by each node is a record rather than a single data element. However, for sequencing purposes, nodes are compared according to their keys rather than any part of their associated records.</p>
+<p>The major advantage of binary search trees over other <a href="Data_structure.html" title="Data structure">data structures</a> is that the related <a href="http://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">sorting algorithms</a> and <a href="http://en.wikipedia.org/wiki/Search_algorithm" title="Search algorithm">search algorithms</a> such as <a href="http://en.wikipedia.org/wiki/In-order_traversal" title="In-order traversal" class="mw-redirect">in-order traversal</a> can be very efficient.</p>
+<p>Binary search trees are a fundamental data structure used to construct more abstract data structures such as <a href="http://en.wikipedia.org/wiki/Set_(computer_science)" title="Set (computer science)" class="mw-redirect">sets</a>, <a href="http://en.wikipedia.org/wiki/Set_(computer_science)#Multiset" title="Set (computer science)" class="mw-redirect">multisets</a>, and <a href="Associative_array.html" title="Associative array">associative arrays</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Binary-search-tree_property"><span class="tocnumber">1</span> <span class="toctext">Binary-search-tree property</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operations"><span class="tocnumber">2</span> <span class="toctext">Operations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Searching"><span class="tocnumber">2.1</span> <span class="toctext">Searching</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Insertion"><span class="tocnumber">2.2</span> <span class="toctext">Insertion</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Deletion"><span class="tocnumber">2.3</span> <span class="toctext">Deletion</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Traversal"><span class="tocnumber">2.4</span> <span class="toctext">Traversal</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Sort"><span class="tocnumber">2.5</span> <span class="toctext">Sort</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Types"><span class="tocnumber">3</span> <span class="toctext">Types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Performance_comparisons"><span class="tocnumber">3.1</span> <span class="toctext">Performance comparisons</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Optimal_binary_search_trees"><span class="tocnumber">3.2</span> <span class="toctext">Optimal binary search trees</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Binary-search-tree_property">Binary-search-tree property</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=1" title="Edit section: Binary-search-tree property">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Let <i>x</i> be a node in a binary search tree. If <i>y</i> is a node in the left subtree of <i>x</i>, then <i>y.key</i> &lt; <i>x.key</i>. If <i>y</i> is a node in the right subtree of <i>x</i>, then <i>y.key</i> &gt; <i>x.key</i>.</p>
+<h2><span class="mw-headline" id="Operations">Operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=2" title="Edit section: Operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Operations, such as <i><b>find</b></i>, on a binary search tree require comparisons between nodes. These comparisons are made with calls to a <i>comparator</i>, which is a <a href="Subroutine.html" title="Subroutine">subroutine</a> that computes the total order (linear order) on any two keys. This <i>comparator</i> can be explicitly or implicitly defined, depending on the language in which the binary search tree was implemented. A common <i>comparator</i> is the less-than function, for example, <i>a</i> &lt; <i>b</i>, where <i>a</i> and <i>b</i> are keys of two nodes <i>a</i> and <i>b</i> in a binary search tree.</p>
+<h3><span class="mw-headline" id="Searching">Searching</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=3" title="Edit section: Searching">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Searching a binary search tree for a specific key can be a <a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)" title="Recursion (computer science)">recursive</a> or an <a href="Iteration.html#Computing" title="Iteration">iterative</a> process.</p>
+<p>We begin by examining the <a href="Tree_(data_structure).html#root_nodes" title="Tree (data structure)">root node</a>. If the tree is <i>null</i>, the key we are searching for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful and we return the node. If the key is less than that of the root, we search the left subtree. Similarly, if the key is greater than that of the root, we search the right subtree. This process is repeated until the key is found or the remaining subtree is <i>null</i>. If the searched key is not found before a <i>null</i> subtree is reached, then the item must not be present in the tree. This is easily expressed as a recursive algorithm:</p>
+<pre>
+<b>function</b> <u>Find-recursive</u>(key, node):  <i>// call initially with node = root</i>
+    <b>if</b> node = Null <b>or</b> node.key = key <b>then</b>
+        <b>return</b> node
+    <b>else if</b> key &lt; node.key <b>then</b>
+        <b>return</b> <u>Find-recursive</u>(key, node.left)
+    <b>else</b>
+        <b>return</b> <u>Find-recursive</u>(key, node.right)
+</pre>
+<p>The same algorithm can be implemented iteratively:</p>
+<pre>
+<b>function</b> <u>Find</u>(key, root):
+    current-node := root
+    <b>while</b> current-node <b>is not Null do</b>
+        <b>if</b> current-node.key = key <b>then</b>
+            <b>return</b> current-node
+        <b>else if</b> key &lt; current-node.key <b>then</b>
+            current-node := current-node.left
+        <b>else</b>
+            current-node := current-node.right
+    <b>return Null</b>
+</pre>
+<p>Because in the worst case this algorithm must search from the root of the tree to the leaf farthest from the root, the search operation takes time proportional to the tree's <i>height</i> (see <a href="Tree_(data_structure).html#Terminology" title="Tree (data structure)">tree terminology</a>). On average, binary search trees with <i>n</i> nodes have <a href="Big_O_notation.html" title="Big O notation">O</a>(log <i>n</i>) height. However, in the worst case, binary search trees can have O(<i>n</i>) height, when the unbalanced tree resembles a <a href="Linked_list.html" title="Linked list">linked list</a> (<a href="http://en.wikipedia.org/wiki/Binary_Tree#Types_of_binary_trees" title="Binary Tree" class="mw-redirect">degenerate tree</a>).</p>
+<h3><span class="mw-headline" id="Insertion">Insertion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=4" title="Edit section: Insertion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Insertion begins as a search would begin; if the key is not equal to that of the root, we search the left or right subtrees as before. Eventually, we will reach an external node and add the new key-value pair (here encoded as a record 'newNode') as its right or left child, depending on the node's key. In other words, we examine the root and recursively insert the new node to the left subtree if its key is less than that of the root, or the right subtree if its key is greater than or equal to the root.</p>
+<p>Here's how a typical binary search tree insertion might be performed in a binary tree in <a href="C%2b%2b.html" title="C++">C++</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="cpp source-cpp">
+<pre class="de1">
+<span class="kw4">void</span> insert<span class="br0">(</span>Node<span class="sy2">*</span><span class="sy3">&amp;</span> root, <span class="kw4">int</span> data<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">if</span> <span class="br0">(</span><span class="sy3">!</span>root<span class="br0">)</span> 
+    root <span class="sy1">=</span> <span class="kw3">new</span> Node<span class="br0">(</span>data<span class="br0">)</span><span class="sy4">;</span>
+  <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>data <span class="sy1">&lt;</span> root<span class="sy2">-</span><span class="sy1">&gt;</span>data<span class="br0">)</span>
+    insert<span class="br0">(</span>root<span class="sy2">-</span><span class="sy1">&gt;</span>left, data<span class="br0">)</span><span class="sy4">;</span>
+  <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>data <span class="sy1">&gt;</span> root<span class="sy2">-</span><span class="sy1">&gt;</span>data<span class="br0">)</span>
+    insert<span class="br0">(</span>root<span class="sy2">-</span><span class="sy1">&gt;</span>right, data<span class="br0">)</span><span class="sy4">;</span>
+  <span class="kw1">return</span><span class="sy4">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>The above <i>destructive</i> procedural variant modifies the tree in place. It uses only constant heap space (and the iterative version uses constant stack space as well), but the prior version of the tree is lost. Alternatively, as in the following <a href="Python_(programming_language).html" title="Python (programming language)">Python</a> example, we can reconstruct all ancestors of the inserted node; any reference to the original tree root remains valid, making the tree a <a href="Persistent_data_structure.html" title="Persistent data structure">persistent data structure</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+ <span class="kw1">def</span> binary_tree_insert<span class="br0">(</span>node<span class="sy0">,</span> key<span class="sy0">,</span> value<span class="br0">)</span>:
+     <span class="kw1">if</span> node <span class="kw1">is</span> <span class="kw2">None</span>:
+         <span class="kw1">return</span> TreeNode<span class="br0">(</span><span class="kw2">None</span><span class="sy0">,</span> key<span class="sy0">,</span> value<span class="sy0">,</span> <span class="kw2">None</span><span class="br0">)</span>
+     <span class="kw1">if</span> key <span class="sy0">==</span> node.<span class="me1">key</span>:
+         <span class="kw1">return</span> TreeNode<span class="br0">(</span>node.<span class="me1">left</span><span class="sy0">,</span> key<span class="sy0">,</span> value<span class="sy0">,</span> node.<span class="me1">right</span><span class="br0">)</span>
+     <span class="kw1">if</span> key <span class="sy0">&lt;</span> node.<span class="me1">key</span>:
+         <span class="kw1">return</span> TreeNode<span class="br0">(</span>binary_tree_insert<span class="br0">(</span>node.<span class="me1">left</span><span class="sy0">,</span> key<span class="sy0">,</span> value<span class="br0">)</span><span class="sy0">,</span> node.<span class="me1">key</span><span class="sy0">,</span> node.<span class="me1">value</span><span class="sy0">,</span> node.<span class="me1">right</span><span class="br0">)</span>
+     <span class="kw1">else</span>:
+         <span class="kw1">return</span> TreeNode<span class="br0">(</span>node.<span class="me1">left</span><span class="sy0">,</span> node.<span class="me1">key</span><span class="sy0">,</span> node.<span class="me1">value</span><span class="sy0">,</span> binary_tree_insert<span class="br0">(</span>node.<span class="me1">right</span><span class="sy0">,</span> key<span class="sy0">,</span> value<span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>The part that is rebuilt uses O(log <i>n</i>) space in the average case and O(<i>n</i>) in the worst case (see <a href="Big-O_notation.html" title="Big-O notation" class="mw-redirect">big-O notation</a>).</p>
+<p>In either version, this operation requires time proportional to the height of the tree in the worst case, which is O(log <i>n</i>) time in the average case over all trees, but O(<i>n</i>) time in the worst case.</p>
+<p>Another way to explain insertion is that in order to insert a new node in the tree, its key is first compared with that of the root. If its key is less than the root's, it is then compared with the key of the root's left child. If its key is greater, it is compared with the root's right child. This process continues, until the new node is compared with a leaf node, and then it is added as this node's right or left child, depending on its key.</p>
+<p>There are other ways of inserting nodes into a binary tree, but this is the only way of inserting nodes at the leaves and at the same time preserving the BST structure.</p>
+<h3><span class="mw-headline" id="Deletion">Deletion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=5" title="Edit section: Deletion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are three possible cases to consider:</p>
+<ul>
+<li><b>Deleting a leaf (node with no children):</b> Deleting a leaf is easy, as we can simply remove it from the tree.</li>
+<li><b>Deleting a node with one child:</b> Remove the node and replace it with its child.</li>
+<li><b>Deleting a node with two children:</b> Call the node to be deleted <i>N</i>. Do not delete <i>N</i>. Instead, choose either its <a href="http://en.wikipedia.org/wiki/Tree_traversal" title="Tree traversal">in-order</a> successor node or its in-order predecessor node, <i>R</i>. Replace the value of <i>N</i> with the value of <i>R</i>, then delete <i>R</i>.</li>
+</ul>
+<p>Broadly speaking, nodes with children are harder to delete. As with all binary trees, a node's in-order successor is its right subtree's left-most child, and a node's in-order predecessor is the left subtree's right-most child. In either case, this node will have zero or one children. Delete it according to one of the two simpler cases above.</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:642px;"><a href="http://en.wikipedia.org/wiki/File:Binary_search_tree_delete.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Binary_search_tree_delete.svg/640px-Binary_search_tree_delete.svg.png" width="640" height="178" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/46/Binary_search_tree_delete.svg/960px-Binary_search_tree_delete.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/46/Binary_search_tree_delete.svg/1280px-Binary_search_tree_delete.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Binary_search_tree_delete.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Deleting a node with two children from a binary search tree. First the rightmost node in the left subtree, the inorder predecessor <b>6</b>, is identified. Its value is copied into the node being deleted. The inorder predecessor can then be easily deleted because it has at most one child. The same method works symmetrically using the inorder successor labelled <b>9</b>.</div>
+</div>
+</div>
+</div>
+<p>Consistently using the in-order successor or the in-order predecessor for every instance of the two-child case can lead to an <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">unbalanced</a> tree, so some implementations select one or the other at different times.</p>
+<p>Runtime analysis: Although this operation does not always traverse the tree down to a leaf, this is always a possibility; thus in the worst case it requires time proportional to the height of the tree. It does not require more even when the node has two children, since it still follows a single path and does not visit any node twice.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> find_min<span class="br0">(</span><span class="kw2">self</span><span class="br0">)</span>:   <span class="co1"># Gets minimum node (leftmost leaf) in a subtree</span>
+    current_node <span class="sy0">=</span> <span class="kw2">self</span>
+    <span class="kw1">while</span> current_node.<span class="me1">left_child</span>:
+        current_node <span class="sy0">=</span> current_node.<span class="me1">left_child</span>
+    <span class="kw1">return</span> current_node
+ 
+<span class="kw1">def</span> replace_node_in_parent<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> new_value<span class="sy0">=</span><span class="kw2">None</span><span class="br0">)</span>:
+    <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">parent</span>:
+        <span class="kw1">if</span> <span class="kw2">self</span> <span class="sy0">==</span> <span class="kw2">self</span>.<span class="me1">parent</span>.<span class="me1">left_child</span>:
+            <span class="kw2">self</span>.<span class="me1">parent</span>.<span class="me1">left_child</span> <span class="sy0">=</span> new_value
+        <span class="kw1">else</span>:
+            <span class="kw2">self</span>.<span class="me1">parent</span>.<span class="me1">right_child</span> <span class="sy0">=</span> new_value
+    <span class="kw1">if</span> new_value:
+        new_value.<span class="me1">parent</span> <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">parent</span>
+ 
+<span class="kw1">def</span> binary_tree_delete<span class="br0">(</span><span class="kw2">self</span><span class="sy0">,</span> key<span class="br0">)</span>:
+    <span class="kw1">if</span> key <span class="sy0">&lt;</span> <span class="kw2">self</span>.<span class="me1">key</span>:
+        <span class="kw2">self</span>.<span class="me1">left_child</span>.<span class="me1">binary_tree_delete</span><span class="br0">(</span>key<span class="br0">)</span>
+    <span class="kw1">elif</span> key <span class="sy0">&gt;</span> <span class="kw2">self</span>.<span class="me1">key</span>:
+        <span class="kw2">self</span>.<span class="me1">right_child</span>.<span class="me1">binary_tree_delete</span><span class="br0">(</span>key<span class="br0">)</span>
+    <span class="kw1">else</span>: <span class="co1"># delete the key here</span>
+        <span class="kw1">if</span> <span class="kw2">self</span>.<span class="me1">left_child</span> <span class="kw1">and</span> <span class="kw2">self</span>.<span class="me1">right_child</span>: <span class="co1"># if both children are present</span>
+            successor <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">right_child</span>.<span class="me1">find_min</span><span class="br0">(</span><span class="br0">)</span>
+            <span class="kw2">self</span>.<span class="me1">key</span> <span class="sy0">=</span> successor.<span class="me1">key</span>
+            successor.<span class="me1">binary_tree_delete</span><span class="br0">(</span>successor.<span class="me1">key</span><span class="br0">)</span>
+        <span class="kw1">elif</span> <span class="kw2">self</span>.<span class="me1">left_child</span>:   <span class="co1"># if the node has only a *left* child</span>
+            <span class="kw2">self</span>.<span class="me1">replace_node_in_parent</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">left_child</span><span class="br0">)</span>
+        <span class="kw1">elif</span> <span class="kw2">self</span>.<span class="me1">right_child</span>:  <span class="co1"># if the node has only a *right* child</span>
+            <span class="kw2">self</span>.<span class="me1">replace_node_in_parent</span><span class="br0">(</span><span class="kw2">self</span>.<span class="me1">right_child</span><span class="br0">)</span>
+        <span class="kw1">else</span>: <span class="co1"># this node has no children</span>
+            <span class="kw2">self</span>.<span class="me1">replace_node_in_parent</span><span class="br0">(</span><span class="kw2">None</span><span class="br0">)</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Traversal">Traversal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=6" title="Edit section: Traversal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Tree_traversal" title="Tree traversal">Tree traversal</a></div>
+<p>Once the binary search tree has been created, its elements can be retrieved <a href="http://en.wikipedia.org/wiki/In-order_traversal" title="In-order traversal" class="mw-redirect">in-order</a> by <a href="Recursion.html" title="Recursion">recursively</a> traversing the left subtree of the root node, accessing the node itself, then recursively traversing the right subtree of the node, continuing this pattern with each node in the tree as it's recursively accessed. As with all binary trees, one may conduct a <a href="http://en.wikipedia.org/wiki/Pre-order_traversal" title="Pre-order traversal" class="mw-redirect">pre-order traversal</a> or a <a href="http://en.wikipedia.org/wiki/Post-order_traversal" title="Post-order traversal" class="mw-redirect">post-order traversal</a>, but neither are likely to be useful for binary search trees. An in-order traversal of a binary search tree will always result in a sorted list of node items (numbers, strings or other comparable items).</p>
+<p>The code for in-order traversal in Python is given below. It will call <b>callback</b> for every node in the tree.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> traverse_binary_tree<span class="br0">(</span>node<span class="sy0">,</span> callback<span class="br0">)</span>:
+    <span class="kw1">if</span> node <span class="kw1">is</span> <span class="kw2">None</span>:
+        <span class="kw1">return</span>
+    traverse_binary_tree<span class="br0">(</span>node.<span class="me1">leftChild</span><span class="sy0">,</span> callback<span class="br0">)</span>
+    callback<span class="br0">(</span>node.<span class="me1">value</span><span class="br0">)</span>
+    traverse_binary_tree<span class="br0">(</span>node.<span class="me1">rightChild</span><span class="sy0">,</span> callback<span class="br0">)</span>
+</pre></div>
+</div>
+<p>Traversal requires <a href="Big_O_notation.html#Related_asymptotic_notations" title="Big O notation">O(<i>n</i>)</a> time, since it must visit every node. This algorithm is also O(<i>n</i>), so it is <a href="http://en.wikipedia.org/wiki/Asymptotically_optimal" title="Asymptotically optimal" class="mw-redirect">asymptotically optimal</a>.</p>
+<h3><span class="mw-headline" id="Sort">Sort</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=7" title="Edit section: Sort">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Binary_tree_sort(2).png" class="image"><img alt="Binary tree sort(2).png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Binary_tree_sort(2).png/220px-Binary_tree_sort(2).png" width="220" height="337" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Binary_tree_sort%282%29.png/330px-Binary_tree_sort%282%29.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Binary_tree_sort%282%29.png/440px-Binary_tree_sort%282%29.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Binary_tree_sort(2).png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+</div>
+</div>
+</div>
+<p>A binary search tree can be used to implement a simple but efficient <a href="http://en.wikipedia.org/wiki/Sorting_algorithm" title="Sorting algorithm">sorting algorithm</a>. Similar to <a href="Heapsort.html" title="Heapsort">heapsort</a>, we insert all the values we wish to sort into a new ordered data structure—in this case a binary search tree—and then traverse it in order, building our result:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> build_binary_tree<span class="br0">(</span>values<span class="br0">)</span>:
+    tree <span class="sy0">=</span> <span class="kw2">None</span>
+    <span class="kw1">for</span> v <span class="kw1">in</span> values:
+        tree <span class="sy0">=</span> binary_tree_insert<span class="br0">(</span>tree<span class="sy0">,</span> v<span class="br0">)</span>
+    <span class="kw1">return</span> tree
+ 
+<span class="kw1">def</span> get_inorder_traversal<span class="br0">(</span>root<span class="br0">)</span>:
+    <span class="st0">'''
+    Returns a list containing all the values in the tree, starting at *root*.
+    Traverses the tree in-order(leftChild, root, rightChild).
+    '''</span>
+    result <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+    traverse_binary_tree<span class="br0">(</span>root<span class="sy0">,</span> <span class="kw1">lambda</span> element: result.<span class="me1">append</span><span class="br0">(</span>element<span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1">return</span> result
+</pre></div>
+</div>
+<p>The worst-case time of <code>build_binary_tree</code> is <img class="tex" alt="O(n^2)" src="http://upload.wikimedia.org/math/1/8/9/189317b4b935a745fcfaf95940d2b4f0.png" />—if you feed it a sorted list of values, it chains them into a <a href="Linked_list.html" title="Linked list">linked list</a> with no left subtrees. For example, <code>build_binary_tree([1, 2, 3, 4, 5])</code> yields the tree <code>(1 (2 (3 (4 (5)))))</code>.</p>
+<p>There are several schemes for overcoming this flaw with simple binary trees; the most common is the <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing binary search tree</a>. If this same procedure is done using such a tree, the overall worst-case time is O(<i>n</i>log <i>n</i>), which is <a href="http://en.wikipedia.org/wiki/Asymptotically_optimal" title="Asymptotically optimal" class="mw-redirect">asymptotically optimal</a> for a <a href="http://en.wikipedia.org/wiki/Comparison_sort" title="Comparison sort">comparison sort</a>. In practice, the poor <a href="CPU_cache.html" title="CPU cache">cache</a> performance and added overhead in time and space for a tree-based sort (particularly for node <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">allocation</a>) make it inferior to other asymptotically optimal sorts such as <a href="Heapsort.html" title="Heapsort">heapsort</a> for static list sorting. On the other hand, it is one of the most efficient methods of <i>incremental sorting</i>, adding items to a list over time while keeping the list sorted at all times.</p>
+<h2><span class="mw-headline" id="Types">Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=8" title="Edit section: Types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are many types of binary search trees. <a href="AVL_tree.html" title="AVL tree">AVL trees</a> and <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black trees</a> are both forms of <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing binary search trees</a>. A <a href="Splay_tree.html" title="Splay tree">splay tree</a> is a binary search tree that automatically moves frequently accessed elements nearer to the root. In a <a href="http://en.wikipedia.org/wiki/Treap" title="Treap">treap</a> (<i>tree <a href="Heap_(data_structure).html" title="Heap (data structure)">heap</a></i>), each node also holds a (randomly chosen) priority and the parent node has higher priority than its children. <a href="http://en.wikipedia.org/wiki/Tango_tree" title="Tango tree">Tango trees</a> are trees optimized for fast searches.</p>
+<p>Two other titles describing binary search trees are that of a <i>complete</i> and <i>degenerate</i> tree.</p>
+<p>A complete tree is a tree with n levels, where for each level d &lt;= n - 1, the number of existing nodes at level d is equal to 2<sup>d</sup>. This means all possible nodes exist at these levels. An additional requirement for a complete binary tree is that for the nth level, while every node does not have to exist, the nodes that do exist must fill from left to right.</p>
+<p>A degenerate tree is a tree where for each parent node, there is only one associated child node. What this means is that in a performance measurement, the tree will essentially behave like a linked list data structure.</p>
+<h3><span class="mw-headline" id="Performance_comparisons">Performance comparisons</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=9" title="Edit section: Performance comparisons">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>D. A. Heger (2004)<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> presented a performance comparison of binary search trees. <a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a> was found to have the best average performance, while <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black tree</a> was found to have the smallest amount of performance variations.</p>
+<h3><span class="mw-headline" id="Optimal_binary_search_trees">Optimal binary search trees</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=10" title="Edit section: Optimal binary search trees">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:BinaryTreeRotations.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/300px-BinaryTreeRotations.svg.png" width="300" height="166" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/450px-BinaryTreeRotations.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/600px-BinaryTreeRotations.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:BinaryTreeRotations.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Tree rotations are very common internal operations in binary trees to keep perfect, or near-to-perfect, internal balance in the tree.</div>
+</div>
+</div>
+<p>If we do not plan on modifying a search tree, and we know exactly how often each item will be accessed, we can construct<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> an <i>optimal binary search tree</i>, which is a search tree where the average cost of looking up an item (the <i>expected search cost</i>) is minimized.</p>
+<p>Even if we only have estimates of the search costs, such a system can considerably speed up lookups on average. For example, if you have a BST of English words used in a <a href="Spell_checker.html" title="Spell checker">spell checker</a>, you might balance the tree based on word frequency in <a href="http://en.wikipedia.org/wiki/Text_corpus" title="Text corpus">text corpora</a>, placing words like <i>the</i> near the root and words like <i>agerasia</i> near the leaves. Such a tree might be compared with <a href="http://en.wikipedia.org/wiki/Huffman_tree" title="Huffman tree" class="mw-redirect">Huffman trees</a>, which similarly seek to place frequently used items near the root in order to produce a dense information encoding; however, Huffman trees only store data elements in leaves and these elements need not be ordered.</p>
+<p>If we do not know the sequence in which the elements in the tree will be accessed in advance, we can use <a href="Splay_tree.html" title="Splay tree">splay trees</a> which are asymptotically as good as any static search tree we can construct for any particular sequence of lookup operations.</p>
+<p><i>Alphabetic trees</i> are Huffman trees with the additional constraint on order, or, equivalently, search trees with the modification that all elements are stored in the leaves. Faster algorithms exist for <i>optimal alphabetic binary trees</i> (OABTs).</p>
+<div style="clear:both;"></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div style="-moz-column-count:2; column-count:2;">
+<ul>
+<li><a href="Search_tree.html" title="Search tree">Search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Binary_search_algorithm" title="Binary search algorithm">Binary search algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Randomized_binary_search_tree" title="Randomized binary search tree" class="mw-redirect">Randomized binary search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tango_tree" title="Tango tree">Tango trees</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Self-balancing binary search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Geometry_of_binary_search_trees" title="Geometry of binary search trees">Geometry of binary search trees</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span id="CITEREFGilbergForouzan2001" class="citation">Gilberg, R.; Forouzan, B. (2001), "8", <i>Data Structures: A Pseudocode Approach With C++</i>, Pacific Grove, CA: Brooks/Cole, p.&#160;339, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-534-95216-X" title="Special:BookSources/0-534-95216-X">0-534-95216-X</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Data+Structures%3A+A+Pseudocode+Approach+With+C%2B%2B&amp;rft.aufirst=R.&amp;rft.au=Forouzan%2C+B.&amp;rft.au=Gilberg%2C+R.&amp;rft.aulast=Gilberg&amp;rft.btitle=8&amp;rft.date=2001&amp;rft.genre=bookitem&amp;rft.isbn=0-534-95216-X&amp;rft.pages=339&amp;rft.place=Pacific+Grove%2C+CA&amp;rft.pub=Brooks%2FCole&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span id="CITEREFHeger2004" class="citation">Heger, Dominique A. (2004), <a rel="nofollow" class="external text" href="http://www.cepis.org/upgrade/files/full-2004-V.pdf">"A Disquisition on The Performance Behavior of Binary Search Tree Data Structures"</a>, <i>European Journal for the Informatics Professional</i> <b>5</b> (5): 67–75</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=A+Disquisition+on+The+Performance+Behavior+of+Binary+Search+Tree+Data+Structures&amp;rft.aufirst=Dominique+A.&amp;rft.au=Heger%2C+Dominique+A.&amp;rft.aulast=Heger&amp;rft.date=2004&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cepis.org%2Fupgrade%2Ffiles%2Ffull-2004-V.pdf&amp;rft.issue=5&amp;rft.jtitle=European+Journal+for+the+Informatics+Professional&amp;rft.pages=67%E2%80%9375&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=5" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web">Gonnet, Gaston. <a rel="nofollow" class="external text" href="http://linneus20.ethz.ch:8080/4_7_1.html">"Optimal Binary Search Trees"</a>. <i>Scientific Computation</i>. ETH Zürich<span class="reference-accessdate">. Retrieved 1 December 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Optimal+Binary+Search+Trees&amp;rft.aufirst=Gaston&amp;rft.au=Gonnet%2C+Gaston&amp;rft.aulast=Gonnet&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Flinneus20.ethz.ch%3A8080%2F4_7_1.html&amp;rft.jtitle=Scientific+Computation&amp;rft.pub=ETH+Z%C3%BCrich&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=13" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Paul E. Black, <a rel="nofollow" class="external text" href="http://www.nist.gov/dads/HTML/binarySearchTree.html">Binary Search Tree</a> at the <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">NIST</a> <a href="Dictionary_of_Algorithms_and_Data_Structures.html" title="Dictionary of Algorithms and Data Structures">Dictionary of Algorithms and Data Structures</a>.</li>
+<li><span class="citation book"><a href="Thomas_H.html" title="Thomas H. Cormen">Cormen, Thomas H.</a>; <a href="Charles_E-2.html" title="Charles E. Leiserson">Leiserson, Charles E.</a>; <a href="Ronald_L.html" title="Ronald L. Rivest" class="mw-redirect">Rivest, Ronald L.</a>; <a href="Clifford_Stein.html" title="Clifford Stein">Stein, Clifford</a> (2001). "12: Binary search trees, 15.5: Optimal binary search trees". <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i> (2nd ed.). MIT Press &amp; McGraw-Hill. pp.&#160;253–272, 356–363. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-03293-7" title="Special:BookSources/0-262-03293-7">0-262-03293-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Introduction+to+Algorithms&amp;rft.au=Cormen%2C+Thomas+H.&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.au=Leiserson%2C+Charles+E.&amp;rft.au=Rivest%2C+Ronald+L.&amp;rft.au=Stein%2C+Clifford&amp;rft.btitle=12%3A+Binary+search+trees%2C+15.5%3A+Optimal+binary+search+trees&amp;rft.date=2001&amp;rft.edition=2nd&amp;rft.genre=bookitem&amp;rft.isbn=0-262-03293-7&amp;rft.pages=253%E2%80%93272%2C+356%E2%80%93363&amp;rft.pub=MIT+Press+%26+McGraw-Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Jarc, Duane J. (3 December 2005). <a rel="nofollow" class="external text" href="http://nova.umuc.edu/~jarc/idsv/lesson1.html">"Binary Tree Traversals"</a>. <i>Interactive Data Structure Visualizations</i>. <a href="http://en.wikipedia.org/wiki/University_of_Maryland" title="University of Maryland" class="mw-redirect">University of Maryland</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Binary+Tree+Traversals&amp;rft.aufirst=Duane+J.&amp;rft.au=Jarc%2C+Duane+J.&amp;rft.aulast=Jarc&amp;rft.date=3+December+2005&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fnova.umuc.edu%2F~jarc%2Fidsv%2Flesson1.html&amp;rft.jtitle=Interactive+Data+Structure+Visualizations&amp;rft.pub=University+of+Maryland&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="Donald_Knuth.html" title="Donald Knuth">Knuth, Donald</a> (1997). "6.2.2: Binary Tree Searching". <i><a href="http://en.wikipedia.org/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a></i>. 3: "Sorting and Searching" (3rd ed.). Addison-Wesley. pp.&#160;426–458. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-89685-0" title="Special:BookSources/0-201-89685-0">0-201-89685-0</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=The+Art+of+Computer+Programming&amp;rft.aufirst=Donald&amp;rft.au=Knuth%2C+Donald&amp;rft.aulast=Knuth&amp;rft.btitle=6.2.2%3A+Binary+Tree+Searching&amp;rft.date=1997&amp;rft.edition=3rd&amp;rft.genre=bookitem&amp;rft.isbn=0-201-89685-0&amp;rft.pages=426%E2%80%93458&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=3%3A+%22Sorting+and+Searching%22" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Long, Sean. <a rel="nofollow" class="external text" href="http://employees.oneonta.edu/zhangs/PowerPointPlatform/resources/samples/binarysearchtree.ppt">"Binary Search Tree"</a> (<a href="http://en.wikipedia.org/wiki/Microsoft_PowerPoint" title="Microsoft PowerPoint">PPT</a>). <i>Data Structures and Algorithms Visualization-A PowerPoint Slides Based Approach</i>. <a href="http://en.wikipedia.org/wiki/SUNY_Oneonta" title="SUNY Oneonta" class="mw-redirect">SUNY Oneonta</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Binary+Search+Tree&amp;rft.aufirst=Sean&amp;rft.aulast=Long&amp;rft.au=Long%2C+Sean&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Femployees.oneonta.edu%2Fzhangs%2FPowerPointPlatform%2Fresources%2Fsamples%2Fbinarysearchtree.ppt&amp;rft.jtitle=Data+Structures+and+Algorithms+Visualization-A+PowerPoint+Slides+Based+Approach&amp;rft.pub=SUNY+Oneonta&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Parlante, Nick (2001). <a rel="nofollow" class="external text" href="http://cslibrary.stanford.edu/110/BinaryTrees.html">"Binary Trees"</a>. <i>CS Education Library</i>. <a href="http://en.wikipedia.org/wiki/Stanford_University" title="Stanford University">Stanford University</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Binary+Trees&amp;rft.aufirst=Nick&amp;rft.aulast=Parlante&amp;rft.au=Parlante%2C+Nick&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fcslibrary.stanford.edu%2F110%2FBinaryTrees.html&amp;rft.jtitle=CS+Education+Library&amp;rft.pub=Stanford+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://en.literateprograms.org/Category:Binary_search_tree">Literate implementations of binary search trees in various languages</a> on LiteratePrograms</li>
+<li><span class="citation web">Goleta, Maksim (27 November 2007). <a rel="nofollow" class="external text" href="http://goletas.com/csharp-collections/">"Goletas.Collections"</a>. <i>goletas.com</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Goletas.Collections&amp;rft.aufirst=Maksim&amp;rft.au=Goleta%2C+Maksim&amp;rft.aulast=Goleta&amp;rft.date=27+November+2007&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fgoletas.com%2Fcsharp-collections%2F&amp;rft.jtitle=goletas.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> Includes an iterative <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a> implementation of AVL trees.</li>
+<li><span class="citation web">Jansens, Dana. <a rel="nofollow" class="external text" href="http://cg.scs.carleton.ca/~dana/pbst">"Persistent Binary Search Trees"</a>. Computational Geometry Lab, School of Computer Science, <a href="http://en.wikipedia.org/wiki/Carleton_University" title="Carleton University">Carleton University</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.aufirst=Dana&amp;rft.au=Jansens%2C+Dana&amp;rft.aulast=Jansens&amp;rft.btitle=Persistent+Binary+Search+Trees&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcg.scs.carleton.ca%2F~dana%2Fpbst&amp;rft.pub=Computational+Geometry+Lab%2C+School+of+Computer+Science%2C+Carleton+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> C implementation using <a href="http://en.wikipedia.org/wiki/GLib" title="GLib">GLib</a>.</li>
+<li><a rel="nofollow" class="external text" href="http://btv.melezinek.cz/">Binary Tree Visualizer</a> (JavaScript animation of various BT-based data structures)</li>
+<li><span class="citation web">Kovac, Kubo. <a rel="nofollow" class="external text" href="http://people.ksp.sk/~kuko/bak/">"Binary Search Trees"</a> (<a href="http://en.wikipedia.org/wiki/Java_applet" title="Java applet">Java applet</a>). Korešpondenčný seminár z programovania.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.aufirst=Kubo&amp;rft.au=Kovac%2C+Kubo&amp;rft.aulast=Kovac&amp;rft.btitle=Binary+Search+Trees&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fpeople.ksp.sk%2F~kuko%2Fbak%2F&amp;rft.pub=Kore%C5%A1ponden%C4%8Dn%C3%BD+semin%C3%A1r+z+programovania&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Madru, Justin (18 August 2009). <a rel="nofollow" class="external text" href="http://jdserver.homelinux.org/wiki/Binary_Search_Tree">"Binary Search Tree"</a>. <i>JDServer</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Binary+Search+Tree&amp;rft.aufirst=Justin&amp;rft.aulast=Madru&amp;rft.au=Madru%2C+Justin&amp;rft.date=18+August+2009&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fjdserver.homelinux.org%2Fwiki%2FBinary_Search_Tree&amp;rft.jtitle=JDServer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> C++ implementation.</li>
+<li><span class="citation web">Tarreau, Willy (2011). <a rel="nofollow" class="external text" href="http://1wt.eu/articles/ebtree/">"Elastic Binary Trees (ebtree)"</a>. <i>1wt.eu</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=Elastic+Binary+Trees+%28ebtree%29&amp;rft.aufirst=Willy&amp;rft.aulast=Tarreau&amp;rft.au=Tarreau%2C+Willy&amp;rft.date=2011&amp;rft.genre=article&amp;rft_id=http%3A%2F%2F1wt.eu%2Farticles%2Febtree%2F&amp;rft.jtitle=1wt.eu&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a rel="nofollow" class="external text" href="http://code.activestate.com/recipes/286239/">Binary Search Tree Example in Python</a></li>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/1sf8shae(v=vs.80).aspx">"References to Pointers (C++)"</a>. <i><a href="http://en.wikipedia.org/wiki/MSDN" title="MSDN" class="mw-redirect">MSDN</a></i>. <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a>. 2005.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.atitle=References+to+Pointers+%28C%2B%2B%29&amp;rft.date=2005&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2F1sf8shae%2528v%3Dvs.80%2529.aspx&amp;rft.jtitle=MSDN&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> Gives an example binary tree implementation.</li>
+<li><span class="citation web">Igushev, Eduard. <a rel="nofollow" class="external text" href="http://igushev.com/implementations/binary-search-tree-cpp/">"Binary Search Tree C++ implementation"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.aufirst=Eduard&amp;rft.au=Igushev%2C+Eduard&amp;rft.aulast=Igushev&amp;rft.btitle=Binary+Search+Tree+C%2B%2B+implementation&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Figushev.com%2Fimplementations%2Fbinary-search-tree-cpp%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Stromberg, Daniel. <a rel="nofollow" class="external text" href="http://stromberg.dnsalias.org/~strombrg/python-tree-and-heap-comparison/">"Python Search Tree Empirical Performance Comparison"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+search+tree&amp;rft.aufirst=Daniel&amp;rft.aulast=Stromberg&amp;rft.au=Stromberg%2C+Daniel&amp;rft.btitle=Python+Search+Tree+Empirical+Performance+Comparison&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fstromberg.dnsalias.org%2F~strombrg%2Fpython-tree-and-heap-comparison%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CS_trees" title="Template:CS trees"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CS_trees" title="Template talk:CS trees"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CS_trees&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Tree_(data_structure).html" title="Tree (data structure)">Tree data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Binary_tree.html" title="Binary tree">Binary trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">Binary search tree (BST)</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Cartesian_tree" title="Cartesian tree">Cartesian tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MVP_tree" title="MVP tree">MVP tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Top_tree" title="Top tree">Top tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/T-tree" title="T-tree">T-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-child_right-sibling_binary_tree" title="Left-child right-sibling binary tree">Left-child right-sibling binary tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Self-balancing binary search trees</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA tree</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-leaning_red–black_tree" title="Left-leaning red–black tree">LLRB tree</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">Red–black tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat tree</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">Splay tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="B-tree.html" title="B-tree">B-trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/B+_tree" title="B+ tree">B+ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/B*-tree" title="B*-tree" class="mw-redirect">B*-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bx-tree" title="Bx-tree">B<small><sup>x</sup></small>-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UB-tree" title="UB-tree">UB-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3_tree" title="2–3 tree">2–3 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3–4_tree" title="2–3–4 tree">2–3–4 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/(a,b)-tree" title="(a,b)-tree">(a,b)-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dancing_tree" title="Dancing tree">Dancing tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HTree" title="HTree">HTree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Trie.html" title="Trie">Tries</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Suffix_tree" title="Suffix tree">Suffix tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Radix_tree" title="Radix tree">Radix tree</a></li>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_search_tree" title="Ternary search tree">Ternary search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-fast_trie" title="X-fast trie">X-fast trie</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Y-fast_trie" title="Y-fast trie">Y-fast trie</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Binary_space_partitioning" title="Binary space partitioning">Binary space partitioning (BSP)</a> trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Quadtree" title="Quadtree">Quadtree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Octree" title="Octree">Octree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/K-d_tree" title="K-d tree"><i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Implicit_k-d_tree" title="Implicit k-d tree">Implicit <i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vantage-point_tree" title="Vantage-point tree">VP tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Non-binary trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Exponential_tree" title="Exponential tree">Exponential tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fusion_tree" title="Fusion tree">Fusion tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interval_tree" title="Interval tree">Interval tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PQ_tree" title="PQ tree">PQ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Range_tree" title="Range tree">Range tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SPQR_tree" title="SPQR tree">SPQR tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Van_Emde_Boas_tree" title="Van Emde Boas tree">Van Emde Boas tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Spatial_index" title="Spatial index" class="mw-redirect">Spatial</a> data partitioning trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="R-tree.html" title="R-tree">R-tree</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+ tree</a></li>
+<li><a href="R__tree.html" title="R* tree">R* tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-tree" title="X-tree">X-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/M-tree" title="M-tree">M-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Segment_tree" title="Segment tree">Segment tree</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert R-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Priority_R-tree" title="Priority R-tree">Priority R-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hash_calendar" title="Hash calendar">Hash calendar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Merkle_tree" title="Merkle tree">Merkle tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finger_tree" title="Finger tree">Finger tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Order_statistic_tree" title="Order statistic tree">Order statistic tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metric_tree" title="Metric tree">Metric tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cover_tree" title="Cover tree">Cover tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BK-tree" title="BK-tree">BK-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Doubly_chained_tree" title="Doubly chained tree">Doubly chained tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IDistance" title="IDistance">iDistance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Link/cut_tree" title="Link/cut tree">Link/cut tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fenwick_tree" title="Fenwick tree">Fenwick tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Log-structured_merge-tree" title="Log-structured merge-tree">Log-structured merge-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><strong class="selflink">Binary search tree</strong>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1025
+CPU time usage: 0.732 seconds
+Real time usage: 0.796 seconds
+Preprocessor visited node count: 969/1000000
+Preprocessor generated node count: 5206/1500000
+Post‐expand include size: 51602/2048000 bytes
+Template argument size: 353/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 4/500
+Lua time usage: 0.091/10.000 seconds
+Lua memory usage: 2.02 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4320-0!*!0!!en!4!*!math=0 and timestamp 20140326202446
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;oldid=601405036">http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;oldid=601405036</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Binary_trees" title="Category:Binary trees">Binary trees</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Data_types" title="Category:Data types">Data types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_C++_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Binary+search+tree&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Binary+search+tree" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Binary_search_tree.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Binary_search_tree"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Binary_search_tree.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Binary_search_tree" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Binary_search_tree" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;oldid=601405036" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q623818" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Binary_search_tree&amp;id=601405036" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Binary+search+tree">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Binary+search+tree&amp;oldid=601405036&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Binary_search_tree&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/شجرة_بحث_ثنائية" title="شجرة بحث ثنائية – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Binarno_stablo_pretraživanja" title="Binarno stablo pretraživanja – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Arbre_binari_de_cerca" title="Arbre binari de cerca – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Binární_vyhledávací_strom" title="Binární vyhledávací strom – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Binært_søgetræ" title="Binært søgetræ – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Binärer_Suchbaum" title="Binärer Suchbaum – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Árbol_binario_de_búsqueda" title="Árbol binario de búsqueda – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/درخت_جستجوی_دودویی" title="درخت جستجوی دودویی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Arbre_binaire_de_recherche" title="Arbre binaire de recherche – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/이진_탐색_트리" title="이진 탐색 트리 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Pohon_biner_terurut" title="Pohon biner terurut – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Albero_binario_di_ricerca" title="Albero binario di ricerca – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/עץ_חיפוש" title="עץ חיפוש – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Binaire_zoekboom" title="Binaire zoekboom – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/2分探索木" title="2分探索木 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Binarne_drzewo_poszukiwań" title="Binarne drzewo poszukiwań – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Árvore_binária_de_busca" title="Árvore binária de busca – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Arbore_binar_de_căutare" title="Arbore binar de căutare – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Двоичное_дерево_поиска" title="Двоичное дерево поиска – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Binárny_vyhľadávací_strom" title="Binárny vyhľadávací strom – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Binäärinen_hakupuu" title="Binäärinen hakupuu – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Binärt_sökträd" title="Binärt sökträd – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/ต้นไม้ค้นหาแบบทวิภาค" title="ต้นไม้ค้นหาแบบทวิภาค – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Двійкове_дерево_пошуку" title="Двійкове дерево пошуку – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Cây_tìm_kiếm_nhị_phân" title="Cây tìm kiếm nhị phân – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/二元搜尋樹" title="二元搜尋樹 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q623818#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 March 2014 at 20:24.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Binary_search_tree" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1085 in 0.265 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Binary_search_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+</html>

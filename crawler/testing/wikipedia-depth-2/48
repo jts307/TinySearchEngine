@@ -1,0 +1,665 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Skip_list.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Skip_list by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Skip list - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Skip_list" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Skip_list.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Skip_list","wgTitle":"Skip list","wgCurRevisionId":601033173,"wgRevisionId":601033173,"wgArticleId":336155,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages containing cite templates with deprecated parameters","Wikipedia articles that are too technical from October 2011","All articles that are too technical","Articles needing expert attention from October 2011","All articles needing expert attention","All articles with unsourced statements","Articles with unsourced statements from October 2011","1989 introductions","Linked lists","Probabilistic data structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Skip_list","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2005893"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Skip_list skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Skip list</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-technical" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may be too <a href="http://en.wiktionary.org/wiki/technical#Adjective" class="extiw" title="wikt:technical">technical</a> for most readers to understand</b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit">improve</a> this article to <a href="http://en.wikipedia.org/wiki/Wikipedia:Make_technical_articles_understandable" title="Wikipedia:Make technical articles understandable">make it understandable to non-experts</a>, without removing the technical details. The <a href="http://en.wikipedia.org/wiki/Talk:Skip_list" title="Talk:Skip list">talk page</a> may contain suggestions.</span> <small><i>(October 2011)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox" style="width: 22em">
+<tr>
+<th colspan="3" style="font-size: 125%; text-align: center;">Skip List</th>
+</tr>
+<tr>
+<th><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">Type</a></th>
+<td colspan="2">List</td>
+</tr>
+<tr>
+<th>Invented</th>
+<td colspan="2">1989</td>
+</tr>
+<tr>
+<th>Invented by</th>
+<td colspan="2"><a href="http://en.wikipedia.org/wiki/William_Pugh" title="William Pugh">W.&#160;Pugh</a></td>
+</tr>
+<tr>
+<th colspan="3" class="navbox-abovebelow"><a href="Time_complexity.html" title="Time complexity">Time complexity</a><br />
+in <a href="Big_O_notation.html" title="Big O notation">big O notation</a></th>
+</tr>
+<tr>
+<td></td>
+<td>Average</td>
+<td>Worst case</td>
+</tr>
+<tr>
+<th>Space</th>
+<td>O(n)</td>
+<td>O(n log n)<sup id="cite_ref-cs.uwaterloo_1-0" class="reference"><a href="#cite_note-cs.uwaterloo-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th>Search</th>
+<td>O(log n)</td>
+<td>O(n)<sup id="cite_ref-cs.uwaterloo_1-1" class="reference"><a href="#cite_note-cs.uwaterloo-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th>Insert</th>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<th>Delete</th>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+</table>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<td class="" style=";padding-top:0.4em;line-height:1.2em;">Part of <a href="http://en.wikipedia.org/wiki/Category:Probabilistic_data_structures" title="Category:Probabilistic data structures">a series</a> on</td>
+</tr>
+<tr>
+<th class="navbox-title" style=";padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em;"><a href="http://en.wikipedia.org/wiki/Randomized_algorithm" title="Randomized algorithm">Probabilistic</a><br />
+<a href="Data_structure.html" title="Data structure">data structures</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;"><a href="Bloom_filter.html" title="Bloom filter">Bloom filter</a>&#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Quotient_filter" title="Quotient filter">Quotient filter</a>&#160;<span style="font-weight:bold;">·</span>  <strong class="selflink">Skip list</strong></td>
+</tr>
+<tr>
+<th class="navbox-abovebelow" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Random_tree_(disambiguation)" title="Random tree (disambiguation)" class="mw-redirect">Random trees</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<p><a href="http://en.wikipedia.org/wiki/Random_binary_tree" title="Random binary tree">Random binary tree</a>&#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a><br /></p>
+<a href="http://en.wikipedia.org/wiki/Rapidly_exploring_random_tree" title="Rapidly exploring random tree">Rapidly exploring random tree</a></td>
+</tr>
+<tr>
+<th class="navbox-abovebelow" style="padding:0.1em;;;">Related</th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;"><a href="http://en.wikipedia.org/wiki/Randomized_algorithm" title="Randomized algorithm">Randomized algorithm</a></td>
+</tr>
+<tr>
+<td class="" style="padding:0.3em 0.4em 0.3em;font-weight:bold;border-top: #aaa 1px solid"><a href="http://en.wikipedia.org/wiki/Portal:Computer_science" title="Portal:Computer science"><small>Computer science Portal</small></a></td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Probabilistic" title="Template:Probabilistic"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Probabilistic" title="Template talk:Probabilistic"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Probabilistic&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>skip list</b> is a <a href="Data_structure.html" title="Data structure">data structure</a> that allows fast search within an <a href="http://en.wikipedia.org/wiki/Ordered_sequence" title="Ordered sequence" class="mw-redirect">ordered sequence</a> of elements. Fast search is made possible by maintaining a <a href="Linked_list.html" title="Linked list">linked</a> hierarchy of subsequences, each skipping over fewer elements. Searching starts in the sparsest subsequence until two consecutive elements have been found, one smaller and one larger than the element searched for. Via the linked hierarchy these two elements link to elements of the next sparsest subsequence where searching is continued until finally we are searching in the full sequence. The elements that are skipped over may be chosen probabilistically.<sup id="cite_ref-pugh_2-0" class="reference"><a href="#cite_note-pugh-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<div class="center">
+<div class="floatnone"><a href="http://en.wikipedia.org/wiki/File:Skip_list.svg" class="image"><img alt="Skip list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Skip_list.svg/470px-Skip_list.svg.png" width="470" height="110" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Skip_list.svg/705px-Skip_list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/86/Skip_list.svg/940px-Skip_list.svg.png 2x" /></a></div>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Implementation_details"><span class="tocnumber">1.1</span> <span class="toctext">Implementation details</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Indexable_skiplist"><span class="tocnumber">1.2</span> <span class="toctext">Indexable skiplist</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Usages"><span class="tocnumber">3</span> <span class="toctext">Usages</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A skip list is built in layers. The bottom layer is an ordinary ordered <a href="Linked_list.html" title="Linked list">linked list</a>. Each higher layer acts as an "express lane" for the lists below, where an element in layer <i>i</i> appears in layer <i>i</i>+1 with some fixed probability <i>p</i> (two commonly used values for <i>p</i> are 1/2 or 1/4). On average, each element appears in 1/(1-<i>p</i>) lists, and the tallest element (usually a special head element at the front of the skip list) in <img class="tex" alt="\log_{1/p} n\," src="http://upload.wikimedia.org/math/9/0/1/9011d0f26e1fbea18a19bd0d7356d8e2.png" /> lists.</p>
+<p>A search for a target element begins at the head element in the top list, and proceeds horizontally until the current element is greater than or equal to the target. If the current element is equal to the target, it has been found. If the current element is greater than the target, or the search reaches the end of the linked list, the procedure is repeated after returning to the previous element and dropping down vertically to the next lower list. The expected number of steps in each linked list is at most 1/<i>p</i>, which can be seen by tracing the search path backwards from the target until reaching an element that appears in the next higher list or reaching the beginning of the current list. Therefore, the total <i>expected</i> cost of a search is <img class="tex" alt="(\log_{1/p} n)/p,\," src="http://upload.wikimedia.org/math/c/2/1/c215210fdc1c5b368ddfde3fd60a1c9a.png" /> which is <img class="tex" alt="\mathcal{O}(\log n)\," src="http://upload.wikimedia.org/math/3/f/c/3fceda7e3b02fa99d3e72b649bbfeed0.png" /> when <i>p</i> is a constant. By choosing different values of <i>p</i>, it is possible to trade search costs against storage costs.</p>
+<h3><span class="mw-headline" id="Implementation_details">Implementation details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=2" title="Edit section: Implementation details">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:502px;"><a href="http://en.wikipedia.org/wiki/File:Skip_list_add_element-en.gif" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Skip_list_add_element-en.gif/500px-Skip_list_add_element-en.gif" width="500" height="173" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Skip_list_add_element-en.gif/750px-Skip_list_add_element-en.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/2/2c/Skip_list_add_element-en.gif 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Skip_list_add_element-en.gif" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Inserting elements to skip list</div>
+</div>
+</div>
+<p>The elements used for a skip list can contain more than one pointer since they can participate in more than one list.</p>
+<p>Insertions and deletions are implemented much like the corresponding linked-list operations, except that "tall" elements must be inserted into or deleted from more than one linked list.</p>
+<p><img class="tex" alt="\mathcal{O}(n)" src="http://upload.wikimedia.org/math/c/f/3/cf373ba944d0faa2f0ee7d828d18f610.png" /> operations, which force us to visit every node in ascending order (such as printing the entire list), provide the opportunity to perform a behind-the-scenes derandomization of the level structure of the skip-list in an optimal way, bringing the skip list to <img class="tex" alt="\mathcal{O}(\log n)" src="http://upload.wikimedia.org/math/6/a/2/6a2e1009f7e6194825cc7c80ed2528e4.png" /> search time. (Choose the level of the i'th finite node to be 1 plus the number of times we can repeatedly divide i by 2 before it becomes odd. Also, i=0 for the negative infinity header as we have the usual special case of choosing the highest possible level for negative and/or positive infinite nodes.) However this also allows someone to know where all of the higher-than-level 1 nodes are and delete them.</p>
+<p>Alternatively, we could make the level structure quasi-random in the following way:</p>
+<pre>
+make all nodes level 1
+j ← 1
+<b>while</b> the number of nodes at level j &gt; 1 <b>do</b>
+  <b>for</b> each i'th node at level j <b>do</b>
+    <b>if</b> i is odd 
+      <b>if</b> i is not the last node at level j
+        randomly choose whether to promote it to level j+1
+      <b>else</b>
+        do not promote
+      <b>end if</b>
+    <b>else if</b> i is even and node i-1 was not promoted
+      promote it to level j+1
+    <b>end if</b>
+  <b>repeat</b>
+  j ← j + 1
+<b>repeat</b>
+</pre>
+<p>Like the derandomized version, quasi-randomization is only done when there is some other reason to be running a <img class="tex" alt="\mathcal{O}(n)" src="http://upload.wikimedia.org/math/c/f/3/cf373ba944d0faa2f0ee7d828d18f610.png" /> operation (which visits every node).</p>
+<p>The advantage of this quasi-randomness is that it doesn't give away nearly as much level-structure related information to an <a href="http://en.wikipedia.org/wiki/Adversary_(online_algorithm)" title="Adversary (online algorithm)" class="mw-redirect">adversarial user</a> as the de-randomized one. This is desirable because an adversarial user who is able to tell which nodes are not at the lowest level can pessimize performance by simply deleting higher-level nodes. The search performance is still guaranteed to be logarithmic.</p>
+<p>It would be tempting to make the following "optimization": In the part which says "Next, for each i'th...", forget about doing a coin-flip for each even-odd pair. Just flip a coin once to decide whether to promote only the even ones or only the odd ones. Instead of <img class="tex" alt="\mathcal{O}(n \log n)" src="http://upload.wikimedia.org/math/b/0/9/b0962191c77ed92b45b105d6dee72dd4.png" /> coin flips, there would only be <img class="tex" alt="\mathcal{O}(\log n)" src="http://upload.wikimedia.org/math/6/a/2/6a2e1009f7e6194825cc7c80ed2528e4.png" /> of them. Unfortunately, this gives the adversarial user a 50/50 chance of being correct upon guessing that all of the even numbered nodes (among the ones at level 1 or higher) are higher than level one. This is despite the property that he has a very low probability of guessing that a particular node is at level <i>N</i> for some integer <i>N</i>.</p>
+<p>A skip list does not provide the same absolute worst-case performance guarantees as more traditional <a href="http://en.wikipedia.org/wiki/Balanced_tree" title="Balanced tree" class="mw-redirect">balanced tree</a> data structures, because it is always possible (though with very low probability) that the coin-flips used to build the skip list will produce a badly balanced structure. However, they work well in practice, and the randomized balancing scheme has been argued to be easier to implement than the deterministic balancing schemes used in balanced binary search trees. Skip lists are also useful in <a href="Parallel_computing.html" title="Parallel computing">parallel computing</a>, where insertions can be done in different parts of the skip list in parallel without any global rebalancing of the data structure. Such parallelism can be especially advantageous for resource discovery in an ad-hoc <a href="http://en.wikipedia.org/wiki/Wireless_network" title="Wireless network">Wireless network</a> because a randomized skip list can be made robust to the loss of any single node.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>There has been some evidence that skip lists have worse real-world performance and space requirements than <a href="http://en.wikipedia.org/wiki/B_tree" title="B tree" class="mw-redirect">B trees</a> due to <a href="http://en.wikipedia.org/wiki/Memory_locality" title="Memory locality" class="mw-redirect">memory locality</a> and other issues.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Indexable_skiplist">Indexable skiplist</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=3" title="Edit section: Indexable skiplist">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As described above, a skiplist is capable of fast <img class="tex" alt="\mathcal{O}(\log n)" src="http://upload.wikimedia.org/math/6/a/2/6a2e1009f7e6194825cc7c80ed2528e4.png" /> insertion and removal of values from a sorted sequence, but it has only slow <img class="tex" alt="\mathcal{O}(n)" src="http://upload.wikimedia.org/math/c/f/3/cf373ba944d0faa2f0ee7d828d18f610.png" /> lookups of values at a given position in the sequence (i.e. return the 500th value); however, with a minor modification the speed of <a href="Random_access.html" title="Random access">random access</a> indexed lookups can be improved to <img class="tex" alt="\mathcal{O}(\log n)" src="http://upload.wikimedia.org/math/6/a/2/6a2e1009f7e6194825cc7c80ed2528e4.png" />.</p>
+<p>For every link, also store the width of the link. The width is defined as the number of bottom layer links being traversed by each of the higher layer "express lane" links.</p>
+<p>For example, here are the widths of the links in the example at the top of the page:</p>
+<pre>
+   1                               10
+ o---&gt; o---------------------------------------------------------&gt; o    Top level
+   1           3              2                    5
+ o---&gt; o---------------&gt; o---------&gt; o---------------------------&gt; o    Level 3
+   1        2        1        2                    5
+ o---&gt; o---------&gt; o---&gt; o---------&gt; o---------------------------&gt; o    Level 2
+   1     1     1     1     1     1     1     1     1     1     1 
+ o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o---&gt; o    Bottom level
+                                        <b> </b>
+Head  1st   2nd   3rd   4th   5th   6th   7th   8th   9th   10th  NIL
+      Node  Node  Node  Node  Node  Node  Node  Node  Node  Node
+</pre>
+<p>Notice that the width of a higher level link is the sum of the component links below it (i.e. the width 10 link spans the links of widths 3, 2 and 5 immediately below it). Consequently, the sum of all widths is the same on every level (10 + 1 = 1 + 3 + 2 + 5 = 1 + 2 + 1 + 2 + 5).</p>
+<p>To index the skiplist and find the i'th value, traverse the skiplist while counting down the widths of each traversed link. Descend a level whenever the upcoming width would be too large.</p>
+<p>For example, to find the node in the fifth position (Node 5), traverse a link of width 1 at the top level. Now four more steps are needed but the next width on this level is ten which is too large, so drop one level. Traverse one link of width 3. Since another step of width 2 would be too far, drop down to the bottom level. Now traverse the final link of width 1 to reach the target running total of 5 (1+3+1).</p>
+<pre>
+ <b>function</b> lookupByPositionIndex(i)
+     node ← head
+     i ← i + 1                           <i># don't count the head as a step</i>
+     <b>for</b> level <b>from</b> top <b>to</b> bottom <b>do</b>
+          <b>while</b> i ≥ node.width[level] <b>do</b> <i># if next step is not too far</i>
+              i ← i - node.width[level]  <i># subtract the current width</i>
+              node ← node.next[level]    <i># traverse forward at the current level</i>
+          <b>repeat</b>
+     <b>repeat</b>
+     <b>return</b> node.value
+ <b>end function</b>
+</pre>
+<p>This method of implementing indexing is detailed in <a rel="nofollow" class="external text" href="http://cg.scs.carleton.ca/~morin/teaching/5408/refs/p90b.pdf">Section 3.4 Linear List Operations in "A skip list cookbook" by William Pugh</a>.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=4" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Skip lists were first described in 1990 by <a href="http://en.wikipedia.org/wiki/William_Pugh" title="William Pugh">William Pugh</a>.<sup id="cite_ref-pugh_2-1" class="reference"><a href="#cite_note-pugh-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>To quote the author:</p>
+<dl>
+<dd><i>Skip lists are a probabilistic data structure that seem likely to supplant balanced trees as the implementation method of choice for many applications. Skip list algorithms have the same asymptotic expected time bounds as balanced trees and are simpler, faster and use less space.</i></dd>
+</dl>
+<h2><span class="mw-headline" id="Usages">Usages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=5" title="Edit section: Usages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>List of applications and frameworks that use skip lists:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cyrus_IMAP_server" title="Cyrus IMAP server">Cyrus IMAP server</a> offers a "skiplist" backend DB implementation (<a rel="nofollow" class="external text" href="http://git.cyrusimap.org/cyrus-imapd/tree/lib/cyrusdb_skiplist.c">source file</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Lucene" title="Lucene">Lucene</a> uses skip lists to search delta-encoded posting lists in logarithmic time.</li>
+<li><a rel="nofollow" class="external text" href="http://qt-project.org/doc/qt-4.8/qmap.html#details">QMap</a> (up to Qt 4) template class of <a href="http://en.wikipedia.org/wiki/Qt_(framework)" title="Qt (framework)" class="mw-redirect">Qt</a> that provides a dictionary.</li>
+<li><a href="http://en.wikipedia.org/wiki/Redis" title="Redis">Redis</a>, an ANSI-C open-source persistent key/value store for Posix systems, uses skip lists in its implementation of ordered sets.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/shuttler/nessDB">nessDB</a>, a very fast key-value embedded Database Storage Engine (Using log-structured-merge (LSM) trees), uses skip lists for its memtable.</li>
+<li><a rel="nofollow" class="external text" href="http://www.dekorte.com/projects/opensource/skipdb/">skipdb</a> is an open-source database format using ordered key/value pairs.</li>
+<li><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">ConcurrentSkipListSet</a> and <a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListMap.html">ConcurrentSkipListMap</a> in the Java 1.6 API.</li>
+<li><a rel="nofollow" class="external text" href="https://code.google.com/p/leveldb/">leveldb</a>, a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values</li>
+<li><a rel="nofollow" class="external text" href="http://code.activestate.com/recipes/576930/">Skip lists are used for efficient statistical computations</a> of <a href="http://en.wikipedia.org/wiki/Moving_average#Moving_median" title="Moving average">running medians</a> (also known as moving medians).</li>
+</ul>
+<p>Skip lists are also used in distributed applications (where the nodes represent physical computers, and pointers represent network connections) and for implementing highly scalable concurrent priority queues with less lock contention,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> or even without locking,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> as well lockless concurrent dictionaries.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> There are also several US patents for using skip lists to implement (lockless) priority queues and concurrent dictionaries.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2011)">citation needed</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Bloom_filter.html" title="Bloom filter">Bloom filter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Skip_graph" title="Skip graph">Skip graph</a></li>
+<li>Skip trees, an alternative data structure to Skip lists in a concurrent approach: <a rel="nofollow" class="external free" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.514">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.514</a></li>
+<li>Skip tree graphs: <a rel="nofollow" class="external free" href="http://www0.cs.ucl.ac.uk/staff/a.gonzalezbeltran/pubs/icc2007.pdf">http://www0.cs.ucl.ac.uk/staff/a.gonzalezbeltran/pubs/icc2007.pdf</a>, <a rel="nofollow" class="external free" href="http://www0.cs.ucl.ac.uk/staff/a.gonzalezbeltran/pubs/AGB-comcom08.pdf">http://www0.cs.ucl.ac.uk/staff/a.gonzalezbeltran/pubs/AGB-comcom08.pdf</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-cs.uwaterloo-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-cs.uwaterloo_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-cs.uwaterloo_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.cs.uwaterloo.ca/research/tr/1993/28/root2side.pdf">http://www.cs.uwaterloo.ca/research/tr/1993/28/root2side.pdf</a></span></li>
+<li id="cite_note-pugh-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-pugh_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-pugh_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/William_Pugh" title="William Pugh">Pugh, W.</a> (1990). <a rel="nofollow" class="external text" href="ftp://ftp.cs.umd.edu/pub/skipLists/skiplists.pdf">"Skip lists: A probabilistic alternative to balanced trees"</a>. <i><a href="Communications_of_the_ACM.html" title="Communications of the ACM">Communications of the ACM</a></i> <b>33</b> (6): 668. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F78973.78977">10.1145/78973.78977</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=Skip+lists%3A+A+probabilistic+alternative+to+balanced+trees&amp;rft.aufirst=W.&amp;rft.aulast=Pugh&amp;rft.au=Pugh%2C+W.&amp;rft.date=1990&amp;rft.genre=article&amp;rft_id=ftp%3A%2F%2Fftp.cs.umd.edu%2Fpub%2FskipLists%2Fskiplists.pdf&amp;rft_id=info%3Adoi%2F10.1145%2F78973.78977&amp;rft.issue=6&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=668&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=33" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F78973.78977&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ic.unicamp.br/~celio/peer2peer/skip-net-graph/deterministic-skip-lists-munro.pdf">Deterministic skip lists</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation journal">Shah, Gauri Ph.D.; James Aspnes (December 2003). <a rel="nofollow" class="external text" href="http://www.cs.yale.edu/homes/shah/pubs/thesis.pdf"><i>Distributed Data Structures for Peer-to-Peer Systems</i></a> (PDF)<span class="reference-accessdate">. Retrieved 2008-09-23</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.aufirst=Gauri+Ph.D.&amp;rft.aulast=Shah&amp;rft.au=Shah%2C+Gauri+Ph.D.&amp;rft.btitle=Distributed+Data+Structures+for+Peer-to-Peer+Systems&amp;rft.date=December+2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.yale.edu%2Fhomes%2Fshah%2Fpubs%2Fthesis.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://resnet.uoregon.edu/~gurney_j/jmpc/skiplist.html">http://resnet.uoregon.edu/~gurney_j/jmpc/skiplist.html</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://github.com/antirez/redis/blob/unstable/src/t_zset.c">"Redis ordered set implementation"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.btitle=Redis+ordered+set+implementation&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fgithub.com%2Fantirez%2Fredis%2Fblob%2Funstable%2Fsrc%2Ft_zset.c&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation journal">Shavit, N.; Lotan, I. (2000). <a rel="nofollow" class="external text" href="http://www.cs.tau.ac.il/~shanir/nir-pubs-web/Papers/Priority_Queues.pdf">"Skiplist-based concurrent priority queues"</a>. <i>Proceedings 14th International Parallel and Distributed Processing Symposium. IPDPS 2000</i>. p.&#160;263. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FIPDPS.2000.845994">10.1109/IPDPS.2000.845994</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7695-0574-0" title="Special:BookSources/0-7695-0574-0">0-7695-0574-0</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=Proceedings+14th+International+Parallel+and+Distributed+Processing+Symposium.+IPDPS+2000&amp;rft.aufirst=N.&amp;rft.aulast=Shavit&amp;rft.au=Lotan%2C+I.&amp;rft.au=Shavit%2C+N.&amp;rft.btitle=Skiplist-based+concurrent+priority+queues&amp;rft.date=2000&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.cs.tau.ac.il%2F~shanir%2Fnir-pubs-web%2FPapers%2FPriority_Queues.pdf&amp;rft_id=info%3Adoi%2F10.1109%2FIPDPS.2000.845994&amp;rft.isbn=0-7695-0574-0&amp;rft.pages=263&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1109.2FIPDPS.2000.845994&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation journal">Sundell, H.; Tsigas, P. (2003). "Fast and lock-free concurrent priority queues for multi-thread systems". <i>Proceedings International Parallel and Distributed Processing Symposium</i>. p.&#160;11. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FIPDPS.2003.1213189">10.1109/IPDPS.2003.1213189</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7695-1926-1" title="Special:BookSources/0-7695-1926-1">0-7695-1926-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=Proceedings+International+Parallel+and+Distributed+Processing+Symposium&amp;rft.aufirst=H.&amp;rft.aulast=Sundell&amp;rft.au=Sundell%2C+H.&amp;rft.au=Tsigas%2C+P.&amp;rft.btitle=Fast+and+lock-free+concurrent+priority+queues+for+multi-thread+systems&amp;rft.date=2003&amp;rft.genre=bookitem&amp;rft_id=info%3Adoi%2F10.1109%2FIPDPS.2003.1213189&amp;rft.isbn=0-7695-1926-1&amp;rft.pages=11&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1109.2FIPDPS.2003.1213189&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation journal">Fomitchev, M.; Ruppert, E. (2004). "Lock-free linked lists and skip lists". <i>Proceedings of the twenty-third annual ACM symposium on Principles of distributed computing - PODC '04</i>. p.&#160;50. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F1011767.1011776">10.1145/1011767.1011776</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1581138024" title="Special:BookSources/1581138024">1581138024</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=Proceedings+of+the+twenty-third+annual+ACM+symposium+on+Principles+of+distributed+computing++-+PODC+%2704&amp;rft.aufirst=M.&amp;rft.au=Fomitchev%2C+M.&amp;rft.aulast=Fomitchev&amp;rft.au=Ruppert%2C+E.&amp;rft.btitle=Lock-free+linked+lists+and+skip+lists&amp;rft.date=2004&amp;rft.genre=bookitem&amp;rft_id=info%3Adoi%2F10.1145%2F1011767.1011776&amp;rft.isbn=1581138024&amp;rft.pages=50&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F1011767.1011776&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation journal">Bajpai, R.; Dhara, K. K.; Krishnaswamy, V. (2008). "QPID: A Distributed Priority Queue with Item Locality". <i>2008 IEEE International Symposium on Parallel and Distributed Processing with Applications</i>. p.&#160;215. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FISPA.2008.90">10.1109/ISPA.2008.90</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-7695-3471-8" title="Special:BookSources/978-0-7695-3471-8">978-0-7695-3471-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=2008+IEEE+International+Symposium+on+Parallel+and+Distributed+Processing+with+Applications&amp;rft.au=Bajpai%2C+R.&amp;rft.au=Dhara%2C+K.+K.&amp;rft.aufirst=R.&amp;rft.au=Krishnaswamy%2C+V.&amp;rft.aulast=Bajpai&amp;rft.btitle=QPID%3A+A+Distributed+Priority+Queue+with+Item+Locality&amp;rft.date=2008&amp;rft.genre=bookitem&amp;rft_id=info%3Adoi%2F10.1109%2FISPA.2008.90&amp;rft.isbn=978-0-7695-3471-8&amp;rft.pages=215&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1109.2FISPA.2008.90&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation journal">Sundell, H. K.; Tsigas, P. (2004). <a rel="nofollow" class="external text" href="http://www.cse.chalmers.se/~tsigas/papers/Lock-Free_Dictionary.pdf">"Scalable and lock-free concurrent dictionaries"</a>. <i>Proceedings of the 2004 ACM symposium on Applied computing - SAC '04</i>. p.&#160;1438. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F967900.968188">10.1145/967900.968188</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1581138121" title="Special:BookSources/1581138121">1581138121</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASkip+list&amp;rft.atitle=Proceedings+of+the+2004+ACM+symposium+on+Applied+computing++-+SAC+%2704&amp;rft.aufirst=H.+K.&amp;rft.aulast=Sundell&amp;rft.au=Sundell%2C+H.+K.&amp;rft.au=Tsigas%2C+P.&amp;rft.btitle=Scalable+and+lock-free+concurrent+dictionaries&amp;rft.date=2004&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.cse.chalmers.se%2F~tsigas%2Fpapers%2FLock-Free_Dictionary.pdf&amp;rft_id=info%3Adoi%2F10.1145%2F967900.968188&amp;rft.isbn=1581138121&amp;rft.pages=1438&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span class="plainlinks noprint" style="font-size:smaller"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Cite_doi/10.1145.2F967900.968188&amp;action=edit&amp;editintro=Template:Cite_doi/editintro2">edit</a></span></span></li>
+</ol>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://nist.gov/dads/HTML/skiplist.html">"Skip list" entry</a> in the <a href="Dictionary_of_Algorithms_and_Data_Structures.html" title="Dictionary of Algorithms and Data Structures">Dictionary of Algorithms and Data Structures</a></li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms379573(VS.80).aspx#datastructures20_4_topic4">Skip Lists: A Linked List with Self-Balancing BST-Like Properties</a> on <a href="http://en.wikipedia.org/wiki/MSDN" title="MSDN" class="mw-redirect">MSDN</a> in C# 2.0</li>
+<li><a rel="nofollow" class="external text" href="http://dekorte.com/projects/opensource/SkipDB/">SkipDB, a BerkeleyDB-style database implemented using skip lists.</a></li>
+<li><a rel="nofollow" class="external text" href="http://videolectures.net/mit6046jf05_demaine_lec12/">Skip Lists lecture (MIT OpenCourseWare: Introduction to Algorithms)</a></li>
+<li><a rel="nofollow" class="external text" href="http://opendatastructures.org/versions/edition-0.1e/ods-java/4_Skiplists.html">Open Data Structures - Chapter 4 - Skiplists</a></li>
+</ul>
+<dl>
+<dt>Demo applets</dt>
+</dl>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://people.ksp.sk/~kuko/bak/index.html">Skip List Applet</a> by Kubo Kovac</li>
+<li><a rel="nofollow" class="external text" href="http://iamwww.unibe.ch/~wenger/DA/SkipList/">Thomas Wenger's demo applet on skiplists</a></li>
+</ul>
+<dl>
+<dt>Implementations</dt>
+</dl>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://codingplayground.blogspot.com/2009/01/generic-skip-list-skiplist.html">A generic Skip List in C++</a> by Antonio Gulli</li>
+<li><a rel="nofollow" class="external text" href="https://metacpan.org/module/Algorithm::SkipList">Algorithm::SkipList, implementation in Perl on CPAN</a></li>
+<li><a rel="nofollow" class="external text" href="http://infohost.nmt.edu/tcc/help/lang/python/examples/pyskip/">John Shipman's implementation in Python</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.activestate.com/recipes/576930/">Raymond Hettinger's implementation in Python</a></li>
+<li><a rel="nofollow" class="external text" href="http://love2d.org/wiki/Skip_list">A Lua port of John Shipman's Python version</a></li>
+<li><a rel="nofollow" class="external text" href="https://gist.github.com/dmx2010/5426422">Java Implementation with index based access</a></li>
+<li><a rel="nofollow" class="external text" href="http://java.sun.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">ConcurrentSkipListSet documentation for Java 6</a> (and <a rel="nofollow" class="external text" href="http://www.docjar.com/html/api/java/util/concurrent/ConcurrentSkipListSet.java.html">sourcecode</a>)</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><strong class="selflink">Skip list</strong></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1036
+CPU time usage: 0.788 seconds
+Real time usage: 0.911 seconds
+Preprocessor visited node count: 1656/1000000
+Preprocessor generated node count: 9611/1500000
+Post‐expand include size: 79885/2048000 bytes
+Template argument size: 3031/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 5/500
+Lua time usage: 0.098/10.000 seconds
+Lua memory usage: 2.64 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:336155-0!*!0!!en!4!*!math=0 and timestamp 20140324135651
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;oldid=601033173">http://en.wikipedia.org/w/index.php?title=Skip_list&amp;oldid=601033173</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:1989_introductions" title="Category:1989 introductions">1989 introductions</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Linked_lists" title="Category:Linked lists">Linked lists</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Probabilistic_data_structures" title="Category:Probabilistic data structures">Probabilistic data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_that_are_too_technical_from_October_2011" title="Category:Wikipedia articles that are too technical from October 2011">Wikipedia articles that are too technical from October 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_that_are_too_technical" title="Category:All articles that are too technical">All articles that are too technical</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_October_2011" title="Category:Articles needing expert attention from October 2011">Articles needing expert attention from October 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2011" title="Category:Articles with unsourced statements from October 2011">Articles with unsourced statements from October 2011</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Skip+list&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Skip+list" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Skip_list.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Skip_list"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Skip_list.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Skip_list" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Skip_list" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;oldid=601033173" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q2005893" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Skip_list&amp;id=601033173" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Skip+list">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Skip+list&amp;oldid=601033173&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Skip_list&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Liste_(Datenstruktur)#Skip-Liste" title="Liste (Datenstruktur) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Skip_list" title="Skip list – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/فهرست_پرشی" title="فهرست پرشی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Skip-list" title="Skip-list – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Skip_list" title="Skip list – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/רשימת_דילוגים" title="רשימת דילוגים – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ml"><a href="http://ml.wikipedia.org/wiki/സ്കിപ്‌_ലിസ്റ്റ്" title="സ്കിപ്‌ ലിസ്റ്റ് – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/スキップリスト" title="スキップリスト – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Lista_z_przeskokami" title="Lista z przeskokami – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Skiplist" title="Skiplist – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Список_с_пропусками" title="Список с пропусками – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Википедија:Семинарски_радови/Скип_листа" title="Википедија:Семинарски радови/Скип листа – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Skipplista" title="Skipplista – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/跳跃列表" title="跳跃列表 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q2005893#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 March 2014 at 13:56.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Skip_list" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1175 in 0.333 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Skip_list by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+</html>

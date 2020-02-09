@@ -3,8 +3,9 @@
 To test these modules simply run the following command:
 
 ```bash
-./testing.sh < testlog
+make test &> testing.out
 ```
 
-The command will produce a "testing" directory and a series of directories in it which each contain results produced
-by using crawler and the pagedir module. Testlog will contain all the exit codes    
+The command will produce a "testing" directory and a series of directories in it 
+which each contain results produced by using crawler and the pagedir module. Testing.out 
+will contain all the exit codes and error messages produced by the tests.     

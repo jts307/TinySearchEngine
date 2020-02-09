@@ -1,0 +1,867 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Scheduling_(computing).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Scheduling_(computing) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Scheduling (computing) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Scheduling_(computing)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Scheduling_(computing).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Scheduling_(computing)","wgTitle":"Scheduling (computing)","wgCurRevisionId":600115441,"wgRevisionId":600115441,"wgArticleId":231920,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from December 2013","All articles lacking in-text citations","Articles needing additional references from December 2013","All articles needing additional references","All articles with unsourced statements","Articles with unsourced statements from December 2011","Operations research","Scheduling (computing)","Scheduling algorithms","Planning"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Scheduling_(computing)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-gb","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1123036"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Scheduling_computing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Scheduling (computing)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about processes assignment in operating systems.  For transmission assignment in networks, see <a href="http://en.wikipedia.org/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a>.  For other uses, see <a href="http://en.wikipedia.org/wiki/Scheduling_(disambiguation)" title="Scheduling (disambiguation)" class="mw-redirect">Scheduling (disambiguation)</a>.</div>
+<table class="metadata plainlinks ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/f/f4/Ambox_content.png" width="40" height="40" /></div>
+</td>
+<td class="mbox-text">
+<table class="collapsible" style="width:95%; background:transparent;">
+<tr>
+<th style="text-align:left; padding:0.2em 2px 0.2em 0;">This article has multiple issues. <span style="font-weight: normal;">Please help <b><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="http://en.wikipedia.org/wiki/Talk:Scheduling_(computing)" title="Talk:Scheduling (computing)">talk page</a></b>.</span></th>
+</tr>
+<tr>
+<td>
+<table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="http://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(December 2013)</i></small></span></td>
+</tr>
+</table>
+<table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(December 2013)</i></small></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, <b>scheduling</b> is the method by which <a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">threads</a>, <a href="Process_(computing).html" title="Process (computing)">processes</a> or data <a href="http://en.wikipedia.org/wiki/Flow_(computer_networking)" title="Flow (computer networking)" class="mw-redirect">flows</a> are given access to system resources (e.g. processor time, communications bandwidth). This is usually done to <a href="http://en.wikipedia.org/wiki/Load_balancing_(computing)" title="Load balancing (computing)">load balance</a> and share system resources effectively or achieve a target <a href="http://en.wikipedia.org/wiki/Quality_of_service" title="Quality of service">quality of service</a>. The need for a scheduling algorithm arises from the requirement for most modern systems to perform <a href="Computer_multitasking.html" title="Computer multitasking">multitasking</a> (executing more than one process at a time) and <a href="http://en.wikipedia.org/wiki/Multiplexing" title="Multiplexing">multiplexing</a> (transmit multiple data streams simultaneously across a single physical channel).</p>
+<p>The scheduler is concerned mainly with:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Throughput" title="Throughput">Throughput</a> - The total number of processes that complete their execution per time unit.</li>
+<li><a href="http://en.wikipedia.org/wiki/Latency_(engineering)" title="Latency (engineering)">Latency</a>, specifically:
+<ul>
+<li>Turnaround time - total time between submission of a process and its completion.</li>
+<li><a href="http://en.wikipedia.org/wiki/Responsiveness" title="Responsiveness">Response time</a> - amount of time it takes from when a request was submitted until the first response is produced.</li>
+</ul>
+</li>
+<li>Fairness - Equal CPU time to each process (or more generally appropriate times according to each process' priority and workload).</li>
+<li>Waiting Time - The time the process remains in the ready queue.</li>
+</ul>
+<p>In practice, these goals often conflict (e.g. throughput versus latency), thus a scheduler will implement a suitable compromise. Preference is given to any one of the above mentioned concerns depending upon the user's needs and objectives.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/Real-time_computing" title="Real-time computing">real-time</a> environments, such as <a href="Embedded_system.html" title="Embedded system">embedded systems</a> for <a href="http://en.wikipedia.org/wiki/Automatic_control" title="Automatic control">automatic control</a> in industry (for example <a href="Robotics.html" title="Robotics">robotics</a>), the scheduler also must ensure that processes can meet <a href="http://en.wikipedia.org/wiki/Time_limit" title="Time limit">deadlines</a>; this is crucial for keeping the system stable. Scheduled tasks can also be distributed to remote devices across a network and <a href="http://en.wikipedia.org/wiki/Device_Management" title="Device Management" class="mw-redirect">managed</a> through an administrative back end.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Types_of_operating_system_schedulers"><span class="tocnumber">1</span> <span class="toctext">Types of operating system schedulers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Process_scheduler"><span class="tocnumber">1.1</span> <span class="toctext">Process scheduler</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Long-term_scheduling"><span class="tocnumber">1.1.1</span> <span class="toctext">Long-term scheduling</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Medium_term_scheduling"><span class="tocnumber">1.1.2</span> <span class="toctext">Medium term scheduling</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Short-term_scheduling"><span class="tocnumber">1.1.3</span> <span class="toctext">Short-term scheduling</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Dispatcher"><span class="tocnumber">1.1.4</span> <span class="toctext">Dispatcher</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Network_scheduler"><span class="tocnumber">1.2</span> <span class="toctext">Network scheduler</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Disk_scheduler"><span class="tocnumber">1.3</span> <span class="toctext">Disk scheduler</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Job_scheduler"><span class="tocnumber">1.4</span> <span class="toctext">Job scheduler</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Scheduling_disciplines"><span class="tocnumber">2</span> <span class="toctext">Scheduling disciplines</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#First_in_first_out"><span class="tocnumber">2.1</span> <span class="toctext">First in first out</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Shortest_remaining_time"><span class="tocnumber">2.2</span> <span class="toctext">Shortest remaining time</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Fixed_priority_pre-emptive_scheduling"><span class="tocnumber">2.3</span> <span class="toctext">Fixed priority pre-emptive scheduling</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Round-robin_scheduling"><span class="tocnumber">2.4</span> <span class="toctext">Round-robin scheduling</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Multilevel_queue_scheduling"><span class="tocnumber">2.5</span> <span class="toctext">Multilevel queue scheduling</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Scheduling_optimization_problems"><span class="tocnumber">2.6</span> <span class="toctext">Scheduling optimization problems</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Manual_scheduling"><span class="tocnumber">2.7</span> <span class="toctext">Manual scheduling</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#How_to_choose_a_scheduling_algorithm"><span class="tocnumber">2.8</span> <span class="toctext">How to choose a scheduling algorithm</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Operating_system_process_scheduler_implementations"><span class="tocnumber">3</span> <span class="toctext">Operating system process scheduler implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Windows"><span class="tocnumber">3.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Mac_OS"><span class="tocnumber">3.2</span> <span class="toctext">Mac OS</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#AIX"><span class="tocnumber">3.3</span> <span class="toctext">AIX</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Linux"><span class="tocnumber">3.4</span> <span class="toctext">Linux</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Linux_2.4"><span class="tocnumber">3.4.1</span> <span class="toctext">Linux 2.4</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Linux_2.6.0_to_Linux_2.6.22"><span class="tocnumber">3.4.2</span> <span class="toctext">Linux 2.6.0 to Linux 2.6.22</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Since_Linux_2.6.23"><span class="tocnumber">3.4.3</span> <span class="toctext">Since Linux 2.6.23</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="#FreeBSD"><span class="tocnumber">3.5</span> <span class="toctext">FreeBSD</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#NetBSD"><span class="tocnumber">3.6</span> <span class="toctext">NetBSD</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Solaris"><span class="tocnumber">3.7</span> <span class="toctext">Solaris</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Summary"><span class="tocnumber">3.8</span> <span class="toctext">Summary</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Types_of_operating_system_schedulers">Types of operating system schedulers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=1" title="Edit section: Types of operating system schedulers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Operating systems may feature up to three distinct types of scheduler, a <i>long-term scheduler</i> (also known as an admission scheduler or high-level scheduler), a <i>mid-term or medium-term scheduler</i> and a <i>short-term scheduler</i>. The names suggest the relative frequency with which these functions are performed. The scheduler is an operating system module that selects the next jobs to be admitted into the system and the next process to run.</p>
+<h3><span class="mw-headline" id="Process_scheduler">Process scheduler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=2" title="Edit section: Process scheduler">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Long-term_scheduling">Long-term scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=3" title="Edit section: Long-term scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The long-term, or <a href="http://en.wikipedia.org/w/index.php?title=Admission_scheduler&amp;action=edit&amp;redlink=1" class="new" title="Admission scheduler (page does not exist)">admission scheduler</a>, decides which jobs or processes are to be admitted to the ready queue (in the Main Memory); that is, when an attempt is made to execute a program, its admission to the set of currently executing processes is either authorized or delayed by the long-term scheduler . Thus, this scheduler dictates what processes are to run on a system, and the degree of concurrency to be supported at any one time - i.e.: whether a high or low amount of processes are to be executed concurrently, and how the split between I/O intensive and CPU intensive processes is to be handled. The long term scheduler is responsible for controlling the degree of multiprogramming . In modern operating systems, this is used to make sure that real time processes get enough CPU time to finish their tasks. Without proper real time scheduling, modern GUIs would seem sluggish.</p>
+<p>Long-term scheduling is also important in large-scale systems such as <a href="http://en.wikipedia.org/wiki/Batch_processing" title="Batch processing">batch processing</a> systems, <a href="http://en.wikipedia.org/wiki/Computer_cluster" title="Computer cluster">computer clusters</a>, <a href="Supercomputer.html" title="Supercomputer">supercomputers</a> and <a href="http://en.wikipedia.org/wiki/Render_farm" title="Render farm">render farms</a>. In these cases, special purpose <a href="http://en.wikipedia.org/wiki/Job_scheduler" title="Job scheduler">job scheduler</a> software is typically used to assist these functions, in addition to any underlying admission scheduling support in the operating system..</p>
+<h4><span class="mw-headline" id="Medium_term_scheduling">Medium term scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=4" title="Edit section: Medium term scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Scheduler temporarily removes processes from main memory and places them on secondary memory (such as a disk drive) or vice versa. This is commonly referred to as "swapping out" or "swapping in" (also incorrectly as "<a href="Paging.html" title="Paging">paging</a> out" or "paging in"). The medium-term scheduler may decide to swap out a process which has not been active for some time, or a process which has a low priority, or a process which is <a href="http://en.wikipedia.org/wiki/Page_fault" title="Page fault">page faulting</a> frequently, or a process which is taking up a large amount of memory in order to free up main memory for other processes, swapping the process back in later when more memory is available, or when the process has been unblocked and is no longer waiting for a resource. [Stallings, 396] [Stallings, 370]</p>
+<p>In many systems today (those that support mapping virtual address space to secondary storage other than the swap file), the medium-term scheduler may actually perform the role of the long-term scheduler, by treating binaries as "swapped out processes" upon their execution. In this way, when a segment of the binary is required it can be swapped in on demand, or "lazy loaded". [Stallings, 394]</p>
+<h4><span class="mw-headline" id="Short-term_scheduling">Short-term scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=5" title="Edit section: Short-term scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The short-term scheduler (also known as the CPU scheduler) decides which of the ready, in-memory processes are to be executed (allocated a CPU) after a clock <a href="Interrupt.html" title="Interrupt">interrupt</a>, an I/O interrupt, an operating <a href="System_call.html" title="System call">system call</a> or another form of <a href="http://en.wikipedia.org/wiki/Signal_programming" title="Signal programming">signal</a>. Thus the short-term scheduler makes scheduling decisions much more frequently than the long-term or mid-term schedulers - a scheduling decision will at a minimum have to be made after every time slice, and these are very short. This scheduler can be <a href="Preemption_(computing).html" title="Preemption (computing)">preemptive</a>, implying that it is capable of forcibly removing processes from a CPU when it decides to allocate that CPU to another process, or non-preemptive (also known as "voluntary" or "co-operative"), in which case the scheduler is unable to "force" processes off the CPU.</p>
+<p>A preemptive scheduler relies upon a <a href="http://en.wikipedia.org/wiki/Programmable_interval_timer" title="Programmable interval timer">programmable interval timer</a> which invokes an <a href="http://en.wikipedia.org/wiki/Interrupt_handler" title="Interrupt handler">interrupt handler</a> that runs in <a href="http://en.wikipedia.org/wiki/Kernel_mode" title="Kernel mode" class="mw-redirect">kernel mode</a> and implements the scheduling function.</p>
+<h4><span class="mw-headline" id="Dispatcher">Dispatcher</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=6" title="Edit section: Dispatcher">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Another component that is involved in the CPU-scheduling function is the dispatcher. The dispatcher is the module that gives control of the CPU to the process selected by the short-term scheduler. This function involves the following:</p>
+<ul>
+<li>Switching context</li>
+<li>Switching to user mode</li>
+<li>Jumping to the proper location in the user program to restart that program.</li>
+</ul>
+<p>Dispatcher analyses the values from <a href="http://en.wikipedia.org/wiki/Program_counter" title="Program counter">Program counter</a> and fetches instructions, loads data into registers.</p>
+<p>The dispatcher should be as fast as possible, since it is invoked during every process switch. During the context switches, the processor is idle for a fraction of time. Hence, unnecessary context switches should be avoided. The time it takes for the dispatcher to stop one process and start another running is known as the <b>dispatch latency</b>. [Galvin, 155].</p>
+<h3><span class="mw-headline" id="Network_scheduler">Network scheduler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=7" title="Edit section: Network scheduler">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></div>
+<h3><span class="mw-headline" id="Disk_scheduler">Disk scheduler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=8" title="Edit section: Disk scheduler">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/I/O_scheduling" title="I/O scheduling">I/O scheduling</a></div>
+<h3><span class="mw-headline" id="Job_scheduler">Job scheduler</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=9" title="Edit section: Job scheduler">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Job_scheduler" title="Job scheduler">Job scheduler</a></div>
+<p>Examples are <a href="Cron.html" title="Cron">cron</a>, <a href="At_(Unix).html" title="At (Unix)">at</a>, <a href="http://en.wikipedia.org/wiki/Systemd" title="Systemd">systemd</a>.</p>
+<h2><span class="mw-headline" id="Scheduling_disciplines">Scheduling disciplines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=10" title="Edit section: Scheduling disciplines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Scheduling disciplines are algorithms used for distributing resources among parties which simultaneously and asynchronously request them. Scheduling disciplines are used in <a href="http://en.wikipedia.org/wiki/Router_(computing)" title="Router (computing)">routers</a> (to handle packet traffic) as well as in <a href="Operating_system.html" title="Operating system">operating systems</a> (to share <a href="http://en.wikipedia.org/wiki/CPU_time" title="CPU time">CPU time</a> among both <a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">threads</a> and <a href="Process_(computing).html" title="Process (computing)">processes</a>), disk drives (<a href="http://en.wikipedia.org/wiki/I/O_scheduling" title="I/O scheduling">I/O scheduling</a>), printers (<a href="http://en.wikipedia.org/wiki/Print_spooler" title="Print spooler" class="mw-redirect">print spooler</a>), most embedded systems, etc.</p>
+<p>The main purposes of scheduling algorithms are to minimize <a href="http://en.wikipedia.org/wiki/Resource_starvation" title="Resource starvation">resource starvation</a> and to ensure fairness amongst the parties utilizing the resources. Scheduling deals with the problem of deciding which of the outstanding requests is to be allocated resources. There are many different scheduling algorithms. In this section, we introduce several of them.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/Packet-switched" title="Packet-switched" class="mw-redirect">packet-switched</a> <a href="http://en.wikipedia.org/wiki/Computer_networks" title="Computer networks" class="mw-redirect">computer networks</a> and other <a href="http://en.wikipedia.org/wiki/Statistical_multiplexing" title="Statistical multiplexing" class="mw-redirect">statistical multiplexing</a>, the notion of a <b>scheduling algorithm</b> is used as an alternative to <a href="FIFO_(computing).html" title="FIFO (computing)" class="mw-redirect">first-come first-served</a> queuing of data packets.</p>
+<p>The simplest best-effort scheduling algorithms are <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round-robin</a>, <a href="http://en.wikipedia.org/wiki/Fair_queuing" title="Fair queuing">fair queuing</a> (a <a href="http://en.wikipedia.org/wiki/Max-min_fair" title="Max-min fair" class="mw-redirect">max-min fair</a> scheduling algorithm), <a href="http://en.wikipedia.org/wiki/Proportionally_fair" title="Proportionally fair">proportionally fair</a> scheduling and <a href="http://en.wikipedia.org/wiki/Maximum_throughput_scheduling" title="Maximum throughput scheduling">maximum throughput</a>. If differentiated or guaranteed <a href="http://en.wikipedia.org/wiki/Quality_of_service" title="Quality of service">quality of service</a> is offered, as opposed to best-effort communication, <a href="http://en.wikipedia.org/wiki/Weighted_fair_queuing" title="Weighted fair queuing">weighted fair queuing</a> may be utilized.</p>
+<p>In advanced packet radio wireless networks such as <a href="http://en.wikipedia.org/wiki/HSDPA" title="HSDPA" class="mw-redirect">HSDPA</a> (High-Speed Downlink Packet Access ) <a href="http://en.wikipedia.org/wiki/3.5G" title="3.5G">3.5G</a> cellular system, <b>channel-dependent scheduling</b> may be used to take advantage of <a href="http://en.wikipedia.org/wiki/Channel_state_information" title="Channel state information">channel state information</a>. If the channel conditions are favourable, the <a href="http://en.wikipedia.org/wiki/Throughput" title="Throughput">throughput</a> and <a href="http://en.wikipedia.org/wiki/System_spectral_efficiency" title="System spectral efficiency" class="mw-redirect">system spectral efficiency</a> may be increased. In even more advanced systems such as <a href="http://en.wikipedia.org/wiki/LTE_Advanced" title="LTE Advanced">LTE</a>, the scheduling is combined by channel-dependent packet-by-packet <a href="http://en.wikipedia.org/wiki/Dynamic_channel_allocation" title="Dynamic channel allocation" class="mw-redirect">dynamic channel allocation</a>, or by assigning <a href="http://en.wikipedia.org/wiki/OFDMA" title="OFDMA" class="mw-redirect">OFDMA</a> multi-carriers or other <a href="http://en.wikipedia.org/wiki/Frequency-domain_equalization" title="Frequency-domain equalization" class="mw-redirect">frequency-domain equalization</a> components to the users that best can utilize them.</p>
+<h3><span class="mw-headline" id="First_in_first_out">First in first out</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=11" title="Edit section: First in first out">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/First_In_First_Out" title="First In First Out" class="mw-redirect">First In First Out</a></div>
+<p>Also known as <i><b>F</b>irst­ <b>C</b>ome, <b>F</b>irst ­<b>S</b>erved</i> (FCFS), is the simplest scheduling algorithm, <a href="http://en.wikipedia.org/wiki/FIFO" title="FIFO">FIFO</a> simply queues processes in the order that they arrive in the ready queue.</p>
+<ul>
+<li>Since context switches only occur upon process termination, and no reorganization of the process queue is required, scheduling overhead is minimal.</li>
+<li>Throughput can be low, since long processes can hold the CPU</li>
+<li>Turnaround time, waiting time and response time can be high for the same reasons above</li>
+<li>No prioritization occurs, thus this system has trouble meeting process deadlines.</li>
+<li>The lack of prioritization means that as long as every process eventually completes, there is no starvation. In an environment where some processes might not complete, there can be starvation.</li>
+<li>It is based on Queuing</li>
+<li><a rel="nofollow" class="external text" href="http://scanftree.com/operating-system/fcfs">Here is the C-code for FCFS</a></li>
+</ul>
+<h3><span class="mw-headline" id="Shortest_remaining_time">Shortest remaining time</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=12" title="Edit section: Shortest remaining time">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Shortest_remaining_time" title="Shortest remaining time">Shortest remaining time</a></div>
+<p>Similar to <i><b>S</b>hortest­ <b>J</b>ob­ <b>F</b>irst</i> (SJF). With this strategy the scheduler arranges processes with the least estimated processing time remaining to be next in the queue. This requires advanced knowledge or estimations about the time required for a process to complete.</p>
+<ul>
+<li>If a shorter process arrives during another process' execution, the currently running process may be interrupted (known as preemption), dividing that process into two separate computing blocks. This creates excess overhead through additional context switching. The scheduler must also place each incoming process into a specific place in the queue, creating additional overhead.</li>
+<li>This algorithm is designed for maximum throughput in most scenarios.</li>
+<li>Waiting time and response time increase as the process's computational requirements increase. Since turnaround time is based on waiting time plus processing time, longer processes are significantly affected by this. Overall waiting time is smaller than FIFO, however since no process has to wait for the termination of the longest process.</li>
+<li>No particular attention is given to deadlines, the programmer can only attempt to make processes with deadlines as short as possible.</li>
+<li>Starvation is possible, especially in a busy system with many small processes being run.</li>
+<li>This policy is no more in use.</li>
+<li>To use this policy we should have at least two processes of different priority</li>
+</ul>
+<h3><span class="mw-headline" id="Fixed_priority_pre-emptive_scheduling">Fixed priority pre-emptive scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=13" title="Edit section: Fixed priority pre-emptive scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Fixed_priority_pre-emptive_scheduling" title="Fixed priority pre-emptive scheduling" class="mw-redirect">Fixed priority pre-emptive scheduling</a></div>
+<p>The OS assigns a fixed priority rank to every process, and the scheduler arranges the processes in the ready queue in order of their priority. Lower priority processes get interrupted by incoming higher priority processes.</p>
+<ul>
+<li>Overhead is not minimal, nor is it significant.</li>
+<li>FPPS has no particular advantage in terms of throughput over FIFO scheduling.</li>
+<li>If the number of rankings is limited it can be characterized as a collection of FIFO queues, one for each priority ranking. Processes in lower-priority queues are selected only when all of the higher-priority queues are empty.</li>
+<li>Waiting time and response time depend on the priority of the process. Higher priority processes have smaller waiting and response times.</li>
+<li>Deadlines can be met by giving processes with deadlines a higher priority.</li>
+<li>Starvation of lower priority processes is possible with large amounts of high priority processes queuing for CPU time.</li>
+</ul>
+<h3><span class="mw-headline" id="Round-robin_scheduling">Round-robin scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=14" title="Edit section: Round-robin scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin scheduling</a></div>
+<p>The scheduler assigns a fixed time unit per process, and cycles through them.</p>
+<ul>
+<li>RR scheduling involves extensive overhead, especially with a small time unit.</li>
+<li>Balanced throughput between FCFS and SJF, shorter jobs are completed faster than in FCFS and longer processes are completed faster than in SJF.</li>
+<li>Good average response time, waiting time is dependent on number of processes, and not average process length.</li>
+<li>Because of high waiting times, deadlines are rarely met in a pure RR system.</li>
+<li>Starvation can never occur, since no priority is given. Order of time unit allocation is based upon process arrival time, similar to FCFS.</li>
+</ul>
+<h3><span class="mw-headline" id="Multilevel_queue_scheduling">Multilevel queue scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=15" title="Edit section: Multilevel queue scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></div>
+<p>This is used for situations in which processes are easily divided into different groups. For example, a common division is made between foreground (interactive) processes and background (batch) processes. These two types of processes have different response-time requirements and so may have different scheduling needs. It is very useful for shared memory problems.</p>
+<h3><span class="mw-headline" id="Scheduling_optimization_problems">Scheduling optimization problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=16" title="Edit section: Scheduling optimization problems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Open-shop_scheduling" title="Open-shop scheduling">Open-shop scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Job_Shop_Scheduling" title="Job Shop Scheduling" class="mw-redirect">Job Shop Scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flow_Shop_Scheduling_Problem" title="Flow Shop Scheduling Problem" class="mw-redirect">Flow Shop Scheduling Problem</a></li>
+</ul>
+<h3><span class="mw-headline" id="Manual_scheduling">Manual scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=17" title="Edit section: Manual scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/w/index.php?title=Manual_scheduling&amp;action=edit&amp;redlink=1" class="new" title="Manual scheduling (page does not exist)">Manual scheduling</a></div>
+<p>A very common method in embedded systems is to manually schedule jobs. This can for example be done in a time-multiplexed fashion. Sometimes the kernel is divided in three or more parts: Manual scheduling, preemptive and interrupt level. Exact methods for scheduling jobs are often proprietary.</p>
+<ul>
+<li>No resource starvation problems.</li>
+<li>Very high predictability; allows implementation of hard real-time systems.</li>
+<li>Almost no overhead.</li>
+<li>May not be optimal for all applications.</li>
+<li>Effectiveness is completely dependent on the implementation.</li>
+</ul>
+<h3><span class="mw-headline" id="How_to_choose_a_scheduling_algorithm">How to choose a scheduling algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=18" title="Edit section: How to choose a scheduling algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When designing an operating system, a programmer must consider which scheduling algorithm will perform best for the use the system is going to see. There is no universal “best” scheduling algorithm, and many operating systems use extended or combinations of the scheduling algorithms above. For example, <a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">Windows NT</a>/XP/Vista uses a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a>, a combination of fixed priority preemptive scheduling, round-robin, and first in first out. In this system, threads can dynamically increase or decrease in priority depending on if it has been serviced already, or if it has been waiting extensively. Every priority level is represented by its own queue, with <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round-robin scheduling</a> amongst the high priority threads and <a href="http://en.wikipedia.org/wiki/FIFO" title="FIFO">FIFO</a> among the lower ones. In this sense, response time is short for most threads, and short but critical system threads get completed very quickly. Since threads can only use one time unit of the <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round robin</a> in the highest priority queue, starvation can be a problem for longer high priority threads.</p>
+<h2><span class="mw-headline" id="Operating_system_process_scheduler_implementations">Operating system process scheduler implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=19" title="Edit section: Operating system process scheduler implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The algorithm used may be as simple as <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round-robin</a> in which each process is given equal time (for instance 1&#160;ms, usually between 1&#160;ms and 100&#160;ms) in a cycling list. So, process A executes for 1&#160;ms, then process B, then process C, then back to process A.</p>
+<p>More advanced algorithms take into account process priority, or the importance of the process. This allows some processes to use more time than other processes. The kernel always uses whatever resources it needs to ensure proper functioning of the system, and so can be said to have infinite priority. In <a href="http://en.wikipedia.org/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">SMP</a>(symmetric multiprocessing) systems, <a href="http://en.wikipedia.org/wiki/Processor_affinity" title="Processor affinity">processor affinity</a> is considered to increase overall system performance, even if it may cause a process itself to run more slowly. This generally improves performance by reducing <a href="http://en.wikipedia.org/wiki/Cache_thrashing" title="Cache thrashing" class="mw-redirect">cache thrashing</a>.</p>
+<h3><span class="mw-headline" id="Windows">Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=20" title="Edit section: Windows">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Very early <a href="MS-DOS.html" title="MS-DOS">MS-DOS</a> and Microsoft Windows systems were non-multitasking, and as such did not feature a scheduler. <a href="http://en.wikipedia.org/wiki/Windows_3.1x" title="Windows 3.1x">Windows 3.1x</a> used a non-preemptive scheduler, meaning that it did not interrupt programs. It relied on the program to end or tell the OS that it didn't need the processor so that it could move on to another process. This is usually called cooperative multitasking. Windows 95 introduced a rudimentary preemptive scheduler; however, for legacy support opted to let 16 bit applications run without preemption.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<p><a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">Windows NT</a>-based operating systems use a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a>. 32 priority levels are defined, 0 through to 31, with priorities 0 through 15 being "normal" priorities and priorities 16 through 31 being soft real-time priorities, requiring privileges to assign. 0 is reserved for the Operating System. Users can select 5 of these priorities to assign to a running application from the Task Manager application, or through thread management APIs. The kernel may change the priority level of a thread depending on its I/O and CPU usage and whether it is interactive (i.e. accepts and responds to input from humans), raising the priority of interactive and I/O bounded processes and lowering that of CPU bound processes, to increase the responsiveness of interactive applications.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> The scheduler was modified in <a href="http://en.wikipedia.org/wiki/Windows_Vista" title="Windows Vista">Windows Vista</a> to use the <a href="http://en.wikipedia.org/wiki/Time_Stamp_Counter" title="Time Stamp Counter">cycle counter register</a> of modern processors to keep track of exactly how many CPU cycles a thread has executed, rather than just using an interval-timer interrupt routine.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> Vista also uses a priority scheduler for the I/O queue so that disk defragmenters and other such programs don't interfere with foreground operations.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Mac_OS">Mac OS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=21" title="Edit section: Mac OS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Mac OS 9 uses cooperative scheduling for threads, where one process controls multiple cooperative threads, and also provides preemptive scheduling for MP tasks. The kernel schedules MP tasks using a preemptive scheduling algorithm. All Process Manager processes run within a special MP task, called the "blue task". Those processes are scheduled cooperatively, using a <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round-robin scheduling</a> algorithm; a process yields control of the processor to another process by explicitly calling a blocking function such as <code>WaitNextEvent</code>. Each process has its own copy of the <a href="http://en.wikipedia.org/w/index.php?title=Thread_Manager&amp;action=edit&amp;redlink=1" class="new" title="Thread Manager (page does not exist)">Thread Manager</a> that schedules that process's threads cooperatively; a thread yields control of the processor to another thread by calling <code>YieldToAnyThread</code> or <code>YieldToThread</code>.<sup id="cite_ref-appletn2028_5-0" class="reference"><a href="#cite_note-appletn2028-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>Mac OS X uses a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a>, with four priority bands for threads - normal, system high priority, kernel mode only, and real-time.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> Threads are scheduled preemptively; Mac OS X also supports cooperatively scheduled threads in its implementation of the Thread Manager in <a href="http://en.wikipedia.org/wiki/Carbon_(API)" title="Carbon (API)">Carbon</a>.<sup id="cite_ref-appletn2028_5-1" class="reference"><a href="#cite_note-appletn2028-5"><span>[</span>5<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="AIX">AIX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=22" title="Edit section: AIX">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In AIX Version 4 there are three possible values for thread scheduling policy&#160;:</p>
+<ul>
+<li>First In, First Out: Once a thread with this policy is scheduled, it runs to completion unless it is blocked, it voluntarily yields control of the CPU, or a higher-priority thread becomes dispatchable. Only fixed-priority threads can have a FIFO scheduling policy.</li>
+<li>Round Robin: This is similar to the AIX Version 3 scheduler round-robin scheme based on 10ms time slices. When a RR thread has control at the end of the time slice, it moves to the tail of the queue of dispatchable threads of its priority. Only fixed-priority threads can have a Round Robin scheduling policy.</li>
+<li>OTHER: This policy is defined by POSIX1003.4a as implementation-defined. In AIX Version 4, this policy is defined to be equivalent to RR, except that it applies to threads with non-fixed priority. The recalculation of the running thread's priority value at each clock interrupt means that a thread may lose control because its priority value has risen above that of another dispatchable thread. This is the AIX Version 3 behavior.</li>
+</ul>
+<p>Threads are primarily of interest for applications that currently consist of several asynchronous processes. These applications might impose a lighter load on the system if converted to a multithreaded structure.</p>
+<p>AIX 5 implements the following scheduling policies: FIFO, round robin, and a fair round robin. The FIFO policy has three different implementations: FIFO, FIFO2, and FIFO3. The round robin policy is named SCHED_RR in AIX, and the fair round robin is called SCHED_OTHER. This link provides additional information on AIX 5 scheduling: <a rel="nofollow" class="external free" href="http://www.ibm.com/developerworks/aix/library/au-aix5_cpu/index.html#N100F6">http://www.ibm.com/developerworks/aix/library/au-aix5_cpu/index.html#N100F6</a> .</p>
+<h3><span class="mw-headline" id="Linux">Linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=23" title="Edit section: Linux">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Linux_2.4">Linux 2.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=24" title="Edit section: Linux 2.4">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In <a href="Linux.html" title="Linux">Linux</a> 2.4, an <a href="http://en.wikipedia.org/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a> with a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a> with priority levels ranging from 0-140 was used. 0-99 are reserved for real-time tasks and 100-140 are considered <a href="Nice_(Unix).html" title="Nice (Unix)">nice</a> task levels. For real-time tasks, the time quantum for switching processes was approximately 200 ms, and for nice tasks approximately 10 ms.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2011)">citation needed</span></a></i>]</sup> The scheduler ran through the <a href="http://en.wikipedia.org/wiki/Run_queue" title="Run queue">run queue</a> of all ready processes, letting the highest priority processes go first and run through their time slices, after which they will be placed in an expired queue. When the active queue is empty the expired queue will become the active queue and vice versa.</p>
+<p>However, some Enterprise <a href="Linux_distributions.html" title="Linux distributions" class="mw-redirect">Linux distributions</a> such as <a href="http://en.wikipedia.org/wiki/SUSE_Linux_Enterprise_Server" title="SUSE Linux Enterprise Server">SUSE Linux Enterprise Server</a> replaced this scheduler with a backport of the <a href="http://en.wikipedia.org/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a> (which was maintained by <a href="http://en.wikipedia.org/wiki/Alan_Cox" title="Alan Cox">Alan Cox</a> in his Linux 2.4-ac Kernel series) to the Linux 2.4 kernel used by the distribution.</p>
+<h4><span class="mw-headline" id="Linux_2.6.0_to_Linux_2.6.22">Linux 2.6.0 to Linux 2.6.22</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=25" title="Edit section: Linux 2.6.0 to Linux 2.6.22">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>From versions 2.6 to 2.6.22, the kernel used an <a href="http://en.wikipedia.org/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a> developed by <a href="http://en.wikipedia.org/wiki/Ingo_Molnar" title="Ingo Molnar" class="mw-redirect">Ingo Molnar</a> and many other kernel developers during the Linux 2.5 development. For many kernel in time frame, <a href="http://en.wikipedia.org/wiki/Con_Kolivas" title="Con Kolivas">Con Kolivas</a> developed patch sets which improved interactivity with this scheduler or even replaced it with his own schedulers.</p>
+<h4><span class="mw-headline" id="Since_Linux_2.6.23">Since Linux 2.6.23</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=26" title="Edit section: Since Linux 2.6.23">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="http://en.wikipedia.org/wiki/Con_Kolivas" title="Con Kolivas">Con Kolivas</a>'s work, most significantly his implementation of "<a href="http://en.wikipedia.org/wiki/Fair-share_scheduling" title="Fair-share scheduling">fair scheduling</a>" named "Rotating Staircase Deadline", inspired Ingo Molnár to develop the <a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> as a replacement for the earlier <a href="http://en.wikipedia.org/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a>, crediting Kolivas in his announcement.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>The Completely Fair Scheduler (CFS) uses a well-studied, classic scheduling algorithm called <a href="http://en.wikipedia.org/wiki/Fair_queuing" title="Fair queuing">fair queuing</a> originally invented for <a href="http://en.wikipedia.org/wiki/Packet_network" title="Packet network" class="mw-redirect">packet networks</a>. Fair queuing had been previously applied to CPU scheduling under the name <a href="http://en.wikipedia.org/wiki/Stride_scheduling" title="Stride scheduling">stride scheduling</a>.</p>
+<p>The fair queuing CFS scheduler has a scheduling complexity of O(<a href="http://en.wikipedia.org/wiki/Logarithm" title="Logarithm">log</a> N), where N is the number of tasks in the <a href="http://en.wikipedia.org/wiki/Run_queue" title="Run queue">runqueue</a>. Choosing a task can be done in constant time, but reinserting a task after it has run requires O(log N) operations, because the <a href="http://en.wikipedia.org/wiki/Run_queue" title="Run queue">run queue</a> is implemented as a <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black tree</a>.</p>
+<p>CFS is the first implementation of a fair queuing <a href="http://en.wikipedia.org/wiki/Process_scheduler" title="Process scheduler" class="mw-redirect">process scheduler</a> widely used in a general-purpose operating system.<sup id="cite_ref-dwrr_8-0" class="reference"><a href="#cite_note-dwrr-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>The <a href="http://en.wikipedia.org/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler (BFS)</a> is an alternative to the CFS.</p>
+<h3><span class="mw-headline" id="FreeBSD">FreeBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=27" title="Edit section: FreeBSD">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="FreeBSD.html" title="FreeBSD">FreeBSD</a> uses a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a> with priorities ranging from 0-255. 0-63 are reserved for interrupts, 64-127 for the top half of the kernel, 128-159 for real-time user threads, 160-223 for time-shared user threads, and 224-255 for idle user threads. Also, like Linux, it uses the active queue setup, but it also has an idle queue.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="NetBSD">NetBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=28" title="Edit section: NetBSD">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="NetBSD.html" title="NetBSD">NetBSD</a> uses a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a> with priorities ranging from 0-223. 0-63 are reserved for time-shared threads (default, SCHED_OTHER policy), 64-95 for user threads which entered <a href="http://en.wikipedia.org/wiki/Kernel_space" title="Kernel space" class="mw-redirect">kernel space</a>, 96-128 for kernel threads, 128-191 for user real-time threads (SCHED_FIFO and SCHED_RR policies), and 192-223 for <a href="Interrupt.html" title="Interrupt">software interrupts</a>.</p>
+<h3><span class="mw-headline" id="Solaris">Solaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=29" title="Edit section: Solaris">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a> uses a <a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">multilevel feedback queue</a> with priorities ranging from 0-169. 0-59 are reserved for time-shared threads, 60-99 for system threads, 100-159 for real-time threads, and 160-169 for low priority interrupts. Unlike Linux, when a process is done using its time quantum, it's given a new priority and put back in the queue.</p>
+<h3><span class="mw-headline" id="Summary">Summary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=30" title="Edit section: Summary">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tr>
+<th>Operating System</th>
+<th>Preemption</th>
+<th>Algorithm</th>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Amiga_OS" title="Amiga OS" class="mw-redirect">Amiga OS</a></td>
+<td>Yes</td>
+<td>Prioritized <a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin scheduling</a></td>
+</tr>
+<tr>
+<td><a href="FreeBSD.html" title="FreeBSD">FreeBSD</a></td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+<tr>
+<td><a href="Linux.html" title="Linux">Linux</a> pre-2.6</td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+<tr>
+<td><a href="Linux.html" title="Linux">Linux</a> 2.6-2.6.23</td>
+<td>Yes</td>
+<td><a href="http://en.wikipedia.org/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></td>
+</tr>
+<tr>
+<td><a href="Linux.html" title="Linux">Linux</a> post-2.6.23</td>
+<td>Yes</td>
+<td><a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a></td>
+</tr>
+<tr>
+<td><a href="Mac_OS.html" title="Mac OS">Mac OS</a> pre-9</td>
+<td>None</td>
+<td><a href="http://en.wikipedia.org/wiki/Cooperative_Scheduler" title="Cooperative Scheduler" class="mw-redirect">Cooperative Scheduler</a></td>
+</tr>
+<tr>
+<td><a href="Mac_OS.html" title="Mac OS">Mac OS</a> 9</td>
+<td>Some</td>
+<td>Preemptive for MP tasks, <a href="http://en.wikipedia.org/wiki/Cooperative_Scheduler" title="Cooperative Scheduler" class="mw-redirect">Cooperative Scheduler</a> for processes and threads</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a></td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+<tr>
+<td><a href="NetBSD.html" title="NetBSD">NetBSD</a></td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+<tr>
+<td><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a></td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Windows_3.1x" title="Windows 3.1x">Windows 3.1x</a></td>
+<td>None</td>
+<td><a href="http://en.wikipedia.org/wiki/Cooperative_Scheduler" title="Cooperative Scheduler" class="mw-redirect">Cooperative Scheduler</a></td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Windows_95" title="Windows 95">Windows 95</a>, <a href="http://en.wikipedia.org/wiki/Windows_98" title="Windows 98">98</a>, <a href="http://en.wikipedia.org/wiki/Windows_Me" title="Windows Me" class="mw-redirect">Me</a></td>
+<td>Half</td>
+<td>Preemptive for 32-bit processes, <a href="http://en.wikipedia.org/wiki/Cooperative_Scheduler" title="Cooperative Scheduler" class="mw-redirect">Cooperative Scheduler</a> for 16-bit processes</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">Windows NT</a> (including 2000, XP, Vista, 7, and Server)</td>
+<td>Yes</td>
+<td><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=31" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png" width="40" height="32" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/60px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/80px-Wikiversity-logo.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikiversity has learning materials about <i><b><a href="http://en.wikiversity.org/wiki/Scheduling" class="extiw" title="v:Scheduling">Scheduling</a></b></i> at
+<div style="margin-left: 10px;"><a href="http://en.wikiversity.org/wiki/Operating_Systems/Scheduling" class="extiw" title="v:Operating Systems/Scheduling">Operating Systems/Scheduling</a></div>
+</td>
+</tr>
+</table>
+<div class="div-col columns column-width" style="-moz-column-width: 25em; -webkit-column-width: 25em; column-width: 25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Activity_selection_problem" title="Activity selection problem">Activity selection problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aging_(scheduling)" title="Aging (scheduling)">Aging (scheduling)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Atropos_scheduler" title="Atropos scheduler">Atropos scheduler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Automated_planning_and_scheduling" title="Automated planning and scheduling">Automated planning and scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a></li>
+<li><a href="Computer_multitasking.html" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cyclic_executive" title="Cyclic executive">Cyclic executive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_priority_scheduling" title="Dynamic priority scheduling">Dynamic priority scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Earliest_deadline_first_scheduling" title="Earliest deadline first scheduling">Earliest deadline first scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Foreground-background" title="Foreground-background">Foreground-background</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interruptible_operating_system" title="Interruptible operating system">Interruptible operating system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Least_slack_time_scheduling" title="Least slack time scheduling">Least slack time scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lottery_scheduling" title="Lottery scheduling">Lottery scheduling</a></li>
+<li><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Priority_inversion" title="Priority inversion">Priority inversion</a></li>
+<li><a href="Process_(computing).html" title="Process (computing)">Process (computing)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Process_states" title="Process states" class="mw-redirect">Process states</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rate-monotonic_scheduling" title="Rate-monotonic scheduling">Rate-monotonic scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stride_scheduling" title="Stride scheduling">Stride scheduling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Time-utility_function" title="Time-utility function">Time-utility function</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=32" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://web.archive.org/web/*/www.jgcampbell.com/caos/html/node13.html">Early Windows</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web">Sriram Krishnan. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20120722015555/http://sriramk.com/schedulers.html">"A Tale of Two Schedulers Windows NT and Windows CE"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.aulast=Sriram+Krishnan&amp;rft.au=Sriram+Krishnan&amp;rft.btitle=A+Tale+of+Two+Schedulers+Windows+NT+and+Windows+CE&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fweb.archive.org%2Fweb%2F20120722015555%2Fhttp%3A%2F%2Fsriramk.com%2Fschedulers.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://technet.microsoft.com/en-us/magazine/cc162494.aspx">Inside the Windows Vista Kernel: Part 1</a>, Microsoft Technet</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://blog.gabefrost.com/?p=25">"Vista Kernel Improvements"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.btitle=Vista+Kernel+Improvements&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fblog.gabefrost.com%2F%3Fp%3D25&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-appletn2028-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-appletn2028_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-appletn2028_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://developer.apple.com/technotes/tn/tn2028.html">"Technical Note TN2028 - Threading Architectures"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.btitle=Technical+Note+TN2028+-+Threading+Architectures&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdeveloper.apple.com%2Ftechnotes%2Ftn%2Ftn2028.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://developer.apple.com/mac/library/documentation/Darwin/Conceptual/KernelProgramming/scheduler/scheduler.html">"Mach Scheduling and Thread Interfaces"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.btitle=Mach+Scheduling+and+Thread+Interfaces&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdeveloper.apple.com%2Fmac%2Flibrary%2Fdocumentation%2FDarwin%2FConceptual%2FKernelProgramming%2Fscheduler%2Fscheduler.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="http://en.wikipedia.org/wiki/Ingo_Molnár" title="Ingo Molnár">Molnár, Ingo</a> (2007-04-13). <a rel="nofollow" class="external text" href="http://lwn.net/Articles/230501/">"[patch] Modular Scheduler Core and Completely Fair Scheduler [CFS]"</a>. <i>linux-kernel mailing list</i><span class="printonly">. <a rel="nofollow" class="external free" href="http://lwn.net/Articles/230501/">http://lwn.net/Articles/230501/</a></span>.</span></span></li>
+<li id="cite_note-dwrr-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-dwrr_8-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://happyli.org/tongli/papers/dwrr.pdf">Efficient and Scalable Multiprocessor Fair Scheduling Using Distributed Weighted Round-Robin</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://web.archive.org/web/20080807124435/http://cn.opensolaris.org/files/solaris_linux_bsd_cmp.pdf">"Comparison of Solaris, Linux, and FreeBSD Kernels"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.btitle=Comparison+of+Solaris%2C+Linux%2C+and+FreeBSD+Kernels&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fweb.archive.org%2Fweb%2F20080807124435%2Fhttp%3A%2F%2Fcn.opensolaris.org%2Ffiles%2Fsolaris_linux_bsd_cmp.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><span class="citation book">Błażewicz, Jacek; Ecker, K.H.; Pesch, E.; Schmidt, G.; Weglarz, J. (2001). <i>Scheduling computer and manufacturing processes</i> (2 ed.). Berlin [u.a.]: Springer. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/3-540-41931-4" title="Special:BookSources/3-540-41931-4">3-540-41931-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.au=B%C5%82a%C5%BCewicz%2C+Jacek&amp;rft.au=Ecker%2C+K.H.&amp;rft.aufirst=Jacek&amp;rft.aulast=B%C5%82a%C5%BCewicz&amp;rft.au=Pesch%2C+E.&amp;rft.au=Schmidt%2C+G.&amp;rft.au=Weglarz%2C+J.&amp;rft.btitle=Scheduling+computer+and+manufacturing+processes&amp;rft.date=2001&amp;rft.edition=2&amp;rft.genre=book&amp;rft.isbn=3-540-41931-4&amp;rft.place=Berlin+%5Bu.a.%5D&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Stallings, William (2004). <i>Operating Systems Internals and Design Principles (fifth international edition)</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-147954-7" title="Special:BookSources/0-13-147954-7">0-13-147954-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.aulast=Stallings%2C+William&amp;rft.au=Stallings%2C+William&amp;rft.btitle=Operating+Systems+Internals+and+Design+Principles+%28fifth+international+edition%29&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=0-13-147954-7&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Stallings, William (2004). <i>Operating Systems Internals and Design Principles (fourth edition)</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-031999-6" title="Special:BookSources/0-13-031999-6">0-13-031999-6</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AScheduling+%28computing%29&amp;rft.aulast=Stallings%2C+William&amp;rft.au=Stallings%2C+William&amp;rft.btitle=Operating+Systems+Internals+and+Design+Principles+%28fourth+edition%29&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=0-13-031999-6&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a rel="nofollow" class="external text" href="http://joshaas.net/linux/">Information on the Linux 2.6 O(1)-scheduler</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit&amp;section=33" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a> by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau. Arpaci-Dusseau Books, 2014. Relevant chapters: <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">Scheduling: Introduction</a> <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Multi-level Feedback Queue</a> <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf">Proportional-share Scheduling</a> <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf">Multiprocessor Scheduling</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.sunysb.edu/~algorith/files/scheduling.shtml">Brief discussion of Job Scheduling algorithms</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.oreilly.com/catalog/linuxkernel/chapter/ch10.html">Understanding the Linux Kernel: Chapter 10 Process Scheduling</a></li>
+<li><a rel="nofollow" class="external text" href="http://kerneltrap.org/scheduler">Kerneltrap: Linux kernel scheduler articles</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/aix/library/au-aix5_cpu/index.html#N100F6">AIX CPU monitoring and tuning</a></li>
+<li><a rel="nofollow" class="external text" href="http://joshaas.net/linux/">Josh Aas' introduction to the Linux 2.6.8.1 CPU scheduler implementation</a></li>
+<li>Peter Brucker, Sigrid Knust. Complexity results for scheduling problems <a rel="nofollow" class="external autonumber" href="http://www.mathematik.uni-osnabrueck.de/research/OR/class/">[1]</a></li>
+<li><a rel="nofollow" class="external text" href="http://rtime.felk.cvut.cz/scheduling-toolbox">TORSCHE Scheduling Toolbox for Matlab</a> is a toolbox of scheduling and graph algorithms.</li>
+<li><a rel="nofollow" class="external autonumber" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6226795">[2]</a> A survey on cellular networks packet scheduling</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Operating_system" title="Template:Operating system"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Operating_system" title="Template talk:Operating system"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Operating_system&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Operating_system.html" title="Operating system">Operating system</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Operating_system_advocacy.html" title="Operating system advocacy">Advocacy</a></li>
+<li><a href="Comparison_of_operating_systems.html" title="Comparison of operating systems">Comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_operating_systems" title="History of operating systems">History</a></li>
+<li><a href="Hobbyist_operating_system_development.html" title="Hobbyist operating system development">Hobbyist development</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></li>
+<li><a href="Timeline_of_operating_systems.html" title="Timeline of operating systems">Timeline</a></li>
+<li><a href="Usage_share_of_operating_systems.html" title="Usage share of operating systems">Usage share</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Kernel_(computing).html" title="Kernel (computing)">Kernel</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Computer_architecture.html" title="Computer architecture">Architectures</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Exokernel.html" title="Exokernel">Exokernel</a></li>
+<li><a href="Hybrid_kernel.html" title="Hybrid kernel">Hybrid</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="Monolithic_kernel-2.html" title="Monolithic kernel">Monolithic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Components</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Device_driver.html" title="Device driver">Device driver</a></li>
+<li><a href="Loadable_kernel_module.html" title="Loadable kernel module">Loadable kernel module</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="User_space.html" title="User space">User space</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Process_management_(computing).html" title="Process management (computing)">Process management</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Concepts</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Context_switch.html" title="Context switch">Context switch</a></li>
+<li><a href="Interrupt.html" title="Interrupt">Interrupt</a></li>
+<li><a href="Inter-process_communication.html" title="Inter-process communication">IPC</a></li>
+<li><a href="Process_(computing).html" title="Process (computing)">Process</a></li>
+<li><a href="Process_control_block.html" title="Process control block">Process control block</a></li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="Time-sharing.html" title="Time-sharing">Time-sharing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><strong class="selflink">Scheduling<br />
+algorithms</strong></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Computer_multitasking.html" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="Fixed-priority_pre-emptive_scheduling.html" title="Fixed-priority pre-emptive scheduling">Fixed-priority preemptive</a></li>
+<li><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="Preemption_(computing).html" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin</a></li>
+<li><a href="Shortest_job_next.html" title="Shortest job next">Shortest job next</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Memory_management.html" title="Memory management">Memory management</a> and<br />
+<a href="Resource_(computing).html" title="Resource (computing)">resource</a> protection</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bus_error.html" title="Bus error">Bus error</a></li>
+<li><a href="General_protection_fault.html" title="General protection fault">General protection fault</a></li>
+<li><a href="Memory_protection.html" title="Memory protection">Memory protection</a></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+<li><a href="Ring_(computer_security).html" title="Ring (computer security)">Security rings</a></li>
+<li><a href="Segmentation_fault.html" title="Segmentation fault">Segmentation fault</a></li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Non-volatile_memory.html" title="Non-volatile memory">Storage</a> access and<br />
+<a href="File_system.html" title="File system">file systems</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Boot_loader.html" title="Boot loader" class="mw-redirect">Boot loader</a></li>
+<li><a href="Defragmentation.html" title="Defragmentation">Defragmentation</a></li>
+<li><a href="Device_file.html" title="Device file">Device file</a></li>
+<li><a href="File_attribute.html" title="File attribute">File attribute</a></li>
+<li><a href="Inode.html" title="Inode">Inode</a></li>
+<li><a href="Journaling_file_system.html" title="Journaling file system">Journal</a></li>
+<li><a href="Disk_partitioning.html" title="Disk partitioning">Partition</a></li>
+<li><a href="Virtual_file_system.html" title="Virtual file system">Virtual file system</a></li>
+<li><a href="Virtual_tape_library.html" title="Virtual tape library">Virtual tape library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AmigaOS.html" title="AmigaOS">AmigaOS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="BeOS.html" title="BeOS">BeOS</a></li>
+<li><a href="Berkeley_Software_Distribution.html" title="Berkeley Software Distribution">BSD</a></li>
+<li><a href="DOS.html" title="DOS">DOS</a></li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="IOS.html" title="IOS">iOS</a></li>
+<li><a href="Linux.html" title="Linux">Linux</a></li>
+<li><a href="Mac_OS.html" title="Mac OS">Mac OS</a></li>
+<li><a href="MorphOS.html" title="MorphOS">MorphOS</a></li>
+<li><a href="OpenVMS.html" title="OpenVMS">OpenVMS</a></li>
+<li><a href="OS/2.html" title="OS/2">OS/2</a></li>
+<li><a href="OSv.html" title="OSv">OSv</a></li>
+<li><a href="QNX.html" title="QNX">QNX</a></li>
+<li><a href="ReactOS.html" title="ReactOS">ReactOS</a></li>
+<li><a href="RISC_OS.html" title="RISC OS">RISC OS</a></li>
+<li><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="Transaction_Processing_Facility.html" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="Unix.html" title="Unix">Unix</a></li>
+<li><a href="VM_(operating_system).html" title="VM (operating system)">VM/CMS</a></li>
+<li><a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a></li>
+<li><a href="Z/OS.html" title="Z/OS">z/OS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Application_programming_interface.html" title="Application programming interface">API</a></li>
+<li><a href="Computer_network.html" title="Computer network">Computer network</a></li>
+<li><a href="Hardware_abstraction.html" title="Hardware abstraction">HAL</a></li>
+<li><a href="Live_CD.html" title="Live CD">Live CD</a></li>
+<li><a href="Live_USB.html" title="Live USB">Live USB</a></li>
+<li><a href="Operating_system_shell.html" title="Operating system shell">OS shell</a>
+<ul>
+<li><a href="Command-line_interface.html" title="Command-line interface">CLI</a></li>
+<li><a href="Graphical_user_interface.html" title="Graphical user interface">GUI</a></li>
+<li><a href="Text-based_user_interface.html" title="Text-based user interface">TUI</a></li>
+<li><a href="Voice_user_interface.html" title="Voice user interface">VUI</a></li>
+</ul>
+</li>
+<li><a href="Preboot_Execution_Environment.html" title="Preboot Execution Environment">PXE</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1003
+CPU time usage: 1.632 seconds
+Real time usage: 1.854 seconds
+Preprocessor visited node count: 3566/1000000
+Preprocessor generated node count: 22847/1500000
+Post‐expand include size: 65178/2048000 bytes
+Template argument size: 7199/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 8/500
+Lua time usage: 0.092/10.000 seconds
+Lua memory usage: 2.23 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:231920-0!*!0!!en!4!* and timestamp 20140328152119
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;oldid=600115441">http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;oldid=600115441</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Operations_research" title="Category:Operations research">Operations research</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Scheduling_(computing)" title="Category:Scheduling (computing)">Scheduling (computing)</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Scheduling_algorithms" title="Category:Scheduling algorithms">Scheduling algorithms</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Planning" title="Category:Planning">Planning</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_December_2013" title="Category:Articles lacking in-text citations from December 2013">Articles lacking in-text citations from December 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_December_2013" title="Category:Articles needing additional references from December 2013">Articles needing additional references from December 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2011" title="Category:Articles with unsourced statements from December 2011">Articles with unsourced statements from December 2011</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Scheduling+%28computing%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Scheduling+%28computing%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Scheduling_(computing).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Scheduling_(computing)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Scheduling_(computing).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Scheduling_(computing)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Scheduling_(computing)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;oldid=600115441" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1123036" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Scheduling_%28computing%29&amp;id=600115441" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Scheduling+%28computing%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Scheduling+%28computing%29&amp;oldid=600115441&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Scheduling_(computing)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Plánování_procesů" title="Plánování procesů – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Prozess-Scheduler" title="Prozess-Scheduler – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Ressursijaotus" title="Ressursijaotus – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Χρονοπρογραμματισμός_ΚΜΕ" title="Χρονοπρογραμματισμός ΚΜΕ – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Planificador" title="Planificador – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/زمان‌بندی_(رایانه)" title="زمان‌بندی (رایانه) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Ordonnancement_dans_les_systèmes_d%27exploitation" title="Ordonnancement dans les systèmes d'exploitation – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Scheduler" title="Scheduler – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Scheduling" title="Scheduling – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Algorytm_szeregowania" title="Algorytm szeregowania – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Escalonamento_de_processos" title="Escalonamento de processos – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Диспетчер_операционной_системы" title="Диспетчер операционной системы – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Razvrščevalni_algoritem" title="Razvrščevalni algoritem – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Распоређивање_(рачунарство)" title="Распоређивање (рачунарство) – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Vuoronnus" title="Vuoronnus – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Планувальник_операційної_системи" title="Планувальник операційної системи – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/排程" title="排程 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1123036#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 March 2014 at 05:13.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Scheduling_(computing)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1111 in 0.471 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Scheduling_(computing) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:22 GMT -->
+</html>

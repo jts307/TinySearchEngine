@@ -1,0 +1,637 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/VM_(operating_system).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/VM_(operating_system) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>VM (operating system) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/VM_(operating_system)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="VM_(operating_system).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"VM_(operating_system)","wgTitle":"VM (operating system)","wgCurRevisionId":598837545,"wgRevisionId":598837545,"wgArticleId":315018,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia references cleanup from May 2012","All articles needing references cleanup","Articles covered by WikiProject Wikify from May 2012","All articles covered by WikiProject Wikify","IBM mainframe operating systems","Time-sharing operating systems","Virtualization software","Software written in assembly language"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"VM_(operating_system)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q311555"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-VM_operating_system skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">VM (operating system)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="rellink boilerplate seealso">See also: <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a>&#160;and <a href="http://en.wikipedia.org/wiki/History_of_CP/CMS" title="History of CP/CMS">History of CP/CMS</a></div>
+<table class="metadata plainlinks ambox ambox-style ambox-citation_style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>has an unclear citation style</b>. <span class="hide-when-compact">The references used may be made clearer with a different or consistent style of <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">citation</a>, <a href="http://en.wikipedia.org/wiki/Help:Footnotes" title="Help:Footnotes">footnoting</a>, or <a href="http://en.wikipedia.org/wiki/Wikipedia:External_links" title="Wikipedia:External links">external linking</a>.</span> <small><i>(May 2012)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption>z/VM</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:VM_mascot_-_teddy_bear.png" class="image"><img alt="VM mascot - teddy bear.png" src="http://upload.wikimedia.org/wikipedia/en/3/34/VM_mascot_-_teddy_bear.png" width="83" height="83" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="http://en.wikipedia.org/wiki/Software_industry" title="Software industry">Company</a>&#160;/ <a href="Software_developer.html" title="Software developer">developer</a></th>
+<td><a href="IBM.html" title="IBM">IBM</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">OS family</th>
+<td>VM family</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Working state</th>
+<td>Current</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Source model</th>
+<td><a href="http://en.wikipedia.org/wiki/Closed_source" title="Closed source" class="mw-redirect">Closed source</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Initial release</th>
+<td>1972</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_release_life_cycle.html" title="Software release life cycle"><span class="nowrap">Latest stable release</span></a></th>
+<td>IBM z/VM V6.3 / July 23, 2013</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Supported platforms</th>
+<td><a href="http://en.wikipedia.org/wiki/System/370" title="System/370" class="mw-redirect">System/370</a>, <a href="http://en.wikipedia.org/wiki/System/390" title="System/390" class="mw-redirect">System/390</a>, <a href="http://en.wikipedia.org/wiki/ZSeries" title="ZSeries" class="mw-redirect">zSeries</a>, <a href="http://en.wikipedia.org/wiki/IBM_zEnterprise_System" title="IBM zEnterprise System">IBM zEnterprise System</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_license.html" title="Software license">License</a></th>
+<td><a href="Proprietary_software.html" title="Proprietary software">Proprietary</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Official website</th>
+<td><a rel="nofollow" class="external text" href="http://www.vm.ibm.com/">www.vm.ibm.com</a></td>
+</tr>
+</table>
+<table class="vertical-navbox" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em;"><a href="http://en.wikipedia.org/wiki/History_of_IBM_mainframe_operating_systems" title="History of IBM mainframe operating systems">History of IBM mainframe operating systems</a></th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;">Early mainframe computer OSs</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GM-NAA_I/O" title="GM-NAA I/O">GM OS &amp; GM-NAA I/O</a> (1955)</li>
+<li><a href="http://en.wikipedia.org/wiki/BESYS" title="BESYS">BESYS</a> (1957)</li>
+<li><a href="http://en.wikipedia.org/wiki/University_of_Michigan_Executive_System" title="University of Michigan Executive System">UMES</a> (1958)</li>
+<li><a href="http://en.wikipedia.org/wiki/SHARE_Operating_System" title="SHARE Operating System">SOS</a> (1959)</li>
+<li><a href="http://en.wikipedia.org/wiki/IBM_7090/94_IBSYS" title="IBM 7090/94 IBSYS">IBSYS</a> (1960)</li>
+<li><a href="http://en.wikipedia.org/wiki/Compatible_Time-Sharing_System" title="Compatible Time-Sharing System">CTSS</a> (1961)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;">Miscellaneous S/360 line OSes</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/BOS/360" title="BOS/360">BOS/360</a> (1965)</li>
+<li><a href="http://en.wikipedia.org/wiki/TOS/360" title="TOS/360" class="mw-redirect">TOS/360</a> (1965)</li>
+<li><a href="http://en.wikipedia.org/wiki/TSS/360" title="TSS/360">TSS/360</a> (1967)</li>
+<li><a href="http://en.wikipedia.org/wiki/Michigan_Terminal_System" title="Michigan Terminal System">MTS</a> (1967)</li>
+<li><a href="http://en.wikipedia.org/wiki/ORVYL_and_WYLBUR" title="ORVYL and WYLBUR">ORVYL</a> (1967)</li>
+<li><a href="http://en.wikipedia.org/wiki/MUSIC/SP" title="MUSIC/SP">MUSIC</a> (1972)
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/MUSIC/SP" title="MUSIC/SP">MUSIC/SP</a> (1985)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;"><a href="http://en.wikipedia.org/wiki/DOS/360_and_successors" title="DOS/360 and successors">DOS/360 and successors</a> (1966)</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li>DOS/VS (1972)</li>
+<li>DOS/VSE (1980s)</li>
+<li>VSE/SP late (1980s)</li>
+<li>VSE/ESA (1991)</li>
+<li><a href="http://en.wikipedia.org/wiki/Z/VSE" title="Z/VSE" class="mw-redirect">z/VSE</a> (2005)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;"><a href="http://en.wikipedia.org/wiki/OS/360_and_successors" title="OS/360 and successors">OS/360 and successors</a> (1966)</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/MFT_(operating_system)" title="MFT (operating system)" class="mw-redirect">MFT</a> (1966)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=MFT_II&amp;action=edit&amp;redlink=1" class="new" title="MFT II (page does not exist)">MFT II</a> (1968)
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/OS/VS1" title="OS/VS1">OS/VS1</a> (1972)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=OS/VS1_BPE&amp;action=edit&amp;redlink=1" class="new" title="OS/VS1 BPE (page does not exist)">OS/VS1 BPE</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Multiprogramming_with_a_Variable_number_of_Tasks" title="Multiprogramming with a Variable number of Tasks" class="mw-redirect">MVT</a> (1967)
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=65MP&amp;action=edit&amp;redlink=1" class="new" title="65MP (page does not exist)">65MP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OS/VS2_(SVS)" title="OS/VS2 (SVS)">OS/VS2R1</a> (SVS) (1972)</li>
+<li><a href="http://en.wikipedia.org/wiki/MVS" title="MVS">MVS</a> (OS/VS2R2 and later) (1974)
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=MVS/SE&amp;action=edit&amp;redlink=1" class="new" title="MVS/SE (page does not exist)">MVS/SE</a> (1978)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=MVS/SE_2&amp;action=edit&amp;redlink=1" class="new" title="MVS/SE 2 (page does not exist)">MVS/SE 2</a> (1979)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=MVS/SP&amp;action=edit&amp;redlink=1" class="new" title="MVS/SP (page does not exist)">MVS/SP</a> Version 1 (1980)</li>
+<li><a href="http://en.wikipedia.org/wiki/MVS/XA" title="MVS/XA" class="mw-redirect">MVS/XA</a> (1983)</li>
+<li><a href="http://en.wikipedia.org/wiki/MVS/ESA" title="MVS/ESA" class="mw-redirect">MVS/ESA</a> (1988)</li>
+<li><a href="http://en.wikipedia.org/wiki/OS/390" title="OS/390">OS/390</a> (1995)</li>
+<li><a href="Z/OS.html" title="Z/OS">z/OS</a> (2000)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;"><a href="http://en.wikipedia.org/wiki/History_of_CP/CMS" title="History of CP/CMS">VM line</a></div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CP-40" title="CP-40" class="mw-redirect">CP-40</a><a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">/CMS</a> (1967)</li>
+<li><a href="http://en.wikipedia.org/wiki/CP-67" title="CP-67">CP-67</a><a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">/CMS</a> (1967)</li>
+<li><a href="http://en.wikipedia.org/wiki/VP/CSS" title="VP/CSS">VP/CSS</a> (1968)</li>
+<li><a href="http://en.wikipedia.org/wiki/VM/370" title="VM/370" class="mw-redirect">VM/370</a> (1972)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=VM/BSE_(BSEPP)&amp;action=edit&amp;redlink=1" class="new" title="VM/BSE (BSEPP) (page does not exist)">VM/BSE (BSEPP)</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=VM/SE_(SEPP)&amp;action=edit&amp;redlink=1" class="new" title="VM/SE (SEPP) (page does not exist)">VM/SE (SEPP)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VM/SP" title="VM/SP" class="mw-redirect">VM/SP</a> (1980)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=VM/XA_MA&amp;action=edit&amp;redlink=1" class="new" title="VM/XA MA (page does not exist)">VM/XA MA</a> (1984)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=VM/XA_SF&amp;action=edit&amp;redlink=1" class="new" title="VM/XA SF (page does not exist)">VM/XA SF</a> (1985)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=VM/XA_SP&amp;action=edit&amp;redlink=1" class="new" title="VM/XA SP (page does not exist)">VM/XA SP</a> (1988)</li>
+<li><a href="http://en.wikipedia.org/wiki/VM/ESA" title="VM/ESA" class="mw-redirect">VM/ESA</a> (1990)</li>
+<li><a href="http://en.wikipedia.org/wiki/Z/VM" title="Z/VM">z/VM</a> (2000)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;">TPF line</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Airlines_Control_Program" title="Airlines Control Program" class="mw-redirect">ACP</a> (1967)</li>
+<li><a href="Transaction_Processing_Facility.html" title="Transaction Processing Facility">TPF</a> (1979)</li>
+<li><a href="http://en.wikipedia.org/wiki/Z/TPF" title="Z/TPF" class="mw-redirect">z/TPF</a> (2005)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em;">
+<div class="NavFrame collapsed" style="border:none;padding:0;">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;"><a href="http://en.wikipedia.org/wiki/UNIX" title="UNIX" class="mw-redirect">UNIX</a> and <a href="Unix-like.html" title="Unix-like">Unix-like</a></div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/UTS_(Mainframe_UNIX)" title="UTS (Mainframe UNIX)">UTS</a> (1981)</li>
+<li><a href="IBM_AIX_(operating_system).html#IBM_mainframes" title="IBM AIX (operating system)" class="mw-redirect">AIX/370</a> (1990)</li>
+<li><a href="IBM_AIX_(operating_system).html#IBM_mainframes" title="IBM AIX (operating system)" class="mw-redirect">AIX/ESA</a> (1991)</li>
+<li>MVS/ESA <a href="http://en.wikipedia.org/wiki/MVS#MVS.2FESA" title="MVS">OpenEdition</a> (1993)</li>
+<li>OS/390 <a href="http://en.wikipedia.org/wiki/UNIX_System_Services" title="UNIX System Services">UNIX System Services</a> (1996)</li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_on_System_z" title="Linux on System z">Linux</a> (1999)</li>
+<li>z/OS <a href="http://en.wikipedia.org/wiki/UNIX_System_Services" title="UNIX System Services">UNIX System Services</a> (2001)</li>
+<li><a href="http://en.wikipedia.org/wiki/OpenSolaris_for_System_z" title="OpenSolaris for System z">OpenSolaris</a> (2008)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;padding-top: 0.6em;;">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:History_of_IBM_mainframe_operating_systems" title="Template:History of IBM mainframe operating systems"><span title="View this template" style=";">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:History_of_IBM_mainframe_operating_systems" title="Template talk:History of IBM mainframe operating systems"><span title="Discuss this template" style=";">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:History_of_IBM_mainframe_operating_systems&amp;action=edit"><span title="Edit this template" style=";">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p><b>VM</b> (often: <b>VM/CMS</b>) is a family of <a href="IBM.html" title="IBM">IBM</a> <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> <a href="Operating_system.html" title="Operating system">operating systems</a> used on <a href="http://en.wikipedia.org/wiki/IBM_mainframe" title="IBM mainframe">IBM mainframes</a> <a href="http://en.wikipedia.org/wiki/System/370" title="System/370" class="mw-redirect">System/370</a>, <a href="http://en.wikipedia.org/wiki/System/390" title="System/390" class="mw-redirect">System/390</a>, <a href="http://en.wikipedia.org/wiki/ZSeries" title="ZSeries" class="mw-redirect">zSeries</a>, <a href="http://en.wikipedia.org/wiki/System_z" title="System z" class="mw-redirect">System z</a> and compatible systems, including the <a href="http://en.wikipedia.org/wiki/Hercules_emulator" title="Hercules emulator" class="mw-redirect">Hercules emulator</a> for personal computers. The first version, released in 1972, was <b>VM/370</b>, or officially <b>Virtual Machine Facility/370</b>. This was a <a href="http://en.wikipedia.org/wiki/System/370" title="System/370" class="mw-redirect">System/370</a> reimplementation of earlier <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> operating system. Milestone versions included <b>VM/SP</b>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The current version is <b><a href="http://en.wikipedia.org/wiki/Z/VM" title="Z/VM">z/VM</a></b>, and is still widely used as one of the main <a href="http://en.wikipedia.org/wiki/Full_virtualization" title="Full virtualization">full virtualization</a> solutions for the mainframe market.</p>
+<p>VM's differences with other IBM mainframe operating systems are primarily due to the unique circumstances in which <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> was built and distributed.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Hypervisor_interface"><span class="tocnumber">2</span> <span class="toctext">Hypervisor interface</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#History"><span class="tocnumber">3</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#VM_mascot"><span class="tocnumber">4</span> <span class="toctext">VM mascot</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">5</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#VM_sources"><span class="tocnumber">6.1</span> <span class="toctext">VM sources</span></a></li>
+<li class="toclevel-2"><a href="#Primary_CP.2FCMS_sources"><span class="tocnumber">6.2</span> <span class="toctext">Primary CP/CMS sources</span></a></li>
+<li class="toclevel-2"><a href="#Additional_CP.2FCMS_sources"><span class="tocnumber">6.3</span> <span class="toctext">Additional CP/CMS sources</span></a></li>
+<li class="toclevel-2"><a href="#Background_CP.2FCMS_sources"><span class="tocnumber">6.4</span> <span class="toctext">Background CP/CMS sources</span></a></li>
+<li class="toclevel-2"><a href="#Additional_on-line_CP.2FCMS_resources"><span class="tocnumber">6.5</span> <span class="toctext">Additional on-line CP/CMS resources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The heart of the VM architecture is a <i>control program</i> or <a href="http://en.wikipedia.org/wiki/Hypervisor" title="Hypervisor">hypervisor</a> called <b>VM-CP</b> (usually: <b>CP</b>; sometimes, ambiguously: <b>VM</b>). It runs on the physical hardware, and creates the <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> environment. VM-CP provides <a href="http://en.wikipedia.org/wiki/Full_virtualization" title="Full virtualization">full virtualization</a> of the physical machine – including all I/O and other privileged operations. It performs the system's resource-sharing, including device management, dispatching, virtual storage management, and other traditional operating system tasks. Each VM user is provided with a separate <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> having its own <a href="http://en.wikipedia.org/wiki/Address_space" title="Address space">address space</a>, virtual devices, etc., and which is capable of running any software that could be run on a stand-alone machine. A given VM mainframe typically runs hundreds or thousands of virtual machine instances. VM-CP began life as CP-370, a reimplementation of <a href="http://en.wikipedia.org/wiki/CP-67" title="CP-67">CP-67</a>, itself a reimplementation of <a href="http://en.wikipedia.org/wiki/IBM_CP-40" title="IBM CP-40">CP-40</a>.</p>
+<p>Running within each virtual machine is another, "guest" operating system. This might be:</p>
+<ul>
+<li><b>CMS</b> ("<a href="http://en.wikipedia.org/wiki/Conversational_Monitor_System" title="Conversational Monitor System">Conversational Monitor System</a>", renamed from the "Cambridge Monitor System" of <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a>). Its official name is <b>VM-CMS</b> (confusing, since VM is commonly called <b>VM/CMS</b>). Most virtual machines run CMS, a lightweight, single-user operating system. Its interactive environment is comparable to that of a single-user PC, including a file system, programming services, device access, and command-line processing. (While an earlier version of CMS was uncharitably described as "<a href="CP/M.html" title="CP/M">CP/M</a> on a mainframe", the comparison is an anachronism; the author of CP/M, <a href="http://en.wikipedia.org/wiki/Gary_Kildall" title="Gary Kildall">Gary Kildall</a>, was an experienced CMS user.)</li>
+</ul>
+<ul>
+<li><b>A mainstream operating system.</b> IBM's mainstream operating systems (i.e. the <a href="http://en.wikipedia.org/wiki/MVS" title="MVS">MVS</a> or <a href="http://en.wikipedia.org/wiki/DOS/VSE" title="DOS/VSE" class="mw-redirect">DOS/VSE</a> families) can be loaded and run without modification. The VM hypervisor treats guest operating systems as application programs with exceptional privileges - it prevents them from using privileged instructions (those which would let applications take over the whole system or significant parts of it), but simulates privileged instructions on their behalf. Most mainframe operating systems terminate a normal application which tries to usurp the operating system's privileges.</li>
+</ul>
+<ul>
+<li><b>Another copy of VM.</b> A "second level" instance of VM can be fully virtualized inside a virtual machine. This is how VM development and testing is done. (A "second-level" VM can potentially implement a <i>different</i> virtualization of the hardware. This technique was used to develop S/370 software before S/370 hardware was available, and it has continued to play a role in new hardware development at IBM. The literature cites practical examples of virtualization <i>five levels deep</i>.(See page 55 of <i>VM and the VM Community</i>) Levels of VM below the top are also treated as applications but with exceptional privileges.</li>
+</ul>
+<ul>
+<li><b>A copy of the mainframe version of <a href="IBM_AIX_(operating_system).html" title="IBM AIX (operating system)" class="mw-redirect">AIX</a> or <a href="Linux.html" title="Linux">Linux</a>.</b> In the mainframe environment, these operating systems often run under VM, and are handled like other guest operating systems. (They can also run as 'native' operating systems on the bare hardware.)</li>
+</ul>
+<ul>
+<li><b>A specialized VM subsystem.</b> Several non-CMS systems run within VM-CP virtual machines, providing services to CMS users such as spooling, interprocess communications, and specialized device support. They operate "behind the scenes", extending the services available to CMS without adding to the VM-CP control program. By running in separate virtual machines, they receive the same security and reliability protections as other VM users. Examples include:
+<ul>
+<li><b><a href="http://en.wikipedia.org/wiki/RSCS" title="RSCS">RSCS</a></b> ("Remote Spooling and Communication Subsystem", aka VNET) – communication and information transfer facilities between virtual machines<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></li>
+<li><b><a href="http://en.wikipedia.org/wiki/RACF" title="RACF" class="mw-redirect">RACF</a></b> ("Resource Access Control Facility") — a security system</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Group_Control_System(VM)" title="Group Control System(VM)" class="mw-redirect">GCS</a></b> ("Group Control System"), which provides a limited simulation of the MVS API.</li>
+</ul>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Hypervisor_interface">Hypervisor interface</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=2" title="Edit section: Hypervisor interface">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>At one time, CMS was capable of running on a <a href="http://en.wikipedia.org/wiki/Bare_machine" title="Bare machine">bare machine</a>, as a true operating system (though such a configuration would be unusual). It now only runs as a guest OS under VM. This is because CMS relies on a <a href="http://en.wikipedia.org/wiki/Hypervisor" title="Hypervisor">hypervisor</a> interface to VM-CP, to perform file system operations and request other VM services. This <a href="http://en.wikipedia.org/wiki/Paravirtualization" title="Paravirtualization">paravirtualization</a> interface:</p>
+<ul>
+<li>Provides a fast path to VM-CP, to avoid the overhead of full simulation.</li>
+<li>Was first developed as a performance improvement for <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> release 2.1, an important early milestone in CP's efficiency.</li>
+<li>Uses a non-virtualized, model-dependent machine instruction as a signal between CMS and CP: <b>DIAG</b> ("diagnose").</li>
+</ul>
+<p>The term "hypervisor" was probably coined during IBM's implementation of VM/370, when it was used to refer to the virtual DIAG handler.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=3" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The early history of VM is described in the articles <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> and <a href="http://en.wikipedia.org/wiki/History_of_CP/CMS" title="History of CP/CMS">History of CP/CMS</a>. VM/370 was a reimplementation of CP/CMS, and was made available in 1972 as part of IBM's "System/370 Advanced Function" announcement (which added <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> hardware and operating systems to the <a href="http://en.wikipedia.org/wiki/System/370" title="System/370" class="mw-redirect">System/370</a> series). Early releases of VM continued in <a href="Open_source.html" title="Open source">open source</a>, and today are considered to be in the <a href="http://en.wikipedia.org/wiki/Public_domain" title="Public domain">public domain</a>. This policy ended in the mid '80s, when VM became a "For-charge Licensed System Product".</p>
+<p>VM remained an important platform <i>within</i> IBM, used for operating system development and time-sharing use; but for customers it remained IBM's "other operating system". The OS and DOS families remained IBM's strategic products, and customers were not encouraged to run VM. Those that did formed close working relationships, continuing the community-support model of early CP/CMS users. In the meantime, the system struggled with political infighting within IBM over what resources should be available to the project, as compared with other IBM efforts. A basic "problem" with the system was seen at IBM's field sales level: VM/CMS demonstrably reduced the amount of hardware needed to support a given number of time-sharing users. IBM was, after all, in the business of selling computer systems.</p>
+<p>Melinda Varian provides this fascinating quote, illustrating VM's unexpected success:</p>
+<blockquote>
+<p>The marketing forecasts for VM/370 predicted that no more than one 168 would ever run VM during the entire life of the product. In fact, the first 168 delivered to a customer ran only CP and CMS. Ten years later, ten percent of the large processors being shipped from Poughkeepsie would be destined to run VM, as would a very substantial portion of the mid-range machines that were built in Endicott. Before fifteen years had passed, there would be more VM licenses than MVS licenses.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+</blockquote>
+<p>A <a href="http://en.wikipedia.org/wiki/PC-DOS" title="PC-DOS" class="mw-redirect">PC-DOS</a> version that ran on the <a href="http://en.wikipedia.org/wiki/XT/370" title="XT/370" class="mw-redirect">XT/370</a> (and later on the AT/370) was called VM/PC. VM/PC 1.1 was based on VM/SP release 3.</p>
+<p>VM's role changed within IBM when hardware evolution led to significant changes in processor architecture. <a href="http://en.wikipedia.org/wiki/Backward_compatibility" title="Backward compatibility">Backward compatibility</a> remained a cornerstone of the <a href="http://en.wikipedia.org/wiki/IBM_mainframe" title="IBM mainframe">IBM mainframe</a> family, which still used the basic instruction set introduced with the original <a href="http://en.wikipedia.org/wiki/System/360" title="System/360" class="mw-redirect">System/360</a>; but the need for efficient use of the 64-bit <a href="http://en.wikipedia.org/wiki/ZSeries" title="ZSeries" class="mw-redirect">zSeries</a> made the VM approach much more attractive. VM was also utilized in data centers converting from DOS/VSE to MVS and is useful when running mainframe <a href="IBM_AIX_(operating_system).html" title="IBM AIX (operating system)" class="mw-redirect">AIX</a> and <a href="Linux.html" title="Linux">Linux</a>, platforms that were to become increasingly important. The current <a href="http://en.wikipedia.org/wiki/Z/VM" title="Z/VM">z/VM</a> platform has finally achieved the recognition within IBM that VM users long felt it deserved. Some z/VM sites run thousands of simultaneous virtual machine users on a single system. z/VM was first released in October 2000<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> and remains in active use and development.</p>
+<p>IBM and third parties have offered many applications and tools that run under VM. Examples include <a href="http://en.wikipedia.org/w/index.php?title=RAMIS&amp;action=edit&amp;redlink=1" class="new" title="RAMIS (page does not exist)">RAMIS</a>, <a href="http://en.wikipedia.org/wiki/FOCUS" title="FOCUS">FOCUS</a>, <a href="http://en.wikipedia.org/wiki/SPSS" title="SPSS">SPSS</a>, <a href="http://en.wikipedia.org/wiki/Nomad_software" title="Nomad software">NOMAD</a>, <a href="http://en.wikipedia.org/wiki/IBM_DB2" title="IBM DB2">DB2</a>, <a href="http://en.wikipedia.org/wiki/REXX" title="REXX" class="mw-redirect">REXX</a>, <a href="http://en.wikipedia.org/wiki/RACF" title="RACF" class="mw-redirect">RACF</a>, and <a href="http://en.wikipedia.org/wiki/OfficeVision" title="OfficeVision" class="mw-redirect">OfficeVision</a>. Current VM offerings run the gamut of mainframe applications, including <a href="HTTP.html" title="HTTP" class="mw-redirect">HTTP</a> servers, database managers, analysis tools, engineering packages, and financial systems.</p>
+<h2><span class="mw-headline" id="VM_mascot">VM mascot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=4" title="Edit section: VM mascot">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the early 1980s, the VM group within <a href="http://en.wikipedia.org/wiki/SHARE_(computing)" title="SHARE (computing)">SHARE</a> (the IBM user group) sought a mascot or logo for the community to adopt. This was in part a response to IBM's <a href="http://en.wikipedia.org/wiki/MVS" title="MVS">MVS</a> users selecting the turkey as a mascot (hilariously chosen, according to legend, by the MVS Performance Group in the early days of MVS, when its performance was a sore topic). In 1983, the teddy bear became VM's <i>de facto</i> mascot at SHARE 60, when teddy bear stickers were attached to the nametags of "cuddlier oldtimers" to flag them for newcomers as "friendly if approached". The bears were a hit and soon appeared widely.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> Bears were awarded to inductees of the "Order of the Knights of VM", individuals who made "useful contributions" to the community.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=5" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">"VM/SP Announced 1980/02/11, GA 1980/12/12" <span class="citation web">Elliott, Jim (2004-08-17). <a rel="nofollow" class="external text" href="http://www.linuxvm.org/Present/SHARE103/S9140jea.pdf">"The Evolution of IBM Mainframes and VM"</a> (PDF). SHARE Session 9140<span class="reference-accessdate">. Retrieved 2007-10-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVM+%28operating+system%29&amp;rft.au=Elliott%2C+Jim&amp;rft.aufirst=Jim&amp;rft.aulast=Elliott&amp;rft.btitle=The+Evolution+of+IBM+Mainframes+and+VM&amp;rft.date=2004-08-17&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.linuxvm.org%2FPresent%2FSHARE103%2FS9140jea.pdf&amp;rft.pub=SHARE+Session+9140&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Creasy, <i>op. cit., p.</i> 483 — role of RSCS.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Varian, <i>op. cit., p.</i> 30 – extent of VM use; more VM licenses than MVS licenses</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.vm.ibm.com/overview/">www.vm.ibm.com</a> – release history</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.vm.ibm.com/devpages/christin/vmwebart.html">www.vm.ibm.com</a> – VM bear images on an IBM site, contributed by VM developer Pam Christina</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Varian, <i>op. cit., p.</i> 2 – the teddy bear story</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://ppewww.ph.gla.ac.uk/~flavell/vmteddy.html">ppewww.ph.gla.ac.uk</a> – another version of the bear origin story, by physicist Alan Flavell, with an image</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="VM_sources">VM sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=7" title="Edit section: VM sources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Bob DuCharme, <i><a rel="nofollow" class="external text" href="http://www.snee.com/bob/opsys/part5vmcms.pdf">Operating Systems Handbook, Part 5: VM/CMS</a></i><br />
+– a fairly detailed user's guide to VM/CMS</li>
+<li>E. C. Hendricks and T. C. Hartmann, "Evolution of a Virtual Machine Subsystem", <i>IBM Systems Journal</i> Vol. 18, <i>pp.</i> 111-142 (1979)<br />
+– RSCS design and implementation</li>
+<li>IBM Corporation, <i>IBM Virtual Machine Facility/370 Introduction</i>, GC20-1800, (1972)<br />
+– the original manual</li>
+</ul>
+<h3><span class="mw-headline" id="Primary_CP.2FCMS_sources">Primary CP/CMS sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Template:Bibliography_CP/CMS&amp;action=edit&amp;section=T-1" title="Template:Bibliography CP/CMS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="refbegin" style="">
+<ul>
+<li>R. J. Creasy, "<a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~stjones/proj/vm_reading/ibmrd2505M.pdf">The origin of the VM/370 time-sharing system</a>", <i>IBM Journal of Research &amp; Development</i>, Vol. 25, No. 5 (September 1981), <i>pp.</i> 483–90, <a href="http://en.wikipedia.org/wiki/PDF" title="PDF" class="mw-redirect">PDF</a><br />
+― perspective on <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> and <strong class="selflink">VM</strong> history by the <a href="http://en.wikipedia.org/wiki/IBM_CP-40" title="IBM CP-40">CP-40</a> project lead, also a <a href="http://en.wikipedia.org/wiki/Compatible_Time-Sharing_System" title="Compatible Time-Sharing System">CTSS</a> author</li>
+<li>E.W. Pugh, L.R. Johnson, and John H. Palmer, <i>IBM's 360 and early 370 systems,</i> MIT Press, Cambridge MA and London, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0262161230" class="internal mw-magiclink-isbn">ISBN 0-262-16123-0</a><br />
+― extensive (819&#160;<i>pp.</i>) treatment of IBM's offerings during this period; the limited coverage of <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> in such a definitive work is telling</li>
+<li>Melinda Varian, <i><a rel="nofollow" class="external text" href="http://www.leeandmelindavarian.com/Melinda/25paper.pdf">VM and the VM community, past present, and future</a>,</i> SHARE 89 Sessions 9059–61, 1997;<br />
+― an outstanding source for <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP/CMS</a> and <strong class="selflink">VM</strong> history</li>
+</ul>
+</div>
+<h3><span class="mw-headline" id="Additional_CP.2FCMS_sources">Additional CP/CMS sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Template:Bibliography_CP/CMS&amp;action=edit&amp;section=T-2" title="Template:Bibliography CP/CMS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="refbegin" style="">
+<ul>
+<li>R. J. Adair, R. U. Bayles, L. W. Comeau, and R. J. Creasy, <i>A Virtual Machine System for the 360/40,</i> IBM Corporation, Cambridge Scientific Center Report No. 320‐2007 (May 1966)<br />
+― a seminal paper describing implementation of the virtual machine concept, with descriptions of the customized CSC S/360-40 and the <a href="http://en.wikipedia.org/wiki/IBM_CP-40" title="IBM CP-40">CP-40</a> design</li>
+<li>International Business Machines Corporation, <i>CP-67/CMS</i>, Program 360D-05.2.005, IBM Program Information Department (June 1969)<br />
+― IBM's reference manual</li>
+<li>R. A. Meyer and L. H. Seawright, "A virtual machine time-sharing system," <i>IBM Systems Journal,</i> Vol. 9, No. 3, pp. 199–218 (September 1970)<br />
+― describes the CP-67/CMS system, outlining features and applications</li>
+<li>R. P. Parmelee, T. I. Peterson, C. C. Tillman, and D. J. Hatfield, "Virtual storage and virtual machine concepts," <i>IBM Systems Journal,</i> Vol. 11, No. 2 (June 1972)</li>
+</ul>
+</div>
+<h3><span class="mw-headline" id="Background_CP.2FCMS_sources">Background CP/CMS sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Template:Bibliography_CP/CMS&amp;action=edit&amp;section=T-3" title="Template:Bibliography CP/CMS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="refbegin" style="">
+<ul>
+<li>F. J. Corbató, et al., <i>The Compatible Time-Sharing System, A Programmer’s Guide,</i> M.I.T. Press, 1963</li>
+<li>F. J. Corbató, M. Merwin-Daggett, and R. C. Daley, "An Experimental Time-sharing System," <i>Proc. Spring Joint Computer Conference (AFIPS) 21, pp.</i> 335–44 (1962) — description of CTSS</li>
+<li>F. J. Corbató and V. A. Vyssotsky, "Introduction and Overview of the MULTICS System", <i>Proc. Fall Joint Computer Conference (AFIPS) 27, pp.</i> 185–96 (1965)</li>
+<li>P. J. Denning, "Virtual Memory", <i>Computing Surveys</i> Vol. 2, <i>pp.</i> 153–89 (1970)</li>
+<li>J. B. Dennis, "Segmentation and the Design of Multi-Programmed Computer Systems," <i>JACM</i> Vol. 12, <i>pp.</i> 589–602 (1965)<br />
+― virtual memory requirements for Project MAC, destined for <a href="http://en.wikipedia.org/wiki/GE_645" title="GE 645" class="mw-redirect">GE 645</a></li>
+<li>C. A. R. Hoare and R. H. Perrott, Eds., <i>Operating Systems Techniques</i>, Academic Press, Inc., New York (1972)</li>
+<li>T. Kilburn, D. B. G. Edwards, M. J. Lanigan, and F. H. Sumner, "One-Level Storage System", <i>IRE Trans. Electron. Computers EC-11, pp.</i> 223–35 (1962)<br />
+― Manchester/Ferranti <a href="http://en.wikipedia.org/wiki/Atlas_Computer_(Manchester)" title="Atlas Computer (Manchester)" class="mw-redirect">Atlas</a></li>
+<li>R. A. Nelson, "Mapping Devices and the M44 Data Processing System," <i>Research Report RC 1303</i>, IBM <a href="http://en.wikipedia.org/wiki/Thomas_J._Watson_Research_Center" title="Thomas J. Watson Research Center">Thomas J. Watson Research Center</a> (1964)<br />
+― about the <a href="http://en.wikipedia.org/wiki/IBM_M44/44X" title="IBM M44/44X">IBM M44/44X</a></li>
+<li>R. P. Parmelee, T. I. Peterson, C. C. Tillman, and D. J. Hatfield, "Virtual Storage and Virtual Machine Concepts", <i>IBM Systems Journal</i>, Vol. 11, <i>pp.</i> 99–130 (1972)</li>
+</ul>
+</div>
+<h3><span class="mw-headline" id="Additional_on-line_CP.2FCMS_resources">Additional on-line CP/CMS resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Template:Bibliography_CP/CMS&amp;action=edit&amp;section=T-4" title="Template:Bibliography CP/CMS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="refbegin" style="">
+<ul>
+<li>febcm.club.fr — <i><a rel="nofollow" class="external text" href="http://febcm.club.fr/english/information_technology/information_technology_3.htm">Information Technology Timeline</a>, 1964–74</i></li>
+<li>www.multicians.org — Tom Van Vleek's short essay <i><a rel="nofollow" class="external text" href="http://www.multicians.org/thvv/360-67.html">The IBM 360/67 and CP/CMS</a></i></li>
+<li>www.cap-lore.com — Norman Hardy's <i><a rel="nofollow" class="external text" href="http://cap-lore.com/Software/CP.html">Short history of IBM's virtual machines</a></i></li>
+<li>www.cap-lore.com — Norman Hardy's <a rel="nofollow" class="external text" href="http://www.cap-lore.com/Hardware/Blaauw.html">short description of the "Blaauw Box"</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.redbooks.ibm.com/abstracts/sg247316.html?Open">IBM Redbooks Publication - z/VM textbook</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.vm.ibm.com/">IBM: z/VM portal</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.vm.ibm.com/library/">IBM: z/VM manuals</a></li>
+<li><a rel="nofollow" class="external text" href="http://bitsavers.trailing-edge.com/pdf/ibm/pc/vm_pc/">VM/PC documentation on bitsavers</a></li>
+</ul>
+<table style="border:1px solid #AAAAAA; padding:1px; text-align:left; vertical-align:middle; margin: 0px">
+<tr>
+<td colspan="3" class="navbox-title"><b>CP/CMS family relationships</b></td>
+</tr>
+<tr>
+<td colspan="3" class="navbox-abovebelow">→&#160;<i>derivation</i>&#160;&#160;&#160;&#160; &gt;&gt;&#160;<i>strong influence</i>&#160;&#160;&#160;&#160; &gt;&#160;<i>some influence/precedence</i></td>
+</tr>
+<tr>
+<td rowspan="7" style="border-right:1px solid">&#160;<a href="http://en.wikipedia.org/wiki/Compatible_Time-Sharing_System" title="Compatible Time-Sharing System">CTSS</a>&#160;</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom:1px solid">&gt; <a href="http://en.wikipedia.org/wiki/IBM_M44/44X" title="IBM M44/44X">IBM M44/44X</a></td>
+</tr>
+<tr>
+<td rowspan="2" style="border-right:1px solid">&gt;&gt; <a href="http://en.wikipedia.org/wiki/IBM_CP-40" title="IBM CP-40">CP-40/CMS</a> → <a href="http://en.wikipedia.org/wiki/CP/CMS" title="CP/CMS">CP[-67]/CMS</a>&#160;</td>
+<td>→ <a href="http://en.wikipedia.org/wiki/VM/370" title="VM/370" class="mw-redirect">VM/370</a> → VM/XA versions → <a href="http://en.wikipedia.org/wiki/VM/ESA" title="VM/ESA" class="mw-redirect">VM/ESA</a> → <a href="http://en.wikipedia.org/wiki/Z/VM" title="Z/VM">z/VM</a></td>
+</tr>
+<tr>
+<td>→ <a href="http://en.wikipedia.org/wiki/VP/CSS" title="VP/CSS">VP/CSS</a></td>
+</tr>
+<tr>
+<td colspan="3" style="border-top:1px solid">&gt; <a href="http://en.wikipedia.org/wiki/TSS/360" title="TSS/360">TSS/360</a></td>
+</tr>
+<tr>
+<td colspan="3" style="border-top:1px solid">&gt; <a href="http://en.wikipedia.org/wiki/Time_Sharing_Option" title="Time Sharing Option">TSO</a> for <a href="http://en.wikipedia.org/wiki/OS/MVT" title="OS/MVT" class="mw-redirect">OS/MVT</a> → for <a href="http://en.wikipedia.org/wiki/OS/VS2_(SVS)" title="OS/VS2 (SVS)">OS/VS2</a> → for <a href="http://en.wikipedia.org/wiki/MVS" title="MVS">MVS</a> → ... → for <a href="Z/OS.html" title="Z/OS">z/OS</a></td>
+</tr>
+<tr>
+<td colspan="3" style="border-top:1px solid">&gt;&gt; <a href="http://en.wikipedia.org/wiki/MULTICS" title="MULTICS" class="mw-redirect">MULTICS</a> and most other <a href="Time-sharing.html" title="Time-sharing">time-sharing</a> platforms</td>
+</tr>
+<tr>
+<td colspan="4" style="background: #ccf; text-align: right;">
+<div class="plainlinks hlist navbar" style=""><span style="word-spacing:0;">This box:</span>
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:FamilyTree_CP/CMS" title="Template:FamilyTree CP/CMS"><span title="View this template" style="">view</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:FamilyTree_CP/CMS" title="Template talk:FamilyTree CP/CMS"><span title="Discuss this template" style="">talk</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:FamilyTree_CP/CMS&amp;action=edit"><span title="Edit this template" style="">edit</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1183
+CPU time usage: 0.508 seconds
+Real time usage: 0.588 seconds
+Preprocessor visited node count: 835/1000000
+Preprocessor generated node count: 5652/1500000
+Post‐expand include size: 32053/2048000 bytes
+Template argument size: 709/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 5/500
+Lua time usage: 0.063/10.000 seconds
+Lua memory usage: 1.55 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:315018-0!*!0!!en!4!* and timestamp 20140326031004
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;oldid=598837545">http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;oldid=598837545</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:IBM_mainframe_operating_systems" title="Category:IBM mainframe operating systems">IBM mainframe operating systems</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Time-sharing_operating_systems" title="Category:Time-sharing operating systems">Time-sharing operating systems</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Virtualization_software" title="Category:Virtualization software">Virtualization software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_written_in_assembly_language" title="Category:Software written in assembly language">Software written in assembly language</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_references_cleanup_from_May_2012" title="Category:Wikipedia references cleanup from May 2012">Wikipedia references cleanup from May 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_references_cleanup" title="Category:All articles needing references cleanup">All articles needing references cleanup</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_covered_by_WikiProject_Wikify_from_May_2012" title="Category:Articles covered by WikiProject Wikify from May 2012">Articles covered by WikiProject Wikify from May 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_covered_by_WikiProject_Wikify" title="Category:All articles covered by WikiProject Wikify">All articles covered by WikiProject Wikify</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=VM+%28operating+system%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=VM+%28operating+system%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="VM_(operating_system).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:VM_(operating_system)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="VM_(operating_system).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/VM_(operating_system)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/VM_(operating_system)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;oldid=598837545" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q311555" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=VM_%28operating_system%29&amp;id=598837545" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=VM+%28operating+system%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=VM+%28operating+system%29&amp;oldid=598837545&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=VM_(operating_system)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Z/VM" title="Z/VM – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/VM_(sistema_operativo)" title="VM (sistema operativo) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/VM/CMS" title="VM/CMS – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/VM_(ОС)" title="VM (ОС) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/VM_(операційна_система)" title="VM (операційна система) – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q311555#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 March 2014 at 13:59.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/VM_(operating_system)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1094 in 0.259 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/VM_(operating_system) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:33 GMT -->
+</html>

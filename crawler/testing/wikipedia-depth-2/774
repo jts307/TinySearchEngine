@@ -1,0 +1,988 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Finger_protocol.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Finger_protocol by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Finger protocol - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Finger_protocol" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Finger_protocol.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Finger_protocol","wgTitle":"Finger protocol","wgCurRevisionId":585783910,"wgRevisionId":585783910,"wgArticleId":62737,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing clarification from July 2012","Articles to be expanded from January 2011","All articles to be expanded","Windows commands","Internet protocols","Internet Standards","Unix user management and support-related utilities","Unix network-related software","Windows administration","1977 software"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Finger_protocol","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q709588"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Finger_protocol skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Finger protocol</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks hlist" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="http://en.wikipedia.org/wiki/Internet_protocol_suite" title="Internet protocol suite">Internet protocol suite</a></th>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Application_layer" title="Application layer">Application layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Border_Gateway_Protocol" title="Border Gateway Protocol">BGP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</a> * <a href="http://en.wikipedia.org/wiki/DHCPv6" title="DHCPv6">DHCPv6</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Domain_Name_System" title="Domain Name System">DNS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol" title="File Transfer Protocol">FTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol" title="Internet Message Access Protocol">IMAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat" title="Internet Relay Chat">IRC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol" title="Lightweight Directory Access Protocol">LDAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Media_Gateway_Control_Protocol" title="Media Gateway Control Protocol">MGCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_News_Transfer_Protocol" title="Network News Transfer Protocol">NNTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_Time_Protocol" title="Network Time Protocol">NTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Post_Office_Protocol" title="Post Office Protocol">POP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">RPC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">RTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol" title="Real Time Streaming Protocol">RTSP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Routing_Information_Protocol" title="Routing Information Protocol">RIP</a></li>
+<li><a href="Session_Initiation_Protocol.html" title="Session Initiation Protocol">SIP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">SMTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">SNMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SOCKS" title="SOCKS">SOCKS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Secure_Shell" title="Secure Shell">SSH</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Telnet" title="Telnet">Telnet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">TLS/SSL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XMPP" title="XMPP">XMPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Application_layer_protocols" title="Category:Application layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Transport_layer" title="Transport layer">Transport layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" title="User Datagram Protocol">UDP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Datagram_Congestion_Control_Protocol" title="Datagram Congestion Control Protocol">DCCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol" title="Stream Control Transmission Protocol">SCTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resource_Reservation_Protocol" title="Resource Reservation Protocol">RSVP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Transport_layer_protocols" title="Category:Transport layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Internet_layer" title="Internet layer">Internet layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">IP</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/IPv4" title="IPv4">IPv4</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IPv6" title="IPv6">IPv6</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Control_Message_Protocol" title="Internet Control Message Protocol">ICMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ICMPv6" title="ICMPv6">ICMPv6</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Explicit_Congestion_Notification" title="Explicit Congestion Notification">ECN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Group_Management_Protocol" title="Internet Group Management Protocol">IGMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IPsec" title="IPsec">IPsec</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Internet_layer_protocols" title="Category:Internet layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Link_layer" title="Link layer">Link layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Address_Resolution_Protocol" title="Address Resolution Protocol">ARP/InARP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol" title="Neighbor Discovery Protocol">NDP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Shortest_Path_First" title="Open Shortest Path First">OSPF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tunneling_protocol" title="Tunneling protocol">Tunnels</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Layer_2_Tunneling_Protocol" title="Layer 2 Tunneling Protocol">L2TP</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Point-to-Point_Protocol" title="Point-to-Point Protocol">PTPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Media_access_control" title="Media access control">Media access control</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_subscriber_line" title="Digital subscriber line">DSL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integrated_Services_Digital_Network" title="Integrated Services Digital Network">ISDN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface" title="Fiber Distributed Data Interface">FDDI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DOCSIS" title="DOCSIS">DOCSIS</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Link_protocols" title="Category:Link protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:IPstack" title="Template:IPstack"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:IPstack" title="Template talk:IPstack"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:IPstack&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>In <a href="Computer_networking.html" title="Computer networking" class="mw-redirect">computer networking</a>, the <b>Name/Finger protocol</b> and the <b>Finger user information protocol</b> are simple <a href="http://en.wikipedia.org/wiki/Network_protocol" title="Network protocol" class="mw-redirect">network protocols</a> for the exchange of human-oriented status and user information.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Name.2FFinger_protocol"><span class="tocnumber">1</span> <span class="toctext">Name/Finger protocol</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Finger_user_information_protocol"><span class="tocnumber">2</span> <span class="toctext">Finger user information protocol</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Security_concerns"><span class="tocnumber">3</span> <span class="toctext">Security concerns</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Application_support"><span class="tocnumber">4</span> <span class="toctext">Application support</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Name.2FFinger_protocol">Name/Finger protocol</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=1" title="Edit section: Name/Finger protocol">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Name/Finger protocol, written by David Zimmerman, is based on <a href="http://en.wikipedia.org/wiki/Request_for_comments" title="Request for comments" class="mw-redirect">Request for comments</a> document <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc742">RFC 742</a> (December 1977) as an interface to the <b><tt>name</tt></b><sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (July 2012)">clarification needed</span></a></i>]</sup> and <b><tt>finger</tt></b> programs that provide status reports on a particular computer system or a particular person at network sites. The finger program was written in 1971 by <a href="http://en.wikipedia.org/wiki/Les_Earnest" title="Les Earnest">Les Earnest</a> who created the program to solve the need of users who wanted information on other users of the network. Information on who is logged-in was useful to check the availability of a person to meet. This was probably the earliest form of <a href="http://en.wikipedia.org/wiki/Presence_information" title="Presence information">presence information</a> for remote network users.</p>
+<p>Prior to the finger program, the only way to get this information was with a <b><tt><a href="Who_(Unix).html" title="Who (Unix)">who</a></tt></b> program that showed IDs and terminal line numbers (the server's internal number of the communication line, over which the user's terminal is connected) for logged-in users. Earnest named his program after the idea that people would run their fingers down the <tt>who</tt> list to find what they were looking for.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Finger_user_information_protocol">Finger user information protocol</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=2" title="Edit section: Finger user information protocol">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The finger <a href="http://en.wikipedia.org/wiki/Daemon_(computing)" title="Daemon (computing)">daemon</a> runs on <a href="http://en.wikipedia.org/wiki/TCP_port" title="TCP port" class="mw-redirect">TCP port</a> 79. The client will (in the case of remote hosts) open a connection to port 79. An RUIP (Remote User Information Program) is started on the remote end of the connection to process the request. The local host sends the RUIP one line query based upon the Finger query specification, and waits for the RUIP to respond. The RUIP receives and processes the query, returns an answer, then initiates the close of the connection. The local host receives the answer and the close signal, then proceeds closing its end of the connection.</p>
+<p>The Finger user information protocol is based on <b><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc1288">RFC 1288</a></b> (<i>The Finger User Information Protocol</i>, December 1991). Typically the <a href="Server_(computing).html" title="Server (computing)">server</a> side of the protocol is implemented by a program <b><tt>fingerd</tt></b> (for <i>finger <a href="http://en.wikipedia.org/wiki/Daemon_(computer_software)" title="Daemon (computer software)" class="mw-redirect">daemon</a></i>), while the <a href="http://en.wikipedia.org/wiki/Client_(computing)" title="Client (computing)">client</a> side is implemented by the <tt>name</tt> and <tt>finger</tt> programs which are supposed to return a friendly, human-oriented status report on either the system at the moment or a particular person in depth. There is no required format, and the protocol consists mostly of specifying a single <a href="http://en.wikipedia.org/wiki/Command_line" title="Command line" class="mw-redirect">command line</a>.</p>
+<p>The program would supply information such as whether a user is currently logged-on, <a href="http://en.wikipedia.org/wiki/E-mail_address" title="E-mail address" class="mw-redirect">e-mail address</a>, full name etc. As well as standard user information, finger displays the contents of the <b><tt>.project</tt></b> and <b><tt>.plan</tt></b> files in the user's <a href="http://en.wikipedia.org/wiki/Home_directory" title="Home directory">home directory</a>. Often this file (maintained by the user) contains either useful information about the user's current activities, similar to <a href="http://en.wikipedia.org/wiki/Micro-blogging" title="Micro-blogging" class="mw-redirect">micro-blogging</a>, or alternatively all manner of <a href="http://en.wikipedia.org/wiki/Humor" title="Humor" class="mw-redirect">humor</a>.</p>
+<h2><span class="mw-headline" id="Security_concerns">Security concerns</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=3" title="Edit section: Security concerns">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Supplying such detailed information as e-mail addresses and full names was considered acceptable and convenient in the early days of networking, but later was considered questionable for privacy and security reasons. Finger information has been frequently used by <a href="http://en.wikipedia.org/wiki/Hacker_(computer_security)" title="Hacker (computer security)">hackers</a> as a way to initiate a <a href="http://en.wikipedia.org/wiki/Social_engineering_(computer_security)" title="Social engineering (computer security)" class="mw-redirect">social engineering</a> attack on a company's computer security system. By using a finger client to get a list of a company's employee names, email addresses, phone numbers, and so on, a cracker can telephone or email someone at a company requesting information while posing as another employee. The finger <a href="http://en.wikipedia.org/wiki/Daemon_(computer_software)" title="Daemon (computer software)" class="mw-redirect">daemon</a> has also had several exploitable security holes which crackers have used to break into systems. The <a href="http://en.wikipedia.org/wiki/Morris_worm" title="Morris worm">Morris worm</a>, in 1988, exploited an overflow vulnerability in <code>fingerd</code> (among others) to spread. The finger protocol is also incompatible with <a href="http://en.wikipedia.org/wiki/Network_Address_Translation" title="Network Address Translation" class="mw-redirect">Network Address Translation</a> (NAT) from the private network address ranges (e.g. 192.168.0.0/16) that are used by the majority of home and office workstations that connect to the Internet through routers or firewalls.</p>
+<p>For these reasons, while finger was widely used during the early days of <a href="Internet.html" title="Internet">Internet</a>, by the late 1990s the vast majority of sites on the Internet no longer offered the service.</p>
+<h2><span class="mw-headline" id="Application_support">Application support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=4" title="Edit section: Application support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><a href="http://en.wikipedia.org/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" /></a></td>
+<td class="mbox-text"><span class="mbox-text-span">This section requires <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit">expansion</a>. <small><i>(January 2011)</i></small></span></td>
+</tr>
+</table>
+<p>It is implemented on <a href="Unix.html" title="Unix">Unix</a>, <a href="Unix-like.html" title="Unix-like">Unix-like</a> systems, and current versions of <a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a> (finger.exe command). Other software has finger support:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ELinks" title="ELinks">ELinks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Minnesota_Internet_Users_Essential_Tool" title="Minnesota Internet Users Essential Tool">Minuet</a></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Social_network_service" title="Social network service" class="mw-redirect">Social network service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ph_Protocol" title="Ph Protocol" class="mw-redirect">Ph Protocol</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LDAP" title="LDAP" class="mw-redirect">LDAP</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation newsgroup">Colbath, Sean (20 Feb, 90). "<a rel="nofollow" class="external text" href="news:1990Feb20.023931.13825@cs.rochester.edu">Origins of the finger command</a>". <a rel="nofollow" class="external text" href="news:alt.folklore.computers">alt.folklore.computers</a>. <a rel="nofollow" class="external text" href="http://groups.google.com/groups?selm=1990Feb20.023931.13825@cs.rochester.edu">Web link</a><span class="reference-accessdate">. Retrieved 2008-10-21</span>.</span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc742">RFC 742</a> (December 1977)</li>
+<li><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc1288">RFC 1288</a> (December 1991)</li>
+<li><a rel="nofollow" class="external text" href="http://www.djmnet.org/lore/finger-origin.txt">Mail from Les Earnest explaining the origin of finger</a></li>
+<li><a rel="nofollow" class="external text" href="http://manpages.debian.net/cgi-bin/man.cgi?query=finger">Linux finger command</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.rajivshah.com/Case_Studies/Finger/Finger.htm">History of the Finger protocol by Rajiv Shah</a></li>
+<li><a rel="nofollow" class="external text" href="http://technet.microsoft.com/en-us/library/bb490908.aspx">Microsoft TechNet Finger article</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Unix_commands" title="Template:Unix commands"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Unix_commands" title="Template talk:Unix commands"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Unix_commands&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Unix.html" title="Unix">Unix</a> <a href="Command-line_interface.html" title="Command-line interface">command-line interface</a> programs and <a href="Shell_builtin.html" title="Shell builtin">shell builtins</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">File system</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Cat_(Unix).html" title="Cat (Unix)">cat</a></li>
+<li><a href="Cd_(command).html" title="Cd (command)">cd</a></li>
+<li><a href="Chmod.html" title="Chmod">chmod</a></li>
+<li><a href="Chown.html" title="Chown">chown</a></li>
+<li><a href="Chgrp.html" title="Chgrp">chgrp</a></li>
+<li><a href="Cksum.html" title="Cksum">cksum</a></li>
+<li><a href="Cmp_(Unix).html" title="Cmp (Unix)">cmp</a></li>
+<li><a href="Cp_(Unix).html" title="Cp (Unix)">cp</a></li>
+<li><a href="Dd_(Unix).html" title="Dd (Unix)">dd</a></li>
+<li><a href="Du_(Unix).html" title="Du (Unix)">du</a></li>
+<li><a href="Df_(Unix).html" title="Df (Unix)">df</a></li>
+<li><a href="File_(command).html" title="File (command)">file</a></li>
+<li><a href="Fsck.html" title="Fsck">fsck</a></li>
+<li><a href="Fuser_(Unix).html" title="Fuser (Unix)">fuser</a></li>
+<li><a href="Ln_(Unix).html" title="Ln (Unix)">ln</a></li>
+<li><a href="Ls.html" title="Ls">ls</a></li>
+<li><a href="Mkdir.html" title="Mkdir">mkdir</a></li>
+<li><a href="Mount_(Unix).html" title="Mount (Unix)">mount</a></li>
+<li><a href="Mv.html" title="Mv">mv</a></li>
+<li><a href="Pax_(Unix).html" title="Pax (Unix)">pax</a></li>
+<li><a href="Pwd.html" title="Pwd">pwd</a></li>
+<li><a href="Rm_(Unix).html" title="Rm (Unix)">rm</a></li>
+<li><a href="Rmdir.html" title="Rmdir">rmdir</a></li>
+<li><a href="Size_(Unix).html" title="Size (Unix)">size</a></li>
+<li><a href="Split_(Unix).html" title="Split (Unix)">split</a></li>
+<li><a href="Tee_(command).html" title="Tee (command)">tee</a></li>
+<li><a href="Touch_(Unix).html" title="Touch (Unix)">touch</a></li>
+<li><a href="Type_(Unix).html" title="Type (Unix)">type</a></li>
+<li><a href="Umask.html" title="Umask">umask</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Processes</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="At_(Unix).html" title="At (Unix)">at</a></li>
+<li><a href="Bg_(Unix).html" title="Bg (Unix)">bg</a></li>
+<li><a href="Chroot.html" title="Chroot">chroot</a></li>
+<li><a href="Cron.html" title="Cron">cron</a></li>
+<li><a href="Fg_(Unix).html" title="Fg (Unix)">fg</a></li>
+<li><a href="Kill_(command).html" title="Kill (command)">kill</a></li>
+<li><a href="Killall.html" title="Killall">killall</a></li>
+<li><a href="Nice_(Unix).html" title="Nice (Unix)">nice</a></li>
+<li><a href="Pgrep.html" title="Pgrep">pgrep</a></li>
+<li><a href="Pidof.html" title="Pidof">pidof</a></li>
+<li><a href="Pkill.html" title="Pkill">pkill</a></li>
+<li><a href="Ps_(Unix).html" title="Ps (Unix)">ps</a></li>
+<li><a href="Pstree.html" title="Pstree">pstree</a></li>
+<li><a href="Time_(Unix).html" title="Time (Unix)">time</a></li>
+<li><a href="Top_(software).html" title="Top (software)">top</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">User environment</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Clear_(Unix).html" title="Clear (Unix)">clear</a></li>
+<li><a href="Env.html" title="Env">env</a></li>
+<li><a href="Exit_(command).html" title="Exit (command)">exit</a></li>
+<li><strong class="selflink">finger</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/History_(Unix)" title="History (Unix)">history</a></li>
+<li><a href="Id_(Unix).html" title="Id (Unix)">id</a></li>
+<li><a href="Logname.html" title="Logname">logname</a></li>
+<li><a href="Mesg.html" title="Mesg">mesg</a></li>
+<li><a href="Passwd.html" title="Passwd">passwd</a></li>
+<li><a href="Su_(Unix).html" title="Su (Unix)">su</a></li>
+<li><a href="Sudo.html" title="Sudo">sudo</a></li>
+<li><a href="Uptime.html#Linux" title="Uptime">uptime</a></li>
+<li><a href="Talk_(software).html" title="Talk (software)">talk</a></li>
+<li><a href="Tput.html" title="Tput">tput</a></li>
+<li><a href="Uname.html" title="Uname">uname</a></li>
+<li><a href="W_(Unix).html" title="W (Unix)">w</a></li>
+<li><a href="Wall_(Unix).html" title="Wall (Unix)">wall</a></li>
+<li><a href="Who_(Unix).html" title="Who (Unix)">who</a></li>
+<li><a href="Whoami.html" title="Whoami">whoami</a></li>
+<li><a href="Write_(Unix).html" title="Write (Unix)">write</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Text processing</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AWK.html" title="AWK">awk</a></li>
+<li><a href="Banner_(Unix).html" title="Banner (Unix)">banner</a></li>
+<li><a href="Basename.html" title="Basename">basename</a></li>
+<li><a href="Comm.html" title="Comm">comm</a></li>
+<li><a href="Csplit.html" title="Csplit">csplit</a></li>
+<li><a href="Cut_(Unix).html" title="Cut (Unix)">cut</a></li>
+<li><a href="Diff.html" title="Diff">diff</a></li>
+<li><a href="Dirname.html" title="Dirname">dirname</a></li>
+<li><a href="Ed_(text_editor).html" title="Ed (text editor)">ed</a></li>
+<li><a href="Ex_(text_editor).html" title="Ex (text editor)">ex</a></li>
+<li><a href="Fmt.html" title="Fmt">fmt</a></li>
+<li><a href="Fold_(Unix).html" title="Fold (Unix)">fold</a></li>
+<li><a href="Head_(Unix).html" title="Head (Unix)">head</a></li>
+<li><a href="Iconv.html" title="Iconv">iconv</a></li>
+<li><a href="Join_(Unix).html" title="Join (Unix)">join</a></li>
+<li><a href="Less_(Unix).html" title="Less (Unix)">less</a></li>
+<li><a href="More_(command).html" title="More (command)">more</a></li>
+<li><a href="Paste_(Unix).html" title="Paste (Unix)">paste</a></li>
+<li><a href="Sed.html" title="Sed">sed</a></li>
+<li><a href="Sort_(Unix).html" title="Sort (Unix)">sort</a></li>
+<li><a href="Spell_(Unix).html" title="Spell (Unix)">spell</a></li>
+<li><a href="Strings_(Unix).html" title="Strings (Unix)">strings</a></li>
+<li><a href="Tail_(Unix).html" title="Tail (Unix)">tail</a></li>
+<li><a href="Tr_(Unix).html" title="Tr (Unix)">tr</a></li>
+<li><a href="Uniq.html" title="Uniq">uniq</a></li>
+<li><a href="Vi.html" title="Vi">vi</a></li>
+<li><a href="Wc_(Unix).html" title="Wc (Unix)">wc</a></li>
+<li><a href="Xargs.html" title="Xargs">xargs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Shell_builtin.html" title="Shell builtin">Shell builtins</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Alias_(command).html" title="Alias (command)">alias</a></li>
+<li><a href="Echo_(command).html" title="Echo (command)">echo</a></li>
+<li><a href="Expr.html" title="Expr">expr</a></li>
+<li><a href="Printf_format_string.html" title="Printf format string">printf</a></li>
+<li><a href="Sleep_(Unix).html" title="Sleep (Unix)">sleep</a></li>
+<li><a href="Test_(Unix).html" title="Test (Unix)">test</a></li>
+<li><a href="True_and_false_(commands).html" title="True and false (commands)">true and false</a></li>
+<li><a href="Unset.html" title="Unset">unset</a></li>
+<li><a href="Wait_(command).html" title="Wait (command)">wait</a></li>
+<li><a href="Yes_(Unix).html" title="Yes (Unix)">yes</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Network_utility.html" title="Network utility">Networking</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Dig_(command).html" title="Dig (command)">dig</a></li>
+<li><a href="Host_(Unix).html" title="Host (Unix)">host</a></li>
+<li><a href="Ifconfig.html" title="Ifconfig">ifconfig</a></li>
+<li><a href="Inetd.html" title="Inetd">inetd</a></li>
+<li><a href="Netcat.html" title="Netcat">netcat</a></li>
+<li><a href="Netstat.html" title="Netstat">netstat</a></li>
+<li><a href="Nslookup.html" title="Nslookup">nslookup</a></li>
+<li><a href="Ping_(networking_utility).html" title="Ping (networking utility)">ping</a></li>
+<li><a href="Rdate.html" title="Rdate">rdate</a></li>
+<li><a href="Rlogin.html" title="Rlogin">rlogin</a></li>
+<li><a href="Route_(command).html" title="Route (command)">route</a></li>
+<li><a href="OpenSSH.html" title="OpenSSH">ssh</a></li>
+<li><a href="Traceroute.html" title="Traceroute">traceroute</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Searching</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Find.html" title="Find">find</a></li>
+<li><a href="Grep.html" title="Grep">grep</a></li>
+<li><a href="Locate_(Unix).html" title="Locate (Unix)">locate</a></li>
+<li><a href="Whatis.html" title="Whatis">whatis</a></li>
+<li><a href="Whereis.html" title="Whereis">whereis</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Documentation</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Apropos_(Unix).html" title="Apropos (Unix)">apropos</a></li>
+<li><a href="Help_(command).html" title="Help (command)">help</a></li>
+<li><a href="Man_page.html" title="Man page">man</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bc_(programming_language).html" title="Bc (programming language)">bc</a></li>
+<li><a href="Dc_(computer_program).html" title="Dc (computer program)">dc</a></li>
+<li><a href="Cal_(Unix).html" title="Cal (Unix)">cal</a></li>
+<li><a href="Date_(Unix).html" title="Date (Unix)">date</a></li>
+<li><a href="Lp_(Unix).html" title="Lp (Unix)">lp</a></li>
+<li><a href="Lpr.html" title="Lpr">lpr</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><i><a href="http://en.wikipedia.org/wiki/List_of_Unix_utilities" title="List of Unix utilities">List of Unix utilities</a></i></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Windows_commands" title="Template:Windows commands"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Windows_commands" title="Template talk:Windows commands"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Windows_commands&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a> <a href="Command-line_interface.html" title="Command-line interface">command-line</a> programs and <a href="Shell_builtin.html" title="Shell builtin">shell builtins</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="http://en.wikipedia.org/wiki/COMMAND.COM" title="COMMAND.COM">COMMAND.COM</a> &#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Command_Prompt" title="Command Prompt">Command Prompt</a> &#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a> &#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Recovery_Console" title="Recovery Console">Recovery Console</a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">File system navigation</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Cd_(command).html" title="Cd (command)">cd</a> (chdir)</li>
+<li><a href="http://en.wikipedia.org/wiki/Dir_(command)" title="Dir (command)">dir</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pushd_and_popd" title="Pushd and popd">popd</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pushd_and_popd" title="Pushd and popd">pushd</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tree_(command)" title="Tree (command)" class="mw-redirect">tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">File management</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ATTRIB" title="ATTRIB">attrib</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cacls" title="Cacls">cacls</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Encrypting_File_System" title="Encrypting File System">cipher</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Compact_(computing)" title="Compact (computing)" class="mw-redirect">compact</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Copy_(command)" title="Copy (command)">copy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Del_(command)" title="Del (command)">del</a> (erase)</li>
+<li><a href="http://en.wikipedia.org/wiki/Deltree" title="Deltree" class="mw-redirect">deltree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cabinet_(file_format)" title="Cabinet (file format)">expand</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cacls#icacls" title="Cacls">icacls</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cabinet_(file_format)" title="Cabinet (file format)">makecab</a></li>
+<li><a href="Mkdir.html" title="Mkdir">md</a> (mkdir)</li>
+<li><a href="http://en.wikipedia.org/wiki/Move_(command)" title="Move (command)">move</a></li>
+<li><a href="Rmdir.html" title="Rmdir">rd</a> (rmdir)</li>
+<li><a href="http://en.wikipedia.org/wiki/Recover_(command)" title="Recover (command)">recover</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ren_(command)" title="Ren (command)">ren</a> (rename)</li>
+<li><a href="http://en.wikipedia.org/wiki/Replace_(command)" title="Replace (command)">replace</a></li>
+<li><a href="Rmdir.html" title="Rmdir">rmdir</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Robocopy" title="Robocopy">robocopy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XCOPY" title="XCOPY">xcopy</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Disk management</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CHKDSK" title="CHKDSK">chkdsk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Convert_(command)" title="Convert (command)">convert</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Disk_Defragmenter_(Windows)" title="Disk Defragmenter (Windows)">defrag</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diskcomp" title="Diskcomp">diskcomp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diskcopy" title="Diskcopy">diskcopy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Diskpart" title="Diskpart">diskpart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fdisk" title="Fdisk">fdisk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FORMAT_(command)" title="FORMAT (command)">format</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Label_(command)" title="Label (command)">label</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SUBST" title="SUBST">subst</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_ScanDisk" title="Microsoft ScanDisk">scandisk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SYS_(command)" title="SYS (command)">sys</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vol_(command)" title="Vol (command)">vol</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shadow_Copy" title="Shadow Copy">vssadmin</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Processes</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/At_(Windows)" title="At (Windows)">at</a></li>
+<li><a href="Exit_(command).html" title="Exit (command)">exit</a></li>
+<li><a href="Kill_(command).html" title="Kill (command)">kill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Powercfg" title="Powercfg">powercfg</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Runas" title="Runas">runas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_service" title="Windows service">sc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Schtasks" title="Schtasks">schtasks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shutdown_(computing)" title="Shutdown (computing)">shutdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Start_(command)" title="Start (command)">start</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Taskkill" title="Taskkill" class="mw-redirect">taskkill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tasklist" title="Tasklist">tasklist</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Registry</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/File_association" title="File association">assoc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ftype" title="Ftype">ftype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Registry#Command_line_editing" title="Windows Registry">reg</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Registry#Command_line_editing" title="Windows Registry">regini</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Regsvr32" title="Regsvr32">regsvr32</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">User environment</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/DATE_(command)" title="DATE (command)">date</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mode_(command)" title="Mode (command)" class="mw-redirect">mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PATH_(variable)" title="PATH (variable)">path</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Environment_variable#DOS.2C_OS.2F2_and_Windows_.28Command_Prompt.29" title="Environment variable">set</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Environment_variable#DOS.2C_OS.2F2_and_Windows_.28Command_Prompt.29" title="Environment variable">setx</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TIME_(command)" title="TIME (command)">time</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Title_(command)" title="Title (command)">title</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ver_(command)" title="Ver (command)">ver</a></li>
+<li><a href="Whoami.html" title="Whoami">whoami</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">File contents</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comp_(command)" title="Comp (command)">comp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MS-DOS_Editor" title="MS-DOS Editor">edit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Edlin" title="Edlin">edlin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_File_Compare" title="Microsoft File Compare">fc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Find_(command)" title="Find (command)">find</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Findstr_(computing)" title="Findstr (computing)" class="mw-redirect">findstr</a></li>
+<li><a href="Lpr.html" title="Lpr">lpr</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PRINT_(command)" title="PRINT (command)">print</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Type_(command)" title="Type (command)">type</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">Scripting</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Choice_(command)" title="Choice (command)">choice</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Clipboard_(computing)" title="Clipboard (computing)">clip</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Script_Host" title="Windows Script Host">cscript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DOSKEY" title="DOSKEY">doskey</a></li>
+<li><a href="Echo_(command).html" title="Echo (command)">echo</a></li>
+<li><a href="For_loop.html" title="For loop">for</a></li>
+<li><a href="Goto.html" title="Goto">goto</a></li>
+<li><a href="Conditional_(programming).html" title="Conditional (programming)" class="mw-redirect">if</a></li>
+<li><a href="More_(command).html" title="More (command)">more</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pause_(DOS_command)" title="Pause (DOS command)" class="mw-redirect">pause</a></li>
+<li><a href="Command-line_interface.html#Command_prompt" title="Command-line interface">prompt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comment_(computer_programming)" title="Comment (computer programming)">rem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Networking</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hostname" title="Hostname">hostname</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ipconfig" title="Ipconfig">ipconfig</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Net_use" title="Net use">net use</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Netsh" title="Netsh">netsh</a></li>
+<li><a href="Netstat.html" title="Netstat">netstat</a></li>
+<li><a href="Nslookup.html" title="Nslookup">nslookup</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PathPing" title="PathPing">PathPing</a></li>
+<li><a href="Ping_(networking_utility).html" title="Ping (networking utility)">ping</a></li>
+<li><a href="Route_(command).html" title="Route (command)">route</a></li>
+<li><a href="Traceroute.html" title="Traceroute">tracert</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Maintenance and care</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Installer" title="Windows Installer">msiexec</a></li>
+<li><a href="http://en.wikipedia.org/wiki/NTBackup" title="NTBackup">ntbackup</a></li>
+<li><a href="http://en.wikipedia.org/wiki/System_File_Checker" title="System File Checker">sfc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Systeminfo" title="Systeminfo" class="mw-redirect">systeminfo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/W32tm" title="W32tm">w32tm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WBAdmin" title="WBAdmin">WBAdmin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_System_Assessment_Tool" title="Windows System Assessment Tool">winsat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Management_Instrumentation_Command-line" title="Windows Management Instrumentation Command-line" class="mw-redirect">wmic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Boot management</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bcdedit" title="Bcdedit" class="mw-redirect">bcdedit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bootcfg" title="Bootcfg">bootcfg</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fixboot" title="Fixboot" class="mw-redirect">fixboot</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fixmbr" title="Fixmbr" class="mw-redirect">fixmbr</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Software_development.html" title="Software development">Software development</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Debug_(command)" title="Debug (command)">debug</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exe2bin" title="Exe2bin">exe2bin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/QBasic" title="QBasic">QBasic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cls_(command)" title="Cls (command)" class="mw-redirect">cls</a></li>
+<li><a href="Help_(command).html" title="Help (command)">help</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="http://en.wikipedia.org/wiki/List_of_DOS_commands" title="List of DOS commands">List of DOS commands</a> &#160;<span style="font-weight:bold;">·</span>  <a href="http://en.wikipedia.org/wiki/Environment_variable" title="Environment variable">Environment variables</a></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1169
+CPU time usage: 0.772 seconds
+Real time usage: 0.845 seconds
+Preprocessor visited node count: 1447/1000000
+Preprocessor generated node count: 18143/1500000
+Post‐expand include size: 61135/2048000 bytes
+Template argument size: 5562/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 7/500
+Lua time usage: 0.048/10.000 seconds
+Lua memory usage: 1.39 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:62737-0!*!0!!en!4!* and timestamp 20140329183047
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;oldid=585783910">http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;oldid=585783910</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Windows_commands" title="Category:Windows commands">Windows commands</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Internet_protocols" title="Category:Internet protocols">Internet protocols</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Internet_Standards" title="Category:Internet Standards">Internet Standards</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Unix_user_management_and_support-related_utilities" title="Category:Unix user management and support-related utilities">Unix user management and support-related utilities</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Unix_network-related_software" title="Category:Unix network-related software">Unix network-related software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Windows_administration" title="Category:Windows administration">Windows administration</a></li><li><a href="http://en.wikipedia.org/wiki/Category:1977_software" title="Category:1977 software">1977 software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_July_2012" title="Category:Wikipedia articles needing clarification from July 2012">Wikipedia articles needing clarification from July 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_January_2011" title="Category:Articles to be expanded from January 2011">Articles to be expanded from January 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Finger+protocol&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Finger+protocol" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Finger_protocol.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Finger_protocol"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Finger_protocol.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Finger_protocol" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Finger_protocol" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;oldid=585783910" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q709588" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Finger_protocol&amp;id=585783910" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Finger+protocol">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Finger+protocol&amp;oldid=585783910&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Finger_protocol&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Finger_(Internetprotokoll)" title="Finger (Internetprotokoll) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Finger_(protocolo)" title="Finger (protocolo) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Finger_(Unix)" title="Finger (Unix) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/핑거_프로토콜" title="핑거 프로토콜 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Finger" title="Finger – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Finger_(Unix)" title="Finger (Unix) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ka"><a href="http://ka.wikipedia.org/wiki/Finger" title="Finger – Georgian" lang="ka" hreflang="ka">ქართული</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Finger_protocol" title="Finger protocol – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Fingerプロトコル" title="Fingerプロトコル – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Finger_(protokół)" title="Finger (protokół) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Finger_(protocolo)" title="Finger (protocolo) – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Finger" title="Finger – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Фингер_протокол" title="Фингер протокол – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Finger" title="Finger – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Finger" title="Finger – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q709588#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 12 December 2013 at 19:04.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Finger_protocol" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1069 in 0.347 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Finger_protocol by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:45 GMT -->
+</html>

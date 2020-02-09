@@ -1,0 +1,633 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Bit_array.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bit_array by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Bit array - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Bit_array" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Bit_array.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Bit_array","wgTitle":"Bit array","wgCurRevisionId":593653898,"wgRevisionId":593653898,"wgArticleId":1189937,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from December 2010","All articles needing additional references","Arrays","Bit data structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Bit_array","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1992074"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Bit_array skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Bit array</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(December 2010)</i></small></span></td>
+</tr>
+</table>
+<p>A <b>bit array</b> (also known as <b>bitmap</b>, <b>bitset</b>, <b>bit string</b>, or <b>bit vector</b>) is an <a href="Array_data_structure.html" title="Array data structure">array data structure</a> that compactly stores <a href="Bit.html" title="Bit">bits</a>. It can be used to implement a simple <a href="Set_data_structure.html" title="Set data structure" class="mw-redirect">set data structure</a>. A bit array is effective at exploiting bit-level parallelism in hardware to perform operations quickly. A typical bit array stores <i>kw</i> bits, where <i>w</i> is the number of bits in the unit of storage, such as a <a href="Byte.html" title="Byte">byte</a> or <a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">word</a>, and <i>k</i> is some nonnegative integer. If <i>w</i> does not divide the number of bits to be stored, some space is wasted due to <a href="http://en.wikipedia.org/wiki/Fragmentation_(computing)" title="Fragmentation (computing)">internal fragmentation</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_operations"><span class="tocnumber">2</span> <span class="toctext">Basic operations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#More_complex_operations"><span class="tocnumber">3</span> <span class="toctext">More complex operations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Population_.2F_Hamming_weight"><span class="tocnumber">3.1</span> <span class="toctext">Population / Hamming weight</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sorting"><span class="tocnumber">3.2</span> <span class="toctext">Sorting</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Inversion"><span class="tocnumber">3.3</span> <span class="toctext">Inversion</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Find_first_one"><span class="tocnumber">3.4</span> <span class="toctext">Find first one</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Compression"><span class="tocnumber">4</span> <span class="toctext">Compression</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Advantages_and_disadvantages"><span class="tocnumber">5</span> <span class="toctext">Advantages and disadvantages</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Applications"><span class="tocnumber">6</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Language_support"><span class="tocnumber">7</span> <span class="toctext">Language support</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A bit array is a mapping from some domain (almost always a range of integers) to values in the set {0, 1}. The values can be interpreted as dark/light, absent/present, locked/unlocked, valid/invalid, et cetera. The point is that there are only two possible values, so they can be stored in one bit. The array can be viewed as a subset of the domain (e.g. {0, 1, 2, ..., <i>n</i>−1}), where a 1 bit indicates a number in the set and a 0 bit a number not in the set. This set data structure uses about <i>n</i>/<i>w</i> words of space, where <i>w</i> is the number of bits in each <a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">machine word</a>. Whether the least significant bit or the most significant bit indicates the smallest-index number is largely irrelevant, but the former tends to be preferred.</p>
+<h2><span class="mw-headline" id="Basic_operations">Basic operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=2" title="Edit section: Basic operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although most machines are not able to address individual bits in memory, nor have instructions to manipulate single bits, each bit in a word can be singled out and manipulated using <a href="Bitwise_operation.html" title="Bitwise operation">bitwise operations</a>. In particular:</p>
+<ul>
+<li>OR can be used to set a bit to one: 11101010 OR 00000100 = 11101110</li>
+<li>AND can be used to set a bit to zero: 11101010 AND 11111101 = 11101000</li>
+<li>AND together with zero-testing can be used to determine if a bit is set:</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd>11101010 AND 00000001 = 00000000 = 0</dd>
+<dd>11101010 AND 00000010 = 00000010 ≠ 0</dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>XOR can be used to invert or toggle a bit:</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd>11101010 XOR 00000100 = 11101110</dd>
+<dd>11101110 XOR 00000100 = 11101010</dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>NOT can be used to invert all bits.</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd>NOT 10110010 = 01001101</dd>
+</dl>
+</dd>
+</dl>
+<p>To obtain the bit mask needed for these operations, we can use a <a href="Bitwise_operation.html#Bit_shifts" title="Bitwise operation">bit shift</a> operator to shift the number 1 to the left by the appropriate number of places, as well as <a href="http://en.wikipedia.org/wiki/Bitwise_negation" title="Bitwise negation" class="mw-redirect">bitwise negation</a> if necessary.</p>
+<p>Given two bit arrays of the same size representing sets, we can compute their <a href="http://en.wikipedia.org/wiki/Union_(set_theory)" title="Union (set theory)">union</a>, <a href="http://en.wikipedia.org/wiki/Intersection_(set_theory)" title="Intersection (set theory)">intersection</a>, and <a href="http://en.wikipedia.org/wiki/Complement_(set_theory)" title="Complement (set theory)">set-theoretic difference</a> using <i>n</i>/<i>w</i> simple bit operations each (2<i>n</i>/<i>w</i> for difference), as well as the <a href="http://en.wikipedia.org/wiki/Signed_number_representations#Ones.27_complement" title="Signed number representations">complement</a> of either:</p>
+<pre>
+ <b>for</b> i <b>from</b> 0 <b>to</b> n/w-1
+     complement_a[i] := <b>not</b> a[i]
+     union[i]        := a[i] <b>or</b> b[i]
+     intersection[i] := a[i] <b>and</b> b[i]
+     difference[i]   := a[i] <b>and</b> (<b>not</b> b[i])
+</pre>
+<p>If we wish to iterate through the bits of a bit array, we can do this efficiently using a doubly nested loop that loops through each word, one at a time. Only <i>n</i>/<i>w</i> memory accesses are required:</p>
+<pre>
+ <b>for</b> i <b>from</b> 0 <b>to</b> n/w-1
+     index := 0    <i>// if needed</i>
+     word := a[i]
+     <b>for</b> b <b>from</b> 0 <b>to</b> w-1
+         value := word <b>and</b> 1 ≠ 0
+         word := word <b>shift right</b> 1
+         <i>// do something with value</i>
+         index := index + 1   <i>// if needed</i>
+</pre>
+<p>Both of these code samples exhibit ideal <a href="Locality_of_reference.html" title="Locality of reference">locality of reference</a>, which will subsequently receive large performance boost from a data cache. If a cache line is <i>k</i> words, only about <i>n</i>/<i>wk</i> cache misses will occur.</p>
+<h2><span class="mw-headline" id="More_complex_operations">More complex operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=3" title="Edit section: More complex operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Population_.2F_Hamming_weight">Population / Hamming weight</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=4" title="Edit section: Population / Hamming weight">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If we wish to find the number of 1 bits in a bit array, sometimes called the population count or Hamming weight, there are efficient branch-free algorithms that can compute the number of bits in a word using a series of simple bit operations. We simply run such an algorithm on each word and keep a running total. Counting zeros is similar. See the <a href="http://en.wikipedia.org/wiki/Hamming_weight" title="Hamming weight">Hamming weight</a> article for examples of an efficient implementation.</p>
+<h3><span class="mw-headline" id="Sorting">Sorting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=5" title="Edit section: Sorting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Similarly, sorting a bit array is trivial to do in O(<i>n</i>) time using <a href="http://en.wikipedia.org/wiki/Counting_sort" title="Counting sort">counting sort</a> — we count the number of ones <i>k</i>, fill the last <i>k</i>/<i>w</i> words with ones, set only the low <i>k</i> mod <i>w</i> bits of the next word, and set the rest to zero.</p>
+<h3><span class="mw-headline" id="Inversion">Inversion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=6" title="Edit section: Inversion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Vertical flipping of a one-bit-per-pixel image, or some FFT algorithms, require to flip the bits of individual words (so <code>b31 b30 ... b0</code> becomes <code>b0 ... b30 b31</code>). When this operation is not available on the processor, it's still possible to proceed by successive passes, in this example on 32 bits:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+exchange two 16bit halfwords
+exchange bytes by pairs <span class="br0">(</span><span class="nu12">0xddccbbaa</span> <span class="sy0">-&gt;</span> <span class="nu12">0xccddaabb</span><span class="br0">)</span>
+...
+<span class="me1">swap</span> bits by pairs
+swap bits <span class="br0">(</span>b31 b30 ... <span class="me1">b1</span> b0 <span class="sy0">-&gt;</span> b30 b31 ... <span class="me1">b0</span> b1<span class="br0">)</span>
+ 
+The last operation can be written <span class="br0">(</span><span class="br0">(</span>x<span class="sy0">&amp;</span><span class="nu12">0x55555555</span><span class="br0">)</span><span class="sy0">&lt;&lt;</span><span class="nu0">1</span><span class="br0">)</span> <span class="sy0">|</span> <span class="br0">(</span>x<span class="sy0">&amp;</span><span class="nu12">0xaaaaaaaa</span><span class="br0">)</span><span class="sy0">&gt;&gt;</span><span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span>.
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Find_first_one">Find first one</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=7" title="Edit section: Find first one">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="http://en.wikipedia.org/wiki/Find_first_set" title="Find first set">find first set</a> or <i>find first one</i> operation identifies the index or position of the least significant <i>one</i> bit in a word, and has widespread hardware support and efficient algorithms for its computation. When a <a href="Priority_queue.html" title="Priority queue">priority queue</a> is stored in a bit array, find first one can be used to identify the highest priority element in the queue. To expand a word-size <i>find first one</i> to longer arrays, one can find the first nonzero word and then run <i>find first one</i> on that word. The related operations <i>find first zero</i>, <i>count leading zeros</i>, <i>count leading ones</i>, <i>count trailing zeros</i>, <i>count trailing ones</i>, and <i>log base 2</i> (see <a href="http://en.wikipedia.org/wiki/Find_first_set" title="Find first set">find first set</a>) can also be extended to a bit array in a straightforward manner.</p>
+<h2><span class="mw-headline" id="Compression">Compression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=8" title="Edit section: Compression">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A bit array is the densest storage for "random" bits, that is, where each bit is equally likely to be 0 or 1, and each one is independent. But most data is not random, so it may be possible to store it more compactly. For example, the data of a typical fax image is not random and can be compressed. <a href="http://en.wikipedia.org/wiki/Run-length_encoding" title="Run-length encoding">Run-length encoding</a> is commonly used to compress these long streams. However, by compressing bit arrays too aggressively we run the risk of losing the benefits due to bit-level parallelism (<a href="http://en.wikipedia.org/wiki/Vectorization_(parallel_computing)" title="Vectorization (parallel computing)">vectorization</a>). Thus, instead of compressing bit arrays as streams of bits, we might compress them as streams bytes or words (see <a href="http://en.wikipedia.org/wiki/Bitmap_index#Compression" title="Bitmap index">Bitmap index (compression)</a>).</p>
+<p>The specific compression technique and implementation details can affect performance. Thus, it might be helpful in practice to <a rel="nofollow" class="external text" href="https://github.com/lemire/simplebitmapbenchmark">benchmark the various implementations</a>.</p>
+<p>Examples:</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/compressedbitset/">compressedbitset</a>: WAH Compressed BitSet for Java</li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/javaewah/">javaewah</a>: A compressed alternative to the Java BitSet class (using Enhanced WAH)</li>
+<li><a rel="nofollow" class="external text" href="http://ricerca.mat.uniroma3.it/users/colanton/concise.html">CONCISE</a>: COmpressed 'N' Composable Integer Set, another bitmap compression scheme for Java</li>
+<li><a rel="nofollow" class="external text" href="http://github.com/lemire/EWAHBoolArray">EWAHBoolArray</a>: A compressed bitmap/bitset class in C++</li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/csharpewah/">CSharpEWAH</a>: compressed bitset class in C#</li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/sparsebitmap/">SparseBitmap</a>: a simple sparse bitmap implementation in Java</li>
+</ul>
+<h2><span class="mw-headline" id="Advantages_and_disadvantages">Advantages and disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=9" title="Edit section: Advantages and disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Bit arrays, despite their simplicity, have a number of marked advantages over other data structures for the same problems:</p>
+<ul>
+<li>They are extremely compact; few other data structures can store <i>n</i> independent pieces of data in <i>n</i>/<i>w</i> words.</li>
+<li>They allow small arrays of bits to be stored and manipulated in the register set for long periods of time with no memory accesses.</li>
+<li>Because of their ability to exploit bit-level parallelism, limit memory access, and maximally use the <a href="http://en.wikipedia.org/wiki/Data_cache" title="Data cache" class="mw-redirect">data cache</a>, they often outperform many other data structures on practical data sets, even those that are more asymptotically efficient.</li>
+</ul>
+<p>However, bit arrays aren't the solution to everything. In particular:</p>
+<ul>
+<li>Without compression, they are wasteful set data structures for sparse sets (those with few elements compared to their range) in both time and space. For such applications, compressed bit arrays, <a href="Judy_array.html" title="Judy array">Judy arrays</a>, <a href="Trie.html" title="Trie">tries</a>, or even <a href="Bloom_filter.html" title="Bloom filter">Bloom filters</a> should be considered instead.</li>
+<li>Accessing individual elements can be expensive and difficult to express in some languages. If random access is more common than sequential and the array is relatively small, a byte array may be preferable on a machine with byte addressing. A word array, however, is probably not justified due to the huge space overhead and additional cache misses it causes, unless the machine only has word addressing.</li>
+</ul>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=10" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Because of their compactness, bit arrays have a number of applications in areas where space or efficiency is at a premium. Most commonly, they are used to represent a simple group of boolean flags or an ordered sequence of boolean values.</p>
+<p>Bit arrays are used for <a href="Priority_queue.html" title="Priority queue">priority queues</a>, where the bit at index <i>k</i> is set if and only if <i>k</i> is in the queue; this data structure is used, for example, by the <a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a>, and benefits strongly from a find-first-zero operation in hardware.</p>
+<p>Bit arrays can be used for the allocation of <a href="http://en.wikipedia.org/wiki/Page_(computing)" title="Page (computing)" class="mw-redirect">memory pages</a>, <a href="Inode.html" title="Inode">inodes</a>, disk sectors, etc. In such cases, the term <i>bitmap</i> may be used. However, this term is frequently used to refer to <a href="http://en.wikipedia.org/wiki/Raster_graphics" title="Raster graphics">raster images</a>, which may use multiple <a href="http://en.wikipedia.org/wiki/Color_depth" title="Color depth">bits per pixel</a>.</p>
+<p>Another application of bit arrays is the <a href="Bloom_filter.html" title="Bloom filter">Bloom filter</a>, a probabilistic <a href="Set_data_structure.html" title="Set data structure" class="mw-redirect">set data structure</a> that can store large sets in a small space in exchange for a small probability of error. It is also possible to build probabilistic <a href="Hash_table.html" title="Hash table">hash tables</a> based on bit arrays that accept either false positives or false negatives.</p>
+<p>Bit arrays and the operations on them are also important for constructing <a href="http://en.wikipedia.org/wiki/Succinct_data_structure" title="Succinct data structure">succinct data structures</a>, which use close to the minimum possible space. In this context, operations like finding the <i>n</i>th 1 bit or counting the number of 1 bits up to a certain position become important.</p>
+<p>Bit arrays are also a useful abstraction for examining streams of <a href="Data_compression.html" title="Data compression">compressed</a> data, which often contain elements that occupy portions of bytes or are not byte-aligned. For example, the compressed <a href="http://en.wikipedia.org/wiki/Huffman_coding" title="Huffman coding">Huffman coding</a> representation of a single 8-bit character can be anywhere from 1 to 255 bits long.</p>
+<p>In <a href="Information_retrieval.html" title="Information retrieval">information retrieval</a>, bit arrays are a good representation for the <a href="http://en.wikipedia.org/w/index.php?title=Posting_list&amp;action=edit&amp;redlink=1" class="new" title="Posting list (page does not exist)">posting lists</a> of very frequent terms. If we compute the gaps between adjacent values in a list of strictly increasing integers and encode them using <a href="http://en.wikipedia.org/wiki/Unary_coding" title="Unary coding">unary coding</a>, the result is a bit array with a 1 bit in the <i>n</i>th position if and only if <i>n</i> is in the list. The implied probability of a gap of <i>n</i> is 1/2<sup><i>n</i></sup>. This is also the special case of <a href="http://en.wikipedia.org/wiki/Golomb_coding" title="Golomb coding">Golomb coding</a> where the parameter M is 1; this parameter is only normally selected when -log(2-<i>p</i>)/log(1-<i>p</i>) ≤ 1, or roughly the term occurs in at least 38% of documents.</p>
+<h2><span class="mw-headline" id="Language_support">Language support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=11" title="Edit section: Language support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="C_(programming_language).html" title="C (programming language)">C programming language</a>'s <i><a href="http://en.wikipedia.org/wiki/Bitfield" title="Bitfield" class="mw-redirect">bitfields</a></i>, pseudo-objects found in structs with size equal to some number of bits, are in fact small bit arrays; they are limited in that they cannot span words. Although they give a convenient syntax, the bits are still accessed using bitwise operators on most machines, and they can only be defined statically (like C's static arrays, their sizes are fixed at compile-time). It is also a common idiom for C programmers to use words as small bit arrays and access bits of them using bit operators. A widely available header file included in the <a href="X11.html" title="X11" class="mw-redirect">X11</a> system, xtrapbits.h, is “a portable way for systems to define bit field manipulation of arrays of bits.” A more explanatory description of aforementioned approach can be found in the <a rel="nofollow" class="external text" href="http://c-faq.com/misc/bitsets.html">comp.lang.c faq</a>.</p>
+<p>In <a href="C%2b%2b.html" title="C++">C++</a>, although individual <code>bool</code>s typically occupy the same space as a byte or an integer, the <a href="http://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">STL</a> type <code>vector&lt;bool&gt;</code> is a <a href="http://en.wikipedia.org/wiki/Partial_template_specialization" title="Partial template specialization">partial template specialization</a> in which bits are packed as a space efficiency optimization. Since bytes (and not bits) are the smallest addressable unit in C++, the [] operator does <i>not</i> return a reference to an element, but instead returns a <a href="http://en.wikipedia.org/wiki/Proxy_pattern" title="Proxy pattern">proxy reference</a>. This might seem a minor point, but it means that <code>vector&lt;bool&gt;</code> is <i>not</i> a standard STL container, which is why the use of <code>vector&lt;bool&gt;</code> is generally discouraged. Another unique STL class, <code>bitset</code>,<sup id="cite_ref-c.2B.2B_1-0" class="reference"><a href="#cite_note-c.2B.2B-1"><span>[</span>1<span>]</span></a></sup> creates a vector of bits fixed at a particular size at compile-time, and in its interface and syntax more resembles the idiomatic use of words as bit sets by C programmers. It also has some additional power, such as the ability to efficiently count the number of bits that are set. The <a href="http://en.wikipedia.org/wiki/Boost_C++_Libraries" title="Boost C++ Libraries" class="mw-redirect">Boost C++ Libraries</a> provide a <code>dynamic_bitset</code> class<sup id="cite_ref-boost_2-0" class="reference"><a href="#cite_note-boost-2"><span>[</span>2<span>]</span></a></sup> whose size is specified at run-time.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/D_programming_language" title="D programming language" class="mw-redirect">D programming language</a> provides bit arrays in both of its competing standard libraries. In Phobos, they are provided in <code>std.bitmanip</code>, and in Tango, they are provided in <code>tango.core.BitArray</code>. As in C++, the [] operator does not return a reference, since individual bits are not directly addressable on most hardware, but instead returns a <code>bool</code>.</p>
+<p>In <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, the class <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/BitSet.html">BitSet</a></code> creates a bit array that is then manipulated with functions named after bitwise operators familiar to C programmers. Unlike the <code>bitset</code> in C++, the Java <code>BitSet</code> does not have a "size" state (it has an effectively infinite size, initialized with 0 bits); a bit can be set or tested at any index. In addition, there is a class <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/EnumSet.html">EnumSet</a></code>, which represents a Set of values of an <a href="Enumerated_type.html" title="Enumerated type">enumerated type</a> internally as a bit vector, as a safer alternative to bitfields.</p>
+<p>The <a href=".html" title=".NET Framework">.NET Framework</a> supplies a <code>BitArray</code> collection class. It stores boolean values, supports random access and bitwise operators, can be iterated over, and its <code>Length</code> property can be changed to grow or truncate it.</p>
+<p>Although <a href="http://en.wikipedia.org/wiki/Standard_ML" title="Standard ML">Standard ML</a> has no support for bit arrays, Standard ML of New Jersey has an extension, the <code>BitArray</code> structure, in its SML/NJ Library. It is not fixed in size and supports set operations and bit operations, including, unusually, shift operations.</p>
+<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a> likewise currently lacks standard support for bitwise operations, but both GHC and Hugs provide a <code>Data.Bits</code> module with assorted bitwise functions and operators, including shift and rotate operations and an "unboxed" array over boolean values may be used to model a Bit array, although this lacks support from the former module.</p>
+<p>In <a href="Perl.html" title="Perl">Perl</a>, strings can be used as expandable bit arrays. They can be manipulated using the usual bitwise operators (<code>~ | &amp; ^</code>),<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> and individual bits can be tested and set using the <i>vec</i> function.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>In <a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a>, you can access (but not set) a bit of an integer (<code>Fixnum</code> or <code>Bignum</code>) using the bracket operator (<code>[]</code>), as if it were an array of bits.</p>
+<p>Apple's <a href="http://en.wikipedia.org/wiki/Core_Foundation" title="Core Foundation">Core Foundation</a> library contains <a rel="nofollow" class="external text" href="http://developer.apple.com/library/mac/#documentation/CoreFoundation/Reference/CFBitVectorRef/Reference/reference.html">CFBitVector</a> and <a rel="nofollow" class="external text" href="http://developer.apple.com/library/mac/#documentation/CoreFoundation/Reference/CFMutableBitVectorRef/Reference/reference.html#//apple_ref/doc/uid/20001500">CFMutableBitVector</a> structures.</p>
+<p><a href="PL/I.html" title="PL/I">PL/I</a> supports arrays of <i>bit strings</i> of arbitrary length, which may be either fixed-length or varying. The array elements may be <i>aligned</i>— each element begins on a byte or word boundary— or <i>unaligned</i>— elements immediately follow each other with no padding.</p>
+<p>Hardware description languages such as <a href="http://en.wikipedia.org/wiki/VHDL" title="VHDL">VHDL</a>, <a href="Verilog.html" title="Verilog">Verilog</a>, and <a href="http://en.wikipedia.org/wiki/SystemVerilog" title="SystemVerilog">SystemVerilog</a> natively support bit vectors as these are used to model storage elements like <a href="http://en.wikipedia.org/wiki/Flip-flop_(electronics)" title="Flip-flop (electronics)">flip-flops</a>, hardware busses and hardware signals in general. In hardware verification languages such as <a href="http://en.wikipedia.org/wiki/OpenVera" title="OpenVera">OpenVera</a>, <a href="http://en.wikipedia.org/wiki/E_(verification_language)" title="E (verification language)"><i>e</i></a> and <a href="http://en.wikipedia.org/wiki/SystemVerilog" title="SystemVerilog">SystemVerilog</a>, bit vectors are used to sample values from the hardware models, and to represent data that is transferred to hardware during simulations.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=12" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bit_field" title="Bit field">Bit field</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bitboard" title="Bitboard">Bitboard</a> Chess and similar games.</li>
+<li><a href="http://en.wikipedia.org/wiki/Bitmap_index" title="Bitmap index">Bitmap index</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Binary_numeral_system" title="Binary numeral system" class="mw-redirect">Binary numeral system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bitstream" title="Bitstream">Bitstream</a></li>
+<li><a href="Judy_array.html" title="Judy array">Judy array</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=13" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-c.2B.2B-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-c.2B.2B_1-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.sgi.com/tech/stl/bitset.html">std::bitset</a></span></li>
+<li id="cite_note-boost-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-boost_2-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.boost.org/libs/dynamic_bitset/dynamic_bitset.html">boost::dynamic_bitset</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://perldoc.perl.org/perlop.html#Bitwise-String-Operators">http://perldoc.perl.org/perlop.html#Bitwise-String-Operators</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://perldoc.perl.org/functions/vec.html">http://perldoc.perl.org/functions/vec.html</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://bmagic.sourceforge.net/">BitMagic</a> C++ library for efficient platform independent bitsets.</li>
+<li><a rel="nofollow" class="external text" href="http://www-cs-faculty.stanford.edu/~knuth/fasc1a.ps.gz">mathematical bases</a> by Pr. D.E.Knuth</li>
+<li><a rel="nofollow" class="external text" href="http://pypi.python.org/pypi/bitarray">bitarray module</a> for Python</li>
+<li><a rel="nofollow" class="external text" href="http://www.gotw.ca/publications/N1185.pdf">vector&lt;bool&gt; Is Nonconforming, and Forces Optimization Choice</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.gotw.ca/publications/N1211.pdf">vector&lt;bool&gt;: More Problems, Better Solutions</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/noporpoise/BitArray">BitArray library</a> for C</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">Bit array</strong></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1090
+CPU time usage: 0.460 seconds
+Real time usage: 0.508 seconds
+Preprocessor visited node count: 417/1000000
+Preprocessor generated node count: 1673/1500000
+Post‐expand include size: 16266/2048000 bytes
+Template argument size: 169/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 4/500
+Lua time usage: 0.050/10.000 seconds
+Lua memory usage: 856 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1189937-0!*!0!!en!4!* and timestamp 20140325025223
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;oldid=593653898">http://en.wikipedia.org/w/index.php?title=Bit_array&amp;oldid=593653898</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Arrays" title="Category:Arrays">Arrays</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Bit_data_structures" title="Category:Bit data structures">Bit data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_December_2010" title="Category:Articles needing additional references from December 2010">Articles needing additional references from December 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Bit+array&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Bit+array" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Bit_array.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Bit_array"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Bit_array.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Bit_array" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Bit_array" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;oldid=593653898" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1992074" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Bit_array&amp;id=593653898" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Bit+array">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Bit+array&amp;oldid=593653898&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Bit_array&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Tableau_de_bits" title="Tableau de bits – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Битовая_карта" title="Битовая карта – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Бітова_мапа" title="Бітова мапа – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1992074#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 February 2014 at 23:29.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Bit_array" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1059 in 0.443 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Bit_array by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:10 GMT -->
+</html>

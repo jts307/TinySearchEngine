@@ -1,0 +1,1054 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Umask.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Umask by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>umask - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Umask" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Umask.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Umask","wgTitle":"Umask","wgCurRevisionId":596226869,"wgRevisionId":596226869,"wgArticleId":954284,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Unix SUS2008 utilities"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Umask","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1050397"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bash {line-height: normal;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash.source-bash .de1, .bash.source-bash .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.bash.source-bash  {font-family:monospace;}
+.bash.source-bash .imp {font-weight: bold; color: red;}
+.bash.source-bash li, .bash.source-bash .li1 {font-weight: normal; vertical-align:top;}
+.bash.source-bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash.source-bash .li2 {font-weight: bold; vertical-align:top;}
+.bash.source-bash .kw1 {color: #000000; font-weight: bold;}
+.bash.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .co0 {color: #666666; font-style: italic;}
+.bash.source-bash .co1 {color: #800000;}
+.bash.source-bash .co2 {color: #cc0000; font-style: italic;}
+.bash.source-bash .co3 {color: #000000; font-weight: bold;}
+.bash.source-bash .co4 {color: #666666;}
+.bash.source-bash .es1 {color: #000099; font-weight: bold;}
+.bash.source-bash .es2 {color: #007800;}
+.bash.source-bash .es3 {color: #007800;}
+.bash.source-bash .es4 {color: #007800;}
+.bash.source-bash .es5 {color: #780078;}
+.bash.source-bash .es_h {color: #000099; font-weight: bold;}
+.bash.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .sy0 {color: #000000; font-weight: bold;}
+.bash.source-bash .st0 {color: #ff0000;}
+.bash.source-bash .st_h {color: #ff0000;}
+.bash.source-bash .nu0 {color: #000000;}
+.bash.source-bash .re0 {color: #007800;}
+.bash.source-bash .re1 {color: #007800;}
+.bash.source-bash .re2 {color: #007800;}
+.bash.source-bash .re4 {color: #007800;}
+.bash.source-bash .re5 {color: #660033;}
+.bash.source-bash .ln-xtra, .bash.source-bash li.ln-xtra, .bash.source-bash div.ln-xtra {background-color: #ffc;}
+.bash.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Umask skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">umask</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>In computing, <b>umask</b> is a command that determines the settings of a <a href="Mask_(computing).html" title="Mask (computing)">mask</a> that controls which <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">file permissions</a> are set for files and directories when they are created. It also refers to a <a href="http://en.wikipedia.org/wiki/Function_(computing)" title="Function (computing)" class="mw-redirect">function</a> that sets the mask, and to the mask itself, which is formally known as the <i><b>file mode creation mask</b></i>.</p>
+<p>In UNIX, each file and directory has sets of attributes which control who is permitted access (aka modes). When a file or directory is created the permissions to be set are specified. The mask restricts which permissions are allowed. If the mask bit is set to <i><b>"1"</b></i>, the corresponding permission will be <i><b>disabled</b></i>. For a bit set to <i><b>"0"</b></i>, the corresponding permission will be <i><b>determined by the program</b></i> and the <a href="http://en.wikipedia.org/wiki/Operating_System" title="Operating System" class="mw-redirect">system</a>. In other words, the mask acts as a last-stage filter that strips away permissions as a file or directory is created where the bit that is set to a "1". Since the permissions are categorized by owner, group and other "the mask" helps with defaulting access. The modes can be changed using <a href="Chmod.html" title="Chmod">chmod</a>.</p>
+<p>Each program (technically called a <a href="Process_(computing).html" title="Process (computing)">process</a>) has its own mask, which is applied whenever that process creates a new file. Each process is able to change the settings of its own mask using a function call. When the process is a <a href="http://en.wikipedia.org/wiki/Shell_(computing)" title="Shell (computing)">shell</a>, the mask is set with the <b>umask</b> command. When a shell, or any other process, launches a new process, the child process inherits the mask from its parent process. The mask does not work retroactively, that is, changes made to the mask only affect <i>new</i> files created after the changes are made. Generally, the mask only affects file permissions during the creation of new files and has no effect when file permissions are changed in existing files, however, in some specific cases it can help determine permissions when file permissions are changed in existing files using the <a href="Chmod.html" title="Chmod">chmod</a> command.</p>
+<p>The mask is always stored as a group of bits. It may be displayed in <a href="http://en.wikipedia.org/wiki/Binary_code" title="Binary code">binary</a>, <a href="http://en.wikipedia.org/wiki/File_permissions#Numeric_notation" title="File permissions" class="mw-redirect">octal</a>, or <a href="http://en.wikipedia.org/wiki/File_permissions#Symbolic_notation" title="File permissions" class="mw-redirect">symbolic</a> notation. Usually, it is represented in octal notation (e.g., 0754) or symbolic notation (e.g., u=wrx,g=rx,o=r) (see <a href="#Setting_the_mask_using_symbolic_notation">symbolic notation</a> below for details). The <b>umask</b> command uses the same octal and symbolic notation as the chmod command.</p>
+<p>The <b>umask</b> command is used with <a href="Unix-like.html" title="Unix-like">Unix-like</a> operating systems and the umask function is defined in the <a href="http://en.wikipedia.org/wiki/POSIX.1" title="POSIX.1" class="mw-redirect">POSIX.1</a> specification.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Shell_command"><span class="tocnumber">2</span> <span class="toctext">Shell command</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Displaying_the_current_mask"><span class="tocnumber">2.1</span> <span class="toctext">Displaying the current mask</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Setting_the_mask_using_octal_notation"><span class="tocnumber">2.2</span> <span class="toctext">Setting the mask using octal notation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Octal_codes_used_in_the_command"><span class="tocnumber">2.2.1</span> <span class="toctext">Octal codes used in the command</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Setting_the_mask_using_symbolic_notation"><span class="tocnumber">2.3</span> <span class="toctext">Setting the mask using symbolic notation</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Command_line_examples"><span class="tocnumber">2.4</span> <span class="toctext">Command line examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Function_call"><span class="tocnumber">3</span> <span class="toctext">Function call</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Mask_effect"><span class="tocnumber">4</span> <span class="toctext">Mask effect</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Truth_table"><span class="tocnumber">4.1</span> <span class="toctext">Truth table</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#How_the_mask_is_applied"><span class="tocnumber">4.2</span> <span class="toctext">How the mask is applied</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Logic"><span class="tocnumber">4.3</span> <span class="toctext">Logic</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Exceptions"><span class="tocnumber">4.4</span> <span class="toctext">Exceptions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Processes"><span class="tocnumber">5</span> <span class="toctext">Processes</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Mount_option"><span class="tocnumber">6</span> <span class="toctext">Mount option</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The mask, the <b>umask</b> command, and the umask function were not part of the original implementation of UNIX. The operating system evolved in a relatively small computer center environment where security was not an issue.</p>
+<p>Unix eventually grew to serve hundreds of users from different organizations. At first, developers made creation modes for key files more restrictive, especially for cases of actual security breaches, but this was not a generally (or universally) workable solution.</p>
+<p>The mask and the <b>umask</b> command were introduced around 1978 between the sixth edition and the eighth edition of the operating system, so it could allow sites, groups, and individuals to choose their own defaults.<sup id="cite_ref-UNIXeighth_1-0" class="reference"><a href="#cite_note-UNIXeighth-1"><span>[</span>1<span>]</span></a></sup> The mask has since been implemented in most, if not all, of the contemporary implementations of UNIX-like (<a href="POSIX.html" title="POSIX">POSIX</a>) operating systems. Typically for operating systems that don't support umask there is a toolkit that is available that has the command.</p>
+<h2><span class="mw-headline" id="Shell_command">Shell command</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=2" title="Edit section: Shell command">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a shell, the mask is set by using the <b>umask</b> command. The syntax of the command is:<sup id="cite_ref-ATTumask_2-0" class="reference"><a href="#cite_note-ATTumask-2"><span>[</span>2<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="kw3">umask</span> <span class="br0">[</span>-S <span class="br0">]</span> <span class="br0">[</span>maskdefinition<span class="br0">]</span>
+</pre></div>
+</div>
+<p>(the items within the [brackets] are optional)</p>
+<h3><span class="mw-headline" id="Displaying_the_current_mask">Displaying the current mask</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=3" title="Edit section: Displaying the current mask">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the <b>umask</b> command is invoked without any arguments, it will display the current mask. The output will be in either <a href="http://en.wikipedia.org/wiki/File_permissions#Numeric_notation" title="File permissions" class="mw-redirect">octal</a> or <a href="http://en.wikipedia.org/wiki/File_permissions#Symbolic_notation" title="File permissions" class="mw-redirect">symbolic</a> notation depending on the operating system used,<sup id="cite_ref-SUSumask_3-0" class="reference"><a href="#cite_note-SUSumask-3"><span>[</span>3<span>]</span></a></sup> however, invoking <b>umask</b> with the <b>-S</b> argument (i.e., <i>umask -S</i>) will force it to display the current mask in symbolic notation. For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+$ <span class="kw3">umask</span>
+0022
+$ <span class="kw3">umask</span> <span class="re5">-S</span>
+<span class="re2">u</span>=rwx,<span class="re2">g</span>=rx,<span class="re2">o</span>=rx
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Setting_the_mask_using_octal_notation">Setting the mask using octal notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=4" title="Edit section: Setting the mask using octal notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the <b>umask</b> command is invoked with an octal argument, it will directly set the bits of the mask to that argument:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+$ <span class="kw3">umask</span>          <span class="co0"># display current value</span>
+0022
+$ <span class="kw3">umask</span> 0077     <span class="co0">#set to prevent files from being created with any access by group members or others</span>
+$ <span class="kw3">umask</span>          <span class="co0">#display confirms new setting</span>
+0077
+$ <span class="kw3">umask</span> <span class="re5">-S</span>       <span class="co0"># display symbolically</span>
+<span class="re2">u</span>=rwx,<span class="re2">g</span>=,<span class="re2">o</span>=
+</pre></div>
+</div>
+<p>If fewer than 4 digits are entered, leading zeros are assumed. An error will result if the argument is not a valid octal number (or symbolic argument — see below) or if it has more than 4 digits.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Octal_codes_used_in_the_command">Octal codes used in the command</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=5" title="Edit section: Octal codes used in the command">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table class="wikitable">
+<tr>
+<th>Octal digit in<br />
+<b>umask</b> command</th>
+<th>Prevents (if requested)</th>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>7</tt></td>
+<td>read, write and execute</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>6</tt></td>
+<td>read and write</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>5</tt></td>
+<td>read and execute</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>4</tt></td>
+<td>read only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>3</tt></td>
+<td>write and execute</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>2</tt></td>
+<td>write only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>1</tt></td>
+<td>execute only</td>
+</tr>
+<tr>
+<td style="text-align: center;"><tt>0</tt></td>
+<td>no permissions</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Setting_the_mask_using_symbolic_notation">Setting the mask using symbolic notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=6" title="Edit section: Setting the mask using symbolic notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the <b>umask</b> command is invoked with an argument using symbolic notation, it will add to, substract from, or directly set the bits of the mask as directed by the [maskdefinition] argument of the <b>umask</b> command. The symbolic notation is composed of <i>permission-symbols</i>, <i>user-class-letters</i>, and <i>operators</i>.</p>
+<p>The syntax of the [maskdefinition] in the <b>umask</b> command looks like this:</p>
+<dl>
+<dd>
+<dl>
+<dd><b>umask</b> [<i>user-class-letters</i>] <i>operator</i> <i>permission-symbols</i>[,]...</dd>
+</dl>
+</dd>
+</dl>
+<p>There are no spaces allowed between the arguments. The only space is between the <b>umask</b> command itself and the arguments.</p>
+<p>The <i>permission-symbols</i> indicate which file permission settings are to be allowed or prohibited by the mask when files are subsequently created. There are three basic file permission modes which correspond to the basic permissions. They are <b>r</b> (read), <b>w</b> (write), and <b>x</b> (execute). The more esoteric symbols are <b>X</b> (special execute), <b>s</b> (setuid/guid), <b>t</b> (sticky bit). (See <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">File permissions</a> for more details.)</p>
+<table class="wikitable">
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><tt>r</tt></td>
+<td>read</td>
+<td><b>r</b>ead a file or list a directory's contents</td>
+</tr>
+<tr>
+<td><tt>w</tt></td>
+<td>write</td>
+<td><b>w</b>rite to (or delete) a file or directory</td>
+</tr>
+<tr>
+<td><tt>x</tt></td>
+<td>execute</td>
+<td>e<b>x</b>ecute a file or recurse a directory tree</td>
+</tr>
+<tr>
+<td><tt>X</tt></td>
+<td>special execute</td>
+<td>which is not a permission in itself but rather can be used instead of x. It allows the application of execute permissions to directories regardless of their current permissions and allows the application of execute permissions to a file which already has at least 1 execute permission bit already set (either user, group or other). It is only really useful when used with '+' d</td>
+</tr>
+<tr>
+<td><tt>s</tt></td>
+<td>setuid/gid</td>
+<td>See <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">File permissions</a> for details.</td>
+</tr>
+<tr>
+<td><tt>t</tt></td>
+<td>sticky</td>
+<td>See <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">File permissions</a> for details.</td>
+</tr>
+</table>
+<p>The <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">permissions</a> of a file are applied to three different <i>classes</i> of users: the <b>user</b> (the file's owner), the <b>group</b>, and <b>others</b>. (See <a href="http://en.wikipedia.org/wiki/File_permissions" title="File permissions" class="mw-redirect">File permissions</a> for details.) Those <i>user classes</i> are represented by one or more of the following letters:</p>
+<table class="wikitable">
+<tr>
+<th>Letter</th>
+<th>Class</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><tt>u</tt></td>
+<td>user</td>
+<td>the owner of the file</td>
+</tr>
+<tr>
+<td><tt>g</tt></td>
+<td>group</td>
+<td>users who are members of the file's group</td>
+</tr>
+<tr>
+<td><tt>o</tt></td>
+<td>others</td>
+<td>users who are not the owner of the file or members of the group</td>
+</tr>
+<tr>
+<td><tt>a</tt></td>
+<td>all</td>
+<td>all three of the above, it is the same as <tt>ugo</tt>. (This is the default if no class is specified in the <b>umask</b> command.)</td>
+</tr>
+</table>
+<p>The <b>umask</b> command uses an operator to specify how the permission modes of the mask should be adjusted. The following operators are accepted:</p>
+<table class="wikitable">
+<tr>
+<th>Operator</th>
+<th>How the mask works after the command in issued</th>
+</tr>
+<tr>
+<td><tt>+</tt></td>
+<td>During file creation, the mask will allow the specified file permissions to be enabled for the specified user classes; (permissions that are not specified are unchanged in the mask)</td>
+</tr>
+<tr>
+<td><tt>-</tt></td>
+<td>During file creation, the mask will prohibit the specified file permissions from being enabled for the specified user classes; (permissions that are not specified are unchanged in the mask)</td>
+</tr>
+<tr>
+<td><tt>=</tt></td>
+<td>During file creation, the mask will allow the specified file permissions to be enabled for the specified user classes; permissions not specified will be prohibited by the mask during file creation</td>
+</tr>
+</table>
+<p>For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="kw3">umask</span> u+<span class="kw2">w</span>
+</pre></div>
+</div>
+<p>This would set the mask so that it would, when files are subsequently created, allow write permission to be enabled for the <b>u</b>ser (file owner). The rest of the bits in the mask would be unchanged.</p>
+<p>Multiple changes can be specified by separating multiple sets of symbolic notation with commas. (Spaces are not allowed within the arguments.) For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="kw3">umask</span> u-x,<span class="re2">g</span>=r,o+<span class="kw2">w</span>
+</pre></div>
+</div>
+<p>This would set the mask so that it would, when subsequent files are created:</p>
+<ol>
+<li>prohibit the <i>e<b>x</b>ecute</i> permission from being set for the file's <i>owner</i> (<b>u</b>ser), while leaving the rest of the <i>owner</i> bits in the mask unchanged;</li>
+<li>allow the <i><b>r</b>ead</i> permission to be enabled for the <i><b>g</b>roup</i>, while prohibiting <b>w</b>rite and e<b>x</b>ecute permission for the <i><b>g</b>roup</i>;</li>
+<li>allow the <i><b>w</b>rite</i> permission to be enabled for <i><b>o</b>thers</i>, while leaving the rest of the <i>other</i> bits in the mask unchanged.</li>
+</ol>
+<h3><span class="mw-headline" id="Command_line_examples">Command line examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=7" title="Edit section: Command line examples">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Here are more examples of using the <b>umask</b> command.</p>
+<table class="wikitable">
+<tr>
+<th><tt>umask&#160;command&#160;issued</tt></th>
+<th>How the mask works after the command is issued</th>
+</tr>
+<tr>
+<td><tt>umask a+r</tt></td>
+<td>allows read permission to be enabled for all user classes; the rest of the mask bits are unchanged</td>
+</tr>
+<tr>
+<td><tt>umask a-x</tt></td>
+<td>prohibits enabling execute permission for all user classes; the rest of the mask bits are unchanged</td>
+</tr>
+<tr>
+<td><tt>umask a+rw</tt></td>
+<td>allows read or write permission to be enabled for all user classes; the rest of the mask bits are unchanged</td>
+</tr>
+<tr>
+<td><tt>umask +rwx</tt></td>
+<td>allows read, write or execute permission to be enabled for all user classes; (Note: On some UNIX platforms, this will restore the mask to a default.)</td>
+</tr>
+<tr>
+<td><tt>umask u=rw,go=</tt></td>
+<td>allow read and write permission to be enabled for the owner, while prohibiting execute permission from being enabled for the owner; prohibit enabling any permissions for the group and others</td>
+</tr>
+<tr>
+<td><tt>umask u+w,go-w</tt></td>
+<td>allow write permission to be enabled for the owner; prohibit write permission from being enabled for the group and others;</td>
+</tr>
+<tr>
+<td><tt>umask -S</tt></td>
+<td>display the current umask in symbolic notation</td>
+</tr>
+<tr>
+<td><tt>umask 777</tt></td>
+<td>disallow read, write, and execute permission for all</td>
+</tr>
+<tr>
+<td><tt>umask 000</tt></td>
+<td>allow read, write, and execute permission for all (security risk)</td>
+</tr>
+<tr>
+<td><tt>umask 113</tt></td>
+<td>allow read or write permission to be enabled for the owner and the group, but not execute permission; allow read permission to be enabled for others, but not write or execute permission</td>
+</tr>
+<tr>
+<td><tt>umask 0755</tt></td>
+<td>equivalent to <tt>u-rwx (4+2+1),go=w (4+1 &amp; 4+1)</tt>. (The <tt>0</tt> specifies that <i>special modes</i> may be enabled if allowed by the OS.)</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Function_call">Function call</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=8" title="Edit section: Function call">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The mask may be set using a function call. The GNU functions are declared in <tt>sys/stat.h</tt>. The function is:<sup id="cite_ref-GNUlib_5-0" class="reference"><a href="#cite_note-GNUlib-5"><span>[</span>5<span>]</span></a></sup></p>
+<pre>
+mode_t umask (mode_t <i>mask</i>)
+</pre>
+<p>The umask function will set the mask of the current process to <i>mask</i>, and return the previous value of the mask.</p>
+<p>Here is an example from GNU.org which shows how to read the mask without changing it permanently:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+mode_t
+read_umask <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> <span class="br0">{</span>
+    mode_t mask <span class="sy0">=</span> umask <span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+    umask <span class="br0">(</span>mask<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> mask<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>However, on GNU/Hurd systems it is better to use the <i>getumask</i> function if reading the mask value is the only requirement, because it is reentrant.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+mode_t getumask <span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+</pre></div>
+</div>
+<p>Returns the current value of the mask for the current process. (Note: The <i>getumask</i> function is a GNU extension and is only available on GNU/Hurd systems.</p>
+<h2><span class="mw-headline" id="Mask_effect">Mask effect</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=9" title="Edit section: Mask effect">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The mask is applied whenever a file is created. If the mask has a bit <i><b>set to "1"</b></i>, that means the corresponding file permission will always be <i><b>disabled</b></i> when files are subsequently created. A bit <i><b>set to "0"</b></i> in the mask means that the corresponding permission will be <i><b>determined by the requesting process</b></i> and the <a href="http://en.wikipedia.org/wiki/Operating_System" title="Operating System" class="mw-redirect">OS</a> when files are subsequently created. In other words, the mask acts as a last-stage filter that strips away permissions as a file is created; each bit that is set to a "1" strips away that corresponding permission for the file.</p>
+<h3><span class="mw-headline" id="Truth_table"><a href="http://en.wikipedia.org/wiki/Truth_table" title="Truth table">Truth table</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=10" title="Edit section: Truth table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Here is the truth table for the masking logic. Each bit in the requesting process' file permission mode is operated on by the mask using this logic to yield the permission mode that is applied to the file as it is created. (<b>p</b> is a bit in the requested file permission mode of a process that is creating a file; <b>q</b> is a bit in the mask; <b>r</b> is the resulting bit in the created file's permission mode)</p>
+<table class="wikitable" border="1" style="text-align:center;">
+<tr>
+<th style="width:35px;">p</th>
+<th style="width:35px;">q</th>
+<th style="width:35px;">r</th>
+</tr>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="How_the_mask_is_applied">How the mask is applied</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=11" title="Edit section: How the mask is applied">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Programmatically, the mask is applied by the OS by first negating (complementing) the mask, and then performing a logical AND with the requested file mode. In the [probably] first UNIX manual to describe its function,<sup id="cite_ref-UNIXeighth_1-1" class="reference"><a href="#cite_note-UNIXeighth-1"><span>[</span>1<span>]</span></a></sup> the manual says,</p>
+<blockquote class="templatequote">
+<p>"the actual mode... of the newly-created file is the logical and of the given mode and the complement of the argument. Only the low-order 9 bits of the mask (the protection bits) participate. In other words, the mask shows [indicates] the bits to be turned off when files are created."</p>
+<div class="templatequotecite">—UNIX Eighth Edition Manual, Bell Labs UNIX (manual), AT&amp;T Laboratories</div>
+</blockquote>
+<table class="wikitable" border="1">
+<caption>How umask (in octal) translates to full (r,&#160;w,&#160;x) permissions.</caption>
+<tr>
+<th>Mask digit<br />
+(octal)</th>
+<th>Mask digit<br />
+(binary)</th>
+<th>Mask digit<br />
+negated (binary)</th>
+<th>Logical AND with&#160;<br />
+"rwx" request<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup>&#160;</th>
+</tr>
+<tr style="text-align: center;">
+<td><tt>0</tt></td>
+<td>000</td>
+<td>111</td>
+<td>rwx</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>1</tt></td>
+<td>001</td>
+<td>110</td>
+<td>rw-</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>2</tt></td>
+<td>010</td>
+<td>101</td>
+<td>r-x</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>3</tt></td>
+<td>011</td>
+<td>100</td>
+<td>r--</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>4</tt></td>
+<td>100</td>
+<td>011</td>
+<td>-wx</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>5</tt></td>
+<td>101</td>
+<td>010</td>
+<td>-w-</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>6</tt></td>
+<td>110</td>
+<td>001</td>
+<td>--x</td>
+</tr>
+<tr style="text-align: center;">
+<td><tt>7</tt></td>
+<td>111</td>
+<td>000</td>
+<td>---</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Logic">Logic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=12" title="Edit section: Logic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The mask is applied using boolean logic known as <a href="http://en.wikipedia.org/wiki/Material_nonimplication" title="Material nonimplication">material nonimplication</a> or abjunction. It is represented in logic notation as:</p>
+<p>C: (P&amp;(~Q))</p>
+<p>This says that the file's permission mode (C) is a result of a logical <a href="http://en.wikipedia.org/wiki/And_(logic)" title="And (logic)" class="mw-redirect">AND</a> operation between the <a href="http://en.wikipedia.org/wiki/Negation" title="Negation">negation</a> of the mask (Q), and the process' requested permission mode setting (P).</p>
+<h3><span class="mw-headline" id="Exceptions">Exceptions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=13" title="Edit section: Exceptions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Note: Many operating systems do not allow a file to be created with execute permissions. In these environments, newly created files will always have execute permission disabled for all users.</p>
+<p>The mask is generally only applied to functions that create a new file, however, there are exceptions. For example, when using <a href="http://en.wikipedia.org/wiki/UNIX" title="UNIX" class="mw-redirect">UNIX</a> and <a href="GNU.html" title="GNU">GNU</a> versions of <a href="Chmod.html" title="Chmod">chmod</a> to set the permissions of a file, and symbolic notation is used, and no user is specified, then the mask is applied to the requested permissions before they are applied to the file. For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+$ <span class="kw3">umask</span> 0000
+$ <span class="kw2">chmod</span> +rwx filename
+$ <span class="kw2">ls</span> <span class="re5">-l</span> filename
+<span class="re5">-rwxrwxrwx</span> filename
+$ <span class="kw3">umask</span> 0022
+$ <span class="kw2">chmod</span> +rwx filename
+$ <span class="kw2">ls</span> <span class="re5">-l</span> filename
+<span class="re5">-rwxr-xr-x</span> filename
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Processes">Processes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=14" title="Edit section: Processes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Each <a href="Process_(computing).html" title="Process (computing)">process</a> has its own mask, which is applied whenever the process creates a new file. When a shell, or any other process, spawns a new process, the child process inherits the mask from its parent process.<sup id="cite_ref-manpages_7-0" class="reference"><a href="#cite_note-manpages-7"><span>[</span>7<span>]</span></a></sup> When the process is a <a href="http://en.wikipedia.org/wiki/Shell_(computing)" title="Shell (computing)">shell</a>, the mask is changed by the <b>umask</b> command. As with other processes, any process launched from the shell inherits that shell's mask.</p>
+<h2><span class="mw-headline" id="Mount_option">Mount option</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=15" title="Edit section: Mount option">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the <a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a>, the <tt>fat</tt>, <tt>hfs</tt>, <tt>hpfs</tt>, <tt>ntfs</tt>, and <tt>udf</tt> <a href="File_system.html" title="File system">file system</a> drivers support a <tt>umask</tt> <a href="http://en.wikipedia.org/wiki/Fstab" title="Fstab">mount option</a>, which controls how the disk information is mapped to permissions. This is not the same as the per-process umask described above, although the permissions are calculated in a similar way. Some of these file system drivers also support separate umasks for files and directories, using mount options such as <a href="http://en.wikipedia.org/wiki/Fmask" title="Fmask" class="mw-redirect">fmask</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=16" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Filesystem_permissions" title="Filesystem permissions" class="mw-redirect">Filesystem permissions</a></li>
+<li><a href="Chmod.html" title="Chmod">chmod</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit&amp;section=17" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-UNIXeighth-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-UNIXeighth_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-UNIXeighth_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://man.cat-v.org/unix_8th/2/umask">"UNIX 8th Edition Manual, Bell Labs UNIX"</a>. <i>Manual</i>. AT&amp;T Laboratories<span class="reference-accessdate">. Retrieved 2013-01-14</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUmask&amp;rft.atitle=UNIX+8th+Edition+Manual%2C+Bell+Labs+UNIX&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fman.cat-v.org%2Funix_8th%2F2%2Fumask&amp;rft.jtitle=Manual&amp;rft.pub=AT%26T+Laboratories&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ATTumask-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-ATTumask_2-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www2.research.att.com/~gsf/man/man1/umask.html">"AST UNIX MANUAL:umask(1)"</a>. <i>Manual</i>. AT&amp;T Laboratories<span class="reference-accessdate">. Retrieved 2013-01-14</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUmask&amp;rft.atitle=AST+UNIX+MANUAL%3Aumask%281%29&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww2.research.att.com%2F~gsf%2Fman%2Fman1%2Fumask.html&amp;rft.jtitle=Manual&amp;rft.pub=AT%26T+Laboratories&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-SUSumask-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-SUSumask_3-0">^</a></b></span> <span class="reference-text"><span id="CITEREF1997" class="citation"><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/007908799/xcu/umask.html">"umask"</a>, <i>The Single UNIX Specification, Version 2:</i> (manual), The Open Group, 1997<span class="reference-accessdate">, retrieved 2013-01-14</span></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUmask&amp;rft.atitle=The+Single+UNIX+Specification%2C+Version+2%3A&amp;rft.btitle=umask&amp;rft.date=1997&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F007908799%2Fxcu%2Fumask.html&amp;rft.pub=The+Open+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><b>Note:</b> Some programming languages require a prefix symbol in front of octal notation such as the digit 0, or the letters o or q. The <b>umask</b> command does not use this type of prefix notation -- only the octal digits are used.</span></li>
+<li id="cite_note-GNUlib-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-GNUlib_5-0">^</a></b></span> <span class="reference-text"><span id="CITEREF2013" class="citation"><a rel="nofollow" class="external text" href="http://www.gnu.org/software/libc/manual/html_node/Setting-Permissions.html">"14.9.7 Assigning File Permissions"</a>, <i>The GNU C Library for glibc 2.17</i> (manual), Free Software Foundation, Inc., 3 January 2013<span class="reference-accessdate">, retrieved 2013-01-14</span></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUmask&amp;rft.atitle=The+GNU+C+Library+for+glibc+2.17&amp;rft.btitle=14.9.7+Assigning+File+Permissions&amp;rft.date=3+January+2013&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.gnu.org%2Fsoftware%2Flibc%2Fmanual%2Fhtml_node%2FSetting-Permissions.html&amp;rft.pub=Free+Software+Foundation%2C+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><b>Note:</b> Operating systems usually will also strip off execute permissions on newly created files.</span></li>
+<li id="cite_note-manpages-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-manpages_7-0">^</a></b></span> <span class="reference-text"><span id="CITEREF2008" class="citation"><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man2/umask.2.html">"umask(2)"</a>, <i>Linux Programmer's Manual release 3.32</i> (manual), Linux man-pages project, 9 January 2008<span class="reference-accessdate">, retrieved 2013-01-01</span></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUmask&amp;rft.atitle=Linux+Programmer%27s+Manual+release+3.32&amp;rft.btitle=umask%282%29&amp;rft.date=9+January+2008&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fman7.org%2Flinux%2Fman-pages%2Fman2%2Fumask.2.html&amp;rft.pub=Linux+man-pages+project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Unix_commands" title="Template:Unix commands"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Unix_commands" title="Template talk:Unix commands"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Unix_commands&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Unix.html" title="Unix">Unix</a> <a href="Command-line_interface.html" title="Command-line interface">command-line interface</a> programs and <a href="Shell_builtin.html" title="Shell builtin">shell builtins</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">File system</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Cat_(Unix).html" title="Cat (Unix)">cat</a></li>
+<li><a href="Cd_(command).html" title="Cd (command)">cd</a></li>
+<li><a href="Chmod.html" title="Chmod">chmod</a></li>
+<li><a href="Chown.html" title="Chown">chown</a></li>
+<li><a href="Chgrp.html" title="Chgrp">chgrp</a></li>
+<li><a href="Cksum.html" title="Cksum">cksum</a></li>
+<li><a href="Cmp_(Unix).html" title="Cmp (Unix)">cmp</a></li>
+<li><a href="Cp_(Unix).html" title="Cp (Unix)">cp</a></li>
+<li><a href="Dd_(Unix).html" title="Dd (Unix)">dd</a></li>
+<li><a href="Du_(Unix).html" title="Du (Unix)">du</a></li>
+<li><a href="Df_(Unix).html" title="Df (Unix)">df</a></li>
+<li><a href="File_(command).html" title="File (command)">file</a></li>
+<li><a href="Fsck.html" title="Fsck">fsck</a></li>
+<li><a href="Fuser_(Unix).html" title="Fuser (Unix)">fuser</a></li>
+<li><a href="Ln_(Unix).html" title="Ln (Unix)">ln</a></li>
+<li><a href="Ls.html" title="Ls">ls</a></li>
+<li><a href="Mkdir.html" title="Mkdir">mkdir</a></li>
+<li><a href="Mount_(Unix).html" title="Mount (Unix)">mount</a></li>
+<li><a href="Mv.html" title="Mv">mv</a></li>
+<li><a href="Pax_(Unix).html" title="Pax (Unix)">pax</a></li>
+<li><a href="Pwd.html" title="Pwd">pwd</a></li>
+<li><a href="Rm_(Unix).html" title="Rm (Unix)">rm</a></li>
+<li><a href="Rmdir.html" title="Rmdir">rmdir</a></li>
+<li><a href="Size_(Unix).html" title="Size (Unix)">size</a></li>
+<li><a href="Split_(Unix).html" title="Split (Unix)">split</a></li>
+<li><a href="Tee_(command).html" title="Tee (command)">tee</a></li>
+<li><a href="Touch_(Unix).html" title="Touch (Unix)">touch</a></li>
+<li><a href="Type_(Unix).html" title="Type (Unix)">type</a></li>
+<li><strong class="selflink">umask</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Processes</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="At_(Unix).html" title="At (Unix)">at</a></li>
+<li><a href="Bg_(Unix).html" title="Bg (Unix)">bg</a></li>
+<li><a href="Chroot.html" title="Chroot">chroot</a></li>
+<li><a href="Cron.html" title="Cron">cron</a></li>
+<li><a href="Fg_(Unix).html" title="Fg (Unix)">fg</a></li>
+<li><a href="Kill_(command).html" title="Kill (command)">kill</a></li>
+<li><a href="Killall.html" title="Killall">killall</a></li>
+<li><a href="Nice_(Unix).html" title="Nice (Unix)">nice</a></li>
+<li><a href="Pgrep.html" title="Pgrep">pgrep</a></li>
+<li><a href="Pidof.html" title="Pidof">pidof</a></li>
+<li><a href="Pkill.html" title="Pkill">pkill</a></li>
+<li><a href="Ps_(Unix).html" title="Ps (Unix)">ps</a></li>
+<li><a href="Pstree.html" title="Pstree">pstree</a></li>
+<li><a href="Time_(Unix).html" title="Time (Unix)">time</a></li>
+<li><a href="Top_(software).html" title="Top (software)">top</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">User environment</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Clear_(Unix).html" title="Clear (Unix)">clear</a></li>
+<li><a href="Env.html" title="Env">env</a></li>
+<li><a href="Exit_(command).html" title="Exit (command)">exit</a></li>
+<li><a href="Finger_protocol.html" title="Finger protocol">finger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/History_(Unix)" title="History (Unix)">history</a></li>
+<li><a href="Id_(Unix).html" title="Id (Unix)">id</a></li>
+<li><a href="Logname.html" title="Logname">logname</a></li>
+<li><a href="Mesg.html" title="Mesg">mesg</a></li>
+<li><a href="Passwd.html" title="Passwd">passwd</a></li>
+<li><a href="Su_(Unix).html" title="Su (Unix)">su</a></li>
+<li><a href="Sudo.html" title="Sudo">sudo</a></li>
+<li><a href="Uptime.html#Linux" title="Uptime">uptime</a></li>
+<li><a href="Talk_(software).html" title="Talk (software)">talk</a></li>
+<li><a href="Tput.html" title="Tput">tput</a></li>
+<li><a href="Uname.html" title="Uname">uname</a></li>
+<li><a href="W_(Unix).html" title="W (Unix)">w</a></li>
+<li><a href="Wall_(Unix).html" title="Wall (Unix)">wall</a></li>
+<li><a href="Who_(Unix).html" title="Who (Unix)">who</a></li>
+<li><a href="Whoami.html" title="Whoami">whoami</a></li>
+<li><a href="Write_(Unix).html" title="Write (Unix)">write</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Text processing</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AWK.html" title="AWK">awk</a></li>
+<li><a href="Banner_(Unix).html" title="Banner (Unix)">banner</a></li>
+<li><a href="Basename.html" title="Basename">basename</a></li>
+<li><a href="Comm.html" title="Comm">comm</a></li>
+<li><a href="Csplit.html" title="Csplit">csplit</a></li>
+<li><a href="Cut_(Unix).html" title="Cut (Unix)">cut</a></li>
+<li><a href="Diff.html" title="Diff">diff</a></li>
+<li><a href="Dirname.html" title="Dirname">dirname</a></li>
+<li><a href="Ed_(text_editor).html" title="Ed (text editor)">ed</a></li>
+<li><a href="Ex_(text_editor).html" title="Ex (text editor)">ex</a></li>
+<li><a href="Fmt.html" title="Fmt">fmt</a></li>
+<li><a href="Fold_(Unix).html" title="Fold (Unix)">fold</a></li>
+<li><a href="Head_(Unix).html" title="Head (Unix)">head</a></li>
+<li><a href="Iconv.html" title="Iconv">iconv</a></li>
+<li><a href="Join_(Unix).html" title="Join (Unix)">join</a></li>
+<li><a href="Less_(Unix).html" title="Less (Unix)">less</a></li>
+<li><a href="More_(command).html" title="More (command)">more</a></li>
+<li><a href="Paste_(Unix).html" title="Paste (Unix)">paste</a></li>
+<li><a href="Sed.html" title="Sed">sed</a></li>
+<li><a href="Sort_(Unix).html" title="Sort (Unix)">sort</a></li>
+<li><a href="Spell_(Unix).html" title="Spell (Unix)">spell</a></li>
+<li><a href="Strings_(Unix).html" title="Strings (Unix)">strings</a></li>
+<li><a href="Tail_(Unix).html" title="Tail (Unix)">tail</a></li>
+<li><a href="Tr_(Unix).html" title="Tr (Unix)">tr</a></li>
+<li><a href="Uniq.html" title="Uniq">uniq</a></li>
+<li><a href="Vi.html" title="Vi">vi</a></li>
+<li><a href="Wc_(Unix).html" title="Wc (Unix)">wc</a></li>
+<li><a href="Xargs.html" title="Xargs">xargs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Shell_builtin.html" title="Shell builtin">Shell builtins</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Alias_(command).html" title="Alias (command)">alias</a></li>
+<li><a href="Echo_(command).html" title="Echo (command)">echo</a></li>
+<li><a href="Expr.html" title="Expr">expr</a></li>
+<li><a href="Printf_format_string.html" title="Printf format string">printf</a></li>
+<li><a href="Sleep_(Unix).html" title="Sleep (Unix)">sleep</a></li>
+<li><a href="Test_(Unix).html" title="Test (Unix)">test</a></li>
+<li><a href="True_and_false_(commands).html" title="True and false (commands)">true and false</a></li>
+<li><a href="Unset.html" title="Unset">unset</a></li>
+<li><a href="Wait_(command).html" title="Wait (command)">wait</a></li>
+<li><a href="Yes_(Unix).html" title="Yes (Unix)">yes</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Network_utility.html" title="Network utility">Networking</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Dig_(command).html" title="Dig (command)">dig</a></li>
+<li><a href="Host_(Unix).html" title="Host (Unix)">host</a></li>
+<li><a href="Ifconfig.html" title="Ifconfig">ifconfig</a></li>
+<li><a href="Inetd.html" title="Inetd">inetd</a></li>
+<li><a href="Netcat.html" title="Netcat">netcat</a></li>
+<li><a href="Netstat.html" title="Netstat">netstat</a></li>
+<li><a href="Nslookup.html" title="Nslookup">nslookup</a></li>
+<li><a href="Ping_(networking_utility).html" title="Ping (networking utility)">ping</a></li>
+<li><a href="Rdate.html" title="Rdate">rdate</a></li>
+<li><a href="Rlogin.html" title="Rlogin">rlogin</a></li>
+<li><a href="Route_(command).html" title="Route (command)">route</a></li>
+<li><a href="OpenSSH.html" title="OpenSSH">ssh</a></li>
+<li><a href="Traceroute.html" title="Traceroute">traceroute</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Searching</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Find.html" title="Find">find</a></li>
+<li><a href="Grep.html" title="Grep">grep</a></li>
+<li><a href="Locate_(Unix).html" title="Locate (Unix)">locate</a></li>
+<li><a href="Whatis.html" title="Whatis">whatis</a></li>
+<li><a href="Whereis.html" title="Whereis">whereis</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Documentation</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Apropos_(Unix).html" title="Apropos (Unix)">apropos</a></li>
+<li><a href="Help_(command).html" title="Help (command)">help</a></li>
+<li><a href="Man_page.html" title="Man page">man</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bc_(programming_language).html" title="Bc (programming language)">bc</a></li>
+<li><a href="Dc_(computer_program).html" title="Dc (computer program)">dc</a></li>
+<li><a href="Cal_(Unix).html" title="Cal (Unix)">cal</a></li>
+<li><a href="Date_(Unix).html" title="Date (Unix)">date</a></li>
+<li><a href="Lp_(Unix).html" title="Lp (Unix)">lp</a></li>
+<li><a href="Lpr.html" title="Lpr">lpr</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><i><a href="http://en.wikipedia.org/wiki/List_of_Unix_utilities" title="List of Unix utilities">List of Unix utilities</a></i></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1099
+CPU time usage: 0.640 seconds
+Real time usage: 0.685 seconds
+Preprocessor visited node count: 679/1000000
+Preprocessor generated node count: 3265/1500000
+Post‐expand include size: 28228/2048000 bytes
+Template argument size: 426/2048000 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 2/500
+Lua time usage: 0.043/10.000 seconds
+Lua memory usage: 1.52 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:954284-0!*!0!!en!*!* and timestamp 20140315115619
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;oldid=596226869">http://en.wikipedia.org/w/index.php?title=Umask&amp;oldid=596226869</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Unix_SUS2008_utilities" title="Category:Unix SUS2008 utilities">Unix SUS2008 utilities</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Umask&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Umask" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Umask.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Umask"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Umask.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Umask" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Umask" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;oldid=596226869" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1050397" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Umask&amp;id=596226869" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Umask">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Umask&amp;oldid=596226869&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Umask&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Umask" title="Umask – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Umask" title="Umask – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Umask" title="Umask – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Umask" title="Umask – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Umask" title="Umask – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Umask" title="Umask – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Umask" title="Umask – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1050397#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 February 2014 at 19:39.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Umask" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1040 in 0.316 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Umask by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:39 GMT -->
+</html>

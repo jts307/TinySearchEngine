@@ -1,0 +1,779 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/AA_tree.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/AA_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>AA tree - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/AA_tree" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="AA_tree.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"AA_tree","wgTitle":"AA tree","wgCurRevisionId":582467170,"wgRevisionId":582467170,"wgArticleId":1665969,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from June 2011","All articles needing additional references","Trees (data structures)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"AA_tree","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q3490262"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-AA_tree skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">AA tree</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(June 2011)</i></small></span></td>
+</tr>
+</table>
+<p>An <b>AA tree</b> in <a href="Computer_science.html" title="Computer science">computer science</a> is a form of <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">balanced tree</a> used for storing and retrieving ordered data efficiently. AA trees are named for <a href="http://en.wikipedia.org/w/index.php?title=Arne_Andersson_(computer_science)&amp;action=edit&amp;redlink=1" class="new" title="Arne Andersson (computer science) (page does not exist)">Arne Andersson</a>, their inventor.</p>
+<p>AA trees are a variation of the <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black tree</a>, which in turn is an enhancement to the <a href="Binary_search_tree.html" title="Binary search tree">binary search tree</a>. Unlike red-black trees, red nodes on an AA tree can only be added as a right subchild. In other words, no red node can be a left sub-child. This results in the simulation of a <a href="http://en.wikipedia.org/wiki/2-3_tree" title="2-3 tree" class="mw-redirect">2-3 tree</a> instead of a <a href="http://en.wikipedia.org/wiki/2-3-4_tree" title="2-3-4 tree" class="mw-redirect">2-3-4 tree</a>, which greatly simplifies the maintenance operations. The maintenance algorithms for a red-black tree need to consider seven different shapes to properly balance the tree:</p>
+<p><a href="http://en.wikipedia.org/wiki/File:Red_Black_Shape_Cases.svg" class="image"><img alt="Red Black Shape Cases.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_Black_Shape_Cases.svg/360px-Red_Black_Shape_Cases.svg.png" width="360" height="70" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_Black_Shape_Cases.svg/540px-Red_Black_Shape_Cases.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Red_Black_Shape_Cases.svg/720px-Red_Black_Shape_Cases.svg.png 2x" /></a></p>
+<p>An AA tree on the other hand only needs to consider two shapes due to the strict requirement that only right links can be red:</p>
+<p><a href="http://en.wikipedia.org/wiki/File:AA_Tree_Shape_Cases.svg" class="image"><img alt="AA Tree Shape Cases.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/AA_Tree_Shape_Cases.svg/105px-AA_Tree_Shape_Cases.svg.png" width="105" height="70" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/AA_Tree_Shape_Cases.svg/158px-AA_Tree_Shape_Cases.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/AA_Tree_Shape_Cases.svg/210px-AA_Tree_Shape_Cases.svg.png 2x" /></a></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Balancing_rotations"><span class="tocnumber">1</span> <span class="toctext">Balancing rotations</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Insertion"><span class="tocnumber">2</span> <span class="toctext">Insertion</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Deletion"><span class="tocnumber">3</span> <span class="toctext">Deletion</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Performance"><span class="tocnumber">4</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Balancing_rotations">Balancing rotations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=1" title="Edit section: Balancing rotations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Whereas red-black trees require one bit of balancing metadata per node (the color), AA trees require O(log(N)) bits of metadata per node, in the form of an integer "level". The following invariants hold for AA trees:</p>
+<ol>
+<li>The level of every leaf node is one.</li>
+<li>The level of every left child is exactly one less than that of its parent.</li>
+<li>The level of every right child is equal to or one less than that of its parent.</li>
+<li>The level of every right grandchild is strictly less than that of its grandparent.</li>
+<li>Every node of level greater than one has two children.</li>
+</ol>
+<p>A link where the child's level is equal to that of its parent is called a <i>horizontal</i> link, and is analogous to a red link in the red-black tree. Individual right horizontal links are allowed, but consecutive ones are forbidden; all left horizontal links are forbidden. These are more restrictive constraints than the analogous ones on red-black trees, with the result that re-balancing an AA tree is procedurally much simpler than re-balancing a red-black tree.</p>
+<p>Insertions and deletions may transiently cause an AA tree to become unbalanced (that is, to violate the AA tree invariants). Only two distinct operations are needed for restoring balance: "skew" and "split". Skew is a right rotation to replace a subtree containing a left horizontal link with one containing a right horizontal link instead. Split is a left rotation and level increase to replace a subtree containing two or more consecutive right horizontal links with one containing two fewer consecutive right horizontal links. Implementation of balance-preserving insertion and deletion is simplified by relying on the skew and split operations to modify the tree only if needed, instead of making their callers decide whether to skew or split.</p>
+<pre>
+<b>function</b> skew <b>is</b>
+    <b>input:</b> T, a node representing an AA tree that needs to be rebalanced.
+    <b>output:</b> Another node representing the rebalanced AA tree.
+
+    <b>if</b> nil(T) <b>then</b>
+        <b>return</b> Nil
+    <b>else if</b> nil(left(T)) <b>then</b>
+        <b>return</b> T
+    <b>else if</b> level(left(T)) == level(T) <b>then</b>
+        <i>Swap the pointers of horizontal left links.</i>
+        L = left(T)
+        left(T) := right(L)
+        right(L) := T
+        <b>return</b> L
+    <b>else</b>
+        <b>return</b> T
+    <b>end if</b>
+<b>end function</b>
+</pre>
+<p>Skew: <a href="http://en.wikipedia.org/wiki/File:AA_Tree_Skew2.svg" class="image"><img alt="AA Tree Skew2.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/AA_Tree_Skew2.svg/280px-AA_Tree_Skew2.svg.png" width="280" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/AA_Tree_Skew2.svg/420px-AA_Tree_Skew2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e0/AA_Tree_Skew2.svg/560px-AA_Tree_Skew2.svg.png 2x" /></a></p>
+<pre>
+<b>function</b> split <b>is</b>
+    <b>input:</b> T, a node representing an AA tree that needs to be rebalanced.
+    <b>output:</b> Another node representing the rebalanced AA tree.
+
+    <b>if</b> nil(T) <b>then</b>
+        <b>return</b> Nil
+    <b>else if</b> nil(right(T)) <b>or </b> nil(right(right(T))) <b>then</b>
+        <b>return</b> T
+    <b>else if</b> level(T) == level(right(right(T))) <b>then</b>
+        <i>We have two horizontal right links.  Take the middle node, elevate it, and return it.</i>
+        R = right(T)
+        right(T) := left(R)
+        left(R) := T
+        level(R) := level(R) + 1
+        <b>return</b> R
+    <b>else</b>
+        <b>return</b> T
+    <b>end if</b>
+<b>end function</b>
+</pre>
+<p>Split: <a href="http://en.wikipedia.org/wiki/File:AA_Tree_Split2.svg" class="image"><img alt="AA Tree Split2.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/AA_Tree_Split2.svg/255px-AA_Tree_Split2.svg.png" width="255" height="150" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/AA_Tree_Split2.svg/383px-AA_Tree_Split2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0e/AA_Tree_Split2.svg/510px-AA_Tree_Split2.svg.png 2x" /></a></p>
+<h2><span class="mw-headline" id="Insertion">Insertion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=2" title="Edit section: Insertion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Insertion begins with the normal binary tree search and insertion procedure. Then, as the call stack unwinds (assuming a recursive implementation of the search), it's easy to check the validity of the tree and perform any rotations as necessary. If a horizontal left link arises, a skew will be performed, and if two horizontal right links arise, a split will be performed, possibly incrementing the level of the new root node of the current subtree. Note, in the code as given above, the increment of level(T). This makes it necessary to continue checking the validity of the tree as the modifications bubble up from the leaves.</p>
+<pre>
+<b>function</b> insert <b>is</b>
+    <b>input:</b> X, the value to be inserted, and T, the root of the tree to insert it into.
+    <b>output:</b> A balanced version T including X.
+
+    <i>Do the normal binary tree insertion procedure. Set the result of the</i>
+    <i>recursive call to the correct child in case a new node was created or the</i>
+    <i>root of the subtree changes.</i>
+    <b>if</b> nil(T) <b>then</b>
+        <i>Create a new leaf node with X.</i>
+        <b>return</b> node(X, 1, Nil, Nil)
+    <b>else if</b> X &lt; value(T) <b>then</b>
+        left(T) := insert(X, left(T))
+    <b>else if</b> X &gt; value(T) <b>then</b>
+        right(T) := insert(X, right(T))
+    <b>end if</b>
+    <i>Note that the case of X == value(T) is unspecified. As given, an insert</i>
+    <i>will have no effect. The implementor may desire different behavior.</i>
+
+    <i>Perform skew and then split. The conditionals that determine whether or</i>
+    <i>not a rotation will occur or not are inside of the procedures, as given</i>
+    <i>above.</i>
+    T := skew(T)
+    T := split(T)
+
+    <b>return T</b>
+<b>end function</b>
+</pre>
+<h2><span class="mw-headline" id="Deletion">Deletion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=3" title="Edit section: Deletion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As in most balanced binary trees, the deletion of an internal node can be turned into the deletion of a leaf node by swapping the internal node with either its closest predecessor or successor, depending on which are in the tree or on the implementor's whims. Retrieving a predecessor is simply a matter of following one left link and then all of the remaining right links. Similarly, the successor can be found by going right once and left until a null pointer is found. Because of the AA property of all nodes of level greater than one having two children, the successor or predecessor node will be in level 1, making their removal trivial.</p>
+<p>To re-balance a tree, there are a few approaches. The one described by Andersson in his <a rel="nofollow" class="external text" href="http://user.it.uu.se/~arnea/abs/simp.html">original paper</a> is the simplest, and it is described here, although actual implementations may opt for a more optimized approach. After a removal, the first step to maintaining tree validity is to lower the level of any nodes whose children are two levels below them, or who are missing children. Then, the entire level must be skewed and split. This approach was favored, because when laid down conceptually, it has three easily understood separate steps:</p>
+<ol>
+<li>Decrease the level, if appropriate.</li>
+<li>Skew the level.</li>
+<li>Split the level.</li>
+</ol>
+<p>However, we have to skew and split the entire level this time instead of just a node, complicating our code.</p>
+<pre>
+<b>function</b> delete <b>is</b>
+    <b>input:</b> X, the value to delete, and T, the root of the tree from which it should be deleted.
+    <b>output:</b> T, balanced, without the value X.
+   
+    <b>if</b> nil(T) <b>then</b>
+        return T
+    <b>else if</b> X &gt; value(T) <b>then</b>
+        right(T) := delete(X, right(T))
+    <b>else if</b> X &lt; value(T) <b>then</b>
+        left(T) := delete(X, left(T))
+    <b>else</b>
+        <i>If we're a leaf, easy, otherwise reduce to leaf case.</i> 
+        <b>if</b> leaf(T) <b>then</b>
+            return Nil
+        <b>else if</b> nil(left(T)) <b>then</b>
+            L := successor(T)
+            right(T) := delete(value(L), right(T))
+            value(T) := value(L)
+        <b>else</b>
+            L := predecessor(T)
+            left(T) := delete(value(L), left(T))
+            value(T) := value(L)
+        <b>end if</b>
+    <b>end if</b>
+
+    <i>Rebalance the tree. Decrease the level of all nodes in this level if</i>
+    necessary, and then skew and split all nodes in the new level.
+    T := decrease_level(T)
+    T := skew(T)
+    right(T) := skew(right(T))
+    <b>if not</b> nil(right(T))
+        right(right(T)) := skew(right(right(T)))
+    <b>end if</b>
+    T := split(T)
+    right(T) := split(right(T))
+    return T
+<b>end function</b>
+</pre>
+<pre>
+<b>function</b> decrease_level <b>is</b>
+    <b>input:</b> T, a tree for which we want to remove links that skip levels.
+    <b>output:</b> T with its level decreased.
+
+    should_be = min(level(left(T)), level(right(T))) + 1
+    <b>if</b> should_be &lt; level(T) <b>then</b>
+        level(T) := should_be
+        <b>if</b> should_be &lt; level(right(T)) <b>then</b>
+            level(right(T)) := should_be
+        <b>end if</b>
+    <b>end if</b>
+    return T
+<b>end function</b>
+</pre>
+<p>A good example of deletion by this algorithm is present in the <a rel="nofollow" class="external text" href="http://user.it.uu.se/~arnea/abs/simp.html">Andersson paper</a>.</p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=4" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The performance of an AA tree is equivalent to the performance of a red-black tree. While an AA tree makes more rotations than a red-black tree, the simpler algorithms tend to be faster, and all of this balances out to result in similar performance. A red-black tree is more consistent in its performance than an AA tree, but an AA tree tends to be flatter, which results in slightly faster search times.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">Red-black tree</a></li>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat tree</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cepis.org/upgrade/files/full-2004-V.pdf">"A Disquisition on The Performance Behavior of Binary Search Tree Data Structures (pages 67-75)"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAA+tree&amp;rft.btitle=A+Disquisition+on+The+Performance+Behavior+of+Binary+Search+Tree+Data+Structures+%28pages+67-75%29&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cepis.org%2Fupgrade%2Ffiles%2Ffull-2004-V.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://user.it.uu.se/~arnea/abs/simp.html">A. Andersson. Balanced search trees made simple</a></li>
+<li><a rel="nofollow" class="external text" href="http://user.it.uu.se/~arnea/abs/searchproc.html">A. Andersson. A note on searching in a binary search tree</a></li>
+<li><a rel="nofollow" class="external text" href="http://people.ksp.sk/~kuko/bak/index.html">AA-Tree Applet</a> by Kubo Kovac</li>
+<li><a rel="nofollow" class="external text" href="http://bitbucket.org/trijezdci/bstlib/src/">BSTlib</a> - Open source AA tree library for C by trijezdci</li>
+<li><a rel="nofollow" class="external text" href="http://www.softpedia.com/get/Others/Home-Education/AA-Visual-2007.shtml">AA Visual 2007 1.5 - OpenSource Delphi program for educating AA tree structures</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.eternallyconfuzzled.com/tuts/datastructures/jsw_tut_andersson.aspx">Thorough tutorial</a> Julienne Walker with lots of code, including a practical implementation</li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.fiu.edu/~weiss/dsaa_c++3/code/">Object Oriented implementation with tests</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cepis.org/upgrade/files/full-2004-V.pdf">A Disquisition on The Performance Behavior of Binary Search Tree Data Structures (pages 67-75)</a> - Comparison of AA trees, red-black trees, treaps, skip lists, and radix trees</li>
+<li><a rel="nofollow" class="external text" href="http://www.rational.co.za/aatree.c">An example C implementation</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/objc-aatree">An Objective-C implementation</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CS_trees" title="Template:CS trees"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CS_trees" title="Template talk:CS trees"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CS_trees&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Tree_(data_structure).html" title="Tree (data structure)">Tree data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Binary_tree.html" title="Binary tree">Binary trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree (BST)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cartesian_tree" title="Cartesian tree">Cartesian tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MVP_tree" title="MVP tree">MVP tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Top_tree" title="Top tree">Top tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/T-tree" title="T-tree">T-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-child_right-sibling_binary_tree" title="Left-child right-sibling binary tree">Left-child right-sibling binary tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Self-balancing binary search trees</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">AA tree</strong></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-leaning_red–black_tree" title="Left-leaning red–black tree">LLRB tree</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">Red–black tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat tree</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">Splay tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="B-tree.html" title="B-tree">B-trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/B+_tree" title="B+ tree">B+ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/B*-tree" title="B*-tree" class="mw-redirect">B*-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bx-tree" title="Bx-tree">B<small><sup>x</sup></small>-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UB-tree" title="UB-tree">UB-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3_tree" title="2–3 tree">2–3 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3–4_tree" title="2–3–4 tree">2–3–4 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/(a,b)-tree" title="(a,b)-tree">(a,b)-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dancing_tree" title="Dancing tree">Dancing tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HTree" title="HTree">HTree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Trie.html" title="Trie">Tries</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Suffix_tree" title="Suffix tree">Suffix tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Radix_tree" title="Radix tree">Radix tree</a></li>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_search_tree" title="Ternary search tree">Ternary search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-fast_trie" title="X-fast trie">X-fast trie</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Y-fast_trie" title="Y-fast trie">Y-fast trie</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Binary_space_partitioning" title="Binary space partitioning">Binary space partitioning (BSP)</a> trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Quadtree" title="Quadtree">Quadtree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Octree" title="Octree">Octree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/K-d_tree" title="K-d tree"><i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Implicit_k-d_tree" title="Implicit k-d tree">Implicit <i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vantage-point_tree" title="Vantage-point tree">VP tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Non-binary trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Exponential_tree" title="Exponential tree">Exponential tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fusion_tree" title="Fusion tree">Fusion tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interval_tree" title="Interval tree">Interval tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PQ_tree" title="PQ tree">PQ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Range_tree" title="Range tree">Range tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SPQR_tree" title="SPQR tree">SPQR tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Van_Emde_Boas_tree" title="Van Emde Boas tree">Van Emde Boas tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Spatial_index" title="Spatial index" class="mw-redirect">Spatial</a> data partitioning trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="R-tree.html" title="R-tree">R-tree</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+ tree</a></li>
+<li><a href="R__tree.html" title="R* tree">R* tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-tree" title="X-tree">X-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/M-tree" title="M-tree">M-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Segment_tree" title="Segment tree">Segment tree</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert R-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Priority_R-tree" title="Priority R-tree">Priority R-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hash_calendar" title="Hash calendar">Hash calendar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Merkle_tree" title="Merkle tree">Merkle tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finger_tree" title="Finger tree">Finger tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Order_statistic_tree" title="Order statistic tree">Order statistic tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metric_tree" title="Metric tree">Metric tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cover_tree" title="Cover tree">Cover tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BK-tree" title="BK-tree">BK-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Doubly_chained_tree" title="Doubly chained tree">Doubly chained tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IDistance" title="IDistance">iDistance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Link/cut_tree" title="Link/cut tree">Link/cut tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fenwick_tree" title="Fenwick tree">Fenwick tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Log-structured_merge-tree" title="Log-structured merge-tree">Log-structured merge-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><strong class="selflink">AA</strong></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1212
+CPU time usage: 0.376 seconds
+Real time usage: 0.431 seconds
+Preprocessor visited node count: 351/1000000
+Preprocessor generated node count: 1313/1500000
+Post‐expand include size: 30877/2048000 bytes
+Template argument size: 9/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 6/500
+Lua time usage: 0.052/10.000 seconds
+Lua memory usage: 1.58 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1665969-0!*!0!!en!4!* and timestamp 20140325035535
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;oldid=582467170">http://en.wikipedia.org/w/index.php?title=AA_tree&amp;oldid=582467170</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Trees_(data_structures)" title="Category:Trees (data structures)">Trees (data structures)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2011" title="Category:Articles needing additional references from June 2011">Articles needing additional references from June 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=AA+tree&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=AA+tree" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="AA_tree.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:AA_tree"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="AA_tree.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/AA_tree" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/AA_tree" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;oldid=582467170" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q3490262" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=AA_tree&amp;id=582467170" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=AA+tree">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=AA+tree&amp;oldid=582467170&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=AA_tree&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/AA_strom" title="AA strom – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Árbol_AA" title="Árbol AA – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/درخت_آآ" title="درخت آآ – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/AA木" title="AA木 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q3490262#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 November 2013 at 02:30.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/AA_tree" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1067 in 0.343 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/AA_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:11 GMT -->
+</html>

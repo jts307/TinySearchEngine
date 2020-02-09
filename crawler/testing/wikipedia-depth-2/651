@@ -1,0 +1,874 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Paging.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Paging by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Paging - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Paging" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Paging.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Paging","wgTitle":"Paging","wgCurRevisionId":600995192,"wgRevisionId":600995192,"wgArticleId":311193,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles to be merged from December 2013","All articles to be merged","All accuracy disputes","Articles with disputed statements from November 2010","All articles with unsourced statements","Articles with unsourced statements from September 2010","Articles with unsourced statements from January 2011","Articles with unsourced statements from June 2013","Virtual memory","Memory management"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Paging","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q656083"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Paging skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Paging</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-move" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/50px-Mergefrom.svg.png" width="50" height="20" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/75px-Mergefrom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/100px-Mergefrom.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">It has been suggested that <i><a href="http://en.wikipedia.org/wiki/Page_(computer_memory)" title="Page (computer memory)">Page (computer memory)</a></i> be <a href="http://en.wikipedia.org/wiki/Wikipedia:Merging" title="Wikipedia:Merging">merged</a> into this article. (<a href="http://en.wikipedia.org/wiki/Talk:Paging" title="Talk:Paging">Discuss</a>) <small><i>Proposed since December 2013.</i></small></span></td>
+</tr>
+</table>
+<div class="dablink">This article is about computer memory paging.  For other uses, see <a href="http://en.wikipedia.org/wiki/Page_(disambiguation)" title="Page (disambiguation)" class="mw-redirect">Page</a>.</div>
+<p>In <a href="Computer.html" title="Computer">computer</a> <a href="Operating_system.html" title="Operating system">operating systems</a>, <b>paging</b> is one of the <a href="Memory_management.html" title="Memory management">memory-management</a> schemes by which a computer can store and retrieve data from <a href="http://en.wikipedia.org/wiki/Computer_data_storage#Secondary_storage" title="Computer data storage">secondary storage</a> for use in <a href="http://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage" title="Computer data storage">main memory</a>.<sup id="cite_ref-ostep-1_1-0" class="reference"><a href="#cite_note-ostep-1-1"><span>[</span>1<span>]</span></a></sup> In the paging memory-management scheme, the operating system retrieves data from secondary storage in same-size <a href="http://en.wikipedia.org/wiki/Block_(data_storage)" title="Block (data storage)">blocks</a> called <i>pages</i>. The main advantage of paging over <a href="http://en.wikipedia.org/wiki/Memory_segmentation" title="Memory segmentation">memory segmentation</a> is that it allows the physical address space of a process to be <a href="http://en.wikipedia.org/wiki/Contiguous#Computer_science" title="Contiguous" class="mw-redirect">noncontiguous</a>. Before paging came into use, systems had to fit whole programs into storage <a href="http://en.wikipedia.org/wiki/Contiguously" title="Contiguously" class="mw-redirect">contiguously</a>, which caused various <a href="http://en.wikipedia.org/wiki/Computer_data_storage" title="Computer data storage">storage</a> and <a href="Fragmentation_(computer).html" title="Fragmentation (computer)" class="mw-redirect">fragmentation</a> problems.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>Paging is an important part of <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> implementation in most contemporary general-purpose operating systems, allowing them to use disk storage for data that does not fit into physical <a href="http://en.wikipedia.org/wiki/Random-access_memory" title="Random-access memory">random-access memory</a> (RAM).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Page_replacement_algorithms"><span class="tocnumber">2</span> <span class="toctext">Page replacement algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Demand_paging"><span class="tocnumber">2.1</span> <span class="toctext">Demand paging</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Anticipatory_paging"><span class="tocnumber">2.2</span> <span class="toctext">Anticipatory paging</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Free_page_queue"><span class="tocnumber">2.3</span> <span class="toctext">Free page queue</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Page_stealing"><span class="tocnumber">2.4</span> <span class="toctext">Page stealing</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Pre-cleaning"><span class="tocnumber">2.5</span> <span class="toctext">Pre-cleaning</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Thrashing"><span class="tocnumber">3</span> <span class="toctext">Thrashing</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Sharing"><span class="tocnumber">4</span> <span class="toctext">Sharing</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Terminology"><span class="tocnumber">5</span> <span class="toctext">Terminology</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Implementations"><span class="tocnumber">6</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Ferranti_Atlas"><span class="tocnumber">6.1</span> <span class="toctext">Ferranti Atlas</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Windows_3.x_and_Windows_9x"><span class="tocnumber">6.2</span> <span class="toctext">Windows 3.x and Windows 9x</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Windows_NT"><span class="tocnumber">6.3</span> <span class="toctext">Windows NT</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Fragmentation"><span class="tocnumber">6.3.1</span> <span class="toctext">Fragmentation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Unix_and_Unix-like_systems"><span class="tocnumber">6.4</span> <span class="toctext">Unix and Unix-like systems</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Linux"><span class="tocnumber">6.4.1</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#OS_X"><span class="tocnumber">6.4.2</span> <span class="toctext">OS X</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Solaris"><span class="tocnumber">6.4.3</span> <span class="toctext">Solaris</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#AmigaOS_4"><span class="tocnumber">6.5</span> <span class="toctext">AmigaOS 4</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Performance"><span class="tocnumber">7</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Tuning_swap_space_size"><span class="tocnumber">8</span> <span class="toctext">Tuning swap space size</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Reliability"><span class="tocnumber">9</span> <span class="toctext">Reliability</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Addressing_limits_on_32-bit_hardware"><span class="tocnumber">10</span> <span class="toctext">Addressing limits on 32-bit hardware</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Main_memory_smaller_than_virtual_memory"><span class="tocnumber">10.1</span> <span class="toctext">Main memory smaller than virtual memory</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Main_memory_the_same_size_as_virtual_memory"><span class="tocnumber">10.2</span> <span class="toctext">Main memory the same size as virtual memory</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Main_memory_larger_than_virtual_address_space"><span class="tocnumber">10.3</span> <span class="toctext">Main memory larger than virtual address space</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Notes"><span class="tocnumber">12</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#References"><span class="tocnumber">13</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#External_links"><span class="tocnumber">14</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The main functions of paging are performed when a program tries to access pages that are not currently mapped to physical memory (RAM). This situation is known as a <a href="http://en.wikipedia.org/wiki/Page_fault" title="Page fault">page fault</a>. The operating system must then take control and handle the page fault, in a manner invisible to the program. Therefore, the operating system must:</p>
+<ol>
+<li>Determine the location of the data in secondary storage.</li>
+<li>Obtain an empty <a href="http://en.wikipedia.org/wiki/Page_frame" title="Page frame" class="mw-redirect">page frame</a> in RAM to use as a container for the data.</li>
+<li>Load the requested data into the available page frame.</li>
+<li>Update the <a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">page table</a> to show the new data.</li>
+<li>Return control to the program, transparently retrying the <a href="http://en.wikipedia.org/wiki/Instruction_(computer_science)" title="Instruction (computer science)" class="mw-redirect">instruction</a> that caused the page fault.</li>
+</ol>
+<p>Until there is not enough RAM to store all the data needed, the process of obtaining an empty page frame does not involve removing another page from RAM. If all page frames are non-empty, obtaining an empty page frame requires choosing a page frame containing data to empty. If the data in that page frame has been modified since it was read into RAM (i.e., if it has become "dirty"), it must be written back to its location in secondary storage before being freed; otherwise, the contents of the page's page frame in RAM are the same as the contents of the page in secondary storage, so it does not need to be written back to secondary storage. If a reference is then made to that page, a page fault will occur, and an empty page frame must be obtained and the contents of the page in secondary storage again read into that page frame.</p>
+<p>Efficient paging systems must determine the page frame to empty by choosing one that is least likely to be needed within a short time. There are various <a href="http://en.wikipedia.org/wiki/Page_replacement_algorithm" title="Page replacement algorithm">page replacement algorithms</a> that try to do this. Most operating systems use some approximation of the <a href="http://en.wikipedia.org/wiki/Least_recently_used" title="Least recently used" class="mw-redirect">least recently used</a> (LRU) page replacement algorithm (the LRU itself cannot be implemented on the current hardware) or a <a href="http://en.wikipedia.org/wiki/Working_set" title="Working set">working set</a>-based algorithm.</p>
+<p>To further increase responsiveness, paging systems may employ various strategies to predict which pages will be needed soon. Such systems will attempt to load pages into main memory preemptively, before a program references them.</p>
+<h2><span class="mw-headline" id="Page_replacement_algorithms">Page replacement algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=2" title="Edit section: Page replacement algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Page_replacement_algorithm" title="Page replacement algorithm">Page replacement algorithm</a></div>
+<h3><span class="mw-headline" id="Demand_paging">Demand paging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=3" title="Edit section: Demand paging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a></div>
+<p>When pure demand paging is used, page loading only occurs at the time of the data request, and not before. In particular, when a demand pager is used, a program usually begins execution with none of its pages pre-loaded in RAM. Pages are copied from the executable file into RAM the first time the executing code references them, usually in response to <a href="http://en.wikipedia.org/wiki/Page_fault" title="Page fault">page faults</a>. As a consequence, pages of the executable file containing code not executed during a particular run will never be loaded into memory.</p>
+<h3><span class="mw-headline" id="Anticipatory_paging">Anticipatory paging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=4" title="Edit section: Anticipatory paging">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This technique, sometimes called "swap prefetch", preloads a process's non-resident pages that are likely to be referenced in the near future (taking advantage of <a href="Locality_of_reference.html" title="Locality of reference">locality of reference</a>). Such strategies attempt to reduce the number of page faults a process experiences. Some of those strategies are <i>"if a program references one virtual address which causes a page fault, perhaps the next few pages' worth of virtual address space will soon be used"</i> and <i>"if one big program just finished execution, leaving lots of free RAM, perhaps the user will return to using some of the programs that were recently paged out"</i>.</p>
+<h3><span class="mw-headline" id="Free_page_queue">Free page queue</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=5" title="Edit section: Free page queue">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The free page queue is a list of page frames that are available for assignment after a page fault. Some operating systems<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>a<span>]</span></a></sup> support page reclamation; if a page fault occurs for a page that had been stolen and the page frame was never reassigned, then the operating system avoids the necessity of reading the page back in by assigning the unmodified page frame.</p>
+<h3><span class="mw-headline" id="Page_stealing">Page stealing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=6" title="Edit section: Page stealing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some operating systems periodically look for pages that have not been recently referenced and add them to the Free page queue, after paging them out if they have been modified.</p>
+<h3><span class="mw-headline" id="Pre-cleaning">Pre-cleaning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=7" title="Edit section: Pre-cleaning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Unix operating systems periodically use <a href="http://en.wikipedia.org/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a> to pre-clean all dirty pages, that is, to save all modified pages to hard disk. Windows operating systems do the same thing via "modified page writer" threads.</p>
+<p>Pre-cleaning makes starting a new program or opening a new data file much faster. The hard drive can immediately seek to that file and consecutively read the whole file into pre-cleaned page frames. Without pre-cleaning, the hard drive is forced to seek back and forth between writing a dirty page frame to disk, and then reading the next page of the file into that frame.</p>
+<h2><span class="mw-headline" id="Thrashing">Thrashing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=8" title="Edit section: Thrashing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Thrashing_(computer_science)" title="Thrashing (computer science)">Thrashing (computer science)</a></div>
+<p>Most programs reach a steady state in their demand for memory <a href="Locality_of_reference.html" title="Locality of reference">locality</a> both in terms of instructions fetched and data being accessed. This steady state is usually much less than the total memory required by the program. This steady state is sometimes referred to as the <a href="http://en.wikipedia.org/wiki/Working_set" title="Working set">working set</a>: the set of memory pages that are most frequently accessed.</p>
+<p>Virtual memory systems work most efficiently when the ratio of the working set to the total number of pages that can be stored in RAM is low enough that the time spent resolving <a href="http://en.wikipedia.org/wiki/Page_fault" title="Page fault">page faults</a> is not a dominant factor in the workload's performance. A program that works with huge data structures will sometimes require a working set that is too large to be efficiently managed by the page system resulting in constant page faults that drastically slow down the system. This condition is referred to as <a href="http://en.wikipedia.org/wiki/Thrashing_(computer_science)" title="Thrashing (computer science)">thrashing</a>: pages are swapped out and then accessed causing frequent faults.</p>
+<p>An interesting characteristic of thrashing is that as the working set grows, there is very little increase in the number of faults until the critical point (when faults go up dramatically and the majority of the system's processing power is spent on handling them).</p>
+<p>An extreme example of this sort of situation occurred on the <a href="http://en.wikipedia.org/wiki/IBM_System/360_Model_67" title="IBM System/360 Model 67">IBM System/360 Model 67</a>, and <a href="http://en.wikipedia.org/wiki/IBM_System/370" title="IBM System/370">IBM System/370</a> through <a href="http://en.wikipedia.org/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a>, mainframe computers. An execute instruction that crosses a page boundary could point to a move instruction that also crosses a page boundary, and the move instruction could move data from a source that crosses a page boundary to a target of data that also crosses a page boundary. The total number of pages thus being used by this particular instruction is eight, and all eight pages must be present in memory at the same time. If the operating system will allocate less than eight pages of actual memory in this example, when it attempts to swap out some part of the instruction or data to bring in the remainder, the instruction will again page fault, and it will thrash on every attempt to restart the failing instruction.</p>
+<p>To decrease excessive paging, and thus possibly resolve thrashing problem, a user can do any of the following:</p>
+<ul>
+<li>Increase the amount of RAM in the computer (generally the best long-term solution).</li>
+<li>Decrease the number of programs being concurrently run on the computer.</li>
+</ul>
+<p>The term <i>thrashing</i> is also used in contexts other than virtual memory systems, for example to describe <a href="Cache_(computing).html" title="Cache (computing)">cache</a> issues in computing or <a href="http://en.wikipedia.org/wiki/Silly_window_syndrome" title="Silly window syndrome">silly window syndrome</a> in networking.</p>
+<h2><span class="mw-headline" id="Sharing">Sharing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=9" title="Edit section: Sharing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="http://en.wikipedia.org/wiki/Multi-programming" title="Multi-programming" class="mw-redirect">multi-programming</a> or in <a href="Multi-user.html" title="Multi-user">multi-user</a> environment it is common for many users to be executing the same program. If individual copies of these programs were given to each user, much of the <a href="http://en.wikipedia.org/wiki/Primary_storage" title="Primary storage" class="mw-redirect">primary storage</a> would be wasted. The solution is to share those pages that can be shared.</p>
+<p>Sharing must be carefully controlled to prevent one process from modifying <a href="http://en.wikipedia.org/wiki/Data" title="Data">data</a> that another process is accessing. In most systems the shared programs are divided into separate pages i.e. coding and data are kept separate. This is achieved by having <a href="http://en.wikipedia.org/wiki/Junction_table" title="Junction table">page map table</a> entries of different processes point to the same page frame, that page frame is shared among those processes.</p>
+<h2><span class="mw-headline" id="Terminology">Terminology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=10" title="Edit section: Terminology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Historically, <i>paging</i> sometimes referred to a <a href="http://en.wikipedia.org/wiki/Memory_allocation" title="Memory allocation" class="mw-redirect">memory allocation</a> scheme that used fixed-length pages as opposed to variable-length <a href="http://en.wikipedia.org/wiki/Segmentation_(memory)" title="Segmentation (memory)" class="mw-redirect">segments</a>, without implicit suggestion that virtual memory techniques were employed at all or that those pages were transferred to disk.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>3<span>]</span></a></sup> <sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>4<span>]</span></a></sup> Such usage is rare today.</p>
+<p>Some modern systems use the term <i>swapping</i> along with <i>paging</i>. Historically, <i>swapping</i> referred to moving from/to secondary storage a whole program at a time, in a scheme known as <a href="http://en.wikipedia.org/w/index.php?title=Roll-in/roll-out&amp;action=edit&amp;redlink=1" class="new" title="Roll-in/roll-out (page does not exist)">roll-in/roll-out</a>. <sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>5<span>]</span></a></sup> <sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>6<span>]</span></a></sup> In the 1960s, after the concept of virtual memory was introduced—in two variants, either using segments or pages—the term <i>swapping</i> was applied to moving, respectively, either segments or pages, between disk and memory. Today with the virtual memory mostly based on pages, not segments, <i>swapping</i> became a fairly close synonym of <i>paging</i>, although with one difference.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Disputed_statement" title="Wikipedia:Disputed statement" class="mw-redirect"><span title="The material near this tag is possibly inaccurate or nonfactual. (November 2010)">dubious</span></a> <span class="metadata">– <a href="http://en.wikipedia.org/wiki/Talk:Paging#Paging_vs._swapping" title="Talk:Paging">discuss</a></span></i>]</sup></p>
+<p>In systems that support <a href="http://en.wikipedia.org/wiki/Memory-mapped_file" title="Memory-mapped file">memory-mapped files</a>, when a page fault occurs, a page may be then transferred to or from <i>any</i> ordinary disk file, not necessarily a dedicated space. <i>Page in</i> is transferring a page from the disk to RAM. <i>Page out</i> is transferring a page from RAM to the disk. <i>Swap in</i> and <i>out</i> only refer to transferring pages between RAM and dedicated <i>swap space</i> or <i>swap file</i> or <i><a href="http://en.wikipedia.org/wiki/Scratch_disk" title="Scratch disk" class="mw-redirect">scratch disk</a> space</i>, and not any other place on disk.</p>
+<p>On <a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">Windows NT</a> based systems, dedicated swap space is known as a page file and paging/swapping are often used interchangeably.</p>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=11" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Ferranti_Atlas">Ferranti Atlas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=12" title="Edit section: Ferranti Atlas">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The first computer to support paging was the <a href="http://en.wikipedia.org/wiki/Atlas_Computer_(Manchester)" title="Atlas Computer (Manchester)" class="mw-redirect">Atlas</a>,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>7<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>9<span>]</span></a></sup> jointly developed by <a href="http://en.wikipedia.org/wiki/Ferranti" title="Ferranti">Ferranti</a>, the <a href="http://en.wikipedia.org/wiki/University_of_Manchester" title="University of Manchester">University of Manchester</a> and <a href="http://en.wikipedia.org/wiki/Plessey" title="Plessey">Plessey</a>. The machine had an associative (<a href="http://en.wikipedia.org/wiki/Content-addressable_memory" title="Content-addressable memory">content-addressable</a>) memory with one entry for each 512 word page. The Supervisor<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>10<span>]</span></a></sup> handled non-equivalence interruptions<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>b<span>]</span></a></sup> and managed the transfer of pages between core and drum in order to provide a one-level store<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>11<span>]</span></a></sup> to programs.</p>
+<h3><span class="mw-headline" id="Windows_3.x_and_Windows_9x">Windows 3.x and Windows 9x</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=13" title="Edit section: Windows 3.x and Windows 9x">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Paging has been a feature of <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> since <a href="http://en.wikipedia.org/wiki/Windows_3.0" title="Windows 3.0">Windows 3.0</a> in 1990. Windows 3.x creates a <a href="http://en.wikipedia.org/wiki/Hidden_file" title="Hidden file" class="mw-redirect">hidden file</a> named <tt>386SPART.PAR</tt> or <tt>WIN386.SWP</tt> for use as a swap file. It is generally found in the <a href="http://en.wikipedia.org/wiki/Root_directory" title="Root directory">root directory</a>, but it may appear elsewhere (typically in the WINDOWS directory). Its size depends on how much swap space the system has (a setting selected by the user under <a href="http://en.wikipedia.org/wiki/Windows_Control_Panel" title="Windows Control Panel" class="mw-redirect">Control Panel</a> → Enhanced under "Virtual Memory"). If the user moves or deletes this file, a <a href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" title="Blue Screen of Death">blue screen</a> will appear the next time Windows is started, with the <a href="http://en.wikipedia.org/wiki/Error_message" title="Error message">error message</a> "The permanent swap file is corrupt". The user will be prompted to choose whether or not to delete the file (whether or not it exists).</p>
+<p><a href="http://en.wikipedia.org/wiki/Windows_95" title="Windows 95">Windows 95</a>, <a href="http://en.wikipedia.org/wiki/Windows_98" title="Windows 98">Windows 98</a> and <a href="http://en.wikipedia.org/wiki/Windows_Me" title="Windows Me" class="mw-redirect">Windows Me</a> use a similar file, and the settings for it are located under Control Panel → System → Performance tab → Virtual Memory. Windows automatically sets the size of the page file to start at 1.5× the size of physical memory, and expand up to 3× physical memory if necessary. If a user runs memory-intensive applications on a system with low physical memory, it is preferable to manually set these sizes to a value higher than default.</p>
+<h3><span class="mw-headline" id="Windows_NT">Windows NT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=14" title="Edit section: Windows NT">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">NT-based</a> versions of Windows (such as <a href="http://en.wikipedia.org/wiki/Windows_XP" title="Windows XP">Windows XP</a>, <a href="http://en.wikipedia.org/wiki/Windows_Vista" title="Windows Vista">Windows Vista</a>, <a href="http://en.wikipedia.org/wiki/Windows_7" title="Windows 7">Windows 7</a>, and <a href="http://en.wikipedia.org/wiki/Windows_8" title="Windows 8">Windows 8</a>), the file used for paging is named <tt>pagefile.sys</tt>. The default location of the page file is in the root directory of the partition where Windows is installed. Windows can be configured to use free space on any available drives for pagefiles. It is required, however, for the boot partition (i.e. the drive containing the Windows directory) to have a pagefile on it if the system is configured to write either kernel or full memory dumps after a <a href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" title="Blue Screen of Death">crash</a>. Windows uses the paging file as temporary storage for the memory dump. When the system is rebooted, Windows copies the memory dump from the pagefile to a separate file and frees the space that was used in the pagefile.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>12<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Fragmentation">Fragmentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=15" title="Edit section: Fragmentation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In Windows' default configuration the pagefile is allowed to expand beyond its initial allocation when necessary. If this happens gradually, it can become heavily <a href="http://en.wikipedia.org/wiki/File_system_fragmentation" title="File system fragmentation">fragmented</a> which can potentially cause performance problems.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>13<span>]</span></a></sup> The common advice given to avoid this is to set a single "locked" pagefile size so that Windows will not expand it. However, the pagefile only expands when it has been filled, which, in its default configuration, is 150% the total amount of physical memory.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>14<span>]</span></a></sup> Thus the total demand for pagefile-backed virtual memory must exceed 250% of the computer's physical memory before the pagefile will expand.</p>
+<p>The fragmentation of the pagefile that occurs when it expands is temporary. As soon as the expanded regions are no longer in use (at the next reboot, if not sooner) the additional disk space allocations are freed and the pagefile is back to its original state.</p>
+<p>Locking a page file's size can be problematic in the case that a Windows application requests more memory than the total size of physical memory and the page file. In this case, requests to allocate memory fail, which may cause applications and system processes to fail. Supporters of this view will note that the page file is rarely read or written in sequential order, so the performance advantage of having a completely sequential page file is minimal. However, it is generally agreed that a large page file will allow use of memory-heavy applications, and there is no penalty except that more disk space is used.</p>
+<p>The extra disk space may be trivial on systems using current specifications, i.e. a system with 3&#160;GB of memory having a 6 gigabyte fixed-size swap file on a computer with a 750&#160;GB disk drive, or a system with 6&#160;GB of memory/16&#160;GB fixed swap and 2&#160;TB of disk space, in both cases the system is using about 8/10 of 1% of the disk space with the swap file pre-extended to maximum.</p>
+<p><a href="http://en.wikipedia.org/wiki/Defragment" title="Defragment" class="mw-redirect">Defragmenting</a> the page file is also occasionally recommended to improve performance when a Windows system is chronically using much more memory than its total physical memory.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (September 2010)">citation needed</span></a></i>]</sup> This view ignores the fact that, aside from the temporary results of expansion, the pagefile does not become fragmented over time. In general, performance concerns related to pagefile access are much more effectively dealt with by adding more physical memory.</p>
+<h3><span class="mw-headline" id="Unix_and_Unix-like_systems">Unix and Unix-like systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=16" title="Edit section: Unix and Unix-like systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="Unix.html" title="Unix">Unix</a> systems, and other <a href="Unix-like.html" title="Unix-like">Unix-like</a> operating systems, use the term "swap" to describe both the act of moving memory pages between RAM and disk, and the region of a disk the pages are stored on. In some of those systems, it is common to dedicate an entire partition of a hard disk to swapping. These partitions are called <i>swap partitions</i>. Many systems have an entire hard drive dedicated to swapping, separate from the data drive(s), containing only a swap partition. A hard drive dedicated to swapping is called a "swap drive" or a "scratch drive" or a "<a href="http://en.wikipedia.org/wiki/Scratch_disk" title="Scratch disk" class="mw-redirect">scratch disk</a>". Some of those systems only support swapping to a swap partition; others also support swapping to files.</p>
+<h4><span class="mw-headline" id="Linux"><span id="LINUX"></span>Linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=17" title="Edit section: Linux">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink boilerplate seealso">See also: <a href="http://en.wikipedia.org/wiki/Swap_partitions_on_SSDs" title="Swap partitions on SSDs" class="mw-redirect">Swap partitions on SSDs</a>, <a href="http://en.wikipedia.org/wiki/Zswap" title="Zswap">zswap</a>,&#160;and <a href="http://en.wikipedia.org/wiki/Zram" title="Zram">zram</a></div>
+<p>From a software point of view with the 2.6 Linux kernel, swap files are just as fast<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>15<span>]</span></a></sup><sup id="cite_ref-autogenerated2005_18-0" class="reference"><a href="#cite_note-autogenerated2005-18"><span>[</span>16<span>]</span></a></sup> as swap partitions. The kernel keeps a map of where the swap file exists, and accesses the disk directly, bypassing caching and filesystem overhead.<sup id="cite_ref-autogenerated2005_18-1" class="reference"><a href="#cite_note-autogenerated2005-18"><span>[</span>16<span>]</span></a></sup> <a href="http://en.wikipedia.org/wiki/Red_Hat" title="Red Hat">Red Hat</a> recommends using a swap partition.<sup id="cite_ref-autogenerated1_19-0" class="reference"><a href="#cite_note-autogenerated1-19"><span>[</span>17<span>]</span></a></sup> With a swap partition one can choose where on the disk it resides and place it where the disk throughput is highest. The administrative flexibility of swap files can outweigh the other advantages of swap partitions. For example, a swap file can be placed on any drive, can be set to any desired size, and can be added or changed as needed. A swap <i>partition</i>, however, is not as flexible as a file, as it cannot be changed without using tools to resize it, generally outside the operating system that uses the swap partition.</p>
+<p>Linux supports using a virtually unlimited number of swapping devices, each of which can be assigned a priority. When the operating system needs to swap pages out of physical memory, it uses the highest-priority device with free space. If multiple devices are assigned the same priority, they are used in a fashion similar to level 0 <a href="http://en.wikipedia.org/wiki/Redundant_array_of_independent_disks" title="Redundant array of independent disks" class="mw-redirect">RAID</a> arrangements. This provides improved performance as long as the devices can be accessed efficiently in parallel. Therefore, care should be taken assigning the priorities. For example, swaps located on the same physical disk should not be used in parallel, but in order ranging from the fastest to the slowest (i.e. the fastest having the highest priority).</p>
+<h4><span class="mw-headline" id="OS_X">OS X</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=18" title="Edit section: OS X">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="OS_X.html" title="OS X">OS X</a> uses multiple swap files. The default (and Apple-recommended) installation places them on the root partition, though it is possible to place them instead on a separate partition or device.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>18<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Solaris">Solaris</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=19" title="Edit section: Solaris">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a> allows swapping to raw disk slices as well as files. The traditional method is to use slice 1 (i.e. the second slice) on the OS disk to house swap. Swap setup is managed by the system boot process if there are entries in the "vfstab" file, but can also be managed manually through the use of the "swap" command. While it is possible to remove, at runtime, all swap from a lightly loaded system, Sun does not recommend it.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2011)">citation needed</span></a></i>]</sup> Recent additions to the <a href="http://en.wikipedia.org/wiki/ZFS" title="ZFS">ZFS</a> file system allow creation of ZFS devices that can be used as swap partitions. Swapping to normal files on ZFS file systems is not supported.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2011)">citation needed</span></a></i>]</sup></p>
+<h3><span class="mw-headline" id="AmigaOS_4">AmigaOS 4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=20" title="Edit section: AmigaOS 4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/AmigaOS_4.0" title="AmigaOS 4.0" class="mw-redirect">AmigaOS 4.0</a> introduced a new system for allocating RAM and defragmenting physical memory. It still uses flat shared address space that cannot be defragmented. It is based on <a href="http://en.wikipedia.org/wiki/Slab_allocation" title="Slab allocation">slab allocation method</a> and paging memory that allows swapping. Paging was implemented in <a href="http://en.wikipedia.org/wiki/AmigaOS_4.1" title="AmigaOS 4.1" class="mw-redirect">AmigaOS 4.1</a> but may lock up system if all physical memory is used up.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>19<span>]</span></a></sup> Swap memory could be activated and deactivated any moment allowing the user to choose to use only physical RAM.</p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=21" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The backing store for a virtual memory operating system is typically many orders of <a href="http://en.wikipedia.org/wiki/Magnitude_(mathematics)" title="Magnitude (mathematics)">magnitude</a> slower than <a href="http://en.wikipedia.org/wiki/Random_access_memory" title="Random access memory" class="mw-redirect">RAM</a>. Additionally, using mechanical storage devices introduces <a href="http://en.wikipedia.org/wiki/Access_time" title="Access time">delay</a>, several milliseconds for a hard disk. Therefore it is desirable to reduce or eliminate swapping, where practical. Some operating systems offer settings to influence the kernel's decisions.</p>
+<ol>
+<li>Linux offers the <code>/proc/sys/vm/swappiness</code> parameter, which changes the balance between swapping out runtime memory, as opposed to dropping pages from the system <a href="http://en.wikipedia.org/wiki/Page_cache" title="Page cache">page cache</a>.</li>
+<li>Windows 2000, XP, and Vista offer the <code>DisablePagingExecutive</code> registry setting, which controls whether kernel-mode code and data can be eligible for paging out.</li>
+<li>Mainframe computers frequently used head-per-track disk drives or drums for page and swap storage to eliminate seek time, and several technologies<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>20<span>]</span></a></sup> to have multiple concurrent requests to the same device in order to reduce <a href="http://en.wikipedia.org/wiki/Rotational_latency" title="Rotational latency" class="mw-redirect">rotational latency</a>.</li>
+<li>Flash memory has a finite number of erase-write cycles (see <a href="http://en.wikipedia.org/wiki/Flash_memory#Limitations" title="Flash memory">Limitations of flash memory</a>), and the smallest amount of data that can be erased at once might be very large (128 KiB for an Intel X25-M SSD <sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>21<span>]</span></a></sup>), seldom coinciding with pagesize. Therefore, flash memory may wear out quickly if used as swap space under tight memory conditions. On the attractive side, flash memory is practically delayless compared to hard disks, and not <a href="http://en.wikipedia.org/wiki/Volatile_memory" title="Volatile memory">volatile</a> as RAM chips. Schemes like <a href="http://en.wikipedia.org/wiki/ReadyBoost" title="ReadyBoost">ReadyBoost</a> and <a href="http://en.wikipedia.org/wiki/Intel_Turbo_Memory" title="Intel Turbo Memory">Intel Turbo Memory</a> are made to exploit these characteristics.</li>
+</ol>
+<p>Many <a href="Unix-like.html" title="Unix-like">Unix-like</a> operating systems (for example <a href="http://en.wikipedia.org/wiki/AIX" title="AIX" class="mw-redirect">AIX</a>, <a href="Linux.html" title="Linux">Linux</a> and <a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a>) allow using multiple storage devices for swap space in parallel, to increase performance.</p>
+<h2><span class="mw-headline" id="Tuning_swap_space_size">Tuning swap space size</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=22" title="Edit section: Tuning swap space size">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In some older virtual memory operating systems, space in swap backing store is reserved when programs allocate memory for runtime data. OS vendors typically issue guidelines about how much swap space should be allocated.</p>
+<h2><span class="mw-headline" id="Reliability">Reliability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=23" title="Edit section: Reliability">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Swapping can decrease system reliability by some amount. If swapped data gets corrupted on the disk (or at any other location, or during transfer), the memory will also have incorrect contents after the data has later been returned.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2013)">citation needed</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="Addressing_limits_on_32-bit_hardware">Addressing limits on 32-bit hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=24" title="Edit section: Addressing limits on 32-bit hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Paging is one way of allowing the size of the addresses used by a process—the process's "virtual address space" or "logical address space" -- to be different from the amount of main memory actually installed on a particular computer—the physical address space.</p>
+<h3><span class="mw-headline" id="Main_memory_smaller_than_virtual_memory">Main memory smaller than virtual memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=25" title="Edit section: Main memory smaller than virtual memory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In most systems, the size of a process's virtual address space is much larger than the available main memory.<sup id="cite_ref-buzbee_24-0" class="reference"><a href="#cite_note-buzbee-24"><span>[</span>22<span>]</span></a></sup> The amount of physical main memory available is limited by the number of address bits on the <a href="http://en.wikipedia.org/wiki/Address_bus" title="Address bus">address bus</a> that connects the CPU to main memory. There might be fewer physical address bits than virtual address bits; for example, the <a href="http://en.wikipedia.org/wiki/Intel_80386#The_i386SX_variant" title="Intel 80386">i386SX CPU</a> internally uses 32-bit virtual addresses but has only 24 pins connected to the address bus, limiting addressing to at most 16&#160;MB of physical main memory. Even on systems that have the same or more physical address bits as virtual address bits, often the actual amount of physical main memory installed is much less than the size that can potentially be addressed, for financial reasons or because the hardware <a href="http://en.wikipedia.org/w/index.php?title=Address_map&amp;action=edit&amp;redlink=1" class="new" title="Address map (page does not exist)">address map</a> reserves large regions for I/O or other hardware features, so main memory cannot be placed in those regions.</p>
+<h3><span class="mw-headline" id="Main_memory_the_same_size_as_virtual_memory">Main memory the same size as virtual memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=26" title="Edit section: Main memory the same size as virtual memory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It is not uncommon to find 32-bit computers with 4&#160;GB of RAM, the maximum amount of RAM addressable unless the page table entry format supports physical addresses larger than 32 bits. For example, on 32-bit <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> processors, the <a href="http://en.wikipedia.org/wiki/Physical_Address_Extension" title="Physical Address Extension">Physical Address Extension</a> (PAE) feature is required to access more than 4&#160;GB of RAM. For some machines, e.g., the IBM <a href="http://en.wikipedia.org/wiki/IBM_System/370" title="IBM System/370">S/370</a> in XA mode, the upper bit was not part of the address and only 2&#160;GB could be addressed.</p>
+<p>Paging and swap space can be used beyond this 4&#160;GB limit, due to it being addressed in terms of disk locations rather than memory addresses.</p>
+<p>While 32-bit programs on machines with linear address spaces will continue to be limited to the 4&#160;GB they're capable of addressing, because they each exist in their own <a href="http://en.wikipedia.org/wiki/Virtual_address_space" title="Virtual address space">virtual address space</a>, a group of programs can together grow beyond this limit.</p>
+<p>On machines with segment registers, e.g., the access registers on an <a href="http://en.wikipedia.org/wiki/IBM_System/370" title="IBM System/370">IBM System/370</a> in <a href="http://en.wikipedia.org/wiki/IBM_ESA/390" title="IBM ESA/390">ESA</a> mode,<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>23<span>]</span></a></sup> the address space size is limited only by OS constraints, e.g., the need to fit the mapping tables into the available storage.</p>
+<h3><span class="mw-headline" id="Main_memory_larger_than_virtual_address_space">Main memory larger than virtual address space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=27" title="Edit section: Main memory larger than virtual address space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A few computers have a main memory larger than the virtual address space of a process, such as the Magic-1,<sup id="cite_ref-buzbee_24-1" class="reference"><a href="#cite_note-buzbee-24"><span>[</span>22<span>]</span></a></sup> some <a href="PDP-11.html#Decline" title="PDP-11">PDP-11</a> machines, and some systems using 32-bit <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> processors with <a href="http://en.wikipedia.org/wiki/Physical_Address_Extension" title="Physical Address Extension">Physical Address Extension</a>.</p>
+<p>This nullifies a significant advantage of virtual memory, since a single process cannot use more main memory than the amount of its virtual address space. Such systems often use paging techniques to obtain secondary benefits:</p>
+<ul>
+<li>The "extra memory" can be used in the <a href="http://en.wikipedia.org/wiki/Page_cache" title="Page cache">page cache</a> to cache frequently used files and metadata, such as directory information, from secondary storage.</li>
+<li>If the processor and operating system support multiple virtual address spaces, the "extra memory" can be used to run more processes. Paging allows the cumulative total of virtual address spaces to exceed physical main memory.</li>
+</ul>
+<p>The size of the cumulative total of virtual address spaces is still limited by the amount of secondary storage available.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=28" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/38px-Wikisource-logo.svg.png" width="38" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/57px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/76px-Wikisource-logo.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style=""><a href="Wikisource.html" title="Wikisource">Wikisource</a> has original text related to this article:
+<div style="margin-left: 10px;"><b><a href="http://en.wikisource.org/wiki/The_Paging_Game" class="extiw" title="wikisource:The Paging Game">The Paging Game</a></b></div>
+</td>
+</tr>
+</table>
+<div class="div-col columns column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Physical_memory" title="Physical memory" class="mw-redirect">Physical memory</a>, a subject of paging</li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a>, an abstraction that paging may create</li>
+<li><a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a>, a "lazy" paging scheme</li>
+<li><a href="http://en.wikipedia.org/wiki/Page_cache" title="Page cache">Page cache</a>, a disk cache that utilizes virtual memory mechanism</li>
+<li><a href="http://en.wikipedia.org/wiki/Page_replacement_algorithm" title="Page replacement algorithm">Page replacement algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Segmentation_(memory)" title="Segmentation (memory)" class="mw-redirect">Segmentation (memory)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_size" title="Page size" class="mw-redirect">Page size</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">Page table</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_allocation" title="Memory allocation" class="mw-redirect">Memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Expanded_memory" title="Expanded memory">Expanded memory</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=29" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;">
+<ol class="references">
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">For example, <a href="http://en.wikipedia.org/wiki/MVS" title="MVS">MVS</a> (Multiple Virtual Storage).</span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">A non-equivalence interruption occurs when the high order bits of an address do not match any entry in the associative memory.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=30" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-ostep-1-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-ostep-1_1-0">^</a></b></span> <span class="reference-text"><span id="CITEREFArpaci-DusseauArpaci-Dusseau2014" class="citation">Arpaci-Dusseau, Remzi H.; Arpaci-Dusseau, Andrea C. (2014), <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf"><i>Operating Systems: Three Easy Pieces [Chapter: Paging]</i></a>, Arpaci-Dusseau Books</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=Arpaci-Dusseau%2C+Andrea+C.&amp;rft.au=Arpaci-Dusseau%2C+Remzi+H.&amp;rft.aufirst=Remzi+H.&amp;rft.aulast=Arpaci-Dusseau&amp;rft.btitle=Operating+Systems%3A+Three+Easy+Pieces+%5BChapter%3A+Paging%5D&amp;rft.date=2014&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fpages.cs.wisc.edu%2F~remzi%2FOSTEP%2Fvm-paging.pdf&amp;rft.pub=Arpaci-Dusseau+Books&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book">Belzer, Jack; Holzman, Albert G.; Kent, Allen, eds. (1981). <a rel="nofollow" class="external text" href="http://books.google.com/?id=KUgNGCJB4agC&amp;printsec=frontcover">"Virtual memory systems"</a>. <i>Encyclopedia of computer science and technology</i> <b>14</b>. CRC Press. p.&#160;32. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-8247-2214-0" title="Special:BookSources/0-8247-2214-0">0-8247-2214-0</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Encyclopedia+of+computer+science+and+technology&amp;rft.btitle=Virtual+memory+systems&amp;rft.date=1981&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3DKUgNGCJB4agC%26printsec%3Dfrontcover&amp;rft.isbn=0-8247-2214-0&amp;rft.pages=32&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=14" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation book">Deitel, Harvey M. (1983). <i>An Introduction to Operating Systems</i>. Addison-Wesley. pp.&#160;181, 187. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-14473-5" title="Special:BookSources/0-201-14473-5">0-201-14473-5</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=Deitel%2C+Harvey+M.&amp;rft.aufirst=Harvey+M.&amp;rft.aulast=Deitel&amp;rft.btitle=An+Introduction+to+Operating+Systems&amp;rft.date=1983&amp;rft.genre=book&amp;rft.isbn=0-201-14473-5&amp;rft.pages=181%2C+187&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation book">Belzer, Jack; Holzman, Albert G.; Kent, Allen, eds. (1981). <a rel="nofollow" class="external text" href="http://books.google.com/?id=uTFirmDlSL8C&amp;printsec=frontcover">"Operating systems"</a>. <i>Encyclopedia of computer science and technology</i> <b>11</b>. CRC Press. p.&#160;433. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1002%2F">10.1002/</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-8247-2261-2" title="Special:BookSources/0-8247-2261-2">0-8247-2261-2</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Encyclopedia+of+computer+science+and+technology&amp;rft.btitle=Operating+systems&amp;rft.date=1981&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3DuTFirmDlSL8C%26printsec%3Dfrontcover&amp;rft_id=info%3Adoi%2F10.1002%2F&amp;rft.isbn=0-8247-2261-2&amp;rft.pages=433&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=11" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation book">Belzer, Jack; Holzman, Albert G.; Kent, Allen, eds. (1981). <a rel="nofollow" class="external text" href="http://books.google.com/?id=uTFirmDlSL8C&amp;printsec=frontcover">"Operating systems"</a>. <i>Encyclopedia of computer science and technology</i> <b>11</b>. CRC Press. p.&#160;442. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-8247-2261-2" title="Special:BookSources/0-8247-2261-2">0-8247-2261-2</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Encyclopedia+of+computer+science+and+technology&amp;rft.btitle=Operating+systems&amp;rft.date=1981&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3DuTFirmDlSL8C%26printsec%3Dfrontcover&amp;rft.isbn=0-8247-2261-2&amp;rft.pages=442&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=11" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation book">Cragon, Harvey G. (1996). <a rel="nofollow" class="external text" href="http://books.google.com/?id=q2w3JSFD7l4C"><i>Memory Systems and Pipelined Processors</i></a>. Jones and Bartlett Publishers. p.&#160;109. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-86720-474-5" title="Special:BookSources/0-86720-474-5">0-86720-474-5</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=Cragon%2C+Harvey+G.&amp;rft.aufirst=Harvey+G.&amp;rft.aulast=Cragon&amp;rft.btitle=Memory+Systems+and+Pipelined+Processors&amp;rft.date=1996&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3Dq2w3JSFD7l4C&amp;rft.isbn=0-86720-474-5&amp;rft.pages=109&amp;rft.pub=Jones+and+Bartlett+Publishers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation book">Sumner, F. H.; Haley, G.; Chenh, E. C. Y. (1962), "The Central Control Unit of the 'Atlas' Computer", <i>Information Processing 1962</i>, IFIP Congress Proceedings, Proceedings of IFIP Congress 62, Spartan</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Information+Processing+1962&amp;rft.au=Chenh%2C+E.+C.+Y.&amp;rft.aufirst=F.+H.&amp;rft.au=Haley%2C+G.&amp;rft.aulast=Sumner&amp;rft.au=Sumner%2C+F.+H.&amp;rft.btitle=The+Central+Control+Unit+of+the+%27Atlas%27+Computer&amp;rft.date=1962&amp;rft.genre=bookitem&amp;rft.pub=Spartan&amp;rft.series=IFIP+Congress+Proceedings&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=Proceedings+of+IFIP+Congress+62" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.computer50.org/kgill/atlas/atlas.html">"The Atlas"</a>, University of Manchester: Department of Computer Science</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.btitle=The+Atlas&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.computer50.org%2Fkgill%2Fatlas%2Fatlas.html&amp;rft.place=University+of+Manchester&amp;rft.pub=Department+of+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.chilton-computing.org.uk/acl/technology/atlas/p005.htm">"Atlas Architecture"</a>, <i>Atlas Computer</i>, Chilton: Atlas Computer Laboratory</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Atlas+Architecture&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.chilton-computing.org.uk%2Facl%2Ftechnology%2Fatlas%2Fp005.htm&amp;rft.jtitle=Atlas+Computer&amp;rft.place=Chilton&amp;rft.pub=Atlas+Computer+Laboratory&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation book">Kilburn, T.; Payne, R. B.; Howarth, D. J. (December 1961), <a rel="nofollow" class="external text" href="http://www.chilton-computing.org.uk/acl/technology/atlas/p019.htm">"The Atlas Supervisor"</a>, <i>Computers - Key to Total Systems Control</i>, Conferences Proceedings, Volume 20, Proceedings of the Eastern Joint Computer Conference Washington, D.C., Macmillan, pp.&#160;279–294</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Computers+-+Key+to+Total+Systems+Control&amp;rft.aufirst=T.&amp;rft.au=Howarth%2C+D.+J.&amp;rft.au=Kilburn%2C+T.&amp;rft.aulast=Kilburn&amp;rft.au=Payne%2C+R.+B.&amp;rft.btitle=The+Atlas+Supervisor&amp;rft.date=December+1961&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.chilton-computing.org.uk%2Facl%2Ftechnology%2Fatlas%2Fp019.htm&amp;rft.pages=279%E2%80%93294&amp;rft.pub=Macmillan&amp;rft.series=Conferences+Proceedings&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=Volume+20%2C+Proceedings+of+the+Eastern+Joint+Computer+Conference+Washington%2C+D.C." class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation journal">Kilburn, T.; Edwards, D. B. G.; Lanigan, M. J.; Sumner, F. H. (April 1962), "One-Level Storage System", <i>IRE Transactions Electronic Computers</i> (Institute of Radio Engineers)</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=One-Level+Storage+System&amp;rft.au=Edwards%2C+D.+B.+G.&amp;rft.aufirst=T.&amp;rft.au=Kilburn%2C+T.&amp;rft.au=Lanigan%2C+M.+J.&amp;rft.aulast=Kilburn&amp;rft.au=Sumner%2C+F.+H.&amp;rft.date=April+1962&amp;rft.genre=article&amp;rft.jtitle=IRE+Transactions+Electronic+Computers&amp;rft.pub=Institute+of+Radio+Engineers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web">Tsigkogiannis, Ilias (December 11, 2006). <a rel="nofollow" class="external text" href="http://blogs.msdn.com/iliast/archive/2006/12/11/crash-dump-analysis.aspx">"Crash Dump Analysis"</a>. <i>Ilias Tsigkogiannis' Introduction to Windows Device Drivers</i>. MSDN Blogs<span class="reference-accessdate">. Retrieved 2008-07-22</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Crash+Dump+Analysis&amp;rft.aufirst=Ilias&amp;rft.aulast=Tsigkogiannis&amp;rft.au=Tsigkogiannis%2C+Ilias&amp;rft.date=December+11%2C+2006&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fblogs.msdn.com%2Filiast%2Farchive%2F2006%2F12%2F11%2Fcrash-dump-analysis.aspx&amp;rft.jtitle=Ilias+Tsigkogiannis%27+Introduction+to+Windows+Device+Drivers&amp;rft.pub=MSDN+Blogs&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://technet.microsoft.com/en-us/sysinternals/bb897426">"Windows Sysinternals PageDefrag"</a>. <i>Sysinternals</i>. Microsoft. November 1, 2006<span class="reference-accessdate">. Retrieved 2010-12-20</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=Windows+Sysinternals+PageDefrag&amp;rft.date=November+1%2C+2006&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Fsysinternals%2Fbb897426&amp;rft.jtitle=Sysinternals&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/889654">"How to determine the appropriate page file size for 64-bit versions of Windows Server 2003 or Windows XP (MSKB889654_"</a>. <i>Knowledge Base</i>. Microsoft. November 7, 2007<span class="reference-accessdate">. Retrieved 2007-12-26</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.atitle=How+to+determine+the+appropriate+page+file+size+for+64-bit+versions+of+Windows+Server+2003+or+Windows+XP+%28MSKB889654_&amp;rft.date=November+7%2C+2007&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2Fkb%2F889654&amp;rft.jtitle=Knowledge+Base&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://lkml.org/lkml/2006/5/29/3">"<span style="padding-left:0.2em;">"</span>Jesper Juhl": Re: How to send a break? - dump from frozen 64bit linux"</a>. LKML. 2006-05-29<span class="reference-accessdate">. Retrieved 2010-10-28</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.btitle=%22Jesper+Juhl%22%3A+Re%3A+How+to+send+a+break%3F+-+dump+from+frozen+64bit+linux&amp;rft.date=2006-05-29&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flkml.org%2Flkml%2F2006%2F5%2F29%2F3&amp;rft.pub=LKML&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-autogenerated2005-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-autogenerated2005_18-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-autogenerated2005_18-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://lkml.org/lkml/2005/7/7/326">"Andrew Morton: Re: Swap partition vs swap file"</a>. LKML<span class="reference-accessdate">. Retrieved 2010-10-28</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.btitle=Andrew+Morton%3A+Re%3A+Swap+partition+vs+swap+file&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flkml.org%2Flkml%2F2005%2F7%2F7%2F326&amp;rft.pub=LKML&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-autogenerated1-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-autogenerated1_19-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/5/html/Deployment_Guide/ch-swapspace.html">Chapter 7. Swap Space - Red Hat Customer Portal</a> "Swap space can be a dedicated swap partition (recommended), a swap file, or a combination of swap partitions and swap files."</span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="http://en.wikipedia.org/w/index.php?title=John_Siracusa&amp;action=edit&amp;redlink=1" class="new" title="John Siracusa (page does not exist)">John Siracusa</a> (October 15, 2001). <a rel="nofollow" class="external text" href="http://arstechnica.com/reviews/os/macosx-10-1.ars/7">"Mac OS X 10.1"</a>. Ars Technica<span class="reference-accessdate">. Retrieved 2008-07-23</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=John+Siracusa&amp;rft.aulast=John+Siracusa&amp;rft.btitle=Mac+OS+X+10.1&amp;rft.date=October+15%2C+2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Farstechnica.com%2Freviews%2Fos%2Fmacosx-10-1.ars%2F7&amp;rft.pub=Ars+Technica&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><span class="citation web">AmigaOS Core Developer (2011-01-08). <a rel="nofollow" class="external text" href="http://forum.hyperion-entertainment.biz/viewtopic.php?f=14&amp;t=755#p9346">"Re: Swap issue also on Update 4&#160;?"</a>. Hyperion Entertainment<span class="reference-accessdate">. Retrieved 2011-01-08</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=AmigaOS+Core+Developer&amp;rft.aulast=AmigaOS+Core+Developer&amp;rft.btitle=Re%3A+Swap+issue+also+on+Update+4+%3F&amp;rft.date=2011-01-08&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.hyperion-entertainment.biz%2Fviewtopic.php%3Ff%3D14%26t%3D755%23p9346&amp;rft.pub=Hyperion+Entertainment&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text">E.g., Rotational Position Sensing on a Block Multiplexor channel</span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://thunk.org/tytso/blog/2009/02/20/aligning-filesystems-to-an-ssds-erase-block-size">"Aligning filesystems to an SSD’s erase block size | Thoughts by Ted"</a>. Thunk.org. 2009-02-20<span class="reference-accessdate">. Retrieved 2010-10-28</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.btitle=Aligning+filesystems+to+an+SSD%E2%80%99s+erase+block+size+%26%23124%3B+Thoughts+by+Ted&amp;rft.date=2009-02-20&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fthunk.org%2Ftytso%2Fblog%2F2009%2F02%2F20%2Faligning-filesystems-to-an-ssds-erase-block-size&amp;rft.pub=Thunk.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-buzbee-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-buzbee_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-buzbee_24-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Bill Buzbee. <a rel="nofollow" class="external text" href="http://www.homebrewcpu.com/demand_paging.htm">"Magic-1 Minix Demand Paging Design"</a><span class="reference-accessdate">. Retrieved December 9, 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=Bill+Buzbee&amp;rft.aulast=Bill+Buzbee&amp;rft.btitle=Magic-1+Minix+Demand+Paging+Design&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.homebrewcpu.com%2Fdemand_paging.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><span class="citation book">IBM (January 1987), <i>IBM System/370 Extended Architecture Principles of Operation</i>, Second Edition, SA22-7085-1.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APaging&amp;rft.au=IBM&amp;rft.aulast=IBM&amp;rft.btitle=IBM+System%2F370+Extended+Architecture+Principles+of+Operation&amp;rft.date=January+1987&amp;rft.genre=book&amp;rft.series=Second+Edition&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit&amp;section=31" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://it.toolbox.com/blogs/microsoft-infrastructure/moving-the-pagefilesys-to-another-partition-or-disk-35772">Windows Server - Moving Pagefile to another partition or disk</a> by David Nudelman</li>
+<li><a rel="nofollow" class="external text" href="http://computer.howstuffworks.com/virtual-memory.htm">How Virtual Memory Works</a> from HowStuffWorks.com (in fact explains only swapping concept, and not virtual memory concept)</li>
+<li><a rel="nofollow" class="external text" href="http://www.faqs.org/docs/linux_admin/x1762.html">Linux swap space management</a> (outdated, as the author admits)</li>
+<li><a rel="nofollow" class="external text" href="http://www.techarp.com/showarticle.aspx?artno=143">Guide On Optimizing Virtual Memory Speed</a> (outdated, and contradicts section 1.4 of this wiki page, and (at least) references 8, 9, and 11.)</li>
+<li><a rel="nofollow" class="external text" href="http://people.msoe.edu/~durant/courses/cs384/papers0405/mccrawt.pdf">Virtual Memory Page Replacement Algorithms</a></li>
+<li><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/308417/">Windows XP. How to manually change the size of the virtual memory paging file</a></li>
+<li><a rel="nofollow" class="external text" href="http://support.microsoft.com/?id=312362">Windows XP. Factors that may deplete the supply of paged pool memory</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.acc.umu.se/~bosse/">SwapFs</a> driver that can be used to save the paging file of Windows on a swap partition of Linux.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Operating_system" title="Template:Operating system"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Operating_system" title="Template talk:Operating system"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Operating_system&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Operating_system.html" title="Operating system">Operating system</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Operating_system_advocacy.html" title="Operating system advocacy">Advocacy</a></li>
+<li><a href="Comparison_of_operating_systems.html" title="Comparison of operating systems">Comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_operating_systems" title="History of operating systems">History</a></li>
+<li><a href="Hobbyist_operating_system_development.html" title="Hobbyist operating system development">Hobbyist development</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></li>
+<li><a href="Timeline_of_operating_systems.html" title="Timeline of operating systems">Timeline</a></li>
+<li><a href="Usage_share_of_operating_systems.html" title="Usage share of operating systems">Usage share</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Kernel_(computing).html" title="Kernel (computing)">Kernel</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Computer_architecture.html" title="Computer architecture">Architectures</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Exokernel.html" title="Exokernel">Exokernel</a></li>
+<li><a href="Hybrid_kernel.html" title="Hybrid kernel">Hybrid</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="Monolithic_kernel-2.html" title="Monolithic kernel">Monolithic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Components</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Device_driver.html" title="Device driver">Device driver</a></li>
+<li><a href="Loadable_kernel_module.html" title="Loadable kernel module">Loadable kernel module</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="User_space.html" title="User space">User space</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Process_management_(computing).html" title="Process management (computing)">Process management</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Concepts</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Context_switch.html" title="Context switch">Context switch</a></li>
+<li><a href="Interrupt.html" title="Interrupt">Interrupt</a></li>
+<li><a href="Inter-process_communication.html" title="Inter-process communication">IPC</a></li>
+<li><a href="Process_(computing).html" title="Process (computing)">Process</a></li>
+<li><a href="Process_control_block.html" title="Process control block">Process control block</a></li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="Time-sharing.html" title="Time-sharing">Time-sharing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Scheduling_(computing).html" title="Scheduling (computing)">Scheduling<br />
+algorithms</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Computer_multitasking.html" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="Fixed-priority_pre-emptive_scheduling.html" title="Fixed-priority pre-emptive scheduling">Fixed-priority preemptive</a></li>
+<li><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="Preemption_(computing).html" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin</a></li>
+<li><a href="Shortest_job_next.html" title="Shortest job next">Shortest job next</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Memory_management.html" title="Memory management">Memory management</a> and<br />
+<a href="Resource_(computing).html" title="Resource (computing)">resource</a> protection</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bus_error.html" title="Bus error">Bus error</a></li>
+<li><a href="General_protection_fault.html" title="General protection fault">General protection fault</a></li>
+<li><a href="Memory_protection.html" title="Memory protection">Memory protection</a></li>
+<li><strong class="selflink">Paging</strong></li>
+<li><a href="Ring_(computer_security).html" title="Ring (computer security)">Security rings</a></li>
+<li><a href="Segmentation_fault.html" title="Segmentation fault">Segmentation fault</a></li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Non-volatile_memory.html" title="Non-volatile memory">Storage</a> access and<br />
+<a href="File_system.html" title="File system">file systems</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Boot_loader.html" title="Boot loader" class="mw-redirect">Boot loader</a></li>
+<li><a href="Defragmentation.html" title="Defragmentation">Defragmentation</a></li>
+<li><a href="Device_file.html" title="Device file">Device file</a></li>
+<li><a href="File_attribute.html" title="File attribute">File attribute</a></li>
+<li><a href="Inode.html" title="Inode">Inode</a></li>
+<li><a href="Journaling_file_system.html" title="Journaling file system">Journal</a></li>
+<li><a href="Disk_partitioning.html" title="Disk partitioning">Partition</a></li>
+<li><a href="Virtual_file_system.html" title="Virtual file system">Virtual file system</a></li>
+<li><a href="Virtual_tape_library.html" title="Virtual tape library">Virtual tape library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AmigaOS.html" title="AmigaOS">AmigaOS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="BeOS.html" title="BeOS">BeOS</a></li>
+<li><a href="Berkeley_Software_Distribution.html" title="Berkeley Software Distribution">BSD</a></li>
+<li><a href="DOS.html" title="DOS">DOS</a></li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="IOS.html" title="IOS">iOS</a></li>
+<li><a href="Linux.html" title="Linux">Linux</a></li>
+<li><a href="Mac_OS.html" title="Mac OS">Mac OS</a></li>
+<li><a href="MorphOS.html" title="MorphOS">MorphOS</a></li>
+<li><a href="OpenVMS.html" title="OpenVMS">OpenVMS</a></li>
+<li><a href="OS/2.html" title="OS/2">OS/2</a></li>
+<li><a href="OSv.html" title="OSv">OSv</a></li>
+<li><a href="QNX.html" title="QNX">QNX</a></li>
+<li><a href="ReactOS.html" title="ReactOS">ReactOS</a></li>
+<li><a href="RISC_OS.html" title="RISC OS">RISC OS</a></li>
+<li><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="Transaction_Processing_Facility.html" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="Unix.html" title="Unix">Unix</a></li>
+<li><a href="VM_(operating_system).html" title="VM (operating system)">VM/CMS</a></li>
+<li><a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a></li>
+<li><a href="Z/OS.html" title="Z/OS">z/OS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Application_programming_interface.html" title="Application programming interface">API</a></li>
+<li><a href="Computer_network.html" title="Computer network">Computer network</a></li>
+<li><a href="Hardware_abstraction.html" title="Hardware abstraction">HAL</a></li>
+<li><a href="Live_CD.html" title="Live CD">Live CD</a></li>
+<li><a href="Live_USB.html" title="Live USB">Live USB</a></li>
+<li><a href="Operating_system_shell.html" title="Operating system shell">OS shell</a>
+<ul>
+<li><a href="Command-line_interface.html" title="Command-line interface">CLI</a></li>
+<li><a href="Graphical_user_interface.html" title="Graphical user interface">GUI</a></li>
+<li><a href="Text-based_user_interface.html" title="Text-based user interface">TUI</a></li>
+<li><a href="Voice_user_interface.html" title="Voice user interface">VUI</a></li>
+</ul>
+</li>
+<li><a href="Preboot_Execution_Environment.html" title="Preboot Execution Environment">PXE</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Memory_management_navbox" title="Template:Memory management navbox"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Memory_management_navbox" title="Template talk:Memory management navbox"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Memory_management_navbox&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Memory_management.html" title="Memory management">Memory management</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Manual_memory_management" title="Manual memory management">Manual memory management</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Static_memory_allocation.html" title="Static memory allocation">Static memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">C dynamic memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)">new (C++)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Delete_(C++)" title="Delete (C++)">delete (C++)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">Page table</a></li>
+<li><strong class="selflink">Paging</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a></li>
+<li><a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">Translation lookaside buffer</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">Garbage collection</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boehm_garbage_collector" title="Boehm garbage collector">Boehm garbage collector</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finalizer" title="Finalizer">Finalizer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garbage_(computer_science)" title="Garbage (computer science)">Garbage</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mark-compact_algorithm" title="Mark-compact algorithm">Mark-compact algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reference_counting" title="Reference counting">Reference counting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Strong_reference" title="Strong reference">Strong reference</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Weak_reference" title="Weak reference">Weak reference</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_segmentation" title="Memory segmentation">Memory segmentation</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Protected_mode" title="Protected mode">Protected mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_mode" title="Real mode">Real mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_8086_mode" title="Virtual 8086 mode">Virtual 8086 mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X86_memory_segmentation" title="X86 memory segmentation">x86 memory segmentation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_safety" title="Memory safety">Memory safety</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Buffer_overflow.html" title="Buffer overflow">Buffer overflow</a></li>
+<li><a href="Dangling_pointer.html" title="Dangling pointer">Dangling pointer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stack_overflow" title="Stack overflow">Stack overflow</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Issues</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Fragmentation_(computing)" title="Fragmentation (computing)">Fragmentation</a></li>
+<li><a href="Memory_leak.html" title="Memory leak">Memory leak</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unreachable_memory" title="Unreachable memory">Unreachable memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Automatic_variable" title="Automatic variable">Automatic variable</a></li>
+<li><a href="http://en.wikipedia.org/wiki/International_Symposium_on_Memory_Management" title="International Symposium on Memory Management">International Symposium on Memory Management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Region-based_memory_management" title="Region-based memory management">Region-based memory management</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1083
+CPU time usage: 1.932 seconds
+Real time usage: 2.050 seconds
+Preprocessor visited node count: 3794/1000000
+Preprocessor generated node count: 16796/1500000
+Post‐expand include size: 89113/2048000 bytes
+Template argument size: 5590/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 10/500
+Lua time usage: 0.183/10.000 seconds
+Lua memory usage: 3.44 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:311193-0!*!0!!en!4!* and timestamp 20140327224530
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;oldid=600995192">http://en.wikipedia.org/w/index.php?title=Paging&amp;oldid=600995192</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Virtual_memory" title="Category:Virtual memory">Virtual memory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Memory_management" title="Category:Memory management">Memory management</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_to_be_merged_from_December_2013" title="Category:Articles to be merged from December 2013">Articles to be merged from December 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_to_be_merged" title="Category:All articles to be merged">All articles to be merged</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_accuracy_disputes" title="Category:All accuracy disputes">All accuracy disputes</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_disputed_statements_from_November_2010" title="Category:Articles with disputed statements from November 2010">Articles with disputed statements from November 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_September_2010" title="Category:Articles with unsourced statements from September 2010">Articles with unsourced statements from September 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_January_2011" title="Category:Articles with unsourced statements from January 2011">Articles with unsourced statements from January 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_June_2013" title="Category:Articles with unsourced statements from June 2013">Articles with unsourced statements from June 2013</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Paging&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Paging" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Paging.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Paging"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Paging.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Paging" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Paging" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;oldid=600995192" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q656083" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Paging&amp;id=600995192" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Paging">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Paging&amp;oldid=600995192&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Paging&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Paginació_de_memòria" title="Paginació de memòria – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Stránkování_paměti" title="Stránkování paměti – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Paging" title="Paging – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Lehekülgede_saalimine" title="Lehekülgede saalimine – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Paginación_de_memoria" title="Paginación de memoria – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Orrikatze" title="Orrikatze – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/صفحه‌بندی_(رایانه)" title="صفحه‌بندی (رایانه) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Mémoire_virtuelle#M.C3.A9moire_virtuelle_pagin.C3.A9e" title="Mémoire virtuelle – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/페이징" title="페이징 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Stranična_datoteka" title="Stranična datoteka – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Paging" title="Paging – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/דפדוף_(זיכרון)" title="דפדוף (זיכרון) – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Puslapiavimas" title="Puslapiavimas – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Lapozás_(informatika)" title="Lapozás (informatika) – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Penghalaman" title="Penghalaman – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Geheugenpaginering" title="Geheugenpaginering – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/ページング方式" title="ページング方式 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Stronicowanie_pamięci" title="Stronicowanie pamięci – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Memória_paginada" title="Memória paginada – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Подкачка_страниц" title="Подкачка страниц – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Stránkovanie" title="Stránkovanie – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Ostranjevanje" title="Ostranjevanje – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Paging" title="Paging – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Sayfalama" title="Sayfalama – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Підкачка_сторінок" title="Підкачка сторінок – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/分頁" title="分頁 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q656083#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 March 2014 at 06:52.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Paging" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1091 in 0.299 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Paging by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:26 GMT -->
+</html>

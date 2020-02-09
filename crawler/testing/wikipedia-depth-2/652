@@ -1,0 +1,568 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Memory_protection.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Memory_protection by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Memory protection - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Memory_protection" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Memory_protection.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Memory_protection","wgTitle":"Memory protection","wgCurRevisionId":600488394,"wgRevisionId":600488394,"wgArticleId":515373,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from September 2012","All articles needing additional references","All articles with unsourced statements","Articles with unsourced statements from April 2007","Articles with unsourced statements from August 2012","Memory management"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Memory_protection","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q163585"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Memory_protection skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Memory protection</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(September 2012)</i></small></span></td>
+</tr>
+</table>
+<p><b>Memory protection</b> is a way to control memory access rights on a computer, and is a part of most modern <a href="Operating_system.html" title="Operating system">operating systems</a>. The main purpose of memory protection is to prevent a <a href="Process_(computing).html" title="Process (computing)">process</a> from accessing memory that has not been allocated to it. This prevents a bug within a process from affecting other processes, or the operating system itself, and instead results in a <a href="Segmentation_fault.html" title="Segmentation fault">segmentation fault</a> or <a href="http://en.wikipedia.org/wiki/Storage_violation" title="Storage violation">storage violation</a> exception being sent to the offending process, generally causing <a href="http://en.wikipedia.org/wiki/Abnormal_termination" title="Abnormal termination" class="mw-redirect">abnormal termination</a> (killing the process). Memory protection for <a href="Computer_security.html" title="Computer security">computer security</a> includes additional techniques such as <a href="http://en.wikipedia.org/wiki/Address_space_layout_randomization" title="Address space layout randomization">address space layout randomization</a> and <a href="http://en.wikipedia.org/wiki/Executable_space_protection" title="Executable space protection">executable space protection</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Methods"><span class="tocnumber">1</span> <span class="toctext">Methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Segmentation"><span class="tocnumber">1.1</span> <span class="toctext">Segmentation</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Paged_virtual_memory"><span class="tocnumber">1.2</span> <span class="toctext">Paged virtual memory</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Protection_keys"><span class="tocnumber">1.3</span> <span class="toctext">Protection keys</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Simulated_segmentation"><span class="tocnumber">1.4</span> <span class="toctext">Simulated segmentation</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Capability-based_addressing"><span class="tocnumber">1.5</span> <span class="toctext">Capability-based addressing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Measures"><span class="tocnumber">2</span> <span class="toctext">Measures</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Memory_protection_in_different_operating_systems"><span class="tocnumber">3</span> <span class="toctext">Memory protection in different operating systems</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Methods">Methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=1" title="Edit section: Methods">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Segmentation">Segmentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=2" title="Edit section: Segmentation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/Segmentation_(memory)" title="Segmentation (memory)" class="mw-redirect">Segmentation</a> refers to dividing a computer's memory into segments. A reference to a memory location includes a value that identifies a segment and an offset within that segment.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/X86_architecture" title="X86 architecture" class="mw-redirect">x86 architecture</a> has multiple segmentation features, which are helpful for using protected memory on this architecture.<sup id="cite_ref-intel_3a_p1_1-0" class="reference"><a href="#cite_note-intel_3a_p1-1"><span>[</span>1<span>]</span></a></sup> On the x86 <a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">processor</a> architecture, the <a href="http://en.wikipedia.org/wiki/Global_Descriptor_Table" title="Global Descriptor Table">Global Descriptor Table</a> and <a href="http://en.wikipedia.org/wiki/Local_Descriptor_Table" title="Local Descriptor Table">Local Descriptor Tables</a> can be used to reference segments in the computer's memory. Pointers to memory segments on x86 processors can also be stored in the processor's segment registers. Initially x86 processors had 4 segment registers, CS (code segment), SS (stack segment), DS (data segment) and ES (extra segment); later another two segment registers were added – FS and GS.<sup id="cite_ref-intel_3a_p1_1-1" class="reference"><a href="#cite_note-intel_3a_p1-1"><span>[</span>1<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Paged_virtual_memory">Paged virtual memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=3" title="Edit section: Paged virtual memory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Paged_virtual_memory" title="Paged virtual memory" class="mw-redirect">Paged virtual memory</a></div>
+<p>In paging the memory address space is divided into equal-sized blocks called <a href="http://en.wikipedia.org/wiki/Page_(computing)" title="Page (computing)" class="mw-redirect">pages</a>. Using <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> hardware, each page can reside in any location of the computer's physical memory, or be flagged as being protected. Virtual memory makes it possible to have a linear <a href="http://en.wikipedia.org/wiki/Virtual_address_space" title="Virtual address space">virtual memory address space</a> and to use it to access blocks fragmented over <a href="http://en.wikipedia.org/wiki/Physical_memory" title="Physical memory" class="mw-redirect">physical memory</a> address space.</p>
+<p>Most <a href="Computer_architecture.html" title="Computer architecture">computer architectures</a> which support paging also use pages as the basis for memory protection.</p>
+<p>A <i><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">page table</a></i> maps virtual memory to physical memory. The page table is usually invisible to the process. Page tables make it easier to allocate additional memory, as each new page can be allocated from anywhere in physical memory.</p>
+<p>It is impossible for an application to access a page that has not been explicitly allocated to it, because every memory address either points to a page allocated to that application, or generates an <a href="Interrupt.html" title="Interrupt">interrupt</a> called a <i><a href="http://en.wikipedia.org/wiki/Page_fault" title="Page fault">page fault</a></i>. Unallocated pages, and pages allocated to any other application, do not have any addresses from the application point of view.</p>
+<p>A page fault may not necessarily indicate an error. Page faults are not only used for memory protection. The operating system may manage the page table in such a way that a reference to a page that has been previously <a href="http://en.wikipedia.org/wiki/Swapping_(memory_management)" title="Swapping (memory management)" class="mw-redirect">swapped out</a> to disk causes a page fault. The operating system intercepts the page fault and, loads the required memory page, and the application continues as if no fault had occurred. This scheme, known as <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a>, allows in-memory data not currently in use to be moved to disk storage and back in a way which is transparent to applications, to increase overall memory capacity.</p>
+<p>On some systems, the page fault mechanism is also used for <a href="http://en.wikipedia.org/wiki/Executable_space_protection" title="Executable space protection">executable space protection</a> such as <a href="http://en.wikipedia.org/wiki/W%5EX" title="W^X">W^X</a>.</p>
+<h3><span class="mw-headline" id="Protection_keys">Protection keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=4" title="Edit section: Protection keys">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A protection key mechanism divides physical memory up into blocks of a particular size (e.g., 4&#160;kiB), each of which has an associated numerical value called a protection key. Each process also has a protection key value associated with it. On a memory access the hardware checks that the current process's protection key matches the value associated with the memory block being accessed; if not, an exception occurs. This mechanism was introduced in the <a href="http://en.wikipedia.org/wiki/System/360" title="System/360" class="mw-redirect">System/360</a> architecture. It is available on today's <a href="http://en.wikipedia.org/wiki/System_z" title="System z" class="mw-redirect">System z</a> mainframes and heavily used by <a href="http://en.wikipedia.org/wiki/System_z" title="System z" class="mw-redirect">System z</a> operating systems and their subsystems.</p>
+<p>The System/360 protection keys described above are associated with physical addresses. This is different from the protection key mechanism used by processors such as the <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> <a href="http://en.wikipedia.org/wiki/Itanium" title="Itanium">Itanium</a> and the <a href="http://en.wikipedia.org/wiki/Hewlett-Packard" title="Hewlett-Packard">Hewlett-Packard</a> <a href="http://en.wikipedia.org/wiki/PA-RISC" title="PA-RISC">Precision Architecture</a> (HP/PA, also known as PA-RISC), which are associated with virtual addresses, and which allow multiple keys per process.</p>
+<p>In the Itanium and PA processor architectures, translations (<a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">TLB</a> entries) have <i>keys</i> (Itanium) or <i>access ids</i> (PA) associated with them. A running process has several protection key registers (16 for Itanium,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> 4 for HP/PA<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup>). A translation selected by the virtual address has its key compared to each of the protection key registers. If any of them match (plus other possible checks), the access is permitted. If none match, a fault or exception is generated. The software fault handler can, if desired, check the missing key against a larger list of keys maintained by software; thus, the protection key registers inside the processor may be treated as a software-managed cache of a larger list of keys associated with a process.</p>
+<p>PA has 15–18 bits of key; Itanium mandates at least 18. Keys are usually associated with <i>protection domains</i>, such as libraries, modules, etc.</p>
+<h3><span class="mw-headline" id="Simulated_segmentation">Simulated segmentation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=5" title="Edit section: Simulated segmentation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="Simulation.html" title="Simulation">Simulation</a> is use of a <a href="http://en.wikipedia.org/wiki/System_monitoring" title="System monitoring">monitoring</a> <a href="http://en.wikipedia.org/wiki/Computer_program" title="Computer program">program</a> to interpret the machine code instructions of some computer architectures. Such an <a href="http://en.wikipedia.org/wiki/Instruction_Set_Simulator" title="Instruction Set Simulator" class="mw-redirect">Instruction Set Simulator</a> can provide memory protection by using a segmentation-like scheme and validating the target address and length of each instruction in real time before actually executing them. The simulator must calculate the target address and length and compare this against a list of valid address ranges that it holds concerning the <a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">thread's</a> environment, such as any dynamic <a href="Computer_memory.html" title="Computer memory">memory</a> blocks acquired since the thread's inception, plus any valid shared static memory slots. The meaning of "valid" may change throughout the thread's life depending upon context. It may sometimes be allowed to alter a static block of storage, and sometimes not, depending upon the current mode of execution, which may or may not depend on a storage key or supervisor state.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (April 2007)">citation needed</span></a></i>]</sup></p>
+<p>It is generally not advisable to use this method of memory protection where adequate facilities exist on a CPU, as this takes valuable processing power from the computer. However, it is generally used for debugging and testing purposes to provide an extra fine level of granularity to otherwise generic <a href="http://en.wikipedia.org/wiki/Storage_violation" title="Storage violation">storage violations</a> and can indicate precisely which instruction is attempting to overwrite the particular section of storage which may have the same storage key as unprotected storage.</p>
+<h3><span class="mw-headline" id="Capability-based_addressing">Capability-based addressing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=6" title="Edit section: Capability-based addressing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Capability-based_addressing" title="Capability-based addressing">Capability-based addressing</a></div>
+<p><a href="http://en.wikipedia.org/wiki/Capability-based_addressing" title="Capability-based addressing">Capability-based addressing</a> is a method of memory protection that is unused in modern commercial computers. In this method, <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a> are replaced by protected objects (called <i>capabilities</i>) that can only be created via using <a href="http://en.wikipedia.org/wiki/Privilege_(computing)" title="Privilege (computing)">privileged</a> instructions which may only be executed by the kernel, or some other process authorized to do so.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (August 2012)">citation needed</span></a></i>]</sup> This effectively lets the kernel control which processes may access which objects in memory, with no need to use separate address spaces or <a href="Context_switch.html" title="Context switch">context switches</a>. Only a few commercial products used capability based security: <a href="http://en.wikipedia.org/wiki/Plessey_System_250" title="Plessey System 250">Plessey System 250</a>, <a href="http://en.wikipedia.org/wiki/IBM_System/38" title="IBM System/38">IBM System/38</a>, <a href="http://en.wikipedia.org/wiki/Intel_iAPX_432" title="Intel iAPX 432">Intel iAPX 432</a> <a href="http://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">architecture</a> and <a href="http://en.wikipedia.org/wiki/KeyKOS" title="KeyKOS">KeyKOS</a>. Capability approaches are widely used in research systems such as <a href="http://en.wikipedia.org/wiki/Extremely_Reliable_Operating_System" title="Extremely Reliable Operating System" class="mw-redirect">EROS</a>, Combex DARPA Browser, and <a href="http://en.wikipedia.org/wiki/E_programming_language" title="E programming language" class="mw-redirect">E programming language</a>. They are used conceptually as the basis for some <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machines</a>, most notably <a href="Smalltalk.html" title="Smalltalk">Smalltalk</a> and <a href="http://en.wikipedia.org/wiki/Java_(software_platform)" title="Java (software platform)">Java</a>. Currently, the DARPA-funded CHERI project at University of Cambridge is working to create a modern capability machine that also supports legacy software.</p>
+<h2><span class="mw-headline" id="Measures">Measures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=7" title="Edit section: Measures">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The protection level of a particular implementation may be measured by how closely it adheres to the <a href="http://en.wikipedia.org/wiki/Principle_of_minimum_privilege" title="Principle of minimum privilege" class="mw-redirect">principle of minimum privilege</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Memory_protection_in_different_operating_systems">Memory protection in different operating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=8" title="Edit section: Memory protection in different operating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Different operating systems use different forms of memory protection or separation. True memory separation was not used in <a href="http://en.wikipedia.org/wiki/Home_computer" title="Home computer">home computer</a> operating systems until <a href="OS/2.html" title="OS/2">OS/2</a> was released in 1987. On prior systems, such lack of protection was even used as a form of <a href="http://en.wikipedia.org/wiki/Interprocess_communication" title="Interprocess communication" class="mw-redirect">interprocess communication</a>, by sending a <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointer</a> between processes. It is possible for processes to access System Memory in the Windows 9x family of Operating Systems.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>Some operating systems that do implement memory protection include:</p>
+<ul>
+<li><a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> family from Windows NT 3.1</li>
+<li><a href="OS/2.html" title="OS/2">OS/2</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OS-9" title="OS-9">OS-9</a>, as an optional module</li>
+<li><a href="Unix-like.html" title="Unix-like">Unix-like</a> systems, including <a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a>, <a href="Linux.html" title="Linux">Linux</a>, <a href="BSD.html" title="BSD" class="mw-redirect">BSD</a>, <a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a>, <a href="IOS.html" title="IOS">iOS</a> and <a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="Plan_9_from_Bell_Labs.html" title="Plan 9 from Bell Labs">Plan9</a> and <a href="http://en.wikipedia.org/wiki/Inferno_(operating_system)" title="Inferno (operating system)">Inferno</a>, created at <a href="Bell_Labs.html" title="Bell Labs">Bell Labs</a> as Unix successors</li>
+</ul>
+<p>On <a href="Unix-like.html" title="Unix-like">Unix-like</a> systems, the mprotect <a href="System_call.html" title="System call">system call</a> is used to control memory protection.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Storage_violation" title="Storage violation">Storage violation</a>, for violation of memory protection</li>
+<li><a href="http://en.wikipedia.org/wiki/Separation_of_protection_and_security" title="Separation of protection and security">Separation of protection and security</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-intel_3a_p1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-intel_3a_p1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-intel_3a_p1_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Intel (July 2008). <a rel="nofollow" class="external text" href="http://www.intel.com/design/processor/manuals/253668.pdf"><i>Intel 64 and IA-32 Architectures Software Developer's Manuals: Volume 3A: System Programming Guide, Part 1</i></a> (PDF). Intel<span class="reference-accessdate">. Retrieved 2008-08-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+protection&amp;rft.au=Intel&amp;rft.aulast=Intel&amp;rft.btitle=Intel+64+and+IA-32+Architectures+Software+Developer%27s+Manuals%3A+Volume+3A%3A+System+Programming+Guide%2C+Part+1&amp;rft.date=July+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.intel.com%2Fdesign%2Fprocessor%2Fmanuals%2F253668.pdf&amp;rft.pub=Intel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://download.intel.com/design/Itanium/manuals/24531805.pdf">Keys in Itanium</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://h21007.www2.hp.com/portal/download/files/unprot/parisc/pa1-1/acd.pdf">Memory protection in HP PA-RISC</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Cook, D.J. <i><a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=803220">Measuring memory protection</a></i>, accepted for 3rd International Conference on Software Engineering, Atlanta, Georgia, May 1978.</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://everything2.com/title/Windows%25209x%2520does%2520not%2520have%2520true%2520memory%2520protection">"Windows 9x does not have true memory protection"</a>. Everything2. 2000-06-24<span class="reference-accessdate">. Retrieved 2009-04-29</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+protection&amp;rft.btitle=Windows+9x+does+not+have+true+memory+protection&amp;rft.date=2000-06-24&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Feverything2.com%2Ftitle%2FWindows%2525209x%252520does%252520not%252520have%252520true%252520memory%252520protection&amp;rft.pub=Everything2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/009604499/functions/mprotect.html">"mprotect"</a>. <i>The Open Group Base Specifications Issue 6</i>. The Open Group.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+protection&amp;rft.atitle=mprotect&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F009604499%2Ffunctions%2Fmprotect.html&amp;rft.jtitle=The+Open+Group+Base+Specifications+Issue+6&amp;rft.pub=The+Open+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.intel.com/products/processor/manuals/index.htm">Intel Developer Manuals</a> - in-depth information on memory protection for Intel based architectures.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Operating_system" title="Template:Operating system"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Operating_system" title="Template talk:Operating system"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Operating_system&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Operating_system.html" title="Operating system">Operating system</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Operating_system_advocacy.html" title="Operating system advocacy">Advocacy</a></li>
+<li><a href="Comparison_of_operating_systems.html" title="Comparison of operating systems">Comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_operating_systems" title="History of operating systems">History</a></li>
+<li><a href="Hobbyist_operating_system_development.html" title="Hobbyist operating system development">Hobbyist development</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></li>
+<li><a href="Timeline_of_operating_systems.html" title="Timeline of operating systems">Timeline</a></li>
+<li><a href="Usage_share_of_operating_systems.html" title="Usage share of operating systems">Usage share</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Kernel_(computing).html" title="Kernel (computing)">Kernel</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Computer_architecture.html" title="Computer architecture">Architectures</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Exokernel.html" title="Exokernel">Exokernel</a></li>
+<li><a href="Hybrid_kernel.html" title="Hybrid kernel">Hybrid</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="Monolithic_kernel-2.html" title="Monolithic kernel">Monolithic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Components</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Device_driver.html" title="Device driver">Device driver</a></li>
+<li><a href="Loadable_kernel_module.html" title="Loadable kernel module">Loadable kernel module</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="User_space.html" title="User space">User space</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Process_management_(computing).html" title="Process management (computing)">Process management</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Concepts</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Context_switch.html" title="Context switch">Context switch</a></li>
+<li><a href="Interrupt.html" title="Interrupt">Interrupt</a></li>
+<li><a href="Inter-process_communication.html" title="Inter-process communication">IPC</a></li>
+<li><a href="Process_(computing).html" title="Process (computing)">Process</a></li>
+<li><a href="Process_control_block.html" title="Process control block">Process control block</a></li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="Time-sharing.html" title="Time-sharing">Time-sharing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Scheduling_(computing).html" title="Scheduling (computing)">Scheduling<br />
+algorithms</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Computer_multitasking.html" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="Fixed-priority_pre-emptive_scheduling.html" title="Fixed-priority pre-emptive scheduling">Fixed-priority preemptive</a></li>
+<li><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="Preemption_(computing).html" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin</a></li>
+<li><a href="Shortest_job_next.html" title="Shortest job next">Shortest job next</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Memory_management.html" title="Memory management">Memory management</a> and<br />
+<a href="Resource_(computing).html" title="Resource (computing)">resource</a> protection</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bus_error.html" title="Bus error">Bus error</a></li>
+<li><a href="General_protection_fault.html" title="General protection fault">General protection fault</a></li>
+<li><strong class="selflink">Memory protection</strong></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+<li><a href="Ring_(computer_security).html" title="Ring (computer security)">Security rings</a></li>
+<li><a href="Segmentation_fault.html" title="Segmentation fault">Segmentation fault</a></li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Non-volatile_memory.html" title="Non-volatile memory">Storage</a> access and<br />
+<a href="File_system.html" title="File system">file systems</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Boot_loader.html" title="Boot loader" class="mw-redirect">Boot loader</a></li>
+<li><a href="Defragmentation.html" title="Defragmentation">Defragmentation</a></li>
+<li><a href="Device_file.html" title="Device file">Device file</a></li>
+<li><a href="File_attribute.html" title="File attribute">File attribute</a></li>
+<li><a href="Inode.html" title="Inode">Inode</a></li>
+<li><a href="Journaling_file_system.html" title="Journaling file system">Journal</a></li>
+<li><a href="Disk_partitioning.html" title="Disk partitioning">Partition</a></li>
+<li><a href="Virtual_file_system.html" title="Virtual file system">Virtual file system</a></li>
+<li><a href="Virtual_tape_library.html" title="Virtual tape library">Virtual tape library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AmigaOS.html" title="AmigaOS">AmigaOS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="BeOS.html" title="BeOS">BeOS</a></li>
+<li><a href="Berkeley_Software_Distribution.html" title="Berkeley Software Distribution">BSD</a></li>
+<li><a href="DOS.html" title="DOS">DOS</a></li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="IOS.html" title="IOS">iOS</a></li>
+<li><a href="Linux.html" title="Linux">Linux</a></li>
+<li><a href="Mac_OS.html" title="Mac OS">Mac OS</a></li>
+<li><a href="MorphOS.html" title="MorphOS">MorphOS</a></li>
+<li><a href="OpenVMS.html" title="OpenVMS">OpenVMS</a></li>
+<li><a href="OS/2.html" title="OS/2">OS/2</a></li>
+<li><a href="OSv.html" title="OSv">OSv</a></li>
+<li><a href="QNX.html" title="QNX">QNX</a></li>
+<li><a href="ReactOS.html" title="ReactOS">ReactOS</a></li>
+<li><a href="RISC_OS.html" title="RISC OS">RISC OS</a></li>
+<li><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="Transaction_Processing_Facility.html" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="Unix.html" title="Unix">Unix</a></li>
+<li><a href="VM_(operating_system).html" title="VM (operating system)">VM/CMS</a></li>
+<li><a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a></li>
+<li><a href="Z/OS.html" title="Z/OS">z/OS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Application_programming_interface.html" title="Application programming interface">API</a></li>
+<li><a href="Computer_network.html" title="Computer network">Computer network</a></li>
+<li><a href="Hardware_abstraction.html" title="Hardware abstraction">HAL</a></li>
+<li><a href="Live_CD.html" title="Live CD">Live CD</a></li>
+<li><a href="Live_USB.html" title="Live USB">Live USB</a></li>
+<li><a href="Operating_system_shell.html" title="Operating system shell">OS shell</a>
+<ul>
+<li><a href="Command-line_interface.html" title="Command-line interface">CLI</a></li>
+<li><a href="Graphical_user_interface.html" title="Graphical user interface">GUI</a></li>
+<li><a href="Text-based_user_interface.html" title="Text-based user interface">TUI</a></li>
+<li><a href="Voice_user_interface.html" title="Voice user interface">VUI</a></li>
+</ul>
+</li>
+<li><a href="Preboot_Execution_Environment.html" title="Preboot Execution Environment">PXE</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1062
+CPU time usage: 0.756 seconds
+Real time usage: 0.824 seconds
+Preprocessor visited node count: 1607/1000000
+Preprocessor generated node count: 5796/1500000
+Post‐expand include size: 40521/2048000 bytes
+Template argument size: 2264/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 6/500
+Lua time usage: 0.080/10.000 seconds
+Lua memory usage: 1.95 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:515373-0!*!0!!en!4!* and timestamp 20140327224713
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;oldid=600488394">http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;oldid=600488394</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Memory_management" title="Category:Memory management">Memory management</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_September_2012" title="Category:Articles needing additional references from September 2012">Articles needing additional references from September 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_April_2007" title="Category:Articles with unsourced statements from April 2007">Articles with unsourced statements from April 2007</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_August_2012" title="Category:Articles with unsourced statements from August 2012">Articles with unsourced statements from August 2012</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Memory+protection&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Memory+protection" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Memory_protection.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Memory_protection"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Memory_protection.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Memory_protection" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Memory_protection" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;oldid=600488394" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q163585" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Memory_protection&amp;id=600488394" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Memory+protection">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Memory+protection&amp;oldid=600488394&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Memory_protection&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Protecció_de_memòria" title="Protecció de memòria – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Ochrana_paměti" title="Ochrana paměti – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Speicherschutz" title="Speicherschutz – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Protección_de_memoria" title="Protección de memoria – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/حفاظت_از_حافظه" title="حفاظت از حافظه – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/메모리_보호" title="메모리 보호 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Protezione_della_memoria" title="Protezione della memoria – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-kk"><a href="http://kk.wikipedia.org/wiki/Жадты_қорғау" title="Жадты қорғау – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/メモリ保護" title="メモリ保護 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Ochrona_pamięci" title="Ochrona pamięci – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Proteção_de_memória" title="Proteção de memória – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Защита_памяти" title="Защита памяти – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Ochrana_pamäte" title="Ochrana pamäte – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/記憶體保護" title="記憶體保護 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q163585#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 20 March 2014 at 18:57.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Memory_protection" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1169 in 0.310 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Memory_protection by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:25 GMT -->
+</html>

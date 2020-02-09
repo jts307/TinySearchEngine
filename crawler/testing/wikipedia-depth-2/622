@@ -1,0 +1,529 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hardware_abstraction.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hardware_abstraction by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Hardware abstraction - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Hardware_abstraction" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Hardware_abstraction.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Hardware_abstraction","wgTitle":"Hardware abstraction","wgCurRevisionId":599104785,"wgRevisionId":599104785,"wgArticleId":443015,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using citations with accessdate and no URL","Pages containing cite templates with deprecated parameters","Operating system technology"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Hardware_abstraction","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1046562"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Hardware_abstraction skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Hardware abstraction</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">"Hardware Abstraction Layer" redirects here. For the UNIX-like operating system subsystem, see <a href="http://en.wikipedia.org/wiki/HAL_(software)" title="HAL (software)">HAL (software)</a>.</div>
+<p><b>Hardware abstractions</b> are sets of routines in <a href="http://en.wikipedia.org/wiki/Computer_software" title="Computer software" class="mw-redirect">software</a> that emulate some <a href="System_platform.html" title="System platform" class="mw-redirect">platform</a>-specific details, giving programs direct access to the <a href="Computer_hardware.html" title="Computer hardware">hardware</a> resources.</p>
+<p>They often allow programmers to write <a href="Computer_hardware.html" title="Computer hardware">device</a>-independent, high performance applications by providing standard <a href="http://en.wikipedia.org/wiki/Operating_System" title="Operating System" class="mw-redirect">Operating System</a> (OS) calls to hardware. The process of <a href="http://en.wikipedia.org/wiki/Abstraction_(computer_science)" title="Abstraction (computer science)">abstracting</a> pieces of hardware is often done from the perspective of a <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">CPU</a>. Each type of CPU has a specific <a href="http://en.wikipedia.org/wiki/Instruction_set_architecture" title="Instruction set architecture" class="mw-redirect">instruction set architecture</a> or ISA. The ISA represents the primitive operations of the machine that are available for use by <a href="Assembly_language.html" title="Assembly language">assembly</a> programmers and compiler writers. One of the main functions of a <a href="Compiler.html" title="Compiler">compiler</a> is to allow a programmer to write an algorithm in a <a href="http://en.wikipedia.org/wiki/High-level_language" title="High-level language" class="mw-redirect">high-level language</a> without having to care about CPU-specific instructions. Then it is the job of the compiler to generate a CPU-specific executable. The same type of abstraction is made in operating systems, but OS <a href="API.html" title="API" class="mw-redirect">APIs</a> now represent the primitive operations of the machine, rather than an ISA. This allows a programmer to use OS-level operations (i.e. task creation/deletion) in their programs while still remaining <a href="Software_portability.html" title="Software portability">portable</a> over a variety of different platforms.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#In_Operating_Systems"><span class="tocnumber">2</span> <span class="toctext">In Operating Systems</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Microsoft_Windows"><span class="tocnumber">2.1</span> <span class="toctext">Microsoft Windows</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#AS.2F400"><span class="tocnumber">2.2</span> <span class="toctext">AS/400</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many early computer systems do not have any form of hardware abstraction. This means that anyone writing a program for such a system must know how each hardware device communicates. This becomes a significant challenge to software developers, who must know how every device available works to ensure it's compatible. With hardware abstraction, the program instead tells the operating system what the device should do, and the operating system gives the instruction. This means that programmers don't need to know how individual devices work, and their programs are compatible with any device.</p>
+<p>An <b>Example</b> of this might be a "Joystick" abstraction. The <a href="http://en.wikipedia.org/wiki/Joystick" title="Joystick">joystick</a> device, there are many physical implementations, is readable / writable through an API which many joystick-like devices might share. Most joystick-devices might report movement directions. Many joystick-devices might have sensitivity-settings that can be configured by an outside application. A Joystick abstraction hides details (e.g., register formats, <a href="http://en.wikipedia.org/wiki/I2C" title="I2C" class="mw-redirect">I2C</a> address) of the hardware so that a programmer using the abstracted API needn't understand the details of the device physical interface. This also allows <a href="http://en.wikipedia.org/wiki/Code_reuse" title="Code reuse">code reuse</a> since the same code can process standardised messages from any kind of implementation which supplies the "joystick" abstraction. A "nudge forward" can be from a <a href="http://en.wikipedia.org/wiki/Potentiometer" title="Potentiometer">potentiometer</a> or from a capacitive touch sensor that recognises "swipe" gestures, as long as they both provide a signal related to "movement".</p>
+<p>As physical limitations (e.g. resolution of sensor, temporal update frequency) may vary with hardware, an API can do little to hide that, other than by assuming a "least common denominator" model. Thus, certain deep architectural decisions from the implementation may become relevant to users of a particular instantiation of an abstraction.</p>
+<p>A good metaphor is the abstraction of transportation. Both bicycling and driving a car are transportation. They both have commonalities (e.g., you must steer) and physical differences (e.g., use of feet). One can always specify the abstraction "drive to" and let the implementor decide whether bicycling or driving a car is best. The "wheeled terrestrial transport" function is abstracted and the details of "how to drive" are encapsulated.</p>
+<p>Examples of "abstractions" on a PC include video input, printers, audio input and output, block devices (e.g. hard disk drives or <a href="http://en.wikipedia.org/wiki/USB_flash_drive" title="USB flash drive">USB flash drive</a>), etc.</p>
+<p>In certain computer science domains, such as Operating Systems or Embedded Systems, the abstractions have slightly different appearances (for instance, OSes tend to have more standardized interfaces), but the concept of abstraction and encapsulation of complexity are common, and deep.</p>
+<p>Hardware abstraction layers are of an even lower level in computer languages than <a href="Application_programming_interface.html" title="Application programming interface">application programming interfaces</a> (API) because they interact directly with hardware instead of a system <a href="http://en.wikipedia.org/wiki/Kernel_(computer_science)" title="Kernel (computer science)" class="mw-redirect">kernel</a>, therefore HALs require less processing time than APIs. Higher level languages often use HALs and APIs to communicate with lower level components.</p>
+<h2><span class="mw-headline" id="In_Operating_Systems">In Operating Systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit&amp;section=2" title="Edit section: In Operating Systems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <b>hardware abstraction layer</b> (<b>HAL</b>) is an <a href="http://en.wikipedia.org/wiki/Abstraction_layer" title="Abstraction layer">abstraction layer</a>, implemented in software, between the physical <a href="Computer_hardware.html" title="Computer hardware">hardware</a> of a <a href="Computer.html" title="Computer">computer</a> and the <a href="http://en.wikipedia.org/wiki/Computer_software" title="Computer software" class="mw-redirect">software</a> that runs on that computer. Its function is to hide differences in hardware from most of the <a href="Operating_system.html" title="Operating system">operating system</a> <a href="http://en.wikipedia.org/wiki/Kernel_(computer_science)" title="Kernel (computer science)" class="mw-redirect">kernel</a>, so that most of the kernel-mode code does not need to be changed to run on systems with different hardware. On a PC, HAL can basically be considered to be the driver for the motherboard and allows instructions from higher level computer languages to communicate with lower level components, but prevents direct access to the hardware.</p>
+<p><a href="BSD.html" title="BSD" class="mw-redirect">BSD</a>, <a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a>, <a href="Linux.html" title="Linux">Linux</a>, <a href="CP/M.html" title="CP/M">CP/M</a>, <a href="DOS.html" title="DOS">DOS</a>, <a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a>, and some other portable operating systems also have a HAL, even if it is not explicitly designated as such. Some operating systems, such as Linux, have the ability to insert one while running, like <a href="http://en.wikipedia.org/wiki/Adaptive_Domain_Environment_for_Operating_Systems" title="Adaptive Domain Environment for Operating Systems">Adeos</a>. The <a href="NetBSD.html" title="NetBSD">NetBSD</a> operating system is widely known as having a clean hardware abstraction layer which allows it to be highly portable. As part of this system are <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://netbsd.gw.com/cgi-bin/man-cgi?uvm+9+NetBSD-current">uvm(9)</a></code></span>/<span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://netbsd.gw.com/cgi-bin/man-cgi?pmap+9+NetBSD-current">pmap(9)</a></code></span>, <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://netbsd.gw.com/cgi-bin/man-cgi?bus_space+9+NetBSD-current">bus_space(9)</a></code></span>, <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://netbsd.gw.com/cgi-bin/man-cgi?bus_dma+9+NetBSD-current">bus_dma(9)</a></code></span> and other subsystems. Popular buses which are used on more than one architecture are also abstracted, such as <a href="http://en.wikipedia.org/wiki/Industry_Standard_Architecture" title="Industry Standard Architecture">ISA</a>, <a href="http://en.wikipedia.org/wiki/Extended_Industry_Standard_Architecture" title="Extended Industry Standard Architecture">EISA</a>, <a href="http://en.wikipedia.org/wiki/Peripheral_Component_Interconnect" title="Peripheral Component Interconnect" class="mw-redirect">PCI</a>, <a href="http://en.wikipedia.org/wiki/PCI-E" title="PCI-E" class="mw-redirect">PCI-E</a>, etc., allowing drivers to also be highly portable with a minimum of code modification.</p>
+<p>Operating systems having a defined HAL are easily portable across different hardware. This is especially important for <a href="Embedded_system.html" title="Embedded system">embedded systems</a> that run on dozens of different platforms.</p>
+<h3><span class="mw-headline" id="Microsoft_Windows">Microsoft Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit&amp;section=3" title="Edit section: Microsoft Windows">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">Windows NT</a> operating system has a HAL in the kernel space between hardware and the Windows NT executive services that are contained in the file <a href="http://en.wikipedia.org/wiki/Ntoskrnl.exe" title="Ntoskrnl.exe">NTOSKRNL.EXE</a>.<sup id="cite_ref-nthal_1-0" class="reference"><a href="#cite_note-nthal-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> This allows portability of the Windows NT kernel-mode code to a variety of processors, with different <a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">memory management unit</a> architectures, and a variety of systems with different I/O bus architectures; most of that code runs without change on those systems, when compiled for the <a href="http://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction set</a> applicable to those systems. For example, the <a href="http://en.wikipedia.org/wiki/Silicon_Graphics" title="Silicon Graphics">SGI</a> Intel x86-based workstations were not <a href="http://en.wikipedia.org/wiki/IBM_PC_compatible" title="IBM PC compatible">IBM PC compatible</a> workstations, but due to the HAL, Windows NT was able to run on them.</p>
+<p><a href="http://en.wikipedia.org/wiki/Windows_Vista" title="Windows Vista">Windows Vista</a> and later (<a href="http://en.wikipedia.org/wiki/Windows_Server_2008" title="Windows Server 2008">Windows Server 2008</a> and later for servers) automatically detect which hardware abstraction layer (HAL) should be used at boot time.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="AS.2F400">AS/400</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit&amp;section=4" title="Edit section: AS/400">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An "extreme" example of a HAL can be found in the <a href="http://en.wikipedia.org/wiki/System/38" title="System/38" class="mw-redirect">System/38</a> and <a href="http://en.wikipedia.org/wiki/AS/400" title="AS/400" class="mw-redirect">AS/400</a> architecture. Most compilers for those systems generate an abstract machine code; the Licensed Internal Code, or LIC, translates this virtual machine code into native code for the processor on which it is running and executes the resulting native code.<sup id="cite_ref-soltis_4-0" class="reference"><a href="#cite_note-soltis-4"><span>[</span>4<span>]</span></a></sup> (The exceptions are compilers that generate the LIC itself; those compilers are not available outside IBM.) This was so successful that application software and operating system software above the LIC layer that were compiled on the original S/38 run without modification and without recompilation on the latest AS/400 systems, despite the fact that the underlying hardware has been changed dramatically; at least three different types of processors have been in use.<sup id="cite_ref-soltis_4-1" class="reference"><a href="#cite_note-soltis-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-nthal-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-nthal_1-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/99588">"Windows NT Hardware Abstraction Layer (HAL)"</a>. Microsoft. October 31, 2006<span class="reference-accessdate">. Retrieved 2007-08-25</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHardware+abstraction&amp;rft.btitle=Windows+NT+Hardware+Abstraction+Layer+%28HAL%29&amp;rft.date=October+31%2C+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2Fkb%2F99588&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span id="CITEREFHelen_Custer1993" class="citation">Helen Custer (1993), <i>Inside Windows NT</i>, Microsoft Press</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHardware+abstraction&amp;rft.au=Helen+Custer&amp;rft.aulast=Helen+Custer&amp;rft.btitle=Inside+Windows+NT&amp;rft.date=1993&amp;rft.genre=book&amp;rft.pub=Microsoft+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment"><code>|accessdate=</code> requires <code>|url=</code> (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#accessdate_missing_url" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation book">Russinovich, Mark. E.; Solomon, David A.; Ionescu, Alex (2008). <i>Windows Internals: Including Windows Server 2008 and Windows Vista.</i> (5th ed.). Redmond, Wash.: Microsoft Press. p.&#160;65. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-7356-2530-3" title="Special:BookSources/978-0-7356-2530-3">978-0-7356-2530-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHardware+abstraction&amp;rft.aufirst=Mark.+E.&amp;rft.aulast=Russinovich&amp;rft.au=Russinovich%2C+Mark.+E.&amp;rft.btitle=Windows+Internals%3A+Including+Windows+Server+2008+and+Windows+Vista.&amp;rft.date=2008&amp;rft.edition=5th&amp;rft.genre=book&amp;rft.isbn=978-0-7356-2530-3&amp;rft.pages=65&amp;rft.place=Redmond%2C+Wash.&amp;rft.pub=Microsoft+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-soltis-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-soltis_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-soltis_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Soltis, Frank G. (1997). <i>Inside the AS/400: Featuring the AS/400e Series</i> (2nd ed.). Loveland, Colo.: Duke Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-882419-66-1" title="Special:BookSources/978-1-882419-66-1">978-1-882419-66-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHardware+abstraction&amp;rft.aufirst=Frank+G.&amp;rft.aulast=Soltis&amp;rft.au=Soltis%2C+Frank+G.&amp;rft.btitle=Inside+the+AS%2F400%3A+Featuring+the+AS%2F400e+Series&amp;rft.date=1997&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=978-1-882419-66-1&amp;rft.place=Loveland%2C+Colo.&amp;rft.pub=Duke+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Operating_system" title="Template:Operating system"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Operating_system" title="Template talk:Operating system"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Operating_system&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Operating_system.html" title="Operating system">Operating system</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Operating_system_advocacy.html" title="Operating system advocacy">Advocacy</a></li>
+<li><a href="Comparison_of_operating_systems.html" title="Comparison of operating systems">Comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_operating_systems" title="History of operating systems">History</a></li>
+<li><a href="Hobbyist_operating_system_development.html" title="Hobbyist operating system development">Hobbyist development</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></li>
+<li><a href="Timeline_of_operating_systems.html" title="Timeline of operating systems">Timeline</a></li>
+<li><a href="Usage_share_of_operating_systems.html" title="Usage share of operating systems">Usage share</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Kernel_(computing).html" title="Kernel (computing)">Kernel</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Computer_architecture.html" title="Computer architecture">Architectures</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Exokernel.html" title="Exokernel">Exokernel</a></li>
+<li><a href="Hybrid_kernel.html" title="Hybrid kernel">Hybrid</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="Monolithic_kernel-2.html" title="Monolithic kernel">Monolithic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Components</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Device_driver.html" title="Device driver">Device driver</a></li>
+<li><a href="Loadable_kernel_module.html" title="Loadable kernel module">Loadable kernel module</a></li>
+<li><a href="Microkernel.html" title="Microkernel">Microkernel</a></li>
+<li><a href="User_space.html" title="User space">User space</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Process_management_(computing).html" title="Process management (computing)">Process management</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;">Concepts</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Context_switch.html" title="Context switch">Context switch</a></li>
+<li><a href="Interrupt.html" title="Interrupt">Interrupt</a></li>
+<li><a href="Inter-process_communication.html" title="Inter-process communication">IPC</a></li>
+<li><a href="Process_(computing).html" title="Process (computing)">Process</a></li>
+<li><a href="Process_control_block.html" title="Process control block">Process control block</a></li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="Time-sharing.html" title="Time-sharing">Time-sharing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;width: 9em;;">
+<div style="padding:0em 0.75em;"><a href="Scheduling_(computing).html" title="Scheduling (computing)">Scheduling<br />
+algorithms</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width: auto;;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Computer_multitasking.html" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="Fixed-priority_pre-emptive_scheduling.html" title="Fixed-priority pre-emptive scheduling">Fixed-priority preemptive</a></li>
+<li><a href="Multilevel_feedback_queue.html" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="Preemption_(computing).html" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="Round-robin_scheduling.html" title="Round-robin scheduling">Round-robin</a></li>
+<li><a href="Shortest_job_next.html" title="Shortest job next">Shortest job next</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Memory_management.html" title="Memory management">Memory management</a> and<br />
+<a href="Resource_(computing).html" title="Resource (computing)">resource</a> protection</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bus_error.html" title="Bus error">Bus error</a></li>
+<li><a href="General_protection_fault.html" title="General protection fault">General protection fault</a></li>
+<li><a href="Memory_protection.html" title="Memory protection">Memory protection</a></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+<li><a href="Ring_(computer_security).html" title="Ring (computer security)">Security rings</a></li>
+<li><a href="Segmentation_fault.html" title="Segmentation fault">Segmentation fault</a></li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Non-volatile_memory.html" title="Non-volatile memory">Storage</a> access and<br />
+<a href="File_system.html" title="File system">file systems</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Boot_loader.html" title="Boot loader" class="mw-redirect">Boot loader</a></li>
+<li><a href="Defragmentation.html" title="Defragmentation">Defragmentation</a></li>
+<li><a href="Device_file.html" title="Device file">Device file</a></li>
+<li><a href="File_attribute.html" title="File attribute">File attribute</a></li>
+<li><a href="Inode.html" title="Inode">Inode</a></li>
+<li><a href="Journaling_file_system.html" title="Journaling file system">Journal</a></li>
+<li><a href="Disk_partitioning.html" title="Disk partitioning">Partition</a></li>
+<li><a href="Virtual_file_system.html" title="Virtual file system">Virtual file system</a></li>
+<li><a href="Virtual_tape_library.html" title="Virtual tape library">Virtual tape library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_operating_systems" title="List of operating systems">List</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AmigaOS.html" title="AmigaOS">AmigaOS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="BeOS.html" title="BeOS">BeOS</a></li>
+<li><a href="Berkeley_Software_Distribution.html" title="Berkeley Software Distribution">BSD</a></li>
+<li><a href="DOS.html" title="DOS">DOS</a></li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="IOS.html" title="IOS">iOS</a></li>
+<li><a href="Linux.html" title="Linux">Linux</a></li>
+<li><a href="Mac_OS.html" title="Mac OS">Mac OS</a></li>
+<li><a href="MorphOS.html" title="MorphOS">MorphOS</a></li>
+<li><a href="OpenVMS.html" title="OpenVMS">OpenVMS</a></li>
+<li><a href="OS/2.html" title="OS/2">OS/2</a></li>
+<li><a href="OSv.html" title="OSv">OSv</a></li>
+<li><a href="QNX.html" title="QNX">QNX</a></li>
+<li><a href="ReactOS.html" title="ReactOS">ReactOS</a></li>
+<li><a href="RISC_OS.html" title="RISC OS">RISC OS</a></li>
+<li><a href="Solaris_(operating_system).html" title="Solaris (operating system)">Solaris</a></li>
+<li><a href="Transaction_Processing_Facility.html" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="Unix.html" title="Unix">Unix</a></li>
+<li><a href="VM_(operating_system).html" title="VM (operating system)">VM/CMS</a></li>
+<li><a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a></li>
+<li><a href="Z/OS.html" title="Z/OS">z/OS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Miscellaneous concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Application_programming_interface.html" title="Application programming interface">API</a></li>
+<li><a href="Computer_network.html" title="Computer network">Computer network</a></li>
+<li><strong class="selflink">HAL</strong></li>
+<li><a href="Live_CD.html" title="Live CD">Live CD</a></li>
+<li><a href="Live_USB.html" title="Live USB">Live USB</a></li>
+<li><a href="Operating_system_shell.html" title="Operating system shell">OS shell</a>
+<ul>
+<li><a href="Command-line_interface.html" title="Command-line interface">CLI</a></li>
+<li><a href="Graphical_user_interface.html" title="Graphical user interface">GUI</a></li>
+<li><a href="Text-based_user_interface.html" title="Text-based user interface">TUI</a></li>
+<li><a href="Voice_user_interface.html" title="Voice user interface">VUI</a></li>
+</ul>
+</li>
+<li><a href="Preboot_Execution_Environment.html" title="Preboot Execution Environment">PXE</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1064
+CPU time usage: 0.868 seconds
+Real time usage: 0.917 seconds
+Preprocessor visited node count: 1477/1000000
+Preprocessor generated node count: 6140/1500000
+Post‐expand include size: 37139/2048000 bytes
+Template argument size: 1748/2048000 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 3/500
+Lua time usage: 0.052/10.000 seconds
+Lua memory usage: 1.5 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:443015-0!*!0!!en!*!* and timestamp 20140327231426
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;oldid=599104785">http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;oldid=599104785</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Operating_system_technology" title="Category:Operating system technology">Operating system technology</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_using_citations_with_accessdate_and_no_URL" title="Category:Pages using citations with accessdate and no URL">Pages using citations with accessdate and no URL</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Hardware+abstraction&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Hardware+abstraction" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Hardware_abstraction.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Hardware_abstraction"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Hardware_abstraction.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Hardware_abstraction" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Hardware_abstraction" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;oldid=599104785" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1046562" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Hardware_abstraction&amp;id=599104785" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Hardware+abstraction">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Hardware+abstraction&amp;oldid=599104785&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Hardware_abstraction&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Capa_d%27abstracció_de_maquinari" title="Capa d'abstracció de maquinari – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Hardware_abstraction_layer" title="Hardware abstraction layer – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Hardwareabstraktionsschicht" title="Hardwareabstraktionsschicht – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Capa_de_abstracción_de_hardware" title="Capa de abstracción de hardware – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/لایه_انتزاعی_سخت‌افزاری" title="لایه انتزاعی سخت‌افزاری – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Couche_d%27abstraction_matérielle" title="Couche d'abstraction matérielle – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/하드웨어_추상화_계층" title="하드웨어 추상화 계층 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Lapisan_abstraksi_perangkat_keras" title="Lapisan abstraksi perangkat keras – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Hardware_abstraction_layer" title="Hardware abstraction layer – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Hardware_Abstraction_Layer" title="Hardware Abstraction Layer – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Hardware_Abstract_Layer" title="Hardware Abstract Layer – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Warstwa_abstrakcji_sprzętowej" title="Warstwa abstrakcji sprzętowej – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Camada_de_abstração_de_hardware" title="Camada de abstração de hardware – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Слой_аппаратных_абстракций" title="Слой аппаратных абстракций – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Hardware_Abstraction_Layer" title="Hardware Abstraction Layer – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Шар_апаратних_абстракцій" title="Шар апаратних абстракцій – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/硬體抽象層" title="硬體抽象層 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1046562#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 11 March 2014 at 08:32.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Hardware_abstraction" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1053 in 0.359 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hardware_abstraction by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:34 GMT -->
+</html>

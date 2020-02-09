@@ -1,0 +1,318 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Consistent_hashing.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Consistent_hashing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Consistent hashing - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Consistent_hashing" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Consistent_hashing.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Consistent_hashing","wgTitle":"Consistent hashing","wgCurRevisionId":598464635,"wgRevisionId":598464635,"wgArticleId":2434041,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Hashing"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Consistent_hashing","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1757218"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Consistent_hashing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Consistent hashing</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>Consistent hashing</b> is a special kind of <a href="Hash_function.html" title="Hash function">hashing</a> such that when a hash table is resized and consistent hashing is used, only <img class="tex" alt="K/n" src="http://upload.wikimedia.org/math/8/6/e/86e8b371e8e97721503be8c7eba99530.png" /> keys need to be remapped on average, where <img class="tex" alt="K" src="http://upload.wikimedia.org/math/a/5/f/a5f3c6a11b03839d46af9fb43c97c188.png" /> is the number of keys, and <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> is the number of slots. In contrast, in most traditional <a href="Hash_table.html" title="Hash table">hash tables</a>, a change in the number of array slots causes nearly all keys to be remapped.</p>
+<p>Consistent hashing achieves the same goals as <b><a href="http://en.wikipedia.org/wiki/Rendezvous_hashing" title="Rendezvous hashing">Rendezvous hashing</a></b> (also called HRW Hashing). The two techniques use different algorithms, and were devised independently and contemporaneously.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Need_for_consistent_hashing"><span class="tocnumber">2</span> <span class="toctext">Need for consistent hashing</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Technique"><span class="tocnumber">3</span> <span class="toctext">Technique</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Monotonic_keys"><span class="tocnumber">4</span> <span class="toctext">Monotonic keys</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Properties"><span class="tocnumber">5</span> <span class="toctext">Properties</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Examples_of_use"><span class="tocnumber">6</span> <span class="toctext">Examples of use</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Originally devised by <a href="http://en.wikipedia.org/wiki/David_Karger" title="David Karger">Karger</a> <i>et al.</i> at MIT for use in distributed caching, the idea has now been expanded to other areas also. An academic paper from 1997 introduced the term "consistent hashing" as a way of distributing requests among a changing population of Web servers. Each slot is then represented by a node in a distributed system. The addition (joins) and removal (leaves/failures) of nodes only requires <img class="tex" alt="K/n" src="http://upload.wikimedia.org/math/8/6/e/86e8b371e8e97721503be8c7eba99530.png" /> items to be re-shuffled when the number of slots/nodes change.<sup id="cite_ref-KargerEtAl1997_1-0" class="reference"><a href="#cite_note-KargerEtAl1997-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>Consistent hashing has also been used to reduce the impact of partial system failures in large Web applications as to allow for robust caches without incurring the system wide fallout of a failure.<sup id="cite_ref-KargerEtAl1999_2-0" class="reference"><a href="#cite_note-KargerEtAl1999-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>The consistent hashing concept also applies to the design of <a href="Distributed_hash_table.html" title="Distributed hash table">distributed hash tables</a> (DHTs). DHTs use consistent hashing to partition a keyspace among a distributed set of nodes, and additionally provide an overlay network that connects nodes such that the node responsible for any key can be efficiently located.</p>
+<p><a href="http://en.wikipedia.org/wiki/Rendezvous_hashing" title="Rendezvous hashing">Rendezvous hashing</a>, designed at the same time as consistent hashing, achieves the same goals using the very different Highest Random Weight (HRW) algorithm.</p>
+<h2><span class="mw-headline" id="Need_for_consistent_hashing">Need for consistent hashing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=2" title="Edit section: Need for consistent hashing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While running collections of caching machines some limitations are experienced. A common way of load balancing <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> cache machines is to put object <img class="tex" alt="o" src="http://upload.wikimedia.org/math/d/9/5/d95679752134a2d9eb61dbd7b91c4bcc.png" /> in cache machine number <img class="tex" alt="\mbox{hash}(o) \mod n" src="http://upload.wikimedia.org/math/b/0/0/b00919919cd680e0f048ce03fc7d69ac.png" />. But this will not work if a cache machine is added or removed because <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> changes and every object is hashed to a new location. This can be disastrous since the originating content servers are flooded with requests from the cache machines. Hence consistent hashing is needed to avoid swamping of servers.</p>
+<p>Consistent hashing maps objects to the same cache machine, as far as possible. It means when a cache machine is added, it takes its share of objects from all the other cache machines and when it is removed, its objects are shared between the remaining machines.</p>
+<p>The main idea behind the consistent hashing algorithm is to associate each cache with one or more hash value intervals where the interval boundaries are determined by calculating the hash of each cache identifier. (The hash function used to define the intervals does not have to be the same function used to hash the cached values. Only the range of the two functions need match.) If the cache is removed its interval is taken over by a cache with an adjacent interval. All the remaining caches are unchanged.</p>
+<h2><span class="mw-headline" id="Technique">Technique</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=3" title="Edit section: Technique">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Consistent hashing is based on mapping each object to a point on the edge of a circle (or equivalently, mapping each object to a real angle). The system maps each available machine (or other storage bucket) to many pseudo-randomly distributed points on the edge of the same circle.</p>
+<p>To find where an object should be placed, the system finds the location of that object's key on the edge of the circle; then walks around the circle until falling into the first bucket it encounters (or equivalently, the first available bucket with a higher angle). The result is that each bucket contains all the resources located between its point and the previous bucket point.</p>
+<p>If a bucket becomes unavailable (for example because the computer it resides on is not reachable), then the angles it maps to will be removed. Requests for resources that would have mapped to each of those points now map to the next highest point. Since each bucket is associated with many pseudo-randomly distributed points, the resources that were held by that bucket will now map to many different buckets. The items that mapped to the lost bucket must be redistributed among the remaining ones, but values mapping to other buckets will still do so and do not need to be moved.</p>
+<p>A similar process occurs when a bucket is added. By adding a bucket point, we make any resources between that and the next smaller angle map to the new bucket. These resources will no longer be associated with the previous bucket, and any value previously stored there will not be found by the selection method described above.</p>
+<p>The portion of the keys associated with each bucket can be altered by altering the number of angles that bucket maps to.</p>
+<h2><span class="mw-headline" id="Monotonic_keys">Monotonic keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=4" title="Edit section: Monotonic keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If it is known that key values will always increase monotonically, <a href="Hash_table.html#Monotonic_keys" title="Hash table">an alternative approach to consistent hashing</a> is possible.</p>
+<h2><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=5" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/David_Karger" title="David Karger">David Karger</a> et al. list several properties of consistent hashing that make it useful for distributed caching protocols on the Internet:<sup id="cite_ref-KargerEtAl1997_1-1" class="reference"><a href="#cite_note-KargerEtAl1997-1"><span>[</span>1<span>]</span></a></sup></p>
+<ul>
+<li>"spread"</li>
+<li>"load"</li>
+<li>"smoothness"</li>
+<li>"balance"</li>
+<li>"monotonic"</li>
+</ul>
+<h2><span class="mw-headline" id="Examples_of_use">Examples of use</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=6" title="Edit section: Examples of use">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some known instances where consistent hashing is used are:</p>
+<ol>
+<li><a href="http://en.wikipedia.org/wiki/Openstack" title="Openstack" class="mw-redirect">Openstack</a>'s Object Storage Service Swift.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></li>
+<li>Partitioning component of Amazon's storage system Dynamo.<sup id="cite_ref-Amazon2007_4-0" class="reference"><a href="#cite_note-Amazon2007-4"><span>[</span>4<span>]</span></a></sup></li>
+<li>Data partitioning in <a href="http://en.wikipedia.org/wiki/Apache_Cassandra" title="Apache Cassandra">Apache Cassandra</a>.<sup id="cite_ref-Lakshman2010b_5-0" class="reference"><a href="#cite_note-Lakshman2010b-5"><span>[</span>5<span>]</span></a></sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Akka_(toolkit)" title="Akka (toolkit)">Akka</a>'s consistent hashing router.<sup id="cite_ref-akka-routing_6-0" class="reference"><a href="#cite_note-akka-routing-6"><span>[</span>6<span>]</span></a></sup></li>
+</ol>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-KargerEtAl1997-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-KargerEtAl1997_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-KargerEtAl1997_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation conference">Karger, D.; Lehman, E.; <a href="http://en.wikipedia.org/wiki/F._Thomson_Leighton" title="F. Thomson Leighton">Leighton, T.</a>; Panigrahy, R.; Levine, M.; <a href="http://en.wikipedia.org/wiki/Daniel_M._Lewin" title="Daniel M. Lewin">Lewin, D.</a> (1997). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=258660">"Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web"</a>. <i>Proceedings of the Twenty-ninth Annual ACM <a href="http://en.wikipedia.org/wiki/Symposium_on_Theory_of_Computing" title="Symposium on Theory of Computing">Symposium on Theory of Computing</a></i>. ACM Press New York, NY, USA. pp.&#160;654–663. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F258533.258660">10.1145/258533.258660</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AConsistent+hashing&amp;rft.atitle=Proceedings+of+the+Twenty-ninth+Annual+ACM+Symposium+on+Theory+of+Computing&amp;rft.au=Karger%2C+D.%3B+Lehman%2C+E.%3B+Leighton%2C+T.%3B+Panigrahy%2C+R.%3B+Levine%2C+M.%3B+Lewin%2C+D.&amp;rft.aulast=Karger%2C+D.%3B+Lehman%2C+E.%3B+Leighton%2C+T.%3B+Panigrahy%2C+R.%3B+Levine%2C+M.%3B+Lewin%2C+D.&amp;rft.btitle=Consistent+Hashing+and+Random+Trees%3A+Distributed+Caching+Protocols+for+Relieving+Hot+Spots+on+the+World+Wide+Web&amp;rft.date=1997&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D258660&amp;rft_id=info%3Adoi%2F10.1145%2F258533.258660&amp;rft.pages=654%E2%80%93663&amp;rft.pub=ACM+Press+New+York%2C+NY%2C+USA&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-KargerEtAl1999-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-KargerEtAl1999_2-0">^</a></b></span> <span class="reference-text"><span class="citation journal">Karger, D.; Sherman, A.; Berkheimer, A.; Bogstad, B.; Dhanidina, R.; Iwamoto, K.; Kim, B.; Matkins, L.; Yerushalmi, Y. (1999). <a rel="nofollow" class="external text" href="http://www8.org/w8-papers/2a-webserver/caching/paper2.html">"Web Caching with Consistent Hashing"</a>. <i>Computer Networks</i> <b>31</b> (11): 1203–1213. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2FS1389-1286(99)00055-9">10.1016/S1389-1286(99)00055-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AConsistent+hashing&amp;rft.atitle=Web+Caching+with+Consistent+Hashing&amp;rft.au=Karger%2C+D.%3B+Sherman%2C+A.%3B+Berkheimer%2C+A.%3B+Bogstad%2C+B.%3B+Dhanidina%2C+R.%3B+Iwamoto%2C+K.%3B+Kim%2C+B.%3B+Matkins%2C+L.%3B+Yerushalmi%2C+Y.&amp;rft.aulast=Karger%2C+D.%3B+Sherman%2C+A.%3B+Berkheimer%2C+A.%3B+Bogstad%2C+B.%3B+Dhanidina%2C+R.%3B+Iwamoto%2C+K.%3B+Kim%2C+B.%3B+Matkins%2C+L.%3B+Yerushalmi%2C+Y.&amp;rft.date=1999&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww8.org%2Fw8-papers%2F2a-webserver%2Fcaching%2Fpaper2.html&amp;rft_id=info%3Adoi%2F10.1016%2FS1389-1286%2899%2900055-9&amp;rft.issue=11&amp;rft.jtitle=Computer+Networks&amp;rft.pages=1203%E2%80%931213&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=31" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://docs.openstack.org/developer/swift/ring.html">http://docs.openstack.org/developer/swift/ring.html</a></span></li>
+<li id="cite_note-Amazon2007-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Amazon2007_4-0">^</a></b></span> <span class="reference-text"><span class="citation journal">DeCandia, G.; Hastorun, D.; Jampani, M.; Kakulapati, G.; Lakshman, A.; Pilchin, A.; Sivasubramanian, S.; Vosshall, P.; Vogels, W. (2007). "Dynamo: Amazon's Highly Available Key-Value Store". <i>Proceedings of the 21st ACM Symposium on Operating Systems Principles</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AConsistent+hashing&amp;rft.atitle=Dynamo%3A+Amazon%27s+Highly+Available+Key-Value+Store&amp;rft.au=DeCandia%2C+G.%3B+Hastorun%2C+D.%3B+Jampani%2C+M.%3B+Kakulapati%2C+G.%3B+Lakshman%2C+A.%3B+Pilchin%2C+A.%3B+Sivasubramanian%2C+S.%3B+Vosshall%2C+P.%3B+Vogels%2C+W.&amp;rft.aulast=DeCandia%2C+G.%3B+Hastorun%2C+D.%3B+Jampani%2C+M.%3B+Kakulapati%2C+G.%3B+Lakshman%2C+A.%3B+Pilchin%2C+A.%3B+Sivasubramanian%2C+S.%3B+Vosshall%2C+P.%3B+Vogels%2C+W.&amp;rft.date=2007&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+21st+ACM+Symposium+on+Operating+Systems+Principles&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Lakshman2010b-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Lakshman2010b_5-0">^</a></b></span> <span class="reference-text"><span class="citation journal">Lakshman, Avinash; Malik, Prashant (2010). "Cassandra: a decentralized structured storage system". <i>ACM SIGOPS Operating Systems Review</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AConsistent+hashing&amp;rft.atitle=Cassandra%3A+a+decentralized+structured+storage+system&amp;rft.au=Lakshman%2C+Avinash%3B+Malik%2C+Prashant&amp;rft.aulast=Lakshman%2C+Avinash%3B+Malik%2C+Prashant&amp;rft.date=2010&amp;rft.genre=article&amp;rft.jtitle=ACM+SIGOPS+Operating+Systems+Review&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-akka-routing-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-akka-routing_6-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://doc.akka.io/docs/akka/snapshot/scala/routing.html">Akka Routing</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.spiteful.com/2008/03/17/programmers-toolbox-part-3-consistent-hashing/">Understanding Consistent hashing</a></li>
+</ul>
+<ul>
+<li>Implentations in various languages:
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.martinbroadhurst.com/Consistent-Hash-Ring.html">C++</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/consistent-hash/">C#</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/basho/riak_core/blob/master/src/chash.erl">Erlang</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/stathat/consistent">Go</a></li>
+<li><a rel="nofollow" class="external text" href="http://weblogs.java.net/blog/tomwhite/archive/2007/11/consistent_hash.html">Java</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/pda/flexihash">PHP</a></li>
+<li><a rel="nofollow" class="external text" href="http://amix.dk/blog/post/19367">Python</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/afirel/consistent_hashr">Ruby</a></li>
+</ul>
+</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1021
+CPU time usage: 0.240 seconds
+Real time usage: 0.281 seconds
+Preprocessor visited node count: 361/1000000
+Preprocessor generated node count: 1476/1500000
+Post‐expand include size: 8809/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Lua time usage: 0.028/10.000 seconds
+Lua memory usage: 1.34 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2434041-0!*!0!!en!*!*!math=0 and timestamp 20140316043907
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;oldid=598464635">http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;oldid=598464635</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Hashing" title="Category:Hashing">Hashing</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Consistent+hashing&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Consistent+hashing" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Consistent_hashing.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Consistent_hashing"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Consistent_hashing.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Consistent_hashing" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Consistent_hashing" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;oldid=598464635" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1757218" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Consistent_hashing&amp;id=598464635" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Consistent+hashing">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Consistent+hashing&amp;oldid=598464635&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Consistent_hashing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Konsistente_Hash-Funktion" title="Konsistente Hash-Funktion – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/コンシステントハッシュ法" title="コンシステントハッシュ法 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Konsistent_hashing" title="Konsistent hashing – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Hàm_băm_ổn_định" title="Hàm băm ổn định – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/一致哈希" title="一致哈希 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1757218#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 6 March 2014 at 22:16.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Consistent_hashing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1106 in 0.340 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Consistent_hashing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:06 GMT -->
+</html>

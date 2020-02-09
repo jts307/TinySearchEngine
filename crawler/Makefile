@@ -17,8 +17,8 @@ crawler.o: ../libcs50/bag.h ../libcs50/hashtable.h ../libcs50/webpage.h ../libcs
 
 .PHONY: test clean
 
-test: $(PROG) test_names
-	./$(PROG) < test_names
+test: testing.sh
+	bash -v testing.sh
 
 clean:
 	rm -f *~ *.o *.dSYM
