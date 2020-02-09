@@ -1,50 +1,20 @@
-# CS50 Lab 3
+# CS50 Lab 4
 ## Jacob Werzinsky, CS50 Winter 2020
 
-### pagedir
+### crawler
 
-The pagedir module handles operations that involve writing files to the pageDirectory. This includes dummy files 
-and webpage files created by crawler.
+Crawler gathers information which includes the html and url of webpages starting from a given url. The crawler
+starts at this url and follows all links within the url's webpage to other sites and stores their information as well. 
+It then searches for urls from those sites and continues this process until all links are exhausted or a max depth, defined
+by the amount of links a page is away from the starting webpage, is reached. This implementation will only search webpages
+within http://old-www.cs.dartmouth.edu. Saves results in the form of numbered files with the url,html and depth to a specified directory. 
 
 ### Usage
 
-The *pagedir* module, defined in `pagedir.h` and implemented in `pagedir.c`:
+crawler [seedURL] [pageDirectory] [maxDepth]
 
-```c
-/* Checks if a directory exists and is writable by attempting to write 
- * '.crawler' dummy file in directory. Note that .crawler remains in 
- * directory after function is done.
- * parameters:
- *   pageDir - pointer to the path of directory to be tested
- * returns:
- *   int with value of 0 if directory exists and is writable, 1 otherwise.
- * When pageDir is NULL or failed memory allocation, 
- * then an error is written to stderr and it exits with positive status.
- */
-int isValidDirectory(const char *pageDir);
-
-/* Takes a webpage type and writes its information into a page file with the
- * following format:
- *      Line 1: webpage URL
- *      Line 2: webpage depth
- *      Line 3 and onward: webpage HTML
- * parameters:
- *   pageDir - directory page file will be saved to
- *   webpage - pointer to webpage type whose information will be written to a file.
- * returns:
- *   returns 0 on success and positive value on any error.
- *   Error statuses:
- *      1 - NULL pageDir
- *      2 - NULL wp
- *      3 - NULL wp->url
- *      4 - NULL wp->html
- *      5 - Negative wp->depth
- *      6 - failed to create filePath String
- *      7 - Error creating or writing to page file
- *      8 - Error allocating memory for stringId         
- */
-int pageSaver(const char *pageDir, webpage_t *wp);
-```
+## Example
+crawler http://old-www.cs.dartmouth.edu directory 5 
 
 ### Assumptions
 
@@ -53,9 +23,10 @@ the directory passed by the caller. For example, the case where someone wants to
 different calls of crawler with various seed URLs. So I assumed that a user would prefer to keep any numbered
 files within the passed directory. This mainly pertains to the pageSaver() function.
 
+I assumed that the crawling area was not going to be too big, about the size of the testing examples, so the 
+hashtable used in the program contains only 200 sets which on larger scales will run increasingly slower.
+
 ### Compilation
+To comple crawler, do: `make crawler.o`.
 
-To compile common archive, do: `make common.a`.
-To comple pagedir module, do: `make pagedir.o`.
-
-See [TESTING](../crawler/TESTING.md) for details of testing and an example test run.
+See [TESTING](TESTING.md) for details of testing and an example test run.
