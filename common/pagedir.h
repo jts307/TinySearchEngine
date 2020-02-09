@@ -48,7 +48,8 @@ int isValidDirectory(const char *pageDir);
  *   	4 - NULL wp->html
  *   	5 - Negative wp->depth
  *   	6 - failed to create filePath String
- *   	7 - Error creating or writing to page file 	 
+ *   	7 - Error creating or writing to page file
+ *   	8 - Error allocating memory for stringId 	 
  */
 int pageSaver(const char *pageDir, webpage_t *wp);
 

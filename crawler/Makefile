@@ -1,16 +1,10 @@
-# Makefile for 'bag' module
+# Makefile for 'crawler' module
 #
-# David Kotz, April 2016, 2017
-# updated by Xia Zhou, July 2016, 2018, January 2019
-# updated by Temi Prioleau, January 2020
+# Jacob Werzinsky 
 
 PROG = crawler
-OBJS = crawler.o ../libcs50/libcs50-given.a ../common/common.a 
+OBJS = crawler.o ../libcs50/libcs50.a ../common/common.a 
 LIBS =
-
-# uncomment the following to turn on verbose memory logging
-# TESTING=-DMEMTEST
-
 CFLAGS = -Wall -pedantic -std=c11 -ggdb -lm $(TESTING) -I../common -I../libcs50
 CC = gcc
 MAKE = make

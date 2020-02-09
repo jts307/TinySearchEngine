@@ -15,7 +15,7 @@
 #include "memory.h"
 
 /**************** file-local global variables ****************/
-static int id = 0;  // id of file that will be created in the page Directory. 
+static int id = 1;  // id of file that will be created in the page Directory. 
 
 /**************** local types ****************/
 /* none */
@@ -47,7 +47,7 @@ bool isValidDirectory(const char *pageDir)
   assertp((char*)filePath, "Error creating filePath string for directory.");
 
   // if dummy file is not created then the directory is invalid
-  FILE *fp;
+  FILE *fp=NULL;
   if ((fp = fopen(filePath, "w")) == NULL) {
     count_free((char*)filePath);
     return false;
@@ -64,15 +64,13 @@ int pageSaver(const char *pageDir, webpage_t *wp)
   // exit status
   int status=0;
 
+  // checking if arguments are not NULL.
+  // Upon a NULL argument, it is logged and function returns
   if (pageDir == NULL) {
-    // if NULL return error
     fprintf(stderr, "pageSaver gets NULL pageDir");
     status++;
     return status;
   }
-
-  // checking arguments other than pageDir are not NULL.
-  // Upon a NULL argument, it is logged and function returns
   if (wp == NULL) {
     fprintf(stderr, "pageSaver gets NULL wp\n");
     status = 2;
@@ -104,10 +102,10 @@ int pageSaver(const char *pageDir, webpage_t *wp)
 
   // finding file id that is availible for use 
   while (1) {
-    // converting int id to char*
+    // converting int id to char
     numDigits = ceil(log10(id));
-    stringId = count_malloc((numDigits + 1)*sizeof(char));
-    assertp(stringId, "Failure to allocate space for stringId pointer\n");
+    stringId = (char*)count_malloc((numDigits+2)*sizeof(char)); 
+    assertp(stringId, "Failure to allocate space for stringId pointer");
     sprintf(stringId, "%d", id);
     
     // creating file path string from file id
@@ -123,13 +121,13 @@ int pageSaver(const char *pageDir, webpage_t *wp)
 
     // move on to next file id
     id++; 
-
+    
     // if file does not exist then its availible for use.
     if ((fp = fopen(filePath, "r")) == NULL) {
       break;
     }
-    count_free((char*)filePath);
     fclose(fp);
+    count_free(filePath);
   }
 
   // create and write page file
@@ -165,6 +163,13 @@ int pageSaver(const char *pageDir, webpage_t *wp)
 }
 
 /**************** getFilePath() ****************/
+/* Used to get create a file path inside a directory.
+ * Parameters:
+ *   pageDir - directory path 
+ *   fileName - name of file wanting to create path for 
+ * Returns:
+ *   A path to the passed file inside the passed directory
+ */
 static char* getFilePath(const char *pageDir, const char *fileName)
 {       	
   // return NULL if directory name is NULL.
@@ -175,11 +180,9 @@ static char* getFilePath(const char *pageDir, const char *fileName)
   // allocating space for filePath pointer  
   char *filePath = count_malloc(strlen(pageDir) + strlen(fileName) + 2);
   
-  // returning NULL if failure to allocate memory
-  if (filePath == NULL) {
-    fprintf(stderr, "Failure to allocate space for filePath pointer.\n");
-    return NULL;
-  }
+  // exiting if failure to allocate memory
+  assertp(filePath, "Failure to allocate space for filePath pointer.\n");
+  
   // creating directory path string from directory and file strings
   strcpy(filePath, pageDir);
   strcat(filePath, "/");

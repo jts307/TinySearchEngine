@@ -1,10 +1,10 @@
 # Makefile for common library
-#   Builds and compiles all these utility functions into a library.
-#
+#   Builds and compiles all pageDirectory based utility modules
 # Jacob Werzinsky, Winter 2020 CS50 
 
-# object files, and the target library
+# object files, archive files, and the target library
 OBJS = pagedir.o
+ARCS = libcs50.a
 LIB = common.a
 FLAGS = 
 CFLAGS = -Wall -pedantic -std=c11 -ggdb -I ../libcs50 $(FLAGS)
@@ -12,14 +12,11 @@ CC = gcc
 MAKE = make
 
 # Build the library by archiving object files
-$(LIB): $(OBJS)
+$(LIB): $(OBJS) $(ARVS)
 	ar cr $(LIB) $(OBJS)
 
 # Dependencies: 
 pagedir.o: pagedir.h ../libcs50/memory.h ../libcs50/webpage.h
-memory.o: ../libcs50/memory.h
-webpage.o: ../libcs50/webpage.h ../libcs50/memory.h ../libcs50/file.h
-file.o: ../libcs50/file.h
  
 .PHONY: clean test 
 

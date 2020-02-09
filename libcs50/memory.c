@@ -1,4 +1,4 @@
-/* 
+/*
  * memory - count_malloc and related functions 
  * 
  * 1. Replacements for malloc(), calloc(), and free(),
