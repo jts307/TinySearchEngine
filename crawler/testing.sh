@@ -1,8 +1,12 @@
 #!/bin/bash
 #
-# testing.sh - used for testing the program crawler.c and the module pagedir 
+# Testing script for crawler.c and pagedir module
+# Author: Jacob Werzinsky
+# Date: Feb 8, 2020
+#
+# usage: bash -v testing.sh
 # 
-# Created by Jacob Werzinsky, CS50, 21 January 2020
+# Created by Jacob Werzinsky, CS50, Winter 2020
 
 
 # making testing directories, program exits without testing if it cannot create a directory
@@ -108,11 +112,19 @@ then
 	echo 1>&2 "Error creating directory for testing results"
 	exit 1
 fi
-mkdir "testing/classwebsite"
-if [ ! -d "testing/classwebsite" ]
+
+mkdir "testing/toscrape-depth-2"
+if [ ! -d "testing/toscrape-depth-2" ]
 then 
 	echo 1>&2 "Error creating directory for testing results"
 	exit 1
+fi
+
+mkdir "testing/wikipedia-depth-3"
+if [ ! -d "testing/wikipedia-depth-3" ]
+then
+        echo 1>&2 "Error creating directory for testing results"
+        exit 1
 fi
 
 
@@ -225,12 +237,19 @@ echo "Exit code for v2-letters depth 5: $?"
 echo "Exit code for wikipedia depth 0: $?"
 ./crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-1 1
 echo "Exit code for wikipedia depth 1: $?"
+
+# Note: The following three tests take a long time to run
 ./crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2
 echo "Exit code for wikipedia depth 2: $?"
 
-# Testing it on the cs50 class website with a higher depth
-##########################################################
-./crawler http://old-www.cs.dartmouth.edu/~cs50/index.html testing/classwebsite-depth-20 20
-echo "Exit code for classwebsite depth 20: $?"
+# Testing on toscrape and on the wikipedia page at a higher depth
+#################################################################
+./crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/toscrape/index.html testing/toscrape-depth-2 2
+echo "Exit code for toscrape depth 2: $?"
+
+./crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-3 3
+echo "Exit code for wikipedia depth 3: $?"
+
+
 
 exit 0

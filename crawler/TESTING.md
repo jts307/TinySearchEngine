@@ -11,6 +11,11 @@ which each contain results produced by using crawler and the pagedir module. Tes
 will contain all the exit codes and error messages produced by the tests. There is a provided
 sample testing.out and testing directory that was produced using the above command.
 
-Note: Before running testing.sh delete the sample testing directory or the directory will have
+Notes: 
+-Before running testing.sh delete the sample testing directory or the directory will have
 two copies of the same test results which might make it seem like the program behaved differently than
-intended. You can run `make tclean` to do this.     
+intended. You can run `make tclean` to do this.
+
+-Some of the tests take a long time to run, particularly wikipedia-depth-2, wikipedia-depth-3 and toscrape-depth-2,
+so it is recommended to either increase the hashtable size in crawler.c to maybe speed up performance or to just 
+comment out these tests entirely.    
