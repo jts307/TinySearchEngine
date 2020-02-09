@@ -24,4 +24,6 @@ clean:
 	rm -f *~ *.o *.dSYM
 	rm -f $(PROG)
 	rm -f stocks
-
+tclean:
+	rm -frd testing
+	rm -f testing.out
