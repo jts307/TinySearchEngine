@@ -13,7 +13,7 @@ within http://old-www.cs.dartmouth.edu. Saves results in the form of numbered fi
 
 crawler [seedURL] [pageDirectory] [maxDepth]
 
-## Example
+*Example*
 crawler http://old-www.cs.dartmouth.edu directory 5 
 
 ### Assumptions
