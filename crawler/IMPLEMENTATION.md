@@ -7,14 +7,7 @@ The pseudo code for the crawler goes as follows:
 
 ### Execute from a command line as shown in the User Interface:
 
-Parameters are passed to: 
-
-```c
-int main(const int argc, const char *argv[])
-```
-
-which then checks that there are exactly 4 arguments passed from the command line which are
-`const char *seedURL`, `const char *pageDirectory` and `const char maxDepth`.
+Parameters are passed to `int main(const int argc, const char *argv[])` which then checks that there are exactly 4 arguments passed from the command line which are `const char *seedURL`, `const char *pageDirectory` and `const char maxDepth`.
 
 ### Parse the command line, validate parameters, initialize other modules
 
@@ -22,12 +15,7 @@ The main function then validates its parameters by making calls to `IsValidDirec
 
 ### make a webpage for the seedURL, marked with depth=0
 
-The main function then passes the three arguments (`int maxDepth` not the `const char maxDepth`) to:
-
-```c
-int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)
-```
-The crawler function then makes a `webpage struct` for the `const char seedURL` and passes it a NULL html and a depth of 0 using `webpage_new`.
+The main function then passes the three arguments (`int maxDepth` not the `const char maxDepth`) to `int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)`. The crawler function then makes a `webpage struct` for the `const char seedURL` and passes it a NULL html and a depth of 0 using `webpage_new`.
 
 ### add that page to the bag of webpages to crawl
 
