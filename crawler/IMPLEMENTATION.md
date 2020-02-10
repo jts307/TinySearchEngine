@@ -15,44 +15,43 @@ int main(const int argc, const char *argv[])
 
 which then checks that there are exactly 4 arguments passed from the command line.
 
-Parse the command line, validate parameters, initialize other modules
+### Parse the command line, validate parameters, initialize other modules
 
-make a webpage for the seedURL, marked with depth=0
+### make a webpage for the seedURL, marked with depth=0
 
-add that page to the bag of webpages to crawl
+### add that page to the bag of webpages to crawl
 
-add that URL to the hashtable of URLs seen
+### add that URL to the hashtable of URLs seen
 
-while there are more webpages to crawl,
+### while there are more webpages to crawl,
 
-extract a webpage (URL,depth) item from the bag of webpages to be crawled,
+### extract a webpage (URL,depth) item from the bag of webpages to be crawled,
 
-pause for at least one second,
+### pause for at least one second,
 
-use pagefetcher to retrieve a webpage for that URL,
+### use pagefetcher to retrieve a webpage for that URL,
 
-use pagesaver to write the webpage to the pageDirectory with a unique document ID, as described in the 
-Requirements.
+### use pageSaver to write the webpage to the pageDirectory with a unique document ID
 
-if the webpage depth is < maxDepth, explore the webpage to find links:
+### if the webpage depth is < maxDepth, explore the webpage to find links:
 
-use pagescanner to parse the webpage to extract all its embedded URLs;
+### use pagescanner to parse the webpage to extract all its embedded URLs;
 
-for each extracted URL,
+### for each extracted URL,
 
-‘normalize’ the URL (see below)
+#### ‘normalize’ the URL (see below)
 
-if that URL is not ‘internal’ (see below), ignore it;
+#### if that URL is not ‘internal’ (see below), ignore it;
 
-try to insert that URL into the hashtable of URLs seen
+#### try to insert that URL into the hashtable of URLs seen
 
-if it was already in the table, do nothing;
+#### if it was already in the table, do nothing;
 
-if it was added to the table,
+#### if it was added to the table,
 
-make a new webpage for that URL, at depth+1
+#### make a new webpage for that URL, at depth+1
 
-add the new webpage to the bag of webpages to be crawled
+#### add the new webpage to the bag of webpages to be crawled
 
 ## Functions:
 
