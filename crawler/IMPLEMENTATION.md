@@ -13,45 +13,78 @@ Parameters are passed to:
 int main(const int argc, const char *argv[])
 ```
 
-which then checks that there are exactly 4 arguments passed from the command line.
+which then checks that there are exactly 4 arguments passed from the command line which are
+`const char *seedURL`, `const char *pageDirectory` and `const char maxDepth`.
 
 ### Parse the command line, validate parameters, initialize other modules
 
+The main function then validates its parameters by making calls to `IsValidDirectory` within the *pagedir* module on `const char *pageDirectory` to check if the directory is valid, `IsInternalURL` to check if the `const char *seedURL` is valid and internal, and checks directly that `const char maxDepth` is both numerical and nonnegative transforming it into `int maxDepth` in the process.
+
 ### make a webpage for the seedURL, marked with depth=0
+
+The main function then passes the three arguments (`int maxDepth` not the `const char maxDepth`) to:
+
+```c
+int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)
+```
+The crawler function then makes a `webpage struct` for the `const char seedURL` and passes it a NULL html and a depth of 0 using `webpage_new`.
 
 ### add that page to the bag of webpages to crawl
 
+A pointer to the `webpage struct` created for the seedURL is then added to a `bag struct` of webpage pointers to crawl. 
+
 ### add that URL to the hashtable of URLs seen
 
-### while there are more webpages to crawl,
+The `const char seedURL` is then copied and that copy is placed within a `hashtable struct` of `const char ` urls which are the keys and empty strings which act as a placeholder for an item.
 
+### while there are more webpages to crawl,
 ### extract a webpage (URL,depth) item from the bag of webpages to be crawled,
 
-### pause for at least one second,
+Then while there are still webpages availible to extract from the bag of webpages using `bag_extract`, a webpage is extracted. This is done with a while statement with `bag_extract` as the conditional.
 
+### pause for at least one second,
 ### use pagefetcher to retrieve a webpage for that URL,
+
+The extracted webpage is then passed to `webpage_fetcher` which gets the html for a webpage and replaces in place of the webpage's NULL html.
 
 ### use pageSaver to write the webpage to the pageDirectory with a unique document ID
 
+The extracted webpage is then passed to `pageSaver` within the *pagedir* module which then writes the webpage's html, url and depth to a file with a numbered id as the file's name.
+
 ### if the webpage depth is < maxDepth, explore the webpage to find links:
+
+After `pageSaver` returns then the webpage's depth is checked with `webpage_getDepth` and if it is below `int maxDepth`. 
 
 ### use pagescanner to parse the webpage to extract all its embedded URLs;
 
+If it is below it then the function goes it a while loop where as long there are more URLs on the html of the webpage then then loop continues. This is done through `webpage_getNextURL`.
+
 ### for each extracted URL,
 
-#### ‘normalize’ the URL (see below)
+#### ‘normalize’ the URL
+#### if that URL is not ‘internal’, ignore it;
 
-#### if that URL is not ‘internal’ (see below), ignore it;
+The extracted url is then normalized and checked if it is internal at the same time through the funciton `IsInternalURL`.
 
 #### try to insert that URL into the hashtable of URLs seen
 
+Then it is an attempt to insert the URL into the hashtable is made through `hashtable_insert`.
+
 #### if it was already in the table, do nothing;
+
+If `hashtable_insert` returns true then nothing happens.
 
 #### if it was added to the table,
 
+If it returns false then the following happens.
+
 #### make a new webpage for that URL, at depth+1
 
+The extracted url is first copied to `cpyNextURL`. Then this copied url is passed to `webpage_new` along with the depth of the webpage that was extracted from the bag plus 1 using the `webpage_getDepth` method. It is also given NULL html. This creates a new webpage.
+
 #### add the new webpage to the bag of webpages to be crawled
+
+Then this new webpage is passed to `bag_insert` to be inserted into the bag of webpages to be visited.
 
 ## Functions:
 
