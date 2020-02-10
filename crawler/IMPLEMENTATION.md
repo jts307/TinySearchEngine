@@ -84,7 +84,7 @@ The extracted url is first copied to `cpyNextURL`. Then this copied url is passe
 
 #### add the new webpage to the bag of webpages to be crawled
 
-Then this new webpage is passed to `bag_insert` to be inserted into the bag of webpages to be visited.
+Then this new webpage is passed to `bag_insert` to be inserted into the bag of webpages to be visited. The loop continues until all webpages within `int maxDepth` are reached.
 
 ## Functions:
 
