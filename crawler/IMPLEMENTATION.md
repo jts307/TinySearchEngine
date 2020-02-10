@@ -1,9 +1,8 @@
 # Implementation for crawler
-Detailed pseudo code for each of the objects/components/functions:
-Definition of detailed APIs, interfaces, function prototypes and their parameters,
 
+## Pseudo code
 
-The crawler will run as follows:
+The pseudo code for the crawler is as follows: 
 
 execute from a command line as shown in the User Interface
 parse the command line, validate parameters, initialize other modules
@@ -33,15 +32,29 @@ add the new webpage to the bag of webpages to be crawled
 
 ### Crawler.c
 
+```c
+int main(const int argc, const char *argv[])
+```
+The main function takes the arguments from the command and makes sure that there is three of them. It also 
+checks whether or not they are valid. For depth, it checks that the depth is nonnegative and numerical (a number must be the first thing that appears in the argument else it will not be recognized as such). For the directory, it checks it using pagedir module's `isValidDirectory`. For the seedURL, it uses webpage module's `IsInternalURL`. It then passes these arguments off to the crawler function.
 
+```c
+int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)
+```
 
-
+The crawler runs the algorithm as described above, starting from make a new webpage for the seedURL. It goes to each webpage starting at the specificed seedURL. 
 
 ### pagedir.c
 
+```c
+bool isValidDirectory(const char *pageDir)
+```
+The isValidDirectory function takes a passed directory and checks whether it is an existing and writable directory by attempting to write a .crawler file to it using `fopen`. If it succeeds then the .crawler file is left there. 
 
-
-
+```c
+int pageSaver(const char *pageDir, webpage_t *wp)
+```
+The pageSaver function takes a directory and a webpage type, and then uses the webpage type's getter functions like `int webpage_getDepth(const webpage_t *page)` to obtain information about a webpage and then uses `fprintf`and `fopen` to write that information to numbered output files. The numbering of the output files starts at the first availible number counting from zero. If a number is taken by another file in the directory then the numbering of the file increments until an availible number is found.
 
 ## Data Structures:
 
@@ -83,6 +96,10 @@ bool webpage_fetch(webpage_t *page);
 char *webpage_getNextURL(webpage_t *page, int *pos);
 // normalizes a url and checks if it is in http://old-www.cs.dartmouth.edu/
 bool IsInternalURL(char *url);
+// getter functions used to obtain information from the `webpage struct`
+int   webpage_getDepth(const webpage_t *page);
+char *webpage_getURL(const webpage_t *page);
+char *webpage_getHTML(const webpage_t *page);
 ```
 
 The `webpage struct` was used to store and get information about a webpage. More information on how these functions work can be found in [webpage.h](../libcs50/webpage.h).
