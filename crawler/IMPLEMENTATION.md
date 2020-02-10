@@ -2,10 +2,10 @@
 
 ## Pseudo code
 
-The pseudo code for the crawler is as follows: 
+The pseudo code for the crawler goes as follows: 
 
 
-Execute from a command line as shown in the User Interface:
+### Execute from a command line as shown in the User Interface:
 
 Parameters are passed to: 
 
