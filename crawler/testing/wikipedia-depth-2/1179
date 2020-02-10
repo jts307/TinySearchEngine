@@ -1,0 +1,709 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Stdio.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Stdio.h by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>C file input/output - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/C_file_input/output" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/C_file_input/output" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"C_file_input/output","wgTitle":"C file input/output","wgCurRevisionId":596664778,"wgRevisionId":596664778,"wgArticleId":238766,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing cleanup from December 2011","All pages needing cleanup","Articles with sections that need to be turned into prose from December 2011","Use dmy dates from January 2012","C standard library","Input/output","Articles with example C code"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"C_file_input/output","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Stdio.h","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q13402954"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-C_file_input_output skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">C file input/output</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Stdio.h&amp;redirect=no" title="Stdio.h">Stdio.h</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="C_standard_library.html" title="C standard library">C standard library</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;text-align: left;">
+<ul>
+<li><a href="C_data_types.html" title="C data types">Data types</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_character_classification" title="C character classification">Character classification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_string_handling" title="C string handling">Strings</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_mathematical_functions" title="C mathematical functions">Mathematics</a></li>
+<li><strong class="selflink">File input/output</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/C_date_and_time_functions" title="C date and time functions">Date/time</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_localization_functions" title="C localization functions">Localization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_process_control" title="C process control">Process control</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_signal_handling" title="C signal handling">Signals</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_alternative_tokens" title="C alternative tokens">Alternative tokens</a></li>
+</ul>
+<dl>
+<dd><b>Miscellaneous headers</b>:</dd>
+</dl>
+<ul>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Assert.h" title="Assert.h">assert.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Errno.h" title="Errno.h">errno.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Setjmp.h" title="Setjmp.h">setjmp.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Stdarg.h" title="Stdarg.h">stdarg.h</a>&gt;</code></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:C_Standard_Library" title="Template:C Standard Library"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:C_Standard_Library" title="Template talk:C Standard Library"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:C_Standard_Library&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<table class="metadata plainlinks ambox ambox-style ambox-Prose" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>is in a list format that may be better presented using <a href="http://en.wikipedia.org/wiki/Wikipedia:Prose" title="Wikipedia:Prose" class="mw-redirect">prose</a>.</b> <span class="hide-when-compact">You can help by converting this article to prose, if <a href="http://en.wikipedia.org/wiki/Wikipedia:Embedded_list" title="Wikipedia:Embedded list" class="mw-redirect">appropriate</a>. <a href="http://en.wikipedia.org/wiki/Help:Editing" title="Help:Editing">Editing help</a> is available.</span> <small><i>(December 2011)</i></small></span></td>
+</tr>
+</table>
+<p>The <a href="C_(programming_language).html" title="C (programming language)">C programming language</a> provides many <a href="http://en.wikipedia.org/wiki/Standard_library" title="Standard library">standard library</a> <a href="Subroutine.html" title="Subroutine">functions</a> for <a href="http://en.wikipedia.org/wiki/Computer_file" title="Computer file">file</a> <a href="Input/output.html" title="Input/output">input and output</a>. These functions make up the bulk of the <a href="C_standard_library.html" title="C standard library">C standard library</a> <a href="Header_file.html" title="Header file" class="mw-redirect">header</a> <code>&lt;stdio.h&gt;</code>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The functionality descends from a "portable I/O package" written by <a href="http://en.wikipedia.org/wiki/Mike_Lesk" title="Mike Lesk">Mike Lesk</a> at Bell Labs in the early 1970s.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>The I/O functionality of C is fairly low-level by modern standards; C abstracts all file operations into operations on <a href="http://en.wikipedia.org/wiki/Stream_(computing)" title="Stream (computing)">streams</a> of <a href="Byte.html" title="Byte">bytes</a>, which may be "input streams" or "output streams". Unlike some earlier programming languages, C has no direct support for <a href="http://en.wikipedia.org/wiki/Random-access" title="Random-access" class="mw-redirect">random-access</a> data files; to read from a record in the middle of a file, the programmer must create a stream, <a href="http://en.wikipedia.org/wiki/Fseek" title="Fseek" class="mw-redirect">seek</a> to the middle of the file, and then read bytes in sequence from the stream.</p>
+<p>The stream model of file I/O was popularized by the <a href="Unix.html" title="Unix">Unix</a> <a href="Operating_system.html" title="Operating system">operating system</a>, which was developed concurrently with the C programming language itself. The vast majority of modern operating systems have inherited streams from Unix, and many languages in the <a href="http://en.wikipedia.org/wiki/Category:C_programming_language_family" title="Category:C programming language family">C programming language family</a> have inherited C's file I/O interface with few if any changes (for example, <a href="PHP.html" title="PHP">PHP</a>). The <a href="C%2b%2b.html" title="C++">C++</a> standard library reflects the "stream" concept in its syntax, see <a href="http://en.wikipedia.org/wiki/Iostream" title="Iostream" class="mw-redirect">iostream</a> for details.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview_of_functions"><span class="tocnumber">1</span> <span class="toctext">Overview of functions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Constants"><span class="tocnumber">2</span> <span class="toctext">Constants</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Variables"><span class="tocnumber">3</span> <span class="toctext">Variables</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Member_types"><span class="tocnumber">4</span> <span class="toctext">Member types</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Example"><span class="tocnumber">5</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview_of_functions">Overview of functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=1" title="Edit section: Overview of functions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most of the C file input/output functions are defined in <code>stdio.h</code> (<code>cstdio</code> header in C++).</p>
+<table class="wikitable" style="font-size:0.85em">
+<tr>
+<th></th>
+<th>Byte<br />
+character</th>
+<th>Wide<br />
+character</th>
+<th>Description</th>
+</tr>
+<tr>
+<th rowspan="7">File access</th>
+<td colspan="2" style="text-align:center"><span id="fopen"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fopen">fopen</a></code></td>
+<td>opens a file (with a non unicode filename on windows and possible utf8 filename on linux)</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="freopen"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/freopen">freopen</a></code></td>
+<td>opens a different file with an existing stream</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fflush"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fflush">fflush</a></code></td>
+<td>synchronizes an output stream with the actual file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fclose"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fclose">fclose</a></code></td>
+<td>closes a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="setbuf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/setbuf">setbuf</a></code></td>
+<td>sets the buffer for a file stream</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="setvbuf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/setvbuf">setvbuf</a></code></td>
+<td>sets the buffer and its size for a file stream</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fwide"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fwide">fwide</a></code></td>
+<td>switches a file stream between wide character I/O and narrow character I/O</td>
+</tr>
+<tr>
+<th rowspan="2">Direct<br />
+input/output</th>
+<td colspan="2" style="text-align:center"><span id="fread"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fread">fread</a></code></td>
+<td>reads from a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fwrite"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fwrite">fwrite</a></code></td>
+<td>writes to a file</td>
+</tr>
+<tr>
+<th rowspan="9">Unformatted<br />
+input/output</th>
+<td><span id="fgetc"></span><span id="getc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fgetc">fgetc</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/getc">getc</a></code></td>
+<td><span id="fgetwc"></span><span id="getwc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fgetwc">fgetwc</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/getwc">getwc</a></code></td>
+<td>reads a byte/<code>wchar_t</code> from a file stream</td>
+</tr>
+<tr>
+<td><span id="fgets"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fgets">fgets</a></code></td>
+<td><span id="fgetws"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fgetws">fgetws</a></code></td>
+<td>reads a byte/<code>wchar_t</code> line from a file stream</td>
+</tr>
+<tr>
+<td><span id="fputc"></span><span id="putc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fputc">fputc</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/putc">putc</a></code></td>
+<td><span id="fputwc"></span><span id="putwc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fputwc">fputwc</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/putwc">putwc</a></code></td>
+<td>writes a byte/<code>wchar_t</code> to a file stream</td>
+</tr>
+<tr>
+<td><span id="fputs"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fputs">fputs</a></code></td>
+<td><span id="fputws"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fputws">fputws</a></code></td>
+<td>writes a byte/<code>wchar_t</code> string to a file stream</td>
+</tr>
+<tr>
+<td><span id="getchar"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/getchar">getchar</a></code></td>
+<td><span id="getwchar"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/getwchar">getwchar</a></code></td>
+<td>reads a byte/<code>wchar_t</code> from stdin</td>
+</tr>
+<tr>
+<td><span id="gets"></span><code><s><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/gets">gets</a></s></code></td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td>reads a byte string from stdin until a newline or end of file is encountered (deprecated in C99, removed from C11)</td>
+</tr>
+<tr>
+<td><span id="putchar"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/putchar">putchar</a></code></td>
+<td><span id="putwchar"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/putwchar">putwchar</a></code></td>
+<td>writes a byte/<code>wchar_t</code> to stdout</td>
+</tr>
+<tr>
+<td><span id="puts"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/puts">puts</a></code></td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td>writes a byte string to stdout</td>
+</tr>
+<tr>
+<td><span id="ungetc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/ungetc">ungetc</a></code></td>
+<td><span id="ungetwc"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/ungetwc">ungetwc</a></code></td>
+<td>puts a byte/<code>wchar_t</code> back into a file stream</td>
+</tr>
+<tr>
+<th rowspan="5">Formatted<br />
+input/output</th>
+<td><span id="scanf"></span><span id="fscanf"></span><span id="sscanf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/scanf">scanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fscanf">fscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/sscanf">sscanf</a></code></td>
+<td><span id="wscanf"></span><span id="fwscanf"></span><span id="swscanf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/wscanf">wscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fwscanf">fwscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/swscanf">swscanf</a></code></td>
+<td>reads formatted byte/<code>wchar_t</code> input from stdin,<br />
+a file stream or a buffer</td>
+</tr>
+<tr>
+<td><span id="vscanf"></span><span id="vfscanf"></span><span id="vsscanf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vscanf">vscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vfscanf">vfscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vsscanf">vsscanf</a></code></td>
+<td><span id="vwscanf"></span><span id="vfwscanf"></span><span id="svwscanf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vwscanf">vwscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vfwscanf">vfwscanf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vswscanf">vswscanf</a></code></td>
+<td>reads formatted input byte/<code>wchar_t</code> from stdin,<br />
+a file stream or a buffer using variable argument list</td>
+</tr>
+<tr>
+<td><span id="printf"></span><span id="fprintf"></span><span id="sprintf"></span><span id="snprintf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/printf">printf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fprintf">fprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/sprintf">sprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/snprintf">snprintf</a></code></td>
+<td><span id="wprintf"></span><span id="fwprintf"></span><span id="swprintf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/wprintf">wprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fwprintf">fwprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/swprintf">swprintf</a></code></td>
+<td>prints formatted byte/<code>wchar_t</code> output to stdout,<br />
+a file stream or a buffer</td>
+</tr>
+<tr>
+<td><span id="vprintf"></span><span id="vfprintf"></span><span id="vspritf"></span><span id="vsnprintf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vprintf">vprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vfprintf">vfprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vsprintf">vsprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vsnprintf">vsnprintf</a></code></td>
+<td><span id="vwprintf"></span><span id="vfwprintf"></span><span id="vswprintf"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vwprintf">vwprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vfwprintf">vfwprintf</a></code><br />
+<code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/vswprintf">vswprintf</a></code></td>
+<td>prints formatted byte/<code>wchar_t</code> output to stdout,<br />
+a file stream, or a buffer using variable argument list</td>
+</tr>
+<tr>
+<td><span id="perror"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/perror">perror</a></code></td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td>writes a description of the <a href="http://en.wikipedia.org/wiki/Errno.h" title="Errno.h">current error</a> to stderr</td>
+</tr>
+<tr>
+<th rowspan="5">File positioning</th>
+<td colspan="2" style="text-align:center"><span id="ftell"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/ftell">ftell</a></code></td>
+<td>returns the current file position indicator</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fgetpos"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fgetpos">fgetpos</a></code></td>
+<td>gets the file position indicator</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fseek"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fseek">fseek</a></code></td>
+<td>moves the file position indicator to a specific location in a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="fsetpos"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/fsetpos">fsetpos</a></code></td>
+<td>moves the file position indicator to a specific location in a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="rewind"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/rewind">rewind</a></code></td>
+<td>moves the file position indicator to the beginning in a file</td>
+</tr>
+<tr>
+<th rowspan="3">Error<br />
+handling</th>
+<td colspan="2" style="text-align:center"><span id="clearerr"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/clearerr">clearerr</a></code></td>
+<td>clears errors</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="feof"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/feof">feof</a></code></td>
+<td>checks for the end-of-file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="ferror"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/ferror">ferror</a></code></td>
+<td>checks for a file error</td>
+</tr>
+<tr>
+<th rowspan="4">Operations<br />
+on files</th>
+<td colspan="2" style="text-align:center"><span id="remove"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/remove">remove</a></code></td>
+<td>erases a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="rename"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/rename">rename</a></code></td>
+<td><a href="http://en.wikipedia.org/wiki/Rename_(computing)" title="Rename (computing)">renames</a> a file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="tmpfile"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/tmpfile">tmpfile</a></code></td>
+<td>returns a pointer to a temporary file</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center"><span id="tmpnam"></span><code><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/io/tmpnam">tmpnam</a></code></td>
+<td>returns a unique filename</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Constants">Constants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=2" title="Edit section: Constants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Constants defined in the <code>stdio.h</code> header include:</p>
+<table class="wikitable">
+<tr>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td><code><a href="http://en.wikipedia.org/wiki/End-of-file" title="End-of-file">EOF</a></code></td>
+<td>a negative integer of type <code>int</code> used to indicate end-of-file conditions</td>
+</tr>
+<tr>
+<td><code><a rel="nofollow" class="external text" href="http://c-p-p.net/c/stdio.h/bufsiz">BUFSIZ</a></code></td>
+<td>an integer which is the size of the buffer used by the <code>setbuf()</code> function</td>
+</tr>
+<tr>
+<td><code>FILENAME_MAX</code></td>
+<td>the size of a <code>char</code> array which is large enough to store the name of any file that can be opened</td>
+</tr>
+<tr>
+<td><code>FOPEN_MAX</code></td>
+<td>the number of files that may be open simultaneously; will be at least 8</td>
+</tr>
+<tr>
+<td><code>_IOFBF</code></td>
+<td>an abbreviation for "input/output fully buffered"; it is an integer which may be passed to the <code>setvbuf()</code> function to request <i>block buffered</i> input and output for an open stream</td>
+</tr>
+<tr>
+<td><code>_IOLBF</code></td>
+<td>an abbreviation for "input/output line buffered"; it is an integer which may be passed to the <code>setvbuf()</code> function to request <i>line buffered</i> input and output for an open stream</td>
+</tr>
+<tr>
+<td><code>_IONBF</code></td>
+<td>an abbreviation for "input/output not buffered"; it is an integer which may be passed to the <code>setvbuf()</code> function to request <i>unbuffered</i> input and output for an open stream</td>
+</tr>
+<tr>
+<td><code>L_tmpnam</code></td>
+<td>the size of a <code>char</code> array which is large enough to store a temporary filename generated by the <code>tmpnam()</code> function</td>
+</tr>
+<tr>
+<td><code>NULL</code></td>
+<td>a macro expanding to the <a href="Null_pointer.html" title="Null pointer" class="mw-redirect">null pointer</a> constant; that is, a constant representing a pointer value which is guaranteed <b>not</b> to be a valid address of an object in memory</td>
+</tr>
+<tr>
+<td><code>SEEK_CUR</code></td>
+<td>an integer which may be passed to the <code>fseek()</code> function to request positioning relative to the current file position</td>
+</tr>
+<tr>
+<td><code>SEEK_END</code></td>
+<td>an integer which may be passed to the <code>fseek()</code> function to request positioning relative to the end of the file</td>
+</tr>
+<tr>
+<td><code>SEEK_SET</code></td>
+<td>an integer which may be passed to the <code>fseek()</code> function to request positioning relative to the beginning of the file</td>
+</tr>
+<tr>
+<td><code>TMP_MAX</code></td>
+<td>the maximum number of unique filenames generable by the <code>tmpnam()</code> function; will be at least 25</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Variables">Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=3" title="Edit section: Variables">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Variables defined in the <code>stdio.h</code> header include:</p>
+<table class="wikitable">
+<tr>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td><code><a href="http://en.wikipedia.org/wiki/Standard_streams#Standard_input_.28stdin.29" title="Standard streams">stdin</a></code></td>
+<td>a pointer to a <code>FILE</code> which refers to the standard input stream, usually a keyboard.</td>
+</tr>
+<tr>
+<td><code><a href="http://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29" title="Standard streams">stdout</a></code></td>
+<td>a pointer to a <code>FILE</code> which refers to the standard output stream, usually a display terminal.</td>
+</tr>
+<tr>
+<td><code><a href="http://en.wikipedia.org/wiki/Standard_streams#Standard_error_.28stderr.29" title="Standard streams">stderr</a></code></td>
+<td>a pointer to a <code>FILE</code> which refers to the standard error stream, often a display terminal.</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Member_types">Member types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=4" title="Edit section: Member types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Data types defined in the <code>stdio.h</code> header include:</p>
+<ul>
+<li><code><a rel="nofollow" class="external text" href="http://code-reference.com/c/keywords/file">FILE</a></code> - also known as a <span id="file_handle"></span><b>file <a href="http://en.wikipedia.org/wiki/Handle_(computing)" title="Handle (computing)">handle</a></b>, this is a structure containing the information about a file or text stream needed to perform input or output operations on it, including:
+<ul>
+<li>a <a href="http://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptor</a></li>
+<li>the current stream position</li>
+<li>an end-of-file indicator</li>
+<li>an error indicator</li>
+<li>a pointer to the stream's buffer, if applicable</li>
+</ul>
+</li>
+<li><code>fpos_t</code> - a non-array type capable of uniquely identifying the position of every byte in a file.</li>
+<li><code>size_t</code> - an <a href="http://en.wikipedia.org/wiki/Unsigned_integer" title="Unsigned integer" class="mw-redirect">unsigned integer</a> type which is the type of the result of the <code><a href="Sizeof.html" title="Sizeof">sizeof</a></code> operator.</li>
+</ul>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following C program opens a binary file called <i>myfile</i>, reads five bytes from it, and then closes the file.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">char</span> buffer<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span><span class="nu0">0</span><span class="br0">}</span><span class="sy0">;</span>  <span class="coMULTI">/* initialized to zeroes */</span>
+    <span class="kw4">int</span> i<span class="sy0">;</span>
+    FILE <span class="sy0">*</span>fp <span class="sy0">=</span> <span class="kw3">fopen</span><span class="br0">(</span><span class="st0">"myfile"</span><span class="sy0">,</span> <span class="st0">"rb"</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="kw1">if</span> <span class="br0">(</span>fp <span class="sy0">==</span> NULL<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw3">perror</span><span class="br0">(</span><span class="st0">"Failed to open file <span class="es1">\"</span>myfile<span class="es1">\"</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw1">return</span> EXIT_FAILURE<span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    <span class="coMULTI">/* be sure to never read more than 5 char */</span>
+    <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">5</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw4">int</span> rc <span class="sy0">=</span> <span class="kw3">getc</span><span class="br0">(</span>fp<span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw1">if</span> <span class="br0">(</span>rc <span class="sy0">==</span> EOF<span class="br0">)</span> <span class="br0">{</span>
+            <span class="kw3">fputs</span><span class="br0">(</span><span class="st0">"An error occurred while reading the file.<span class="es1">\n</span>"</span><span class="sy0">,</span> stderr<span class="br0">)</span><span class="sy0">;</span>
+            <span class="kw1">return</span> EXIT_FAILURE<span class="sy0">;</span>
+        <span class="br0">}</span>
+        buffer<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> rc<span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    <span class="kw3">fclose</span><span class="br0">(</span>fp<span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"The bytes read were... %x %x %x %x %x<span class="es1">\n</span>"</span><span class="sy0">,</span> buffer<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">,</span> buffer<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="sy0">,</span> buffer<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span><span class="sy0">,</span> buffer<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span><span class="sy0">,</span> buffer<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Printf_format_string.html" title="Printf format string">printf format string</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sfio" title="Sfio">Sfio</a> Safe/Fast String/File I/O</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf"><i>ISO/IEC 9899:1999 specification</i></a>. p. 274, § 7.19.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+file+input%2Foutput&amp;rft.btitle=ISO%2FIEC+9899%3A1999+specification&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1124.pdf&amp;rft.pages=p.+274%2C+%C2%A7+7.19&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book"><a href="Brian_Kernighan.html" title="Brian Kernighan">Kernighan, Brian</a>; <a href="Rob_Pike.html" title="Rob Pike">Pike, Rob</a> (1984). <i><a href="http://en.wikipedia.org/wiki/The_UNIX_Programming_Environment" title="The UNIX Programming Environment" class="mw-redirect">The UNIX Programming Environment</a></i>. <a href="http://en.wikipedia.org/wiki/Englewood_Cliffs" title="Englewood Cliffs" class="mw-redirect">Englewood Cliffs</a>: <a href="Prentice_Hall.html" title="Prentice Hall">Prentice Hall</a>. p.&#160;200.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+file+input%2Foutput&amp;rft.aufirst=Brian&amp;rft.au=Kernighan%2C+Brian&amp;rft.aulast=Kernighan&amp;rft.au=Pike%2C+Rob&amp;rft.btitle=The+UNIX+Programming+Environment&amp;rft.date=1984&amp;rft.genre=book&amp;rft.pages=200&amp;rft.place=Englewood+Cliffs&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="http://en.wikibooks.org/wiki/C_Programming" class="extiw" title="wikibooks:C Programming">C Programming</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/C_Programming/C_file_input_and_output" class="extiw" title="wikibooks:C Programming/C file input and output">C Programming/C Reference</a></b></i></td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1002
+CPU time usage: 2.220 seconds
+Real time usage: 2.283 seconds
+Preprocessor visited node count: 1226/1000000
+Preprocessor generated node count: 9384/1500000
+Post‐expand include size: 18330/2048000 bytes
+Template argument size: 2429/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 4/500
+Lua time usage: 0.107/10.000 seconds
+Lua memory usage: 2.11 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:238766-0!*!0!!en!4!* and timestamp 20140328052504
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;oldid=596664778">http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;oldid=596664778</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:C_standard_library" title="Category:C standard library">C standard library</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Input/output" title="Category:Input/output">Input/output</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_cleanup_from_December_2011" title="Category:Articles needing cleanup from December 2011">Articles needing cleanup from December 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_sections_that_need_to_be_turned_into_prose_from_December_2011" title="Category:Articles with sections that need to be turned into prose from December 2011">Articles with sections that need to be turned into prose from December 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_January_2012" title="Category:Use dmy dates from January 2012">Use dmy dates from January 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C+file+input%2Foutput&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C+file+input%2Foutput" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/C_file_input/output"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:C_file_input/output"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/C_file_input/output" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/C_file_input/output" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/C_file_input/output" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;oldid=596664778" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q13402954" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=C_file_input%2Foutput&amp;id=596664778" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=C+file+input%2Foutput">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=C+file+input%2Foutput&amp;oldid=596664778&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=C_file_input/output&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Vstup_a_výstup_v_jazyce_C" title="Vstup a výstup v jazyce C – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/C_είσοδος/έξοδος_αρχείων" title="C είσοδος/έξοδος αρχείων – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Файловый_ввод-вывод_в_языке_Си" title="Файловый ввод-вывод в языке Си – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q13402954#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 February 2014 at 18:43.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/C_file_input/output" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1077 in 0.372 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Stdio.h by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:42 GMT -->
+</html>

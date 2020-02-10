@@ -1,0 +1,789 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_vision.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Computer_vision by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Computer vision - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Computer_vision" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Computer_vision.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cmw.PopUpMediaTransform%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Computer_vision","wgTitle":"Computer vision","wgCurRevisionId":601329281,"wgRevisionId":601329281,"wgArticleId":6596,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia introduction cleanup from March 2014","All pages needing cleanup","Articles covered by WikiProject Wikify from March 2014","All articles covered by WikiProject Wikify","All articles that may contain original research","Articles that may contain original research from September 2011","Image processing software","Artificial intelligence","Computer vision","Packaging machinery"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Computer_vision","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["zh-cn","zh","en","zh-tw"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q844240"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mw.TMHGalleryHook.js","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Computer_vision skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Computer vision</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-lead_too_long" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article's <b><a href="http://en.wikipedia.org/wiki/Wikipedia:LEAD" title="Wikipedia:LEAD" class="mw-redirect">introduction</a> may be too long for the overall article length</b>. <span class="hide-when-compact">Please help by moving some material from it into the body of the article. For more information please read the <a href="http://en.wikipedia.org/wiki/Wikipedia:Layout_guide" title="Wikipedia:Layout guide" class="mw-redirect">layout guide</a> and Wikipedia's <a href="http://en.wikipedia.org/wiki/Wikipedia:Lead_section_guidelines" title="Wikipedia:Lead section guidelines" class="mw-redirect">lead section guidelines</a>.</span> <small><i>(March 2014)</i></small></span></td>
+</tr>
+</table>
+<p><b>Computer vision</b> is a field that includes methods for acquiring, <a href="http://en.wikipedia.org/wiki/Digital_image_processing" title="Digital image processing">processing</a>, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, <i>e.g.</i>, in the forms of decisions.<sup id="cite_ref-Klette-2014_1-0" class="reference"><a href="#cite_note-Klette-2014-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-Shapiro-Stockman-2001_2-0" class="reference"><a href="#cite_note-Shapiro-Stockman-2001-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-Morris-2004_3-0" class="reference"><a href="#cite_note-Morris-2004-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-Jahne-Haussecker-2000_4-0" class="reference"><a href="#cite_note-Jahne-Haussecker-2000-4"><span>[</span>4<span>]</span></a></sup> A theme in the development of this field has been to duplicate the abilities of human vision by electronically perceiving and understanding an image.<sup id="cite_ref-Sonka-Hlavac-Boyle-2008_5-0" class="reference"><a href="#cite_note-Sonka-Hlavac-Boyle-2008-5"><span>[</span>5<span>]</span></a></sup> This image understanding can be seen as the disentangling of symbolic information from image data using models constructed with the aid of geometry, physics, statistics, and learning theory.<sup id="cite_ref-Forsyth-Ponce-2003_6-0" class="reference"><a href="#cite_note-Forsyth-Ponce-2003-6"><span>[</span>6<span>]</span></a></sup> Computer vision has also been described as the enterprise of automating and integrating a wide range of processes and representations for vision perception.<sup id="cite_ref-Ballard-Brown-1982_7-0" class="reference"><a href="#cite_note-Ballard-Brown-1982-7"><span>[</span>7<span>]</span></a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>Applications range from tasks such as industrial <a href="http://en.wikipedia.org/wiki/Machine_vision" title="Machine vision">machine vision</a> systems which, say, inspect bottles speeding by on a production line, to research into artificial intelligence and computers or robots that can comprehend the world around them. The computer vision and machine vision fields have significant overlap. Computer vision covers the core technology of automated image analysis which is used in many fields. Machine vision usually refers to a process of combining automated image analysis with other methods and technologies to provide automated inspection and robot guidance in industrial applications.</p>
+<p>As a scientific discipline, computer vision is concerned with the theory behind artificial systems that extract information from images. The image data can take many forms, such as video sequences, views from multiple cameras, or multi-dimensional data from a medical scanner.</p>
+<p>As a technological discipline, computer vision seeks to apply its theories and models to the construction of computer vision systems. Examples of applications of computer vision include systems for:</p>
+<ul>
+<li>Controlling processes, <i>e.g.</i>, an <a href="http://en.wikipedia.org/wiki/Industrial_robots" title="Industrial robots" class="mw-redirect">industrial robot</a>;</li>
+<li>Navigation, <i>e.g.</i>, by an <a href="http://en.wikipedia.org/wiki/Autonomous_vehicle" title="Autonomous vehicle" class="mw-redirect">autonomous vehicle</a> or mobile robot;</li>
+<li>Detecting events, <i>e.g.</i>, for visual surveillance or <a href="http://en.wikipedia.org/wiki/People_counter" title="People counter">people counting</a>;</li>
+<li>Organizing information, <i>e.g.</i>, for indexing databases of images and image sequences;</li>
+<li>Modeling objects or environments, <i>e.g.</i>, medical image analysis or topographical modeling;</li>
+<li>Interaction, <i>e.g.</i>, as the input to a device for <a href="http://en.wikipedia.org/wiki/Computer-human_interaction" title="Computer-human interaction" class="mw-redirect">computer-human interaction</a>, and</li>
+<li>Automatic inspection, <i>e.g.</i>, in manufacturing applications.</li>
+</ul>
+<p>Sub-domains of computer vision include scene reconstruction, event detection, <a href="http://en.wikipedia.org/wiki/Video_tracking" title="Video tracking">video tracking</a>, <a href="http://en.wikipedia.org/wiki/Object_recognition" title="Object recognition" class="mw-redirect">object recognition</a>, learning, indexing, <a href="http://en.wikipedia.org/wiki/Motion_estimation" title="Motion estimation">motion estimation</a>, and <a href="http://en.wikipedia.org/wiki/Image_restoration" title="Image restoration">image restoration</a>.</p>
+<p>In most practical computer vision applications, the computers are pre-programmed to solve a particular task, but methods based on learning are now becoming increasingly common.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Related_fields"><span class="tocnumber">1</span> <span class="toctext">Related fields</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Applications_for_computer_vision"><span class="tocnumber">2</span> <span class="toctext">Applications for computer vision</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Typical_tasks_of_computer_vision"><span class="tocnumber">3</span> <span class="toctext">Typical tasks of computer vision</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Recognition"><span class="tocnumber">3.1</span> <span class="toctext">Recognition</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Motion_analysis"><span class="tocnumber">3.2</span> <span class="toctext">Motion analysis</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Scene_reconstruction"><span class="tocnumber">3.3</span> <span class="toctext">Scene reconstruction</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Image_restoration"><span class="tocnumber">3.4</span> <span class="toctext">Image restoration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Computer_vision_system_methods"><span class="tocnumber">4</span> <span class="toctext">Computer vision system methods</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Computer_vision_hardware"><span class="tocnumber">5</span> <span class="toctext">Computer vision hardware</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Related_fields">Related fields</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=1" title="Edit section: Related fields">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="http://en.wikipedia.org/wiki/File:CVoverview2.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/0/08/CVoverview2.svg/350px-CVoverview2.svg.png" width="350" height="245" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/08/CVoverview2.svg/525px-CVoverview2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/08/CVoverview2.svg/700px-CVoverview2.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:CVoverview2.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Relation between computer vision and various other fields<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research"><span title="The material near this tag may be based upon unreliable original research. (September 2011)">original research?</span></a></i>]</sup></div>
+</div>
+</div>
+<p>Areas of <a href="Artificial_intelligence.html" title="Artificial intelligence">artificial intelligence</a> deal with autonomous planning or deliberation for robotical systems to navigate through an environment. A detailed understanding of these environments is required to navigate through them. Information about the environment could be provided by a computer vision system, acting as a vision sensor and providing high-level information about the environment and the robot.</p>
+<p>Artificial intelligence and computer vision share other topics such as <a href="Pattern_recognition.html" title="Pattern recognition">pattern recognition</a> and learning techniques. Consequently, computer vision is sometimes seen as a part of the artificial intelligence field or the computer science field in general.</p>
+<p><a href="http://en.wikipedia.org/wiki/Solid-state_physics" title="Solid-state physics">Solid-state physics</a> is another field that is closely related to computer vision. Most computer vision systems rely on <a href="http://en.wikipedia.org/wiki/Image_sensors" title="Image sensors" class="mw-redirect">image sensors</a>, which detect electromagnetic radiation which is typically in the form of either visible or infra-red light. The sensors are designed using <a href="http://en.wikipedia.org/wiki/Quantum_physics" title="Quantum physics" class="mw-redirect">quantum physics</a>. The process by which light interacts with surfaces is explained using physics. Physics explains the behavior of <a href="http://en.wikipedia.org/wiki/Optics" title="Optics">optics</a> which are a core part of most imaging systems. Sophisticated <a href="http://en.wikipedia.org/wiki/Image_sensors" title="Image sensors" class="mw-redirect">image sensors</a> even require quantum mechanics to provide a complete understanding of the image formation process. Also, various measurement problems in physics can be addressed using computer vision, for example motion in fluids.</p>
+<p>A third field which plays an important role is <a href="http://en.wikipedia.org/wiki/Neurobiology" title="Neurobiology" class="mw-redirect">neurobiology</a>, specifically the study of the biological vision system. Over the last century, there has been an extensive study of eyes, neurons, and the brain structures devoted to processing of visual stimuli in both humans and various animals. This has led to a coarse, yet complicated, description of how "real" vision systems operate in order to solve certain vision related tasks. These results have led to a subfield within computer vision where artificial systems are designed to mimic the processing and behavior of biological systems, at different levels of complexity. Also, some of the learning-based methods developed within computer vision (<i>e.g.</i> <a href="http://en.wikipedia.org/wiki/Neural_network" title="Neural network" class="mw-redirect">neural net</a> and <a href="http://en.wikipedia.org/wiki/Deep_learning" title="Deep learning">deep learning</a> based image and feature analysis and classification) have their background in biology.</p>
+<p>Some strands of computer vision research are closely related to the study of <a href="http://en.wikipedia.org/wiki/Biological_vision" title="Biological vision" class="mw-redirect">biological vision</a> – indeed, just as many strands of AI research are closely tied with research into human consciousness, and the use of stored knowledge to interpret, integrate and utilize visual information. The field of biological vision studies and models the physiological processes behind visual perception in humans and other animals. Computer vision, on the other hand, studies and describes the processes implemented in software and hardware behind artificial vision systems. Interdisciplinary exchange between biological and computer vision has proven fruitful for both fields.</p>
+<p>Yet another field related to computer vision is <a href="Signal_processing.html" title="Signal processing">signal processing</a>. Many methods for processing of one-variable signals, typically temporal signals, can be extended in a natural way to processing of two-variable signals or multi-variable signals in computer vision. However, because of the specific nature of images there are many methods developed within computer vision which have no counterpart in processing of one-variable signals. Together with the multi-dimensionality of the signal, this defines a subfield in signal processing as a part of computer vision.</p>
+<p>Beside the above mentioned views on computer vision, many of the related research topics can also be studied from a purely mathematical point of view. For example, many methods in computer vision are based on <a href="Statistics.html" title="Statistics">statistics</a>, <a href="http://en.wikipedia.org/wiki/Optimization_(mathematics)" title="Optimization (mathematics)" class="mw-redirect">optimization</a> or <a href="http://en.wikipedia.org/wiki/Geometry" title="Geometry">geometry</a>. Finally, a significant part of the field is devoted to the implementation aspect of computer vision; how existing methods can be realized in various combinations of software and hardware, or how these methods can be modified in order to gain processing speed without losing too much performance.</p>
+<p>The fields most closely related to computer vision are <a href="Image_processing.html" title="Image processing">image processing</a>, <a href="http://en.wikipedia.org/wiki/Image_analysis" title="Image analysis">image analysis</a> and <a href="http://en.wikipedia.org/wiki/Machine_vision" title="Machine vision">machine vision</a>. There is a significant overlap in the range of techniques and applications that these cover. This implies that the basic techniques that are used and developed in these fields are more or less identical, something which can be interpreted as there is only one field with different names. On the other hand, it appears to be necessary for research groups, scientific journals, conferences and companies to present or market themselves as belonging specifically to one of these fields and, hence, various characterizations which distinguish each of the fields from the others have been presented.</p>
+<p>Computer vision is, in some ways, the inverse of <a href="Computer_graphics.html" title="Computer graphics">computer graphics</a>. While computer graphics produces image data from 3D models, computer vision often produces 3D models from image data. There is also a trend towards a combination of the two disciplines, <i>e.g.</i>, as explored in <a href="http://en.wikipedia.org/wiki/Augmented_reality" title="Augmented reality">augmented reality</a>.</p>
+<p>The following characterizations appear relevant but should not be taken as universally accepted:</p>
+<ul>
+<li><a href="Image_processing.html" title="Image processing">Image processing</a> and <a href="http://en.wikipedia.org/wiki/Image_analysis" title="Image analysis">image analysis</a> tend to focus on 2D images, how to transform one image to another, <i>e.g.</i>, by pixel-wise operations such as contrast enhancement, local operations such as edge extraction or noise removal, or geometrical transformations such as rotating the image. This characterization implies that image processing/analysis neither require assumptions nor produce interpretations about the image content.</li>
+<li>Computer vision includes 3D analysis from 2D images. This analyzes the 3D scene projected onto one or several images, <i>e.g.</i>, how to reconstruct structure or other information about the 3D scene from one or several images. Computer vision often relies on more or less complex assumptions about the scene depicted in an image.</li>
+<li><a href="http://en.wikipedia.org/wiki/Machine_vision" title="Machine vision">Machine vision</a> is the process of applying a range of technologies &amp; methods to provide imaging-based automatic inspection, process control and robot guidance<sup id="cite_ref-NASAarticle_9-0" class="reference"><a href="#cite_note-NASAarticle-9"><span>[</span>9<span>]</span></a></sup> in industrial applications.<sup id="cite_ref-TextbookP1_10-0" class="reference"><a href="#cite_note-TextbookP1-10"><span>[</span>10<span>]</span></a></sup> Machine vision tends to focus on applications, mainly in manufacturing, <i>e.g.</i>, vision based autonomous robots and systems for vision based inspection or measurement. This implies that image sensor technologies and control theory often are integrated with the processing of image data to control a robot and that real-time processing is emphasised by means of efficient implementations in hardware and software. It also implies that the external conditions such as lighting can be and are often more controlled in machine vision than they are in general computer vision, which can enable the use of different algorithms.</li>
+<li>There is also a field called <a href="http://en.wikipedia.org/wiki/Imaging_science" title="Imaging science">imaging</a> which primarily focus on the process of producing images, but sometimes also deals with processing and analysis of images. For example, <a href="http://en.wikipedia.org/wiki/Medical_imaging" title="Medical imaging">medical imaging</a> includes substantial work on the analysis of image data in medical applications.</li>
+<li>Finally, <a href="Pattern_recognition.html" title="Pattern recognition">pattern recognition</a> is a field which uses various methods to extract information from signals in general, mainly based on statistical approaches and <a href="http://en.wikipedia.org/wiki/Artificial_neural_networks" title="Artificial neural networks" class="mw-redirect">artificial neural networks</a>. A significant part of this field is devoted to applying these methods to image data.</li>
+</ul>
+<h2><span class="mw-headline" id="Applications_for_computer_vision">Applications for computer vision</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=2" title="Edit section: Applications for computer vision">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;">
+<div id="mwe_player_2" class="PopUpMediaTransform" style="width:220px;height:124px" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;position:relative;display:block;width:480px&quot;&gt;&lt;video id=&quot;mwe_player_3&quot; style=&quot;width:480px;height:270px&quot; poster=http://en.wikipedia.org/wiki/"//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv/480px--DARPA_Visual_Media_Reasoning_Concept_Video.ogv.jpg" controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; class=&quot;kskin&quot; data-durationhint=&quot;91.428571428571&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;DARPA_Visual_Media_Reasoning_Concept_Video.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=http://en.wikipedia.org/wiki/"//upload.wikimedia.org/wikipedia/commons/transcoded/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv/DARPA_Visual_Media_Reasoning_Concept_Video.ogv.160p.ogv" type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; transcodekey=&quot;160p.ogv&quot; data-title=&quot;Low bandwidth Ogg video (160P)&quot; data-shorttitle=&quot;Ogg 160P&quot; data-width=&quot;284&quot; data-height=&quot;160&quot; data-bandwidth=&quot;194368&quot; data-framerate=&quot;15&quot; /&gt;&lt;source src=http://en.wikipedia.org/wiki/"//upload.wikimedia.org/wikipedia/commons/transcoded/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv/DARPA_Visual_Media_Reasoning_Concept_Video.ogv.360p.webm" type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; transcodekey=&quot;360p.webm&quot; data-title=&quot;Web streamable WebM (360P)&quot; data-shorttitle=&quot;WebM 360P&quot; data-width=&quot;480&quot; data-height=&quot;270&quot; data-bandwidth=&quot;521232&quot; data-framerate=&quot;29.97002997003&quot; /&gt;&lt;source src=http://en.wikipedia.org/wiki/"//upload.wikimedia.org/wikipedia/commons/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv" type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 480 × 270 (1.16 Mbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;480&quot; data-height=&quot;270&quot; data-bandwidth=&quot;1160706&quot; data-framerate=&quot;29.97002997003&quot; /&gt;Sorry, your browser either has JavaScript disabled or does not have any supported player.&lt;br /&gt;
+You can &lt;a href=http://en.wikipedia.org/wiki/"//upload.wikimedia.org/wikipedia/commons/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv">download the clip&lt;/a&gt; or &lt;a href=http://en.wikipedia.org/wiki/"//www.mediawiki.org/wiki/Extension:TimedMediaHandler/Client_download">download a player&lt;/a&gt; to play the clip in your browser.&lt;/video&gt;&lt;/div&gt;"><img alt="File:DARPA Visual Media Reasoning Concept Video.ogv" style="width:220px;height:124px" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv/220px--DARPA_Visual_Media_Reasoning_Concept_Video.ogv.jpg" /><a href="http://upload.wikimedia.org/wikipedia/commons/f/f9/DARPA_Visual_Media_Reasoning_Concept_Video.ogv" title="Play media" target="new"><span class="play-btn-large">&#160;</span></a></div>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:DARPA_Visual_Media_Reasoning_Concept_Video.ogv" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+<a href="http://en.wikipedia.org/wiki/DARPA" title="DARPA">DARPA</a>'s Visual Media Reasoning concept video</div>
+</div>
+</div>
+<p>One of the most prominent application fields is medical computer vision or medical image processing. This area is characterized by the extraction of information from image data for the purpose of making a medical diagnosis of a patient. Generally, image data is in the form of <a href="http://en.wikipedia.org/wiki/Microscopy" title="Microscopy">microscopy images</a>, <a href="http://en.wikipedia.org/wiki/X-ray" title="X-ray">X-ray images</a>, <a href="http://en.wikipedia.org/wiki/Angiography" title="Angiography">angiography images</a>, <a href="http://en.wikipedia.org/wiki/Ultrasonography" title="Ultrasonography" class="mw-redirect">ultrasonic images</a>, and <a href="http://en.wikipedia.org/wiki/Tomography" title="Tomography">tomography images</a>. An example of information which can be extracted from such image data is detection of <a href="http://en.wikipedia.org/wiki/Tumour" title="Tumour" class="mw-redirect">tumours</a>, <a href="http://en.wikipedia.org/wiki/Arteriosclerosis" title="Arteriosclerosis">arteriosclerosis</a> or other malign changes. It can also be measurements of organ dimensions, blood flow, etc. This application area also supports medical research by providing new information, <i>e.g.</i>, about the structure of the brain, or about the quality of medical treatments. Applications of computer vision in the medical area also includes enhancement of images that are interpreted by humans, for example ultrasonic images or X-ray images, to reduce the influence of noise.</p>
+<p>A second application area in computer vision is in industry, sometimes called <a href="http://en.wikipedia.org/wiki/Machine_vision" title="Machine vision">machine vision</a>, where information is extracted for the purpose of supporting a manufacturing process. One example is quality control where details or final products are being automatically inspected in order to find defects. Another example is measurement of position and orientation of details to be picked up by a robot arm. Machine vision is also heavily used in agricultural process to remove undesirable food stuff from bulk material, a process called <a href="http://en.wikipedia.org/wiki/Optical_sorting" title="Optical sorting">optical sorting</a>.</p>
+<p>Military applications are probably one of the largest areas for computer vision. The obvious examples are detection of enemy soldiers or vehicles and <a href="http://en.wikipedia.org/wiki/Missile_guidance" title="Missile guidance">missile guidance</a>. More advanced systems for missile guidance send the missile to an area rather than a specific target, and target selection is made when the missile reaches the area based on locally acquired image data. Modern military concepts, such as "battlefield awareness", imply that various sensors, including image sensors, provide a rich set of information about a combat scene which can be used to support strategic decisions. In this case, automatic processing of the data is used to reduce complexity and to fuse information from multiple sensors to increase reliability.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="http://en.wikipedia.org/wiki/File:NASA_Mars_Rover.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/200px-NASA_Mars_Rover.jpg" width="200" height="160" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/300px-NASA_Mars_Rover.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/400px-NASA_Mars_Rover.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:NASA_Mars_Rover.jpg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Artist's Concept of Rover on Mars, an example of an unmanned land-based vehicle. Notice the <a href="http://en.wikipedia.org/wiki/Stereo_cameras" title="Stereo cameras">stereo cameras</a> mounted on top of the Rover.</div>
+</div>
+</div>
+<p>One of the newer application areas is autonomous vehicles, which include <a href="http://en.wikipedia.org/wiki/Submersible" title="Submersible">submersibles</a>, land-based vehicles (small robots with wheels, cars or trucks), aerial vehicles, and unmanned aerial vehicles (<a href="http://en.wikipedia.org/wiki/Unmanned_aerial_vehicle" title="Unmanned aerial vehicle">UAV</a>). The level of autonomy ranges from fully autonomous (unmanned) vehicles to vehicles where computer vision based systems support a driver or a pilot in various situations. Fully autonomous vehicles typically use computer vision for navigation, i.e. for knowing where it is, or for producing a map of its environment (<a href="http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping" title="Simultaneous localization and mapping">SLAM</a>) and for detecting obstacles. It can also be used for detecting certain task specific events, <i>e.g.</i>, a UAV looking for forest fires. Examples of supporting systems are obstacle warning systems in cars, and systems for autonomous landing of aircraft. Several car manufacturers have demonstrated systems for <a href="http://en.wikipedia.org/wiki/Driverless_car" title="Driverless car" class="mw-redirect">autonomous driving of cars</a>, but this technology has still not reached a level where it can be put on the market. There are ample examples of military autonomous vehicles ranging from advanced missiles, to UAVs for recon missions or missile guidance. Space exploration is already being made with autonomous vehicles using computer vision, <i>e.g.</i>, NASA's <a href="http://en.wikipedia.org/wiki/Mars_Exploration_Rover" title="Mars Exploration Rover">Mars Exploration Rover</a> and ESA's <a href="http://en.wikipedia.org/wiki/ExoMars" title="ExoMars">ExoMars</a> Rover.</p>
+<p>Other application areas include:</p>
+<ul>
+<li>Support of <a href="http://en.wikipedia.org/wiki/Visual_effects" title="Visual effects">visual effects</a> creation for cinema and broadcast, <i>e.g.</i>, <a href="http://en.wikipedia.org/wiki/Camera_tracking" title="Camera tracking" class="mw-redirect">camera tracking</a> (matchmoving).</li>
+<li><a href="http://en.wikipedia.org/wiki/Surveillance" title="Surveillance">Surveillance</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="Typical_tasks_of_computer_vision">Typical tasks of computer vision</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=3" title="Edit section: Typical tasks of computer vision">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Each of the application areas described above employ a range of computer vision tasks; more or less well-defined measurement problems or processing problems, which can be solved using a variety of methods. Some examples of typical computer vision tasks are presented below.</p>
+<h3><span class="mw-headline" id="Recognition">Recognition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=4" title="Edit section: Recognition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The classical problem in computer vision, image processing, and machine vision is that of determining whether or not the image data contains some specific object, feature, or activity. This task can normally be solved <a href="http://en.wiktionary.org/wiki/robust" class="extiw" title="wikt:robust">robustly</a> and without effort by a human, but is still not satisfactorily solved in computer vision for the general case&#160;– arbitrary objects in arbitrary situations. The existing methods for dealing with this problem can at best solve it only for specific objects, such as simple geometric objects (<i>e.g.</i>, polyhedra), human faces, printed or hand-written characters, or vehicles, and in specific situations, typically described in terms of well-defined illumination, background, and <a href="http://en.wikipedia.org/wiki/Pose_(computer_vision)" title="Pose (computer vision)">pose</a> of the object relative to the camera.</p>
+<p>Different varieties of the recognition problem are described in the literature:</p>
+<ul>
+<li><b><a href="http://en.wikipedia.org/wiki/Object_recognition" title="Object recognition" class="mw-redirect">Object recognition</a></b>&#160;– one or several pre-specified or learned objects or object classes can be recognized, usually together with their 2D positions in the image or 3D poses in the scene. <a href="http://en.wikipedia.org/wiki/Google_Goggles" title="Google Goggles">Google Goggles</a> provides a stand-alone program illustration of this function.</li>
+<li><b>Identification</b>&#160;– an individual instance of an object is recognized. Examples include identification of a specific person's face or fingerprint, identification of <a href="http://en.wikipedia.org/wiki/MNIST_database" title="MNIST database">handwritten digits</a>, or identification of a specific vehicle.</li>
+<li><b>Detection</b>&#160;– the image data are scanned for a specific condition. Examples include detection of possible abnormal cells or tissues in medical images or detection of a vehicle in an automatic road toll system. Detection based on relatively simple and fast computations is sometimes used for finding smaller regions of interesting image data which can be further analyzed by more computationally demanding techniques to produce a correct interpretation.</li>
+</ul>
+<p>Several specialized tasks based on recognition exist, such as:</p>
+<ul>
+<li><b><a href="http://en.wikipedia.org/wiki/Content-based_image_retrieval" title="Content-based image retrieval">Content-based image retrieval</a></b>&#160;– finding all images in a larger set of images which have a specific content. The content can be specified in different ways, for example in terms of similarity relative a target image (give me all images similar to image X), or in terms of high-level search criteria given as text input (give me all images which contains many houses, are taken during winter, and have no cars in them).</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Pose_(computer_vision)" title="Pose (computer vision)">Pose estimation</a></b>&#160;– estimating the position or orientation of a specific object relative to the camera. An example application for this technique would be assisting a robot arm in retrieving objects from a conveyor belt in an <a href="http://en.wikipedia.org/wiki/Assembly_line" title="Assembly line">assembly line</a> situation or picking parts from a bin.</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Optical_character_recognition" title="Optical character recognition">Optical character recognition</a></b> (OCR)&#160;– identifying <a href="Character_(computing).html" title="Character (computing)">characters</a> in images of printed or handwritten text, usually with a view to encoding the text in a format more amenable to editing or <a href="http://en.wikipedia.org/wiki/Search_index" title="Search index" class="mw-redirect">indexing</a> (<i>e.g.</i> <a href="ASCII.html" title="ASCII">ASCII</a>).</li>
+<li><b>2D Code reading</b> Reading of 2D codes such as <a href="http://en.wikipedia.org/wiki/Data_Matrix" title="Data Matrix">data matrix</a> and <a href="http://en.wikipedia.org/wiki/QR_code" title="QR code">QR</a> codes.</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Facial_recognition_system" title="Facial recognition system">Facial recognition</a></b></li>
+</ul>
+<h3><span class="mw-headline" id="Motion_analysis">Motion analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=5" title="Edit section: Motion analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Several tasks relate to motion estimation where an image sequence is processed to produce an estimate of the velocity either at each points in the image or in the 3D scene, or even of the camera that produces the images . Examples of such tasks are:</p>
+<ul>
+<li><b><a href="http://en.wikipedia.org/wiki/Egomotion" title="Egomotion" class="mw-redirect">Egomotion</a></b>&#160;– determining the 3D rigid motion (rotation and translation) of the camera from an image sequence produced by the camera.</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Video_tracking" title="Video tracking">Tracking</a></b>&#160;– following the movements of a (usually) smaller set of interest points or objects (<i>e.g.</i>, vehicles or humans) in the image sequence.</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Optical_flow" title="Optical flow">Optical flow</a></b>&#160;– to determine, for each point in the image, how that point is moving relative to the image plane, i.e., its apparent motion. This motion is a result both of how the corresponding 3D point is moving in the scene and how the camera is moving relative to the scene.</li>
+</ul>
+<h3><span class="mw-headline" id="Scene_reconstruction">Scene reconstruction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=6" title="Edit section: Scene reconstruction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Given one or (typically) more images of a scene, or a video, scene reconstruction aims at computing a <a href="http://en.wikipedia.org/wiki/Computer_model" title="Computer model" class="mw-redirect">3D model</a> of the scene. In the simplest case the model can be a set of 3D points. More sophisticated methods produce a complete 3D surface model. The advent of 3D imaging not requiring motion or scanning, and related processing algorithms is enabling rapid advances in this field. Grid-based 3D sensing can be used to acquire 3D images from multiple angles. Algorithms are now available to stitch multiple 3D images together into point clouds and 3D models.</p>
+<h3><span class="mw-headline" id="Image_restoration">Image restoration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=7" title="Edit section: Image restoration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The aim of image restoration is the removal of noise (sensor noise, motion blur, etc.) from images. The simplest possible approach for noise removal is various types of filters such as low-pass filters or median filters. More sophisticated methods assume a model of how the local image structures look like, a model which distinguishes them from the noise. By first analysing the image data in terms of the local image structures, such as lines or edges, and then controlling the filtering based on local information from the analysis step, a better level of noise removal is usually obtained compared to the simpler approaches.</p>
+<p>An example in this field is the <a href="http://en.wikipedia.org/wiki/Inpainting" title="Inpainting">inpainting</a>.</p>
+<h2><span class="mw-headline" id="Computer_vision_system_methods">Computer vision system methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=8" title="Edit section: Computer vision system methods">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The organization of a computer vision system is highly application dependent. Some systems are stand-alone applications which solve a specific measurement or detection problem, while others constitute a sub-system of a larger design which, for example, also contains sub-systems for control of mechanical actuators, planning, information databases, man-machine interfaces, etc. The specific implementation of a computer vision system also depends on if its functionality is pre-specified or if some part of it can be learned or modified during operation. Many functions are unique to the application. There are, however, typical functions which are found in many computer vision systems.</p>
+<ul>
+<li><b>Image acquisition</b>&#160;– A digital image is produced by one or several <a href="http://en.wikipedia.org/wiki/Image_sensor" title="Image sensor">image sensors</a>, which, besides various types of light-sensitive cameras, include <a href="http://en.wikipedia.org/wiki/Rangefinder" title="Rangefinder">range sensors</a>, tomography devices, radar, ultra-sonic cameras, etc. Depending on the type of sensor, the resulting image data is an ordinary 2D image, a 3D volume, or an image sequence. The pixel values typically correspond to light intensity in one or several spectral bands (gray images or colour images), but can also be related to various physical measures, such as depth, absorption or reflectance of sonic or electromagnetic waves, or <a href="http://en.wikipedia.org/wiki/Magnetic_resonance_imaging" title="Magnetic resonance imaging">nuclear magnetic resonance</a>.<sup id="cite_ref-Davies-2005_11-0" class="reference"><a href="#cite_note-Davies-2005-11"><span>[</span>11<span>]</span></a></sup></li>
+<li><b>Pre-processing</b>&#160;– Before a computer vision method can be applied to image data in order to extract some specific piece of information, it is usually necessary to process the data in order to assure that it satisfies certain assumptions implied by the method. Examples are
+<ul>
+<li>Re-sampling in order to assure that the image coordinate system is correct.</li>
+<li>Noise reduction in order to assure that sensor noise does not introduce false information.</li>
+<li>Contrast enhancement to assure that relevant information can be detected.</li>
+<li><a href="http://en.wikipedia.org/wiki/Scale_space" title="Scale space">Scale space</a> representation to enhance image structures at locally appropriate scales.</li>
+</ul>
+</li>
+<li><b><a href="http://en.wikipedia.org/wiki/Feature_detection_(computer_vision)" title="Feature detection (computer vision)">Feature extraction</a></b>&#160;– Image features at various levels of complexity are extracted from the image data.<sup id="cite_ref-Davies-2005_11-1" class="reference"><a href="#cite_note-Davies-2005-11"><span>[</span>11<span>]</span></a></sup> Typical examples of such features are
+<ul>
+<li>Lines, <a href="http://en.wikipedia.org/wiki/Edge_detection" title="Edge detection">edges</a> and <a href="http://en.wikipedia.org/wiki/Ridge_detection" title="Ridge detection">ridges</a>.</li>
+<li>Localized <a href="http://en.wikipedia.org/wiki/Interest_point_detection" title="Interest point detection">interest points</a> such as <a href="http://en.wikipedia.org/wiki/Corner_detection" title="Corner detection">corners</a>, <a href="http://en.wikipedia.org/wiki/Blob_detection" title="Blob detection">blobs</a> or points.</li>
+</ul>
+</li>
+</ul>
+<dl>
+<dd>More complex features may be related to texture, shape or motion.</dd>
+</dl>
+<ul>
+<li><b>Detection/segmentation</b>&#160;– At some point in the processing a decision is made about which image points or regions of the image are relevant for further processing.<sup id="cite_ref-Davies-2005_11-2" class="reference"><a href="#cite_note-Davies-2005-11"><span>[</span>11<span>]</span></a></sup> Examples are
+<ul>
+<li>Selection of a specific set of interest points</li>
+<li>Segmentation of one or multiple image regions which contain a specific object of interest.</li>
+</ul>
+</li>
+<li><b>High-level processing</b>&#160;– At this step the input is typically a small set of data, for example a set of points or an image region which is assumed to contain a specific object.<sup id="cite_ref-Davies-2005_11-3" class="reference"><a href="#cite_note-Davies-2005-11"><span>[</span>11<span>]</span></a></sup> The remaining processing deals with, for example:
+<ul>
+<li>Verification that the data satisfy model-based and application specific assumptions.</li>
+<li>Estimation of application specific parameters, such as object pose or object size.</li>
+<li><a href="http://en.wikipedia.org/wiki/Image_recognition" title="Image recognition" class="mw-redirect">Image recognition</a>&#160;– classifying a detected object into different categories.</li>
+<li><a href="http://en.wikipedia.org/wiki/Image_registration" title="Image registration">Image registration</a>&#160;– comparing and combining two different views of the same object.</li>
+</ul>
+</li>
+<li><b>Decision making</b> Making the final decision required for the application,<sup id="cite_ref-Davies-2005_11-4" class="reference"><a href="#cite_note-Davies-2005-11"><span>[</span>11<span>]</span></a></sup> for example:
+<ul>
+<li>Pass/fail on automatic inspection applications</li>
+<li>Match / no-match in recognition applications</li>
+<li>Flag for further human review in medical, military, security and recognition applications</li>
+</ul>
+</li>
+</ul>
+<h2><span class="mw-headline" id="Computer_vision_hardware">Computer vision hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=9" title="Edit section: Computer vision hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are many kind of computer vision systems, nevertheless all of them contains these basic elements: power source, at least one image acquisition device (i.e. camera, ccd, etc.), processor as well as control and communication cables or some kind of wireless interconnection mechanism. In addition a practical vision system contains software for application and develop as well as a display in order to monitor what the system does. Vision system for inner spaces, as most industrial ones, contains in addition an illumination system and in most cases a controlled environment, specially on external lighting. Furthermore, a completed system includes many accessories like camera supports, cables and connectors.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AI_effect" title="AI effect">AI effect</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Applications_of_artificial_intelligence" title="Applications of artificial intelligence">Applications of artificial intelligence</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Machine_vision_glossary" title="Machine vision glossary" class="mw-redirect">Machine vision glossary</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Artificial_neural_networks" title="Artificial neural networks" class="mw-redirect">Artificial neural networks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deep_Learning" title="Deep Learning" class="mw-redirect">Deep Learning</a></li>
+</ul>
+<dl>
+<dt>Lists</dt>
+</dl>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_computer_vision_topics" title="List of computer vision topics">List of computer vision topics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_emerging_technologies" title="List of emerging technologies">List of emerging technologies</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Outline_of_artificial_intelligence" title="Outline of artificial intelligence">Outline of artificial intelligence</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Klette-2014-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Klette-2014_1-0">^</a></b></span> <span class="reference-text"><span class="citation book">Reinhard Klette (2014). <i>Concise Computer Vision</i>. Springer. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-4471-6320-6" title="Special:BookSources/978-1-4471-6320-6">978-1-4471-6320-6</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Reinhard+Klette&amp;rft.au=Reinhard+Klette&amp;rft.btitle=Concise+Computer+Vision&amp;rft.date=2014&amp;rft.genre=book&amp;rft.isbn=978-1-4471-6320-6&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Shapiro-Stockman-2001-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-Shapiro-Stockman-2001_2-0">^</a></b></span> <span class="reference-text"><span class="citation book">Linda G. Shapiro and George C. Stockman (2001). <i>Computer Vision</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-030796-3" title="Special:BookSources/0-13-030796-3">0-13-030796-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Linda+G.+Shapiro+and+George+C.+Stockman&amp;rft.au=Linda+G.+Shapiro+and+George+C.+Stockman&amp;rft.btitle=Computer+Vision&amp;rft.date=2001&amp;rft.genre=book&amp;rft.isbn=0-13-030796-3&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Morris-2004-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Morris-2004_3-0">^</a></b></span> <span class="reference-text"><span class="citation book">Tim Morris (2004). <i>Computer Vision and Image Processing</i>. Palgrave Macmillan. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-333-99451-5" title="Special:BookSources/0-333-99451-5">0-333-99451-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Tim+Morris&amp;rft.au=Tim+Morris&amp;rft.btitle=Computer+Vision+and+Image+Processing&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=0-333-99451-5&amp;rft.pub=Palgrave+Macmillan&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Jahne-Haussecker-2000-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Jahne-Haussecker-2000_4-0">^</a></b></span> <span class="reference-text"><span class="citation book">Bernd Jähne and Horst Haußecker (2000). <i>Computer Vision and Applications, A Guide for Students and Practitioners</i>. Academic Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-085198-1" title="Special:BookSources/0-13-085198-1">0-13-085198-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Bernd+J%C3%A4hne+and+Horst+Hau%C3%9Fecker&amp;rft.aulast=Bernd+J%C3%A4hne+and+Horst+Hau%C3%9Fecker&amp;rft.btitle=Computer+Vision+and+Applications%2C+A+Guide+for+Students+and+Practitioners&amp;rft.date=2000&amp;rft.genre=book&amp;rft.isbn=0-13-085198-1&amp;rft.pub=Academic+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Sonka-Hlavac-Boyle-2008-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Sonka-Hlavac-Boyle-2008_5-0">^</a></b></span> <span class="reference-text"><span class="citation book">Milan Sonka, Vaclav Hlavac and Roger Boyle (2008). <i>Image Processing, Analysis, and Machine Vision</i>. Thomson. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-495-08252-X" title="Special:BookSources/0-495-08252-X">0-495-08252-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Milan+Sonka%2C+Vaclav+Hlavac+and+Roger+Boyle&amp;rft.au=Milan+Sonka%2C+Vaclav+Hlavac+and+Roger+Boyle&amp;rft.btitle=Image+Processing%2C+Analysis%2C+and+Machine+Vision&amp;rft.date=2008&amp;rft.genre=book&amp;rft.isbn=0-495-08252-X&amp;rft.pub=Thomson&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Forsyth-Ponce-2003-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Forsyth-Ponce-2003_6-0">^</a></b></span> <span class="reference-text"><span class="citation book">David A. Forsyth and Jean Ponce (2003). <i>Computer Vision, A Modern Approach</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-085198-1" title="Special:BookSources/0-13-085198-1">0-13-085198-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=David+A.+Forsyth+and+Jean+Ponce&amp;rft.aulast=David+A.+Forsyth+and+Jean+Ponce&amp;rft.btitle=Computer+Vision%2C+A+Modern+Approach&amp;rft.date=2003&amp;rft.genre=book&amp;rft.isbn=0-13-085198-1&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Ballard-Brown-1982-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ballard-Brown-1982_7-0">^</a></b></span> <span class="reference-text"><span class="citation book">Dana H. Ballard and Christopher M. Brown (1982). <a rel="nofollow" class="external text" href="http://homepages.inf.ed.ac.uk/rbf/BOOKS/BANDB/bandb.htm"><i>Computer Vision</i></a>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-165316-4" title="Special:BookSources/0-13-165316-4">0-13-165316-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Dana+H.+Ballard+and+Christopher+M.+Brown&amp;rft.aulast=Dana+H.+Ballard+and+Christopher+M.+Brown&amp;rft.btitle=Computer+Vision&amp;rft.date=1982&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fhomepages.inf.ed.ac.uk%2Frbf%2FBOOKS%2FBANDB%2Fbandb.htm&amp;rft.isbn=0-13-165316-4&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Barghout, Lauren, and Jacob Sheynin. "Real-world scene perception and perceptual organization: Lessons from Computer Vision." Journal of Vision 13.9 (2013): 709-709.</span></li>
+<li id="cite_note-NASAarticle-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-NASAarticle_9-0">^</a></b></span> <span class="reference-text"><span class="citation journal">Turek, Fred (June 2011). "Machine Vision Fundamentals, How to Make Robots See". <i>NASA Tech Briefs magazine</i> <b>35</b> (6).</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.atitle=Machine+Vision+Fundamentals%2C+How+to+Make+Robots+See&amp;rft.aulast=Turek%2C+Fred&amp;rft.au=Turek%2C+Fred&amp;rft.date=June+2011&amp;rft.genre=article&amp;rft.issue=6&amp;rft.jtitle=NASA+Tech+Briefs+magazine&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=35" class="Z3988"><span style="display:none;">&#160;</span></span> pages 60–62</span></li>
+<li id="cite_note-TextbookP1-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-TextbookP1_10-0">^</a></b></span> <span class="reference-text"><span class="citation book">Steger, Carsten, Markus Ulrich, and Christian Wiedemann (2008). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=bvSgjky9lBYC&amp;lpg=PP1&amp;pg=PA1#v=onepage&amp;q&amp;f=false"><i>Machine Vision Algorithms and Applications</i></a>. Weinheim: <a href="http://en.wikipedia.org/wiki/Wiley-VCH" title="Wiley-VCH">Wiley-VCH</a>. p.&#160;1. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-3-527-40734-7" title="Special:BookSources/978-3-527-40734-7">978-3-527-40734-7</a><span class="reference-accessdate">. Retrieved 2010-11-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Steger%2C+Carsten%2C+Markus+Ulrich%2C+and+Christian+Wiedemann&amp;rft.au=Steger%2C+Carsten%2C+Markus+Ulrich%2C+and+Christian+Wiedemann&amp;rft.btitle=Machine+Vision+Algorithms+and+Applications&amp;rft.date=2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DbvSgjky9lBYC%26lpg%3DPP1%26pg%3DPA1%23v%3Donepage%26q%26f%3Dfalse&amp;rft.isbn=978-3-527-40734-7&amp;rft.pages=1&amp;rft.place=Weinheim&amp;rft.pub=Wiley-VCH&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Davies-2005-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-Davies-2005_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Davies-2005_11-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Davies-2005_11-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Davies-2005_11-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Davies-2005_11-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><span class="citation book">E. Roy Davies (2005). <i>Machine Vision: Theory, Algorithms, Practicalities</i>. Morgan Kaufmann. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-12-206093-8" title="Special:BookSources/0-12-206093-8">0-12-206093-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=E.+Roy+Davies&amp;rft.aulast=E.+Roy+Davies&amp;rft.btitle=Machine+Vision%3A+Theory%2C+Algorithms%2C+Practicalities&amp;rft.date=2005&amp;rft.genre=book&amp;rft.isbn=0-12-206093-8&amp;rft.pub=Morgan+Kaufmann&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=12" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/David_Marr_(neuroscientist)" title="David Marr (neuroscientist)">David Marr</a> (1982). <i>Vision</i>. W. H. Freeman and Company. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7167-1284-9" title="Special:BookSources/0-7167-1284-9">0-7167-1284-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=David+Marr&amp;rft.aulast=David+Marr&amp;rft.btitle=Vision&amp;rft.date=1982&amp;rft.genre=book&amp;rft.isbn=0-7167-1284-9&amp;rft.pub=W.+H.+Freeman+and+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Azriel Rosenfeld and Avinash Kak (1982). <i>Digital Picture Processing</i>. Academic Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-12-597301-2" title="Special:BookSources/0-12-597301-2">0-12-597301-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Azriel+Rosenfeld+and+Avinash+Kak&amp;rft.aulast=Azriel+Rosenfeld+and+Avinash+Kak&amp;rft.btitle=Digital+Picture+Processing&amp;rft.date=1982&amp;rft.genre=book&amp;rft.isbn=0-12-597301-2&amp;rft.pub=Academic+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Barghout, Lauren, and Lawrence W. Lee (2003). <i>Perceptual information processing system</i>. U.S. Patent Application 10/618,543. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-08159-8" title="Special:BookSources/0-262-08159-8">0-262-08159-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Barghout%2C+Lauren%2C+and+Lawrence+W.+Lee&amp;rft.aulast=Barghout%2C+Lauren%2C+and+Lawrence+W.+Lee&amp;rft.btitle=Perceptual+information+processing+system&amp;rft.date=2003&amp;rft.genre=book&amp;rft.isbn=0-262-08159-8&amp;rft.pub=U.S.+Patent+Application+10%2F618%2C543&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Berthold Klaus Paul Horn (1986). <i>Robot Vision</i>. MIT Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-08159-8" title="Special:BookSources/0-262-08159-8">0-262-08159-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Berthold+Klaus+Paul+Horn&amp;rft.aulast=Berthold+Klaus+Paul+Horn&amp;rft.btitle=Robot+Vision&amp;rft.date=1986&amp;rft.genre=book&amp;rft.isbn=0-262-08159-8&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Olivier Faugeras (1993). <i>Three-Dimensional Computer Vision, A Geometric Viewpoint</i>. MIT Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-06158-9" title="Special:BookSources/0-262-06158-9">0-262-06158-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Olivier+Faugeras&amp;rft.au=Olivier+Faugeras&amp;rft.btitle=Three-Dimensional+Computer+Vision%2C+A+Geometric+Viewpoint&amp;rft.date=1993&amp;rft.genre=book&amp;rft.isbn=0-262-06158-9&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Tony Lindeberg (1994). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/~tony/book.html"><i>Scale-Space Theory in Computer Vision</i></a>. Springer. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7923-9418-6" title="Special:BookSources/0-7923-9418-6">0-7923-9418-6</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Tony+Lindeberg&amp;rft.au=Tony+Lindeberg&amp;rft.btitle=Scale-Space+Theory+in+Computer+Vision&amp;rft.date=1994&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2F~tony%2Fbook.html&amp;rft.isbn=0-7923-9418-6&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">James L. Crowley and Henrik I. Christensen (Eds.) (1995). <i>Vision as Process</i>. Springer-Verlag. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/3-540-58143-X" title="Special:BookSources/3-540-58143-X">3-540-58143-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=James+L.+Crowley+and+Henrik+I.+Christensen+%28Eds.%29&amp;rft.aulast=James+L.+Crowley+and+Henrik+I.+Christensen+%28Eds.%29&amp;rft.btitle=Vision+as+Process&amp;rft.date=1995&amp;rft.genre=book&amp;rft.isbn=3-540-58143-X&amp;rft.pub=Springer-Verlag&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Gösta H. Granlund and Hans Knutsson (1995). <i>Signal Processing for Computer Vision</i>. Kluwer Academic Publisher. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7923-9530-1" title="Special:BookSources/0-7923-9530-1">0-7923-9530-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=G%C3%B6sta+H.+Granlund+and+Hans+Knutsson&amp;rft.aulast=G%C3%B6sta+H.+Granlund+and+Hans+Knutsson&amp;rft.btitle=Signal+Processing+for+Computer+Vision&amp;rft.date=1995&amp;rft.genre=book&amp;rft.isbn=0-7923-9530-1&amp;rft.pub=Kluwer+Academic+Publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Reinhard Klette, Karsten Schluens and Andreas Koschan (1998). <a rel="nofollow" class="external text" href="http://www.cs.auckland.ac.nz/~rklette/Books/SpringerCV98/Springer98.html"><i>Computer Vision – Three-Dimensional Data from Images</i></a>. Springer, Singapore. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/981-3083-71-9" title="Special:BookSources/981-3083-71-9">981-3083-71-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Reinhard+Klette%2C+Karsten+Schluens+and+Andreas+Koschan&amp;rft.au=Reinhard+Klette%2C+Karsten+Schluens+and+Andreas+Koschan&amp;rft.btitle=Computer+Vision+%E2%80%93+Three-Dimensional+Data+from+Images&amp;rft.date=1998&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.auckland.ac.nz%2F~rklette%2FBooks%2FSpringerCV98%2FSpringer98.html&amp;rft.isbn=981-3083-71-9&amp;rft.pub=Springer%2C+Singapore&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Emanuele Trucco and Alessandro Verri (1998). <i>Introductory Techniques for 3-D Computer Vision</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-261108-2" title="Special:BookSources/0-13-261108-2">0-13-261108-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Emanuele+Trucco+and+Alessandro+Verri&amp;rft.aulast=Emanuele+Trucco+and+Alessandro+Verri&amp;rft.btitle=Introductory+Techniques+for+3-D+Computer+Vision&amp;rft.date=1998&amp;rft.genre=book&amp;rft.isbn=0-13-261108-2&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Bernd Jähne (2002). <i>Digital Image Processing</i>. Springer. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/3-540-67754-2" title="Special:BookSources/3-540-67754-2">3-540-67754-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=Bernd+J%C3%A4hne&amp;rft.aulast=Bernd+J%C3%A4hne&amp;rft.btitle=Digital+Image+Processing&amp;rft.date=2002&amp;rft.genre=book&amp;rft.isbn=3-540-67754-2&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Richard Hartley and <a href="http://en.wikipedia.org/wiki/Andrew_Zisserman" title="Andrew Zisserman">Andrew Zisserman</a> (2003). <i>Multiple View Geometry in Computer Vision</i>. Cambridge University Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-54051-8" title="Special:BookSources/0-521-54051-8">0-521-54051-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Richard+Hartley+and+Andrew+Zisserman&amp;rft.au=Richard+Hartley+and+Andrew+Zisserman&amp;rft.btitle=Multiple+View+Geometry+in+Computer+Vision&amp;rft.date=2003&amp;rft.genre=book&amp;rft.isbn=0-521-54051-8&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Gérard Medioni and Sing Bing Kang (2004). <i>Emerging Topics in Computer Vision</i>. Prentice Hall. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-101366-1" title="Special:BookSources/0-13-101366-1">0-13-101366-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=G%C3%A9rard+Medioni+and+Sing+Bing+Kang&amp;rft.aulast=G%C3%A9rard+Medioni+and+Sing+Bing+Kang&amp;rft.btitle=Emerging+Topics+in+Computer+Vision&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=0-13-101366-1&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">R. Fisher, K Dawson-Howe, A. Fitzgibbon, C. Robertson, E. Trucco (2005). <i>Dictionary of Computer Vision and Image Processing</i>. John Wiley. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-470-01526-8" title="Special:BookSources/0-470-01526-8">0-470-01526-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=R.+Fisher%2C+K+Dawson-Howe%2C+A.+Fitzgibbon%2C+C.+Robertson%2C+E.+Trucco&amp;rft.au=R.+Fisher%2C+K+Dawson-Howe%2C+A.+Fitzgibbon%2C+C.+Robertson%2C+E.+Trucco&amp;rft.btitle=Dictionary+of+Computer+Vision+and+Image+Processing&amp;rft.date=2005&amp;rft.genre=book&amp;rft.isbn=0-470-01526-8&amp;rft.pub=John+Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Nikos_Paragios" title="Nikos Paragios">Nikos Paragios</a> and Yunmei Chen and Olivier Faugeras (2005). <a rel="nofollow" class="external text" href="http://www.mas.ecp.fr/vision/Personnel/nikos/paragios-chen-faugeras/"><i>Handbook of Mathematical Models in Computer Vision</i></a>. Springer. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-387-26371-3" title="Special:BookSources/0-387-26371-3">0-387-26371-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Nikos+Paragios+and+Yunmei+Chen+and+Olivier+Faugeras&amp;rft.au=Nikos+Paragios+and+Yunmei+Chen+and+Olivier+Faugeras&amp;rft.btitle=Handbook+of+Mathematical+Models+in+Computer+Vision&amp;rft.date=2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.mas.ecp.fr%2Fvision%2FPersonnel%2Fnikos%2Fparagios-chen-faugeras%2F&amp;rft.isbn=0-387-26371-3&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Wilhelm Burger and Mark J. Burge (2007). <a rel="nofollow" class="external text" href="http://www.imagingbook.com/"><i>Digital Image Processing: An Algorithmic Approach Using Java</i></a>. <a href="http://en.wikipedia.org/wiki/Springer_Science+Business_Media" title="Springer Science+Business Media">Springer</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1-84628-379-5" title="Special:BookSources/1-84628-379-5">1-84628-379-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Wilhelm+Burger+and+Mark+J.+Burge&amp;rft.au=Wilhelm+Burger+and+Mark+J.+Burge&amp;rft.btitle=Digital+Image+Processing%3A+An+Algorithmic+Approach+Using+Java&amp;rft.date=2007&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.imagingbook.com%2F&amp;rft.isbn=1-84628-379-5&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Pedram Azad, Tilo Gockel, Rüdiger Dillmann (2008). <a rel="nofollow" class="external text" href="http://ivt.sourceforge.net/book.html"><i>Computer Vision – Principles and Practice</i></a>. Elektor International Media BV. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-905705-71-8" title="Special:BookSources/0-905705-71-8">0-905705-71-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Pedram+Azad%2C+Tilo+Gockel%2C+R%C3%BCdiger+Dillmann&amp;rft.au=Pedram+Azad%2C+Tilo+Gockel%2C+R%C3%BCdiger+Dillmann&amp;rft.btitle=Computer+Vision+%E2%80%93+Principles+and+Practice&amp;rft.date=2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fivt.sourceforge.net%2Fbook.html&amp;rft.isbn=0-905705-71-8&amp;rft.pub=Elektor+International+Media+BV&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Richard Szeliski (2010). <a rel="nofollow" class="external text" href="http://szeliski.org/Book/"><i>Computer Vision: Algorithms and Applications</i></a>. Springer-Verlag. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1848829343" title="Special:BookSources/978-1848829343">978-1848829343</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.aulast=Richard+Szeliski&amp;rft.au=Richard+Szeliski&amp;rft.btitle=Computer+Vision%3A+Algorithms+and+Applications&amp;rft.date=2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fszeliski.org%2FBook%2F&amp;rft.isbn=978-1848829343&amp;rft.pub=Springer-Verlag&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">J. R. Parker (2011). <a rel="nofollow" class="external text" href="http://www.amazon.ca/Algorithms-Image-Processing-Computer-Vision/dp/0470643854"><i>Algorithms for Image Processing and Computer Vision (2nd ed.)</i></a>. Wiley. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0470643853" title="Special:BookSources/978-0470643853">978-0470643853</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AComputer+vision&amp;rft.au=J.+R.+Parker&amp;rft.aulast=J.+R.+Parker&amp;rft.btitle=Algorithms+for+Image+Processing+and+Computer+Vision+%282nd+ed.%29&amp;rft.date=2011&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.amazon.ca%2FAlgorithms-Image-Processing-Computer-Vision%2Fdp%2F0470643854&amp;rft.isbn=978-0470643853&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://iris.usc.edu/Information/Iris-Conferences.html">USC Iris computer vision conference list</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cvpapers.com/index.html">Computer vision papers on the web</a> A complete list of papers of the most relevant computer vision conferences.</li>
+<li><a rel="nofollow" class="external text" href="http://www.computervisiononline.com/">Computer Vision Online</a> News, source code, datasets and job offers related to computer vision.</li>
+<li><a rel="nofollow" class="external text" href="http://iris.usc.edu/Vision-Notes/bibliography/contents.html">Keith Price's Annotated Computer Vision Bibliography</a></li>
+<li><a rel="nofollow" class="external text" href="http://homepages.inf.ed.ac.uk/rbf/CVonline/">CVonline</a> Bob Fisher's Compendium of Computer Vision.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Computer_vision_footer" title="Template:Computer vision footer"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Computer_vision_footer&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Computer vision footer (page does not exist)"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Computer_vision_footer&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><strong class="selflink">Computer vision</strong></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Categories</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Category:Datasets_in_computer_vision" title="Category:Datasets in computer vision">Datasets</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Digital_geometry" title="Category:Digital geometry">Digital geometry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Commercial_computer_vision_systems" title="Category:Commercial computer vision systems">Commercial systems</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Feature_detection" title="Category:Feature detection">Feature detection</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Geometry_in_computer_vision" title="Category:Geometry in computer vision">Geometry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Image_sensor_technology_in_computer_vision" title="Category:Image sensor technology in computer vision">Image sensor technology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Learning_in_computer_vision" title="Category:Learning in computer vision">Learning</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Mathematical_morphology" title="Category:Mathematical morphology">Morphology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Motion_in_computer_vision" title="Category:Motion in computer vision">Motion analysis</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Image_noise_reduction_techniques" title="Category:Image noise reduction techniques">Noise reduction techniques</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Object_recognition_and_categorization" title="Category:Object recognition and categorization">Recognition and categorization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Computer_vision_research_infrastructure" title="Category:Computer vision research infrastructure">Research infrastructure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Computer_vision_researchers" title="Category:Computer vision researchers">Researchers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Image_segmentation" title="Category:Image segmentation">Segmentation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Computer_vision_software" title="Category:Computer vision software">Software</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Technologies</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Computer_stereo_vision" title="Computer stereo vision">Computer stereo vision</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Category:Applications_of_computer_vision" title="Category:Applications of computer vision">Applications</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Category:Driverless_cars" title="Category:Driverless cars">Autonomous vehicles</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Face_recognition" title="Category:Face recognition">Face recognition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Image_search" title="Category:Image search">Image search</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Optical_character_recognition" title="Category:Optical character recognition">Optical character recognition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Remote_sensing" title="Category:Remote sensing">Remote sensing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Robots" title="Category:Robots">Robots</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><b><a href="http://en.wikipedia.org/wiki/Category:Computer_vision" title="Category:Computer vision">Main category</a></b></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Mixed_reality" title="Template:Mixed reality"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Mixed_reality" title="Template talk:Mixed reality"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Mixed_reality&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Virtual_reality.html" title="Virtual reality">Virtual reality</a> · <a href="http://en.wikipedia.org/wiki/Mixed_reality" title="Mixed reality">Mixed reality</a> · <a href="http://en.wikipedia.org/wiki/Reality" title="Reality">Reality</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Virtuality" title="Virtuality">Virtuality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_cinematography" title="Virtual cinematography">Virtual cinematography</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Augmented_reality" title="Augmented reality">Augmented reality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Augmented_virtuality" title="Augmented virtuality">Augmented virtuality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_life" title="Real life">Real life</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Projection_augmented_model" title="Projection augmented model">Projection augmented model</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reality–virtuality_continuum" title="Reality–virtuality continuum">Reality–virtuality continuum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Artificial_reality" title="Artificial reality">Artificial reality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simulated_reality" title="Simulated reality">Simulated reality</a></li>
+<li><a href="Ubiquitous_computing.html" title="Ubiquitous computing">Ubiquitous computing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_world" title="Virtual world">Virtual world</a> (<a href="http://en.wikipedia.org/wiki/Persistent_world" title="Persistent world">Persistent world</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Multimodal_interaction" title="Multimodal interaction">Multimodal interaction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Telepresence" title="Telepresence">Telepresence</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Immersion_(virtual_reality)" title="Immersion (virtual reality)">Immersion</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Immersive_technology" title="Immersive technology">Technology</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Compositing" title="Compositing">Compositing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Camera_resectioning" title="Camera resectioning">Camera resectioning</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Haptic_suit" title="Haptic suit">Haptic suit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Head-mounted_display" title="Head-mounted display">Head-mounted display</a> (<a href="http://en.wikipedia.org/wiki/Optical_head-mounted_display" title="Optical head-mounted display">Optical head-mounted display</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Head-up_display" title="Head-up display">Head-up display</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Image-based_modeling_and_rendering" title="Image-based modeling and rendering">Image-based modeling and rendering</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real-time_computer_graphics" title="Real-time computer graphics">Real-time computer graphics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_retinal_display" title="Virtual retinal display">Virtual retinal display</a></li>
+<li><a href="Wearable_computer.html" title="Wearable computer">Wearable computer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stereoscopy" title="Stereoscopy">Stereoscopy</a> (<a href="http://en.wikipedia.org/wiki/Computer_stereo_vision" title="Computer stereo vision">Computer stereo vision</a>, <strong class="selflink">Computer vision</strong>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Chroma_key" title="Chroma key">Chroma key</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Visual_hull" title="Visual hull">Visual hull</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_viewpoint_television" title="Free viewpoint television">Free viewpoint television</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Omnidirectional_treadmill" title="Omnidirectional treadmill">Omnidirectional treadmill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hidden_surface_determination" title="Hidden surface determination">Hidden surface determination</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Tracking</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Motion_capture" title="Motion capture">Motion capture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tracking_system" title="Tracking system">Tracking system</a></li>
+<li>Types
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Video_tracking" title="Video tracking">Optical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inertial_navigation_system" title="Inertial navigation system">Inertial</a></li>
+<li>Magnetic</li>
+</ul>
+</li>
+<li>Devices
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Wired_glove" title="Wired glove">Wired glove</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Razer_Hydra" title="Razer Hydra">Sixense TrueMotion</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gametrak" title="Gametrak">Gametrak</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PlayStation_Move" title="PlayStation Move">PlayStation Move</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Leap_Motion" title="Leap Motion">Leap Motion</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kinect" title="Kinect">Kinect</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Applications</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Pervasive_game" title="Pervasive game">Pervasive game</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ARToolKit" title="ARToolKit">ARToolKit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interactive_art" title="Interactive art">Interactive art</a> (<a href="http://en.wikipedia.org/wiki/Virtual_graffiti" title="Virtual graffiti">Virtual graffiti</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" title="Cave automatic virtual environment">Cave automatic virtual environment</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">See also</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Simulated_reality_in_fiction" title="Simulated reality in fiction">Simulated reality in fiction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sensorama" title="Sensorama">Sensorama</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Image_processing_software" title="Template:Image processing software"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Image_processing_software&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Image processing software (page does not exist)"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Image_processing_software&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">Image processing software</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Free_software.html" title="Free software">Free software</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/3DSlicer" title="3DSlicer">3D Slicer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/AFNI" title="AFNI" class="mw-redirect">AFNI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CellCognition" title="CellCognition">CellCognition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CellProfiler" title="CellProfiler">CellProfiler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Endrov" title="Endrov">Endrov</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FIJI_(software)" title="FIJI (software)">FIJI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FMRIB_Software_Library" title="FMRIB Software Library">FMRIB Software Library</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FreeSurfer" title="FreeSurfer">FreeSurfer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GemIdent" title="GemIdent">GemIdent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ilastik" title="Ilastik">ilastik</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ImageJ" title="ImageJ">imageJ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Insight_Segmentation_and_Registration_Toolkit" title="Insight Segmentation and Registration Toolkit">ITK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integrating_Vision_Toolkit" title="Integrating Vision Toolkit">IVT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/InVesalius" title="InVesalius">InVesalius</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ITK-SNAP" title="ITK-SNAP">ITK-SNAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KNIME" title="KNIME">KNIME</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mango_(software)" title="Mango (software)">Mango</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenCV" title="OpenCV">OpenCV</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OsiriX" title="OsiriX">OsiriX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VIGRA" title="VIGRA">VIGRA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VXL" title="VXL">VXL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Proprietary_software.html" title="Proprietary software">Proprietary</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Amira_(Software)" title="Amira (Software)">Amira</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Analyze_(imaging_software)" title="Analyze (imaging software)">Analyze</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bitplane" title="Bitplane">Bitplane</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IDL_(programming_language)" title="IDL (programming language)">IDL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mathematica" title="Mathematica">Mathematica</a></li>
+<li><a href="MATLAB.html" title="MATLAB">MATLAB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mimics" title="Mimics">Mimics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MountainsMap" title="MountainsMap">MountainsMap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1021
+CPU time usage: 0.972 seconds
+Real time usage: 1.031 seconds
+Preprocessor visited node count: 1500/1000000
+Preprocessor generated node count: 6077/1500000
+Post‐expand include size: 74535/2048000 bytes
+Template argument size: 1019/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 9/500
+Lua time usage: 0.174/10.000 seconds
+Lua memory usage: 3.12 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:6596-0!*!0!!en!4!* and timestamp 20140326095637
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;oldid=601329281">http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;oldid=601329281</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Image_processing_software" title="Category:Image processing software">Image processing software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Artificial_intelligence" title="Category:Artificial intelligence">Artificial intelligence</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_vision" title="Category:Computer vision">Computer vision</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Packaging_machinery" title="Category:Packaging machinery">Packaging machinery</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_introduction_cleanup_from_March_2014" title="Category:Wikipedia introduction cleanup from March 2014">Wikipedia introduction cleanup from March 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_covered_by_WikiProject_Wikify_from_March_2014" title="Category:Articles covered by WikiProject Wikify from March 2014">Articles covered by WikiProject Wikify from March 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_covered_by_WikiProject_Wikify" title="Category:All articles covered by WikiProject Wikify">All articles covered by WikiProject Wikify</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_that_may_contain_original_research_from_September_2011" title="Category:Articles that may contain original research from September 2011">Articles that may contain original research from September 2011</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Computer+vision&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Computer+vision" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Computer_vision.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Computer_vision"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Computer_vision.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Computer_vision" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Computer_vision" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;oldid=601329281" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q844240" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Computer_vision&amp;id=601329281" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Computer+vision">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Computer+vision&amp;oldid=601329281&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Computer_vision&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/رؤية_حاسوبية" title="رؤية حاسوبية – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Компютърно_зрение" title="Компютърно зрение – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Računarski_vid" title="Računarski vid – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Visió_artificial" title="Visió artificial – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Počítačové_vidění" title="Počítačové vidění – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Μηχανική_όραση" title="Μηχανική όραση – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Visión_artificial" title="Visión artificial – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/بینایی_رایانه‌ای" title="بینایی رایانه‌ای – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Vision_par_ordinateur" title="Vision par ordinateur – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/컴퓨터_비전" title="컴퓨터 비전 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Računalni_vid" title="Računalni vid – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Visione_artificiale" title="Visione artificiale – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/ראייה_ממוחשבת" title="ראייה ממוחשבת – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/コンピュータビジョン" title="コンピュータビジョン – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Rozpoznawanie_obrazów" title="Rozpoznawanie obrazów – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Visão_computacional" title="Visão computacional – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Компьютерное_зрение" title="Компьютерное зрение – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sq"><a href="http://sq.wikipedia.org/wiki/Vizioni_kompjuterik" title="Vizioni kompjuterik – Albanian" lang="sq" hreflang="sq">Shqip</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Computer_vision" title="Computer vision – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Računalniški_vid" title="Računalniški vid – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Datorseende" title="Datorseende – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/คอมพิวเตอร์วิทัศน์" title="คอมพิวเตอร์วิทัศน์ – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Комп%27ютерний_зір" title="Комп'ютерний зір – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-ur"><a href="http://ur.wikipedia.org/wiki/شمارندی_بصارت" title="شمارندی بصارت – Urdu" lang="ur" hreflang="ur">اردو</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/计算机视觉" title="计算机视觉 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q844240#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 March 2014 at 09:56.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Computer_vision" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=mw.PopUpMediaTransform&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1052 in 0.291 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Computer_vision by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:28 GMT -->
+</html>

@@ -1,0 +1,582 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/B_language.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/B_language by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>B (programming language) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/B_(programming_language)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="B_(programming_language).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"B_(programming_language)","wgTitle":"B (programming language)","wgCurRevisionId":601384695,"wgRevisionId":601384695,"wgArticleId":4475,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Procedural programming languages","Programming languages created in 1969"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"B_(programming_language)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"B_language","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q797302"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-B_programming_language skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">B (programming language)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=B_language&amp;redirect=no" title="B language">B language</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about a language developed at Bell Labs.  For "B" language of Meertens and Pemberton, see <a href="http://en.wikipedia.org/wiki/ABC_(programming_language)" title="ABC (programming language)">ABC (programming language)</a>.  For other uses, see <a href="http://en.wikipedia.org/wiki/B_(disambiguation)" title="B (disambiguation)">B (disambiguation)</a>.</div>
+<table class="infobox vevent" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption class="summary">B</caption>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_design.html" title="Software design">Designed by</a></th>
+<td><a href="Ken_Thompson_(computer_programmer).html" title="Ken Thompson (computer programmer)" class="mw-redirect">Ken Thompson</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_developer.html" title="Software developer">Developer</a></th>
+<td class="organiser"><a href="Ken_Thompson_(computer_programmer).html" title="Ken Thompson (computer programmer)" class="mw-redirect">Ken Thompson</a>, <a href="Dennis_Ritchie.html" title="Dennis Ritchie">Dennis Ritchie</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Appeared in</th>
+<td>abt 1969</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Type_system.html" title="Type system">Typing discipline</a></th>
+<td>typeless (everything is a <a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">word</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Influenced by</th>
+<td><a href="BCPL.html" title="BCPL">BCPL</a>, <a href="PL/I.html" title="PL/I">PL/I</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Influenced</th>
+<td><a href="C_(programming_language).html" title="C (programming language)">C</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Filename_extension.html" title="Filename extension">Filename extension(s)</a></th>
+<td>.b</td>
+</tr>
+</table>
+<p><b>B</b> is a programming language developed at <a href="Bell_Labs.html" title="Bell Labs">Bell Labs</a> circa 1969. It is the work of <a href="Ken_Thompson_(computer_programmer).html" title="Ken Thompson (computer programmer)" class="mw-redirect">Ken Thompson</a> with <a href="Dennis_Ritchie.html" title="Dennis Ritchie">Dennis Ritchie</a>. B first appeared circa 1969.</p>
+<p>B was derived from <a href="BCPL.html" title="BCPL">BCPL</a>, and its name may be a contraction of BCPL. It is possible that its name may be based on <a href="http://en.wikipedia.org/wiki/Bon_(programming_language)" title="Bon (programming language)">Bon</a>, an earlier but unrelated, and rather different, programming language that Thompson designed for use on <a href="Multics.html" title="Multics">Multics</a>.<sup id="cite_ref-chist_1-0" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>B was designed for recursive, non-numeric, machine independent applications, such as system and language software.<sup id="cite_ref-bur_2-0" class="reference"><a href="#cite_note-bur-2"><span>[</span>2<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Examples"><span class="tocnumber">2</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Initially Ken Thompson <sup id="cite_ref-chist_1-1" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup> and later Dennis Ritchie <sup id="cite_ref-bur_2-1" class="reference"><a href="#cite_note-bur-2"><span>[</span>2<span>]</span></a></sup> developed B basing it mainly on the <a href="BCPL.html" title="BCPL">BCPL</a> language Thompson used in the <a href="Multics.html" title="Multics">Multics</a> project. B was essentially the BCPL system stripped of any component Thompson felt he could do without in order to make it fit within the memory capacity of the minicomputers of the time. The BCPL to B transition also included changes made to suit Thompson's preferences (mostly along the lines of reducing the number of non-whitespace characters in a typical program).<sup id="cite_ref-chist_1-2" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup> Much of the typical algol-like syntax of BCPL was rather heavily changed in this process, such as the <tt>:=</tt> and <tt>=</tt> operators which were replaced with <tt>=</tt> for assignment and <tt>==</tt> for equality test. (The <tt>&amp;</tt> and <tt>|</tt> of BCPL was later changed to <tt>&amp;&amp;</tt> and <tt>||</tt> in the transition to what is now known as C.) <sup id="cite_ref-chist_1-3" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>Thomson invented arithmetic assignment operators for B, using x=+y to add y to x (nowadays the operator is spelled +=). B also introduced the increment and decrement operators (++ and --); Their prefix or postfix position determines whether the value is taken prior or post alteration of the operand. These innovations were not in the earliest versions of B. Some guess that they were created for the auto-increment and auto-decrement address modes of the DEC PDP-11. This is historically impossible as there was no PDP-11 at the time that B was developed.<sup id="cite_ref-chist_1-4" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>B is typeless, or more precisely has one data type: the computer word. Most operators (e.g., +, -, *, /) treated this as an integer, but others treated it as a memory address to be de<a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">referenced</a>. In many other ways it looked a lot like an early version of C. There are a few library functions, including some that vaguely resemble functions from the <a href="Stdio.html" title="Stdio.h" class="mw-redirect">standard I/O library</a> in C.<sup id="cite_ref-bur_2-2" class="reference"><a href="#cite_note-bur-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>Early implementations were for the <a href="Digital_Equipment_Corporation.html" title="Digital Equipment Corporation">DEC</a> <a href="PDP-7.html" title="PDP-7">PDP-7</a> and <a href="PDP-11.html" title="PDP-11">PDP-11</a> minicomputers using early <a href="Unix.html" title="Unix">Unix</a>, and <a href="http://en.wikipedia.org/wiki/Honeywell" title="Honeywell">Honeywell</a> <span class="nowrap"><a href="GE-600_series.html" title="GE-600 series">GE 645</a></span><sup id="cite_ref-bell-early_3-0" class="reference"><a href="#cite_note-bell-early-3"><span>[</span>3<span>]</span></a></sup> 36-bit mainframes running the operating system <a href="http://en.wikipedia.org/wiki/General_Comprehensive_Operating_System" title="General Comprehensive Operating System">GCOS</a>. The earliest PDP-7 implementations compiled to <a href="http://en.wikipedia.org/wiki/Threaded_code" title="Threaded code">threaded code</a>, and then Ritchie wrote a compiler using <a href="http://en.wikipedia.org/wiki/TMG_(language)" title="TMG (language)">TMG</a> which produced machine code.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> In 1970 a <a href="PDP-11.html" title="PDP-11">PDP-11</a> was acquired and threaded code was used for the port. An early version of <a href="http://en.wikipedia.org/wiki/Yacc" title="Yacc">yacc</a> was produced with this PDP-11 configuration. Ritchie took over maintenance during this period.<sup id="cite_ref-chist_1-5" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>The typeless nature of B made sense on the Honeywell, PDP-7 and many older computers, but was a problem on the PDP-11 because it was difficult to elegantly access the character data type that the PDP-11 and most modern computers fully support. Starting in 1971 Ritchie made changes to the language while converting its compiler to produce machine code, most notably adding data typing for variables. During 1971 and 1972 B evolved into "New B" (NB) and then C.<sup id="cite_ref-chist_1-6" class="reference"><a href="#cite_note-chist-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>B continues to see use (as of 2014) on GCOS mainframes,<sup id="cite_ref-uwtools_6-0" class="reference"><a href="#cite_note-uwtools-6"><span>[</span>6<span>]</span></a></sup> and on certain <a href="Embedded_systems.html" title="Embedded systems" class="mw-redirect">embedded systems</a> for a variety of reasons, including limited hardware in the small systems; extensive libraries, tools, licensing cost issues; and simply being good enough for the job on others.<sup id="cite_ref-plb_7-0" class="reference"><a href="#cite_note-plb-7"><span>[</span>7<span>]</span></a></sup> The highly influential <a href="http://en.wikipedia.org/wiki/AberMUD" title="AberMUD">AberMUD</a> was originally written in B.</p>
+<p>B is almost extinct, having been superseded by the <a href="C_(programming_language).html" title="C (programming language)">C language</a>.<sup id="cite_ref-plb_7-1" class="reference"><a href="#cite_note-plb-7"><span>[</span>7<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following example is from the <i>Users' Reference to B</i> by Ken Thompson:<sup id="cite_ref-bur_2-3" class="reference"><a href="#cite_note-bur-2"><span>[</span>2<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* The following function will print a non-negative number, n, to
+   the base b, where 2&lt;=b&lt;=10.  This routine uses the fact that
+   in the ASCII character set, the digits 0 to 9 have sequential
+   code values.  */</span>
+ 
+printn<span class="br0">(</span>n<span class="sy0">,</span>b<span class="br0">)</span> <span class="br0">{</span>
+        extrn <span class="kw3">putchar</span><span class="sy0">;</span>
+        <span class="kw4">auto</span> a<span class="sy0">;</span>
+ 
+        <span class="kw1">if</span><span class="br0">(</span>a<span class="sy0">=</span>n<span class="sy0">/</span>b<span class="br0">)</span> <span class="coMULTI">/* assignment, not test for equality */</span>
+                printn<span class="br0">(</span>a<span class="sy0">,</span> b<span class="br0">)</span><span class="sy0">;</span> <span class="coMULTI">/* recursive */</span>
+        <span class="kw3">putchar</span><span class="br0">(</span>n<span class="sy0">%</span>b <span class="sy0">+</span> <span class="st0">'0'</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks noprint navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li style="display:inline;white-space:nowrap;"><span style="margin:auto 0.5em;"><a href="http://en.wikipedia.org/wiki/File:8bit-dynamiclist.gif" class="image"><img alt="8bit-dynamiclist.gif" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/8bit-dynamiclist.gif/21px-8bit-dynamiclist.gif" width="21" height="21" srcset="//upload.wikimedia.org/wikipedia/commons/1/1d/8bit-dynamiclist.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/1/1d/8bit-dynamiclist.gif 2x" /></a></span><span style="font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></span></li>
+<li style="display:inline;white-space:nowrap;"><span style="margin:auto 0.5em;"><a href="http://en.wikipedia.org/wiki/File:Computer-aj_aj_ashton_01.svg" class="image"><img alt="Computer-aj aj ashton 01.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/21px-Computer-aj_aj_ashton_01.svg.png" width="21" height="21" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/32px-Computer-aj_aj_ashton_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/42px-Computer-aj_aj_ashton_01.svg.png 2x" /></a></span><span style="font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Information_technology" title="Portal:Information technology">Information technology portal</a></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-chist-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-chist_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-chist_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-chist_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-chist_1-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-chist_1-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-chist_1-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-chist_1-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text"><span class="citation journal"><a href="Dennis_Ritchie.html" title="Dennis Ritchie">Ritchie, Dennis M.</a> (March 1993). <a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/chist.html">"The Development of the C Language"</a>. <i>ACM SIGPLAN Notices</i> <b>28</b> (3): 201–208. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F155360.155580">10.1145/155360.155580</a>. "Its name most probably represents a contraction of BCPL, though an alternate theory holds that it derives from Bon [Thompson 69], an unrelated language created by Thompson during the Multics days. Bon in turn was named either after his wife Bonnie, or (according to an encyclopedia quotation in its manual), after a religion whose rituals involve the murmuring of magic formulas."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.atitle=The+Development+of+the+C+Language&amp;rft.aufirst=Dennis+M.&amp;rft.aulast=Ritchie&amp;rft.au=Ritchie%2C+Dennis+M.&amp;rft.date=March+1993&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fcm.bell-labs.com%2Fcm%2Fcs%2Fwho%2Fdmr%2Fchist.html&amp;rft_id=info%3Adoi%2F10.1145%2F155360.155580&amp;rft.issue=3&amp;rft.jtitle=ACM+SIGPLAN+Notices&amp;rft.pages=201%26ndash%3B208&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=28" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-bur-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-bur_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bur_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-bur_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-bur_2-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a href="Ken_Thompson_(computer_programmer).html" title="Ken Thompson (computer programmer)" class="mw-redirect">Thompson, Ken</a> (7 Jan 1972). <a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/kbman.html">"Users' Reference to B"</a>. Bell Laboratories<span class="reference-accessdate">. Retrieved 21 Mar 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.aufirst=Ken&amp;rft.aulast=Thompson&amp;rft.au=Thompson%2C+Ken&amp;rft.btitle=Users%27+Reference+to+B&amp;rft.date=7+Jan+1972&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcm.bell-labs.com%2Fcm%2Fcs%2Fwho%2Fdmr%2Fkbman.html&amp;rft.pub=Bell+Laboratories&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-bell-early-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-bell-early_3-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/hist.html">bell-labs.com - Early Unix history and evolution</a>, 2004-04-09</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.multicians.org/tmg.html">"TMG"</a>. multicians.org.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.btitle=TMG&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.multicians.org%2Ftmg.html&amp;rft.pub=multicians.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a href="Dennis_Ritchie.html" title="Dennis Ritchie">Ritchie, Dennis M.</a>. <a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/chist.html">"The Development of the C Language"</a>. Bell Labs/Lucent Technologies.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.aufirst=Dennis+M.&amp;rft.aulast=Ritchie&amp;rft.au=Ritchie%2C+Dennis+M.&amp;rft.btitle=The+Development+of+the+C+Language&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcm.bell-labs.com%2Fcm%2Fcs%2Fwho%2Fdmr%2Fchist.html&amp;rft.pub=Bell+Labs%2FLucent+Technologies&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-uwtools-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-uwtools_6-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.thinkage.ca/english/gcos/product-uwtools.shtml">"Thinkage UW Tools Package"</a>. Thinkage, Ltd<span class="reference-accessdate">. Retrieved 26 Mar 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.btitle=Thinkage+UW+Tools+Package&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.thinkage.ca%2Fenglish%2Fgcos%2Fproduct-uwtools.shtml&amp;rft.pub=Thinkage%2C+Ltd.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-plb-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-plb_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-plb_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a href="Stephen_C.html" title="Stephen C. Johnson">Johnson and Kernighan</a>. <a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/bintro.html">"THE PROGRAMMING LANGUAGE B"</a>. Bell Laboratories<span class="reference-accessdate">. Retrieved 21 Mar 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AB+%28programming+language%29&amp;rft.au=Johnson+and+Kernighan&amp;rft.aulast=Johnson+and+Kernighan&amp;rft.btitle=THE+PROGRAMMING+LANGUAGE+B&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcm.bell-labs.com%2Fcm%2Fcs%2Fwho%2Fdmr%2Fbintro.html&amp;rft.pub=Bell+Laboratories&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><i><a rel="nofollow" class="external text" href="http://man.cat-v.org/unix-1st/1/b">Manual page for b(1) from Unix First Edition</a></i></li>
+<li><i><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/chist.html">The Development of the C Language</a></i>, <a href="Dennis_Ritchie.html" title="Dennis Ritchie">Dennis M. Ritchie</a>. Puts B in the context of <a href="BCPL.html" title="BCPL">BCPL</a> and <a href="C_(programming_language).html" title="C (programming language)">C</a>.</li>
+<li><i><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/kbman.html">Users' Reference to B</a></i>, Ken Thompson. Describes the <a href="PDP-11.html" title="PDP-11">PDP-11</a> version.</li>
+<li><i><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/bintro.html">The Programming Language B</a></i>, S. C. Johnson &amp; B. W. Kernighan, Technical Report CS TR 8, <a href="Bell_Labs.html" title="Bell Labs">Bell Labs</a> (January 1973). The <a href="http://en.wikipedia.org/wiki/General_Comprehensive_Operating_System" title="General Comprehensive Operating System">GCOS</a> version on <a href="http://en.wikipedia.org/wiki/Honeywell" title="Honeywell">Honeywell</a> equipment.</li>
+<li><i><a rel="nofollow" class="external text" href="http://www.thinkage.ca/english/gcos/expl/b/index.html">B Language Reference Manual</a></i>, Thinkage Ltd. The production version of the language as used on GCOS, including language and runtime library.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Ken_Thompson_navbox" title="Template:Ken Thompson navbox"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Ken_Thompson_navbox" title="Template talk:Ken Thompson navbox"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Ken_Thompson_navbox&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Ken_Thompson.html" title="Ken Thompson">Ken Thompson</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Operating systems</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Unix.html" title="Unix">Unix</a></li>
+<li><a href="Plan_9_from_Bell_Labs.html" title="Plan 9 from Bell Labs">Plan 9 from Bell Labs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Programming languages</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">B</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Bon_(programming_language)" title="Bon (programming language)">Bon</a></li>
+<li><a href="Go_(programming_language).html" title="Go (programming language)">Go</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Belle_(chess_machine)" title="Belle (chess machine)">Belle</a></li>
+<li><a href="Ed_(text_editor).html" title="Ed (text editor)">ed</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sam_(text_editor)" title="Sam (text editor)">sam</a></li>
+<li><i><a href="http://en.wikipedia.org/wiki/Space_Travel_(video_game)" title="Space Travel (video game)">Space Travel</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/UTF-8" title="UTF-8">UTF-8</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Programming_languages" title="Template:Programming languages"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Programming_languages" title="Template talk:Programming languages"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Programming_languages&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Programming_language.html" title="Programming language">Programming languages</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="Timeline_of_programming_languages.html" title="Timeline of programming languages">Timeline</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Assembly_language.html" title="Assembly language">Assembly</a></li>
+<li><a href="BASIC.html" title="BASIC">BASIC</a></li>
+<li><a href="C_(programming_language).html" title="C (programming language)">C</a></li>
+<li><a href="C%2b%2b.html" title="C++">C++</a></li>
+<li><a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a></li>
+<li><a href="COBOL.html" title="COBOL">COBOL</a></li>
+<li><a href="Fortran-2.html" title="Fortran">Fortran</a></li>
+<li><a href="Java_(programming_language).html" title="Java (programming language)">Java</a></li>
+<li><a href="JavaScript.html" title="JavaScript">JavaScript</a> (JS)</li>
+<li><a href="Lisp_(programming_language).html" title="Lisp (programming language)">Lisp</a></li>
+<li><a href="Pascal_(programming_language).html" title="Pascal (programming language)">Pascal</a></li>
+<li><a href="Perl.html" title="Perl">Perl</a></li>
+<li><a href="PHP.html" title="PHP">PHP</a></li>
+<li><a href="Python_(programming_language).html" title="Python (programming language)">Python</a></li>
+<li><a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a></li>
+<li><a href="Smalltalk.html" title="Smalltalk">Smalltalk</a></li>
+<li><a href="Visual_Basic_.html" title="Visual Basic .NET">Visual Basic .NET</a> (VB.NET)</li>
+<li><i><a href="http://en.wikipedia.org/wiki/List_of_programming_languages" title="List of programming languages">more...</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Category:Programming_languages" title="Category:Programming languages">Category</a></b></li>
+<li><img alt="Non-article page" src="http://upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/16px-Symbol_neutral_vote.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/24px-Symbol_neutral_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/89/Symbol_neutral_vote.svg/32px-Symbol_neutral_vote.svg.png 2x" /> <b><a href="Comparison_of_programming_languages.html" title="Comparison of programming languages">Comparison</a></b></li>
+<li><img alt="List-Class article" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/24px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/32px-Symbol_list_class.svg.png 2x" /> <b>Lists</b>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_programming_languages" title="List of programming languages">Alphabetical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Categorical_list_of_programming_languages" title="Categorical list of programming languages" class="mw-redirect">Categorical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Generational_list_of_programming_languages" title="Generational list of programming languages">Generational</a></li>
+<li><a href="Non-English-based_programming_languages.html" title="Non-English-based programming languages">Non-English-based</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1219
+CPU time usage: 0.548 seconds
+Real time usage: 0.612 seconds
+Preprocessor visited node count: 1162/1000000
+Preprocessor generated node count: 5703/1500000
+Post‐expand include size: 29929/2048000 bytes
+Template argument size: 937/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 6/500
+Lua time usage: 0.077/10.000 seconds
+Lua memory usage: 2.39 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4475-0!*!0!!en!4!* and timestamp 20140327000014
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;oldid=601384695">http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;oldid=601384695</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Procedural_programming_languages" title="Category:Procedural programming languages">Procedural programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Programming_languages_created_in_1969" title="Category:Programming languages created in 1969">Programming languages created in 1969</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=B+%28programming+language%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=B+%28programming+language%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="B_(programming_language).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:B_(programming_language)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="B_(programming_language).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/B_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/B_(programming_language)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;oldid=601384695" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q797302" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=B_%28programming_language%29&amp;id=601384695" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=B+%28programming+language%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=B+%28programming+language%29&amp;oldid=601384695&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=B_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/بي_(لغة_برمجة)" title="بي (لغة برمجة) – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Llenguatge_B" title="Llenguatge B – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/B_(programovací_jazyk)" title="B (programovací jazyk) – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/B_(Programmiersprache)" title="B (Programmiersprache) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/B_(lenguaje_de_programación)" title="B (lenguaje de programación) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/بی_(زبان_برنامه‌نویسی)" title="بی (زبان برنامه‌نویسی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/B_(langage)" title="B (langage) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Linguaxe_de_programación_B" title="Linguaxe de programación B – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/B_(프로그래밍_언어)" title="B (프로그래밍 언어) – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hy"><a href="http://hy.wikipedia.org/wiki/B_(ծրագրավորման_լեզու)" title="B (ծրագրավորման լեզու) – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/B_(bahasa_pemrograman)" title="B (bahasa pemrograman) – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/B_(linguaggio)" title="B (linguaggio) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/B_(שפת_תכנות)" title="B (שפת תכנות) – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Bahasa_pengaturcaraan_B" title="Bahasa pengaturcaraan B – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/B_(programmeertaal)" title="B (programmeertaal) – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/B言語" title="B言語 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/B_(programmeringsspråk)" title="B (programmeringsspråk) – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/B_(język_programowania)" title="B (język programowania) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/B_(linguagem_de_programação)" title="B (linguagem de programação) – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Би_(язык_программирования)" title="Би (язык программирования) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Programski_jezik_B" title="Programski jezik B – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/B_(programspråk)" title="B (programspråk) – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/பி_(நிரலாக்க_மொழி)" title="பி (நிரலாக்க மொழி) – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/B_(programlama_dili)" title="B (programlama dili) – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/B語言" title="B語言 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q797302#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 March 2014 at 17:54.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/B_(programming_language)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1101 in 0.447 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/B_language by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:15 GMT -->
+</html>

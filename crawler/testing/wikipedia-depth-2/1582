@@ -1,0 +1,484 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Theory_of_computation.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Theory_of_computation by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Theory of computation - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Theory_of_computation" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Theory_of_computation.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Theory_of_computation","wgTitle":"Theory of computation","wgCurRevisionId":593150597,"wgRevisionId":593150597,"wgArticleId":30402,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from September 2007","All articles needing additional references","Articles using fixed number of columns in reflist","Theory of computation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Theory_of_computation","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en-gb","en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q844718"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Theory_of_computation skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Theory of computation</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(September 2007)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="http://en.wikipedia.org/wiki/Theoretical_computer_science" title="Theoretical computer science">theoretical computer science</a> and <a href="http://en.wikipedia.org/wiki/Mathematics" title="Mathematics">mathematics</a>, the <b>theory of computation</b> is the branch that deals with how efficiently problems can be solved on a <a href="http://en.wikipedia.org/wiki/Model_of_computation" title="Model of computation">model of computation</a>, using an <a href="Algorithm.html" title="Algorithm">algorithm</a>. The field is divided into three major branches: <a href="Automata_theory.html" title="Automata theory">automata theory</a>, <a href="Computability_theory.html" title="Computability theory">computability theory</a>, and <a href="Computational_complexity_theory.html" title="Computational complexity theory">computational complexity theory</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>In order to perform a rigorous study of computation, computer scientists work with a mathematical abstraction of computers called a model of computation. There are several models in use, but the most commonly examined is the <a href="Turing_machine.html" title="Turing machine">Turing machine</a>. Computer scientists study the Turing machine because it is simple to formulate, can be analyzed and used to prove results, and because it represents what many consider the most powerful possible "reasonable" model of computation (see <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">Church–Turing thesis</a>). It might seem that the potentially infinite memory capacity is an unrealizable attribute, but any <a href="http://en.wikipedia.org/wiki/Decidability_(logic)" title="Decidability (logic)">decidable</a> problem solved by a Turing machine will always require only a finite amount of memory. So in principle, any problem that can be solved (decided) by a Turing machine can be solved by a computer that has a bounded amount of memory.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:502px;"><a href="http://en.wikipedia.org/wiki/File:Theoretical_computer_science.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/64/Theoretical_computer_science.svg/500px-Theoretical_computer_science.svg.png" width="500" height="208" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/6/64/Theoretical_computer_science.svg/750px-Theoretical_computer_science.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/6/64/Theoretical_computer_science.svg/1000px-Theoretical_computer_science.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Theoretical_computer_science.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Relationship between <a href="Computability_theory.html" title="Computability theory">computability theory</a>, complexity theory and <a href="http://en.wikipedia.org/wiki/Formal_language_theory" title="Formal language theory" class="mw-redirect">formal language theory</a>.</div>
+</div>
+</div>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Branches"><span class="tocnumber">2</span> <span class="toctext">Branches</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Automata_theory"><span class="tocnumber">2.1</span> <span class="toctext">Automata theory</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Computability_theory"><span class="tocnumber">2.2</span> <span class="toctext">Computability theory</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Computational_complexity_theory"><span class="tocnumber">2.3</span> <span class="toctext">Computational complexity theory</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Models_of_computation"><span class="tocnumber">3</span> <span class="toctext">Models of computation</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/History_of_theory_of_computation" title="History of theory of computation" class="mw-redirect">History of theory of computation</a></div>
+<p>The theory of computation can be considered the creation of models of all kinds in the field of computer science. Therefore, mathematics and logic are used. In the last century it became an independent academic discipline and was separated from mathematics.</p>
+<p>Some pioneers of the theory of computation were <a href="http://en.wikipedia.org/wiki/Alonzo_Church" title="Alonzo Church">Alonzo Church</a>, <a href="Kurt_G%c3%b6del.html" title="Kurt Gödel">Kurt Gödel</a>, <a href="Alan_Turing.html" title="Alan Turing">Alan Turing</a>, <a href="http://en.wikipedia.org/wiki/Stephen_Kleene" title="Stephen Kleene" class="mw-redirect">Stephen Kleene</a>, <a href="http://en.wikipedia.org/wiki/John_von_Neumann" title="John von Neumann">John von Neumann</a> and <a href="Claude_Shannon.html" title="Claude Shannon">Claude Shannon</a>.</p>
+<h2><span class="mw-headline" id="Branches">Branches</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=2" title="Edit section: Branches">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Automata_theory">Automata theory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=3" title="Edit section: Automata theory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Automata_theory.html" title="Automata theory">Automata theory</a></div>
+<p>Automata theory is the study of abstract machines (or more appropriately, abstract 'mathematical' machines or systems) and the computational problems that can be solved using these machines. These abstract machines are called automata. Automata comes from the Greek word (Αυτόματα) which means that something is doing something by itself. Automata theory is also closely related to formal language theory, as the automata are often classified by the class of formal languages they are able to recognize. An automaton can be a finite representation of a formal language that may be an infinite set.</p>
+<h3><span class="mw-headline" id="Computability_theory">Computability theory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=4" title="Edit section: Computability theory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Computability_theory.html" title="Computability theory">Computability theory</a></div>
+<p>Computability theory deals primarily with the question of the extent to which a problem is solvable on a computer. The statement that the <a href="http://en.wikipedia.org/wiki/Halting_problem" title="Halting problem">halting problem</a> cannot be solved by a Turing machine is one of the most important results in computability theory, as it is an example of a concrete problem that is both easy to formulate and impossible to solve using a Turing machine. Much of computability theory builds on the halting problem result.</p>
+<p>Another important step in computability theory was <a href="http://en.wikipedia.org/wiki/Rice%27s_theorem" title="Rice's theorem">Rice's theorem</a>, which states that for all non-trivial properties of partial functions, it is undecidable whether a Turing machine computes a partial function with that property.</p>
+<p>Computability theory is closely related to the branch of <a href="http://en.wikipedia.org/wiki/Mathematical_logic" title="Mathematical logic">mathematical logic</a> called <a href="http://en.wikipedia.org/wiki/Recursion_theory" title="Recursion theory" class="mw-redirect">recursion theory</a>, which removes the restriction of studying only models of computation which are reducible to the Turing model. Many mathematicians and computational theorists who study recursion theory will refer to it as computability theory.</p>
+<h3><span class="mw-headline" id="Computational_complexity_theory">Computational complexity theory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=5" title="Edit section: Computational complexity theory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Computational_complexity_theory.html" title="Computational complexity theory">Computational complexity theory</a></div>
+<p><a href="Computational_complexity_theory.html" title="Computational complexity theory">Complexity theory</a> considers not only whether a problem can be solved at all on a computer, but also how efficiently the problem can be solved. Two major aspects are considered: time complexity and space complexity, which are respectively how many steps does it take to perform a computation, and how much memory is required to perform that computation.</p>
+<p>In order to analyze how much time and space a given <a href="Algorithm.html" title="Algorithm">algorithm</a> requires, computer scientists express the time or space required to solve the problem as a function of the size of the input problem. For example, finding a particular number in a long list of numbers becomes harder as the list of numbers grows larger. If we say there are <i>n</i> numbers in the list, then if the list is not sorted or indexed in any way we may have to look at every number in order to find the number we're seeking. We thus say that in order to solve this problem, the computer needs to perform a number of steps that grows linearly in the size of the problem.</p>
+<p>To simplify this problem, computer scientists have adopted <a href="Big_O_notation.html" title="Big O notation">Big O notation</a>, which allows functions to be compared in a way that ensures that particular aspects of a machine's construction do not need to be considered, but rather only the asymptotic behavior as problems become large. So in our previous example we might say that the problem requires <img class="tex" alt="O(n)" src="http://upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" /> steps to solve.</p>
+<p>Perhaps the most important open problem in all of computer science is the question of whether a certain broad class of problems denoted <a href="http://en.wikipedia.org/wiki/NP_(complexity)" title="NP (complexity)">NP</a> can be solved efficiently. This is discussed further at <a href="P_%3d_NP_problem.html" title="P = NP problem" class="mw-redirect">Complexity classes P and NP</a>.</p>
+<h2><span class="mw-headline" id="Models_of_computation">Models of computation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=6" title="Edit section: Models of computation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Model_of_computation" title="Model of computation">Model of computation</a></div>
+<p>Aside from a <a href="Turing_machine.html" title="Turing machine">Turing machine</a>, other equivalent (See: <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">Church–Turing thesis</a>) models of computation are in use.</p>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">Lambda calculus</a></dt>
+<dd>A computation consists of an initial lambda expression (or two if you want to separate the function and its input) plus a finite sequence of lambda terms, each deduced from the preceding term by one application of <a href="http://en.wikipedia.org/wiki/Beta_reduction" title="Beta reduction" class="mw-redirect">Beta reduction</a>.</dd>
+<dt><a href="http://en.wikipedia.org/wiki/Combinatory_logic" title="Combinatory logic">Combinatory logic</a></dt>
+<dd>is a concept which has many similarities to <img class="tex" alt="\lambda" src="http://upload.wikimedia.org/math/e/0/5/e05a30d96800384dd38b22851322a6b5.png" />-calculus, but also important differences exist (e.g. fixed point combinator <b>Y</b> has normal form in combinatory logic but not in <img class="tex" alt="\lambda" src="http://upload.wikimedia.org/math/e/0/5/e05a30d96800384dd38b22851322a6b5.png" />-calculus). Combinatory logic was developed with great ambitions: understanding the nature of paradoxes, making foundations of mathematics more economic (conceptually), eliminating the notion of variables (thus clarifying their role in mathematics).</dd>
+</dl>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/Mu-recursive_function" title="Mu-recursive function" class="mw-redirect">mu-recursive functions</a></dt>
+<dd>a computation consists of a mu-recursive function, <i>i.e.</i> its defining sequence, any input value(s) and a sequence of recursive functions appearing in the defining sequence with inputs and outputs. Thus, if in the defining sequence of a recursive function <img class="tex" alt="f(x)" src="http://upload.wikimedia.org/math/5/0/b/50bbd36e1fd2333108437a2ca378be62.png" /> the functions <img class="tex" alt="g(x)" src="http://upload.wikimedia.org/math/e/8/4/e84fec1e074026d6fa8e3155482c35c3.png" /> and <img class="tex" alt="h(x,y)" src="http://upload.wikimedia.org/math/b/f/1/bf1c4d6fd7b356ff9f844ff4275f6691.png" /> appear, then terms of the form 'g(5)=7' or 'h(3,2)=10' might appear. Each entry in this sequence needs to be an application of a basic function or follow from the entries above by using <a href="http://en.wikipedia.org/wiki/Function_composition_(computer_science)" title="Function composition (computer science)">composition</a>, <a href="http://en.wikipedia.org/wiki/Primitive_recursion" title="Primitive recursion" class="mw-redirect">primitive recursion</a> or <a href="http://en.wikipedia.org/wiki/Mu-recursive_function" title="Mu-recursive function" class="mw-redirect">mu recursion</a>. For instance if <img class="tex" alt="f(x)=h(x,g(x))" src="http://upload.wikimedia.org/math/a/3/3/a333abbe7d8309724986d279bb886fb0.png" />, then for 'f(5)=3' to appear, terms like 'g(5)=6' and 'h(5,6)=3' must occur above. The computation terminates only if the final term gives the value of the recursive function applied to the inputs.</dd>
+</dl>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/Markov_algorithm" title="Markov algorithm">Markov algorithm</a></dt>
+<dd>a <a href="http://en.wikipedia.org/wiki/String_rewriting_system" title="String rewriting system" class="mw-redirect">string rewriting system</a> that uses <a href="http://en.wikipedia.org/wiki/Grammar" title="Grammar">grammar</a>-like rules to operate on <a href="http://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a> of symbols.</dd>
+</dl>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/Register_machine" title="Register machine">Register machine</a></dt>
+<dd>is a theoretically interesting idealization of a computer. There are several variants. In most of them, each register can hold a natural number (of unlimited size), and the instructions are simple (and few in number), e.g. only decrementation (combined with conditional jump) and incrementation exist (and halting). The lack of the infinite (or dynamically growing) external store (seen at Turing machines) can be understood by replacing its role with <a href="http://en.wikipedia.org/wiki/Gödel_numbering" title="Gödel numbering">Gödel numbering</a> techniques: the fact that each register holds a natural number allows the possibility of representing a complicated thing (e.g. a sequence, or a matrix etc.) by an appropriate huge natural number — unambiguity of both representation and interpretation can be established by <a href="Number_theory.html" title="Number theory">number theoretical</a> foundations of these techniques.</dd>
+</dl>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/P′′" title="P′′">P′′</a></dt>
+<dd>Like Turing machines, P′′ uses an infinite tape of symbols (without random access), and a rather minimalistic set of instructions. But these instructions are very different, thus, unlike Turing machines, P′′ does not need to maintain a distinct state, because all “memory-like” functionality can be provided only by the tape. Instead of rewriting the current symbol, it can perform a <a href="http://en.wikipedia.org/wiki/Modular_arithmetic" title="Modular arithmetic">modular arithmetic</a> incrementation on it. P′′ has also a pair of instructions for a cycle, inspecting the blank symbol. Despite its minimalistic nature, it has become the parental formal language of an implemented and (for entertainment) used programming language called <a href="http://en.wikipedia.org/wiki/Brainfuck" title="Brainfuck">Brainfuck</a>.</dd>
+</dl>
+<p>In addition to the general computational models, some simpler computational models are useful for special, restricted applications. <a href="Regular_expressions.html" title="Regular expressions" class="mw-redirect">Regular expressions</a>, for example, specify string patterns in many contexts, from office productivity software to <a href="Programming_language.html" title="Programming language">programming languages</a>. Another formalism mathematically equivalent to regular expressions, <a href="http://en.wikipedia.org/wiki/Finite_state_machines" title="Finite state machines" class="mw-redirect">Finite automata</a> are used in circuit design and in some kinds of problem-solving. <a href="http://en.wikipedia.org/wiki/Context-free_grammar" title="Context-free grammar">Context-free grammars</a> specify programming language syntax. Non-deterministic <a href="http://en.wikipedia.org/wiki/Pushdown_automaton" title="Pushdown automaton">pushdown automata</a> are another formalism equivalent to context-free grammars. <a href="http://en.wikipedia.org/wiki/Primitive_recursive_function" title="Primitive recursive function">Primitive recursive functions</a> are a defined subclass of the recursive functions.</p>
+<p>Different models of computation have the ability to do different tasks. One way to measure the power of a computational model is to study the class of <a href="Formal_language.html" title="Formal language">formal languages</a> that the model can generate; in such a way to the <a href="http://en.wikipedia.org/wiki/Chomsky_hierarchy" title="Chomsky hierarchy">Chomsky hierarchy</a> of languages is obtained.</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Sipser</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=8" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl>
+<dt>Textbooks aimed at computer scientists</dt>
+</dl>
+<p>(There are many textbooks in this area; this list is by necessity incomplete.)</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/John_Hopcroft" title="John Hopcroft">Hopcroft, John E.</a>, and <a href="http://en.wikipedia.org/wiki/Jeffrey_D._Ullman" title="Jeffrey D. Ullman" class="mw-redirect">Jeffrey D. Ullman</a> (2006). <i><a href="http://en.wikipedia.org/wiki/Introduction_to_Automata_Theory,_Languages,_and_Computation" title="Introduction to Automata Theory, Languages, and Computation">Introduction to Automata Theory, Languages, and Computation</a>. 3rd ed</i> Reading, MA: Addison-Wesley. <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780321455369" class="internal mw-magiclink-isbn">ISBN 978-0-321-45536-9</a> One of the standard references in the field.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Michael_Sipser" title="Michael Sipser">Michael Sipser</a> (2006). <i>Introduction to the Theory of Computation 2ed</i>. PWS Publishing. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-534-95097-3" title="Special:BookSources/0-534-95097-3">0-534-95097-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATheory+of+computation&amp;rft.aulast=Michael+Sipser&amp;rft.au=Michael+Sipser&amp;rft.btitle=Introduction+to+the+Theory+of+Computation+2ed&amp;rft.date=2006&amp;rft.genre=book&amp;rft.isbn=0-534-95097-3&amp;rft.pub=PWS+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/w/index.php?title=Eitan_Gurari&amp;action=edit&amp;redlink=1" class="new" title="Eitan Gurari (page does not exist)">Eitan Gurari</a> (1989). <a rel="nofollow" class="external text" href="http://www.cse.ohio-state.edu/~gurari/theory-bk/theory-bk.html"><i>An Introduction to the Theory of Computation</i></a>. Computer Science Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7167-8182-4" title="Special:BookSources/0-7167-8182-4">0-7167-8182-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATheory+of+computation&amp;rft.au=Eitan+Gurari&amp;rft.aulast=Eitan+Gurari&amp;rft.btitle=An+Introduction+to+the+Theory+of+Computation&amp;rft.date=1989&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cse.ohio-state.edu%2F~gurari%2Ftheory-bk%2Ftheory-bk.html&amp;rft.isbn=0-7167-8182-4&amp;rft.pub=Computer+Science+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li>Hein, James L. (1996) <i>Theory of Computation.</i> Sudbury, MA: Jones &amp; Bartlett. <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780867204971" class="internal mw-magiclink-isbn">ISBN 978-0-86720-497-1</a> A gentle introduction to the field, appropriate for second-year undergraduate computer science students.</li>
+<li>Taylor, R. Gregory (1998). <i>Models of Computation and Formal Languages.</i> New York: Oxford University Press. <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780195109832" class="internal mw-magiclink-isbn">ISBN 978-0-19-510983-2</a> An unusually readable textbook, appropriate for upper-level undergraduates or beginning graduate students.</li>
+<li>Lewis, F. D. (2007). <i>Essentials of theoretical computer science</i> A textbook covering the topics of formal languages, automata and grammars. The emphasis appears to be on presenting an overview of the results and their applications rather than providing proofs of the results.</li>
+<li><a href="http://en.wikipedia.org/wiki/Martin_Davis" title="Martin Davis">Martin Davis</a>, Ron Sigal, Elaine J. Weyuker, <i>Computability, complexity, and languages: fundamentals of theoretical computer science</i>, 2nd ed., Academic Press, 1994, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0122063821" class="internal mw-magiclink-isbn">ISBN 0-12-206382-1</a>. Covers a wider range of topics than most other introductory books, including <a href="Program_semantics.html" title="Program semantics" class="mw-redirect">program semantics</a> and <a href="http://en.wikipedia.org/wiki/Quantification_theory" title="Quantification theory" class="mw-redirect">quantification theory</a>. Aimed at graduate students.</li>
+</ul>
+<dl>
+<dt>Books on computability theory from the (wider) mathematical perspective</dt>
+</dl>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hartley_Rogers,_Jr" title="Hartley Rogers, Jr" class="mw-redirect">Hartley Rogers, Jr</a> (1987). <i>Theory of Recursive Functions and Effective Computability</i>, MIT Press. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0262680521" class="internal mw-magiclink-isbn">ISBN 0-262-68052-1</a></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/S._Barry_Cooper" title="S. Barry Cooper">S. Barry Cooper</a> (2004). <i>Computability Theory</i>. Chapman and Hall/CRC. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1-58488-237-9" title="Special:BookSources/1-58488-237-9">1-58488-237-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATheory+of+computation&amp;rft.aulast=S.+Barry+Cooper&amp;rft.au=S.+Barry+Cooper&amp;rft.btitle=Computability+Theory&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=1-58488-237-9&amp;rft.pub=Chapman+and+Hall%2FCRC&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</li>
+<li>Carl H. Smith, <i>A recursive introduction to the theory of computation</i>, Springer, 1994, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0387943323" class="internal mw-magiclink-isbn">ISBN 0-387-94332-3</a>. A shorter textbook suitable for graduate students in Computer Science.</li>
+</ul>
+<dl>
+<dt>Historical perspective</dt>
+</dl>
+<ul>
+<li><span class="citation book"><a href="http://en.wikipedia.org/w/index.php?title=Richard_L._Epstein&amp;action=edit&amp;redlink=1" class="new" title="Richard L. Epstein (page does not exist)">Richard L. Epstein</a> and <a href="http://en.wikipedia.org/w/index.php?title=Walter_A._Carnielli&amp;action=edit&amp;redlink=1" class="new" title="Walter A. Carnielli (page does not exist)">Walter A. Carnielli</a> (2000). <i>Computability: Computable Functions, Logic, and the Foundations of Mathematics, with Computability: A Timeline (2nd ed.)</i>. Wadsworth/Thomson Learning. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-534-54644-7" title="Special:BookSources/0-534-54644-7">0-534-54644-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATheory+of+computation&amp;rft.aulast=Richard+L.+Epstein+and+Walter+A.+Carnielli&amp;rft.au=Richard+L.+Epstein+and+Walter+A.+Carnielli&amp;rft.btitle=Computability%3A+Computable+Functions%2C+Logic%2C+and+the+Foundations+of+Mathematics%2C+with+Computability%3A+A+Timeline+%282nd+ed.%29&amp;rft.date=2000&amp;rft.genre=book&amp;rft.isbn=0-534-54644-7&amp;rft.pub=Wadsworth%2FThomson+Learning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://toc.csail.mit.edu/">Theory of Computation</a> at <a href="http://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">MIT</a></li>
+<li><a rel="nofollow" class="external text" href="http://toc.seas.harvard.edu/">Theory of Computation</a> at <a href="http://en.wikipedia.org/wiki/Harvard" title="Harvard" class="mw-redirect">Harvard</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cis.upenn.edu/~giorgi/cl.html">Computability Logic</a> - A theory of interactive computation. The main web source on this subject.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Mathematics-footer" title="Template:Mathematics-footer"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Mathematics-footer" title="Template talk:Mathematics-footer"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Mathematics-footer&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Areas_of_mathematics" title="Areas of mathematics">Areas of mathematics</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Areas</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Arithmetic.html" title="Arithmetic">Arithmetic</a></li>
+<li><a href="Algebra.html" title="Algebra">Algebra</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Elementary_algebra" title="Elementary algebra">elementary</a></li>
+<li><a href="Linear_algebra.html" title="Linear algebra">linear</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multilinear_algebra" title="Multilinear algebra">multilinear</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Abstract_algebra" title="Abstract algebra">abstract</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Geometry" title="Geometry">Geometry</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Discrete_geometry" title="Discrete geometry">discrete</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Algebraic_geometry" title="Algebraic geometry">algebraic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Differential_geometry" title="Differential geometry">differential</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finite_geometry" title="Finite geometry">finite</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Trigonometry" title="Trigonometry">Trigonometry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Calculus" title="Calculus">Calculus</a>/<a href="http://en.wikipedia.org/wiki/Mathematical_analysis" title="Mathematical analysis">Analysis</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Functional_analysis" title="Functional analysis">Functional analysis</a></li>
+<li><a href="Set_theory.html" title="Set theory">Set theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mathematical_logic" title="Mathematical logic">Logic</a></li>
+<li><a href="Category_theory.html" title="Category theory">Category theory</a></li>
+<li><a href="Number_theory.html" title="Number theory">Number theory</a></li>
+<li><a href="Combinatorics.html" title="Combinatorics">Combinatorics</a></li>
+<li><a href="Graph_theory.html" title="Graph theory">Graph theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Topology" title="Topology">Topology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lie_theory" title="Lie theory">Lie theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Differential_equation" title="Differential equation">Differential equations</a>/<a href="http://en.wikipedia.org/wiki/Dynamical_systems_theory" title="Dynamical systems theory">Dynamical systems</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mathematical_physics" title="Mathematical physics">Mathematical physics</a></li>
+<li><a href="Numerical_analysis.html" title="Numerical analysis">Numerical analysis</a></li>
+<li><strong class="selflink">Computation</strong></li>
+<li><a href="Information_theory.html" title="Information theory">Information theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Probability_theory" title="Probability theory">Probability</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mathematical_statistics" title="Mathematical statistics">Mathematical statistics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mathematical_optimization" title="Mathematical optimization">Mathematical optimization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Control_theory" title="Control theory">Control theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Game_theory" title="Game theory">Game theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Representation_theory" title="Representation theory">Representation theory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Divisions</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Pure_mathematics" title="Pure mathematics">Pure mathematics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Applied_mathematics" title="Applied mathematics">Applied mathematics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Discrete_mathematics" title="Discrete mathematics">Discrete mathematics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computational_mathematics" title="Computational mathematics">Computational mathematics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="2">
+<div>
+<ul>
+<li><b><a href="http://en.wikipedia.org/wiki/Category:Fields_of_mathematics" title="Category:Fields of mathematics">Category</a></b></li>
+<li><a href="http://en.wikipedia.org/wiki/Portal:Mathematics" title="Portal:Mathematics">Mathematics portal</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Outline_of_mathematics" title="Outline of mathematics">Outline</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lists_of_mathematics_topics" title="Lists of mathematics topics">Lists</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1173
+CPU time usage: 0.404 seconds
+Real time usage: 0.470 seconds
+Preprocessor visited node count: 648/1000000
+Preprocessor generated node count: 2305/1500000
+Post‐expand include size: 20487/2048000 bytes
+Template argument size: 930/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 4/500
+Lua time usage: 0.056/10.000 seconds
+Lua memory usage: 1.7 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:30402-0!*!0!!en!4!*!math=0 and timestamp 20140324123627
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;oldid=593150597">http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;oldid=593150597</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Theory_of_computation" title="Category:Theory of computation">Theory of computation</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_September_2007" title="Category:Articles needing additional references from September 2007">Articles needing additional references from September 2007</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Theory+of+computation&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Theory+of+computation" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Theory_of_computation.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Theory_of_computation"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Theory_of_computation.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Theory_of_computation" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Theory_of_computation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;oldid=593150597" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q844718" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Theory_of_computation&amp;id=593150597" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Theory+of+computation">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Theory+of+computation&amp;oldid=593150597&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Theory_of_computation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/النظرية_الحسابية" title="النظرية الحسابية – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Teorija_računanja" title="Teorija računanja – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Θεωρία_υπολογισμού" title="Θεωρία υπολογισμού – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Teoría_de_la_computación" title="Teoría de la computación – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Teorio_de_komputado" title="Teorio de komputado – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/نظریه_محاسبات" title="نظریه محاسبات – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/계산_이론" title="계산 이론 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Teorija_računanja" title="Teorija računanja – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Teori_komputasi" title="Teori komputasi – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Teoria_della_computazione" title="Teoria della computazione – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Teori_pengiraan" title="Teori pengiraan – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/計算理論" title="計算理論 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Teoria_obliczeń" title="Teoria obliczeń – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Teoria_da_computação" title="Teoria da computação – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Теория_алгоритмов" title="Теория алгоритмов – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Theory_of_computation" title="Theory of computation – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Teória_algoritmov" title="Teória algoritmov – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Теорија_израчунљивости" title="Теорија израчунљивости – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sh"><a href="http://sh.wikipedia.org/wiki/Teorija_računanja" title="Teorija računanja – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Laskettavuus" title="Laskettavuus – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-tl"><a href="http://tl.wikipedia.org/wiki/Teoriya_ng_komputasyon" title="Teoriya ng komputasyon – Tagalog" lang="tl" hreflang="tl">Tagalog</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/ทฤษฎีการคำนวณ" title="ทฤษฎีการคำนวณ – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tg"><a href="http://tg.wikipedia.org/wiki/Назарияи_автоматҳо" title="Назарияи автоматҳо – Tajik" lang="tg" hreflang="tg">Тоҷикӣ</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Algoritmalar_teorisi" title="Algoritmalar teorisi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Теорія_алгоритмів" title="Теорія алгоритмів – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-ur"><a href="http://ur.wikipedia.org/wiki/نظریۂ_شمارندگی" title="نظریۂ شمارندگی – Urdu" lang="ur" hreflang="ur">اردو</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/计算理论" title="计算理论 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q844718#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 30 January 2014 at 18:13.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Theory_of_computation" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1028 in 0.383 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Theory_of_computation by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:14 GMT -->
+</html>

@@ -1,0 +1,642 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Struct_(C_programming_language).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Struct_(C_programming_language) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>struct (C programming language) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf18" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Struct_(C_programming_language)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Struct_(C_programming_language).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Struct_(C_programming_language)","wgTitle":"Struct (C programming language)","wgCurRevisionId":599966861,"wgRevisionId":599966861,"wgArticleId":992538,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing clarification from July 2013","Wikipedia articles needing clarification from November 2012","C programming language"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Struct_(C_programming_language)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["zh-tw","zh","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1164699"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":
+false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:0378eace27e3aee431624f77f4809281 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf18/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Struct_C_programming_language skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">struct (C programming language)</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>A <b>struct</b> in the <a href="http://en.wikipedia.org/wiki/C_programming_language" title="C programming language" class="mw-redirect">C programming language</a> (and many derivatives) is a complex <a href="Data_type.html" title="Data type">data type</a> declaration that defines a physically grouped list of variables to be placed under one name in a block of memory, allowing the different variables to be accessed via a single <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointer</a>, or the struct declared name which returns the same address. The struct can contain many other complex and simple data type in an association, so is a natural organizing type for records like the mixed data types in lists of directory entries reading a hard drive (file length, name, extension, physical (cylinder, disk, head indexes) address, etc.), or other mixed record type (patient names, address, telephone... insurance codes, balance, etc.).</p>
+<p>The C struct directly corresponds to the Assembly Language data type of the same use, and both reference a <i>contiguous block</i> of physical memory, usually delimited (sized) by word-length boundaries. Language implementations which could utilize half-word or byte boundaries (giving denser packing, using less memory) were considered advanced in the mid-eighties. Being a block of contiguous memory, each variable within is located a fixed offset from the index zero reference, the pointer. As an illustration, many BASIC interpreters once fielded a string data struct organization with one value recording string length, one indexing (cursor value of) the previous line, one pointing the string data.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Basic_syntax"><span class="tocnumber">1</span> <span class="toctext">Basic syntax</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Struct_initialization"><span class="tocnumber">2</span> <span class="toctext">Struct initialization</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Assignment"><span class="tocnumber">3</span> <span class="toctext">Assignment</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Pointers_to_struct"><span class="tocnumber">4</span> <span class="toctext">Pointers to struct</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#typedef"><span class="tocnumber">5</span> <span class="toctext">typedef</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Basic_syntax">Basic syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=1" title="Edit section: Basic syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The best way to describe it is via example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> Point <span class="br0">{</span>
+   <span class="kw4">int</span> x<span class="sy0">;</span>
+   <span class="kw4">int</span> y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>declares a structure called "Point" and states that this structure contains two pieces of information. The first is an integer called "x", the second is an integer called "y". A structure is a singular object and all of the members of the structure may be treated as one unit. A pointer to structure "Point" will point to the first integer "x" which is immediately followed by the second integer "y".</p>
+<p>Once a structure is declared, variables may be declared using it:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> Point vPoint<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>declares a variable called "vPoint" which is a "Point". "vPoint.x" accesses the integer member "x" of the structure while "vPoint.y" accesses the integer member "y" of the structure. It is quite common to declare a structure as follows:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> Point <span class="br0">{</span>
+   <span class="kw4">int</span> x<span class="sy0">;</span>
+   <span class="kw4">int</span> y<span class="sy0">;</span>
+   <span class="kw4">int</span> z<span class="sy0">;</span>
+  <span class="kw4">char</span> <span class="sy0">*</span>point_name<span class="sy0">;</span>
+<span class="br0">}</span> Point<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>so that "Point" may be used as well as "struct Point" as in the following:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+Point vPoint<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>The general syntax for a struct declaration in C is:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> tag_name <span class="br0">{</span>
+   type member1<span class="sy0">;</span>
+   type member2<span class="sy0">;</span>
+   <span class="coMULTI">/* declare as many members as desired, but the entire structure size must be known to the compiler. */</span>
+<span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>here <tt>tag_name</tt> is optional in some contexts. Such a <tt>struct</tt> declaration may also appear in the context of a <a href="http://en.wikipedia.org/wiki/Typedef" title="Typedef">typedef</a> declaration of a type alias or the declaration or definition of a variable, but such entities are better declared separately as in</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> tag_name struct_alias<span class="sy0">;</span>
+<span class="kw4">struct</span> tag_name struct_instance_1<span class="sy0">;</span>
+struct_alias struct_instance_2<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>A <code>struct</code> declaration consists of a list of fields, each of which can have almost any object type. The total storage required for a <tt>struct</tt> object is the sum of the storage requirements of all the fields, plus any internal padding.</p>
+<p>For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> account <span class="br0">{</span>
+   <span class="kw4">int</span> account_number<span class="sy0">;</span>
+   <span class="kw4">char</span> <span class="sy0">*</span>first_name<span class="sy0">;</span>
+   <span class="kw4">char</span> <span class="sy0">*</span>last_name<span class="sy0">;</span>
+   <span class="kw4">float</span> balance<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>defines a type, referred to as <tt>struct account</tt>. To create a new variable of this type, we can write</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> account s<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>which has an integer component, accessed by <tt>s.account_number</tt>, and a floating-point component, accessed by <tt>s.balance</tt>, as well as the <tt>first_name</tt> and <tt>last_name</tt> components. The structure <tt>s</tt> contains all four values, and all four fields may be changed independently.</p>
+<p>The primary use of a <tt>struct</tt> is for the construction of complex data types, but in practice they are sometimes used to circumvent standard C conventions to create a kind of primitive <a href="http://en.wikipedia.org/wiki/Subtype" title="Subtype" class="mw-redirect">subtyping</a>. For example, common Internet protocols<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text in the vicinity of this tag needs examples for clarification (July 2013)">examples needed</span></a></i>]</sup> rely on the fact that C compilers insert padding between struct fields in predictable ways; thus the code</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> ifoo_version_42 <span class="br0">{</span>
+   <span class="kw4">long</span> x<span class="sy0">,</span> y<span class="sy0">,</span> z<span class="sy0">;</span>
+   <span class="kw4">char</span> <span class="sy0">*</span>name<span class="sy0">;</span>
+   <span class="kw4">long</span> a<span class="sy0">,</span> b<span class="sy0">,</span> c<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">struct</span> ifoo_old_stub <span class="br0">{</span>
+   <span class="kw4">long</span> x<span class="sy0">,</span> y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">void</span> operate_on_ifoo<span class="br0">(</span><span class="kw4">struct</span> ifoo_version_42 <span class="sy0">*</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="kw4">struct</span> ifoo_old_stub s<span class="sy0">;</span>
+. . .
+<span class="me1">operate_on_ifoo</span><span class="br0">(</span><span class="sy0">&amp;</span>s<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>is often assumed to work as expected,<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (November 2012)">clarification needed</span></a></i>]</sup> if the <tt>operate_on_ifoo</tt> function only accesses fields <tt>x</tt> and <tt>y</tt> of its argument.</p>
+<h2><span class="mw-headline" id="Struct_initialization">Struct initialization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=2" title="Edit section: Struct initialization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are three ways to initialize a structure. For the <tt>struct</tt> type</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Forward declare a type "point" to be a struct. */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> point point<span class="sy0">;</span>
+<span class="coMULTI">/* Declare the struct with integer members x, y */</span>
+<span class="kw4">struct</span> point <span class="br0">{</span>
+   <span class="kw4">int</span>    x<span class="sy0">;</span>
+   <span class="kw4">int</span>    y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p><i>C89-style initializers</i> are used when contiguous members may be given.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Define a variable p of type point, and initialize its first two members in place */</span>
+point p <span class="sy0">=</span> <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>For non contiguous or out of order members list, <i>designated initializer</i> style<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> may be used</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Define a variable p of type point, and set members using designated  initializers*/</span>
+point p <span class="sy0">=</span> <span class="br0">{</span>.<span class="me1">y</span> <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">,</span> .<span class="me1">x</span> <span class="sy0">=</span> <span class="nu0">1</span><span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>If an initializer is given or if the object is <a href="Static_memory_allocation.html" title="Static memory allocation">statically allocated</a>, omitted elements are initialized to 0.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>A third way of initializing a structure is to copy the value of an existing object of the same type</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Define a variable q of type point, and set members to the same values as those of p */</span>
+point q <span class="sy0">=</span> p<span class="sy0">;</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Assignment">Assignment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=3" title="Edit section: Assignment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following assignment of a struct to another struct does what one might expect. It is not necessary to use <code>memcpy()</code> to make a duplicate of a struct type. The memory is already given and zeroed by just declaring a variable of that type regardless of member initialization. This should not be confused with the requirement of memory management when dealing with a pointer to a struct.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="co2">#include &lt;stdio.h&gt;</span>
+ 
+<span class="coMULTI">/* Define a type point to be a struct with integer members x, y */</span>
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+   <span class="kw4">int</span>    x<span class="sy0">;</span>
+   <span class="kw4">int</span>    y<span class="sy0">;</span>
+<span class="br0">}</span> point<span class="sy0">;</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span> <span class="br0">{</span>
+ 
+<span class="coMULTI">/* Define a variable p of type point, and initialize all its members inline! */</span>
+    point p <span class="sy0">=</span> <span class="br0">{</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">3</span><span class="br0">}</span><span class="sy0">;</span>
+ 
+<span class="coMULTI">/* Define a variable q of type point. Members are uninitialized. */</span>
+    point q<span class="sy0">;</span>
+ 
+<span class="coMULTI">/* Assign the value of p to q, copies the member values from p into q. */</span>
+    q <span class="sy0">=</span> p<span class="sy0">;</span>
+ 
+<span class="coMULTI">/* Change the member x of q to have the value of 3 */</span>
+    q.<span class="me1">x</span> <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">;</span>
+ 
+<span class="coMULTI">/* Demonstrate we have a copy and that they are now different. */</span>
+    <span class="kw1">if</span> <span class="br0">(</span>p.<span class="me1">x</span> <span class="sy0">!=</span> q.<span class="me1">x</span><span class="br0">)</span> <span class="kw3">printf</span><span class="br0">(</span><span class="st0">"The members are not equal! %d != %d"</span><span class="sy0">,</span> p.<span class="me1">x</span><span class="sy0">,</span> q.<span class="me1">x</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Pointers_to_struct">Pointers to struct</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=4" title="Edit section: Pointers to struct">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Pointers can be used to refer to a <tt>struct</tt> by its address. This is particularly useful for passing structs to a function by reference or to refer to another instance of the <tt>struct</tt> type as a field. The pointer can be dereferenced just like any other pointer in C — using the <code>*</code> operator. There is also a <code>-&gt;</code> operator in C which dereferences the pointer to struct (left operand) and then accesses the value of a member of the struct (right operand).</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> point <span class="br0">{</span>
+   <span class="kw4">int</span> x<span class="sy0">;</span>
+   <span class="kw4">int</span> y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">struct</span> point my_point <span class="sy0">=</span> <span class="br0">{</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">7</span> <span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">struct</span> point <span class="sy0">*</span>p <span class="sy0">=</span> <span class="sy0">&amp;</span>my_point<span class="sy0">;</span>  <span class="coMULTI">/* To declare and define p as a pointer of type struct point,
+                                 and initialize it with the address of my_point. */</span>
+ 
+<span class="br0">(</span><span class="sy0">*</span>p<span class="br0">)</span>.<span class="me1">x</span> <span class="sy0">=</span> <span class="nu0">8</span><span class="sy0">;</span>                   <span class="coMULTI">/* To access the first member of the struct */</span>
+p<span class="sy0">-&gt;</span>x <span class="sy0">=</span> <span class="nu0">8</span><span class="sy0">;</span>                     <span class="coMULTI">/* Another way to access the first member of the struct */</span>
+</pre></div>
+</div>
+<p>C does not allow recursive declaration of <tt>struct</tt>; a <tt>struct</tt> can not contain a field that has the type of the <tt>struct</tt> itself. But pointers can be used to refer to an instance of it:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> list_element list_element<span class="sy0">;</span>
+<span class="kw4">struct</span> list_element <span class="br0">{</span>
+   point p<span class="sy0">;</span>
+   list_element <span class="sy0">*</span> next<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+list_element el <span class="sy0">=</span> <span class="br0">{</span> .<span class="me1">p</span> <span class="sy0">=</span> <span class="br0">{</span> .<span class="me1">x</span> <span class="sy0">=</span> <span class="nu0">3</span><span class="sy0">,</span> .<span class="me1">y</span> <span class="sy0">=</span><span class="nu0">7</span> <span class="br0">}</span><span class="sy0">,</span> <span class="br0">}</span><span class="sy0">;</span>
+list_element le <span class="sy0">=</span> <span class="br0">{</span> .<span class="me1">p</span> <span class="sy0">=</span> <span class="br0">{</span> .<span class="me1">x</span> <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">,</span> .<span class="me1">y</span> <span class="sy0">=</span><span class="nu0">5</span> <span class="br0">}</span><span class="sy0">,</span> .<span class="me1">next</span> <span class="sy0">=</span> <span class="sy0">&amp;</span>el <span class="br0">}</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Here the instance <tt>el</tt> would contain a <tt>point</tt> with coordinates 3 and 7. Its <tt>next</tt> pointer would be a <a href="Null_pointer.html" title="Null pointer" class="mw-redirect">null pointer</a> since the initializer for that field is omitted. The instance <tt>le</tt> in turn would have its own <tt>point</tt> and its <tt>next</tt> pointer would refer to <tt>el</tt>.</p>
+<h2><span class="mw-headline" id="typedef">typedef</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=5" title="Edit section: typedef">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Typedef" title="Typedef">typedef</a></div>
+<p><a href="http://en.wikipedia.org/wiki/Typedef" title="Typedef">Typedefs</a> can be used as shortcuts, for example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+   <span class="kw4">int</span>    account_number<span class="sy0">;</span>
+   <span class="kw4">char</span>   <span class="sy0">*</span>first_name<span class="sy0">;</span>
+   <span class="kw4">char</span>   <span class="sy0">*</span>last_name<span class="sy0">;</span>
+   <span class="kw4">float</span>  balance<span class="sy0">;</span>
+<span class="br0">}</span> account<span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Different users have differing preferences; proponents usually claim:</p>
+<ul>
+<li>shorter to write</li>
+<li>can simplify more complex type definitions</li>
+<li>can be used to forward declare a <tt>struct</tt> type</li>
+</ul>
+<p>As an example, consider a type that defines a pointer to a function that accepts pointers to struct types and returns a pointer to struct:</p>
+<p>Without typedef:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">struct</span> point <span class="br0">{</span>
+   <span class="kw4">int</span>    x<span class="sy0">;</span>
+   <span class="kw4">int</span>    y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">struct</span> point <span class="sy0">*</span><span class="br0">(</span><span class="sy0">*</span>point_compare_func<span class="br0">)</span> <span class="br0">(</span><span class="kw4">struct</span> point <span class="sy0">*</span>a<span class="sy0">,</span> <span class="kw4">struct</span> point <span class="sy0">*</span>b<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>With typedef:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> point point_type<span class="sy0">;</span>
+<span class="kw4">struct</span> point <span class="br0">{</span>
+   <span class="kw4">int</span>    x<span class="sy0">;</span>
+   <span class="kw4">int</span>    y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+point_type <span class="sy0">*</span><span class="br0">(</span><span class="sy0">*</span>point_compare_func<span class="br0">)</span> <span class="br0">(</span>point_type <span class="sy0">*</span>a<span class="sy0">,</span> point_type <span class="sy0">*</span>b<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>A common naming convention for such a <tt>typedef</tt> is to append a "<tt>_t</tt>" (here <tt>point_t</tt>) to the <tt>struct</tt> tag name, but such names are reserved by <a href="POSIX.html" title="POSIX">POSIX</a> so such a practice should be avoided. A much easier convention is to use just the same identifier for the tag name and the type name:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> <span class="kw4">struct</span> point point<span class="sy0">;</span>
+<span class="kw4">struct</span> point <span class="br0">{</span>
+   <span class="kw4">int</span>    x<span class="sy0">;</span>
+   <span class="kw4">int</span>    y<span class="sy0">;</span>
+<span class="br0">}</span><span class="sy0">;</span>
+point <span class="sy0">*</span><span class="br0">(</span><span class="sy0">*</span>point_compare_func<span class="br0">)</span> <span class="br0">(</span>point <span class="sy0">*</span>a<span class="sy0">,</span> point <span class="sy0">*</span>b<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Without <tt>typedef</tt> a function that takes function pointer the following code would have to be used. Although valid, it becomes increasingly hard to read.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Using the struct point type from before */</span>
+ 
+<span class="coMULTI">/* Define a function that returns a pointer to the biggest point,
+   using a function to do the comparison. */</span>
+<span class="kw4">struct</span> point <span class="sy0">*</span>
+biggest_point <span class="br0">(</span><span class="kw4">size_t</span> size<span class="sy0">,</span> <span class="kw4">struct</span> point <span class="sy0">*</span>points<span class="sy0">,</span>
+               <span class="kw4">struct</span> point <span class="sy0">*</span><span class="br0">(</span><span class="sy0">*</span>point_compare<span class="br0">)</span> <span class="br0">(</span><span class="kw4">struct</span> point <span class="sy0">*</span>a<span class="sy0">,</span> <span class="kw4">struct</span> point <span class="sy0">*</span>b<span class="br0">)</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">int</span> i<span class="sy0">;</span>
+    <span class="kw4">struct</span> point <span class="sy0">*</span>biggest <span class="sy0">=</span> NULL<span class="sy0">;</span>
+ 
+    <span class="kw1">for</span> <span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> size<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        biggest <span class="sy0">=</span> point_compare<span class="br0">(</span>biggest<span class="sy0">,</span> points <span class="sy0">+</span> i<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">return</span> biggest<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Here a second <tt>typedef</tt> for a function pointer type can be useful</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">typedef</span> point <span class="sy0">*</span><span class="br0">(</span><span class="sy0">*</span>point_compare_func_type<span class="br0">)</span> <span class="br0">(</span>point <span class="sy0">*</span>a<span class="sy0">,</span> point <span class="sy0">*</span>b<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>Now with the two <tt>typedef</tt>s being used the complexity of the function signature is drastically reduced.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Using the struct point type from before and the typedef for the function pointer */</span>
+ 
+<span class="coMULTI">/* Define a function that returns a pointer to the biggest point,
+   using a function to do the comparison. */</span>
+point <span class="sy0">*</span>
+biggest_point <span class="br0">(</span><span class="kw4">size_t</span> size<span class="sy0">,</span> point <span class="sy0">*</span> points<span class="sy0">,</span> point_compare_func_type point_compare<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">int</span> i<span class="sy0">;</span>
+    point <span class="sy0">*</span> biggest <span class="sy0">=</span> NULL<span class="sy0">;</span>
+ 
+    <span class="kw1">for</span> <span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> size<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        biggest <span class="sy0">=</span> point_compare<span class="br0">(</span>biggest<span class="sy0">,</span> points <span class="sy0">+</span> i<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">return</span> biggest<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>However, there are a handful of disadvantages in using them:</p>
+<ul>
+<li>They pollute the main namespace (see below), however this is easily overcome with prefixing a library name to the type name.</li>
+<li>Harder to figure out the aliased type (having to scan/<a href="Grep.html#Usage_as_a_conversational_verb" title="Grep">grep</a> through code), though most IDEs provide this lookup automatically.</li>
+<li>Typedefs do not really "hide" anything in a struct or union&#160;— members are still accessible (<code>account.balance</code>). To really hide struct members, one needs to use 'incompletely-declared' structs.</li>
+</ul>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="coMULTI">/* Example for namespace clash */</span>
+ 
+<span class="kw4">typedef</span> <span class="kw4">struct</span> account <span class="br0">{</span> <span class="kw4">float</span> balance<span class="sy0">;</span> <span class="br0">}</span> account<span class="sy0">;</span>
+<span class="kw4">struct</span> account account<span class="sy0">;</span> <span class="coMULTI">/* possible */</span>
+account account<span class="sy0">;</span> <span class="coMULTI">/* error */</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=GGWP&amp;action=edit&amp;redlink=1" class="new" title="GGWP (page does not exist)">GGWP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Composite_data_type" title="Composite data type">Composite data type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Union_type" title="Union type">Union type</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation book">Kelley, Al; Pohl, Ira (2004). <a rel="nofollow" class="external text" href="http://users.soe.ucsc.edu/~pohl/abc4.html"><i>A Book On C: Programming in C</i></a> (Fourth ed.). p.&#160;418. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-18399-4" title="Special:BookSources/0-201-18399-4">0-201-18399-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29&amp;rft.aufirst=Al&amp;rft.au=Kelley%2C+Al&amp;rft.aulast=Kelley&amp;rft.au=Pohl%2C+Ira&amp;rft.btitle=A+Book+On+C%3A+Programming+in+C&amp;rft.date=2004&amp;rft.edition=Fourth&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fusers.soe.ucsc.edu%2F~pohl%2Fabc4.html&amp;rft.isbn=0-201-18399-4&amp;rft.pages=418&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Fstrin.htm">"IBM Linux compilers. Initialization of structures and unions"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29&amp;rft.btitle=IBM+Linux+compilers.+Initialization+of+structures+and+unions&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fpublib.boulder.ibm.com%2Finfocenter%2Flnxpcomp%2Fv8v101%2Findex.jsp%3Ftopic%3D%252Fcom.ibm.xlcpp8l.doc%252Flanguage%252Fref%252Fstrin.htm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://c0x.coding-guidelines.com/6.7.8.html#1695">"The New C Standard, §6.7.8 Initialization"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29&amp;rft.btitle=The+New+C+Standard%2C+%C2%A76.7.8+Initialization&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fc0x.coding-guidelines.com%2F6.7.8.html%231695&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1092
+CPU time usage: 0.664 seconds
+Real time usage: 0.714 seconds
+Preprocessor visited node count: 671/1000000
+Preprocessor generated node count: 2816/1500000
+Post‐expand include size: 7642/2048000 bytes
+Template argument size: 920/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.055/10.000 seconds
+Lua memory usage: 1.63 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:992538-0!*!0!!en!*!* and timestamp 20140325022227
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=599966861">http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=599966861</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:C_programming_language" title="Category:C programming language">C programming language</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_July_2013" title="Category:Wikipedia articles needing clarification from July 2013">Wikipedia articles needing clarification from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_November_2012" title="Category:Wikipedia articles needing clarification from November 2012">Wikipedia articles needing clarification from November 2012</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Struct+%28C+programming+language%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Struct+%28C+programming+language%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Struct_(C_programming_language).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Struct_(C_programming_language)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Struct_(C_programming_language).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Struct_(C_programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Struct_(C_programming_language)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=599966861" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1164699" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Struct_%28C_programming_language%29&amp;id=599966861" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Struct+%28C+programming+language%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Struct+%28C+programming+language%29&amp;oldid=599966861&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Struktur_(Datentyp)" title="Struktur (Datentyp) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/ساختار_(زبان_برنامه‌نویسی_سی)" title="ساختار (زبان برنامه‌نویسی سی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/Struct" title="Struct – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/構造体" title="構造体 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Struktura_(programowanie)" title="Struktura (programowanie) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Структура_(язык_Си)" title="Структура (язык Си) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/结构体_(C语言)" title="结构体 (C语言) – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1164699#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 March 2014 at 05:18.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Struct_(C_programming_language)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1039 in 0.208 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Struct_(C_programming_language) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:10 GMT -->
+</html>

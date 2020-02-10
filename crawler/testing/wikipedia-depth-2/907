@@ -1,0 +1,853 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Session_Initiation_Protocol.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Session_Initiation_Protocol by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Session Initiation Protocol - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Session_Initiation_Protocol" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Session_Initiation_Protocol.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Session_Initiation_Protocol","wgTitle":"Session Initiation Protocol","wgCurRevisionId":601039902,"wgRevisionId":601039902,"wgArticleId":28684,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages containing cite templates with deprecated parameters","All articles with dead external links","Articles with dead external links from January 2011","Wikipedia articles that are too technical from December 2011","All articles that are too technical","Articles needing expert attention from December 2011","All articles needing expert attention","Articles containing potentially dated statements from 2013","All articles containing potentially dated statements","Articles needing more detailed references","Articles using fixed number of columns in reflist","Articles with Open Directory Project links","VoIP protocols","VoIP terminology \u0026 concepts","Videotelephony","Application layer protocols"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Session_Initiation_Protocol","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["he-il","en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q191018"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Session_Initiation_Protocol skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Session Initiation Protocol</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-technical" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may be too <a href="http://en.wiktionary.org/wiki/technical#Adjective" class="extiw" title="wikt:technical">technical</a> for most readers to understand</b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit">improve</a> this article to <a href="http://en.wikipedia.org/wiki/Wikipedia:Make_technical_articles_understandable" title="Wikipedia:Make technical articles understandable">make it understandable to non-experts</a>, without removing the technical details. The <a href="http://en.wikipedia.org/wiki/Talk:Session_Initiation_Protocol" title="Talk:Session Initiation Protocol">talk page</a> may contain suggestions.</span> <small><i>(December 2011)</i></small></span></td>
+</tr>
+</table>
+<table class="vertical-navbox nowraplinks hlist" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="http://en.wikipedia.org/wiki/Internet_protocol_suite" title="Internet protocol suite">Internet protocol suite</a></th>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Application_layer" title="Application layer">Application layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Border_Gateway_Protocol" title="Border Gateway Protocol">BGP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</a> * <a href="http://en.wikipedia.org/wiki/DHCPv6" title="DHCPv6">DHCPv6</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Domain_Name_System" title="Domain Name System">DNS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol" title="File Transfer Protocol">FTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol" title="Internet Message Access Protocol">IMAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat" title="Internet Relay Chat">IRC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol" title="Lightweight Directory Access Protocol">LDAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Media_Gateway_Control_Protocol" title="Media Gateway Control Protocol">MGCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_News_Transfer_Protocol" title="Network News Transfer Protocol">NNTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_Time_Protocol" title="Network Time Protocol">NTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Post_Office_Protocol" title="Post Office Protocol">POP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">RPC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">RTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol" title="Real Time Streaming Protocol">RTSP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Routing_Information_Protocol" title="Routing Information Protocol">RIP</a></li>
+<li><strong class="selflink">SIP</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">SMTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">SNMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SOCKS" title="SOCKS">SOCKS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Secure_Shell" title="Secure Shell">SSH</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Telnet" title="Telnet">Telnet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">TLS/SSL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XMPP" title="XMPP">XMPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Application_layer_protocols" title="Category:Application layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Transport_layer" title="Transport layer">Transport layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" title="User Datagram Protocol">UDP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Datagram_Congestion_Control_Protocol" title="Datagram Congestion Control Protocol">DCCP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol" title="Stream Control Transmission Protocol">SCTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resource_Reservation_Protocol" title="Resource Reservation Protocol">RSVP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Transport_layer_protocols" title="Category:Transport layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Internet_layer" title="Internet layer">Internet layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">IP</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/IPv4" title="IPv4">IPv4</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IPv6" title="IPv6">IPv6</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Control_Message_Protocol" title="Internet Control Message Protocol">ICMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ICMPv6" title="ICMPv6">ICMPv6</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Explicit_Congestion_Notification" title="Explicit Congestion Notification">ECN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Group_Management_Protocol" title="Internet Group Management Protocol">IGMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IPsec" title="IPsec">IPsec</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Internet_layer_protocols" title="Category:Internet layer protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="padding:0.1em;;;"><a href="http://en.wikipedia.org/wiki/Link_layer" title="Link layer">Link layer</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Address_Resolution_Protocol" title="Address Resolution Protocol">ARP/InARP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol" title="Neighbor Discovery Protocol">NDP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Shortest_Path_First" title="Open Shortest Path First">OSPF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tunneling_protocol" title="Tunneling protocol">Tunnels</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Layer_2_Tunneling_Protocol" title="Layer 2 Tunneling Protocol">L2TP</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Point-to-Point_Protocol" title="Point-to-Point Protocol">PTPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Media_access_control" title="Media access control">Media access control</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_subscriber_line" title="Digital subscriber line">DSL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integrated_Services_Digital_Network" title="Integrated Services Digital Network">ISDN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface" title="Fiber Distributed Data Interface">FDDI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DOCSIS" title="DOCSIS">DOCSIS</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Link_protocols" title="Category:Link protocols"><i>more...</i></a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:IPstack" title="Template:IPstack"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:IPstack" title="Template talk:IPstack"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:IPstack&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>The <b>Session Initiation Protocol</b> (<b>SIP</b>) is a <a href="http://en.wikipedia.org/wiki/Signalling_(telecommunications)" title="Signalling (telecommunications)" class="mw-redirect">signaling</a> <a href="http://en.wikipedia.org/wiki/Communications_protocol" title="Communications protocol">communications protocol</a>, widely used for controlling <a href="http://en.wikipedia.org/wiki/Multimedia" title="Multimedia">multimedia</a> <a href="http://en.wikipedia.org/wiki/Communication_session" title="Communication session" class="mw-redirect">communication sessions</a> such as <a href="http://en.wikipedia.org/wiki/Internet_telephony" title="Internet telephony" class="mw-redirect">voice</a> and <a href="http://en.wikipedia.org/wiki/Video" title="Video">video</a> calls over <a href="http://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a> (IP) networks.</p>
+<p>The protocol defines the messages that are sent between peers which govern establishment, termination and other essential elements of a call. SIP can be used for creating, modifying and terminating <a href="http://en.wikipedia.org/wiki/Session_(computer_science)" title="Session (computer science)">sessions</a> consisting of one or several <a href="http://en.wikipedia.org/wiki/Streaming_media" title="Streaming media">media streams</a>. SIP can be used for two-party (<a href="http://en.wikipedia.org/wiki/Unicast" title="Unicast">unicast</a>) or multiparty (<a href="http://en.wikipedia.org/wiki/Multicast" title="Multicast">multicast</a>) sessions. Other SIP applications include <a href="http://en.wikipedia.org/wiki/Video_conferencing" title="Video conferencing" class="mw-redirect">video conferencing</a>, streaming multimedia distribution, <a href="Instant_messaging.html" title="Instant messaging">instant messaging</a>, <a href="http://en.wikipedia.org/wiki/Presence_information" title="Presence information">presence information</a>, <a href="http://en.wikipedia.org/wiki/File_transfer" title="File transfer">file transfer</a>, <a href="http://en.wikipedia.org/wiki/T.38" title="T.38">fax over IP</a> and <a href="http://en.wikipedia.org/wiki/Online_game" title="Online game">online games</a>.</p>
+<p>Originally designed by <a href="http://en.wikipedia.org/wiki/Henning_Schulzrinne" title="Henning Schulzrinne">Henning Schulzrinne</a> and <a href="http://en.wikipedia.org/wiki/Mark_Handley_(computer_scientist)" title="Mark Handley (computer scientist)">Mark Handley</a> in 1996, SIP has been developed and standardized in <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> under the auspices of the <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a> (IETF). It is an <a href="http://en.wikipedia.org/wiki/Application_layer" title="Application layer">application layer</a> protocol designed to be independent of the underlying <a href="http://en.wikipedia.org/wiki/Transport_layer" title="Transport layer">transport layer</a>; it can run on <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">Transmission Control Protocol</a> (TCP), <a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" title="User Datagram Protocol">User Datagram Protocol</a> (UDP) or <a href="http://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol" title="Stream Control Transmission Protocol">Stream Control Transmission Protocol</a> (SCTP).<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> It is a text-based protocol, incorporating many elements of the <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol</a> (HTTP) and the <a href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">Simple Mail Transfer Protocol</a> (SMTP).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>SIP works in conjunction with several other application layer protocols that identify and carry the session media. Media identification and negotiation is achieved with the <a href="http://en.wikipedia.org/wiki/Session_Description_Protocol" title="Session Description Protocol">Session Description Protocol</a> (SDP). For the transmission of media streams (voice, video) SIP typically employs the <a href="http://en.wikipedia.org/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">Real-time Transport Protocol</a> (RTP) or <a href="http://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol" title="Secure Real-time Transport Protocol">Secure Real-time Transport Protocol</a> (SRTP). For secure transmissions of SIP messages, the protocol may be encrypted with <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">Transport Layer Security</a> (TLS).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Protocol_design"><span class="tocnumber">2</span> <span class="toctext">Protocol design</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Network_elements"><span class="tocnumber">3</span> <span class="toctext">Network elements</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#User_Agent"><span class="tocnumber">3.1</span> <span class="toctext">User Agent</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Proxy_server"><span class="tocnumber">3.2</span> <span class="toctext">Proxy server</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Register"><span class="tocnumber">3.3</span> <span class="toctext">Register</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Redirect_server"><span class="tocnumber">3.4</span> <span class="toctext">Redirect server</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Session_border_controller"><span class="tocnumber">3.5</span> <span class="toctext">Session border controller</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Gateway"><span class="tocnumber">3.6</span> <span class="toctext">Gateway</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#SIP_messages"><span class="tocnumber">4</span> <span class="toctext">SIP messages</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Transactions"><span class="tocnumber">5</span> <span class="toctext">Transactions</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Instant_messaging_and_presence"><span class="tocnumber">6</span> <span class="toctext">Instant messaging and presence</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Conformance_testing"><span class="tocnumber">7</span> <span class="toctext">Conformance testing</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Applications"><span class="tocnumber">8</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#SIP-ISUP_interworking"><span class="tocnumber">9</span> <span class="toctext">SIP-ISUP interworking</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Deployment_issues"><span class="tocnumber">10</span> <span class="toctext">Deployment issues</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Encryption"><span class="tocnumber">11</span> <span class="toctext">Encryption</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#See_also"><span class="tocnumber">12</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#References"><span class="tocnumber">13</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">14</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP was originally designed by <a href="http://en.wikipedia.org/wiki/Henning_Schulzrinne" title="Henning Schulzrinne">Henning Schulzrinne</a> and <a href="http://en.wikipedia.org/wiki/Mark_Handley_(computer_scientist)" title="Mark Handley (computer scientist)">Mark Handley</a> in 1996. In November 2000, SIP was accepted as a <a href="http://en.wikipedia.org/wiki/3GPP" title="3GPP">3GPP</a> signaling protocol and permanent element of the <a href="http://en.wikipedia.org/wiki/IP_Multimedia_Subsystem" title="IP Multimedia Subsystem">IP Multimedia Subsystem</a> (IMS) architecture for IP-based streaming multimedia services in <a href="http://en.wikipedia.org/wiki/Cellular_system" title="Cellular system" class="mw-redirect">cellular systems</a>. The <a href="http://en.wikipedia.org/wiki/IETF" title="IETF" class="mw-redirect">IETF</a> Network Working Group published <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> - as of 2013<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit">[update]</a></sup> the latest version of the specification - in June 2002.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>The U.S. <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a> (NIST), Advanced Networking Technologies Division provides a public-domain implementation of the Java standard for SIP<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> which serves as a <a href="http://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a> for the standard. The stack can work in proxy server or user agent scenarios and has been used in numerous commercial and research projects. It supports <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> in full and a number of extension RFCs including <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc6665">RFC 6665</a> (Subscribe / Notify) and <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3262">RFC 3262</a> (Provisional Reliable Responses) etc.</p>
+<h2><span class="mw-headline" id="Protocol_design">Protocol design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=2" title="Edit section: Protocol design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP employs design elements similar to the HTTP request/response transaction model.<sup id="cite_ref-ws_209_5-0" class="reference"><a href="#cite_note-ws_209-5"><span>[</span>5<span>]</span></a></sup> Each transaction consists of a client request that invokes a particular method or function on the server and at least one response. SIP reuses most of the header fields, encoding rules and status codes of HTTP, providing a readable text-based format.</p>
+<p>Each resource of a SIP network, such as a user agent or a voicemail box, is identified by a <a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier" title="Uniform resource identifier">uniform resource identifier</a> (URI), based on the general standard syntax<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> also used in Web services and e-mail. The <a href="http://en.wikipedia.org/wiki/URI_scheme" title="URI scheme">URI scheme</a> used for SIP is <code>sip:</code> and a typical SIP URI is of the form: <code><a rel="nofollow" class="external free" href="sip:username:password@host:port">sip:username:password@host:port</a></code>. If <a href="http://en.wikipedia.org/wiki/Secure_transmission" title="Secure transmission">secure transmission</a> is required, the scheme <code>sips:</code> is used and mandates that each hop over which the request is forwarded up to the target domain must be secured with <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">Transport Layer Security</a> (TLS). The last hop from the proxy of the target domain to the user agent has to be secured according to local policies. TLS protects against attackers which try to listen on the signaling link but it does not provide real end-to-end security to prevent espionage and law enforcement interception, as the encryption is only hop-by-hop and every single intermediate proxy has to be trusted.</p>
+<p>SIP works in concert with several other protocols and is only involved in the signaling portion of a communication session. SIP clients typically use TCP or UDP on <a href="http://en.wikipedia.org/wiki/Port_number" title="Port number" class="mw-redirect">port numbers</a> 5060 and/or 5061 to connect to SIP servers and other SIP endpoints. Port 5060 is commonly used for non-encrypted signaling traffic whereas port 5061 is typically used for traffic encrypted with <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">Transport Layer Security</a> (TLS). SIP is primarily used in setting up and tearing down voice or video calls. It also allows modification of existing calls. The modification can involve changing addresses or <a href="http://en.wikipedia.org/wiki/Computer_port_(software)" title="Computer port (software)" class="mw-redirect">ports</a>, inviting more participants, and adding or deleting media streams. SIP has also found applications in messaging applications, such as instant messaging, and event subscription and notification. A suite of SIP-related <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a> (IETF) rules define behavior for such applications. The voice and video stream communications in SIP applications are carried over another application protocol, the <a href="http://en.wikipedia.org/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">Real-time Transport Protocol</a> (RTP). Parameters (port numbers, protocols, <a href="http://en.wikipedia.org/wiki/Codecs" title="Codecs" class="mw-redirect">codecs</a>) for these media streams are defined and negotiated using the <a href="http://en.wikipedia.org/wiki/Session_Description_Protocol" title="Session Description Protocol">Session Description Protocol</a> (SDP) which is transported in the SIP packet body.</p>
+<p>A motivating goal for SIP was to provide a signaling and call setup protocol for IP-based communications that can support a superset of the call processing functions and features present in the <a href="http://en.wikipedia.org/wiki/Public_switched_telephone_network" title="Public switched telephone network">public switched telephone network</a> (PSTN). SIP by itself does not define these features; rather, its focus is call-setup and signaling. The features that permit familiar telephone-like operations: dialing a number, causing a phone to ring, hearing ringback tones or a busy signal - are performed by proxy servers and user agents. Implementation and terminology are different in the SIP world but to the end-user, the behavior is similar.</p>
+<p>SIP-enabled telephony networks can also implement many of the more advanced call processing features present in <a href="http://en.wikipedia.org/wiki/Signaling_System_7" title="Signaling System 7" class="mw-redirect">Signaling System 7</a> (SS7), though the two protocols themselves are very different. SS7 is a centralized protocol, characterized by a complex central network architecture and dumb endpoints (traditional telephone handsets). SIP is a <a href="http://en.wikipedia.org/wiki/Peer-to-peer" title="Peer-to-peer">peer-to-peer</a> protocol, thus it requires only a simple (and thus scalable) core network with intelligence distributed to the network edge, embedded in endpoints (terminating devices built in either hardware or software). SIP features are implemented in the communicating endpoints (i.e. at the edge of the network) contrary to traditional SS7 features, which are implemented in the network.</p>
+<p>Although several other VoIP signaling protocols exist (such as <a href="http://en.wikipedia.org/wiki/Bearer_Independent_Call_Control" title="Bearer Independent Call Control" class="mw-redirect">BICC</a>, <a href="http://en.wikipedia.org/wiki/H.323" title="H.323">H.323</a>, <a href="http://en.wikipedia.org/wiki/Media_Gateway_Control_Protocol" title="Media Gateway Control Protocol">MGCP</a>, <a href="http://en.wikipedia.org/wiki/H.248" title="H.248">MEGACO</a>), SIP is distinguished by its proponents for having roots in the IP community rather than the telecommunications industry. SIP has been standardized and governed primarily by the IETF, while other protocols, such as H.323, have traditionally been associated with the <a href="http://en.wikipedia.org/wiki/International_Telecommunication_Union" title="International Telecommunication Union">International Telecommunication Union</a> (ITU).</p>
+<p>The first proposed standard version (SIP 1.0) was defined by <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc2543">RFC 2543</a>. This version of the protocol was further refined to version 2.0 and clarified in <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a>, although some implementations are still relying on the older definitions.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources"><span title="The text preceding this tag needs specification. (April 2012)">specify</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="Network_elements">Network elements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=3" title="Edit section: Network elements">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP also defines server network elements. Although two SIP endpoints can communicate without any intervening SIP infrastructure, which is why the protocol is described as peer-to-peer, this approach is often impractical for a public service. <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> defines these server elements.</p>
+<h3><span class="mw-headline" id="User_Agent">User Agent</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=4" title="Edit section: User Agent">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <i>SIP user agent</i> (UA) is a logical network end-point used to create or receive SIP messages and thereby manage a SIP session. A SIP UA can perform the role of a <i>User Agent Client</i> (UAC), which sends SIP requests, and the <i>User Agent Server</i> (UAS), which receives the requests and returns a SIP response. These roles of UAC and UAS only last for the duration of a SIP transaction.<sup id="cite_ref-rfc_7-0" class="reference"><a href="#cite_note-rfc-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>A SIP phone is a SIP user agent that provides the traditional call functions of a telephone, such as dial, answer, reject, hold/unhold, and call transfer.<sup id="cite_ref-Azzedine_8-0" class="reference"><a href="#cite_note-Azzedine-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> SIP phones may be implemented as a hardware device or as a <a href="http://en.wikipedia.org/wiki/Softphone" title="Softphone">softphone</a>. As vendors increasingly implement SIP as a standard telephony platform, often driven by <a href="http://en.wikipedia.org/wiki/4G" title="4G">4G</a> efforts, the distinction between hardware-based and software-based SIP phones is being blurred and SIP elements are implemented in the basic firmware functions of many IP-capable devices. Examples are devices from <a href="http://en.wikipedia.org/wiki/Nokia" title="Nokia">Nokia</a> and <a href="http://en.wikipedia.org/wiki/BlackBerry_Ltd" title="BlackBerry Ltd" class="mw-redirect">BlackBerry</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p>In SIP, as in HTTP, the <a href="http://en.wikipedia.org/wiki/User_agent" title="User agent">user agent</a> may identify itself using a message header field 'User-Agent', containing a text description of the software/hardware/product involved. The User-Agent field is sent in request messages, which means that the receiving SIP server can see this information. SIP network elements sometimes store this information,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> and it can be useful in diagnosing SIP compatibility problems.</p>
+<h3><span class="mw-headline" id="Proxy_server">Proxy server</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=5" title="Edit section: Proxy server">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The proxy server is an intermediary entity that acts as both a server and a client for the purpose of making requests on behalf of other clients. A proxy server primarily plays the role of routing, meaning that its job is to ensure that a request is sent to another entity closer to the targeted user. Proxies are also useful for enforcing policy <b>(for example, making sure a user is allowed to make a call)</b>. A proxy interprets, and, if necessary, rewrites specific parts of a request message before forwarding it.</p>
+<h3><span class="mw-headline" id="Register">Register</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=6" title="Edit section: Register">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A register is a SIP endpoint that accepts REGISTER requests and places the information it receives in those requests into a location service for the domain it handles. The location service links one or more <a href="http://en.wikipedia.org/wiki/IP_address" title="IP address">IP addresses</a> to the SIP <a href="http://en.wikipedia.org/wiki/URI" title="URI" class="mw-redirect">URI</a> of the registering agent. The URI uses the <tt>sip:</tt> scheme, although other protocol schemes are possible, such as <tt>tel:</tt>. More than one <a href="http://en.wikipedia.org/wiki/User_agent" title="User agent">user agent</a> can register at the same URI, with the result that all registered user agents receive the calls to the URI.</p>
+<p>SIP registrars are logical elements, and are commonly co-located with SIP proxies. But it is also possible and often good for network scalability to place this location service with a redirect server.</p>
+<h3><span class="mw-headline" id="Redirect_server">Redirect server</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=7" title="Edit section: Redirect server">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A user agent server that generates 3xx (Redirection) responses to requests it receives, directing the client to contact an alternate set of URIs. The redirect server allows proxy servers to direct SIP session invitations to external domains.</p>
+<h3><span class="mw-headline" id="Session_border_controller">Session border controller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=8" title="Edit section: Session border controller">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/Session_border_controller" title="Session border controller">Session border controllers</a> Serve as <i>middle boxes</i> between UA and SIP servers for various types of functions, including network topology hiding, and assistance in <a href="http://en.wikipedia.org/wiki/NAT_traversal" title="NAT traversal">NAT traversal</a>.</p>
+<h3><span class="mw-headline" id="Gateway">Gateway</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=9" title="Edit section: Gateway">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/Gateway_(telecommunications)" title="Gateway (telecommunications)">Gateways</a> can be used to interface a SIP network to other networks, such as the <a href="http://en.wikipedia.org/wiki/Public_switched_telephone_network" title="Public switched telephone network">public switched telephone network</a>, which use different protocols or technologies.</p>
+<h2><span class="mw-headline" id="SIP_messages">SIP messages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=10" title="Edit section: SIP messages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP is a text-based protocol with syntax similar to that of HTTP. There are two different types of SIP messages: requests and responses. The first line of a request has a <i>method</i>, defining the nature of the request, and a Request-URI, indicating where the request should be sent.<sup id="cite_ref-stallings_214_12-0" class="reference"><a href="#cite_note-stallings_214-12"><span>[</span>12<span>]</span></a></sup> The first line of a response has a <i>response code</i>.</p>
+<p>For SIP requests, <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> defines the following methods:<sup id="cite_ref-stallings_214-5_13-0" class="reference"><a href="#cite_note-stallings_214-5-13"><span>[</span>13<span>]</span></a></sup></p>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/List_of_SIP_request_methods" title="List of SIP request methods">List of SIP request methods</a></div>
+<ul>
+<li>REGISTER: Used by a UA to indicate its current IP address and the URLs for which it would like to receive calls.</li>
+<li>INVITE: Used to establish a media session between user agents.</li>
+<li>ACK: Confirms reliable message exchanges.</li>
+<li>CANCEL: Terminates a pending request.</li>
+<li>BYE: Terminates a session between two users in a conference.</li>
+<li>OPTIONS: Requests information about the capabilities of a caller, without setting up a call.</li>
+</ul>
+<p>A new method has been introduced in SIP in <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3262">RFC 3262</a>:<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></p>
+<ul>
+<li>PRACK (Provisional Response Acknowledgement): PRACK improves network reliability by adding an acknowledgement system to the provisional Responses (1xx). PRACK is sent in response to provisional response (1xx).</li>
+</ul>
+<p>The SIP response types defined in <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a> fall in one of the following categories:<sup id="cite_ref-stallings_216-7_15-0" class="reference"><a href="#cite_note-stallings_216-7-15"><span>[</span>15<span>]</span></a></sup></p>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/List_of_SIP_response_codes" title="List of SIP response codes">List of SIP response codes</a></div>
+<ul>
+<li>Provisional (1xx): Request received and being processed.</li>
+<li>Success (2xx): The action was successfully received, understood, and accepted.</li>
+<li>Redirection (3xx): Further action needs to be taken (typically by sender) to complete the request.</li>
+<li>Client Error (4xx): The request contains bad syntax or cannot be fulfilled at the server.</li>
+<li>Server Error (5xx): The server failed to fulfill an apparently valid request.</li>
+<li>Global Failure (6xx): The request cannot be fulfilled at any server.</li>
+</ul>
+<h2><span class="mw-headline" id="Transactions">Transactions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=11" title="Edit section: Transactions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP makes use of transactions to control the exchanges between participants and deliver messages reliably. The transactions maintain an internal state and make use of timers. <i>Client Transactions</i> send requests and <i>Server Transactions</i> respond to those requests with one-or-more responses. The responses may include zero-or-more Provisional (1xx) responses and one-or-more final (2xx-6xx) responses.</p>
+<p>Transactions are further categorized as either <i>Invite</i> or <i>Non-Invite</i>. <i>Invite</i> transactions differ in that they can establish a long-running conversation, referred to as a <i>Dialog</i> in SIP, and so include an acknowledgment (ACK) of any non-failing final response (e.g. 200 OK).</p>
+<p>Because of these transactional mechanisms, SIP can make use of un-reliable transports such as <a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" title="User Datagram Protocol">User Datagram Protocol</a> (UDP).</p>
+<p><a href="http://en.wikipedia.org/wiki/File:SIP_signaling.png" class="image"><img alt="Diagram showing colour-coded SIP system interactions" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/SIP_signaling.png/500px-SIP_signaling.png" width="500" height="410" srcset="//upload.wikimedia.org/wikipedia/commons/9/9b/SIP_signaling.png 1.5x, //upload.wikimedia.org/wikipedia/commons/9/9b/SIP_signaling.png 2x" /></a></p>
+<p>If we take the above example, User1’s UAC uses an <i>Invite Client Transaction</i> to send the initial INVITE (1) message. If no response is received after a timer controlled wait period the UAC may have chosen to terminate the transaction or retransmit the INVITE. However, once a response was received, User1 was confident the INVITE was delivered reliably. User1’s UAC then must acknowledge the response. On delivery of the ACK (2) both sides of the transaction are complete. And in this case, a Dialog may have been established.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Instant_messaging_and_presence">Instant messaging and presence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=12" title="Edit section: Instant messaging and presence">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="http://en.wikipedia.org/wiki/SIMPLE" title="SIMPLE">Session Initiation Protocol for Instant Messaging and Presence Leveraging Extensions</a> (SIMPLE) is the SIP-based suite of standards for <a href="Instant_messaging.html" title="Instant messaging">instant messaging</a> and <a href="http://en.wikipedia.org/wiki/Presence_information" title="Presence information">presence information</a>. MSRP (<a href="http://en.wikipedia.org/wiki/Message_Session_Relay_Protocol" title="Message Session Relay Protocol">Message Session Relay Protocol</a>) allows instant message sessions and file transfer.</p>
+<h2><span class="mw-headline" id="Conformance_testing">Conformance testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=13" title="Edit section: Conformance testing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/TTCN-3" title="TTCN-3">TTCN-3</a> test specification language is used for the purposes of specifying conformance tests for SIP implementations. SIP test suite is developed by a Specialist Task Force at <a href="http://en.wikipedia.org/wiki/ETSI" title="ETSI">ETSI</a> (STF 196).<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> The SIP developer community meets regularly at the SIP Forum <a rel="nofollow" class="external text" href="http://www.sipit.net/">SIPit</a> events to test interoperability and test implementations of new RFCs.</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=14" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The market for consumer SIP devices continues to expand; there are many devices such as SIP Terminal Adapters, SIP Gateways, and SIP Trunking services providing replacements for ISDN telephone lines.</p>
+<p>Many <a href="http://en.wikipedia.org/wiki/VoIP" title="VoIP" class="mw-redirect">VoIP</a> phone companies allow customers to use their own SIP devices, such as SIP-capable telephone sets, or <a href="http://en.wikipedia.org/wiki/Softphone" title="Softphone">softphones</a>.</p>
+<p>SIP-enabled video surveillance cameras can make calls to alert the owner or operator that an event has occurred; for example, to notify that motion has been detected out-of-hours in a protected area.</p>
+<p>SIP is used in <a href="http://en.wikipedia.org/wiki/Audio_over_IP" title="Audio over IP">audio over IP</a> for <a href="http://en.wikipedia.org/wiki/Broadcasting" title="Broadcasting">broadcasting</a> applications where it provides an interoperable means for audio interfaces from different manufacturers to make connections with one another.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="SIP-ISUP_interworking">SIP-ISUP interworking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=15" title="Edit section: SIP-ISUP interworking">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SIP-I, or the Session Initiation Protocol with encapsulated <a href="http://en.wikipedia.org/wiki/ISDN_User_Part" title="ISDN User Part">ISUP</a>, is a protocol used to create, modify, and terminate communication sessions based on ISUP using SIP and IP networks. Services using SIP-I include voice, video telephony, fax and data. SIP-I and SIP-T<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup> are two protocols with similar features, notably to allow ISUP messages to be transported over SIP networks. This preserves all of the detail available in the ISUP header, which is important as there are many country-specific variants of ISUP that have been implemented over the last 30 years, and it is not always possible to express all of the same detail using a native SIP message. SIP-I was defined by the ITU-T, where SIP-T was defined via the <a href="http://en.wikipedia.org/wiki/IETF" title="IETF" class="mw-redirect">IETF</a> <a href="http://en.wikipedia.org/wiki/Request_for_Comments" title="Request for Comments">RFC</a> route.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup> A Session Initiation Protocol (<b>SIP</b>) <b>connection</b> is a <a href="http://en.wikipedia.org/wiki/Voice_over_Internet_Protocol" title="Voice over Internet Protocol" class="mw-redirect">Voice over Internet Protocol</a> (VoIP) service offered by many <a href="http://en.wikipedia.org/wiki/Internet_telephony_service_provider" title="Internet telephony service provider">Internet telephony service providers</a> (ITSPs) that connects a company's <a href="http://en.wikipedia.org/wiki/Private_branch_exchange" title="Private branch exchange" class="mw-redirect">private branch exchange</a> (PBX) telephone system to the <a href="http://en.wikipedia.org/wiki/Public_switched_telephone_network" title="Public switched telephone network">public switched telephone network</a> (PSTN) via the <a href="Internet.html" title="Internet">Internet</a>.</p>
+<p>Using a SIP connection may simplify administration for the organization as the SIP connection typically uses the same Internet access that is used for data. This often removes the need to install <a href="http://en.wikipedia.org/wiki/Basic_Rate_Interface" title="Basic Rate Interface">Basic Rate Interface</a> (BRI) or <a href="http://en.wikipedia.org/wiki/Primary_Rate_Interface" title="Primary Rate Interface">Primary Rate Interface</a> (PRI) telephone circuits.</p>
+<h2><span class="mw-headline" id="Deployment_issues">Deployment issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=16" title="Edit section: Deployment issues">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If the call traffic runs on the same connection with other traffic, such as email or Web browsing, voice and even signaling packets may be dropped and the voice stream may be interrupted.</p>
+<p>To mitigate this, many companies split voice and data between two separate internet connections. Alternately, some networks use the TOS precedence or DiffServ fields in the header of IPV4 packets to mark the relative time-sensitivity of SIP and RTP as compared to web, email, video and other types of IP traffic. This precedence marking method requires that all routers in the SIP and RTP paths support separate queues for different traffic types. Other options to control delay and loss include incorporating multiple VLANs (virtual local area networks), <a href="http://en.wikipedia.org/wiki/Traffic_shaping" title="Traffic shaping">traffic shaping</a> to avoid this resource conflict, but the efficacy of this solution is dependent on the number of packets dropped between the Internet and the PBX. Registration is required if the end user has a dynamic IP address, if the provider does not support static hostnames, or if <a href="http://en.wikipedia.org/wiki/Network_address_translation" title="Network address translation">NAT</a> is used. In order to share several DID numbers on the same registration, the IETF has defined additional headers (for example "P-Preferred-Identity", see <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3325">RFC 3325</a>). This avoids multiple registrations from one PBX to the same provider. Using this method the PBX can indicate what identity should be presented to the <a href="http://en.wikipedia.org/wiki/Called_party" title="Called party">Called party</a> and what identity should be used for authenticating the call. This feature is also useful when the PBX redirects an incoming call to a PSTN number, for example a cell phone, to preserve the original <a href="http://en.wikipedia.org/wiki/Caller_ID" title="Caller ID">Caller ID</a>.</p>
+<p>Users should also be aware that a SIP connection can be used as a channel for attacking the company's internal networks, similar to Web and Email attacks. Users should consider installing appropriate security mechanisms to prevent malicious attacks.</p>
+<h2><span class="mw-headline" id="Encryption">Encryption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=17" title="Edit section: Encryption">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The increasing concerns about security of calls that run over the public Internet has made SIP encryption more popular. Because <a href="http://en.wikipedia.org/wiki/VoIP_VPN" title="VoIP VPN">VPN</a> is not an option for most service providers, most service providers that offer secure SIP (SIPS) connections use <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">TLS</a> for securing signalling. The relationship between SIP (port 5060) and SIPS (port 5061), is similar to that as for HTTP and HTTPS, and uses URIs in the form "<a rel="nofollow" class="external free" href="sips:user@example.com">sips:user@example.com</a>". The media streams, which occur on different connections to the signalling stream, can be encrypted with <a href="http://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol" title="Secure Real-time Transport Protocol">SRTP</a>. The key exchange for SRTP is performed with <a href="http://en.wikipedia.org/wiki/SDES" title="SDES">SDES</a> (<a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc4568">RFC 4568</a>), or the newer and often more user friendly <a href="http://en.wikipedia.org/wiki/ZRTP" title="ZRTP">ZRTP</a> (<a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc6189">RFC 6189</a>), which can automatically upgrade RTP to SRTP using dynamic key exchange (and a verification phrase). One can also add a <a href="http://en.wikipedia.org/wiki/MIKEY" title="MIKEY">MIKEY</a> (<a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3830">RFC 3830</a>) exchange to SIP and in that way determine session keys for use with SRTP.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=18" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Rendezvous_protocol" title="Rendezvous protocol">Rendezvous protocol</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Peer-to-peer_SIP" title="Peer-to-peer SIP">Peer-to-peer SIP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computer_telephony_integration" title="Computer telephony integration">Computer telephony integration</a> (CTI)</li>
+<li><a href="http://en.wikipedia.org/wiki/Computer-supported_telecommunications_applications" title="Computer-supported telecommunications applications">Computer-supported telecommunications applications</a> (CSTA)</li>
+<li><a href="http://en.wikipedia.org/wiki/H.323" title="H.323">H.323</a> protocols <a href="http://en.wikipedia.org/wiki/H.225.0" title="H.225.0">H.225.0</a> and <a href="http://en.wikipedia.org/wiki/H.245" title="H.245">H.245</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IP_Multimedia_Subsystem" title="IP Multimedia Subsystem">IP Multimedia Subsystem</a> (IMS)</li>
+<li><a href="http://en.wikipedia.org/wiki/IP_phone" title="IP phone" class="mw-redirect">IP phone</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_SIP_software" title="List of SIP software">List of SIP software</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Media_Gateway_Control_Protocol" title="Media Gateway Control Protocol">Media Gateway Control Protocol</a> (MGCP)</li>
+<li><a href="http://en.wikipedia.org/wiki/Message_Session_Relay_Protocol" title="Message Session Relay Protocol">Message Session Relay Protocol</a> (MSRP)</li>
+<li><a href="http://en.wikipedia.org/wiki/Mobile_VoIP" title="Mobile VoIP">Mobile VoIP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MSCML" title="MSCML">MSCML</a> (Media Server Control Markup Language)</li>
+<li><a href="http://en.wikipedia.org/wiki/Network_convergence" title="Network convergence" class="mw-redirect">Network convergence</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RTP_audio_video_profile" title="RTP audio video profile">RTP audio video profile</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SIGTRAN" title="SIGTRAN">SIGTRAN</a> (Signaling Transport)</li>
+<li><a href="http://en.wikipedia.org/wiki/SIP_Trunking" title="SIP Trunking">SIP Trunking</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SIP_provider" title="SIP provider">SIP provider</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Skinny_Client_Control_Protocol" title="Skinny Client Control Protocol" class="mw-redirect">Skinny Client Control Protocol</a> (SCCP)</li>
+<li><a href="http://en.wikipedia.org/wiki/XIMSS" title="XIMSS">XIMSS</a> (XML Interface to Messaging, Scheduling, and Signaling)</li>
+<li><a href="http://en.wikipedia.org/wiki/ZRTP" title="ZRTP">ZRTP</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=19" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc4168">RFC 4168</a>, <i>The Stream Control Transmission Protocol (SCTP) as a Transport for the Session Initiation Protocol (SIP)</i>, IETF, The Internet Society (2005)</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book">Johnston, Alan B. (2004). <i>SIP: Understanding the Session Initiation Protocol, Second Edition</i>. Artech House. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1-58053-168-7" title="Special:BookSources/1-58053-168-7">1-58053-168-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.au=Johnston%2C+Alan+B.&amp;rft.aulast=Johnston%2C+Alan+B.&amp;rft.btitle=SIP%3A+Understanding+the+Session+Initiation+Protocol%2C+Second+Edition&amp;rft.date=2004&amp;rft.genre=book&amp;rft.isbn=1-58053-168-7&amp;rft.pub=Artech+House&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.ietf.org/dyn/wg/charter/sipcore-charter.html">"SIP core working group charter"</a>. Ietf.org. 2010-12-07<span class="reference-accessdate">. Retrieved 2011-01-11</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.btitle=SIP+core+working+group+charter&amp;rft.date=2010-12-07&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ietf.org%2Fdyn%2Fwg%2Fcharter%2Fsipcore-charter.html&amp;rft.pub=Ietf.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://java.net/projects/jsip">"JAIN SIP project"</a><span class="reference-accessdate">. Retrieved 2011-07-26</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.btitle=JAIN+SIP+project&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjava.net%2Fprojects%2Fjsip&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-ws_209-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-ws_209_5-0">^</a></b></span> <span class="reference-text">William Stallings, p.209</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a>, <i>Uniform Resource Identifiers (URI): Generic Syntax</i>, IETF, The Internet Society (2005)</span></li>
+<li id="cite_note-rfc-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-rfc_7-0">^</a></b></span> <span class="reference-text"><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc3261">RFC 3261</a>, <i>SIP: Session Initiation Protocol</i></span></li>
+<li id="cite_note-Azzedine-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Azzedine_8-0">^</a></b></span> <span class="reference-text"><span class="citation book">Azzedine (2006). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=b8oisvv6fDAC&amp;pg=PT774"><i>Handbook of algorithms for wireless networking and mobile computing</i></a>. CRC Press. p.&#160;774. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-58488-465-1" title="Special:BookSources/978-1-58488-465-1">978-1-58488-465-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.au=Azzedine&amp;rft.aulast=Azzedine&amp;rft.btitle=Handbook+of+algorithms+for+wireless+networking+and+mobile+computing&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Db8oisvv6fDAC%26pg%3DPT774&amp;rft.isbn=978-1-58488-465-1&amp;rft.pages=774&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation book">Porter, Thomas; Andy Zmolek, Jan Kanclirz, Antonio Rosela (2006). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=BYxdyekyRlwC&amp;pg=PA76"><i>Practical VoIP Security</i></a>. Syngress. pp.&#160;76–77. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-59749-060-3" title="Special:BookSources/978-1-59749-060-3">978-1-59749-060-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.aufirst=Thomas&amp;rft.aulast=Porter&amp;rft.au=Porter%2C+Thomas&amp;rft.btitle=Practical+VoIP+Security&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DBYxdyekyRlwC%26pg%3DPA76&amp;rft.isbn=978-1-59749-060-3&amp;rft.pages=76%E2%80%9377&amp;rft.pub=Syngress&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://na.blackberry.com/eng/services/business/blackberry_mvs/">"BlackBerry MVS Software"</a>. Na.blackberry.com<span class="reference-accessdate">. Retrieved 2011-01-11</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.btitle=BlackBerry+MVS+Software&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fna.blackberry.com%2Feng%2Fservices%2Fbusiness%2Fblackberry_mvs%2F&amp;rft.pub=Na.blackberry.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://web.archive.org/web/20110716170218/http://www.voipuser.org/forum_topic_14998.html">"User-Agents We Have Known "</a><a href="http://en.wikipedia.org/wiki/VoIP_User" title="VoIP User">VoIP User.org</a></span></li>
+<li id="cite_note-stallings_214-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-stallings_214_12-0">^</a></b></span> <span class="reference-text">Stallings, p.214</span></li>
+<li id="cite_note-stallings_214-5-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-stallings_214-5_13-0">^</a></b></span> <span class="reference-text">Stallings, pp.214-215</span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.ietf.org/rfc/rfc3262.txt">http://www.ietf.org/rfc/rfc3262.txt</a></span></li>
+<li id="cite_note-stallings_216-7-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-stallings_216-7_15-0">^</a></b></span> <span class="reference-text">Stallings, pp.216-217</span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><span class="citation web">James Wright. <a rel="nofollow" class="external text" href="http://www.konnetic.com/Documents/KonneticSIPIntroduction.pdf">"SIP - An Introduction"</a> (PDF). Konnetic<span class="reference-accessdate">. Retrieved 2011-01-11</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.au=James+Wright&amp;rft.aulast=James+Wright&amp;rft.btitle=SIP+-+An+Introduction&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.konnetic.com%2FDocuments%2FKonneticSIPIntroduction.pdf&amp;rft.pub=Konnetic&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://portal.etsi.org/ptcc/downloads/TTCN3SIPOSP.pdf">Experiences of Using TTCN-3 for Testing SIP and also OSP</a><sup class="noprint Inline-Template"><span style="white-space: nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;since January 2011">dead link</span></a></i>]</span></sup></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><span class="citation web">Jonsson, Lars; Mathias Coinchon (2008). <a rel="nofollow" class="external text" href="http://tech.ebu.ch/webdav/site/tech/shared/techreview/trev_2008-Q1_coinchon.pdf">"Streaming audio contributions over IP"</a> (PDF). <i>EBU Technical Review</i><span class="reference-accessdate">. Retrieved 2010-12-27</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.atitle=Streaming+audio+contributions+over+IP&amp;rft.aufirst=Lars&amp;rft.au=Jonsson%2C+Lars&amp;rft.aulast=Jonsson&amp;rft.date=2008&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Ftech.ebu.ch%2Fwebdav%2Fsite%2Ftech%2Fshared%2Ftechreview%2Ftrev_2008-Q1_coinchon.pdf&amp;rft.jtitle=EBU+Technical+Review&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.ietf.org/rfc/rfc3372.txt">"RFC3372: SIP-T Context and Architectures"</a>. September 2002<span class="reference-accessdate">. Retrieved 2011-01-11</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASession+Initiation+Protocol&amp;rft.btitle=RFC3372%3A+SIP-T+Context+and+Architectures&amp;rft.date=September+2002&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ietf.org%2Frfc%2Frfc3372.txt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.4gamericas.org/documents/3G_Americas_SIP-I_White_Paper_August_2007-FINAL.pdf">White Paper: "Why SIP-I? A Switching Core Protocol Recommendation"</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.dmoz.org/Computers/Internet/Protocols/SIP/">Computers/Internet/Protocols/SIP/</a> on the <a href="Open_Directory_Project.html" title="Open Directory Project">Open Directory Project</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.columbia.edu/sip/">Henning Schulzrinne's SIP homepage</a> hosted by Columbia University</li>
+<li><a rel="nofollow" class="external text" href="http://www.sipknowledge.com/eBooks.htm">SIP Latest specifications</a> hosted by SIPKnowledge</li>
+<li><a rel="nofollow" class="external text" href="http://www.iana.org/assignments/sip-parameters">IANA: SIP Parameters</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.iana.org/assignments/sip-events/sip-events.xhtml">IANA: SIP Event Types Namespace</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Instant_messaging" title="Template:Instant messaging"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Instant_messaging" title="Template talk:Instant messaging"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Instant_messaging&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Instant_messaging.html" title="Instant messaging">Instant messaging</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Protocols<br />
+(<a href="http://en.wikipedia.org/wiki/Comparison_of_instant_messaging_protocols" title="Comparison of instant messaging protocols">comparison</a>)</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Open</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Zephyr_(protocol)" title="Zephyr (protocol)">Zephyr</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instant_Messaging_and_Presence_Protocol" title="Instant Messaging and Presence Protocol">IMPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat" title="Internet Relay Chat">IRC</a></li>
+<li><strong class="selflink">SIP</strong>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SIMPLE" title="SIMPLE">SIMPLE</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Message_Session_Relay_Protocol" title="Message Session Relay Protocol">MSRP</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/XMPP" title="XMPP">XMPP</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Jingle_(protocol)" title="Jingle (protocol)">Jingle</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Wave_Federation_Protocol" title="Google Wave Federation Protocol">WFP</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Tox_(software)" title="Tox (software)">Tox</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Closed</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/OSCAR_protocol" title="OSCAR protocol">OSCAR</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/TOC_protocol" title="TOC protocol">TOC</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Yahoo!_Messenger_Protocol" title="Yahoo! Messenger Protocol">YMSG</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Notification_Protocol" title="Microsoft Notification Protocol">MSNP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Skype_protocol" title="Skype protocol">Skype</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Services</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AOL_Instant_Messenger" title="AOL Instant Messenger">AOL Instant Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Coco_(application)" title="Coco (application)">Coco</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BlackBerry_Messenger" title="BlackBerry Messenger">BlackBerry Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Facebook_Messenger" title="Facebook Messenger">Facebook Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Talk" title="Google Talk">Google Talk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BAND_(social_network)" title="BAND (social network)">BAND</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Hangouts" title="Google Hangouts">Google Hangouts</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ICQ" title="ICQ">ICQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat#Networks" title="Internet Relay Chat">IRC Networks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IMessage" title="IMessage">iMessage</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jabber.org" title="Jabber.org">Jabber.org</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KakaoTalk" title="KakaoTalk">KakaoTalk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kik_Messenger" title="Kik Messenger">Kik</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Libon_(service)" title="Libon (service)">Libon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Line_(application)" title="Line (application)">Line</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Messenger_service" title="Microsoft Messenger service">Microsoft Messenger service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nimbuzz" title="Nimbuzz">Nimbuzz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Oovoo" title="Oovoo" class="mw-redirect">Oovoo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Palringo" title="Palringo">Palringo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/QQ" title="QQ" class="mw-redirect">QQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Skype" title="Skype">Skype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Snapchat" title="Snapchat">Snapchat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tango_(application)" title="Tango (application)">Tango</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Telegram_(software)" title="Telegram (software)">Telegram</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TextSecure" title="TextSecure">TextSecure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Threema" title="Threema">Threema</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tox_(software)" title="Tox (software)">Tox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Viber" title="Viber">Viber</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WeChat" title="WeChat">WeChat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WhatsApp" title="WhatsApp">WhatsApp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Messenger_service" title="Windows Messenger service">Windows Messenger service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yahoo!_Messenger" title="Yahoo! Messenger">Yahoo! Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yuilop" title="Yuilop" class="mw-redirect">Yuilop</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">See also</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mobile_instant_messaging" title="Mobile instant messaging">Mobile instant messaging</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Status_message_(instant_messaging)" title="Status message (instant messaging)">Status message</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Buddy_profile" title="Buddy profile">Buddy profile</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Contact_list" title="Contact list">Contact list</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instant_message_service_center" title="Instant message service center">Instant message service center</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instant_messaging_manager" title="Instant messaging manager">Instant messaging manager</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LAN_messenger" title="LAN messenger">LAN messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Presence_information" title="Presence information">Presence information</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chatterbot" title="Chatterbot">Chatterbot</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IM_bot" title="IM bot">IM bot</a></li>
+<li><a href="http://en.wikipedia.org/wiki/File_sharing" title="File sharing">File sharing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Voice_over_IP" title="Voice over IP">Voice over IP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Webcam" title="Webcam">Webcam</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Videoconferencing" title="Videoconferencing">Videoconferencing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Backchannel" title="Backchannel">Backchannel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Videophone" title="Videophone">Videophone</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SMS_language" title="SMS language">SMS language</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Emoticon" title="Emoticon">Emoticon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chat_log" title="Chat log">Chat log</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Web_chat" title="Web chat">Web chat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shoutbox" title="Shoutbox">Shoutbox</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div style="font-size:110%;">Clients by protocol (<a href="http://en.wikipedia.org/wiki/Comparison_of_instant_messaging_clients" title="Comparison of instant messaging clients">comparison</a>)</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Single protocol</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AOL_Instant_Messenger" title="AOL Instant Messenger">AIM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Baidu" title="Baidu">Baidu Hi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BlackBerry_Messenger" title="BlackBerry Messenger">BlackBerry Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Coco_(application)" title="Coco (application)">Coco</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Facebook_Messenger" title="Facebook Messenger">Facebook Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FaceTime" title="FaceTime">FaceTime</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fetion" title="Fetion">Fetion</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gadu-Gadu" title="Gadu-Gadu">Gadu-Gadu</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ICQ" title="ICQ">ICQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IMVU" title="IMVU">IMVU</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IBM_Sametime" title="IBM Sametime">IBM Sametime</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nate" title="Nate">Nate</a>On</li>
+<li><a href="http://en.wikipedia.org/wiki/Palringo" title="Palringo">Palringo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qnext" title="Qnext">Qnext</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Skype" title="Skype">Skype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Telegram_(software)" title="Telegram (software)">Telegram</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tencent_QQ" title="Tencent QQ">Tencent QQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TextSecure" title="TextSecure">TextSecure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tox_(software)" title="Tox (software)">Tox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WeChat" title="WeChat">WeChat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WhatsApp" title="WhatsApp">WhatsApp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yahoo!_Messenger" title="Yahoo! Messenger">Yahoo! Messenger</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Multi-protocol</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Adium" title="Adium">Adium</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ayttm" title="Ayttm">Ayttm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BitlBee" title="BitlBee">BitlBee</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Centericq" title="Centericq">Centericq</a></li>
+<li><a href="http://en.wikipedia.org/wiki/EBuddy" title="EBuddy">eBuddy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Empathy_(software)" title="Empathy (software)">Empathy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fire_(instant_messaging_client)" title="Fire (instant messaging client)">Fire</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SHAPE_Services" title="SHAPE Services">IM+</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instantbird" title="Instantbird">Instantbird</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jitsi" title="Jitsi">Jitsi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kopete" title="Kopete">Kopete</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Meebo" title="Meebo">Meebo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Messages_(application)" title="Messages (application)">Messages</a>/<a href="http://en.wikipedia.org/wiki/IChat" title="IChat">iChat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Miranda_IM" title="Miranda IM">Miranda IM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Lync" title="Microsoft Lync">Microsoft Lync</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nimbuzz" title="Nimbuzz">Nimbuzz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pidgin_(software)" title="Pidgin (software)">Pidgin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Quiet_Internet_Pager" title="Quiet Internet Pager">QIP 2010</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Trillian_(software)" title="Trillian (software)">Trillian</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xfire" title="Xfire">Xfire</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yuilop" title="Yuilop" class="mw-redirect">Yuilop</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/XMPP" title="XMPP">XMPP (Jabber)</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bombus_(software)" title="Bombus (software)">Bombus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Facebook_features" title="Facebook features">Facebook Chat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gabber_(instant_messaging_client)" title="Gabber (instant messaging client)">Gabber</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gajim" title="Gajim">Gajim</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gizmo5" title="Gizmo5">Gizmo5</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Talk" title="Google Talk">Google Talk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Hangouts" title="Google Hangouts">Google Hangouts</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JWChat" title="JWChat">JWChat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Psi_(instant_messaging_client)" title="Psi (instant messaging client)">Psi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tkabber" title="Tkabber">Tkabber</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nimbuzz" title="Nimbuzz">Nimbuzz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WhatsApp" title="WhatsApp">WhatsApp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yuilop" title="Yuilop" class="mw-redirect">Yuilop</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Microsoft_Notification_Protocol" title="Microsoft Notification Protocol">MSNP</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AMSN" title="AMSN">aMSN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Emesene" title="Emesene">emesene</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Live_Messenger" title="Windows Live Messenger">Windows Live Messenger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Messenger" title="Windows Messenger">Windows Messenger</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1113
+CPU time usage: 1.184 seconds
+Real time usage: 1.373 seconds
+Preprocessor visited node count: 2532/1000000
+Preprocessor generated node count: 14122/1500000
+Post‐expand include size: 70038/2048000 bytes
+Template argument size: 7671/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 7/500
+Lua time usage: 0.081/10.000 seconds
+Lua memory usage: 2.93 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:28684-0!*!0!!en!4!* and timestamp 20140329181132
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;oldid=601039902">http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;oldid=601039902</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:VoIP_protocols" title="Category:VoIP protocols">VoIP protocols</a></li><li><a href="http://en.wikipedia.org/wiki/Category:VoIP_terminology_%26_concepts" title="Category:VoIP terminology &amp; concepts">VoIP terminology &amp; concepts</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Videotelephony" title="Category:Videotelephony">Videotelephony</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Application_layer_protocols" title="Category:Application layer protocols">Application layer protocols</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_dead_external_links_from_January_2011" title="Category:Articles with dead external links from January 2011">Articles with dead external links from January 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_that_are_too_technical_from_December_2011" title="Category:Wikipedia articles that are too technical from December 2011">Wikipedia articles that are too technical from December 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_that_are_too_technical" title="Category:All articles that are too technical">All articles that are too technical</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_from_December_2011" title="Category:Articles needing expert attention from December 2011">Articles needing expert attention from December 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2013" title="Category:Articles containing potentially dated statements from 2013">Articles containing potentially dated statements from 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_more_detailed_references" title="Category:Articles needing more detailed references">Articles needing more detailed references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_Open_Directory_Project_links" title="Category:Articles with Open Directory Project links">Articles with Open Directory Project links</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Session+Initiation+Protocol&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Session+Initiation+Protocol" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Session_Initiation_Protocol.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Session_Initiation_Protocol"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Session_Initiation_Protocol.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Session_Initiation_Protocol" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Session_Initiation_Protocol" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;oldid=601039902" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q191018" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Session_Initiation_Protocol&amp;id=601039902" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Session+Initiation+Protocol">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Session+Initiation+Protocol&amp;oldid=601039902&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Session_Initiation_Protocol&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/بروتوكول_بدء_جلسة" title="بروتوكول بدء جلسة – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/SIP" title="SIP – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Seansialustusprotokoll" title="Seansialustusprotokoll – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/SIP" title="SIP – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/پروتکل_سیپ" title="پروتکل سیپ – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/SIP" title="SIP – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/세션_개시_프로토콜" title="세션 개시 프로토콜 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/SIP" title="SIP – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="http://lv.wikipedia.org/wiki/SIP" title="SIP – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-mk"><a href="http://mk.wikipedia.org/wiki/SIP" title="SIP – Macedonian" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Protokol_Pemula_Sesi" title="Protokol Pemula Sesi – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-nn"><a href="http://nn.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Norwegian Nynorsk" lang="nn" hreflang="nn">Norsk nynorsk</a></li>
+			<li class="interlanguage-link interwiki-pms"><a href="http://pms.wikipedia.org/wiki/SIP" title="SIP – Piedmontese" lang="pms" hreflang="pms">Piemontèis</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Protocolo_de_Iniciação_de_Sessão" title="Protocolo de Iniciação de Sessão – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/SIP" title="SIP – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/SIP" title="SIP – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-so"><a href="http://so.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Somali" lang="so" hreflang="so">Soomaaliga</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/SIP_(protokol)" title="SIP (protokol) – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/SIP" title="SIP – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/SIP" title="SIP – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/SIP" title="SIP – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-yo"><a href="http://yo.wikipedia.org/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol – Yoruba" lang="yo" hreflang="yo">Yorùbá</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/会话发起协议" title="会话发起协议 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q191018#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 March 2014 at 14:54.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Session_Initiation_Protocol" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1113 in 1.764 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Session_Initiation_Protocol by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:05 GMT -->
+</html>

@@ -1,0 +1,410 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pipeline_(Unix).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pipeline_(Unix) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Pipeline (Unix) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Pipeline_(Unix)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Pipeline_(Unix).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Pipeline_(Unix)","wgTitle":"Pipeline (Unix)","wgCurRevisionId":598256821,"wgRevisionId":598256821,"wgArticleId":1236117,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Inter-process communication","Unix"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Pipeline_(Unix)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1196672"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bash {line-height: normal;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash.source-bash .de1, .bash.source-bash .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.bash.source-bash  {font-family:monospace;}
+.bash.source-bash .imp {font-weight: bold; color: red;}
+.bash.source-bash li, .bash.source-bash .li1 {font-weight: normal; vertical-align:top;}
+.bash.source-bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash.source-bash .li2 {font-weight: bold; vertical-align:top;}
+.bash.source-bash .kw1 {color: #000000; font-weight: bold;}
+.bash.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .co0 {color: #666666; font-style: italic;}
+.bash.source-bash .co1 {color: #800000;}
+.bash.source-bash .co2 {color: #cc0000; font-style: italic;}
+.bash.source-bash .co3 {color: #000000; font-weight: bold;}
+.bash.source-bash .co4 {color: #666666;}
+.bash.source-bash .es1 {color: #000099; font-weight: bold;}
+.bash.source-bash .es2 {color: #007800;}
+.bash.source-bash .es3 {color: #007800;}
+.bash.source-bash .es4 {color: #007800;}
+.bash.source-bash .es5 {color: #780078;}
+.bash.source-bash .es_h {color: #000099; font-weight: bold;}
+.bash.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .sy0 {color: #000000; font-weight: bold;}
+.bash.source-bash .st0 {color: #ff0000;}
+.bash.source-bash .st_h {color: #ff0000;}
+.bash.source-bash .nu0 {color: #000000;}
+.bash.source-bash .re0 {color: #007800;}
+.bash.source-bash .re1 {color: #007800;}
+.bash.source-bash .re2 {color: #007800;}
+.bash.source-bash .re4 {color: #007800;}
+.bash.source-bash .re5 {color: #660033;}
+.bash.source-bash .ln-xtra, .bash.source-bash li.ln-xtra, .bash.source-bash div.ln-xtra {background-color: #ffc;}
+.bash.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Pipeline_Unix skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Pipeline (Unix)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div style="clear: right; margin-bottom: .5em; float: right; padding: .5em 0 .8em 1.4em; background: none; width: auto;">
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Pipelines_in_command_line_interfaces"><span class="tocnumber">1</span> <span class="toctext">Pipelines in command line interfaces</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Error_stream"><span class="tocnumber">1.1</span> <span class="toctext">Error stream</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Pipemill"><span class="tocnumber">1.2</span> <span class="toctext">Pipemill</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Creating_pipelines_programmatically"><span class="tocnumber">2</span> <span class="toctext">Creating pipelines programmatically</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Implementation"><span class="tocnumber">3</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Network_pipes"><span class="tocnumber">3.1</span> <span class="toctext">Network pipes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#History"><span class="tocnumber">4</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Other_operating_systems"><span class="tocnumber">4.1</span> <span class="toctext">Other operating systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:282px;"><a href="http://en.wikipedia.org/wiki/File:Pipeline.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pipeline.svg/280px-Pipeline.svg.png" width="280" height="266" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pipeline.svg/420px-Pipeline.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pipeline.svg/560px-Pipeline.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Pipeline.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A pipeline of three programs run on a text terminal</div>
+</div>
+</div>
+<p>In <a href="Unix-like.html" title="Unix-like">Unix-like</a> computer <a href="Operating_system.html" title="Operating system">operating systems</a> (and, to some extent, <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a>), a <b>pipeline</b> is the original <i><a href="http://en.wikipedia.org/wiki/Pipeline_(software)" title="Pipeline (software)">software pipeline</a></i>: a set of <a href="Process_(computing).html" title="Process (computing)">processes</a> chained by their <a href="http://en.wikipedia.org/wiki/Standard_streams" title="Standard streams">standard streams</a>, so that the output of each process (<i><a href="http://en.wikipedia.org/wiki/Stdout" title="Stdout" class="mw-redirect">stdout</a></i>) feeds directly as input (<i><a href="http://en.wikipedia.org/wiki/Stdin" title="Stdin" class="mw-redirect">stdin</a></i>) to the next one. Each connection is implemented by an <a href="http://en.wikipedia.org/wiki/Anonymous_pipe" title="Anonymous pipe">anonymous pipe</a>. <a href="http://en.wikipedia.org/wiki/Filter_(Unix)" title="Filter (Unix)">Filter programs</a> are often used in this configuration.</p>
+<p>The concept was invented by <a href="Douglas_McIlroy.html" title="Douglas McIlroy">Douglas McIlroy</a> for <a href="Unix_shell.html" title="Unix shell">Unix shells</a> and it was named by analogy to a physical <a href="http://en.wikipedia.org/wiki/Pipeline_transport" title="Pipeline transport">pipeline</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> Abstract (illustrated) and concrete examples with the shell syntax:</p>
+<pre>
+ % program1 | program2 | program3 
+ % ls -l | grep key | more
+</pre>
+<p>Unix pipeline can be thought of as <a href="http://en.wikipedia.org/wiki/Left_associative" title="Left associative" class="mw-redirect">left associative</a> <a href="http://en.wikipedia.org/wiki/Infix_notation" title="Infix notation">infix operation</a> whose operands are programs with parameters. Programatically all programs in pipeline run at the same time (in parallel), but, looking at syntax, it can be thought that one runs after another. It is a <a href="http://en.wikipedia.org/wiki/Functional_composition" title="Functional composition" class="mw-redirect">functional composition</a>. One can be reminded of <a href="Functional_programming.html" title="Functional programming">functional programming</a>, where data is passed from one function to another (as their input or output).</p>
+<h2><span class="mw-headline" id="Pipelines_in_command_line_interfaces">Pipelines in command line interfaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=1" title="Edit section: Pipelines in command line interfaces">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span id="Pipelines_in_command_line_interfaces"></span><span id="pipe_character"></span> All widely used Unix and Windows shells have a special syntax construct for the creation of pipelines. In all usage one writes the filter commands in sequence, separated by the <a href="ASCII.html" title="ASCII">ASCII</a> <a href="http://en.wikipedia.org/wiki/Vertical_bar" title="Vertical bar">vertical bar</a> character "<code>|</code>" (which, for this reason, is often called "pipe character"). The shell starts the processes and arranges for the necessary connections between their standard streams (including some amount of <a href="http://en.wikipedia.org/wiki/Buffer_(computer_science)" title="Buffer (computer science)" class="mw-redirect">buffer</a> storage).</p>
+<h3><span class="mw-headline" id="Error_stream">Error stream</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=2" title="Edit section: Error stream">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>By default, the <a href="http://en.wikipedia.org/wiki/Standard_error_stream" title="Standard error stream" class="mw-redirect">standard error streams</a> ("<a href="http://en.wikipedia.org/wiki/Stderr" title="Stderr" class="mw-redirect">stderr</a>") of the processes in a pipeline are not passed on through the pipe; instead, they are merged and directed to the <a href="http://en.wikipedia.org/wiki/System_console" title="System console">console</a>. However, many shells have additional syntax for changing this behaviour. In the <a href="C_shell.html" title="C shell">csh</a> shell, for instance, using "<code>|&amp;</code>" instead of "<code>|</code>" signifies that the standard error stream too should be merged with the standard output and fed to the next process. The <a href="http://en.wikipedia.org/wiki/Bourne_Shell" title="Bourne Shell" class="mw-redirect">Bourne Shell</a> can also merge standard error, using <code>2&gt;&amp;1</code>, as well as redirect it to a different file.</p>
+<h3><span class="mw-headline" id="Pipemill">Pipemill</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=3" title="Edit section: Pipemill">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the most commonly used simple pipelines the shell connects a series of sub-processes via pipes, and executes external commands within each sub-process. Thus the shell itself is doing no direct processing of the data flowing through the pipeline.</p>
+<p>However, it's possible for the shell to perform processing directly, using a "pipemill" (since a <tt>while</tt> command is used to "mill" over the results from the initial command). This construct generally looks something like:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="kw3">command</span> <span class="sy0">|</span> <span class="kw1">while</span> <span class="kw2">read</span> var1 var2 ...; <span class="kw1">do</span>
+   <span class="co0"># process each line, using variables as parsed into $var1, $var2, etc</span>
+   <span class="co0"># (note that this is a subshell: var1, var2 etc will not be available</span>
+   <span class="co0"># after the while loop terminates)</span>
+   <span class="kw1">done</span>
+</pre></div>
+</div>
+<p>When using programs such as <code><a href="http://en.wikipedia.org/wiki/Secure_Shell" title="Secure Shell">ssh</a></code>, <i><a href="http://en.wikipedia.org/wiki/Stdin" title="Stdin" class="mw-redirect">stdin</a></i> is being passed to the remote command. As such the default standard input handling of <code>ssh</code> drains the remaining hosts from the <code>while</code> loop.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> To prevent this, <i>stdin</i> might be redirected from <code>/dev/null</code> (by <code>&lt; /dev/null</code>). In the case of <code>ssh</code>, <code>-n</code> might be used to prevent <code>ssh</code> reading from <i>stdin</i>.</p>
+<h2><span class="mw-headline" id="Creating_pipelines_programmatically">Creating pipelines programmatically</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=4" title="Edit section: Creating pipelines programmatically">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Pipelines can be created under program control. The Unix <code>pipe()</code> <a href="System_call.html" title="System call">system call</a> asks the operating system to construct a new <a href="http://en.wikipedia.org/wiki/Anonymous_pipe" title="Anonymous pipe">anonymous pipe</a> object. This results in two new, opened file descriptors in the process: the read-only end of the pipe, and the write-only end. The pipe ends appear to be normal, anonymous <a href="http://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptors</a>, except that they have no ability to seek.</p>
+<p>To avoid <a href="http://en.wikipedia.org/wiki/Deadlock" title="Deadlock">deadlock</a> and exploit parallelism, the Unix process with one or more new pipes will then, generally, call <code><a href="http://en.wikipedia.org/wiki/Fork_(computing)" title="Fork (computing)" class="mw-redirect">fork()</a></code> to create new processes. Each process will then close the end(s) of the pipe that it will not be using before producing or consuming any data. Alternatively, a process might create a new <a href="http://en.wikipedia.org/wiki/Pthreads" title="Pthreads" class="mw-redirect">thread</a> and use the pipe to communicate between them.</p>
+<p><i><a href="http://en.wikipedia.org/wiki/Named_pipe" title="Named pipe">Named pipes</a></i> may also be created using <code>mkfifo()</code> or <code><a href="http://en.wikipedia.org/wiki/Mknod" title="Mknod" class="mw-redirect">mknod</a>()</code> and then presented as the input or output file to programs as they are invoked. They allow multi-path pipes to be created, and are especially effective when combined with standard error redirection, or with <code><a href="Tee_(command).html" title="Tee (command)">tee</a></code>.</p>
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=5" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In most Unix-like systems, all processes of a pipeline are started at the same time, with their streams appropriately connected, and managed by the <a href="Scheduling_(computing).html" title="Scheduling (computing)">scheduler</a> together with all other processes running on the machine. An important aspect of this, setting Unix pipes apart from other pipe implementations, is the concept of <a href="http://en.wikipedia.org/wiki/Buffer_(computer_science)" title="Buffer (computer science)" class="mw-redirect">buffering</a>: for example a sending program may produce 5000 <a href="http://en.wikipedia.org/wiki/Bytes" title="Bytes" class="mw-redirect">bytes</a> per <a href="http://en.wikipedia.org/wiki/Second" title="Second">second</a>, and a receiving program may only be able to accept 100 bytes per second, but no data is lost. Instead, the output of the sending program is held in a <a href="Queue_(data_structure).html" title="Queue (data structure)" class="mw-redirect">queue</a>. When the receiving program is ready to read data, the operating system sends its data from the queue, then removes that data from the queue. If the queue buffer fills up, the sending program is suspended (blocked) until the receiving program has had a chance to read some data and make room in the buffer. In Linux, the size of the buffer is 65536 bytes. An open source third-party filter called <a rel="nofollow" class="external text" href="http://freecode.com/projects/buffer">bfr</a> is available to provide larger buffers if required.</p>
+<h3><span class="mw-headline" id="Network_pipes">Network pipes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=6" title="Edit section: Network pipes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Tools like <a href="Netcat.html" title="Netcat">netcat</a> and <a href="http://en.wikipedia.org/wiki/Socat" title="Socat" class="mw-redirect">socat</a> can connect pipes to TCP/IP <a href="http://en.wikipedia.org/wiki/Internet_socket" title="Internet socket" class="mw-redirect">sockets</a>.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=7" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The pipeline concept and the vertical-bar notation were invented by <a href="Douglas_McIlroy.html" title="Douglas McIlroy">Douglas McIlroy</a>, one of the authors of the early <a href="Unix_shell.html" title="Unix shell">command shells</a>, after he noticed that much of the time they were processing the output of one program as the input to another. His ideas were implemented in 1973 when <a href="Ken_Thompson.html" title="Ken Thompson">Ken Thompson</a> added pipes to the <a href="http://en.wikipedia.org/wiki/UNIX" title="UNIX" class="mw-redirect">UNIX</a> operating system.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> The idea was eventually ported to other operating systems, such as <a href="DOS.html" title="DOS">DOS</a>, <a href="OS/2.html" title="OS/2">OS/2</a>, <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a>, and <a href="BeOS.html" title="BeOS">BeOS</a>, often with the same notation.</p>
+<p>Although developed independently, Unix pipes are similar to, and were preceded by, the 'communication files' developed by Ken Lochner <sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> in the 1960s for the <a href="Dartmouth_Time_Sharing_System.html" title="Dartmouth Time Sharing System">Dartmouth Time Sharing System</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>The robot in the icon for <a href="http://en.wikipedia.org/wiki/Apple_Computer" title="Apple Computer" class="mw-redirect">Apple</a>'s <a href="http://en.wikipedia.org/wiki/Automator_(software)" title="Automator (software)">Automator</a>, which also uses a pipeline concept to chain repetitive commands together, holds a pipe in homage to the original Unix concept.</p>
+<h3><span class="mw-headline" id="Other_operating_systems">Other operating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=8" title="Edit section: Other operating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Pipeline_(software)" title="Pipeline (software)">Pipeline (software)</a></div>
+<p>This feature of <a href="Unix.html" title="Unix">Unix</a> was borrowed by other operating systems, such as <a href="http://en.wikipedia.org/w/index.php?title=Taos_operating_system&amp;action=edit&amp;redlink=1" class="new" title="Taos operating system (page does not exist)">Taos</a> and <a href="MS-DOS.html" title="MS-DOS">MS-DOS</a>, and eventually became the <a href="http://en.wikipedia.org/wiki/Pipeline_(software)" title="Pipeline (software)">pipes and filters design pattern</a> of <a href="Software_engineering.html" title="Software engineering">software engineering</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Anonymous_pipe" title="Anonymous pipe">Anonymous pipe</a>, a <a href="http://en.wikipedia.org/wiki/FIFO" title="FIFO">FIFO</a> structure used for <a href="http://en.wikipedia.org/wiki/Interprocess_communication" title="Interprocess communication" class="mw-redirect">interprocess communication</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GStreamer" title="GStreamer">GStreamer</a>, a pipeline-based multimedia framework</li>
+<li><a href="http://en.wikipedia.org/wiki/Hartmann_pipeline" title="Hartmann pipeline">Hartmann pipeline</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Iteratee" title="Iteratee">Iteratee</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Named_pipe" title="Named pipe">Named pipe</a> persistent pipes used for interprocess communication</li>
+<li><a href="http://en.wikipedia.org/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline (computing)</a> for other computer-related pipelines.</li>
+<li><a href="http://en.wikipedia.org/wiki/Pipeline_(software)" title="Pipeline (software)">Pipeline (software)</a> for the general software engineering concept.</li>
+<li><a href="http://en.wikipedia.org/wiki/Redirection_(computing)" title="Redirection (computing)">Redirection (computing)</a></li>
+<li><a href="Tee_(command).html" title="Tee (command)">Tee (command)</a>, a general command for tapping data from a pipeline</li>
+<li><a href="http://en.wikipedia.org/wiki/XML_pipeline" title="XML pipeline">XML pipeline</a> for processing of XML files</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html">http://cm.bell-labs.com/cm/cs/who/dmr/mdmpipe.html</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://72.14.189.113/howto/shell/while-ssh/">http://72.14.189.113/howto/shell/while-ssh/</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.linfo.org/pipe.html">http://www.linfo.org/pipe.html</a> Pipes: A Brief Introduction by The Linux Information Project (LINFO)</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.cs.rit.edu/~swm/history/DTSS.doc">http://www.cs.rit.edu/~swm/history/DTSS.doc</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://cm.bell-labs.com/who/dmr/hist.html">http://cm.bell-labs.com/who/dmr/hist.html</a></span></li>
+</ol>
+</div>
+<div class="refbegin" style="">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Sal_Soghoian" title="Sal Soghoian">Sal Soghoian</a> on <a href="http://en.wikipedia.org/wiki/MacBreak" title="MacBreak">MacBreak</a> Episode 3 "Enter the Automatrix"</li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/who/dmr/hist.html#pipes">History of Unix pipe notation</a>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://doc.cat-v.org/unix/pipes/">Doug McIlroy’s original 1964 memo</a>, proposing the concept of a pipe for the first time</li>
+</ul>
+</li>
+<li><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://www.opengroup.org/onlinepubs/9699919799/functions/pipe.html">pipe</a></code></span>:&#160;create an interprocess channel&#160;–&#160;System Interfaces Reference, <a href="http://en.wikipedia.org/wiki/Single_Unix_Specification" title="Single Unix Specification" class="mw-redirect">The Single UNIX® Specification</a>, Issue 7 from <a href="The_Open_Group.html" title="The Open Group">The Open Group</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/pipe.html">Pipes: A Brief Introduction</a> by The Linux Information Project (LINFO)</li>
+<li><a rel="nofollow" class="external text" href="http://www.softpanorama.org/Scripting/pipes.shtml">Unix Pipes – powerful and elegant programming paradigm (Softpanorama)</a></li>
+<li><a class="external text" href="http://en.wikibooks.org/w/index.php?title=Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line"><i>Ad Hoc Data Analysis From The Unix Command Line</i> at Wikibooks</a> – Shows how to use pipelines composed of simple filters to do complex data analysis.</li>
+<li><a rel="nofollow" class="external text" href="http://www.debian-administration.org/articles/145">Use And Abuse Of Pipes With Audio Data</a> – Gives an introduction to using and abusing pipes with netcat, nettee and fifos to play audio across a network.</li>
+<li><a rel="nofollow" class="external text" href="http://stackoverflow.com/questions/19122/bash-pipe-handling">stackoverflow.com</a> – A Q&amp;A about bash pipeline handling.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1093
+CPU time usage: 0.408 seconds
+Real time usage: 0.467 seconds
+Preprocessor visited node count: 386/1000000
+Preprocessor generated node count: 2496/1500000
+Post‐expand include size: 2235/2048000 bytes
+Template argument size: 626/2048000 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 0/500
+Lua time usage: 0.010/10.000 seconds
+Lua memory usage: 494 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1236117-0!*!0!!en!4!* and timestamp 20140315134456
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;oldid=598256821">http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;oldid=598256821</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Inter-process_communication" title="Category:Inter-process communication">Inter-process communication</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Unix" title="Category:Unix">Unix</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pipeline+%28Unix%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pipeline+%28Unix%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Pipeline_(Unix).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Pipeline_(Unix)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Pipeline_(Unix).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Pipeline_(Unix)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Pipeline_(Unix)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;oldid=598256821" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1196672" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Pipeline_%28Unix%29&amp;id=598256821" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Pipeline+%28Unix%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Pipeline+%28Unix%29&amp;oldid=598256821&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Pipeline_(Unix)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Roura_(Unix)" title="Roura (Unix) – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/لوله‌کشی_(یونیکس)" title="لوله‌کشی (یونیکس) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Tube_(shell)" title="Tube (shell) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/파이프_(유닉스)" title="파이프 (유닉스) – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Pipeline_software" title="Pipeline software – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/パイプ_(コンピュータ)" title="パイプ (コンピュータ) – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Potok_(Unix)" title="Potok (Unix) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Encadeamento" title="Encadeamento – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Конвейер_(UNIX)" title="Конвейер (UNIX) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Zreťazenie" title="Zreťazenie – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Vertikalstreck#Datavetenskap" title="Vertikalstreck – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Конвеєр_(Unix)" title="Конвеєр (Unix) – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/管道_(Unix)" title="管道 (Unix) – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1196672#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 5 March 2014 at 14:14.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Pipeline_(Unix)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1029 in 0.398 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pipeline_(Unix) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:37 GMT -->
+</html>

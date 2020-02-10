@@ -1,0 +1,773 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Type_polymorphism.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Type_polymorphism by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Polymorphism (computer science) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Polymorphism_(computer_science)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Polymorphism_(computer_science)" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Polymorphism_(computer_science)","wgTitle":"Polymorphism (computer science)","wgCurRevisionId":600066904,"wgRevisionId":600066904,"wgArticleId":261811,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from September 2013","Articles using fixed number of columns in reflist","Polymorphism (computer science)","Functional programming","Object-oriented programming","Programming language concepts","Type theory","Data types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Polymorphism_(computer_science)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Type_polymorphism","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q3240252"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-pascal {line-height: normal;}
+.source-pascal li, .source-pascal pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for pascal
+ * CSS class: source-pascal, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.pascal.source-pascal .de1, .pascal.source-pascal .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.pascal.source-pascal  {font-family:monospace;}
+.pascal.source-pascal .imp {font-weight: bold; color: red;}
+.pascal.source-pascal li, .pascal.source-pascal .li1 {font-weight: normal; vertical-align:top;}
+.pascal.source-pascal .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.pascal.source-pascal .li2 {font-weight: bold; vertical-align:top;}
+.pascal.source-pascal .kw1 {color: #000000; font-weight: bold;}
+.pascal.source-pascal .kw2 {color: #000000; font-weight: bold;}
+.pascal.source-pascal .kw3 {color: #000066;}
+.pascal.source-pascal .kw4 {color: #000066; font-weight: bold;}
+.pascal.source-pascal .co1 {color: #808080; font-style: italic;}
+.pascal.source-pascal .co2 {color: #008000; font-style: italic;}
+.pascal.source-pascal .coMULTI {color: #808080; font-style: italic;}
+.pascal.source-pascal .es0 {color: #ff0000; font-weight: bold;}
+.pascal.source-pascal .br0 {color: #009900;}
+.pascal.source-pascal .sy0 {color: #000066;}
+.pascal.source-pascal .sy1 {color: #000066;}
+.pascal.source-pascal .sy2 {color: #000066;}
+.pascal.source-pascal .sy3 {color: #000066;}
+.pascal.source-pascal .st0 {color: #ff0000;}
+.pascal.source-pascal .nu0 {color: #cc66cc;}
+.pascal.source-pascal .me1 {color: #006600;}
+.pascal.source-pascal .re0 {color: #0000cc;}
+.pascal.source-pascal .re1 {color: #ff0000;}
+.pascal.source-pascal .ln-xtra, .pascal.source-pascal li.ln-xtra, .pascal.source-pascal div.ln-xtra {background-color: #ffc;}
+.pascal.source-pascal span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-haskell {line-height: normal;}
+.source-haskell li, .source-haskell pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for haskell
+ * CSS class: source-haskell, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.haskell.source-haskell .de1, .haskell.source-haskell .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.haskell.source-haskell  {font-family:monospace;}
+.haskell.source-haskell .imp {font-weight: bold; color: red;}
+.haskell.source-haskell li, .haskell.source-haskell .li1 {font-weight: normal; vertical-align:top;}
+.haskell.source-haskell .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.haskell.source-haskell .li2 {font-weight: bold; vertical-align:top;}
+.haskell.source-haskell .kw1 {color: #06c; font-weight: bold;}
+.haskell.source-haskell .kw2 {color: #06c; font-weight: bold;}
+.haskell.source-haskell .kw3 {font-weight: bold;}
+.haskell.source-haskell .kw4 {color: #cccc00; font-weight: bold;}
+.haskell.source-haskell .kw5 {color: maroon;}
+.haskell.source-haskell .co1 {color: #5d478b; font-style: italic;}
+.haskell.source-haskell .co2 {color: #339933; font-weight: bold;}
+.haskell.source-haskell .co3 {color: #5d478b; font-style: italic;}
+.haskell.source-haskell .coMULTI {color: #5d478b; font-style: italic;}
+.haskell.source-haskell .es0 {background-color: #3cb371; font-weight: bold;}
+.haskell.source-haskell .br0 {color: green;}
+.haskell.source-haskell .sy0 {color: #339933; font-weight: bold;}
+.haskell.source-haskell .st0 {background-color: #3cb371;}
+.haskell.source-haskell .nu0 {color: red;}
+.haskell.source-haskell .me1 {color: #060;}
+.haskell.source-haskell .ln-xtra, .haskell.source-haskell li.ln-xtra, .haskell.source-haskell div.ln-xtra {background-color: #ffc;}
+.haskell.source-haskell span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-csharp {line-height: normal;}
+.source-csharp li, .source-csharp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for csharp
+ * CSS class: source-csharp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.csharp.source-csharp .de1, .csharp.source-csharp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.csharp.source-csharp  {font-family:monospace;}
+.csharp.source-csharp .imp {font-weight: bold; color: red;}
+.csharp.source-csharp li, .csharp.source-csharp .li1 {font-weight: normal; vertical-align:top;}
+.csharp.source-csharp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.csharp.source-csharp .li2 {font-weight: bold; vertical-align:top;}
+.csharp.source-csharp .kw1 {color: #0600FF; font-weight: bold;}
+.csharp.source-csharp .kw2 {color: #FF8000; font-weight: bold;}
+.csharp.source-csharp .kw3 {color: #008000;}
+.csharp.source-csharp .kw4 {color: #6666cc; font-weight: bold;}
+.csharp.source-csharp .kw5 {color: #000000;}
+.csharp.source-csharp .co1 {color: #008080; font-style: italic;}
+.csharp.source-csharp .co2 {color: #008080;}
+.csharp.source-csharp .co3 {color: #008080;}
+.csharp.source-csharp .coMULTI {color: #008080; font-style: italic;}
+.csharp.source-csharp .es0 {color: #008080; font-weight: bold;}
+.csharp.source-csharp .es_h {color: #008080; font-weight: bold;}
+.csharp.source-csharp .br0 {color: #008000;}
+.csharp.source-csharp .sy0 {color: #008000;}
+.csharp.source-csharp .st0 {color: #666666;}
+.csharp.source-csharp .st_h {color: #666666;}
+.csharp.source-csharp .nu0 {color: #FF0000;}
+.csharp.source-csharp .me1 {color: #0000FF;}
+.csharp.source-csharp .me2 {color: #0000FF;}
+.csharp.source-csharp .ln-xtra, .csharp.source-csharp li.ln-xtra, .csharp.source-csharp div.ln-xtra {background-color: #ffc;}
+.csharp.source-csharp span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-java {line-height: normal;}
+.source-java li, .source-java pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.java.source-java .de1, .java.source-java .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.java.source-java  {font-family:monospace;}
+.java.source-java .imp {font-weight: bold; color: red;}
+.java.source-java li, .java.source-java .li1 {font-weight: normal; vertical-align:top;}
+.java.source-java .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.java.source-java .li2 {font-weight: bold; vertical-align:top;}
+.java.source-java .kw1 {color: #000000; font-weight: bold;}
+.java.source-java .kw2 {color: #000066; font-weight: bold;}
+.java.source-java .kw3 {color: #003399;}
+.java.source-java .kw4 {color: #000066; font-weight: bold;}
+.java.source-java .co1 {color: #666666; font-style: italic;}
+.java.source-java .co2 {color: #006699;}
+.java.source-java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java.source-java .coMULTI {color: #666666; font-style: italic;}
+.java.source-java .es0 {color: #000099; font-weight: bold;}
+.java.source-java .br0 {color: #009900;}
+.java.source-java .sy0 {color: #339933;}
+.java.source-java .st0 {color: #0000ff;}
+.java.source-java .nu0 {color: #cc66cc;}
+.java.source-java .me1 {color: #006633;}
+.java.source-java .me2 {color: #006633;}
+.java.source-java .ln-xtra, .java.source-java li.ln-xtra, .java.source-java div.ln-xtra {background-color: #ffc;}
+.java.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Polymorphism_computer_science skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Polymorphism (computer science)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Type_polymorphism&amp;redirect=no" title="Type polymorphism">Type polymorphism</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>In <a href="Programming_language.html" title="Programming language">programming languages</a> and <a href="Type_theory.html" title="Type theory">type theory</a>, <b>polymorphism</b> (from Greek <a href="http://en.wiktionary.org/wiki/πολύς#Ancient_Greek" class="extiw" title="wikt:πολύς">πολύς</a>, polys, "many, much" and <a href="http://en.wiktionary.org/wiki/μορφή#Ancient_Greek" class="extiw" title="wikt:μορφή">μορφή</a>, morphē, "form, shape") is the provision of a single interface to entities of different <a href="Data_type.html" title="Data type">types</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> A <b>polymorphic type</b> is a type whose operations can also be applied to values of some other type, or types.<sup id="cite_ref-Luca_2-0" class="reference"><a href="#cite_note-Luca-2"><span>[</span>2<span>]</span></a></sup> There are several fundamentally different kinds of polymorphism:</p>
+<ul>
+<li>If a function denotes different and potentially heterogeneous implementations depending on a limited range of individually specified types and combinations, it is called <a href="http://en.wikipedia.org/wiki/Ad_hoc_polymorphism" title="Ad hoc polymorphism"><i>ad hoc</i> polymorphism</a>. <i>Ad hoc</i> polymorphism is supported in many languages using <a href="http://en.wikipedia.org/wiki/Function_overloading" title="Function overloading">function overloading</a>.</li>
+<li>If the code is written without mention of any specific type and thus can be used transparently with any number of new types, it is called <a href="http://en.wikipedia.org/wiki/Parametric_polymorphism" title="Parametric polymorphism">parametric polymorphism</a>. In the object-oriented programming community, this is often known as <i>generics</i> or <i><a href="Generic_programming.html" title="Generic programming">generic programming</a></i>. In the functional programming community, this is often simply called <i>polymorphism</i>.</li>
+<li><a href="http://en.wikipedia.org/wiki/Subtyping" title="Subtyping">Subtyping</a> (or <i>inclusion polymorphism</i>) is a concept wherein a name may denote instances of many different classes as long as they are related by some common superclass.<sup id="cite_ref-gbooch_3-0" class="reference"><a href="#cite_note-gbooch-3"><span>[</span>3<span>]</span></a></sup> In object-oriented programming, this is often referred to simply as <i>polymorphism</i>.</li>
+</ul>
+<p>The interaction between parametric polymorphism and subtyping leads to the concepts of <a href="http://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)" title="Covariance and contravariance (computer science)">variance</a> and <a href="http://en.wikipedia.org/wiki/Bounded_quantification" title="Bounded quantification">bounded quantification</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Types_of_polymorphism"><span class="tocnumber">2</span> <span class="toctext">Types of polymorphism</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Ad_hoc_polymorphism"><span class="tocnumber">2.1</span> <span class="toctext">Ad hoc polymorphism</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Parametric_polymorphism"><span class="tocnumber">2.2</span> <span class="toctext">Parametric polymorphism</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Subtyping"><span class="tocnumber">2.3</span> <span class="toctext"> Subtyping</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Polytypism"><span class="tocnumber">3</span> <span class="toctext">Polytypism</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>Ad hoc</i> polymorphism and parametric polymorphism were originally described in <i><a href="http://en.wikipedia.org/wiki/Fundamental_Concepts_in_Programming_Languages" title="Fundamental Concepts in Programming Languages">Fundamental Concepts in Programming Languages</a></i>, a set of lecture notes written in 1967 by British computer scientist <a href="http://en.wikipedia.org/wiki/Christopher_Strachey" title="Christopher Strachey">Christopher Strachey</a>.<sup id="cite_ref-Strachey_4-0" class="reference"><a href="#cite_note-Strachey-4"><span>[</span>4<span>]</span></a></sup> In a 1985 paper, <a href="Peter_Wegner.html" title="Peter Wegner">Peter Wegner</a> and <a href="http://en.wikipedia.org/wiki/Luca_Cardelli" title="Luca Cardelli">Luca Cardelli</a> introduced the term <i>inclusion polymorphism</i> to model subtypes and <a href="http://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)" title="Inheritance (object-oriented programming)">inheritance</a>.<sup id="cite_ref-Luca_2-1" class="reference"><a href="#cite_note-Luca-2"><span>[</span>2<span>]</span></a></sup> However, implementations of subtyping and inheritance predate the term 'inclusion polymorphism', having appeared with <a href="http://en.wikipedia.org/wiki/Simula" title="Simula">Simula</a> in 1967.</p>
+<h2><span class="mw-headline" id="Types_of_polymorphism">Types of polymorphism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=2" title="Edit section: Types of polymorphism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Ad_hoc_polymorphism">Ad hoc polymorphism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=3" title="Edit section: Ad hoc polymorphism">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Ad_hoc_polymorphism" title="Ad hoc polymorphism">Ad hoc polymorphism</a></div>
+<p><a href="http://en.wikipedia.org/wiki/Chris_Strachey" title="Chris Strachey" class="mw-redirect">Chris Strachey</a><sup id="cite_ref-Strachey_4-1" class="reference"><a href="#cite_note-Strachey-4"><span>[</span>4<span>]</span></a></sup> chose the term ad hoc polymorphism to refer to polymorphic functions which can be applied to arguments of different types, but which behave differently depending on the type of the argument to which they are applied (also known as <a href="http://en.wikipedia.org/wiki/Function_overloading" title="Function overloading">function overloading</a> or <a href="http://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">operator overloading</a>). The term "<a href="http://en.wikipedia.org/wiki/Ad_hoc" title="Ad hoc">ad hoc</a>" in this context is not intended to be pejorative; it refers simply to the fact that this type of polymorphism is not a fundamental feature of the type system. In the example below, the <code>Add</code> functions seem to work generically over various types when looking at the invocations, but are considered to be two entirely distinct functions by the compiler for all intents and purposes:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="pascal source-pascal">
+<pre class="de1">
+<span class="kw1">program</span> Adhoc<span class="sy1">;</span>
+ 
+<span class="kw1">function</span> Add<span class="br0">(</span> x<span class="sy1">,</span> y <span class="sy1">:</span> <span class="kw4">Integer</span> <span class="br0">)</span> <span class="sy1">:</span> <span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+    Add <span class="sy1">:</span><span class="sy3">=</span> x <span class="sy3">+</span> y
+<span class="kw1">end</span><span class="sy1">;</span>
+ 
+<span class="kw1">function</span> Add<span class="br0">(</span> s<span class="sy1">,</span> t <span class="sy1">:</span> <span class="kw4">String</span> <span class="br0">)</span> <span class="sy1">:</span> <span class="kw4">String</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+    Add <span class="sy1">:</span><span class="sy3">=</span> Concat<span class="br0">(</span> s<span class="sy1">,</span> t <span class="br0">)</span>
+<span class="kw1">end</span><span class="sy1">;</span>
+ 
+<span class="kw1">begin</span>
+    <span class="kw3">Writeln</span><span class="br0">(</span>Add<span class="br0">(</span><span class="nu0">1</span><span class="sy1">,</span> <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><span class="sy1">;</span>
+    <span class="kw3">Writeln</span><span class="br0">(</span>Add<span class="br0">(</span><span class="st0">'Hello, '</span><span class="sy1">,</span> <span class="st0">'World!'</span><span class="br0">)</span><span class="br0">)</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">.</span>
+</pre></div>
+</div>
+<p>In <a href="http://en.wikipedia.org/wiki/Dynamically_typed" title="Dynamically typed" class="mw-redirect">dynamically typed</a> languages the situation can be more complex as the correct function that needs to be invoked might only be determinable at run time.</p>
+<p>Implicit type conversion has also been defined as a form of polymorphism, referred to as "coercion polymorphism".<sup id="cite_ref-Tucker2004_5-0" class="reference"><a href="#cite_note-Tucker2004-5"><span>[</span>5<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Parametric_polymorphism">Parametric polymorphism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=4" title="Edit section: Parametric polymorphism">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Parametric_polymorphism" title="Parametric polymorphism">Parametric polymorphism</a></div>
+<p>Parametric polymorphism allows a function or a data type to be written generically, so that it can handle values <i>identically</i> without depending on their type.<sup id="cite_ref-bjpierce_6-0" class="reference"><a href="#cite_note-bjpierce-6"><span>[</span>6<span>]</span></a></sup> Parametric polymorphism is a way to make a language more expressive, while still maintaining full static <a href="http://en.wikipedia.org/wiki/Type-safety" title="Type-safety" class="mw-redirect">type-safety</a>.</p>
+<p>The concept of parametric polymorphism applies to both <a href="Data_type.html" title="Data type">data types</a> and <a href="http://en.wikipedia.org/wiki/Function_(programming)" title="Function (programming)" class="mw-redirect">functions</a>. A function that can evaluate to or be applied to values of different types is known as a <i>polymorphic function.</i> A data type that can appear to be of a generalized type (e.g., a <a href="http://en.wikipedia.org/wiki/List_(computing)" title="List (computing)" class="mw-redirect">list</a> with elements of arbitrary type) is designated <i>polymorphic data type</i> like the generalized type from which such specializations are made.</p>
+<p>Parametric polymorphism is ubiquitous in functional programming, where it is often simply referred to as "polymorphism". The following example shows a parametrized list data type and two parametrically polymorphic functions on them:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="haskell source-haskell">
+<pre class="de1">
+<span class="kw1">data</span> List a <span class="sy0">=</span> Nil <span class="sy0">|</span> Cons a <span class="br0">(</span>List a<span class="br0">)</span>
+ 
+<span class="kw3">length</span> <span class="sy0">::</span> List a <span class="sy0">-&gt;</span> <span class="kw4">Integer</span>
+<span class="kw3">length</span> Nil         <span class="sy0">=</span> <span class="nu0">0</span>
+<span class="kw3">length</span> <span class="br0">(</span>Cons x xs<span class="br0">)</span> <span class="sy0">=</span> <span class="nu0">1</span> <span class="sy0">+</span> <span class="kw3">length</span> xs
+ 
+<span class="kw3">map</span> <span class="sy0">::</span> <span class="br0">(</span>a <span class="sy0">-&gt;</span> b<span class="br0">)</span> <span class="sy0">-&gt;</span> List a <span class="sy0">-&gt;</span> List b
+<span class="kw3">map</span> f Nil         <span class="sy0">=</span> Nil
+<span class="kw3">map</span> f <span class="br0">(</span>Cons x xs<span class="br0">)</span> <span class="sy0">=</span> Cons <span class="br0">(</span>f x<span class="br0">)</span> <span class="br0">(</span><span class="kw3">map</span> f xs<span class="br0">)</span>
+</pre></div>
+</div>
+<p>Parametric polymorphism is also available in several object-oriented languages, where it often goes under the name "generics" (for example, Java) or "templates" (C++ and D):</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="csharp source-csharp">
+<pre class="de1">
+<span class="kw4">class</span> List<span class="sy0">&lt;</span>T<span class="sy0">&gt;</span> <span class="br0">{</span>
+    <span class="kw4">class</span> Node<span class="sy0">&lt;</span>T<span class="sy0">&gt;</span> <span class="br0">{</span>
+        T elem<span class="sy0">;</span>
+        Node<span class="sy0">&lt;</span>T<span class="sy0">&gt;</span> next<span class="sy0">;</span>
+    <span class="br0">}</span>
+    Node<span class="sy0">&lt;</span>T<span class="sy0">&gt;</span> head<span class="sy0">;</span>
+    <span class="kw4">int</span> length<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span> <span class="sy0">...</span> <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+List<span class="sy0">&lt;</span>B<span class="sy0">&gt;</span> map<span class="br0">(</span>Func<span class="sy0">&lt;</span>A,B<span class="sy0">&gt;</span> f, List<span class="sy0">&lt;</span>A<span class="sy0">&gt;</span> xs<span class="br0">)</span> <span class="br0">{</span>
+    <span class="sy0">...</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p><a href="http://en.wikipedia.org/wiki/John_C._Reynolds" title="John C. Reynolds">John C. Reynolds</a> (and later <a href="http://en.wikipedia.org/wiki/Jean-Yves_Girard" title="Jean-Yves Girard">Jean-Yves Girard</a>) formally developed this notion of polymorphism as an extension to lambda calculus (called the <a href="http://en.wikipedia.org/wiki/Polymorphic_Lambda_Calculus" title="Polymorphic Lambda Calculus" class="mw-redirect">polymorphic lambda calculus</a>, or <a href="http://en.wikipedia.org/wiki/System_F" title="System F">System F</a>). Any parametrically polymorphic function is necessarily restricted in what it can do, working on the shape of the data instead of its value, leading to the concept of <a href="http://en.wikipedia.org/wiki/Parametricity" title="Parametricity">parametricity</a>.</p>
+<h3><span class="mw-headline" id="Subtyping"><span id="Subtyping"></span><span id="Subtype_polymorphism"></span> Subtyping</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=5" title="Edit section: Subtyping">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Subtyping" title="Subtyping">Subtyping</a></div>
+<p>Some languages employ the idea of <b>subtyping</b> to restrict the range of types that can be used in a particular case of polymorphism. In these languages, <b>subtype polymorphism</b> (sometimes referred to as <b>inclusion polymorphism</b> or <b>dynamic polymorphism</b><sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (September 2013)">citation needed</span></a></i>]</sup>) allows a function to be written to take an object of a certain type <i>T</i>, but also work correctly if passed an object that belongs to a type <i>S</i> that is a subtype of <i>T</i> (according to the <a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle" title="Liskov substitution principle">Liskov substitution principle</a>). This type relation is sometimes written <i>S</i>&#160;&lt;:&#160;<i>T</i>. Conversely, <i>T</i> is said to be a <i>supertype</i> of <i>S</i>—written <i>T</i>&#160;:&gt;&#160;<i>S</i>.</p>
+<p>In the following example we make cats and dogs subtypes of animals. The procedure write accepts an animal, but will also work correctly if a subtype is passed to it:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+<span class="kw1">abstract</span> <span class="kw1">class</span> Animal <span class="br0">{</span>
+    <span class="kw1">abstract</span> <span class="kw3">String</span> talk<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw1">class</span> Cat <span class="kw1">extends</span> Animal <span class="br0">{</span>
+    <span class="kw3">String</span> talk<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span> <span class="kw1">return</span> <span class="st0">"Meow!"</span><span class="sy0">;</span> <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw1">class</span> Dog <span class="kw1">extends</span> Animal <span class="br0">{</span>
+    <span class="kw3">String</span> talk<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span> <span class="kw1">return</span> <span class="st0">"Woof!"</span><span class="sy0">;</span> <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> lets_hear<span class="br0">(</span>Animal a<span class="br0">)</span> <span class="br0">{</span>
+    println<span class="br0">(</span>a.<span class="me1">talk</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    lets_hear<span class="br0">(</span><span class="kw1">new</span> Cat<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    lets_hear<span class="br0">(</span><span class="kw1">new</span> Dog<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>In another example, if <code>Number</code>, <code>Rational</code>, and <code>Integer</code> are types such that <code>Number</code>&#160;:&gt;&#160;<code>Rational</code> and <code>Number</code>&#160;:&gt;&#160;<code>Integer</code>, a function written to take a <code>Number</code> will work equally well when passed an <code>Integer</code> or <code>Rational</code> as when passed a <code>Number</code>. The actual type of the object can be hidden from clients into a <a href="http://en.wikipedia.org/wiki/Black_box_(systems)" title="Black box (systems)" class="mw-redirect">black box</a>, and accessed via object <a href="http://en.wikipedia.org/wiki/Identity_(object-oriented_programming)" title="Identity (object-oriented programming)">identity</a>. In fact, if the <code>Number</code> type is <i>abstract</i>, it may not even be possible to get your hands on an object whose <i>most-derived</i> type is <code>Number</code> (see <a href="Abstract_data_type.html" title="Abstract data type">abstract data type</a>, <a href="http://en.wikipedia.org/wiki/Abstract_class" title="Abstract class" class="mw-redirect">abstract class</a>). This particular kind of type hierarchy is known—especially in the context of the <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme programming language</a>—as a <i><a href="http://en.wikipedia.org/wiki/Numerical_tower" title="Numerical tower">numerical tower</a></i>, and usually contains many more types.</p>
+<p><a href="http://en.wikipedia.org/wiki/Object-oriented_programming_language" title="Object-oriented programming language" class="mw-redirect">Object-oriented programming languages</a> offer subtyping polymorphism using <i><a href="http://en.wikipedia.org/wiki/Subclass_(computer_science)" title="Subclass (computer science)" class="mw-redirect">subclassing</a></i> (also known as <i><a href="http://en.wikipedia.org/wiki/Inheritance_in_object-oriented_programming" title="Inheritance in object-oriented programming" class="mw-redirect">inheritance</a></i>). In typical implementations, each class contains what is called a <i><a href="http://en.wikipedia.org/wiki/Virtual_table" title="Virtual table" class="mw-redirect">virtual table</a></i>—a table of functions that implement the polymorphic part of the class interface—and each object contains a pointer to the "vtable" of its class, which is then consulted whenever a polymorphic method is called. This mechanism is an example of:</p>
+<ul>
+<li><i><a href="http://en.wikipedia.org/wiki/Late_binding" title="Late binding">late binding</a></i>, because virtual function calls are not bound until the time of invocation, and</li>
+<li><i><a href="http://en.wikipedia.org/wiki/Single_dispatch" title="Single dispatch" class="mw-redirect">single dispatch</a></i> (i.e., single-argument polymorphism), because virtual function calls are bound simply by looking through the vtable provided by the first argument (the <code>this</code> object), so the runtime types of the other arguments are completely irrelevant.</li>
+</ul>
+<p>The same goes for most other popular object systems. Some, however, such as <a href="http://en.wikipedia.org/wiki/Common_Lisp_Object_System" title="Common Lisp Object System">Common Lisp Object System</a>, provide <i><a href="http://en.wikipedia.org/wiki/Multiple_dispatch" title="Multiple dispatch">multiple dispatch</a></i>, under which method calls are polymorphic in <i>all</i> arguments.</p>
+<h2><span class="mw-headline" id="Polytypism">Polytypism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=6" title="Edit section: Polytypism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A related concept is polytypism. A polytypic function is more general than polymorphic, and in such a function, "though one can provide fixed <i>ad hoc</i> cases for specific data types, an <i>ad hoc</i> combinator is absent".<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Type_theory.html" title="Type theory">Type theory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Duck_typing" title="Duck typing">Duck typing</a> for polymorphism without (static) types</li>
+<li><a href="http://en.wikipedia.org/wiki/Polymorphic_code" title="Polymorphic code">Polymorphic code</a> (Computer virus terminology)</li>
+<li><a href="http://en.wikipedia.org/wiki/System_F" title="System F">System F</a> for a <a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a> with parametric polymorphism.</li>
+<li><a href="http://en.wikipedia.org/wiki/Type_class" title="Type class">Type class</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_inheritance" title="Virtual inheritance">Virtual inheritance</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web">Bjarne Stroustrup (February 19, 2007). <a rel="nofollow" class="external text" href="http://www.stroustrup.com/glossary.html#Gpolymorphism">"Bjarne Stroustrup's C++ Glossary"</a>. "polymorphism - providing a single interface to entities of different types."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APolymorphism+%28computer+science%29&amp;rft.au=Bjarne+Stroustrup&amp;rft.aulast=Bjarne+Stroustrup&amp;rft.btitle=Bjarne+Stroustrup%27s+C%2B%2B+Glossary&amp;rft.date=February+19%2C+2007&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fglossary.html%23Gpolymorphism&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Luca-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Luca_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Luca_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFCardelliWegner1985" class="citation journal"><a href="http://en.wikipedia.org/wiki/Luca_Cardelli" title="Luca Cardelli">Cardelli, Luca</a>; <a href="Peter_Wegner.html" title="Peter Wegner">Wegner, Peter</a> (December 1985). <a rel="nofollow" class="external text" href="http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf">"On Understanding Types, Data Abstraction, and Polymorphism"</a>. <i><a href="http://en.wikipedia.org/wiki/ACM_Computing_Surveys" title="ACM Computing Surveys">ACM Computing Surveys</a></i> (New York, NY, USA: <a href="Association_for_Computing_Machinery.html" title="Association for Computing Machinery">ACM</a>) <b>17</b> (4): 471–523. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F6041.6042">10.1145/6041.6042</a>. <a href="International_Standard_Serial_Number.html" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="http://www.worldcat.org/issn/0360-0300">0360-0300</a>. "Polymorphic types are types whose operations are applicable to values of more than one type"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APolymorphism+%28computer+science%29&amp;rft.atitle=On+Understanding+Types%2C+Data+Abstraction%2C+and+Polymorphism&amp;rft.au=Cardelli%2C+Luca&amp;rft.aufirst=Luca&amp;rft.aulast=Cardelli&amp;rft.au=Wegner%2C+Peter&amp;rft.date=December+1985&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Flucacardelli.name%2FPapers%2FOnUnderstanding.A4.pdf&amp;rft_id=info%3Adoi%2F10.1145%2F6041.6042&amp;rft.issn=0360-0300&amp;rft.issue=4&amp;rft.jtitle=ACM+Computing+Surveys&amp;rft.pages=471%26ndash%3B523&amp;rft.place=New+York%2C+NY%2C+USA&amp;rft.pub=ACM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=17" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-gbooch-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-gbooch_3-0">^</a></b></span> <span class="reference-text">Booch, et all 2007 <i>Object-Oriented Analysis and Design with Applications.</i> Addison-Wesley.</span></li>
+<li id="cite_note-Strachey-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Strachey_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Strachey_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">C. Strachey - <i>Fundamental Concepts in Programming Languages</i> <a rel="nofollow" class="external free" href="http://www.itu.dk/courses/BPRD/E2009/fundamental-1967.pdf">http://www.itu.dk/courses/BPRD/E2009/fundamental-1967.pdf</a></span></li>
+<li id="cite_note-Tucker2004-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Tucker2004_5-0">^</a></b></span> <span class="reference-text"><span class="citation book">Allen B. Tucker (28 June 2004). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=9IFMCsQJyscC&amp;pg=SA91-PA5"><i>Computer Science Handbook, Second Edition</i></a>. Taylor &amp; Francis. pp.&#160;91–. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-58488-360-9" title="Special:BookSources/978-1-58488-360-9">978-1-58488-360-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APolymorphism+%28computer+science%29&amp;rft.au=Allen+B.+Tucker&amp;rft.aulast=Allen+B.+Tucker&amp;rft.btitle=Computer+Science+Handbook%2C+Second+Edition&amp;rft.date=28+June+2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D9IFMCsQJyscC%26pg%3DSA91-PA5&amp;rft.isbn=978-1-58488-360-9&amp;rft.pages=91%E2%80%93&amp;rft.pub=Taylor+%26+Francis&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-bjpierce-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-bjpierce_6-0">^</a></b></span> <span class="reference-text">Pierce, B. C. 2002 <i>Types and Programming Languages.</i> MIT Press.</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Ralf Lammel and Joost Visser, "Typed Combinators for Generic Traversal", in <i>Practical Aspects of Declarative Languages: 4th International Symposium</i> (2002), p. 153.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.cplusplus.com/doc/tutorial/polymorphism/">C++ examples of polymorphism</a></li>
+<li><a rel="nofollow" class="external text" href="http://wiki.visual-prolog.com/index.php?title=Objects_and_Polymorphism">Objects and Polymorphism (Visual Prolog)</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_types" title="Template:Data types"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_types" title="Template talk:Data types"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_types&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_type.html" title="Data type">Data types</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Uninterpreted</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit.html" title="Bit">Bit</a></li>
+<li><a href="Byte.html" title="Byte">Byte</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_numeral_system" title="Ternary numeral system">Trit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_numeral_system#Tryte" title="Ternary numeral system">Tryte</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Numeric</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Bignum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Complex_data_type" title="Complex data type">Complex</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Decimal_data_type" title="Decimal data type">Decimal</a></li>
+<li><a href="Fixed-point_arithmetic.html" title="Fixed-point arithmetic">Fixed-point</a></li>
+<li><a href="Floating_point.html" title="Floating point">Floating-point</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">Integer</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Signedness" title="Signedness">signedness</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Interval_arithmetic" title="Interval arithmetic">Interval</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rational_data_type" title="Rational data type">Rational</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Plain_text.html" title="Plain text">Text</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Character_(computing).html" title="Character (computing)">Character</a></li>
+<li><a href="http://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">String</a>
+<ul>
+<li><a href="Null-terminated_string.html" title="Null-terminated string">null-terminated</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">Pointer</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Memory_address" title="Memory address">Address</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Physical_address" title="Physical address">physical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_address_space" title="Virtual address space">virtual</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">Reference</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Composite_data_type" title="Composite data type">Composite</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Algebraic_data_type" title="Algebraic data type">Algebraic data type</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Generalized_algebraic_data_type" title="Generalized algebraic data type">generalized</a></li>
+</ul>
+</li>
+<li><a href="Array_data_type.html" title="Array data type">Array</a></li>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Class_(computer_programming)" title="Class (computer programming)">Class</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dependent_type" title="Dependent type">Dependent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intuitionistic_type_theory#Equality_type" title="Intuitionistic type theory">Equality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inductive_type" title="Inductive type">Inductive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">Object</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Metaobject" title="Metaobject">metaobject</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Option_type" title="Option type">Option type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Product_type" title="Product type">Product</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">Record</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Union_type" title="Union type">Union</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Tagged_union" title="Tagged union">tagged</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boolean_data_type" title="Boolean data type">Boolean</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bottom_type" title="Bottom type">Bottom type</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Collection</a></li>
+<li><a href="Enumerated_type.html" title="Enumerated type">Enumerated type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">Exception</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Function_type" title="Function type">Function type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Opaque_data_type" title="Opaque data type">Opaque data type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Recursive_data_type" title="Recursive data type">Recursive data type</a></li>
+<li><a href="Semaphore_(programming).html" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stream_(computing)" title="Stream (computing)">Stream</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Top_type" title="Top type">Top type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Type_class" title="Type class">Type class</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unit_type" title="Unit type">Unit type</a></li>
+<li><a href="Void_type.html" title="Void type">Void</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related topics</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Abstract_data_type.html" title="Abstract data type">Abstract data type</a></li>
+<li><a href="Data_structure.html" title="Data structure">Data structure</a></li>
+<li><a href="Generic_programming.html" title="Generic programming">Generic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kind_(type_theory)" title="Kind (type theory)">Kind</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Metaclass" title="Metaclass">metaclass</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Parametric_polymorphism" title="Parametric polymorphism">Parametric polymorphism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Primitive_data_type" title="Primitive data type">Primitive data type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">Protocol</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces_in_object-oriented_languages" title="Interface (computing)">interface</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Subtyping" title="Subtyping">Subtyping</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Type_constructor" title="Type constructor">Type constructor</a></li>
+<li><a href="Type_conversion.html" title="Type conversion">Type conversion</a></li>
+<li><a href="Type_system.html" title="Type system">Type system</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1171
+CPU time usage: 0.436 seconds
+Real time usage: 0.503 seconds
+Preprocessor visited node count: 795/1000000
+Preprocessor generated node count: 3681/1500000
+Post‐expand include size: 24589/2048000 bytes
+Template argument size: 1001/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 3/500
+Lua time usage: 0.049/10.000 seconds
+Lua memory usage: 1.65 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:261811-0!*!0!!en!*!* and timestamp 20140324151052
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;oldid=600066904">http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;oldid=600066904</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Polymorphism_(computer_science)" title="Category:Polymorphism (computer science)">Polymorphism (computer science)</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Functional_programming" title="Category:Functional programming">Functional programming</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Object-oriented_programming" title="Category:Object-oriented programming">Object-oriented programming</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Programming_language_concepts" title="Category:Programming language concepts">Programming language concepts</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Type_theory" title="Category:Type theory">Type theory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Data_types" title="Category:Data types">Data types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_September_2013" title="Category:Articles with unsourced statements from September 2013">Articles with unsourced statements from September 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Polymorphism+%28computer+science%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Polymorphism+%28computer+science%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Polymorphism_(computer_science)"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Polymorphism_(computer_science)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Polymorphism_(computer_science)" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Polymorphism_(computer_science)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Polymorphism_(computer_science)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;oldid=600066904" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q3240252" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Polymorphism_%28computer_science%29&amp;id=600066904" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Polymorphism+%28computer+science%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Polymorphism+%28computer+science%29&amp;oldid=600066904&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-bn"><a href="http://bn.wikipedia.org/wiki/পলিমরফিজম_(কম্পিউটার_বিজ্ঞান)" title="পলিমরফিজম (কম্পিউটার বিজ্ঞান) – Bengali" lang="bn" hreflang="bn">বাংলা</a></li>
+			<li class="interlanguage-link interwiki-be-x-old"><a href="http://be-x-old.wikipedia.org/wiki/Палімарфізм" title="Палімарфізм – беларуская (тарашкевіца)‎" lang="be-x-old" hreflang="be-x-old">Беларуская (тарашкевіца)‎</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Полиморфизъм_(информатика)" title="Полиморфизъм (информатика) – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Polimorfizam_(informatika)" title="Polimorfizam (informatika) – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Polimorfisme_(programació)" title="Polimorfisme (programació) – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Polymorfismus_(programování)" title="Polymorfismus (programování) – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Polymorphie_(Programmierung)" title="Polymorphie (Programmierung) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Polümorfism_(informaatika)" title="Polümorfism (informaatika) – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Polimorfismo_(informática)" title="Polimorfismo (informática) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/چندریختی_(برنامه‌نویسی)" title="چندریختی (برنامه‌نویسی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Polymorphisme_(informatique)" title="Polymorphisme (informatique) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/다형성" title="다형성 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hi"><a href="http://hi.wikipedia.org/wiki/पोलिमोर्फ़िज्म_(कंप्यूटर_विज्ञान)" title="पोलिमोर्फ़िज्म (कंप्यूटर विज्ञान) – Hindi" lang="hi" hreflang="hi">हिन्दी</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Polimorfizam_(računarstvo)" title="Polimorfizam (računarstvo) – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Polimorfismo_(informatica)" title="Polimorfismo (informatica) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/פולימורפיזם_(מדעי_המחשב)" title="פולימורפיזם (מדעי המחשב) – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Polimorfizmas_(programavime)" title="Polimorfizmas (programavime) – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Polymorfisme_(informatica)" title="Polymorfisme (informatica) – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/ポリモーフィズム" title="ポリモーフィズム – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Polimorfizm_(informatyka)" title="Polimorfizm (informatyka) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Polimorfismo" title="Polimorfismo – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Полиморфизм_(программирование)" title="Полиморфизм (программирование) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Polymorfism_(objektorienterad_programmering)" title="Polymorfism (objektorienterad programmering) – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/பல்லுருவாக்கம்_(பொருள்_நோக்கு_நிரலாக்கம்)" title="பல்லுருவாக்கம் (பொருள் நோக்கு நிரலாக்கம்) – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-te"><a href="http://te.wikipedia.org/wiki/పాలీ_మార్ఫిజం_(బహురూపత)(కంప్యూటర్_సైన్సు)" title="పాలీ మార్ఫిజం (బహురూపత)(కంప్యూటర్ సైన్సు) – Telugu" lang="te" hreflang="te">తెలుగు</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Çok_biçimlilik" title="Çok biçimlilik – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Поліморфізм_(програмування)" title="Поліморфізм (програмування) – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/多型_(物件導向程式設計)" title="多型 (物件導向程式設計) – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q3240252#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 March 2014 at 21:15.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Polymorphism_(computer_science)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1170 in 0.339 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Type_polymorphism by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:11 GMT -->
+</html>

@@ -1,0 +1,446 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Message_queue.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Message_queue by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Message queue - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Message_queue" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Message_queue.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Message_queue","wgTitle":"Message queue","wgCurRevisionId":597849023,"wgRevisionId":597849023,"wgArticleId":429709,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from May 2009","All articles needing additional references","Inter-process communication","Events (computing)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Message_queue","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1065525"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Message_queue skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Message queue</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(May 2009)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, <b>message queues</b> and <b>mailboxes</b> are <a href="Software_engineering.html" title="Software engineering">software-engineering</a> <a href="http://en.wikipedia.org/wiki/Software_componentry" title="Software componentry" class="mw-redirect">components</a> used for <a href="http://en.wikipedia.org/wiki/Interprocess_communication" title="Interprocess communication" class="mw-redirect">interprocess communication</a>, or for inter-<a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">thread</a> communication within the same process. They use a <a href="Queue_(data_structure).html" title="Queue (data structure)" class="mw-redirect">queue</a> for <a href="http://en.wikipedia.org/wiki/Message_(computer_science)" title="Message (computer science)" class="mw-redirect">messaging</a> – the passing of control or of content. <a href="http://en.wikipedia.org/wiki/Group_communication_system" title="Group communication system">Group communication systems</a> provide similar kinds of functionality.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Usage"><span class="tocnumber">2</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Standards_and_protocols"><span class="tocnumber">3</span> <span class="toctext">Standards and protocols</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Synchronous_vs._asynchronous"><span class="tocnumber">4</span> <span class="toctext">Synchronous vs. asynchronous</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Message queues provide an <a href="http://en.wikipedia.org/wiki/Asynchronous_communication" title="Asynchronous communication">asynchronous</a> <a href="http://en.wikipedia.org/wiki/Communications_protocol" title="Communications protocol">communications protocol</a>, meaning that the sender and receiver of the message do not need to interact with the message queue at the same time. Messages placed onto the queue are stored until the recipient retrieves them. Message queues have implicit or explicit limits on the size of data that may be transmitted in a single message and the number of messages that may remain outstanding on the queue.</p>
+<p>Many implementations of message queues function internally: within an <a href="Operating_system.html" title="Operating system">operating system</a> or within an <a href="http://en.wikipedia.org/wiki/Application_software" title="Application software">application</a>. Such queues exist for the purposes of that <a href="http://en.wikipedia.org/wiki/System" title="System">system</a> only.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Other implementations allow the passing of messages between different computer systems, potentially connecting multiple applications and multiple operating systems.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> These message queueing systems typically provide enhanced <a href="http://en.wikipedia.org/wiki/Resilience_(network)" title="Resilience (network)">resilience</a> functionality to ensure that messages do not get "lost" in the event of a system failure. Examples of commercial implementations of this kind of message queueing <a href="Software.html" title="Software">software</a> (also known as <a href="http://en.wikipedia.org/wiki/Message-oriented_middleware" title="Message-oriented middleware">message-oriented middleware</a>) include <a href="IBM.html" title="IBM">IBM</a>'s <a href="http://en.wikipedia.org/wiki/WebSphere_MQ" title="WebSphere MQ" class="mw-redirect">WebSphere MQ</a> (formerly <a href="http://en.wikipedia.org/wiki/MQ_Series" title="MQ Series" class="mw-redirect">MQ Series</a>) and <a href="http://en.wikipedia.org/wiki/Oracle_Advanced_Queuing" title="Oracle Advanced Queuing">Oracle Advanced Queuing</a> (AQ). There is a <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> standard called <a href="http://en.wikipedia.org/wiki/Java_Message_Service" title="Java Message Service">Java Message Service</a>, which has several <a href="Proprietary_software.html" title="Proprietary software">proprietary</a> and <a href="Free_software.html" title="Free software">free software</a> implementations.</p>
+<p>Implementations exist as proprietary software, provided as <a href="http://en.wikipedia.org/wiki/Message_Queuing_as_a_Service" title="Message Queuing as a Service" class="mw-redirect">Message Queuing as a Service</a>, as open source software, or being hardware-based.</p>
+<p>Proprietary options have the longest history, and include products from the inception of message queuing, such as <a href="IBM.html" title="IBM">IBM</a>'s <a href="http://en.wikipedia.org/wiki/WebSphere_MQ" title="WebSphere MQ" class="mw-redirect">WebSphere MQ</a> (formerly <a href="http://en.wikipedia.org/wiki/MQ_Series" title="MQ Series" class="mw-redirect">MQ Series</a>), and those tied to specific operating systems, such as <a href="http://en.wikipedia.org/wiki/Microsoft_Message_Queuing" title="Microsoft Message Queuing">Microsoft Message Queuing</a>. <a href="http://en.wikipedia.org/wiki/Message_Queuing_as_a_Service" title="Message Queuing as a Service" class="mw-redirect">Message Queuing as a Service</a> options, such as <a href="http://en.wikipedia.org/wiki/StormMQ" title="StormMQ">StormMQ</a> and <a href="http://en.wikipedia.org/wiki/IronMQ" title="IronMQ">IronMQ</a>, exist.</p>
+<p>There are a number of open source choices of messaging middleware systems, including <a href="http://en.wikipedia.org/wiki/JBoss_Messaging" title="JBoss Messaging">JBoss Messaging</a>, <a href="http://en.wikipedia.org/wiki/JORAM" title="JORAM">JORAM</a>, <a href="http://en.wikipedia.org/wiki/Apache_ActiveMQ" title="Apache ActiveMQ">Apache ActiveMQ</a>, <a href="http://en.wikipedia.org/wiki/Open_Message_Queue" title="Open Message Queue">Sun Open Message Queue</a>, <a href="http://en.wikipedia.org/wiki/Apache_Qpid" title="Apache Qpid">Apache Qpid</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> <a href="http://en.wikipedia.org/wiki/RabbitMQ" title="RabbitMQ">RabbitMQ</a>, Beanstalkd, <a href="http://en.wikipedia.org/wiki/Tarantool" title="Tarantool">Tarantool</a> and HTTPSQS.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>In addition to open source systems, hardware-based <a href="http://en.wikipedia.org/wiki/Message_oriented_middleware" title="Message oriented middleware" class="mw-redirect">messaging middleware</a> exists with vendors like <a href="http://en.wikipedia.org/wiki/Solace_systems" title="Solace systems" class="mw-redirect">Solace Systems</a>, Sonoa / Apigee and Tervela offering queuing through silicon or silicon/software datapaths.</p>
+<p>Most <a href="http://en.wikipedia.org/wiki/RTOS" title="RTOS" class="mw-redirect">RTOSes</a>, such as <a href="http://en.wikipedia.org/wiki/VxWorks" title="VxWorks">VxWorks</a> and <a href="http://en.wikipedia.org/wiki/Qnx" title="Qnx" class="mw-redirect">QNX</a> operating systems, encourage the use of message queueing as the primary <a href="http://en.wikipedia.org/wiki/Interprocess_communication" title="Interprocess communication" class="mw-redirect">IPC</a> or inter-<a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">thread</a> communication mechanism. The resulting tight integration between message passing and CPU scheduling is attributed as a main reason for the usability of RTOSes for real time applications. Early examples of commercial RTOSes that encouraged a message-queue basis to inter-thread communication also include <a href="http://en.wikipedia.org/wiki/Versatile_Real-Time_Executive" title="Versatile Real-Time Executive">VRTX</a> and <a href="http://en.wikipedia.org/wiki/PSOS_(real-time_operating_system)" title="PSOS (real-time operating system)">pSOS</a>+, both of which date to the early 1980s. The <a href="http://en.wikipedia.org/wiki/Erlang_programming_language" title="Erlang programming language" class="mw-redirect">Erlang programming language</a> uses <i>processes</i> to provide concurrency; these processes communicate asynchronously using message queuing.</p>
+<h2><span class="mw-headline" id="Usage">Usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=2" title="Edit section: Usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a typical message-queueing implementation, a <a href="http://en.wikipedia.org/wiki/System_administrator" title="System administrator">system administrator</a> installs and configures message-queueing software (a <a href="http://en.wikipedia.org/wiki/Queue_manager" title="Queue manager" class="mw-redirect">queue manager</a> or broker), and defines a named message queue. Or they register with a <a href="http://en.wikipedia.org/wiki/Message_queuing_service" title="Message queuing service">Message Queuing Service</a>.</p>
+<p>An application then registers a software routine that "listens" for messages placed onto the queue.</p>
+<p>Second and subsequent applications may connect to the queue and transfer a message onto it.</p>
+<p>The queue-manager software stores the messages until a receiving application connects and then calls the registered software routine. The receiving application then processes the message in an appropriate manner.</p>
+<p>There are often numerous options as to the exact semantics of message passing, including:</p>
+<ul>
+<li>Durability - messages may be kept in memory, written to disk, or even committed to a <a href="http://en.wikipedia.org/wiki/DBMS" title="DBMS" class="mw-redirect">DBMS</a> if the need for reliability indicates a more resource-intensive solution.</li>
+<li>Security policies - which applications should have access to these messages?</li>
+<li>Message purging policies - queues or messages may have a <a href="http://en.wikipedia.org/wiki/Time_to_live" title="Time to live">Time to live</a></li>
+<li>Message filtering - some systems support filtering data so that a subscriber may only see messages matching some pre-specified criteria of interest</li>
+<li>Delivery policies - do we need to guarantee that a message is delivered at least once, or no more than once?</li>
+<li>Routing policies - in a system with many queue servers, what servers should receive a message or a queue's messages?</li>
+<li>Batching policies - should messages be delivered immediately? Or should the system wait a bit and try to deliver many messages at once?</li>
+<li>Queuing criteria - when should a message be considered "enqueued"? When one queue has it? Or when it has been forwarded to at least one remote queue? Or to all queues?</li>
+<li>Receipt notification - A publisher may need to know when some or all subscribers have received a message.</li>
+</ul>
+<p>These are all considerations that can have substantial effects on transaction semantics, system reliability, and system efficiency.</p>
+<h2><span class="mw-headline" id="Standards_and_protocols">Standards and protocols</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=3" title="Edit section: Standards and protocols">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Historically, Message Queuing has used proprietary, closed protocols, restricting the ability for different operating systems or programming languages to interact in a heterogeneous set of environments.</p>
+<p>An early attempt to make Message Queuing more ubiquitous was <a href="http://en.wikipedia.org/wiki/Sun_Microsystem" title="Sun Microsystem" class="mw-redirect">Sun Microsystem</a>'s <a href="http://en.wikipedia.org/wiki/Java_Message_Service" title="Java Message Service">JMS</a> specification, which provided a <a href="http://en.wikipedia.org/wiki/Java_(software_platform)" title="Java (software platform)">Java</a>-only abstraction of a client <a href="Application_programming_interface.html" title="Application programming interface">API</a>. This allowed Java developers to switch between providers of Message Queuing in a fashion similar to that of developers using <a href="SQL.html" title="SQL">SQL</a> databases. In practice, given the diversity of Message Queuing techniques and scenarios, this wasn't always as practical as it could be.</p>
+<p>Two standards have emerged which are used in open source message queue implementations:</p>
+<ol>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" title="Advanced Message Queuing Protocol">Advanced Message Queuing Protocol</a> (AMQP) – feature-rich message queue protocol</li>
+<li><a href="http://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol" title="Streaming Text Oriented Messaging Protocol">Streaming Text Oriented Messaging Protocol</a> (STOMP) – simple, text-oriented message protocol</li>
+</ol>
+<p>These protocols are at different stages of standardization and adoption. All of them operate at the same level as <a href="HTTP.html" title="HTTP" class="mw-redirect">HTTP</a>.</p>
+<p>Some proprietary implementations also use <a href="HTTP.html" title="HTTP" class="mw-redirect">HTTP</a> to provide Message Queuing by some implementations, such as <a href="http://en.wikipedia.org/wiki/Amazon.com" title="Amazon.com">Amazon</a>'s <a href="http://en.wikipedia.org/wiki/Amazon_Simple_Queue_Service" title="Amazon Simple Queue Service">SQS</a>. This is because it is always possible to layer asynchronous behaviour (which is what is required for Message Queuing) over a synchronous protocol using request-response semantics. However, such implementations are constrained by the underlying protocol in this case and may not be able to offer the full fidelity or set of options required in message passing above.</p>
+<h2><span class="mw-headline" id="Synchronous_vs._asynchronous">Synchronous vs. asynchronous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=4" title="Edit section: Synchronous vs. asynchronous">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many of the more widely known <a href="http://en.wikipedia.org/wiki/Communications_protocol" title="Communications protocol">communications protocols</a> in use operate <a href="http://en.wikipedia.org/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">synchronously</a>. The <a href="HTTP.html" title="HTTP" class="mw-redirect">HTTP</a> protocol – used in the <a href="http://en.wikipedia.org/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a> and in <a href="http://en.wikipedia.org/wiki/Web_services" title="Web services" class="mw-redirect">web services</a> – offers an obvious example where a user sends a request for a web page and then waits for a reply.</p>
+<p>However, scenarios exist in which synchronous behaviour is not appropriate. For example, <a href="http://en.wikipedia.org/wiki/AJAX" title="AJAX" class="mw-redirect">AJAX</a> (<a href="http://en.wikipedia.org/wiki/Asynchronous" title="Asynchronous" class="mw-redirect">Asynchronous</a> <a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript" class="mw-redirect">Javascript</a> and <a href="http://en.wikipedia.org/wiki/XML" title="XML">XML</a>) can be used to <a href="http://en.wikipedia.org/wiki/Asynchronous" title="Asynchronous" class="mw-redirect">asynchronously</a> send text or <a href="http://en.wikipedia.org/wiki/XML" title="XML">XML</a> messages to update part of a web page with more relevant information. <a href="http://en.wikipedia.org/wiki/Google" title="Google">Google</a> uses this approach for their <a rel="nofollow" class="external text" href="http://www.google.com/support/websearch/bin/answer.py?hl=en&amp;answer=106230">Google Suggest</a>, a search feature which sends the user's partially typed queries to Google's servers and returns a list of possible full queries the user might be in the process of typing. This list is asynchronously updated as the user types.</p>
+<p>Other asynchronous examples exist in event notification systems and publish/subscribe systems.</p>
+<ul>
+<li>An application may need to notify another that an event has occurred, but does not need to wait for a response.</li>
+<li>In <a href="http://en.wikipedia.org/wiki/Publish/subscribe" title="Publish/subscribe" class="mw-redirect">publish/subscribe</a> systems, an application "publishes" information for any number of clients to read.</li>
+</ul>
+<p>In both of the above examples it would not make sense for the sender of the information to have to wait if, for example, one of the recipients had crashed.</p>
+<p>Applications need not be exclusively <a href="http://en.wikipedia.org/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">synchronous</a> or <a href="http://en.wikipedia.org/wiki/Asynchronous" title="Asynchronous" class="mw-redirect">asynchronous</a>. An interactive application may need to respond to certain parts of a request immediately (such as telling a customer that a sales request has been accepted, and handling the promise to draw on inventory), but may queue other parts (such as completing calculation of billing, forwarding data to the central accounting system, and calling on all sorts of other services) to be done some time later.</p>
+<p>In all these sorts of situations, having a subsystem which performs message-queuing (or alternatively, a broadcast messaging system) can help improve the behaviour of the overall system.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" title="Advanced Message Queuing Protocol">Advanced Message Queuing Protocol</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Amazon_Simple_Queue_Service" title="Amazon Simple Queue Service">Amazon Simple Queue Service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Celery_Task_Queue" title="Celery Task Queue">Celery Task Queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gearman" title="Gearman">Gearman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IBM_WebSphere_Message_Broker" title="IBM WebSphere Message Broker">IBM WebSphere Message Broker</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IBM_WebSphere_MQ" title="IBM WebSphere MQ">IBM WebSphere MQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IronMQ" title="IronMQ">IronMQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Java_Message_Service" title="Java Message Service">Java Message Service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Message-oriented_middleware" title="Message-oriented middleware">Message-oriented middleware</a>, <a href="http://en.wikipedia.org/wiki/Category:Message-oriented_middleware" title="Category:Message-oriented middleware">(category)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Message_Queuing" title="Microsoft Message Queuing">Microsoft Message Queuing</a> (known colloquially as MSMQ)</li>
+<li>Microsoft <a href="http://en.wikipedia.org/wiki/Azure_Services_Platform" title="Azure Services Platform" class="mw-redirect">Azure Services Platform</a>, particularly Azure storage queues and <a href="http://en.wikipedia.org/wiki/AppFabric" title="AppFabric">AppFabric</a> Service Bus</li>
+<li><a href="http://en.wikipedia.org/wiki/QDB" title="QDB">QDB</a> queues with message replay feature</li>
+<li><a href="http://en.wikipedia.org/wiki/RabbitMQ" title="RabbitMQ">RabbitMQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/StormMQ" title="StormMQ">StormMQ</a>, an example of <a href="http://en.wikipedia.org/wiki/Message_Queuing_as_a_Service" title="Message Queuing as a Service" class="mw-redirect">Message Queuing as a Service</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ØMQ" title="ØMQ">ØMQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SnakeMQ" title="SnakeMQ">SnakeMQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HornetQ" title="HornetQ">HornetQ</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Win32 system message queues. <span class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms644927(VS.85).aspx">"About Messages and Message Queues"</a>. <i>Windows User Interface</i>. Microsoft Developer Network<span class="reference-accessdate">. Retrieved April 21, 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMessage+queue&amp;rft.atitle=About+Messages+and+Message+Queues&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fms644927%28VS.85%29.aspx&amp;rft.jtitle=Windows+User+Interface&amp;rft.pub=Microsoft+Developer+Network&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Linux and POSIX message queues. <a rel="nofollow" class="external text" href="http://linux.die.net/man/7/mq_overview">Overview of POSIX message queues</a> at linux.die.net</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Using Linux Message Queues. <a rel="nofollow" class="external autonumber" href="http://www.civilized.com/files/msgfuncs.txt">[1]</a> at www.civilized.com</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">For example, the MSMQ product. <span class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms711472.aspx">"Message Queuing (MSMQ)"</a>. <i>Network Communication</i>. Microsoft Developer Network<span class="reference-accessdate">. Retrieved May 9, 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMessage+queue&amp;rft.atitle=Message+Queuing+%28MSMQ%29&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fms711472.aspx&amp;rft.jtitle=Network+Communication&amp;rft.pub=Microsoft+Developer+Network&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://qpid.apache.org/">Apache Qpid Project, an implementation of</a> <a href="http://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" title="Advanced Message Queuing Protocol">AMQP</a>.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://code.google.com/p/httpsqs/">HTTPSQS, a message queue based on HTTP GET/POST protocol.</a></span></li>
+</ol>
+</div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:IPC" title="Template:IPC"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:IPC" title="Template talk:IPC"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:IPC&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Inter-process_communication.html" title="Inter-process communication">Inter-process communication</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="http://en.wikipedia.org/wiki/Data" title="Data">Data</a> exchange among <a href="Thread_(computing).html" title="Thread (computing)">threads</a> in <a href="http://en.wikipedia.org/wiki/Computer_program" title="Computer program">computer programs</a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Methods</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Computer_file" title="Computer file">File</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mmap" title="Mmap">Memory-mapped file</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Message_passing" title="Message passing">Message passing</a></li>
+<li><strong class="selflink">Message queue and mailbox</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Named_pipe" title="Named pipe">Named pipe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Anonymous_pipe" title="Anonymous pipe">Anonymous pipe</a></li>
+<li><a href="Pipeline_(Unix).html" title="Pipeline (Unix)">Pipe</a></li>
+<li><a href="Semaphore_(programming).html" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="Shared_memory.html" title="Shared memory">Shared memory</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unix_signal" title="Unix signal">Signal</a></li>
+<li>Sockets
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Internet_socket" title="Internet socket" class="mw-redirect">Internet</a></li>
+<li><a href="Unix_domain_socket.html" title="Unix domain socket">Unix</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Communications_protocol" title="Communications protocol">Protocols</a><br />
+and <a href="http://en.wikipedia.org/wiki/Technical_standard" title="Technical standard">standards</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Apple_events" title="Apple events">Apple events</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Component_Object_Model#COM.2B" title="Component Object Model">COM+</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture">CORBA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Data_Distribution_Service" title="Data Distribution Service">DDS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Distributed_Computing_Environment" title="Distributed Computing Environment">DCE</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Communications_Engine" title="Internet Communications Engine">ICE</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">ONC RPC</a></li>
+<li><a href="POSIX.html" title="POSIX">POSIX</a> (various methods)</li>
+<li><a href="SOAP.html" title="SOAP">SOAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" title="Representational State Transfer" class="mw-redirect">REST</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Apache_Thrift" title="Apache Thrift">Thrift</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TIPC" title="TIPC">TIPC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XML-RPC" title="XML-RPC">XML-RPC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Library_(computing).html" title="Library (computing)">Software libraries</a><br />
+and <a href="http://en.wikipedia.org/wiki/Software_framework" title="Software framework">frameworks</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Libevent" title="Libevent">libevent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SIMPL" title="SIMPL">SIMPL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LINX_(IPC)" title="LINX (IPC)">LINX</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1054
+CPU time usage: 0.452 seconds
+Real time usage: 0.496 seconds
+Preprocessor visited node count: 343/1000000
+Preprocessor generated node count: 1466/1500000
+Post‐expand include size: 15154/2048000 bytes
+Template argument size: 8/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 4/500
+Lua time usage: 0.056/10.000 seconds
+Lua memory usage: 1.58 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:429709-0!*!0!!en!4!* and timestamp 20140324230744
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;oldid=597849023">http://en.wikipedia.org/w/index.php?title=Message_queue&amp;oldid=597849023</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Inter-process_communication" title="Category:Inter-process communication">Inter-process communication</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Events_(computing)" title="Category:Events (computing)">Events (computing)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_May_2009" title="Category:Articles needing additional references from May 2009">Articles needing additional references from May 2009</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Message+queue&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Message+queue" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Message_queue.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Message_queue"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Message_queue.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Message_queue" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Message_queue" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;oldid=597849023" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1065525" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Message_queue&amp;id=597849023" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Message+queue">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Message+queue&amp;oldid=597849023&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Message_queue&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/MQ" title="MQ – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/صف_پیغام" title="صف پیغام – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/File_d%27attente_de_message" title="File d'attente de message – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/메시지_큐" title="메시지 큐 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Üzenetsor" title="Üzenetsor – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Message_queue" title="Message queue – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/メッセージキュー" title="メッセージキュー – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Kolejka_komunikatów" title="Kolejka komunikatów – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Fila_de_mensagens" title="Fila de mensagens – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-te"><a href="http://te.wikipedia.org/wiki/మెసేజ్_క్యూ_(సందేశాల_వరుస_క్రమం)" title="మెసేజ్ క్యూ (సందేశాల వరుస క్రమం) – Telugu" lang="te" hreflang="te">తెలుగు</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Черга_повідомлень" title="Черга повідомлень – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/消息队列" title="消息队列 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1065525#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 March 2014 at 19:28.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Message_queue" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1108 in 0.401 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Message_queue by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:42 GMT -->
+</html>

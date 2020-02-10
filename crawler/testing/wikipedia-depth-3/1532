@@ -1,0 +1,646 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Call-by-value.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Call-by-value by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Evaluation strategy - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Evaluation_strategy#Call_by_value" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Evaluation_strategy" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Evaluation_strategy","wgTitle":"Evaluation strategy","wgCurRevisionId":600729513,"wgRevisionId":600729513,"wgArticleId":2977119,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from January 2011","Articles with unsourced statements from October 2009","Articles needing additional references from June 2013","All articles needing additional references","Articles lacking in-text citations from April 2012","All articles lacking in-text citations","Evaluation strategy","Programming language topics"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Evaluation_strategy","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Call-by-value","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgRedirectToFragment":"#Call_by_value","wgWikibaseItemId":"Q2881121"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.redirectToFragment","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-e {line-height: normal;}
+.source-e li, .source-e pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for e
+ * CSS class: source-e, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.e.source-e .de1, .e.source-e .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.e.source-e  {font-family:monospace;}
+.e.source-e .imp {font-weight: bold; color: red;}
+.e.source-e li, .e.source-e .li1 {font-weight: normal; vertical-align:top;}
+.e.source-e .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.e.source-e .li2 {font-weight: bold; vertical-align:top;}
+.e.source-e .kw1 {color: #b1b100;}
+.e.source-e .kw2 {color: #b1b100;}
+.e.source-e .kw3 {color: #b1b100;}
+.e.source-e .kw4 {color: #b1b100;}
+.e.source-e .kw5 {color: #b1b100;}
+.e.source-e .kw6 {color: #b1b100;}
+.e.source-e .kw7 {color: #b1b100;}
+.e.source-e .kw8 {color: #b1b100;}
+.e.source-e .co1 {color: #666666; font-style: italic;}
+.e.source-e .coMULTI {color: #666666; font-style: italic;}
+.e.source-e .es0 {color: #000099; font-weight: bold;}
+.e.source-e .br0 {color: #009900;}
+.e.source-e .sy1 {color: #339933;}
+.e.source-e .st0 {color: #0000ff;}
+.e.source-e .nu0 {color: #cc66cc;}
+.e.source-e .me0 {color: #004000;}
+.e.source-e .ln-xtra, .e.source-e li.ln-xtra, .e.source-e div.ln-xtra {background-color: #ffc;}
+.e.source-e span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Evaluation_strategy skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Evaluation strategy</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Call-by-value&amp;redirect=no" title="Call-by-value">Call-by-value</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><strong class="selflink">Evaluation strategies</strong></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Strict_evaluation" title="Strict evaluation" class="mw-redirect">Strict evaluation</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Applicative_order" title="Applicative order" class="mw-redirect">Applicative order</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call_by_value" title="Call by value" class="mw-redirect">Call by value</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call_by_reference" title="Call by reference" class="mw-redirect">Call by reference</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call_by_sharing" title="Call by sharing" class="mw-redirect">Call by sharing</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Call_by_copy-restore&amp;action=edit&amp;redlink=1" class="new" title="Call by copy-restore (page does not exist)">Call by copy-restore</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Non-strict_evaluation" title="Non-strict evaluation" class="mw-redirect">Non-strict evaluation</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Evaluation_strategy#Normal_order" title="Evaluation strategy">Normal order</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call_by_name" title="Call by name" class="mw-redirect">Call by name</a></li>
+<li>Call by need, <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">Lazy evaluation</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Call_by_macro_expansion&amp;action=edit&amp;redlink=1" class="new" title="Call by macro expansion (page does not exist)">Call by macro expansion</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Nondeterministic_strategies&amp;action=edit&amp;redlink=1" class="new" title="Nondeterministic strategies (page does not exist)">Nondeterministic strategies</a>
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Full-reduction&amp;action=edit&amp;redlink=1" class="new" title="Full-reduction (page does not exist)">Full-reduction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Call_by_future" title="Call by future" class="mw-redirect">Call by future</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Optimistic_evaluation&amp;action=edit&amp;redlink=1" class="new" title="Optimistic evaluation (page does not exist)">Optimistic evaluation</a></li>
+</ul>
+</li>
+<li>Other
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Partial_evaluation" title="Partial evaluation">Partial evaluation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Remote_evaluation" title="Remote evaluation">Remote evaluation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Short-circuit_evaluation" title="Short-circuit evaluation">Short-circuit evaluation</a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Evaluation_strategy" title="Template:Evaluation strategy"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Evaluation_strategy&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Evaluation strategy (page does not exist)"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Evaluation_strategy&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>A <a href="Programming_language.html" title="Programming language">programming language</a> uses an evaluation strategy to determine <b>when</b> to evaluate the argument(s) of a function call (for function, also read: operation, method, or relation) and <b>what</b> kind of value to pass to the function. For example, call-by-value/pass-by-reference specifies that a function application evaluates the argument before it proceeds to the evaluation of the function's body and that it passes two capabilities to the function, namely, the ability to look up the current value of the argument and to modify it via an assignment statement.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The notion of <a href="http://en.wikipedia.org/wiki/Reduction_strategy_(lambda_calculus)" title="Reduction strategy (lambda calculus)">reduction strategy</a> in <a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a> is similar but distinct.</p>
+<p>In practical terms, many modern programming languages have converged on a call-by-value, pass-by-reference strategy for function calls (C#, Java). Some older languages, especially unsafe languages such as C++, combine several notions of parameter passing. Historically, call-by-value and call-by-name date back to Algol 60, a language designed in the late 1950s. Only purely functional languages such as Clean and Haskell use by-need.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Strict_evaluation"><span class="tocnumber">1</span> <span class="toctext">Strict evaluation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Applicative_order"><span class="tocnumber">1.1</span> <span class="toctext">Applicative order</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Call_by_value"><span class="tocnumber">1.2</span> <span class="toctext">Call by value </span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Implicit_limitations"><span class="tocnumber">1.2.1</span> <span class="toctext">Implicit limitations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#Call_by_reference"><span class="tocnumber">1.3</span> <span class="toctext">Call by reference </span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Call_by_sharing"><span class="tocnumber">1.4</span> <span class="toctext">Call by sharing</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Call_by_copy-restore"><span class="tocnumber">1.5</span> <span class="toctext">Call by copy-restore</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Partial_evaluation"><span class="tocnumber">1.6</span> <span class="toctext">Partial evaluation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Non-strict_evaluation"><span class="tocnumber">2</span> <span class="toctext">Non-strict evaluation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Normal_order"><span class="tocnumber">2.1</span> <span class="toctext">Normal order</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Call_by_name"><span class="tocnumber">2.2</span> <span class="toctext">Call by name</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Call_by_need"><span class="tocnumber">2.3</span> <span class="toctext">Call by need</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Call_by_macro_expansion"><span class="tocnumber">2.4</span> <span class="toctext">Call by macro expansion</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Nondeterministic_strategies"><span class="tocnumber">3</span> <span class="toctext">Nondeterministic strategies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Full_.CE.B2-reduction"><span class="tocnumber">3.1</span> <span class="toctext">Full β-reduction</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Call_by_future"><span class="tocnumber">3.2</span> <span class="toctext">Call by future</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Optimistic_evaluation"><span class="tocnumber">3.3</span> <span class="toctext">Optimistic evaluation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Notes"><span class="tocnumber">5</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Strict_evaluation">Strict evaluation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=1" title="Edit section: Strict evaluation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Strict_evaluation" title="Strict evaluation" class="mw-redirect">Strict evaluation</a></div>
+<p>In <i>strict evaluation,</i> the arguments to a <a href="Subroutine.html" title="Subroutine">function</a> are always evaluated completely before the function is applied.</p>
+<p>Under <a href="http://en.wikipedia.org/wiki/Church_encoding" title="Church encoding">Church encoding</a>, <a href="http://en.wikipedia.org/wiki/Eager_evaluation" title="Eager evaluation">eager evaluation</a> of <a href="Operator_(programming).html" title="Operator (programming)" class="mw-redirect">operators</a> maps to strict evaluation of functions; for this reason, strict evaluation is sometimes called "eager". Most existing programming languages use strict evaluation for functions.</p>
+<h3><span class="mw-headline" id="Applicative_order">Applicative order</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=2" title="Edit section: Applicative order">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Applicative order</i> (or <i>leftmost innermost</i><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup>) evaluation refers to an evaluation strategy in which the arguments of a function are evaluated from left to right in a <a href="http://en.wikipedia.org/wiki/Post-order_traversal" title="Post-order traversal" class="mw-redirect">post-order traversal</a> of reducible expressions (<a href="http://en.wiktionary.org/wiki/redex" class="extiw" title="wiktionary:redex">redexes</a>). Unlike call-by-value, applicative order evaluation reduces terms within a function body as much as possible before the function is applied.</p>
+<h3><span class="mw-headline" id="Call_by_value">Call by value <span id="Call-by-value"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=3" title="Edit section: Call by value">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Call-by-value</i> evaluation is the most common evaluation strategy, used in languages as different as <a href="C_(programming_language).html" title="C (programming language)">C</a> and <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>. In call-by-value, the argument expression is evaluated, and the resulting value is bound to the corresponding variable in the function (frequently by copying the value into a new memory region). If the function or procedure is able to assign values to its parameters, only its local copy is assigned — that is, anything passed into a function call is unchanged in the caller's <a href="Scope_(programming).html" title="Scope (programming)" class="mw-redirect">scope</a> when the function returns.</p>
+<p>Call-by-value is not a single evaluation strategy, but rather the family of evaluation strategies in which a function's argument is evaluated before being passed to the function. While many programming languages (such as Common Lisp, Eiffel and Java) that use call-by-value evaluate function arguments left-to-right, some evaluate functions and their arguments right-to-left, and others (such as Scheme, OCaml and C) leave the order unspecified.</p>
+<h4><span class="mw-headline" id="Implicit_limitations">Implicit limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=4" title="Edit section: Implicit limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In some cases, the term "call-by-value" is problematic, as the value which is passed is not the value of the variable as understood by the ordinary meaning of value, but an implementation-specific <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> to the value. The effect is that what syntactically looks like call-by-value may end up rather behaving like call-by-reference or <a href="#Call_by_sharing">call-by-sharing</a>, often depending on very subtle aspects of the language semantics.</p>
+<p>The reason for passing a reference is often that the language technically does not provide a value representation of complicated data, but instead represents them as a data structure while preserving some semblance of value appearance in the source code. Exactly where the boundary is drawn between proper values and data structures masquerading as such is often hard to predict. In <a href="C_(programming_language).html" title="C (programming language)">C</a>, a vector (of which strings are special cases) is a data structure and thus treated as a reference to a memory area, but a <a href="Struct_(C_programming_language).html" title="Struct (C programming language)">struct</a> is a value even if it has fields that are vectors. In <a href="http://en.wikipedia.org/wiki/Maple_(software)" title="Maple (software)">Maple</a>, a vector is a special case of a table and therefore a data structure, but a list (which gets rendered and can be indexed in exactly the same way) is a value. In <a href="http://en.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a>, values are "dual-ported" such that the value representation is used at the script level, and the language itself manages the corresponding data structure, if one is required. Modifications made via the data structure are reflected back to the value representation, and vice-versa.</p>
+<p>The description "call-by-value where the value is a reference" is common (but should not be understood as being call-by-reference); another term is <a href="#Call_by_sharing">call-by-sharing</a>. Thus the behaviour of call-by-value Java or Visual Basic and call-by-value C or Pascal are significantly different: in C or Pascal, calling a function with a large structure as an argument will cause the entire structure to be copied (except if it's actually a reference to a structure), <i>potentially</i> causing serious performance degradation, and mutations to the structure are invisible to the caller. However, in Java or Visual Basic only the reference to the structure is copied, which is fast, and mutations to the structure are visible to the caller.</p>
+<h3><span class="mw-headline" id="Call_by_reference">Call by reference <span id="Call-by-reference"></span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=5" title="Edit section: Call by reference">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <i>call-by-reference</i> evaluation (also referred to as <i>pass-by-reference</i>), a function receives an implicit <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> to a variable used as argument, rather than a copy of its value. This typically means that the function can modify (i.e. <a href="http://en.wikipedia.org/wiki/Assignment_(computer_science)" title="Assignment (computer science)">assign to</a>) the variable used as argument—something that will be seen by its caller. Call-by-reference can therefore be used to provide an additional channel of communication between the called function and the calling function. The same effect can be emulated in languages like C by passing a pointer (not to be confused with call-by-reference), or in languages like Java by passing a holding object, that can be set by the caller. A call-by-reference language makes it more difficult for a programmer to track the effects of a function call, and may introduce subtle bugs.</p>
+<p>Many languages support call-by-reference in some form or another, but comparatively few use it as a default, e.g. <a href="Perl.html" title="Perl">Perl</a>. A few languages, such as <a href="C%2b%2b.html" title="C++">C++</a>, <a href="PHP.html" title="PHP">PHP</a>, <a href="Visual_Basic_.html" title="Visual Basic .NET">Visual Basic .NET</a>, <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a> and <a href="http://en.wikipedia.org/wiki/REALbasic" title="REALbasic" class="mw-redirect">REALbasic</a>, default to call-by-value, but offer special syntax for call-by-reference parameters. C++ additionally offers call-by-reference-to-<a href="http://en.wikipedia.org/wiki/Const-correctness" title="Const-correctness">const</a>. In <a href="http://en.wikipedia.org/wiki/Purely_functional" title="Purely functional">purely functional</a> languages there is typically no semantic difference between the two strategies (since their data structures are immutable, so there is no possibility for a function to modify any of its arguments), so they are typically described as call-by-value even though implementations frequently use call-by-reference internally for the efficiency benefits.</p>
+<p>Even among languages that don't exactly support call-by-reference, many, including <a href="C_(programming_language).html" title="C (programming language)">C</a> and <a href="http://en.wikipedia.org/wiki/ML_(programming_language)" title="ML (programming language)">ML</a>, support explicit <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> (objects that refer to other objects), such as <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a> (objects representing the memory addresses of other objects), and these can be used to effect or simulate call-by-reference (but with the complication that a function's caller must explicitly generate the reference to supply as an argument).</p>
+<p>Example that demonstrates call-by-reference in <a href="http://en.wikipedia.org/wiki/E_(programming_language)" title="E (programming language)">E</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="e source-e">
+<pre class="de1">
+ <span class="kw4">def</span> modify<span class="br0">(</span><span class="kw4">var</span> p<span class="sy0">,</span> <span class="sy0">&amp;</span>q<span class="br0">)</span> <span class="br0">{</span>
+     p <span class="sy0">:=</span> <span class="nu0">27</span> <span class="co1"># passed by value - only the local parameter is modified</span>
+     q <span class="sy0">:=</span> <span class="nu0">27</span> <span class="co1"># passed by reference - variable used in call is modified</span>
+ <span class="br0">}</span>
+ 
+ <span class="sy0">?</span> <span class="kw4">var</span> a <span class="sy0">:=</span> <span class="nu0">1</span>
+ <span class="co1"># value: 1</span>
+ <span class="sy0">?</span> <span class="kw4">var</span> b <span class="sy0">:=</span> <span class="nu0">2</span>
+ <span class="co1"># value: 2</span>
+ <span class="sy0">?</span> modify<span class="br0">(</span>a<span class="sy0">,&amp;</span>b<span class="br0">)</span>
+ <span class="sy0">?</span> a
+ <span class="co1"># value: 1</span>
+ <span class="sy0">?</span> b
+ <span class="co1"># value: 27</span>
+</pre></div>
+</div>
+<p>Example that simulates call-by-reference in <a href="C_(programming_language).html" title="C (programming language)">C</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">void</span> Modify<span class="br0">(</span><span class="kw4">int</span> p<span class="sy0">,</span> <span class="kw4">int</span> <span class="sy0">*</span> q<span class="sy0">,</span> <span class="kw4">int</span> <span class="sy0">*</span> o<span class="br0">)</span>
+<span class="br0">{</span>
+    p <span class="sy0">=</span> <span class="nu0">27</span><span class="sy0">;</span> <span class="co1">// passed by value - only the local parameter is modified</span>
+    <span class="sy0">*</span>q <span class="sy0">=</span> <span class="nu0">27</span><span class="sy0">;</span> <span class="co1">// passed by value or reference, check call site to determine which</span>
+    <span class="sy0">*</span>o <span class="sy0">=</span> <span class="nu0">27</span><span class="sy0">;</span> <span class="co1">// passed by value or reference, check call site to determine which</span>
+<span class="br0">}</span>
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">int</span> a <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw4">int</span> b <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw4">int</span> x <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw4">int</span> <span class="sy0">*</span> c <span class="sy0">=</span> <span class="sy0">&amp;</span>x<span class="sy0">;</span>
+    Modify<span class="br0">(</span>a<span class="sy0">,</span> <span class="sy0">&amp;</span>b<span class="sy0">,</span> c<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">// a is passed by value, b is passed by reference by creating a pointer,</span>
+                        <span class="co1">// c is a pointer passed by value</span>
+    <span class="co1">// b and x are changed</span>
+    <span class="kw1">return</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Call_by_sharing">Call by sharing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=6" title="Edit section: Call by sharing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Also known as "call by object" or "call by object-sharing" is an evaluation strategy first named by <a href="http://en.wikipedia.org/wiki/Barbara_Liskov" title="Barbara Liskov">Barbara Liskov</a> et al. for the language <a href="http://en.wikipedia.org/wiki/CLU_programming_language" title="CLU programming language" class="mw-redirect">CLU</a> in 1974.<sup id="cite_ref-CLU_Reference_Manual_4-0" class="reference"><a href="#cite_note-CLU_Reference_Manual-4"><span>[</span>4<span>]</span></a></sup> It is used by languages such as <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>,<sup id="cite_ref-Lundh_Call_By_Object_5-0" class="reference"><a href="#cite_note-Lundh_Call_By_Object-5"><span>[</span>5<span>]</span></a></sup> <a href="http://en.wikipedia.org/wiki/Iota_and_Jot" title="Iota and Jot">Iota</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> (for object references),<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> Ruby, Scheme, OCaml, <a href="http://en.wikipedia.org/wiki/AppleScript" title="AppleScript">AppleScript</a>, and many other languages. However, the term "call by sharing" is not in common use; the terminology is inconsistent across different sources. For example, in the Java community, they say that Java is pass-by-value, whereas in the Ruby community, they say that Ruby is pass-by-reference<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2011)">citation needed</span></a></i>]</sup>, even though the two languages exhibit the same semantics. Call by sharing implies that values in the language are based on objects rather than <a href="http://en.wikipedia.org/wiki/Primitive_types" title="Primitive types" class="mw-redirect">primitive types</a>, ie that they all values are "<a href="http://en.wikipedia.org/wiki/Boxed_type" title="Boxed type" class="mw-redirect">boxed</a>".</p>
+<p>The semantics of call by sharing differ from call by reference in that assignments to function arguments within the function aren't visible to the caller (unlike by reference semantics)<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2009)">citation needed</span></a></i>]</sup>, so e.g. if a variable was passed, it is not possible to simulate an assignment on that variable in the caller's scope. However since the function has access to the same object as the caller (no copy is made), mutations to those objects, if the objects are <a href="http://en.wikipedia.org/wiki/Mutable_object" title="Mutable object" class="mw-redirect">mutable</a>, within the function are visible to the caller, which may appear to differ from call by value semantics. Assignments with the function are not noticeable to the caller, because, in these languages, an assignment binds a variable to a different object. Since the rebound variable only exists within the scope of the function, the counterpart in the caller retains its original binding. However, mutations of a mutable object within the function are visible to the caller because the object is not copied or cloned — it is shared.</p>
+<p>For <a href="http://en.wikipedia.org/wiki/Immutable_object" title="Immutable object">immutable objects</a>, there is no real difference between call by sharing and call by value, except for the object identity. The use of call by sharing with mutable objects is an alternative to <a href="http://en.wikipedia.org/wiki/Output_parameter" title="Output parameter" class="mw-redirect">input/output parameters</a>:<sup id="cite_ref-CA1021_7-0" class="reference"><a href="#cite_note-CA1021-7"><span>[</span>7<span>]</span></a></sup> the parameter is not assigned to (the argument is not overwritten and object identity is not changed), but the object (argument) is mutated.</p>
+<p>For example in Python, lists are mutable, so:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> f<span class="br0">(</span>l<span class="br0">)</span>:
+    l.<span class="me1">append</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span>
+m <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+f<span class="br0">(</span>m<span class="br0">)</span>
+<span class="kw1">print</span> m
+</pre></div>
+</div>
+<p>...yields <samp>[1]</samp> because the argument <code>l</code> is mutated.</p>
+<p>An important subtlety is the distinction between mutation and assignment. In Python the code:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> f<span class="br0">(</span>l<span class="br0">)</span>:
+    l +<span class="sy0">=</span> <span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>
+m <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+f<span class="br0">(</span>m<span class="br0">)</span>
+<span class="kw1">print</span> m
+</pre></div>
+</div>
+<p>...yields <samp>[1]</samp> because the statement <code>l += [1]</code> acts as <code>l.extend([1])</code>, but the similar code:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="python source-python">
+<pre class="de1">
+<span class="kw1">def</span> f<span class="br0">(</span>l<span class="br0">)</span>:
+    l <span class="sy0">=</span> l + <span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>
+m <span class="sy0">=</span> <span class="br0">[</span><span class="br0">]</span>
+f<span class="br0">(</span>m<span class="br0">)</span>
+<span class="kw1">print</span> m
+</pre></div>
+</div>
+<p>...yields <samp>[]</samp> because the statement <code>l = l + [1]</code> creates a new local variable, rather than mutating the argument.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>a<span>]</span></a></sup></p>
+<p>Although this term has widespread usage in the Python community, identical semantics in other languages such as Java and Visual Basic are often described as call by value, where the value is implied to be a reference to the object.</p>
+<h3><span class="mw-headline" id="Call_by_copy-restore">Call by copy-restore</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=7" title="Edit section: Call by copy-restore">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Call-by-copy-restore</i>, <i>copy-in copy-out</i>, <i>call-by-value-result</i> or <i>call-by-value-return</i> (as termed in the <a href="Fortran-2.html" title="Fortran">Fortran</a> community) is a special case of call-by-reference where the provided reference is unique to the caller. This variant has gained attention in multiprocessing contexts and <a href="http://en.wikipedia.org/wiki/Remote_procedure_call" title="Remote procedure call">Remote procedure call</a>: if a parameter to a function call is a reference that might be accessible by another thread of execution, its contents may be copied to a new reference that is not; when the function call returns, the updated contents of this new reference are copied back to the original reference ("restored").</p>
+<p>The semantics of call-by-copy-restore also differ from those of call-by-reference where two or more function arguments <a href="http://en.wikipedia.org/wiki/Aliasing_(computing)" title="Aliasing (computing)">alias</a> one another; that is, point to the same variable in the caller's environment. Under call-by-reference, writing to one will affect the other; call-by-copy-restore avoids this by giving the function distinct copies, but leaves the result in the caller's environment <a href="http://en.wikipedia.org/wiki/Undefined_behaviour" title="Undefined behaviour" class="mw-redirect">undefined</a> depending on which of the aliased arguments is copied back first - will the copies be made in left-to-right order both on entry and on return?</p>
+<p>When the reference is passed to the callee uninitialized, this evaluation strategy may be called <i>call-by-result</i>.</p>
+<h3><span class="mw-headline" id="Partial_evaluation">Partial evaluation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=8" title="Edit section: Partial evaluation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Partial_evaluation" title="Partial evaluation">Partial evaluation</a></div>
+<p>In <i>partial evaluation</i>, evaluation may continue into the body of a function that has not been applied. Any sub-expressions that do not contain unbound variables are evaluated, and function applications whose argument values are known may be reduced. In the presence of side-effects, complete partial evaluation may produce unintended results; for this reason, systems that support partial evaluation tend to do so only for "pure" expressions (expressions without side-effects) within functions.</p>
+<h2><span class="mw-headline" id="Non-strict_evaluation">Non-strict evaluation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=9" title="Edit section: Non-strict evaluation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-content ambox-Unreferenced" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This section <b>does not <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">cite</a> any <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references or sources</a></b>. <span class="hide-when-compact">Please help improve this section by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence" title="Wikipedia:Verifiability">removed</a>.</span> <small><i>(June 2013)</i></small></span></td>
+</tr>
+</table>
+<p>In <i>non-strict evaluation,</i> arguments to a function are not evaluated unless they are actually used in the evaluation of the function body.</p>
+<p>Under Church encoding, <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a> of operators maps to non-strict evaluation of functions; for this reason, non-strict evaluation is often referred to as "lazy". Boolean expressions in many languages use a form of non-strict evaluation called <a href="http://en.wikipedia.org/wiki/Short-circuit_evaluation" title="Short-circuit evaluation">short-circuit evaluation</a>, where evaluation returns as soon as it can be determined that an unambiguous Boolean will result — for example, in a disjunctive expression where <i>true</i> is encountered, or in a conjunctive expression where <i>false</i> is encountered, and so forth. Conditional expressions also usually use lazy evaluation, where evaluation returns as soon as an unambiguous branch will result.</p>
+<h3><span class="mw-headline" id="Normal_order">Normal order</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=10" title="Edit section: Normal order">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Normal-order</i> (or <i>leftmost outermost</i>) evaluation is the evaluation strategy where the outermost redex is always reduced, applying functions before evaluating function arguments.</p>
+<p>In contrast, a call-by-name strategy does not evaluate inside the body of an unapplied function.</p>
+<h3><span class="mw-headline" id="Call_by_name">Call by name</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=11" title="Edit section: Call by name">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <i>call-by-name</i> evaluation, the arguments to a function are not evaluated before the function is called — rather, they are substituted directly into the function body (using <a href="http://en.wikipedia.org/wiki/Capture-avoiding_substitution" title="Capture-avoiding substitution" class="mw-redirect">capture-avoiding substitution</a>) and then left to be evaluated whenever they appear in the function. If an argument is not used in the function body, the argument is never evaluated; if it is used several times, it is re-evaluated each time it appears. (See <a href="http://en.wikipedia.org/wiki/Jensen%27s_Device" title="Jensen's Device">Jensen's Device</a>.)</p>
+<p>Call-by-name evaluation is occasionally preferable to call-by-value evaluation. If a function's argument is not used in the function, call-by-name will save time by not evaluating the argument, whereas call-by-value will evaluate it regardless. If the argument is a non-terminating computation, the advantage is enormous. However, when the function argument is used, call-by-name is often slower, requiring a mechanism such as a <a href="http://en.wikipedia.org/wiki/Thunk_(functional_programming)#Call_by_name" title="Thunk (functional programming)" class="mw-redirect">thunk</a>.</p>
+<p>An early use was <a href="http://en.wikipedia.org/wiki/ALGOL_60" title="ALGOL 60">ALGOL 60</a>. .NET languages can simulate call-by-name using delegates or Expression&lt;T&gt; parameters. The latter results in an abstract syntax tree being given to the function. <a href="http://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a> provides agents, which represents an operation to be evaluated when needed. <a href="Seed7.html" title="Seed7">Seed7</a> provides call-by-name with function parameters.</p>
+<h3><span class="mw-headline" id="Call_by_need">Call by need</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=12" title="Edit section: Call by need">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">Lazy evaluation</a></div>
+<p><i>Call-by-need</i> is a <a href="http://en.wikipedia.org/wiki/Memoization" title="Memoization">memoized</a> version of call-by-name where, <i>if the function argument is evaluated,</i> that value is stored for subsequent uses. In a "pure" (effect-free) setting, this produces the same results as call-by-name; when the function argument is used two or more times, call-by-need is almost always faster.</p>
+<p>Because evaluation of expressions may happen arbitrarily far into a computation, languages using call-by-need generally do not support computational effects (such as <a href="http://en.wikipedia.org/wiki/Mutable_object" title="Mutable object" class="mw-redirect">mutation</a>) except through the use of <a href="http://en.wikipedia.org/wiki/Monads_in_functional_programming" title="Monads in functional programming" class="mw-redirect">monads</a> and <a href="http://en.wikipedia.org/wiki/Uniqueness_type" title="Uniqueness type">uniqueness types</a>. This eliminates any unexpected behavior from variables whose values change prior to their delayed evaluation.</p>
+<p><a href="http://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">Lazy evaluation</a> is the most commonly used implementation strategy for call-by-need semantics, but variations exist — for instance <a href="#Optimistic_evaluation">optimistic evaluation</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a> is the best-known language that uses call-by-need evaluation. <a href="http://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">R</a> also uses a form of call-by-need. .NET languages can simulate call-by-need using the type <code>Lazy&lt;T&gt;</code>.</p>
+<h3><span class="mw-headline" id="Call_by_macro_expansion">Call by macro expansion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=13" title="Edit section: Call by macro expansion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Call-by-macro-expansion</i> is similar to call-by-name, but uses textual substitution rather than capture-avoiding substitution. With uncautious use, macro substitution may result in <a href="http://en.wikipedia.org/w/index.php?title=Variable_capture&amp;action=edit&amp;redlink=1" class="new" title="Variable capture (page does not exist)">variable capture</a> and lead to undesired behavior. <a href="http://en.wikipedia.org/wiki/Hygienic_macros" title="Hygienic macros" class="mw-redirect">Hygienic macros</a> avoid this problem by checking for and replacing shadowed variables that are not parameters.</p>
+<h2><span class="mw-headline" id="Nondeterministic_strategies">Nondeterministic strategies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=14" title="Edit section: Nondeterministic strategies">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Full_.CE.B2-reduction">Full β-reduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=15" title="Edit section: Full β-reduction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Under <i>full β-reduction,</i> any function application may be reduced (substituting the function's argument into the function using capture-avoiding substitution) at any time. This may be done even within the body of an unapplied function.</p>
+<h3><span class="mw-headline" id="Call_by_future">Call by future</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=16" title="Edit section: Call by future">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink boilerplate seealso">See also: <a href="http://en.wikipedia.org/wiki/Futures_and_promises" title="Futures and promises">Futures and promises</a></div>
+<p><i>Call-by-future</i> (or <i>parallel call-by-name</i>) is a <a href="http://en.wikipedia.org/wiki/Concurrent_programming" title="Concurrent programming" class="mw-redirect">concurrent</a> evaluation strategy: the value of a <a href="http://en.wikipedia.org/wiki/Futures_and_promises" title="Futures and promises">future</a> expression is computed concurrently with the flow of the rest of the program. When the value of the future is needed, the main program blocks until the future finishes computing, if it has not already completed by then.</p>
+<p>This strategy is non-deterministic, as the evaluation can occur at any time between when the future is created (when the expression is given) and when the value of the future is used. It is similar to call-by-need in that the value is only computed once, and computation may be deferred until the value is needed, but it may be started before. Further, if the value of a future is not needed, such as if it is a local variable in a function that returns, the computation may be terminated part-way through.</p>
+<p>If implemented with processes or threads, creating a future will spawn a new process or thread, accessing the value will synchronize this with the main thread, and terminating the computation of the future corresponds to killing the thread computing its value.</p>
+<h3><span class="mw-headline" id="Optimistic_evaluation">Optimistic evaluation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=17" title="Edit section: Optimistic evaluation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>Optimistic evaluation</i> is another variant of call-by-need in which the function's argument is partially evaluated for some amount of time (which may be adjusted at runtime), after which evaluation is aborted and the function is applied using call-by-need. This approach avoids some of the runtime expense of call-by-need, while still retaining the desired termination characteristics.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=18" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Beta_normal_form" title="Beta normal form">Beta normal form</a></li>
+<li><a href="Comparison_of_programming_languages.html" title="Comparison of programming languages">Comparison of programming languages</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">Lambda calculus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parameter_(computer_science)" title="Parameter (computer science)" class="mw-redirect">Parameter (computer science)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eval()" title="Eval()" class="mw-redirect">Eval()</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=19" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;">
+<ol class="references">
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">As a matter of Python syntax, note that <code>l += x</code> is not equivalent to <code>l = l + x</code> – semantically it is a mutator, not an assignment. Further, <code>l += x</code> is not literally equivalent to <code>l.extend(x)</code> either, due to scoping issues: <code>l += x</code> requires that <code>l</code> be in the local scope, while <code>l.extend(x)</code> looks to enclosing scopes too.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit&amp;section=20" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="http://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(April 2012)</i></small></span></td>
+</tr>
+</table>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Essentials of Programming Languages by Daniel P. Friedman and Mitchell Wand, MIT Press 1989--2006</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://www.cs.uiowa.edu/~hzhang/c123/Lecture5.pdf">"Lambda Calculus"</a>. Cs.uiowa.edu<span class="reference-accessdate">. Retrieved 2013-08-18</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.btitle=Lambda+Calculus&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.cs.uiowa.edu%2F~hzhang%2Fc123%2FLecture5.pdf&amp;rft.pub=Cs.uiowa.edu&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://encyclopedia2.thefreedictionary.com/applicative+order+reduction">"applicative order reduction definition of applicative order reduction in the Free Online Encyclopedia"</a>. Encyclopedia2.thefreedictionary.com<span class="reference-accessdate">. Retrieved 2013-08-18</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.btitle=applicative+order+reduction+definition+of+applicative+order+reduction+in+the+Free+Online+Encyclopedia&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fencyclopedia2.thefreedictionary.com%2Fapplicative%2Border%2Breduction&amp;rft.pub=Encyclopedia2.thefreedictionary.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CLU_Reference_Manual-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-CLU_Reference_Manual_4-0">^</a></b></span> <span class="reference-text"><span class="citation web">Liskov, Barbara; Atkinson, Russ; Bloom, Toby; Moss, Eliot; Schaffert, Craig; Scheifler, Craig; Snyder, Alan (October 1979). <a rel="nofollow" class="external text" href="http://www.lcs.mit.edu/publications/pubs/pdf/MIT-LCS-TR-225.pdf">"CLU Reference Manual"</a> (PDF). <i>Laboratory for Computer Science</i>. Massachusetts Institute of Technology<span class="reference-accessdate">. Retrieved 2011-05-19</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=CLU+Reference+Manual&amp;rft.au=Atkinson%2C+Russ&amp;rft.au=Bloom%2C+Toby&amp;rft.aufirst=Barbara&amp;rft.aulast=Liskov&amp;rft.au=Liskov%2C+Barbara&amp;rft.au=Moss%2C+Eliot&amp;rft.au=Schaffert%2C+Craig&amp;rft.au=Scheifler%2C+Craig&amp;rft.au=Snyder%2C+Alan&amp;rft.date=October+1979&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.lcs.mit.edu%2Fpublications%2Fpubs%2Fpdf%2FMIT-LCS-TR-225.pdf&amp;rft.jtitle=Laboratory+for+Computer+Science&amp;rft.pub=Massachusetts+Institute+of+Technology&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Lundh_Call_By_Object-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Lundh_Call_By_Object_5-0">^</a></b></span> <span class="reference-text"><span class="citation web">Lundh, Fredrik. <a rel="nofollow" class="external text" href="http://effbot.org/zone/call-by-object.htm">"Call By Object"</a>. <i>effbot.org</i><span class="reference-accessdate">. Retrieved 2011-05-19</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=Call+By+Object&amp;rft.aufirst=Fredrik&amp;rft.aulast=Lundh&amp;rft.au=Lundh%2C+Fredrik&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Feffbot.org%2Fzone%2Fcall-by-object.htm&amp;rft.jtitle=effbot.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cs.cornell.edu/courses/cs412/2001sp/iota/iota.html">"Iota Language Definition"</a>. <i>CS 412/413 Introduction to Compilers</i>. Cornell University. 2001<span class="reference-accessdate">. Retrieved 2011-05-19</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=Iota+Language+Definition&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cs.cornell.edu%2Fcourses%2Fcs412%2F2001sp%2Fiota%2Fiota.html&amp;rft.jtitle=CS+412%2F413+Introduction+to+Compilers&amp;rft.pub=Cornell+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CA1021-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-CA1021_7-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms182131.aspx">CA1021: Avoid out parameters</a></span></li>
+</ol>
+</div>
+<ul>
+<li><span class="citation book"><a href="Hal_Abelson.html" title="Hal Abelson">Abelson, Harold</a>; <a href="http://en.wikipedia.org/wiki/Gerald_Jay_Sussman" title="Gerald Jay Sussman">Sussman, Gerald Jay</a> (1996). <a rel="nofollow" class="external text" href="http://mitpress.mit.edu/sicp/full-text/book/book.html"><i>Structure and Interpretation of Computer Programs</i></a> (Second ed.). Cambridge, Massachusetts: The MIT Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-262-01153-2" title="Special:BookSources/978-0-262-01153-2">978-0-262-01153-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.au=Abelson%2C+Harold&amp;rft.aufirst=Harold&amp;rft.aulast=Abelson&amp;rft.au=Sussman%2C+Gerald+Jay&amp;rft.btitle=Structure+and+Interpretation+of+Computer+Programs&amp;rft.date=1996&amp;rft.edition=Second&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fmitpress.mit.edu%2Fsicp%2Ffull-text%2Fbook%2Fbook.html&amp;rft.isbn=978-0-262-01153-2&amp;rft.place=Cambridge%2C+Massachusetts&amp;rft.pub=The+MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal">Baker-Finch, Clem; King, David; Hall, Jon; Trinder, Phil (1999-03-10). <a rel="nofollow" class="external text" href="http://cs.anu.edu.au/people/Clem.Baker-Finch/Research/par-cbn-tr/">"An Operational Semantics for Parallel Call-by-Need"</a> (ps). <i>Research report</i> (Faculty of Mathematics &amp; Computing, The Open University) <b>99</b> (1).</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=An+Operational+Semantics+for+Parallel+Call-by-Need&amp;rft.au=Baker-Finch%2C+Clem&amp;rft.aufirst=Clem&amp;rft.au=Hall%2C+Jon&amp;rft.au=King%2C+David&amp;rft.aulast=Baker-Finch&amp;rft.au=Trinder%2C+Phil&amp;rft.date=1999-03-10&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fcs.anu.edu.au%2Fpeople%2FClem.Baker-Finch%2FResearch%2Fpar-cbn-tr%2F&amp;rft.issue=1&amp;rft.jtitle=Research+report&amp;rft.pub=Faculty+of+Mathematics+%26+Computing%2C+The+Open+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=99" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation conference">Ennals, Robert; Peyton Jones, Simon (2003). <a rel="nofollow" class="external text" href="http://research.microsoft.com/en-us/um/people/simonpj/Papers/optimistic/icfp2003.pdf">"Optimistic Evaluation: a fast evaluation strategy for non-strict programs"</a> (PDF). International Conference on Functional Programming. ACM Press.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.au=Ennals%2C+Robert&amp;rft.aufirst=Robert&amp;rft.aulast=Ennals&amp;rft.au=Peyton+Jones%2C+Simon&amp;rft.btitle=Optimistic+Evaluation%3A+a+fast+evaluation+strategy+for+non-strict+programs&amp;rft.date=2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fsimonpj%2FPapers%2Foptimistic%2Ficfp2003.pdf&amp;rft.pub=ACM+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Ludäscher, Bertram (2001-01-24). <a rel="nofollow" class="external text" href="http://users.sdsc.edu/~ludaesch/CSE130/ln5.html">"CSE 130 lecture notes"</a>. <i>CSE 130: Programming Languages: Principles &amp; Paradigms</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=CSE+130+lecture+notes&amp;rft.aufirst=Bertram&amp;rft.aulast=Lud%C3%A4scher&amp;rft.au=Lud%C3%A4scher%2C+Bertram&amp;rft.date=2001-01-24&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fusers.sdsc.edu%2F~ludaesch%2FCSE130%2Fln5.html&amp;rft.jtitle=CSE+130%3A+Programming+Languages%3A+Principles+%26+Paradigms&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Benjamin_C._Pierce" title="Benjamin C. Pierce">Pierce, Benjamin C.</a> (2002). <i><a href="http://en.wikipedia.org/wiki/Types_and_Programming_Languages" title="Types and Programming Languages">Types and Programming Languages</a></i>. <a href="http://en.wikipedia.org/wiki/MIT_Press" title="MIT Press">MIT Press</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-16209-1" title="Special:BookSources/0-262-16209-1">0-262-16209-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.aufirst=Benjamin+C.&amp;rft.aulast=Pierce&amp;rft.au=Pierce%2C+Benjamin+C.&amp;rft.btitle=Types+and+Programming+Languages&amp;rft.date=2002&amp;rft.genre=book&amp;rft.isbn=0-262-16209-1&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Sestoft, Peter (2002). <a rel="nofollow" class="external text" href="http://www.dina.kvl.dk/~sestoft/papers/sestoft-lamreduce.pdf"><i>Demonstrating Lambda Calculus Reduction</i></a> (PDF). In Mogensen, T; Schmidt, D; Sudborough, I. H. "The essence of computation&#160;: complexity, analysis, trnasformation&#160;: essays dedicated to Neil D. Jones". <i>The Essence of Computation: Complexity, Analysis, Transformation. Essays Dedicated to Neil D. Jones</i>. Lecture Notes in Computer Science <b>2566</b> (Springer-Verlag). pp.&#160;420–435. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/3-540-00326-6" title="Special:BookSources/3-540-00326-6">3-540-00326-6</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=The+essence+of+computation+%3A+complexity%2C+analysis%2C+trnasformation+%3A+essays+dedicated+to+Neil+D.+Jones&amp;rft.aufirst=Peter&amp;rft.aulast=Sestoft&amp;rft.au=Sestoft%2C+Peter&amp;rft.btitle=Demonstrating+Lambda+Calculus+Reduction&amp;rft.date=2002&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.dina.kvl.dk%2F~sestoft%2Fpapers%2Fsestoft-lamreduce.pdf&amp;rft.isbn=3-540-00326-6&amp;rft.pages=420%E2%80%93435&amp;rft.pub=Springer-Verlag&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=2566" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://digg.com/newsbar/topnews/c_programming_lesson_call_by_value_and_call_by_reference">"Call by Value and Call by Reference in C Programming"</a>. <i>Call by Value and Call by Reference in C Programming explained</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEvaluation+strategy&amp;rft.atitle=Call+by+Value+and+Call+by+Reference+in+C+Programming&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdigg.com%2Fnewsbar%2Ftopnews%2Fc_programming_lesson_call_by_value_and_call_by_reference&amp;rft.jtitle=Call+by+Value+and+Call+by+Reference+in+C+Programming+explained.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1101
+CPU time usage: 0.748 seconds
+Real time usage: 0.834 seconds
+Preprocessor visited node count: 1738/1000000
+Preprocessor generated node count: 12330/1500000
+Post‐expand include size: 40192/2048000 bytes
+Template argument size: 3582/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 6/500
+Lua time usage: 0.100/10.000 seconds
+Lua memory usage: 2.82 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2977119-0!*!0!!en!4!* and timestamp 20140325053001
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;oldid=600729513#Call_by_value">http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;oldid=600729513#Call_by_value</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Evaluation_strategy" title="Category:Evaluation strategy">Evaluation strategy</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Programming_language_topics" title="Category:Programming language topics">Programming language topics</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_January_2011" title="Category:Articles with unsourced statements from January 2011">Articles with unsourced statements from January 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2009" title="Category:Articles with unsourced statements from October 2009">Articles with unsourced statements from October 2009</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2013" title="Category:Articles needing additional references from June 2013">Articles needing additional references from June 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_April_2012" title="Category:Articles lacking in-text citations from April 2012">Articles lacking in-text citations from April 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Evaluation+strategy&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Evaluation+strategy" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Evaluation_strategy"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Evaluation_strategy"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Evaluation_strategy" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Evaluation_strategy" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Evaluation_strategy" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;oldid=600729513" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q2881121" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Evaluation_strategy&amp;id=600729513" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Evaluation+strategy">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Evaluation+strategy&amp;oldid=600729513&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Evaluation_strategy&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Auswertung_(Informatik)" title="Auswertung (Informatik) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Call-by-name" title="Call-by-name – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/評価戦略" title="評価戦略 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Estratégia_de_avaliação" title="Estratégia de avaliação – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Передача_параметра_(программирование)" title="Передача параметра (программирование) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Vyhodnocovacia_stratégia" title="Vyhodnocovacia stratégia – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/求值策略" title="求值策略 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q2881121#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 March 2014 at 13:20.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Evaluation_strategy#Call_by_value" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1185 in 0.316 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Call-by-value by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:50 GMT -->
+</html>

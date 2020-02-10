@@ -1,0 +1,920 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Glibc.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Glibc by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>GNU C Library - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/GNU_C_Library" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="GNU_C_Library.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GNU_C_Library","wgTitle":"GNU C Library","wgCurRevisionId":601436796,"wgRevisionId":601436796,"wgArticleId":324364,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use dmy dates from July 2013","Articles using fixed number of columns in reflist","C libraries","GNU Project software","C standard library","Free computer libraries","Cross-platform free software","Free software programmed in C"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"GNU_C_Library","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Glibc","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q856089"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-GNU_C_Library skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">GNU C Library</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Glibc&amp;redirect=no" title="Glibc">Glibc</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">"glibc" redirects here. It is not to be confused with <a href="http://en.wikipedia.org/wiki/Glib" title="Glib" class="mw-redirect">glib</a>&#160;or <a href="http://en.wikipedia.org/wiki/Gnulib" title="Gnulib">gnulib</a>.</div>
+<table class="infobox vevent" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption class="summary">GNU C Library</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Heckert_GNU_white.svg" class="image"><img alt="Heckert GNU white.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/125px-Heckert_GNU_white.svg.png" width="125" height="122" srcset="//upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/188px-Heckert_GNU_white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/250px-Heckert_GNU_white.svg.png 2x" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_design.html" title="Software design">Original author(s)</a></th>
+<td>Roland McGrath</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_developer.html" title="Software developer">Developer(s)</a></th>
+<td><a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Initial release</th>
+<td>1987<span style="display:none">&#160;(<span class="bday dtstart published updated">1987</span>)</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_release_life_cycle.html" title="Software release life cycle">Stable release</a></th>
+<td>2.19 <small>(February&#160;8, 2014<span class="noprint">; 47 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2014-02-08</span>)</span><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/GNU_C_Library&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Written in</th>
+<td><a href="C_(programming_language).html" title="C (programming language)">C</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Operating_system.html" title="Operating system">Operating system</a></th>
+<td><a href="Unix-like.html" title="Unix-like">Unix-like</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/List_of_software_categories" title="List of software categories">Type</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Runtime_library" title="Runtime library">Runtime library</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_license.html" title="Software license">License</a></th>
+<td><a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.gnu.org/software/libc/">www.gnu.org/software/libc/</a></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Linux_kernel_System_Call_Interface_and_glibc.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Linux_kernel_System_Call_Interface_and_glibc.svg/300px-Linux_kernel_System_Call_Interface_and_glibc.svg.png" width="300" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Linux_kernel_System_Call_Interface_and_glibc.svg/450px-Linux_kernel_System_Call_Interface_and_glibc.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Linux_kernel_System_Call_Interface_and_glibc.svg/600px-Linux_kernel_System_Call_Interface_and_glibc.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Linux_kernel_System_Call_Interface_and_glibc.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The <b>GNU C Library</b> is a wrapper around the <a href="System_call.html" title="System call">system calls</a> of the <a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a></div>
+</div>
+</div>
+<p>The <b>GNU C Library</b>, commonly known as <b>glibc</b>, is the <a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a>'s implementation of the <a href="C_standard_library.html" title="C standard library">C standard library</a>. Originally written by the <a href="Free_Software_Foundation.html" title="Free Software Foundation">Free Software Foundation</a> (FSF) for the <a href="GNU.html" title="GNU">GNU</a> operating system, the library's development had been overseen by a committee since 2001,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> with <a href="http://en.wikipedia.org/w/index.php?title=Ulrich_Drepper&amp;action=edit&amp;redlink=1" class="new" title="Ulrich Drepper (page does not exist)">Ulrich Drepper</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> as the lead contributor and maintainer. In March 2012, the steering committee voted to disband itself, in favor of a community-driven development process, with Ryan Arnold, Maxim Kuvyrkov, Joseph Myers, Carlos O'Donell, and <a href="http://en.wikipedia.org/wiki/Alexandre_Oliva" title="Alexandre Oliva">Alexandre Oliva</a> as non-decision making project stewards.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>Released under the <a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a>, glibc is <a href="Free_software.html" title="Free software">free software</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#A_temporary_fork"><span class="tocnumber">1.1</span> <span class="toctext">A temporary fork</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Version_history"><span class="tocnumber">1.2</span> <span class="toctext">Version history</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Supported_hardware_and_kernels"><span class="tocnumber">2</span> <span class="toctext">Supported hardware and kernels</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Functionality"><span class="tocnumber">3</span> <span class="toctext">Functionality</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Use_in_small_devices"><span class="tocnumber">4</span> <span class="toctext">Use in small devices</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>glibc was initially written mostly by Roland McGrath, working for the <a href="Free_Software_Foundation.html" title="Free Software Foundation">Free Software Foundation</a> (FSF) in the 1980s.</p>
+<p>In February 1988, FSF described glibc as having nearly completed the functionality required by ANSI C.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> By 1992, it had the ANSI C-1989 and POSIX.1-1990 functions implemented and work was under way on POSIX.2.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="A_temporary_fork">A temporary fork</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=2" title="Edit section: A temporary fork">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the early 1990s, the developers of the <a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a> <a href="http://en.wikipedia.org/wiki/Fork_(software_development)" title="Fork (software development)">forked</a> glibc. Their fork, called "Linux libc", was maintained separately for years and released versions 2 through 5.</p>
+<p>When FSF released glibc 2.0 in January 1997, it had much more complete POSIX standards compliance, better internationalisation and multilingual function, <a href="http://en.wikipedia.org/wiki/IPv6" title="IPv6">IPv6</a> capability, 64-bit data access, facilities for multithreaded applications, future version compatibility, and the code was more portable.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> At this point, the Linux kernel developers discontinued their fork and returned to using FSF's glibc.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p>The last used version of Linux libc used the internal name (<a href="http://en.wikipedia.org/wiki/Soname" title="Soname">soname</a>) <tt>libc.so.5</tt>. Following on from this, glibc 2.x on Linux uses the soname <tt>libc.so.6</tt><sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> (<a href="http://en.wikipedia.org/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a> and <a href="http://en.wikipedia.org/wiki/Itanium" title="Itanium">IA64</a> architectures now use <tt>libc.so.6.1</tt>, instead). The soname is often abbreviated as libc6 (for example in the package name in <a href="Debian.html" title="Debian">Debian</a>) following the normal conventions for libraries.</p>
+<p>According to <a href="Richard_Stallman.html" title="Richard Stallman">Richard Stallman</a>, the changes that had been made in Linux libc could not be merged back into glibc because the authorship status of that code was unclear and the GNU project is quite strict about recording copyright and authors.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Version_history">Version history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=3" title="Edit section: Version history">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For most systems, the version of glibc can be obtained by executing the lib file (for example, /lib/libc.so.6).</p>
+<table class="wikitable">
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Notes</th>
+<th>Adoption</th>
+</tr>
+<tr>
+<td>0.1 – 0.6</td>
+<td>Oct 1991 – February 1992</td>
+<td></td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>February 1992</td>
+<td></td>
+</tr>
+<tr>
+<td>1.01 – 1.09.3</td>
+<td>March 1992 – December 1994</td>
+<td></td>
+</tr>
+<tr>
+<td>1.90 – 1.102</td>
+<td>May 1996 – January 1997</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>January 1997</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0.1</td>
+<td>January 1997</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0.2</td>
+<td>February 1997</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0.91</td>
+<td>December 1997</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0.95</td>
+<td>July 1998</td>
+<td></td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>February 1999</td>
+<td></td>
+</tr>
+<tr>
+<td>2.1.1</td>
+<td>March 1999</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>November 2000</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.1</td>
+<td>January 2001</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.2</td>
+<td>February 2001</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.3</td>
+<td>March 2001</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.4</td>
+<td>July 2001</td>
+<td></td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>October 2002</td>
+<td></td>
+</tr>
+<tr>
+<td>2.3.1</td>
+<td>October 2002</td>
+<td></td>
+</tr>
+<tr>
+<td>2.3.2</td>
+<td>February 2003</td>
+<td></td>
+<td><a href="Debian.html" title="Debian">Debian</a> 3.1 (Sarge)</td>
+</tr>
+<tr>
+<td>2.3.3</td>
+<td>December 2003</td>
+<td></td>
+</tr>
+<tr>
+<td>2.3.4</td>
+<td>December 2004</td>
+<td>Standard for <a href="http://en.wikipedia.org/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a> (LSB) 3.0,</td>
+<td><a href="Red_Hat_Enterprise_Linux.html" title="Red Hat Enterprise Linux">RHEL 4 (Update 5)</a></td>
+</tr>
+<tr>
+<td>2.3.5</td>
+<td>April 2005</td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/SUSE_Linux_Enterprise_Server" title="SUSE Linux Enterprise Server">SLES 9</a></td>
+</tr>
+<tr>
+<td>2.3.6</td>
+<td>November 2005</td>
+<td></td>
+<td><a href="Debian.html" title="Debian">Debian</a> 4.0 (Etch)</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>March 2006</td>
+<td>Standard for <a href="http://en.wikipedia.org/wiki/Linux_Standard_Base" title="Linux Standard Base">LSB 4.0</a></td>
+<td><a href="http://en.wikipedia.org/wiki/SUSE_Linux_Enterprise_Server" title="SUSE Linux Enterprise Server">SLES 10</a></td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>September 2006</td>
+<td></td>
+<td><a href="Red_Hat_Enterprise_Linux.html" title="Red Hat Enterprise Linux">RHEL 5</a></td>
+</tr>
+<tr>
+<td>2.6</td>
+<td>May 2007</td>
+<td></td>
+</tr>
+<tr>
+<td>2.7</td>
+<td>October 2007</td>
+<td></td>
+<td><a href="Debian.html" title="Debian">Debian</a> 5 (Lenny), <a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a> 8.04</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td>April 2008</td>
+<td></td>
+</tr>
+<tr>
+<td>2.9</td>
+<td>November 2008</td>
+<td></td>
+</tr>
+<tr>
+<td>2.10</td>
+<td>May 2009</td>
+<td></td>
+</tr>
+<tr>
+<td>2.11</td>
+<td>October 2009</td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/SUSE_Linux_Enterprise_Server" title="SUSE Linux Enterprise Server">SLES 11</a>, <a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a> 10.04, <a href="http://en.wikipedia.org/wiki/Eglibc" title="Eglibc" class="mw-redirect">eglibc</a> used in <a href="Debian.html" title="Debian">Debian</a> 6 (Squeeze)</td>
+</tr>
+<tr>
+<td>2.12</td>
+<td>May 2010</td>
+<td></td>
+<td><a href="Red_Hat_Enterprise_Linux.html" title="Red Hat Enterprise Linux">RHEL 6</a></td>
+</tr>
+<tr>
+<td>2.13</td>
+<td>January 2011</td>
+<td></td>
+<td><a href="http://en.wikipedia.org/wiki/Eglibc" title="Eglibc" class="mw-redirect">eglibc</a> 2.13 used in <a href="Debian.html" title="Debian">Debian</a> 7 (Wheezy)</td>
+</tr>
+<tr>
+<td>2.14</td>
+<td>June 2011</td>
+<td></td>
+</tr>
+<tr>
+<td>2.15</td>
+<td>March 2012</td>
+<td></td>
+<td><a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a> 12.04 and 12.10</td>
+</tr>
+<tr>
+<td>2.16</td>
+<td>June 2012</td>
+<td><a href="http://en.wikipedia.org/wiki/X32_ABI" title="X32 ABI">x32 ABI</a> support, <a href="C11_(C_standard_revision).html" title="C11 (C standard revision)">ISO C11</a> compliance, <a href="http://en.wikipedia.org/wiki/SystemTap" title="SystemTap">SystemTap</a></td>
+</tr>
+<tr>
+<td>2.17</td>
+<td>December 2012</td>
+<td><a href="http://en.wikipedia.org/wiki/ARM_architecture#ARMv8_and_64-bit" title="ARM architecture">64-bit ARM</a> support;</td>
+<td><a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a> 13.04, <a href="Red_Hat_Enterprise_Linux.html" title="Red Hat Enterprise Linux">RHEL 7</a></td>
+</tr>
+<tr>
+<td>2.18</td>
+<td>August 2013</td>
+<td>Improved <a href="C%2b%2b11.html" title="C++11">C++11</a> support. Support for Intel <a href="http://en.wikipedia.org/wiki/Transactional_Synchronization_Extensions" title="Transactional Synchronization Extensions">TSX</a> lock elision. Support for the Xilinx <a href="http://en.wikipedia.org/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a> and IBM <a href="http://en.wikipedia.org/wiki/POWER8" title="POWER8">POWER8</a> microarchitectures.</td>
+</tr>
+<tr>
+<td>2.19</td>
+<td>February 2014</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Supported_hardware_and_kernels">Supported hardware and kernels</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=4" title="Edit section: Supported hardware and kernels">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Glibc is used in systems that run many different <a href="http://en.wikipedia.org/wiki/Kernel_(computer_science)" title="Kernel (computer science)" class="mw-redirect">kernels</a> and different <a href="Computer_hardware.html" title="Computer hardware">hardware</a> architectures. Its most common use is in systems using the <a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a> on <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> hardware, however, officially supported hardware includes: <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a>, <a href="http://en.wikipedia.org/wiki/68k" title="68k" class="mw-redirect">Motorola 680x0</a>, <a href="http://en.wikipedia.org/wiki/DEC_Alpha" title="DEC Alpha">DEC Alpha</a>, <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a>, <a href="http://en.wikipedia.org/wiki/ETRAX_CRIS" title="ETRAX CRIS">ETRAX CRIS</a>, <a href="http://en.wikipedia.org/wiki/ZSeries" title="ZSeries" class="mw-redirect">s390</a>, and <a href="http://en.wikipedia.org/wiki/SPARC" title="SPARC">SPARC</a>. It officially supports the <a href="GNU_Hurd.html" title="GNU Hurd">Hurd</a> and <a href="Linux_kernel.html" title="Linux kernel">Linux</a> kernels. Additionally, there are heavily patched versions that run on the kernels of <a href="FreeBSD.html" title="FreeBSD">FreeBSD</a> and <a href="NetBSD.html" title="NetBSD">NetBSD</a> (from which <a href="http://en.wikipedia.org/wiki/Debian_gnu/kfreebsd" title="Debian gnu/kfreebsd" class="mw-redirect">Debian GNU/kFreeBSD</a> and <a href="http://en.wikipedia.org/wiki/Debian_GNU/NetBSD" title="Debian GNU/NetBSD" class="mw-redirect">Debian GNU/NetBSD</a> systems are built, respectively), as well as the kernel of <a href="OpenSolaris.html" title="OpenSolaris">OpenSolaris</a>.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup> It is also used (in an edited form) and named <tt>libroot.so</tt> in <a href="BeOS.html" title="BeOS">BeOS</a> and <a href="http://en.wikipedia.org/wiki/Haiku_(operating_system)" title="Haiku (operating system)">Haiku</a>.</p>
+<h2><span class="mw-headline" id="Functionality">Functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=5" title="Edit section: Functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>glibc provides the functionality required by the <a href="Single_UNIX_Specification.html" title="Single UNIX Specification">Single UNIX Specification</a>, <a href="POSIX.html" title="POSIX">POSIX</a> (1c, 1d, and 1j) and some of the functionality required by <a href="International_Organization_for_Standardization.html" title="International Organization for Standardization">ISO</a> <a href="http://en.wikipedia.org/wiki/C11" title="C11">C11</a>, <a href="International_Organization_for_Standardization.html" title="International Organization for Standardization">ISO</a> <a href="C99.html" title="C99">C99</a>, <a href="http://en.wikipedia.org/wiki/Berkeley_Unix" title="Berkeley Unix" class="mw-redirect">Berkeley Unix</a> (BSD) interfaces, the <a href="http://en.wikipedia.org/wiki/System_V_Interface_Definition" title="System V Interface Definition">System V Interface Definition</a> (SVID) and the <a href="http://en.wikipedia.org/wiki/X/Open_Portability_Guide" title="X/Open Portability Guide" class="mw-redirect">X/Open Portability Guide</a> (XPG), Issue 4.2, with all extensions common to XSI (<a href="http://en.wikipedia.org/w/index.php?title=X/Open_System_Interface&amp;action=edit&amp;redlink=1" class="new" title="X/Open System Interface (page does not exist)">X/Open System Interface</a>) compliant systems along with all X/Open UNIX extensions.</p>
+<p>In addition, glibc also provides extensions that have been deemed useful or necessary while developing <a href="GNU.html" title="GNU">GNU</a>.</p>
+<h2><span class="mw-headline" id="Use_in_small_devices">Use in small devices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=6" title="Edit section: Use in small devices">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>glibc has been criticized as being "bloated" and slower than other libraries in the past, e.g. by <a href="Linus_Torvalds.html" title="Linus Torvalds">Linus Torvalds</a><sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup> and <a href="http://en.wikipedia.org/wiki/Embedded_Linux" title="Embedded Linux" class="mw-redirect">embedded Linux</a> programmers. For this reason, several alternative C standard libraries have been created which emphasize a smaller footprint. Alternative libcs are <a href="Bionic_(software).html" title="Bionic (software)">Bionic</a> (based mostly on <a href="BSD_libc.html" title="BSD libc" class="mw-redirect">libc from BSD</a> and used in <a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a><sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup>), <a href="Dietlibc.html" title="Dietlibc">dietlibc</a>, <a href="UClibc.html" title="UClibc">uClibc</a>, <a href="Newlib.html" title="Newlib">Newlib</a>, <a href="Klibc.html" title="Klibc">Klibc</a>, <a href="Musl.html" title="Musl">musl</a>, and <a href="http://en.wikipedia.org/wiki/EGLIBC" title="EGLIBC" class="mw-redirect">EGLIBC</a> (used in <a href="Debian.html" title="Debian">Debian</a> and <a href="Ubuntu_(operating_system).html" title="Ubuntu (operating system)">Ubuntu</a>).</p>
+<p>However, many small-device projects use GNU libc over the smaller alternatives because of its application support, standards compliance, and completeness. Examples include <a href="http://en.wikipedia.org/wiki/Openmoko" title="Openmoko">Openmoko</a><sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> and <a href="http://en.wikipedia.org/wiki/Familiar_Linux" title="Familiar Linux">Familiar Linux</a> for iPaq handhelds (when using the <a href="http://en.wikipedia.org/wiki/GPE" title="GPE">GPE</a> display software).<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Free_and_open-source_software_logo_(2009).svg" class="image"><img alt="Portal icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Free_software" title="Portal:Free software">Free software portal</a></td>
+</tr>
+</table>
+</div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Gnulib" title="Gnulib">Gnulib</a></li>
+<li><a href="Hybris_(software).html" title="Hybris (software)">libhybris</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_kernel_API" title="Linux kernel API">Linux kernel API</a></li>
+</ul>
+<dl>
+<dt>Other <a href="C_standard_library.html" title="C standard library">C standard libraries</a></dt>
+</dl>
+<div class="div-col columns column-width" style="-moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em;">
+<ul>
+<li><a href="Bionic_(software).html" title="Bionic (software)">Bionic libc</a></li>
+<li><a href="Dietlibc.html" title="Dietlibc">dietlibc</a></li>
+<li><a href="Embedded_GLIBC.html" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="Klibc.html" title="Klibc">klibc</a></li>
+<li><a href="Musl.html" title="Musl">musl</a></li>
+<li><a href="Newlib.html" title="Newlib">Newlib</a></li>
+<li><a href="UClibc.html" title="UClibc">uClibc</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web">Corbet, Jonathan (28 March 2012). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/488847/">"A turning point for GNU libc"</a>. LWN.net.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.au=Corbet%2C+Jonathan&amp;rft.aufirst=Jonathan&amp;rft.aulast=Corbet&amp;rft.btitle=A+turning+point+for+GNU+libc&amp;rft.date=28+March+2012&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F488847%2F&amp;rft.pub=LWN.net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web">McRae, Allan (2014-02-08). <a rel="nofollow" class="external text" href="http://lists.gnu.org/archive/html/info-gnu/2014-02/msg00001.html">"The GNU C Library version 2.19 is now available."</a>. info-gnu<span class="printonly">. <a rel="nofollow" class="external free" href="http://lists.gnu.org/archive/html/info-gnu/2014-02/msg00001.html">http://lists.gnu.org/archive/html/info-gnu/2014-02/msg00001.html</a></span><span class="reference-accessdate">. Retrieved 2014-02-08</span>.</span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.gnu.org/software/libc/">"glibc homepage"</a>. "In 2001 The GNU C Library Steering Committee ..., was formed and currently consists of Mark Brown, Paul Eggert, Andreas Jaeger, Jakub Jelinek, Roland McGrath and Andreas Schwab."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=glibc+homepage&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.gnu.org%2Fsoftware%2Flibc%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.linkedin.com/in/ulrichdrepper">"Ulrich Drepper"</a>. LinkedIn<span class="reference-accessdate">. Retrieved 2012-06-13</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Ulrich+Drepper&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.linkedin.com%2Fin%2Fulrichdrepper&amp;rft.pub=LinkedIn&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web">McGrath, Roland (26 March 2012). <a rel="nofollow" class="external text" href="http://sourceware.org/ml/libc-alpha/2012-03/msg01038.html">"glibc steering committee dissolving"</a>. Sourceware.org<span class="reference-accessdate">. Retrieved 2012-06-13</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.aufirst=Roland&amp;rft.aulast=McGrath&amp;rft.au=McGrath%2C+Roland&amp;rft.btitle=glibc+steering+committee+dissolving&amp;rft.date=26+March+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsourceware.org%2Fml%2Flibc-alpha%2F2012-03%2Fmsg01038.html&amp;rft.pub=Sourceware.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web">Myers, Joseph S. (26 March 2012). <a rel="nofollow" class="external text" href="http://sourceware.org/ml/libc-alpha/2012-03/msg01040.html">"GNU C Library development and maintainers"</a>. Sourceware.org<span class="reference-accessdate">. Retrieved 2012-06-13</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.aufirst=Joseph+S.&amp;rft.aulast=Myers&amp;rft.au=Myers%2C+Joseph+S.&amp;rft.btitle=GNU+C+Library+development+and+maintainers&amp;rft.date=26+March+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsourceware.org%2Fml%2Flibc-alpha%2F2012-03%2Fmsg01040.html&amp;rft.pub=Sourceware.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.gnu.org/bulletins/bull4.html">"http://www.gnu.org/bulletins/bull4.html"</a>. "Most libraries are done. Roland McGrath [...] has a nearly complete set of ANSI C library functions. We hope they will be ready some time this spring."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=http%3A%2F%2Fwww.gnu.org%2Fbulletins%2Fbull4.html&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.gnu.org%2Fbulletins%2Fbull4.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.gnu.org/bulletins/bull12.html">"GNU's Bulletin, vol. 1 no. 12"</a>. "It now contains all of the ANSI C-1989 and POSIX.1-1990 functions, and work is in progress on POSIX.2 and Unix functions (BSD and System V)"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=GNU%27s+Bulletin%2C+vol.+1+no.+12&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.gnu.org%2Fbulletins%2Fbull12.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation web">Lee, Elliot (2001). <a rel="nofollow" class="external text" href="http://web.archive.org/web/20040411191201/http://people.redhat.com/~sopwith/old/glibc-vs-libc5.html">"A Technical Comparison of glibc 2.x With Legacy System Libraries"</a>. Archived from <a rel="nofollow" class="external text" href="http://people.redhat.com/~sopwith/old/glibc-vs-libc5.html">the original</a> on 11 April 2004.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.aufirst=Elliot&amp;rft.aulast=Lee&amp;rft.au=Lee%2C+Elliot&amp;rft.btitle=A+Technical+Comparison+of+glibc+2.x+With+Legacy+System+Libraries&amp;rft.date=2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fpeople.redhat.com%2F~sopwith%2Fold%2Fglibc-vs-libc5.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.linux.com/archive/feature/3874">"Forking: it could even happen to you"</a>. "the split between GNU LIBC and the Linux LIBC -- it went on for years while Linux stabilized, and then the forks re-merged into one project"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Forking%3A+it+could+even+happen+to+you&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.linux.com%2Farchive%2Ffeature%2F3874&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://linuxmafia.com/faq/Licensing_and_Law/forking.html">"Fear of Forking essay, see "6. glibc --&gt; Linux libc --&gt; glibc<span style="padding-right:0.2em;">"</span>"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Fear+of+Forking+essay%2C+see+%226.+glibc+--%3E+Linux+libc+--%3E+glibc%22&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flinuxmafia.com%2Ffaq%2FLicensing_and_Law%2Fforking.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://linuxmafia.com/faq/Licensing_and_Law/forking.html#foot25">"Fear of Forking, footnote on Stallman's merge comments"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Fear+of+Forking%2C+footnote+on+Stallman%27s+merge+comments&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flinuxmafia.com%2Ffaq%2FLicensing_and_Law%2Fforking.html%23foot25&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web">Bartley, David; Spang, Michael. <a rel="nofollow" class="external text" href="http://csclub.uwaterloo.ca/~dtbartle/opensolaris/">"GNU/kOpenSolaris (GNU libc/base + OpenSolaris kernel)"</a><span class="reference-accessdate">. Retrieved 2008-12-16</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.au=Bartley%2C+David&amp;rft.aufirst=David&amp;rft.aulast=Bartley&amp;rft.au=Spang%2C+Michael&amp;rft.btitle=GNU%2FkOpenSolaris+%28GNU+libc%2Fbase+%2B+OpenSolaris+kernel%29&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcsclub.uwaterloo.ca%2F~dtbartle%2Fopensolaris%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web">Torvalds, Linus (9 January 2002). <a rel="nofollow" class="external text" href="http://ecos.sourceware.org/ml/libc-alpha/2002-01/msg00079.html">"Posting to the glibc mailing list"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.aufirst=Linus&amp;rft.aulast=Torvalds&amp;rft.au=Torvalds%2C+Linus&amp;rft.btitle=Posting+to+the+glibc+mailing+list&amp;rft.date=9+January+2002&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fecos.sourceware.org%2Fml%2Flibc-alpha%2F2002-01%2Fmsg00079.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://github.com/android/platform_bionic/tree/master/libc">"Bionic libc README"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Bionic+libc+README&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fgithub.com%2Fandroid%2Fplatform_bionic%2Ftree%2Fmaster%2Flibc&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://wiki.openmoko.org/wiki/OpenMoko">"OpenMoko components"</a>. "We will use glibc (not uClibC) ... The alternatives may save more space and be more optimized, but are more likely to give us integration headaches"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=OpenMoko+components&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwiki.openmoko.org%2Fwiki%2FOpenMoko&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://marc.info/?l=familiar&amp;m=118666899424374&amp;w=2">"Re: [Familiar] Which glibc for Familiar 0.8.4 &#160;?"</a>. "Question: which version of the GLIBC was used to build the Familiar 0.8.4&#160;? Answer: 2.3.3"</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+C+Library&amp;rft.btitle=Re%3A+%26%23x5B%3BFamiliar%26%23x5D%3B+Which+glibc+for+Familiar+0.8.4++%3F&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fmarc.info%2F%3Fl%3Dfamiliar%26m%3D118666899424374%26w%3D2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.gnu.org/software/libc/">GNU libc homepage</a></li>
+<li><a rel="nofollow" class="external text" href="http://sources.redhat.com/glibc/">GNU libc developers' page</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CProLang" title="Template:CProLang"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CProLang" title="Template talk:CProLang"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CProLang&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="C_(programming_language).html" title="C (programming language)">C programming language</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="ANSI_C.html" title="ANSI C">ANSI C</a>
+<ul>
+<li><a href="ANSI_C.html#C89_and_C90" title="ANSI C">C89 and C90</a></li>
+</ul>
+</li>
+<li><a href="C99.html" title="C99">C99</a></li>
+<li><a href="C11_(C_standard_revision).html" title="C11 (C standard revision)">C11</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Amsterdam_Compiler_Kit.html" title="Amsterdam Compiler Kit">Amsterdam Compiler Kit</a></li>
+<li><a href="Borland_Turbo_C.html" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="Clang.html" title="Clang">Clang</a></li>
+<li><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="LCC_(compiler).html" title="LCC (compiler)">LCC</a></li>
+<li><a href="Pelles_C.html" title="Pelles C">Pelles C</a></li>
+<li><a href="Portable_C_Compiler.html" title="Portable C Compiler">PCC</a></li>
+<li><a href="Tiny_C_Compiler.html" title="Tiny C Compiler">TCC</a></li>
+<li><a href="Visual_C%2b%2b.html" title="Visual C++">Visual C++</a>
+<ul>
+<li><a href="C%2b%2b/CLI.html" title="C++/CLI">C++/CLI</a></li>
+<li><a href="C%2b%2b/CX.html" title="C++/CX">C++/CX</a></li>
+</ul>
+</li>
+<li><a href="Watcom_C/C%2b%2b_compiler.html" title="Watcom C/C++ compiler">Watcom C/C++ compiler</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="C_standard_library.html" title="C standard library">C standard library</a></li>
+<li><a href="Bionic_(software).html" title="Bionic (software)">Bionic</a></li>
+<li><a href="Dietlibc.html" title="Dietlibc">dietlibc</a></li>
+<li><a href="Embedded_GLIBC.html" title="Embedded GLIBC">EGLIBC</a></li>
+<li><strong class="selflink">glibc</strong></li>
+<li><a href="Klibc.html" title="Klibc">klibc</a></li>
+<li><a href="Hybris_(software).html" title="Hybris (software)">libhybris</a></li>
+<li><a href="Musl.html" title="Musl">musl</a></li>
+<li><a href="Newlib.html" title="Newlib">Newlib</a></li>
+<li><a href="UClibc.html" title="UClibc">uClibc</a></li>
+<li><a href="BSD_libc.html" title="BSD libc" class="mw-redirect">BSD libc</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Features</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Null-terminated_string.html" title="Null-terminated string">String</a></li>
+<li><a href="C_syntax.html" title="C syntax">Syntax</a></li>
+<li><a href="C_preprocessor.html" title="C preprocessor">Preprocessor</a></li>
+<li><a href="C_data_types.html" title="C data types">Variable types and declarations</a></li>
+<li><a href="C_standard_library.html" title="C standard library">Functions</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Select descendants</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="C%2b%2b.html" title="C++">C++</a></li>
+<li><a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a></li>
+<li><a href="D_(programming_language).html" title="D (programming language)">D</a></li>
+<li><a href="Objective-C.html" title="Objective-C">Objective-C</a></li>
+<li><a href="Alef_(programming_language).html" title="Alef (programming language)">Alef</a></li>
+<li><a href="Limbo_(programming_language).html" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="Go_(programming_language).html" title="Go (programming language)">Go</a></li>
+<li><a href="Vala_(programming_language).html" title="Vala (programming language)">Vala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">C and other languages</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li>C and C++
+<ul>
+<li><a href="Compatibility_of_C_and_C%2b%2b.html" title="Compatibility of C and C++">Compatibility</a></li>
+<li><a href="Operators_in_C_and_C%2b%2b.html" title="Operators in C and C++">Operators</a></li>
+</ul>
+</li>
+<li><a href="Comparison_of_Pascal_and_C.html" title="Comparison of Pascal and C">Comparison of Pascal and C</a></li>
+<li><a href="Java_virtual_machine.html#C_to_bytecode_compilers" title="Java virtual machine">C to Java byte-code compiler</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Category:C_programming_language" title="Category:C programming language">Category</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:GNU" title="Template:GNU"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:GNU" title="Template talk:GNU"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:GNU&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Manifesto" title="GNU Manifesto">GNU Manifesto</a></li>
+<li><a href="Free_Software_Foundation.html" title="Free Software Foundation">Free Software Foundation</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_Europe" title="Free Software Foundation Europe">Europe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_of_India" title="Free Software Foundation of India">India</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_Latin_America" title="Free Software Foundation Latin America">Latin America</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_free_and_open-source_software" title="History of free and open-source software">History of free software</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="9" style="width:0%;padding:0px 0px 0px 2px;">
+<div><a href="http://en.wikipedia.org/wiki/File:Heckert_GNU_white.svg" class="image" title="GNU's not UNIX"><img alt="GNU's not UNIX" src="http://upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/64px-Heckert_GNU_white.svg.png" width="64" height="63" srcset="//upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/96px-Heckert_GNU_white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/128px-Heckert_GNU_white.svg.png 2x" /></a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Licenses</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="GNU_General_Public_License.html" title="GNU General Public License">GNU General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Affero_General_Public_License" title="Affero General Public License">Affero General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GNU Free Documentation License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GPL_linking_exception" title="GPL linking exception">GPL linking exception</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="GNU.html" title="GNU">GNU</a> (<a href="http://en.wikipedia.org/wiki/GNU_variants" title="GNU variants">variants</a>)</li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">Hurd</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li>
+<li><strong class="selflink">glibc</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Bash_(Unix_shell)" title="Bash (Unix shell)">Bash</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Core_Utilities" title="GNU Core Utilities">coreutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Find_Utilities" title="GNU Find Utilities">findutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_build_system" title="GNU build system">Build system</a></li>
+<li><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Binutils" title="GNU Binutils">binutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Debugger" title="GNU Debugger">GDB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_GRUB" title="GNU GRUB">GRUB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNOME" title="GNOME">GNOME</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUstep" title="GNUstep">GNUstep</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GIMP" title="GIMP">GIMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Emacs" title="Emacs">GNU Emacs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_TeXmacs" title="GNU TeXmacs">GNU TeXmacs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a></li>
+<li><a href="http://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">GNU R</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Scientific_Library" title="GNU Scientific Library">GSL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" title="GNU Multiple Precision Arithmetic Library">GMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Electric_(software)" title="Electric (software)">GNU Electric</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Archimedes" title="GNU Archimedes">GNU Archimedes</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUnet" title="GNUnet">GNUnet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Privacy_Guard" title="GNU Privacy Guard">GNU Privacy Guard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gnuzilla" title="Gnuzilla">Gnuzilla</a> (<a href="http://en.wikipedia.org/wiki/GNU_IceCat" title="GNU IceCat">IceCat</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Health" title="GNU Health">GNU Health</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUmed" title="GNUmed">GNUmed</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LilyPond" title="LilyPond">GNU LilyPond</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Go" title="GNU Go">GNU Go</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Chess" title="GNU Chess">GNU Chess</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gnash" title="Gnash">Gnash</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_GNU_packages" title="List of GNU packages"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Public<br />
+speakers</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Alexandre_Oliva" title="Alexandre Oliva">Alexandre Oliva</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Benjamin_Mako_Hill" title="Benjamin Mako Hill">Benjamin Mako Hill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bradley_M._Kuhn" title="Bradley M. Kuhn">Bradley M. Kuhn</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eben_Moglen" title="Eben Moglen">Eben Moglen</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Georg_C._F._Greve" title="Georg C. F. Greve">Georg C. F. Greve</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Loïc_Dachary" title="Loïc Dachary">Loïc Dachary</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ricardo_Galli" title="Ricardo Galli">Ricardo Galli</a></li>
+<li><a href="Richard_Stallman.html" title="Richard Stallman">Richard Stallman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Robert_J._Chassell" title="Robert J. Chassell">Robert J. Chassell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/William_John_Sullivan" title="William John Sullivan">John Sullivan</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other topics</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GNU/Linux_naming_controversy" title="GNU/Linux naming controversy">GNU/Linux naming controversy</a></li>
+<li><i><a href="http://en.wikipedia.org/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_anti-Windows_campaigns" title="Free Software Foundation anti-Windows campaigns">Free Software Foundation anti-Windows campaigns</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Defective_by_Design" title="Defective by Design">Defective by Design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1049
+CPU time usage: 0.800 seconds
+Real time usage: 0.862 seconds
+Preprocessor visited node count: 2057/1000000
+Preprocessor generated node count: 18739/1500000
+Post‐expand include size: 61728/2048000 bytes
+Template argument size: 2236/2048000 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 4/500
+Lua time usage: 0.117/10.000 seconds
+Lua memory usage: 2.9 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:324364-0!*!0!!en!4!* and timestamp 20140327004315
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;oldid=601436796">http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;oldid=601436796</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:C_libraries" title="Category:C libraries">C libraries</a></li><li><a href="http://en.wikipedia.org/wiki/Category:GNU_Project_software" title="Category:GNU Project software">GNU Project software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:C_standard_library" title="Category:C standard library">C standard library</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Free_computer_libraries" title="Category:Free computer libraries">Free computer libraries</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Cross-platform_free_software" title="Category:Cross-platform free software">Cross-platform free software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_July_2013" title="Category:Use dmy dates from July 2013">Use dmy dates from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GNU+C+Library&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GNU+C+Library" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="GNU_C_Library.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:GNU_C_Library"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="GNU_C_Library.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/GNU_C_Library" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/GNU_C_Library" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;oldid=601436796" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q856089" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=GNU_C_Library&amp;id=601436796" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=GNU+C+Library">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=GNU+C+Library&amp;oldid=601436796&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=GNU_C_Library&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/مكتبة_جنو_للسي" title="مكتبة جنو للسي – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Glibc" title="Glibc – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/GNU-C-Bibliothek" title="GNU-C-Bibliothek – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Glibc" title="Glibc – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/GNU_C_βιβλιοθήκη" title="GNU C βιβλιοθήκη – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Glibc" title="Glibc – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Glibc" title="Glibc – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/کتابخانه_سی_گنو" title="کتابخانه سی گنو – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/GNU_C_라이브러리" title="GNU C 라이브러리 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hy"><a href="http://hy.wikipedia.org/wiki/Glibc" title="Glibc – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/GNU_Cライブラリ" title="GNU Cライブラリ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/GNU_C_Library" title="GNU C Library – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Glibc" title="Glibc – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Glibc" title="Glibc – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/GNU_C_函式庫" title="GNU C 函式庫 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q856089#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 27 March 2014 at 00:43.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/GNU_C_Library" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1058 in 0.373 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Glibc by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:10 GMT -->
+</html>

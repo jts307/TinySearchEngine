@@ -1,0 +1,538 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Memory_management.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Memory_management by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Memory management - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Memory_management" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Memory_management.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Memory_management","wgTitle":"Memory management","wgCurRevisionId":598838815,"wgRevisionId":598838815,"wgArticleId":66924,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from August 2011","All articles needing additional references","Pages containing cite templates with deprecated parameters","Memory management","Computer architecture"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Memory_management","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en","zh-cn","zh-tw"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2308807"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Memory_management skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Memory management</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">"Memory allocation" redirects here. For memory allocation in the brain, see <a href="http://en.wikipedia.org/wiki/Neuronal_memory_allocation" title="Neuronal memory allocation">neuronal memory allocation</a>.</div>
+<table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(August 2011)</i></small></span></td>
+</tr>
+</table>
+<p><b>Memory management</b> is the act of managing <a href="Computer_memory.html" title="Computer memory">computer memory</a>. The essential requirement of memory management is to provide ways to dynamically allocate portions of memory to programs at their request, and free it for reuse when no longer needed. This is critical to any advanced computer system where more than a single <a href="Process_(computing).html" title="Process (computing)">process</a> might be underway at any time.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>Several methods have been devised that increase the effectiveness of memory management. <a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a> systems separate the memory addresses used by a process from actual physical addresses, allowing separation of processes and increasing the effectively available amount of <a href="http://en.wikipedia.org/wiki/Random-access_memory" title="Random-access memory">RAM</a> using <a href="Paging.html" title="Paging">paging</a> or swapping to <a href="http://en.wikipedia.org/wiki/Secondary_storage" title="Secondary storage" class="mw-redirect">secondary storage</a>. The quality of the virtual memory manager can have an extensive effect on overall system performance.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Dynamic_memory_allocation"><span class="tocnumber">1</span> <span class="toctext">Dynamic memory allocation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Details"><span class="tocnumber">1.1</span> <span class="toctext">Details</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Efficiency"><span class="tocnumber">1.2</span> <span class="toctext">Efficiency</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Implementations"><span class="tocnumber">1.3</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Fixed-size-blocks_allocation"><span class="tocnumber">1.3.1</span> <span class="toctext">Fixed-size-blocks allocation</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Buddy_blocks"><span class="tocnumber">1.3.2</span> <span class="toctext">Buddy blocks</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Systems_with_virtual_memory"><span class="tocnumber">2</span> <span class="toctext">Systems with virtual memory</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Protection"><span class="tocnumber">2.1</span> <span class="toctext">Protection</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Sharing"><span class="tocnumber">2.2</span> <span class="toctext">Sharing</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Physical_organization"><span class="tocnumber">2.3</span> <span class="toctext">Physical organization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Dynamic_memory_allocation">Dynamic memory allocation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=1" title="Edit section: Dynamic memory allocation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:452px;"><a href="http://en.wikipedia.org/wiki/File:External_Fragmentation.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/External_Fragmentation.svg/450px-External_Fragmentation.svg.png" width="450" height="270" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/External_Fragmentation.svg/675px-External_Fragmentation.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/External_Fragmentation.svg/900px-External_Fragmentation.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:External_Fragmentation.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+External Fragmentation</div>
+</div>
+</div>
+<h3><span class="mw-headline" id="Details">Details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=2" title="Edit section: Details">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The task of fulfilling an allocation request consists of locating a block of unused memory of sufficient size. Memory requests are satisfied by allocating portions from a large pool of memory called <i>the heap</i>. At any given time, some parts of the heap are in use, while some are "free" (unused) and thus available for future allocations. Several issues complicate implementation, such as <a href="Fragmentation_(computer).html#External_fragmentation" title="Fragmentation (computer)" class="mw-redirect">external fragmentation</a>, which arises when there are many small gaps between allocated memory blocks, which invalidates their use for an allocation request. The allocator's <a href="http://en.wikipedia.org/wiki/Metadata_(computing)" title="Metadata (computing)" class="mw-redirect">metadata</a> can also inflate the size of (individually) small allocations. This is managed often by <a href="http://en.wikipedia.org/wiki/Chunking_(computing)" title="Chunking (computing)">chunking</a>. The memory management system must track outstanding allocations to ensure that they do not overlap and that no memory is ever "lost" as a <a href="Memory_leak.html" title="Memory leak">memory leak</a>.</p>
+<h3><span class="mw-headline" id="Efficiency">Efficiency</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=3" title="Edit section: Efficiency">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The specific dynamic memory allocation algorithm implemented can impact performance significantly. A study conducted in 1994 by <a href="Digital_Equipment_Corporation.html" title="Digital Equipment Corporation">Digital Equipment Corporation</a> illustrates the <a href="http://en.wikipedia.org/wiki/Computational_overhead" title="Computational overhead" class="mw-redirect">overheads</a> involved for a variety of allocators. The lowest average <a href="http://en.wikipedia.org/wiki/Instruction_path_length" title="Instruction path length">instruction path length</a> required to allocate a single memory slot was 52 (as measured with an instruction level <a href="http://en.wikipedia.org/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">profiler</a> on a variety of software).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=4" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since the precise location of the allocation is not known in advance, the memory is accessed indirectly, usually through a <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointer</a> <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a>. The specific algorithm used to organize the memory area and allocate and deallocate chunks is interlinked with the <a href="Kernel_(computing).html" title="Kernel (computing)">kernel</a>, and may use any of the following methods:</p>
+<h4><span class="mw-headline" id="Fixed-size-blocks_allocation">Fixed-size-blocks allocation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=5" title="Edit section: Fixed-size-blocks allocation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink relarticle mainarticle">Main article: <a href="Memory_pool.html" title="Memory pool">Memory pool</a></div>
+<p>Fixed-size-blocks allocation, also called memory pool allocation, uses a <a href="Free_list.html" title="Free list">free list</a> of fixed-size blocks of memory (often all of the same size). This works well for simple <a href="Embedded_system.html" title="Embedded system">embedded systems</a> where no large objects need to be allocated, but suffers from <a href="http://en.wikipedia.org/wiki/Fragmentation_(computing)" title="Fragmentation (computing)">fragmentation</a>, especially with long memory addresses. However, due to the significantly reduced overhead this method can substantially improve performance for objects that need frequent allocation / de-allocation and is often used in video games.</p>
+<h4><span class="mw-headline" id="Buddy_blocks">Buddy blocks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=6" title="Edit section: Buddy blocks">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink boilerplate seealso">For more details on this topic, see <a href="http://en.wikipedia.org/wiki/Buddy_memory_allocation" title="Buddy memory allocation">Buddy memory allocation</a>.</div>
+<p>In this system, memory is allocated into several pools of memory instead of just one, where each pool represents blocks of memory of a certain <a href="Power_of_two.html" title="Power of two">power of two</a> in size. All blocks of a particular size are kept in a sorted <a href="Linked_list.html" title="Linked list">linked list</a> or <a href="http://en.wikipedia.org/wiki/Tree_data_structure" title="Tree data structure" class="mw-redirect">tree</a> and all new blocks that are formed during allocation are added to their respective memory pools for later use. If a smaller size is requested than is available, the smallest available size is selected and halved. One of the resulting halves is selected, and the process repeats until the request is complete. When a block is allocated, the allocator will start with the smallest sufficiently large block to avoid needlessly breaking blocks. When a block is freed, it is compared to its buddy. If they are both free, they are combined and placed in the next-largest size buddy-block list.</p>
+<h2><span class="mw-headline" id="Systems_with_virtual_memory">Systems with virtual memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=7" title="Edit section: Systems with virtual memory">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a> is a method of decoupling the memory organization from the physical hardware. The applications operate memory via <i>virtual addresses</i>. Each time an attempt to access stored data is made, virtual memory data orders translate the virtual address to a <i>physical address</i>. In this way addition of virtual memory enables granular control over memory systems and methods of access.</p>
+<h3><span class="mw-headline" id="Protection">Protection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=8" title="Edit section: Protection">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Memory_protection.html" title="Memory protection">Memory protection</a></div>
+<p>In virtual memory systems the operating system limits how a <a href="Process_(computing).html" title="Process (computing)">process</a> can access the memory. This feature can be used to disallow a process to read or write to memory that is not allocated to it, preventing malicious or malfunctioning code in one program from interfering with the operation of another.</p>
+<h3><span class="mw-headline" id="Sharing">Sharing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=9" title="Edit section: Sharing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Shared_memory.html" title="Shared memory">Shared memory</a></div>
+<p>Even though the memory allocated for specific processes is normally isolated, processes sometimes need to be able to share information. Shared memory is one of the fastest techniques for <a href="Inter-process_communication.html" title="Inter-process communication">inter-process communication</a>.</p>
+<h3><span class="mw-headline" id="Physical_organization">Physical organization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=10" title="Edit section: Physical organization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Memory is usually classed by access rate as with <a href="http://en.wikipedia.org/wiki/Primary_storage" title="Primary storage" class="mw-redirect">primary storage</a> and <a href="http://en.wikipedia.org/wiki/Secondary_storage" title="Secondary storage" class="mw-redirect">secondary storage</a>. Memory management systems handle moving information between these two levels of memory.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Internet_map_1024.jpg" class="image"><img alt="Portal icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/28px-Internet_map_1024.jpg" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/42px-Internet_map_1024.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/56px-Internet_map_1024.jpg 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Computer_science" title="Portal:Computer science">Computer science portal</a></td>
+</tr>
+</table>
+</div>
+<div class="div-col columns column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul>
+<li><a href="Automatic_memory_allocation.html" title="Automatic memory allocation" class="mw-redirect">Automatic memory allocation</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">Garbage collection</a></li>
+<li><a href="Memory_pool.html" title="Memory pool">Memory pool</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Region-based_memory_management" title="Region-based memory management">Region-based memory management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_(operating_systems)" title="Memory management (operating systems)">Memory management (operating systems)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Slab_allocation" title="Slab allocation">Slab allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stack-based_memory_allocation" title="Stack-based memory allocation">Stack-based memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a> (MMU)</li>
+<li><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">Page table</a></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+<li><a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">Pointer</a></li>
+<li><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=12" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation journal">Gibson, Steve (August 15, 1988). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=ZzoEAAAAMBAJ&amp;pg=PA34">"Tech Talk: Placing the IBM/Microsoft XMS Spec Into Perspective"</a>. <i><a href="http://en.wikipedia.org/wiki/InfoWorld" title="InfoWorld">InfoWorld</a></i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+management&amp;rft.atitle=Tech+Talk%3A+Placing+the+IBM%2FMicrosoft+XMS+Spec+Into+Perspective&amp;rft.aufirst=Steve&amp;rft.au=Gibson%2C+Steve&amp;rft.aulast=Gibson&amp;rft.date=August+15%2C+1988&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DZzoEAAAAMBAJ%26pg%3DPA34&amp;rft.jtitle=InfoWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.eecs.northwestern.edu/~robby/uc-courses/15400-2008-spring/spe895.pdf">http://www.eecs.northwestern.edu/~robby/uc-courses/15400-2008-spring/spe895.pdf</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=13" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Donald_Knuth.html" title="Donald Knuth">Donald Knuth</a>. <i>Fundamental Algorithms</i>, Third Edition. Addison-Wesley, 1997. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0201896834" class="internal mw-magiclink-isbn">ISBN 0-201-89683-4</a>. Section 2.5: Dynamic Storage Allocation, pp.&#160;435–456.</li>
+<li><a rel="nofollow" class="external text" href="http://buzzan.tistory.com/m/post/view/id/428">Simple Memory Allocation Algorithms</a> (originally published on OSDEV Community)</li>
+<li><span class="citation journal">Wilson, P.R.; Johnstone, M.S.; Neely, M.; Boles, D. (1995). <a rel="nofollow" class="external text" href="http://books.google.com/?id=m0yZN2bA3TcC&amp;pg=PA1&amp;dq=paul+wilson">"Dynamic Storage Allocation: A Survey and Critical Review"</a>. <i>Memory Management: International Workshop, Iwmm'95, Kinross, Uk, September 27–29, 1995: Proceedings</i> (Springer). <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-3-540-60368-9" title="Special:BookSources/978-3-540-60368-9">978-3-540-60368-9</a><span class="reference-accessdate">. Retrieved 2008-01-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+management&amp;rft.atitle=Dynamic+Storage+Allocation%3A+A+Survey+and+Critical+Review&amp;rft.aulast=Wilson%2C+P.R.&amp;rft.au=Wilson%2C+P.R.&amp;rft.date=1995&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3Dm0yZN2bA3TcC%26pg%3DPA1%26dq%3Dpaul%2Bwilson&amp;rft.isbn=978-3-540-60368-9&amp;rft.jtitle=Memory+Management%3A+International+Workshop%2C+Iwmm%2795%2C+Kinross%2C+Uk%2C+September+27%E2%80%9329%2C+1995%3A+Proceedings&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation journal">Berger, E.D.; Zorn, B.G.; McKinley, K.S. (2001). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=381694.378821">"Composing high-performance memory allocators"</a>. <i>ACM SIGPLAN Notices</i> <b>36</b> (5): 114–124. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F381694">10.1145/381694</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+management&amp;rft.atitle=Composing+high-performance+memory+allocators&amp;rft.au=Berger%2C+E.D.&amp;rft.aulast=Berger%2C+E.D.&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D381694.378821&amp;rft_id=info%3Adoi%2F10.1145%2F381694&amp;rft.issue=5&amp;rft.jtitle=ACM+SIGPLAN+Notices&amp;rft.pages=114%E2%80%93124&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=36" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation conference">Berger, E.D.; Zorn, B.G.; McKinley, K.S. (2002). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=582419.582421">"Reconsidering custom memory allocation"</a>. <i>Proceedings of the 17th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications</i>. ACM Press New York, NY, USA. pp.&#160;1–12.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMemory+management&amp;rft.atitle=Proceedings+of+the+17th+ACM+SIGPLAN+conference+on+Object-oriented+programming%2C+systems%2C+languages%2C+and+applications&amp;rft.au=Berger%2C+E.D.&amp;rft.aulast=Berger%2C+E.D.&amp;rft.btitle=Reconsidering+custom+memory+allocation&amp;rft.date=2002&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D582419.582421&amp;rft.pages=1%E2%80%9312&amp;rft.pub=ACM+Press+New+York%2C+NY%2C+USA&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><a rel="nofollow" class="external text" href="http://www.memorymanagement.org/">memorymanagement.org</a> A small old site dedicated to memory management.</li>
+</ul>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=14" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.cs.northwestern.edu/~pdinda/icsclass/doc/dsa.pdf">"Dynamic Storage Allocation: A Survey and Critical Review"</a>, Department of Computer Sciences <a href="http://en.wikipedia.org/wiki/University_of_Texas_at_Austin" title="University of Texas at Austin">University of Texas at Austin</a></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://memory-mgr.sourceforge.net/">"Generic Memory Manager" C++ library</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/arena-memory-allocation/downloads/list">Sample bit-mapped arena memory allocator in C</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.gii.upv.es/tlsf/">TLSF: a constant time allocator for real-time systems</a></li>
+<li><a rel="nofollow" class="external text" href="https://users.cs.jmu.edu/bernstdh/web/common/lectures/slides_cpp_dynamic-memory.php">Slides on Dynamic memory allocation</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.flounder.com/inside_storage_allocation.htm">Inside A Storage Allocator</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.memorymanagement.org/">The Memory Management Reference</a></li>
+</ul>
+<dl>
+<dd>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.memorymanagement.org/articles/alloc.html">The Memory Management Reference, Beginner's Guide Allocation</a></li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://linux-mm.org/">Linux Memory Management</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.enderunix.org/docs/memory.pdf">Memory Management For System Programmers</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.puredevsoftware.com/">VMem - general malloc/free replacement. Fast thread safe C++ allocator</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Memory_management_navbox" title="Template:Memory management navbox"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Memory_management_navbox" title="Template talk:Memory management navbox"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Memory_management_navbox&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><strong class="selflink">Memory management</strong></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Manual_memory_management" title="Manual memory management">Manual memory management</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Static_memory_allocation.html" title="Static memory allocation">Static memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">C dynamic memory allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)">new (C++)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Delete_(C++)" title="Delete (C++)">delete (C++)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">Page table</a></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a></li>
+<li><a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">Translation lookaside buffer</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">Garbage collection</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boehm_garbage_collector" title="Boehm garbage collector">Boehm garbage collector</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finalizer" title="Finalizer">Finalizer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garbage_(computer_science)" title="Garbage (computer science)">Garbage</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mark-compact_algorithm" title="Mark-compact algorithm">Mark-compact algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reference_counting" title="Reference counting">Reference counting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Strong_reference" title="Strong reference">Strong reference</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Weak_reference" title="Weak reference">Weak reference</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_segmentation" title="Memory segmentation">Memory segmentation</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Protected_mode" title="Protected mode">Protected mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_mode" title="Real mode">Real mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_8086_mode" title="Virtual 8086 mode">Virtual 8086 mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X86_memory_segmentation" title="X86 memory segmentation">x86 memory segmentation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_safety" title="Memory safety">Memory safety</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Buffer_overflow.html" title="Buffer overflow">Buffer overflow</a></li>
+<li><a href="Dangling_pointer.html" title="Dangling pointer">Dangling pointer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stack_overflow" title="Stack overflow">Stack overflow</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Issues</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Fragmentation_(computing)" title="Fragmentation (computing)">Fragmentation</a></li>
+<li><a href="Memory_leak.html" title="Memory leak">Memory leak</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unreachable_memory" title="Unreachable memory">Unreachable memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Automatic_variable" title="Automatic variable">Automatic variable</a></li>
+<li><a href="http://en.wikipedia.org/wiki/International_Symposium_on_Memory_Management" title="International Symposium on Memory Management">International Symposium on Memory Management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Region-based_memory_management" title="Region-based memory management">Region-based memory management</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1061
+CPU time usage: 0.824 seconds
+Real time usage: 0.887 seconds
+Preprocessor visited node count: 685/1000000
+Preprocessor generated node count: 3633/1500000
+Post‐expand include size: 27439/2048000 bytes
+Template argument size: 855/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 5/500
+Lua time usage: 0.090/10.000 seconds
+Lua memory usage: 1.97 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:66924-0!*!0!!en!4!* and timestamp 20140324125111
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;oldid=598838815">http://en.wikipedia.org/w/index.php?title=Memory_management&amp;oldid=598838815</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Memory_management" title="Category:Memory management">Memory management</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_architecture" title="Category:Computer architecture">Computer architecture</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_August_2011" title="Category:Articles needing additional references from August 2011">Articles needing additional references from August 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Memory+management&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Memory+management" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Memory_management.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Memory_management"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Memory_management.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Memory_management" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Memory_management" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;oldid=598838815" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q2308807" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Memory_management&amp;id=598838815" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Memory+management">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Memory+management&amp;oldid=598838815&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Memory_management&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/إدارة_الذاكرة" title="إدارة الذاكرة – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Gestió_de_la_memòria" title="Gestió de la memòria – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Správa_paměti" title="Správa paměti – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Speicherverwaltung" title="Speicherverwaltung – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Gestión_de_memoria" title="Gestión de memoria – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/مدیریت_حافظه" title="مدیریت حافظه – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Allocation_de_mémoire" title="Allocation de mémoire – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/메모리_관리" title="메모리 관리 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Upravljanje_memorijom" title="Upravljanje memorijom – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Gestore_della_memoria" title="Gestore della memoria – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Pengurusan_ingatan" title="Pengurusan ingatan – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Geheugenbeheer" title="Geheugenbeheer – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/メモリ管理" title="メモリ管理 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Gerenciamento_de_memória" title="Gerenciamento de memória – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Менеджер_памяти" title="Менеджер памяти – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sq"><a href="http://sq.wikipedia.org/wiki/Menaxhimi_i_memories" title="Menaxhimi i memories – Albanian" lang="sq" hreflang="sq">Shqip</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Управљање_меморијом" title="Управљање меморијом – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/การจัดการหน่วยความจำ" title="การจัดการหน่วยความจำ – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Bellek_yönetimi" title="Bellek yönetimi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/記憶體管理" title="記憶體管理 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q2308807#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 9 March 2014 at 14:12.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Memory_management" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1079 in 0.274 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Memory_management by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:00:24 GMT -->
+</html>

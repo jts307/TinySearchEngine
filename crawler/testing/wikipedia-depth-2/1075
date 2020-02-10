@@ -1,0 +1,751 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C%2b%2b/CLI.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/C++/CLI by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>C++/CLI - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/C++/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/C++/CLI" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="CLI.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"C++/CLI","wgTitle":"C++/CLI","wgCurRevisionId":601682928,"wgRevisionId":601682928,"wgArticleId":1957924,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[".NET programming languages","C++ programming language family","Ecma standards","Microsoft Visual Studio"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"C++/CLI","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1022268"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000ff;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #666666;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #006699; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #FF0000;}
+.cpp.source-cpp .nu0 {color: #0000dd;}
+.cpp.source-cpp .nu6 {color: #208080;}
+.cpp.source-cpp .nu8 {color: #208080;}
+.cpp.source-cpp .nu12 {color: #208080;}
+.cpp.source-cpp .nu16 {color:#800080;}
+.cpp.source-cpp .nu17 {color:#800080;}
+.cpp.source-cpp .nu18 {color:#800080;}
+.cpp.source-cpp .nu19 {color:#800080;}
+.cpp.source-cpp .me1 {color: #007788;}
+.cpp.source-cpp .me2 {color: #007788;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-C_CLI skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">C++/CLI</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>C++/CLI</b> (<a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a>) is a language specification created by <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a> and intended to supersede <a href="http://en.wikipedia.org/wiki/Managed_Extensions_for_C++" title="Managed Extensions for C++">Managed Extensions for C++</a>. It is a complete revision that aims to simplify the older Managed C++ syntax, which is now deprecated.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> C++/CLI was standardized by <a href="http://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">Ecma</a> as <b>ECMA-372</b>. It is currently available in <a href="http://en.wikipedia.org/wiki/Visual_Studio" title="Visual Studio" class="mw-redirect">Visual Studio</a> 2005, 2008, 2010, 2012 and 2013, including the Express editions.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Syntax_changes"><span class="tocnumber">1</span> <span class="toctext">Syntax changes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Handles"><span class="tocnumber">1.1</span> <span class="toctext">Handles</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Tracking_references"><span class="tocnumber">1.2</span> <span class="toctext">Tracking references</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Finalizers_and_automatic_variables"><span class="tocnumber">1.3</span> <span class="toctext">Finalizers and automatic variables</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Operator_overloading"><span class="tocnumber">2</span> <span class="toctext">Operator overloading</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#C.2B.2B.2FCX"><span class="tocnumber">3</span> <span class="toctext">C++/CX</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Syntax_changes">Syntax changes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=1" title="Edit section: Syntax changes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++/CLI should be thought of as a language of its own (with a new set of keywords, for example), instead of the C++ superset-oriented <a href="http://en.wikipedia.org/wiki/Managed_Extensions_for_C++" title="Managed Extensions for C++">Managed C++</a> (MC++) (whose non-standard keywords were styled like <span class="mw-geshi cpp source-cpp">__gc</span> or<span class="mw-geshi cpp source-cpp">&#160;__value</span>). Because of this, there are some major syntactic changes, especially related to the elimination of ambiguous identifiers and the addition of .NET-specific features.</p>
+<p>Many conflicting syntaxes, such as the multiple versions of operator <span class="mw-geshi cpp source-cpp"><span class="kw3">new</span><span class="br0">(</span><span class="br0">)</span></span> in MC++ have been split: in C++/CLI, .NET reference types are created with the new keyword <span class="mw-geshi cpp source-cpp">gcnew</span>. Also, C++/CLI has introduced the concept of generics from .NET (conceptually similar to standard C++ templates, but quite different in their implementation).</p>
+<h3><span class="mw-headline" id="Handles">Handles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=2" title="Edit section: Handles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In MC++, there were two different types of <a href="../Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a>: <span class="mw-geshi cpp source-cpp">__nogc</span> pointers were normal C++ pointers, while <span class="mw-geshi cpp source-cpp">__gc</span> pointers worked on .NET reference types. In C++/CL, however, the only type of pointer is the normal C++ pointer, while the .NET reference types are accessed through a "handle", with the new syntax <span class="mw-geshi cpp source-cpp">ClassName<span class="sy3">^</span></span> (instead of <span class="mw-geshi cpp source-cpp">ClassName<span class="sy2">*</span></span>). This new construct is especially helpful when managed and standard C++ code is mixed; it clarifies which objects are under .NET automatic garbage collection and which objects the programmer must remember to explicitly destroy.</p>
+<h3><span class="mw-headline" id="Tracking_references">Tracking references</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=3" title="Edit section: Tracking references">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <b>tracking reference</b> in C++/CLI is a handle of a passed-by-reference variable. It is similar in concept to using "<span class="mw-geshi cpp source-cpp"><span class="sy2">*</span><span class="sy3">&amp;</span></span>" (reference to a pointer) in Standard C++, and (in function declarations) corresponds to the "<span class="mw-geshi cpp source-cpp">ref</span>" keyword applied to types in C#, or "<span class="mw-geshi cpp source-cpp">ByRef</span>" in <a href="../Visual_Basic_.html" title="Visual Basic .NET">Visual Basic .NET</a>. C++/CLI uses a "<span class="mw-geshi cpp source-cpp"><span class="sy3">^</span><span class="sy2">%</span></span>" syntax to indicate a tracking reference to a handle.</p>
+<p>The following code shows an example of the use of tracking references. Replacing the tracking reference with a regular handle variable would leave the resulting string array with 10 uninitialized string handles, as only copies of the string handles in the array would be set, due to their being passed by value rather than by reference.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="cpp source-cpp">
+<pre class="de1">
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    array<span class="sy1">&lt;</span>String<span class="sy3">^</span><span class="sy1">&gt;</span> <span class="sy3">^</span>arr <span class="sy1">=</span> gcnew array<span class="sy1">&lt;</span>String<span class="sy3">^</span><span class="sy1">&gt;</span><span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span><span class="sy4">;</span>
+    <span class="kw4">int</span> i <span class="sy1">=</span> <span class="nu0">0</span><span class="sy4">;</span>
+ 
+    <span class="kw1">for</span> each<span class="br0">(</span>String<span class="sy3">^</span><span class="sy2">%</span> s in arr<span class="br0">)</span>
+        s <span class="sy1">=</span> i<span class="sy2">++</span>.<span class="me1">ToString</span><span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+ 
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy4">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Note that this would be illegal in C#, which does not allow <span class="mw-geshi cpp source-cpp">foreach</span> loops to pass values by reference. Hence, a workaround would be required.</p>
+<h3><span class="mw-headline" id="Finalizers_and_automatic_variables">Finalizers and automatic variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=4" title="Edit section: Finalizers and automatic variables">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Another change in C++/CLI is the introduction of the <a href="http://en.wikipedia.org/wiki/Finalizer" title="Finalizer">finalizer</a> syntax <span class="mw-geshi cpp source-cpp"><span class="sy3">!</span>ClassName<span class="br0">(</span><span class="br0">)</span></span>, a special type of nondeterministic destructor that is run as a part of the <a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection routine</a>. The C++ destructor syntax <span class="mw-geshi cpp source-cpp">~ClassName<span class="br0">(</span><span class="br0">)</span></span> also exists for managed objects, and better reflects the "traditional" C++ semantics of deterministic destruction (that is, destructors that can be called by user code with <span class="mw-geshi cpp source-cpp"><span class="kw3">delete</span></span>).</p>
+<p>In the raw .NET paradigm, the nondeterministic destruction model overrides the protected <span class="mw-geshi cpp source-cpp">Finalize</span> method of the root <span class="mw-geshi cpp source-cpp">Object</span> class, while the deterministic model is implemented through the <span class="mw-geshi cpp source-cpp">IDisposable</span> <a href="http://en.wikipedia.org/wiki/Interface_(computer_science)" title="Interface (computer science)" class="mw-redirect">interface</a> method <span class="mw-geshi cpp source-cpp">Dispose</span> (which the C++/CLI compiler turns the destructor into). Objects from C# or VB.NET code that override the Dispose method can be disposed of manually in C++/CLI with <span class="mw-geshi cpp source-cpp"><span class="kw3">delete</span></span> just as .NET classes in C++/CLI can.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="cpp source-cpp">
+<pre class="de1">
+<span class="co1">// C++/CLI</span>
+ref <span class="kw2">class</span> MyClass
+<span class="br0">{</span>
+<span class="kw2">public</span><span class="sy4">:</span>
+    MyClass<span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>  <span class="co1">// constructor</span>
+    ~MyClass<span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">// (deterministic) destructor (implemented as IDisposable.Dispose())</span>
+<span class="kw2">protected</span><span class="sy4">:</span>
+    <span class="sy3">!</span>MyClass<span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span> <span class="co1">// finalizer (non-deterministic destructor) (implemented as Finalize())</span>
+ 
+<span class="kw2">public</span><span class="sy4">:</span>
+    <span class="kw4">static</span> <span class="kw4">void</span> Test<span class="br0">(</span><span class="br0">)</span>
+    <span class="br0">{</span>
+        MyClass automatic<span class="sy4">;</span> <span class="co1">// Not a handle, no initialization: compiler calls constructor here</span>
+ 
+        MyClass <span class="sy3">^</span>user <span class="sy1">=</span> gcnew MyClass<span class="br0">(</span><span class="br0">)</span><span class="sy4">;</span>
+        <span class="kw3">delete</span> user<span class="sy4">;</span>
+ 
+        <span class="co1">// Compiler calls automatic's destructor when automatic goes out of scope</span>
+    <span class="br0">}</span>
+<span class="br0">}</span><span class="sy4">;</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Operator_overloading">Operator overloading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=5" title="Edit section: Operator overloading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Operator overloading works analogously to standard C++. Every * becomes a ^, every &amp; becomes an&#160;%, but the rest of the syntax is unchanged, except for an important addition: for .NET classes, operator overloading is possible not only for classes themselves, but also for references to those classes. This feature is necessary to give a ref class the semantics for operator overloading expected from .NET ref classes. (In reverse, this also means that for .NET framework ref classes, reference operator overloading often is implicitly implemented in C++/CLI.)</p>
+<p>For example, comparing two distinct String references (String^) via the operator == will give true whenever the two strings are equal. The operator overloading is static, however. Thus, casting to Object^ will remove the overloading semantics.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="cpp source-cpp">
+<pre class="de1">
+<span class="co1">//effects of reference operator overloading</span>
+String <span class="sy3">^</span>s1 <span class="sy1">=</span> <span class="st0">"abc"</span><span class="sy4">;</span>
+String <span class="sy3">^</span>s2 <span class="sy1">=</span> <span class="st0">"ab"</span> <span class="sy2">+</span> <span class="st0">"c"</span><span class="sy4">;</span>
+Object <span class="sy3">^</span>o1 <span class="sy1">=</span> s1<span class="sy4">;</span>
+Object <span class="sy3">^</span>o2 <span class="sy1">=</span> s2<span class="sy4">;</span>
+s1 <span class="sy1">==</span> s2<span class="sy4">;</span> <span class="co1">// true</span>
+o1 <span class="sy1">==</span> o2<span class="sy4">;</span> <span class="co1">// false</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="C.2B.2B.2FCX">C++/CX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=6" title="Edit section: C++/CX">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The new <a href="CX.html" title="C++/CX">C++/CX</a> targeting <a href="http://en.wikipedia.org/wiki/WinRT" title="WinRT" class="mw-redirect">WinRT</a>, although it produces entirely unmanaged code, borrows the ref and ^ syntax for the reference-counted components that WinRT, which are similar to <a href="http://en.wikipedia.org/wiki/Component_Object_Model" title="Component Object Model">COM</a> "objects".<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/b23b94s7.aspx">Managed Extensions for C++ Syntax Upgrade Checklist - MSDN Library</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blogs.msdn.com/b/vcblog/archive/2011/10/20/10228473.aspx">Inside the C++/CX Design - Visual C++ Team Blog - Site Home - MSDN Blogs</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-372.htm">ECMA 372: C++/CLI Language Specification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Herb_Sutter" title="Herb Sutter">Herb Sutter</a>: <a rel="nofollow" class="external text" href="http://blogs.msdn.com/hsutter/archive/2003/11/23/53519.aspx">C++/CLI keywords: Under the hood</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Herb_Sutter" title="Herb Sutter">Herb Sutter</a>: <a rel="nofollow" class="external text" href="http://www.gotw.ca/publications/C++CLIRationale.pdf">C++/CLI Rationale</a></li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/xey702bw.aspx">MSDN documentation for C++/CLI</a></li>
+<li><a rel="nofollow" class="external text" href="http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PG01&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.html&amp;r=1&amp;f=G&amp;l=50&amp;s1=%2220060089942%22.PGNR.&amp;OS=DN/20060089942&amp;RS=DN/20060089942">Patent application regarding whitespace in keywords</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.stroustrup.com/bs_faq.html#CppCLI">Bjarne Stroustrup's (designer/author of C++) views on C++/CLI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stanley_B._Lippman" title="Stanley B. Lippman">Stanley B. Lippman</a>: <a rel="nofollow" class="external text" href="http://msdn.microsoft.com/msdnmag/issues/06/00/PureC/default.aspx">Hello, C++/CLI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stanley_B._Lippman" title="Stanley B. Lippman">Stanley B. Lippman</a>: <a rel="nofollow" class="external text" href="http://blogs.msdn.com/slippman/archive/2004/08/05/209606.aspx">Why C++/CLI Supports both Templates for CLI Types and the CLI Generic Mechanism</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:.NET" title="Template:.NET"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:.NET" title="Template talk:.NET"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:.NET&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="../.html" title=".NET Framework">.NET Framework</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Software_architecture" title="Software architecture">Architecture</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/.NET_Framework_version_history" title=".NET Framework version history">History</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Base_Class_Library" title="Base Class Library">Base Class Library</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Language_Runtime" title="Common Language Runtime">Common Language Runtime</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Native_Image_Generator" title="Native Image Generator">NGEN</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ILAsm" title="ILAsm">ILAsm</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Code_Access_Security" title="Code Access Security">Code Access Security</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Assembly_(CLI)" title="Assembly (CLI)">Assembly</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Manifest_(CLI)" title="Manifest (CLI)">Manifest</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metadata_(CLI)" title="Metadata (CLI)">Metadata</a></li>
+<li><a href="http://en.wikipedia.org/wiki/COM_Interop" title="COM Interop">COM Interop</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Application_domain" title="Application domain">Application domain</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language<br />
+Infrastructure (CLI)</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Type_System" title="Common Type System">Common Type System</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Intermediate_Language" title="Common Intermediate Language">Common Intermediate Language</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_Execution_System" title="Virtual Execution System">Virtual Execution System</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_CLI_languages" title="List of CLI languages">CLI Languages</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Common</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="../C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a></li>
+<li><a href="../Visual_Basic_.html" title="Visual Basic .NET">Visual Basic .NET</a></li>
+<li><strong class="selflink">C++/CLI</strong>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Managed_Extensions_for_C++" title="Managed Extensions for C++">Managed</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/F_Sharp_(programming_language)" title="F Sharp (programming language)">F#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/J_Sharp" title="J Sharp">J#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">Other</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Axum_(programming_language)" title="Axum (programming language)">Axum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/A_Sharp_(.NET)" title="A Sharp (.NET)">A#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Boo_(programming_language)" title="Boo (programming language)">Boo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cobra_(programming_language)" title="Cobra (programming language)">Cobra</a></li>
+<li><a href="http://en.wikipedia.org/wiki/M_(programming_language)" title="M (programming language)" class="mw-redirect">M</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Oxygene_(programming_language)" title="Oxygene (programming language)">Oxygene</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IronScheme" title="IronScheme">IronScheme</a> (<a href="http://en.wikipedia.org/wiki/IronLisp" title="IronLisp">IronLisp</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/IronPython" title="IronPython">IronPython</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IronRuby" title="IronRuby">IronRuby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nemerle" title="Nemerle">Nemerle</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Phalanger_(compiler)" title="Phalanger (compiler)">Phalanger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/P_Sharp" title="P Sharp">P#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Component-based_software_engineering" title="Component-based software engineering">Components</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ADO.NET" title="ADO.NET">ADO.NET</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Entity_Framework" title="Entity Framework">Entity Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WCF_Data_Services" title="WCF Data Services">Data Services</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET_AJAX" title="ASP.NET AJAX">AJAX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET_MVC_Framework" title="ASP.NET MVC Framework">MVC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET_Dynamic_Data" title="ASP.NET Dynamic Data">Dynamic Data</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_CardSpace" title="Windows CardSpace">CardSpace</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ClickOnce" title="ClickOnce">ClickOnce</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CLR_Profiler" title="CLR Profiler">CLR Profiler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">Communication Foundation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_Language_Runtime" title="Dynamic Language Runtime">Dynamic Language Runtime</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Forms" title="Windows Forms">Forms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Language_Integrated_Query" title="Language Integrated Query">LINQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Managed_Extensibility_Framework" title="Managed Extensibility Framework">Managed Extensibility Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_Extensions" title="Parallel Extensions">Parallel Extensions</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">Presentation Foundation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/.NET_Remoting" title=".NET Remoting">Remoting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_codename_%22Roslyn%22" title="Microsoft codename &quot;Roslyn&quot;" class="mw-redirect">"Roslyn"</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Workflow_Foundation" title="Windows Workflow Foundation">Workflow Foundation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other implementations</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mono_(software)" title="Mono (software)">Mono</a></li>
+<li><a href="http://en.wikipedia.org/wiki/.NET_Compact_Framework" title=".NET Compact Framework">Compact Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_XNA" title="Microsoft XNA">XNA Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/.NET_Micro_Framework" title=".NET Micro Framework">Micro Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Portable.NET" title="Portable.NET">Portable.NET</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shared_Source_Common_Language_Infrastructure" title="Shared Source Common Language Infrastructure">SSCLI</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Embedded_CLR&amp;action=edit&amp;redlink=1" class="new" title="Embedded CLR (page does not exist)">eCLR</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Comparisons</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Java" title="Comparison of C Sharp and Java">Java and C#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Visual_Basic_.NET" title="Comparison of C Sharp and Visual Basic .NET">C# and Visual Basic .NET</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_the_Java_and_.NET_platforms" title="Comparison of the Java and .NET platforms">Java and .NET platforms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_Visual_Basic_and_Visual_Basic_.NET" title="Comparison of Visual Basic and Visual Basic .NET">Visual Basic and Visual Basic .NET</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <a href="http://en.wikipedia.org/wiki/Category:.NET_Framework" title="Category:.NET Framework">Category</a></li>
+<li><img alt="List-Class article" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/24px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/32px-Symbol_list_class.svg.png 2x" /> <a href="http://en.wikipedia.org/wiki/.NET_Framework_version_history" title=".NET Framework version history">List</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Ecma_International_Standards" title="Template:Ecma International Standards"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Ecma_International_Standards&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Ecma International Standards (page does not exist)"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Ecma_International_Standards&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">Standards of <a href="http://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">Ecma International</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Application Interfaces</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ANSI_escape_code" title="ANSI escape code">ANSI escape code</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Office_Open_XML" title="Office Open XML">Office Open XML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_XML_Paper_Specification" title="Open XML Paper Specification">OpenXPS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">File Systems (Tape)</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Intelligent_Tape" title="Advanced Intelligent Tape">Advanced Intelligent Tape</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Data_Storage" title="Digital Data Storage">DDS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Linear_Tape" title="Digital Linear Tape">DLT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_Linear_Tape" title="Digital Linear Tape">Super DLT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Holographic_Versatile_Disc" title="Holographic Versatile Disc">Holographic Versatile Disc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linear_Tape-Open" title="Linear Tape-Open">Linear Tape-Open</a> (Ultrium-1)</li>
+<li><a href="http://en.wikipedia.org/wiki/VXA" title="VXA">VXA</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">File Systems (Disk)</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CD-ROM" title="CD-ROM">CD-ROM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ISO_9660" title="ISO 9660">CD File System</a> (CDFS)</li>
+<li><a href="http://en.wikipedia.org/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Floppy_disk" title="Floppy disk">FD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Disk_Format" title="Universal Disk Format">UDF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultra_Density_Optical" title="Ultra Density Optical">Ultra Density Optical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Media_Disc" title="Universal Media Disc">Universal Media Disc</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Graphics</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Universal_3D" title="Universal 3D">Universal 3D</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Programming Languages</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">C++/CLI</strong></li>
+<li><a href="../C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a></li>
+<li><a href="../JavaScript.html" title="JavaScript">JavaScript</a> (<a href="http://en.wikipedia.org/wiki/ECMAScript_for_XML" title="ECMAScript for XML">E4X</a>, <a href="http://en.wikipedia.org/wiki/ECMAScript" title="ECMAScript">ECMAScript</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Radio Link Interfaces</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Near_Field_Communication" title="Near Field Communication" class="mw-redirect">NFC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultra-wideband" title="Ultra-wideband">UWB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background-color:#e6e6ff;;">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=TC20&amp;action=edit&amp;redlink=1" class="new" title="TC20 (page does not exist)">TC20</a> Electromagnetic Compatibility <a rel="nofollow" class="external autonumber" href="http://www.ecma-international.org/memento/TC20.htm">[1]</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=TC12&amp;action=edit&amp;redlink=1" class="new" title="TC12 (page does not exist)">TC12</a> Product safety <a rel="nofollow" class="external autonumber" href="http://www.ecma-international.org/memento/TC12.htm">[2]</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><a href="http://en.wikipedia.org/wiki/List_of_Ecma_standards" title="List of Ecma standards">List of Ecma standards</a> (1961 - Present)</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1218
+CPU time usage: 0.572 seconds
+Real time usage: 0.593 seconds
+Preprocessor visited node count: 1123/1000000
+Preprocessor generated node count: 4489/1500000
+Post‐expand include size: 38754/2048000 bytes
+Template argument size: 759/2048000 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 4/500
+Lua time usage: 0.016/10.000 seconds
+Lua memory usage: 781 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1957924-0!*!0!!en!4!* and timestamp 20140328174012
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;oldid=601682928">http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;oldid=601682928</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:.NET_programming_languages" title="Category:.NET programming languages">.NET programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:C++_programming_language_family" title="Category:C++ programming language family">C++ programming language family</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Ecma_standards" title="Category:Ecma standards">Ecma standards</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Microsoft_Visual_Studio" title="Category:Microsoft Visual Studio">Microsoft Visual Studio</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C%2B%2B%2FCLI&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C%2B%2B%2FCLI" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="CLI.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:C++/CLI"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="CLI.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="../Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/C++/CLI" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/C++/CLI" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;oldid=601682928" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1022268" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=C%2B%2B%2FCLI&amp;id=601682928" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=C%2B%2B%2FCLI">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=C%2B%2B%2FCLI&amp;oldid=601682928&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=C%2B%2B/CLI&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/C++/CLI" title="C++/CLI – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/C++/CLI" title="C++/CLI – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1022268#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 March 2014 at 17:40.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/C++/CLI" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1169 in 0.298 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/C++/CLI by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:19 GMT -->
+</html>

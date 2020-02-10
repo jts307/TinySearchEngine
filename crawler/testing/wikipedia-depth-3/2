@@ -1,0 +1,966 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Linked_list.html
+1
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Linked_list by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:53:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Linked list - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf18" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Linked_list" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Linked_list.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Linked_list","wgTitle":"Linked list","wgCurRevisionId":599615288,"wgRevisionId":599615288,"wgArticleId":18167,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2014","All articles needing additional references","Wikipedia articles needing clarification from October 2011","Articles lacking in-text citations from March 2012","All articles lacking in-text citations","Articles with inconsistent citation formats","Pages containing cite templates with deprecated parameters","Commons category with local link different than on Wikidata","Linked lists","Articles with example C code","Data structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Linked_list","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["cs","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q7003418"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":
+false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:0378eace27e3aee431624f77f4809281 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf18/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Linked_list skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Linked list</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2014)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>linked list</b> is a <a href="Data_structure.html" title="Data structure">data structure</a> consisting of a group of <a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">nodes</a> which together represent a sequence. Under the simplest form, each node is composed of a datum and a <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> (in other words, a <i>link</i>) to the next node in the sequence; more complex variants add additional links. This structure allows for efficient insertion or removal of elements from any position in the sequence.</p>
+<div class="center"><a href="http://en.wikipedia.org/wiki/File:Singly-linked-list.svg" class="image"><img alt="Singly-linked-list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png" width="408" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/612px-Singly-linked-list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/816px-Singly-linked-list.svg.png 2x" /></a><br />
+<small><i>A linked list whose nodes contain two fields: an integer value and a link to the next node. The last node is linked to a terminator used to signify the end of the list.</i></small></div>
+<p>Linked lists are among the simplest and most common data structures. They can be used to implement several other common <a href="Abstract_data_type.html" title="Abstract data type">abstract data types</a>, including <a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">lists</a> (the abstract data type), <a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">stacks</a>, <a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">queues</a>, <a href="Associative_array.html" title="Associative array">associative arrays</a>, and <a href="S-expression.html" title="S-expression">S-expressions</a>, though it is not uncommon to implement the other data structures directly without using a list as the basis of implementation.</p>
+<p>The principal benefit of a linked list over a conventional <a href="Array_data_structure.html" title="Array data structure">array</a> is that the list elements can easily be inserted or removed without reallocation or reorganization of the entire structure because the data items need not be stored contiguously in memory or on disk. Linked lists allow insertion and removal of nodes at any point in the list, and can do so with a constant number of operations if the link previous to the link being added or removed is maintained during list traversal.</p>
+<p>On the other hand, simple linked lists by themselves do not allow <a href="Random_access.html" title="Random access">random access</a> to the data, or any form of efficient indexing. Thus, many basic operations&#160;— such as obtaining the last node of the list (assuming that the last node is not maintained as separate node reference in the list structure), or finding a node that contains a given datum, or locating the place where a new node should be inserted&#160;— may require scanning most or all of the list elements.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_concepts_and_nomenclature"><span class="tocnumber">2</span> <span class="toctext">Basic concepts and nomenclature</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Singly_linked_list"><span class="tocnumber">2.1</span> <span class="toctext">Singly linked list</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Doubly_linked_list"><span class="tocnumber">2.2</span> <span class="toctext">Doubly linked list</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Multiply_linked_list"><span class="tocnumber">2.3</span> <span class="toctext">Multiply linked list</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Circular_list"><span class="tocnumber">2.4</span> <span class="toctext">Circular list</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Sentinel_nodes"><span class="tocnumber">2.5</span> <span class="toctext">Sentinel nodes</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Empty_lists"><span class="tocnumber">2.6</span> <span class="toctext">Empty lists</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Hash_linking"><span class="tocnumber">2.7</span> <span class="toctext">Hash linking</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#List_handles"><span class="tocnumber">2.8</span> <span class="toctext">List handles</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Combining_alternatives"><span class="tocnumber">2.9</span> <span class="toctext">Combining alternatives</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Tradeoffs"><span class="tocnumber">3</span> <span class="toctext">Tradeoffs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Linked_lists_vs._dynamic_arrays"><span class="tocnumber">3.1</span> <span class="toctext">Linked lists vs. dynamic arrays</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Singly_linked_linear_lists_vs._other_lists"><span class="tocnumber">3.2</span> <span class="toctext">Singly linked linear lists vs. other lists</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Doubly_linked_vs._singly_linked"><span class="tocnumber">3.3</span> <span class="toctext">Doubly linked vs. singly linked</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Circularly_linked_vs._linearly_linked"><span class="tocnumber">3.4</span> <span class="toctext">Circularly linked vs. linearly linked</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Using_sentinel_nodes"><span class="tocnumber">3.5</span> <span class="toctext">Using sentinel nodes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Linked_list_operations"><span class="tocnumber">4</span> <span class="toctext">Linked list operations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Linearly_linked_lists"><span class="tocnumber">4.1</span> <span class="toctext">Linearly linked lists</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Singly_linked_lists"><span class="tocnumber">4.1.1</span> <span class="toctext">Singly linked lists</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Circularly_linked_list"><span class="tocnumber">4.2</span> <span class="toctext">Circularly linked list</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Algorithms"><span class="tocnumber">4.2.1</span> <span class="toctext">Algorithms</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Linked_lists_using_arrays_of_nodes"><span class="tocnumber">5</span> <span class="toctext">Linked lists using arrays of nodes</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Language_support"><span class="tocnumber">6</span> <span class="toctext">Language support</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Internal_and_external_storage"><span class="tocnumber">7</span> <span class="toctext">Internal and external storage</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Example_of_internal_and_external_storage"><span class="tocnumber">7.1</span> <span class="toctext">Example of internal and external storage</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Speeding_up_search"><span class="tocnumber">7.2</span> <span class="toctext">Speeding up search</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Random_access_lists"><span class="tocnumber">7.3</span> <span class="toctext">Random access lists</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Related_data_structures"><span class="tocnumber">8</span> <span class="toctext">Related data structures</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Notes"><span class="tocnumber">9</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#Footnotes"><span class="tocnumber">10</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Linked lists were developed in 1955–1956 by <a href="Allen_Newell.html" title="Allen Newell">Allen Newell</a>, <a href="Cliff_Shaw.html" title="Cliff Shaw">Cliff Shaw</a> and <a href="Herbert_A.html" title="Herbert A. Simon">Herbert A. Simon</a> at <a href="RAND_Corporation.html" title="RAND Corporation">RAND Corporation</a> as the primary <a href="Data_structure.html" title="Data structure">data structure</a> for their <a href="Information_Processing_Language.html" title="Information Processing Language">Information Processing Language</a>. IPL was used by the authors to develop several early <a href="Artificial_intelligence.html" title="Artificial intelligence">artificial intelligence</a> programs, including the Logic Theory Machine, the <a href="General_Problem_Solver.html" title="General Problem Solver">General Problem Solver</a>, and a computer chess program. Reports on their work appeared in IRE Transactions on Information Theory in 1956, and several conference proceedings from 1957 to 1959, including Proceedings of the Western Joint Computer Conference in 1957 and 1958, and Information Processing (Proceedings of the first <a href="UNESCO.html" title="UNESCO">UNESCO</a> International Conference on Information Processing) in 1959. The now-classic diagram consisting of blocks representing list nodes with arrows pointing to successive list nodes appears in "Programming the Logic Theory Machine" by Newell and Shaw in Proc. WJCC, February 1957. Newell and Simon were recognized with the ACM <a href="Turing_Award.html" title="Turing Award">Turing Award</a> in 1975 for having "made basic contributions to artificial intelligence, the psychology of human cognition, and list processing". The problem of <a href="Machine_translation.html" title="Machine translation">machine translation</a> for <a href="Natural_language.html" title="Natural language">natural language</a> processing led <a href="Victor_Yngve.html" title="Victor Yngve">Victor Yngve</a> at <a href="http://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">Massachusetts Institute of Technology</a> (MIT) to use linked lists as data structures in his COMIT programming language for computer research in the field of <a href="Linguistics.html" title="Linguistics">linguistics</a>. A report on this language entitled "A programming language for mechanical translation" appeared in Mechanical Translation in 1958.</p>
+<p><a href="LISP.html" title="LISP" class="mw-redirect">LISP</a>, standing for list processor, was created by <a href="http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a> in 1958 while he was at MIT and in 1960 he published its design in a paper in the <a href="Communications_of_the_ACM.html" title="Communications of the ACM">Communications of the ACM</a>, entitled "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I". One of LISP's major data structures is the linked list. By the early 1960s, the utility of both linked lists and languages which use these structures as their primary data representation was well established. Bert Green of the <a href="MIT_Lincoln_Laboratory.html" title="MIT Lincoln Laboratory" class="mw-redirect">MIT Lincoln Laboratory</a> published a review article entitled "Computer languages for symbol manipulation" in IRE Transactions on Human Factors in Electronics in March 1961 which summarized the advantages of the linked list approach. A later review article, "A Comparison of list-processing computer languages" by Bobrow and Raphael, appeared in Communications of the ACM in April 1964.</p>
+<p>Several operating systems developed by <a href="Technical_Systems_Consultants.html" title="Technical Systems Consultants">Technical Systems Consultants</a> (originally of West Lafayette Indiana, and later of Chapel Hill, North Carolina) used singly linked lists as file structures. A directory entry pointed to the first sector of a file, and succeeding portions of the file were located by traversing pointers. Systems using this technique included Flex (for the <a href="Motorola_6800.html" title="Motorola 6800">Motorola 6800</a> CPU), mini-Flex (same CPU), and Flex9 (for the Motorola 6809 CPU). A variant developed by TSC for and marketed by Smoke Signal Broadcasting in California, used doubly linked lists in the same manner.</p>
+<p>The TSS/360 operating system, developed by IBM for the System 360/370 machines, used a double linked list for their file system catalog. The directory structure was similar to Unix, where a directory could contain files and/or other directories and extend to any depth. A utility flea was created to fix file system problems after a crash, since modified portions of the file catalog were sometimes in memory when a crash occurred. Problems were detected by comparing the forward and backward links for consistency. If a forward link was corrupt, then if a backward link to the infected node was found, the forward link was set to the node with the backward link. A humorous comment in the source code where this utility was invoked stated "Everyone knows a flea collar gets rid of bugs in cats".</p>
+<h2><span class="mw-headline" id="Basic_concepts_and_nomenclature">Basic concepts and nomenclature</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=2" title="Edit section: Basic concepts and nomenclature">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Each record of a linked list is often called an <b>element</b> or <b><a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">node</a></b>.</p>
+<p>The field of each node that contains the address of the next node is usually called the <b><i>next</i> link</b> or <b><i>next</i> pointer</b>. The remaining fields are known as the <b>data</b>, <b>information</b>, <b>value</b>, <b>cargo</b>, or <b>payload</b> fields.</p>
+<p>The <b>head</b> of a list is its first node. The <b>tail</b> of a list may refer either to the rest of the list after the head, or to the last node in the list. In <a href="Lisp_(programming_language).html" title="Lisp (programming language)">Lisp</a> and some derived languages, the next node may be called the <b><a href="CAR_and_CDR.html" title="CAR and CDR">cdr</a></b> (pronounced <i>could-er</i>) of the list, while the payload of the head node may be called the <b><a href="CAR_and_CDR.html" title="CAR and CDR">car</a></b>.</p>
+<h3><span class="mw-headline" id="Singly_linked_list">Singly linked list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=3" title="Edit section: Singly linked list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Singly linked lists contain nodes which have a data field as well as a <i><b>next</b></i> field, which points to the next node in line of nodes.</p>
+<div class="center"><a href="http://en.wikipedia.org/wiki/File:Singly-linked-list.svg" class="image"><img alt="Singly-linked-list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/408px-Singly-linked-list.svg.png" width="408" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/612px-Singly-linked-list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/816px-Singly-linked-list.svg.png 2x" /></a><br />
+<small><i>A singly linked list whose nodes contain two fields: an integer value and a link to the next node</i></small></div>
+<h3><span class="mw-headline" id="Doubly_linked_list">Doubly linked list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=4" title="Edit section: Doubly linked list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Doubly_linked_list.html" title="Doubly linked list">Doubly linked list</a></div>
+<p>In a <b>doubly linked list</b>, each node contains, besides the next-node link, a second link field pointing to the <i>previous</i> node in the sequence. The two links may be called <b>forward</b>(<b>s</b>) and <b>backwards</b>, or <b>next</b> and <b>prev</b>(<b>previous</b>).</p>
+<div class="center"><a href="http://en.wikipedia.org/wiki/File:Doubly-linked-list.svg" class="image"><img alt="Doubly-linked-list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/610px-Doubly-linked-list.svg.png" width="610" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/915px-Doubly-linked-list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/1220px-Doubly-linked-list.svg.png 2x" /></a><br />
+<small><i>A doubly linked list whose nodes contain three fields: an integer value, the link forward to the next node, and the link backward to the previous node</i></small></div>
+<p>A technique known as <a href="XOR_linked_list.html" title="XOR linked list">XOR-linking</a> allows a doubly linked list to be implemented using a single link field in each node. However, this technique requires the ability to do bit operations on addresses, and therefore may not be available in some high-level languages.</p>
+<h3><span class="mw-headline" id="Multiply_linked_list">Multiply linked list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=5" title="Edit section: Multiply linked list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In a <b>multiply linked list</b>, each node contains two or more link fields, each field being used to connect the same set of data records in a different order (e.g., by name, by department, by date of birth, etc.). While doubly linked lists can be seen as special cases of multiply linked list, the fact that the two orders are opposite to each other leads to simpler and more efficient algorithms, so they are usually treated as a separate case.</p>
+<h3><span class="mw-headline" id="Circular_list">Circular list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=6" title="Edit section: Circular list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the last <a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">node</a> of a list, the link field often contains a <a href="Null_pointer.html#Null_pointer" title="Null pointer" class="mw-redirect">null</a> reference, a special value used to indicate the lack of further nodes. A less common convention is to make it point to the first node of the list; in that case the list is said to be 'circular' or 'circularly linked'; otherwise it is said to be 'open' or 'linear'.</p>
+<div class="center"><a href="http://en.wikipedia.org/wiki/File:Circularly-linked-list.svg" class="image"><img alt="Circularly-linked-list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/350px-Circularly-linked-list.svg.png" width="350" height="60" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/525px-Circularly-linked-list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/700px-Circularly-linked-list.svg.png 2x" /></a><br />
+<small><i>A circular linked list</i></small></div>
+<p>In the case of a circular doubly linked list, the only change that occurs is that the end, or "tail", of the said list is linked back to the front, or "head", of the list and vice versa.</p>
+<h3><span class="mw-headline" id="Sentinel_nodes">Sentinel nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=7" title="Edit section: Sentinel nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="Sentinel_node.html" title="Sentinel node">Sentinel node</a></div>
+<p>In some implementations, an extra <b>sentinel</b> or <b>dummy</b> node may be added before the first data record and/or after the last one. This convention simplifies and accelerates some list-handling algorithms, by ensuring that all links can be safely dereferenced and that every list (even one that contains no data elements) always has a "first" and "last" node.</p>
+<h3><span class="mw-headline" id="Empty_lists">Empty lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=8" title="Edit section: Empty lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An empty list is a list that contains no data records. This is usually the same as saying that it has zero nodes. If sentinel nodes are being used, the list is usually said to be empty when it has only sentinel nodes.</p>
+<h3><span class="mw-headline" id="Hash_linking">Hash linking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=9" title="Edit section: Hash linking">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The link fields need not be physically part of the nodes. If the data records are stored in an array and referenced by their indices, the link field may be stored in a separate array with the same indices as the data records.</p>
+<h3><span class="mw-headline" id="List_handles">List handles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=10" title="Edit section: List handles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since a reference to the first node gives access to the whole list, that reference is often called the <b>address</b>, <b>pointer</b>, or <b>handle</b> of the list. Algorithms that manipulate linked lists usually get such handles to the input lists and return the handles to the resulting lists. In fact, in the context of such algorithms, the word "list" often means "list handle". In some situations, however, it may be convenient to refer to a list by a handle that consists of two links, pointing to its first and last nodes.</p>
+<h3><span class="mw-headline" id="Combining_alternatives">Combining alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=11" title="Edit section: Combining alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The alternatives listed above may be arbitrarily combined in almost every way, so one may have circular doubly linked lists without sentinels, circular singly linked lists with sentinels, etc.</p>
+<h2><span class="mw-headline" id="Tradeoffs">Tradeoffs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=12" title="Edit section: Tradeoffs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As with most choices in computer programming and design, no method is well suited to all circumstances. A linked list data structure might work well in one case, but cause problems in another. This is a list of some of the common tradeoffs involving linked list structures.</p>
+<h3><span class="mw-headline" id="Linked_lists_vs._dynamic_arrays">Linked lists vs. dynamic arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=13" title="Edit section: Linked lists vs. dynamic arrays">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="tright" align="right">
+<table class="wikitable">
+<tr>
+<th>&#160;</th>
+<th><strong class="selflink">Linked list</strong></th>
+<th><a href="Array_data_structure.html" title="Array data structure">Array</a></th>
+<th><a href="Dynamic_array.html" title="Dynamic array">Dynamic<br />
+array</a></th>
+<th><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Balanced<br />
+tree</a></th>
+<th><a href="http://en.wikipedia.org/w/index.php?title=Random_access_list&amp;action=edit&amp;redlink=1" class="new" title="Random access list (page does not exist)">Random access<br />
+list</a></th>
+</tr>
+<tr>
+<td>Indexing</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+</tr>
+<tr>
+<td>Insert/delete at beginning</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+</tr>
+<tr>
+<td>Insert/delete at end</td>
+<td style="background:#ffffdd">Θ(<i>n</i>)<br />
+last element is unknown<br />
+Θ(1)<br />
+last element is known</td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ddffdd">Θ(1) <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a></td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+</tr>
+<tr>
+<td>Insert/delete in middle</td>
+<td style="background:#ddffdd">search time +<br />
+Θ(1)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+</tr>
+<tr>
+<td>Wasted space (average)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">0</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)<sup id="cite_ref-brodnik_4-0" class="reference"><a href="#cite_note-brodnik-4"><span>[</span>4<span>]</span></a></sup></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+</tr>
+</table>
+</div>
+<p>A <i><a href="Dynamic_array.html" title="Dynamic array">dynamic array</a></i> is a data structure that allocates all elements contiguously in memory, and keeps a count of the current number of elements. If the space reserved for the dynamic array is exceeded, it is reallocated and (possibly) copied, an expensive operation.</p>
+<p>Linked lists have several advantages over dynamic arrays. Insertion or deletion of an element at a specific point of a list, assuming that we have indexed a pointer to the node (before the one to be removed, or before the insertion point) already, is a constant-time operation (otherwise without this reference it is O(n)), whereas insertion in a dynamic array at random locations will require moving half of the elements on average, and all the elements in the worst case. While one can "delete" an element from an array in constant time by somehow marking its slot as "vacant", this causes <a href="Fragmentation_(computer).html" title="Fragmentation (computer)" class="mw-redirect">fragmentation</a> that impedes the performance of iteration.</p>
+<p>Moreover, arbitrarily many elements may be inserted into a linked list, limited only by the total memory available; while a dynamic array will eventually fill up its underlying array data structure and will have to reallocate&#160;— an expensive operation, one that may not even be possible if memory is fragmented, although the cost of reallocation can be averaged over insertions, and the cost of an insertion due to reallocation would still be <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a> O(1). This helps with appending elements at the array's end, but inserting into (or removing from) middle positions still carries prohibitive costs due to data moving to maintain contiguity. An array from which many elements are removed may also have to be resized in order to avoid wasting too much space.</p>
+<p>On the other hand, dynamic arrays (as well as fixed-size <a href="Array_data_structure.html" title="Array data structure">array data structures</a>) allow constant-time <a href="Random_access.html" title="Random access">random access</a>, while linked lists allow only <a href="Sequential_access.html" title="Sequential access">sequential access</a> to elements. Singly linked lists, in fact, can only be traversed in one direction. This makes linked lists unsuitable for applications where it's useful to look up an element by its index quickly, such as <a href="Heapsort.html" title="Heapsort">heapsort</a>. Sequential access on arrays and dynamic arrays is also faster than on linked lists on many machines, because they have optimal <a href="Locality_of_reference.html" title="Locality of reference">locality of reference</a> and thus make good use of data caching.</p>
+<p>Another disadvantage of linked lists is the extra storage needed for references, which often makes them impractical for lists of small data items such as <a href="Character_(computing).html" title="Character (computing)">characters</a> or <a href="Boolean_value.html" title="Boolean value" class="mw-redirect">boolean values</a>, because the storage overhead for the links may exceed by a factor of two or more the size of the data. In contrast, a dynamic array requires only the space for the data itself (and a very small amount of control data).<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>note 1<span>]</span></a></sup> It can also be slow, and with a naïve allocator, wasteful, to allocate memory separately for each new element, a problem generally solved using <a href="Memory_pool.html" title="Memory pool">memory pools</a>.</p>
+<p>Some hybrid solutions try to combine the advantages of the two representations. <a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked lists</a> store several elements in each list node, increasing cache performance while decreasing memory overhead for references. <a href="CDR_coding.html" title="CDR coding">CDR coding</a> does both these as well, by replacing references with the actual data referenced, which extends off the end of the referencing record.</p>
+<p>A good example that highlights the pros and cons of using dynamic arrays vs. linked lists is by implementing a program that resolves the <a href="Josephus_problem.html" title="Josephus problem">Josephus problem</a>. The Josephus problem is an election method that works by having a group of people stand in a circle. Starting at a predetermined person, you count around the circle <i>n</i> times. Once you reach the <i>n</i>th person, take them out of the circle and have the members close the circle. Then count around the circle the same <i>n</i> times and repeat the process, until only one person is left. That person wins the election. This shows the strengths and weaknesses of a linked list vs. a dynamic array, because if you view the people as connected nodes in a circular linked list then it shows how easily the linked list is able to delete nodes (as it only has to rearrange the links to the different nodes). However, the linked list will be poor at finding the next person to remove and will need to search through the list until it finds that person. A dynamic array, on the other hand, will be poor at deleting nodes (or elements) as it cannot remove one node without individually shifting all the elements up the list by one. However, it is exceptionally easy to find the <i>n</i>th person in the circle by directly referencing them by their position in the array.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/List_ranking" title="List ranking">list ranking</a> problem concerns the efficient conversion of a linked list representation into an array. Although trivial for a conventional computer, solving this problem by a <a href="Parallel_algorithm.html" title="Parallel algorithm">parallel algorithm</a> is complicated and has been the subject of much research.</p>
+<p>A <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">balanced tree</a> has similar memory access patterns and space overhead to a linked list while permitting much more efficient indexing, taking O(log n) time instead of O(n) for a random access. However, insertion and deletion operations are more expensive due to the overhead of tree manipulations to maintain balance. Schemes exist for trees to automatically maintain themselves in a balanced state: <a href="AVL_tree.html" title="AVL tree">AVL trees</a> or <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black trees</a>.</p>
+<h3><span class="mw-headline" id="Singly_linked_linear_lists_vs._other_lists">Singly linked linear lists vs. other lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=14" title="Edit section: Singly linked linear lists vs. other lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>While doubly linked and/or circular lists have advantages over singly linked linear lists, linear lists offer some advantages that make them preferable in some situations.</p>
+<p>A singly linked linear list is a <a href="Recursion.html" title="Recursion">recursive</a> data structure, because it contains a pointer to a <i>smaller</i> object of the same type. For that reason, many operations on singly linked linear lists (such as <a href="Merge_algorithm.html" title="Merge algorithm">merging</a> two lists, or enumerating the elements in reverse order) often have very simple recursive algorithms, much simpler than any solution using <a href="Iteration.html" title="Iteration">iterative commands</a>. While those recursive solutions can be adapted for doubly linked and circularly linked lists, the procedures generally need extra arguments and more complicated base cases.</p>
+<p>Linear singly linked lists also allow <a href="Tail-sharing.html" title="Tail-sharing" class="mw-redirect">tail-sharing</a>, the use of a common final portion of sub-list as the terminal portion of two different lists. In particular, if a new node is added at the beginning of a list, the former list remains available as the tail of the new one&#160;— a simple example of a <a href="Persistent_data_structure.html" title="Persistent data structure">persistent data structure</a>. Again, this is not true with the other variants: a node may never belong to two different circular or doubly linked lists.</p>
+<p>In particular, end-sentinel nodes can be shared among singly linked non-circular lists. The same end-sentinel node may be used for <i>every</i> such list. In <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a>, for example, every proper list ends with a link to a special node, denoted by <code>nil</code> or <code>()</code>, whose <code><a href="CAR_and_CDR.html" title="CAR and CDR">CAR</a></code> and <code>CDR</code> links point to itself. Thus a Lisp procedure can safely take the <code>CAR</code> or <code>CDR</code> of <i>any</i> list.</p>
+<p>The advantages of the fancy variants are often limited to the complexity of the algorithms, not in their efficiency. A circular list, in particular, can usually be emulated by a linear list together with two variables that point to the first and last nodes, at no extra cost.</p>
+<h3><span class="mw-headline" id="Doubly_linked_vs._singly_linked">Doubly linked vs. singly linked</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=15" title="Edit section: Doubly linked vs. singly linked">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Double-linked lists require more space per node (unless one uses <a href="XOR_linked_list.html" title="XOR linked list">XOR-linking</a>), and their elementary operations are more expensive; but they are often easier to manipulate because they allow sequential access to the list in both directions. In a doubly linked list, one can insert or delete a node in a constant number of operations given only that node's address. To do the same in a singly linked list, one must have the <i>address of the pointer</i> to that node, which is either the handle for the whole list (in case of the first node) or the link field in the <i>previous</i> node. Some algorithms require access in both directions. On the other hand, doubly linked lists do not allow tail-sharing and cannot be used as <a href="Persistent_data_structure.html" title="Persistent data structure">persistent data structures</a>.</p>
+<h3><span class="mw-headline" id="Circularly_linked_vs._linearly_linked">Circularly linked vs. linearly linked</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=16" title="Edit section: Circularly linked vs. linearly linked">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A circularly linked list may be a natural option to represent arrays that are naturally circular, e.g. the corners of a <a href="Polygon.html" title="Polygon">polygon</a>, a pool of <a href="Data_buffer.html" title="Data buffer">buffers</a> that are used and released in <a href="FIFO_(computing).html" title="FIFO (computing)" class="mw-redirect">FIFO</a> ("first in, first out") order, or a set of processes that should be <a href="Time_sharing.html" title="Time sharing" class="mw-redirect">time-shared</a> in <a href="Round-robin_scheduling.html" title="Round-robin scheduling">round-robin order</a>. In these applications, a pointer to any node serves as a handle to the whole list.</p>
+<p>With a circular list, a pointer to the last node gives easy access also to the first node, by following one link. Thus, in applications that require access to both ends of the list (e.g., in the implementation of a queue), a circular structure allows one to handle the structure by a single pointer, instead of two.</p>
+<p>A circular list can be split into two circular lists, in constant time, by giving the addresses of the last node of each piece. The operation consists in swapping the contents of the link fields of those two nodes. Applying the same operation to any two nodes in two distinct lists joins the two list into one. This property greatly simplifies some algorithms and data structures, such as the <a href="Quad-edge_data_structure.html" title="Quad-edge data structure" class="mw-redirect">quad-edge</a> and <a href="http://en.wikipedia.org/w/index.php?title=Face-edge_data_structure&amp;action=edit&amp;redlink=1" class="new" title="Face-edge data structure (page does not exist)">face-edge</a>.</p>
+<p>The simplest representation for an empty <i>circular</i> list (when such a thing makes sense) is a null pointer, indicating that the list has no nodes. Without this choice, many algorithms have to test for this special case, and handle it separately. By contrast, the use of null to denote an empty <i>linear</i> list is more natural and often creates fewer special cases.</p>
+<h3><span class="mw-headline" id="Using_sentinel_nodes">Using sentinel nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=17" title="Edit section: Using sentinel nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sentinel node may simplify certain list operations, by ensuring that the next and/or previous nodes exist for every element, and that even empty lists have at least one node. One may also use a sentinel node at the end of the list, with an appropriate data field, to eliminate some end-of-list tests. For example, when scanning the list looking for a node with a given value <i>x</i>, setting the sentinel's data field to <i>x</i> makes it unnecessary to test for end-of-list inside the loop. Another example is the merging two sorted lists: if their sentinels have data fields set to +∞, the choice of the next output node does not need special handling for empty lists.</p>
+<p>However, sentinel nodes use up extra space (especially in applications that use many short lists), and they may complicate other operations (such as the creation of a new empty list).</p>
+<p>However, if the circular list is used merely to simulate a linear list, one may avoid some of this complexity by adding a single sentinel node to every list, between the last and the first data nodes. With this convention, an empty list consists of the sentinel node alone, pointing to itself via the next-node link. The list handle should then be a pointer to the last data node, before the sentinel, if the list is not empty; or to the sentinel itself, if the list is empty.</p>
+<p>The same trick can be used to simplify the handling of a doubly linked linear list, by turning it into a circular doubly linked list with a single sentinel node. However, in this case, the handle should be a single pointer to the dummy node itself.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>5<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Linked_list_operations">Linked list operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=18" title="Edit section: Linked list operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When manipulating linked lists in-place, care must be taken to not use values that you have invalidated in previous assignments. This makes algorithms for inserting or deleting linked list nodes somewhat subtle. This section gives <a href="Pseudocode.html" title="Pseudocode">pseudocode</a> for adding or removing nodes from singly, doubly, and circularly linked lists in-place. Throughout we will use <i>null</i> to refer to an end-of-list marker or <a href="Sentinel_value.html" title="Sentinel value">sentinel</a>, which may be implemented in a number of ways.</p>
+<h3><span class="mw-headline" id="Linearly_linked_lists">Linearly linked lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=19" title="Edit section: Linearly linked lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Singly_linked_lists">Singly linked lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=20" title="Edit section: Singly linked lists">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Our node data structure will have two fields. We also keep a variable <i>firstNode</i> which always points to the first node in the list, or is <i>null</i> for an empty list.</p>
+<pre>
+ <b>record</b> <i>Node</i>
+ {
+    data; <i>// The data being stored in the node</i>
+    <i>Node</i> next <i>// A <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> to the next node, null for last node</i>
+ }
+</pre>
+<pre>
+ <b>record</b> <i>List</i>
+ {
+     <i>Node</i> firstNode <i>// points to first node of list; null for empty list</i>
+ }
+</pre>
+<p>Traversal of a singly linked list is simple, beginning at the first node and following each <i>next</i> link until we come to the end:</p>
+<pre>
+ node := list.firstNode
+ <b>while</b> node not null
+     <i>(do something with node.data)</i>
+     node := node.next
+</pre>
+<p>The following code inserts a node after an existing node in a singly linked list. The diagram shows how it works. Inserting a node before an existing one cannot be done directly; instead, one must keep track of the previous node and insert a node after it.</p>
+<div class="center">
+<div class="floatnone"><a href="http://en.wikipedia.org/wiki/File:CPT-LinkedLists-addingnode.svg" class="image"><img alt="CPT-LinkedLists-addingnode.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CPT-LinkedLists-addingnode.svg/474px-CPT-LinkedLists-addingnode.svg.png" width="474" height="116" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CPT-LinkedLists-addingnode.svg/711px-CPT-LinkedLists-addingnode.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/CPT-LinkedLists-addingnode.svg/948px-CPT-LinkedLists-addingnode.svg.png 2x" /></a></div>
+</div>
+<pre>
+ <b>function</b> insertAfter(<i>Node</i> node, <i>Node</i> newNode) <i>// insert newNode after node</i>
+     newNode.next := node.next
+     node.next    := newNode
+</pre>
+<p>Inserting at the beginning of the list requires a separate function. This requires updating <i>firstNode</i>.</p>
+<pre>
+ <b>function</b> insertBeginning(<i>List</i> list, <i>Node</i> newNode) <i>// insert node before current first node</i>
+     newNode.next   := list.firstNode
+     list.firstNode := newNode
+</pre>
+<p>Similarly, we have functions for removing the node <i>after</i> a given node, and for removing a node from the beginning of the list. The diagram demonstrates the former. To find and remove a particular node, one must again keep track of the previous element.</p>
+<div class="center">
+<div class="floatnone"><a href="http://en.wikipedia.org/wiki/File:CPT-LinkedLists-deletingnode.svg" class="image"><img alt="CPT-LinkedLists-deletingnode.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CPT-LinkedLists-deletingnode.svg/380px-CPT-LinkedLists-deletingnode.svg.png" width="380" height="174" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CPT-LinkedLists-deletingnode.svg/570px-CPT-LinkedLists-deletingnode.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CPT-LinkedLists-deletingnode.svg/760px-CPT-LinkedLists-deletingnode.svg.png 2x" /></a></div>
+</div>
+<pre>
+ <b>function</b> removeAfter(<i>Node</i> node) <i>// remove node past this one</i>
+     obsoleteNode := node.next
+     node.next := node.next.next
+     destroy obsoleteNode
+</pre>
+<pre>
+ <b>function</b> removeBeginning(<i>List</i> list) <i>// remove first node</i>
+     obsoleteNode := list.firstNode
+     list.firstNode := list.firstNode.next <i>// point past deleted node</i>
+     destroy obsoleteNode
+</pre>
+<p>Notice that <code>removeBeginning()</code> sets <code>list.firstNode</code> to <code>null</code> when removing the last node in the list.</p>
+<p>Since we can't iterate backwards, efficient <code>insertBefore</code> or <code>removeBefore</code> operations are not possible.</p>
+<p>Appending one linked list to another can be inefficient unless a reference to the tail is kept as part of the List structure, because we must traverse the entire first list in order to find the tail, and then append the second list to this. Thus, if two linearly linked lists are each of length <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" />, list appending has <a href="Asymptotic_time_complexity.html" title="Asymptotic time complexity" class="mw-redirect">asymptotic time complexity</a> of <img class="tex" alt="O(n)" src="http://upload.wikimedia.org/math/7/b/a/7ba55e7c64a9405a0b39a1107e90ca94.png" />. In the Lisp family of languages, list appending is provided by the <code><a href="Append.html" title="Append">append</a></code> procedure.</p>
+<p>Many of the special cases of linked list operations can be eliminated by including a dummy element at the front of the list. This ensures that there are no special cases for the beginning of the list and renders both <code>insertBeginning()</code> and <code>removeBeginning()</code> unnecessary. In this case, the first useful data in the list will be found at <code>list.<b>firstNode</b>.next</code>.</p>
+<h3><span class="mw-headline" id="Circularly_linked_list">Circularly linked list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=21" title="Edit section: Circularly linked list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In a circularly linked list, all nodes are linked in a continuous circle, without using <i>null.</i> For lists with a front and a back (such as a queue), one stores a reference to the last node in the list. The <i>next</i> node after the last node is the first node. Elements can be added to the back of the list and removed from the front in constant time.</p>
+<p>Circularly linked lists can be either singly or doubly linked.</p>
+<p>Both types of circularly linked lists benefit from the ability to traverse the full list beginning at any given node. This often allows us to avoid storing <i>firstNode</i> and <i>lastNode</i>, although if the list may be empty we need a special representation for the empty list, such as a <i>lastNode</i> variable which points to some node in the list or is <i>null</i> if it's empty; we use such a <i>lastNode</i> here. This representation significantly simplifies adding and removing nodes with a non-empty list, but empty lists are then a special case.</p>
+<h4><span class="mw-headline" id="Algorithms">Algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=22" title="Edit section: Algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Assuming that <i>someNode</i> is some node in a non-empty circular singly linked list, this code iterates through that list starting with <i>someNode</i>:</p>
+<pre>
+ <b>function</b> iterate(someNode)
+   <b>if</b> someNode ≠ <b>null</b>
+     node := someNode
+     <b>do</b>
+       do something with node.value
+       node := node.next
+     <b>while</b> node ≠ someNode
+</pre>
+<p>Notice that the test "<b>while</b> node ≠ someNode" must be at the end of the loop. If the test was moved to the beginning of the loop, the procedure would fail whenever the list had only one node.</p>
+<p>This function inserts a node "newNode" into a circular linked list after a given node "node". If "node" is null, it assumes that the list is empty.</p>
+<pre>
+ <b>function</b> insertAfter(<i>Node</i> node, <i>Node</i> newNode)
+     <b>if</b> node = <b>null</b>
+       newNode.next := newNode
+     <b>else</b>
+       newNode.next := node.next
+       node.next := newNode
+</pre>
+<p>Suppose that "L" is a variable pointing to the last node of a circular linked list (or null if the list is empty). To append "newNode" to the <i>end</i> of the list, one may do</p>
+<pre>
+ insertAfter(L, newNode)
+ L := newNode
+</pre>
+<p>To insert "newNode" at the <i>beginning</i> of the list, one may do</p>
+<pre>
+ insertAfter(L, newNode)
+ <b>if</b> L = <b>null</b>
+   L := newNode
+</pre>
+<h2><span class="mw-headline" id="Linked_lists_using_arrays_of_nodes">Linked lists using arrays of nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=23" title="Edit section: Linked lists using arrays of nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Languages that do not support any type of <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">reference</a> can still create links by replacing pointers with array indices. The approach is to keep an <a href="Array_data_type.html" title="Array data type">array</a> of <a href="http://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">records</a>, where each record has integer fields indicating the index of the next (and possibly previous) node in the array. Not all nodes in the array need be used. If records are also not supported, <a href="Parallel_array.html" title="Parallel array">parallel arrays</a> can often be used instead.</p>
+<p>As an example, consider the following linked list record that uses arrays instead of pointers:</p>
+<pre>
+ <b>record</b> <i>Entry</i> {
+    <i>integer</i> next; <i>// index of next entry in array</i>
+    <i>integer</i> prev; <i>// previous entry (if double-linked)</i>
+    <i>string</i> name;
+    <i>real</i> balance;
+ }
+</pre>
+<p>By creating an array of these structures, and an integer variable to store the index of the first element, a linked list can be built:</p>
+<pre>
+<i>integer</i> listHead
+<i>Entry</i> Records[1000]
+</pre>
+<p>Links between elements are formed by placing the array index of the next (or previous) cell into the Next or Prev field within a given element. For example:</p>
+<table class="wikitable">
+<tr>
+<th>Index</th>
+<th>Next</th>
+<th>Prev</th>
+<th>Name</th>
+<th>Balance</th>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>Jones, John</td>
+<td>123.45</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>0</td>
+<td>Smith, Joseph</td>
+<td>234.56</td>
+</tr>
+<tr>
+<td>2 (listHead)</td>
+<td>4</td>
+<td>-1</td>
+<td>Adams, Adam</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>Ignore, Ignatius</td>
+<td>999.99</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>2</td>
+<td>Another, Anita</td>
+<td>876.54</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>In the above example, <code>ListHead</code> would be set to 2, the location of the first entry in the list. Notice that entry 3 and 5 through 7 are not part of the list. These cells are available for any additions to the list. By creating a <code>ListFree</code> integer variable, a <a href="Free_list.html" title="Free list">free list</a> could be created to keep track of what cells are available. If all entries are in use, the size of the array would have to be increased or some elements would have to be deleted before new entries could be stored in the list.</p>
+<p>The following code would traverse the list and display names and account balance:</p>
+<pre>
+i := listHead
+<b>while</b> i ≥ 0 <i>// loop through the list</i>
+     print i, Records[i].name, Records[i].balance <i>// print entry</i>
+     i := Records[i].next
+</pre>
+<p>When faced with a choice, the advantages of this approach include:</p>
+<ul>
+<li>The linked list is relocatable, meaning it can be moved about in memory at will, and it can also be quickly and directly <a href="Serialization.html" title="Serialization">serialized</a> for storage on disk or transfer over a network.</li>
+<li>Especially for a small list, array indexes can occupy significantly less space than a full pointer on many architectures.</li>
+<li><a href="Locality_of_reference.html" title="Locality of reference">Locality of reference</a> can be improved by keeping the nodes together in memory and by periodically rearranging them, although this can also be done in a general store.</li>
+<li>Naïve <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">dynamic memory allocators</a> can produce an excessive amount of overhead storage for each node allocated; almost no allocation overhead is incurred per node in this approach.</li>
+<li>Seizing an entry from a pre-allocated array is faster than using dynamic memory allocation for each node, since dynamic memory allocation typically requires a search for a free memory block of the desired size.</li>
+</ul>
+<p>This approach has one main disadvantage, however: it creates and manages a private memory space for its nodes. This leads to the following issues:</p>
+<ul>
+<li>It increases complexity of the implementation.</li>
+<li>Growing a large array when it is full may be difficult or impossible, whereas finding space for a new linked list node in a large, general memory pool may be easier.</li>
+<li>Adding elements to a dynamic array will occasionally (when it is full) unexpectedly take linear (<a href="Big-O_notation.html" title="Big-O notation" class="mw-redirect">O</a>(n)) instead of constant time (although it's still an <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a> constant).</li>
+<li>Using a general memory pool leaves more memory for other data if the list is smaller than expected or if many nodes are freed.</li>
+</ul>
+<p>For these reasons, this approach is mainly used for languages that do not support dynamic memory allocation. These disadvantages are also mitigated if the maximum size of the list is known at the time the array is created.</p>
+<h2><span class="mw-headline" id="Language_support">Language support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=24" title="Edit section: Language support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many <a href="Programming_language.html" title="Programming language">programming languages</a> such as <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a> and <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> have singly linked lists built in. In many <a href="Functional_programming_language.html" title="Functional programming language" class="mw-redirect">functional languages</a>, these lists are constructed from nodes, each called a <i><a href="Cons.html" title="Cons">cons</a></i> or <i>cons cell</i>. The cons has two fields: the <i><a href="Car_and_cdr-2.html" title="Car and cdr" class="mw-redirect">car</a></i>, a reference to the data for that node, and the <i><a href="Car_and_cdr-2.html" title="Car and cdr" class="mw-redirect">cdr</a></i>, a reference to the next node. Although cons cells can be used to build other data structures, this is their primary purpose.</p>
+<p>In languages that support <a href="Abstract_data_type.html" title="Abstract data type">abstract data types</a> or templates, linked list ADTs or templates are available for building linked lists. In other languages, linked lists are typically built using <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> together with <a href="http://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">records</a>.</p>
+<h2><span class="mw-headline" id="Internal_and_external_storage">Internal and external storage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=25" title="Edit section: Internal and external storage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When constructing a linked list, one is faced with the choice of whether to store the data of the list directly in the linked list nodes, called <i>internal storage</i>, or merely to store a reference to the data, called <i>external storage</i>. Internal storage has the advantage of making access to the data more efficient, requiring less storage overall, having better <a href="Locality_of_reference.html" title="Locality of reference">locality of reference</a>, and simplifying memory management for the list (its data is allocated and deallocated at the same time as the list nodes).</p>
+<p>External storage, on the other hand, has the advantage of being more generic, in that the same data structure and machine code can be used for a linked list no matter what the size of the data is. It also makes it easy to place the same data in multiple linked lists. Although with internal storage the same data can be placed in multiple lists by including multiple <i>next</i> references in the node data structure, it would then be necessary to create separate routines to add or delete cells based on each field. It is possible to create additional linked lists of elements that use internal storage by using external storage, and having the cells of the additional linked lists store references to the nodes of the linked list containing the data.</p>
+<p>In general, if a set of data structures needs to be included in multiple linked lists, external storage is the best approach. If a set of data structures need to be included in only one linked list, then internal storage is slightly better, unless a generic linked list package using external storage is available. Likewise, if different sets of data that can be stored in the same data structure are to be included in a single linked list, then internal storage would be fine.</p>
+<p>Another approach that can be used with some languages involves having different data structures, but all have the initial fields, including the <i>next</i> (and <i>prev</i> if double linked list) references in the same location. After defining separate structures for each type of data, a generic structure can be defined that contains the minimum amount of data shared by all the other structures and contained at the top (beginning) of the structures. Then generic routines can be created that use the minimal structure to perform linked list type operations, but separate routines can then handle the specific data. This approach is often used in message parsing routines, where several types of messages are received, but all start with the same set of fields, usually including a field for message type. The generic routines are used to add new messages to a queue when they are received, and remove them from the queue in order to process the message. The message type field is then used to call the correct routine to process the specific type of message.</p>
+<h3><span class="mw-headline" id="Example_of_internal_and_external_storage">Example of internal and external storage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=26" title="Edit section: Example of internal and external storage">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Suppose you wanted to create a linked list of families and their members. Using internal storage, the structure might look like the following:</p>
+<pre>
+ <b>record</b> <i>member</i> { <i>// member of a family</i>
+     <i>member</i> next;
+     <i>string</i> firstName;
+     <i>integer</i> age;
+ }
+ <b>record</b> <i>family</i> { <i>// the family itself</i>
+     <i>family</i> next;
+     <i>string</i> lastName;
+     <i>string</i> address;
+     <i>member</i> members <i>// head of list of members of this family</i>
+ }
+</pre>
+<p>To print a complete list of families and their members using internal storage, we could write:</p>
+<pre>
+ aFamily := Families <i>// start at head of families list</i>
+ <b>while</b> aFamily ≠ <b>null</b> <i>// loop through list of families</i>
+     print information about family
+     aMember := aFamily.members <i>// get head of list of this family's members</i>
+     <b>while</b> aMember ≠ <b>null</b> <i>// loop through list of members</i>
+         print information about member
+         aMember := aMember.next
+     aFamily := aFamily.next
+</pre>
+<p>Using external storage, we would create the following structures:</p>
+<pre>
+ <b>record</b> <i>node</i> { <i>// generic link structure</i>
+     <i>node</i> next;
+     <i>pointer</i> data <i>// generic pointer for data at node</i>
+ }
+ <b>record</b> <i>member</i> { <i>// structure for family member</i>
+     <i>string</i> firstName;
+     <i>integer</i> age
+ }
+ <b>record</b> <i>family</i> { <i>// structure for family</i>
+     <i>string</i> lastName;
+     <i>string</i> address;
+     <i>node</i> members <i>// head of list of members of this family</i>
+ }
+</pre>
+<p>To print a complete list of families and their members using external storage, we could write:</p>
+<pre>
+ famNode := Families <i>// start at head of families list</i>
+ <b>while</b> famNode ≠ <b>null</b> <i>// loop through list of families</i>
+     aFamily := (family) famNode.data <i>// extract family from node</i>
+     print information about family
+     memNode := aFamily.members <i>// get list of family members</i>
+     <b>while</b> memNode ≠ <b>null</b> <i>// loop through list of members</i>
+         aMember := (member)memNode.data <i>// extract member from node</i>
+         print information about member
+         memNode := memNode.next
+     famNode := famNode.next
+</pre>
+<p>Notice that when using external storage, an extra step is needed to extract the record from the node and cast it into the proper data type. This is because both the list of families and the list of members within the family are stored in two linked lists using the same data structure (<i>node</i>), and this language does not have parametric types.</p>
+<p>As long as the number of families that a member can belong to is known at compile time, internal storage works fine. If, however, a member needed to be included in an arbitrary number of families, with the specific number known only at run time, external storage would be necessary.</p>
+<h3><span class="mw-headline" id="Speeding_up_search">Speeding up search</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=27" title="Edit section: Speeding up search">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Finding a specific element in a linked list, even if it is sorted, normally requires O(<i>n</i>) time (<a href="Linear_search.html" title="Linear search">linear search</a>). This is one of the primary disadvantages of linked lists over other data structures. In addition to the variants discussed above, below are two simple ways to improve search time.</p>
+<p>In an unordered list, one simple heuristic for decreasing average search time is the <i>move-to-front heuristic</i>, which simply moves an element to the beginning of the list once it is found. This scheme, handy for creating simple caches, ensures that the most recently used items are also the quickest to find again.</p>
+<p>Another common approach is to "<a href="Index_(database).html" title="Index (database)" class="mw-redirect">index</a>" a linked list using a more efficient external data structure. For example, one can build a <a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">red-black tree</a> or <a href="Hash_table.html" title="Hash table">hash table</a> whose elements are references to the linked list nodes. Multiple such indexes can be built on a single list. The disadvantage is that these indexes may need to be updated each time a node is added or removed (or at least, before that index is used again).</p>
+<h3><span class="mw-headline" id="Random_access_lists">Random access lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=28" title="Edit section: Random access lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <a href="http://en.wikipedia.org/w/index.php?title=Random_access_list&amp;action=edit&amp;redlink=1" class="new" title="Random access list (page does not exist)">random access list</a> is a list with support for fast random access to read or modify any element in the list.<sup id="cite_ref-okasaki_7-0" class="reference"><a href="#cite_note-okasaki-7"><span>[</span>6<span>]</span></a></sup> One possible implementation is a <a href="http://en.wikipedia.org/w/index.php?title=Skew_binary_random_access_list&amp;action=edit&amp;redlink=1" class="new" title="Skew binary random access list (page does not exist)">skew binary random access list</a> using the <a href="Skew_binary_number_system.html" title="Skew binary number system">skew binary number system</a>, which involves a list of trees with special properties; this allows worst-case constant time head/cons operations, and worst-case logarithmic time random access to an element by index.<sup id="cite_ref-okasaki_7-1" class="reference"><a href="#cite_note-okasaki-7"><span>[</span>6<span>]</span></a></sup> Random access lists can be implemented as <a href="Persistent_data_structure.html" title="Persistent data structure">persistent data structures</a>.<sup id="cite_ref-okasaki_7-2" class="reference"><a href="#cite_note-okasaki-7"><span>[</span>6<span>]</span></a></sup></p>
+<p>Random access lists can be viewed as immutable linked lists in that they likewise support the same O(1) head and tail operations.<sup id="cite_ref-okasaki_7-3" class="reference"><a href="#cite_note-okasaki-7"><span>[</span>6<span>]</span></a></sup></p>
+<p>A simple extension to random access lists is the <a href="http://en.wikipedia.org/w/index.php?title=Min-list&amp;action=edit&amp;redlink=1" class="new" title="Min-list (page does not exist)">min-list</a>, which provides an additional operation that yields the minimum element in the entire list in constant time (without<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (October 2011)">clarification needed</span></a></i>]</sup> mutation complexities).<sup id="cite_ref-okasaki_7-4" class="reference"><a href="#cite_note-okasaki-7"><span>[</span>6<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Related_data_structures">Related data structures</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=29" title="Edit section: Related data structures">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Both <a href="Stack_(data_structure).html" title="Stack (data structure)" class="mw-redirect">stacks</a> and <a href="Queue_(data_structure).html" title="Queue (data structure)" class="mw-redirect">queues</a> are often implemented using linked lists, and simply restrict the type of operations which are supported.</p>
+<p>The <a href="Skip_list.html" title="Skip list">skip list</a> is a linked list augmented with layers of pointers for quickly jumping over large numbers of elements, and then descending to the next layer. This process continues down to the bottom layer, which is the actual list.</p>
+<p>A <a href="Binary_tree.html" title="Binary tree">binary tree</a> can be seen as a type of linked list where the elements are themselves linked lists of the same nature. The result is that each node may include a reference to the first node of one or two other linked lists, which, together with their contents, form the subtrees below that node.</p>
+<p>An <a href="Unrolled_linked_list.html" title="Unrolled linked list">unrolled linked list</a> is a linked list in which each node contains an array of data values. This leads to improved cache performance, since more list elements are contiguous in memory, and reduced memory overhead, because less metadata needs to be stored for each element of the list.</p>
+<p>A <a href="Hash_table.html" title="Hash table">hash table</a> may use linked lists to store the chains of items that hash to the same position in the hash table.</p>
+<p>A <a href="Heap_(data_structure).html" title="Heap (data structure)">heap</a> shares some of the ordering properties of a linked list, but is almost always implemented using an array. Instead of references from node to node, the next and previous data indexes are calculated using the current data's index.</p>
+<p>A <a href="Self-organizing_list.html" title="Self-organizing list">self-organizing list</a> rearranges its nodes based on some heuristic which reduces search times for data retrieval by keeping commonly accessed nodes at the head of the list.</p>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=30" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">The amount of control data required for a dynamic array is usually of the form <img class="tex" alt="K+B*n" src="http://upload.wikimedia.org/math/b/8/1/b814fd22cd53f108fe452fe5090a68f3.png" />, where <img class="tex" alt="K" src="http://upload.wikimedia.org/math/a/5/f/a5f3c6a11b03839d46af9fb43c97c188.png" /> is a per-array constant, <img class="tex" alt="B" src="http://upload.wikimedia.org/math/9/d/5/9d5ed678fe57bcca610140957afab571.png" /> is a per-dimension constant, and <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> is the number of dimensions. <img class="tex" alt="K" src="http://upload.wikimedia.org/math/a/5/f/a5f3c6a11b03839d46af9fb43c97c188.png" /> and <img class="tex" alt="B" src="http://upload.wikimedia.org/math/9/d/5/9d5ed678fe57bcca610140957afab571.png" /> are typically on the order of 10 bytes.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=31" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Gerald Kruse. <a rel="nofollow" class="external text" href="http://www.juniata.edu/faculty/kruse/cs240/syllabus.htm">CS 240 Lecture Notes</a>: <a rel="nofollow" class="external text" href="http://www.juniata.edu/faculty/kruse/cs240/linkedlist2.htm">Linked Lists Plus: Complexity Trade-offs</a>. Juniata College. Spring 2008.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://channel9.msdn.com/Events/GoingNative/GoingNative-2012/Keynote-Bjarne-Stroustrup-Cpp11-Style"><i>Day 1 Keynote - Bjarne Stroustrup: C++11 Style</i></a> at <i>GoingNative 2012</i> on <i>channel9.msdn.com</i> from minute 45 or foil 44</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://kjellkod.wordpress.com/2012/02/25/why-you-should-never-ever-ever-use-linked-list-in-your-code-again/"><i>Number crunching: Why you should never, ever, EVER use linked-list in your code again</i></a> at <i>kjellkod.wordpress.com</i></span></li>
+<li id="cite_note-brodnik-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-brodnik_4-0">^</a></b></span> <span class="reference-text"><span id="CITEREFBrodnikCarlssonSedgewickMunro1999" class="citation">Brodnik, Andrej; Carlsson, Svante; <a href="http://en.wikipedia.org/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, Robert</a>; Munro, JI; Demaine, ED (1999), <a rel="nofollow" class="external text" href="http://www.cs.uwaterloo.ca/research/tr/1999/09/CS-99-09.pdf"><i>Resizable Arrays in Optimal Time and Space (Technical Report CS-99-09)</i></a>, Department of Computer Science, University of Waterloo</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.au=Brodnik%2C+Andrej&amp;rft.au=Carlsson%2C+Svante&amp;rft.au=Demaine%2C+ED&amp;rft.aufirst=Andrej&amp;rft.aulast=Brodnik&amp;rft.au=Munro%2C+JI&amp;rft.au=Sedgewick%2C+Robert&amp;rft.btitle=Resizable+Arrays+in+Optimal+Time+and+Space+%28Technical+Report+CS-99-09%29&amp;rft.date=1999&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.uwaterloo.ca%2Fresearch%2Ftr%2F1999%2F09%2FCS-99-09.pdf&amp;rft.pub=Department+of+Computer+Science%2C+University+of+Waterloo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Ford, William and Topp, William <i>Data Structures with C++ using STL Second Edition</i> (2002). Prentice-Hall. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0130858501" class="internal mw-magiclink-isbn">ISBN 0-13-085850-1</a>, pp. 466-467</span></li>
+<li id="cite_note-okasaki-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-okasaki_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-okasaki_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-okasaki_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-okasaki_7-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-okasaki_7-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text">C Okasaki, "<a rel="nofollow" class="external text" href="http://cs.oberlin.edu/~jwalker/refs/fpca95.ps">Purely Functional Random-Access Lists</a>"</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=32" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="http://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(March 2012)</i></small></span></td>
+</tr>
+</table>
+<ul>
+<li><span class="citation web">Juan, Angel (2006). <a rel="nofollow" class="external text" href="http://www.uoc.edu/in3/emath/docs/java/ch20.pdf">"Ch20 –Data Structures; ID06 - PROGRAMMING with JAVA (slide part of the book "Big Java", by CayS. Horstmann)"</a> (PDF). p.&#160;3</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.aufirst=Angel&amp;rft.au=Juan%2C+Angel&amp;rft.aulast=Juan&amp;rft.btitle=Ch20+%E2%80%93Data+Structures%3B+ID06+-+PROGRAMMING+with+JAVA+%28slide+part+of+the+book+%22Big+Java%22%2C+by+CayS.+Horstmann%29&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.uoc.edu%2Fin3%2Femath%2Fdocs%2Fjava%2Fch20.pdf&amp;rft.pages=3&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://nist.gov/dads/HTML/linkedList.html">"Definition of a linked list"</a>. <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a>. 2004-08-16<span class="reference-accessdate">. Retrieved 2004-12-14</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.btitle=Definition+of+a+linked+list&amp;rft.date=2004-08-16&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fnist.gov%2Fdads%2FHTML%2FlinkedList.html&amp;rft.pub=National+Institute+of+Standards+and+Technology&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Antonakos, James L.; Mansfield, Kenneth C., Jr. (1999). <i>Practical Data Structures Using C/C++</i>. Prentice-Hall. pp.&#160;165–190. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-280843-9" title="Special:BookSources/0-13-280843-9">0-13-280843-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.au=Antonakos%2C+James+L.&amp;rft.aufirst=James+L.&amp;rft.aulast=Antonakos&amp;rft.btitle=Practical+Data+Structures+Using+C%2FC%2B%2B&amp;rft.date=1999&amp;rft.genre=book&amp;rft.isbn=0-13-280843-9&amp;rft.pages=165%E2%80%93190&amp;rft.pub=Prentice-Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation book">Collins, William J. (2005) [2002]. <i>Data Structures and the Java Collections Framework</i>. New York: McGraw Hill. pp.&#160;239–303. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-07-282379-8" title="Special:BookSources/0-07-282379-8">0-07-282379-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.au=Collins%2C+William+J.&amp;rft.aufirst=William+J.&amp;rft.aulast=Collins&amp;rft.btitle=Data+Structures+and+the+Java+Collections+Framework&amp;rft.date=2005&amp;rft.genre=book&amp;rft.isbn=0-07-282379-8&amp;rft.pages=239%E2%80%93303&amp;rft.place=New+York&amp;rft.pub=McGraw+Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Cormen, Thomas H.; <a href="Charles_E-2.html" title="Charles E. Leiserson">Charles E. Leiserson</a>; <a href="Ronald_L.html" title="Ronald L. Rivest" class="mw-redirect">Ronald L. Rivest</a>; <a href="http://en.wikipedia.org/w/index.php?title=Stein,_Clifford&amp;action=edit&amp;redlink=1" class="new" title="Stein, Clifford (page does not exist)">Clifford Stein</a> (2003). <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i>. MIT Press. pp.&#160;205–213 &amp; 501–505. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-03293-7" title="Special:BookSources/0-262-03293-7">0-262-03293-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.au=Cormen%2C+Thomas+H.&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.btitle=Introduction+to+Algorithms&amp;rft.date=2003&amp;rft.genre=book&amp;rft.isbn=0-262-03293-7&amp;rft.pages=205%E2%80%93213+%26+501%E2%80%93505&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation book"><a href="Thomas_H.html" title="Thomas H. Cormen">Cormen, Thomas H.</a>; <a href="Charles_E-2.html" title="Charles E. Leiserson">Charles E. Leiserson</a>; <a href="Ronald_L.html" title="Ronald L. Rivest" class="mw-redirect">Ronald L. Rivest</a>; <a href="http://en.wikipedia.org/w/index.php?title=Stein,_Clifford&amp;action=edit&amp;redlink=1" class="new" title="Stein, Clifford (page does not exist)">Clifford Stein</a> (2001). "10.2: Linked lists". <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i> (2md ed.). MIT Press. pp.&#160;204–209. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-03293-7" title="Special:BookSources/0-262-03293-7">0-262-03293-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Introduction+to+Algorithms&amp;rft.au=Cormen%2C+Thomas+H.&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.btitle=10.2%3A+Linked+lists&amp;rft.date=2001&amp;rft.edition=2md&amp;rft.genre=bookitem&amp;rft.isbn=0-262-03293-7&amp;rft.pages=204%E2%80%93209&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation journal">Green, Bert F. Jr. (1961). "Computer Languages for Symbol Manipulation". <i>IRE Transactions on Human Factors in Electronics</i> (2): 3–8. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FTHFE2.1961.4503292">10.1109/THFE2.1961.4503292</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Computer+Languages+for+Symbol+Manipulation&amp;rft.aufirst=Bert+F.+Jr.&amp;rft.au=Green%2C+Bert+F.+Jr.&amp;rft.aulast=Green&amp;rft.date=1961&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1109%2FTHFE2.1961.4503292&amp;rft.issue=2&amp;rft.jtitle=IRE+Transactions+on+Human+Factors+in+Electronics&amp;rft.pages=3%E2%80%938&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">McCarthy, John</a> (1960). <a rel="nofollow" class="external text" href="http://www-formal.stanford.edu/jmc/recursive.html">"Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"</a>. <i><a href="Communications_of_the_ACM.html" title="Communications of the ACM">Communications of the ACM</a></i> <b>3</b> (4): 184. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F367177.367199">10.1145/367177.367199</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Recursive+Functions+of+Symbolic+Expressions+and+Their+Computation+by+Machine%2C+Part+I&amp;rft.aufirst=John&amp;rft.aulast=McCarthy&amp;rft.au=McCarthy%2C+John&amp;rft.date=1960&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww-formal.stanford.edu%2Fjmc%2Frecursive.html&amp;rft_id=info%3Adoi%2F10.1145%2F367177.367199&amp;rft.issue=4&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=184&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=3" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="Donald_Knuth.html" title="Donald Knuth">Knuth, Donald</a> (1997). "2.2.3-2.2.5". <i>Fundamental Algorithms</i> (3rd ed.). Addison-Wesley. pp.&#160;254–298. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-89683-4" title="Special:BookSources/0-201-89683-4">0-201-89683-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Fundamental+Algorithms&amp;rft.aufirst=Donald&amp;rft.au=Knuth%2C+Donald&amp;rft.aulast=Knuth&amp;rft.btitle=2.2.3-2.2.5&amp;rft.date=1997&amp;rft.edition=3rd&amp;rft.genre=bookitem&amp;rft.isbn=0-201-89683-4&amp;rft.pages=254%E2%80%93298&amp;rft.pub=Addison-Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="Allen_Newell.html" title="Allen Newell">Newell, Allen</a>; Shaw, F. C. (1957). "Programming the Logic Theory Machine". <i>Proceedings of the Western Joint Computer Conference</i>: 230–240.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Programming+the+Logic+Theory+Machine&amp;rft.aufirst=Allen&amp;rft.aulast=Newell&amp;rft.au=Newell%2C+Allen&amp;rft.date=1957&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+Western+Joint+Computer+Conference&amp;rft.pages=230%E2%80%93240&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation web">Parlante, Nick (2001). <a rel="nofollow" class="external text" href="http://cslibrary.stanford.edu/103/LinkedListBasics.pdf">"Linked list basics"</a>. Stanford University<span class="reference-accessdate">. Retrieved 2009-09-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.aufirst=Nick&amp;rft.aulast=Parlante&amp;rft.au=Parlante%2C+Nick&amp;rft.btitle=Linked+list+basics&amp;rft.date=2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcslibrary.stanford.edu%2F103%2FLinkedListBasics.pdf&amp;rft.pub=Stanford+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, Robert</a> (1998). <i>Algorithms in C</i>. Addison Wesley. pp.&#160;90–109. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-31452-5" title="Special:BookSources/0-201-31452-5">0-201-31452-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.aufirst=Robert&amp;rft.aulast=Sedgewick&amp;rft.au=Sedgewick%2C+Robert&amp;rft.btitle=Algorithms+in+C&amp;rft.date=1998&amp;rft.genre=book&amp;rft.isbn=0-201-31452-5&amp;rft.pages=90%E2%80%93109&amp;rft.pub=Addison+Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">Shaffer, Clifford A. (1998). <i>A Practical Introduction to Data Structures and Algorithm Analysis</i>. New Jersey: Prentice Hall. pp.&#160;77–102. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-660911-2" title="Special:BookSources/0-13-660911-2">0-13-660911-2</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.aufirst=Clifford+A.&amp;rft.aulast=Shaffer&amp;rft.au=Shaffer%2C+Clifford+A.&amp;rft.btitle=A+Practical+Introduction+to+Data+Structures+and+Algorithm+Analysis&amp;rft.date=1998&amp;rft.genre=book&amp;rft.isbn=0-13-660911-2&amp;rft.pages=77%E2%80%93102&amp;rft.place=New+Jersey&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="Maurice_Vincent_Wilkes.html" title="Maurice Vincent Wilkes" class="mw-redirect">Wilkes, Maurice Vincent</a> (1964). "An Experiment with a Self-compiling Compiler for a Simple List-Processing Language". <i>Annual Review in Automatic Programming</i> (Pergamon Press) <b>4</b> (1): 1. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1016%2F0066-4138(64)90013-8">10.1016/0066-4138(64)90013-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=An+Experiment+with+a+Self-compiling+Compiler+for+a+Simple+List-Processing+Language&amp;rft.aufirst=Maurice+Vincent&amp;rft.aulast=Wilkes&amp;rft.au=Wilkes%2C+Maurice+Vincent&amp;rft.date=1964&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2F0066-4138%2864%2990013-8&amp;rft.issue=1&amp;rft.jtitle=Annual+Review+in+Automatic+Programming&amp;rft.pages=1&amp;rft.pub=Pergamon+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=4" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation journal"><a href="Maurice_Vincent_Wilkes.html" title="Maurice Vincent Wilkes" class="mw-redirect">Wilkes, Maurice Vincent</a> (1964). "Lists and Why They are Useful". <i>Proceeds of the ACM National Conference, Philadelphia 1964</i> (ACM) (P–64): F1–1.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.atitle=Lists+and+Why+They+are+Useful&amp;rft.aufirst=Maurice+Vincent&amp;rft.aulast=Wilkes&amp;rft.au=Wilkes%2C+Maurice+Vincent&amp;rft.date=1964&amp;rft.genre=article&amp;rft.issue=P%E2%80%9364&amp;rft.jtitle=Proceeds+of+the+ACM+National+Conference%2C+Philadelphia+1964&amp;rft.pages=F1%E2%80%931&amp;rft.pub=ACM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Shanmugasundaram, Kulesh (2005-04-04). <a rel="nofollow" class="external text" href="http://isis.poly.edu/kulesh/stuff/src/klist/">"Linux Kernel Linked List Explained"</a><span class="reference-accessdate">. Retrieved 2009-09-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinked+list&amp;rft.aufirst=Kulesh&amp;rft.aulast=Shanmugasundaram&amp;rft.au=Shanmugasundaram%2C+Kulesh&amp;rft.btitle=Linux+Kernel+Linked+List+Explained&amp;rft.date=2005-04-04&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fisis.poly.edu%2Fkulesh%2Fstuff%2Fsrc%2Fklist%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit&amp;section=33" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:Lists" class="extiw" title="commons:Category:Lists">Lists</a></b></i>.</td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://scanftree.com/Data_Structure/Circular">Introduction to Circular Linked</a> from the Scanftree</li>
+<li><a rel="nofollow" class="external text" href="http://nist.gov/dads/HTML/linkedList.html">Description</a> from the <a href="Dictionary_of_Algorithms_and_Data_Structures.html" title="Dictionary of Algorithms and Data Structures">Dictionary of Algorithms and Data Structures</a></li>
+<li><a rel="nofollow" class="external text" href="http://cslibrary.stanford.edu/103/">Introduction to Linked Lists</a>, Stanford University Computer Science Library</li>
+<li><a rel="nofollow" class="external text" href="http://cslibrary.stanford.edu/105/">Linked List Problems</a>, Stanford University Computer Science Library</li>
+<li><a rel="nofollow" class="external text" href="http://opendatastructures.org/versions/edition-0.1g/ods-python/3_Linked_Lists.html">Open Data Structures - Chapter 3 - Linked Lists</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.google.com/patents?vid=USPAT7028023">Patent for the idea of having nodes which are in several linked lists simultaneously</a> (note that this technique was widely used for many decades before the patent was granted)</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><strong class="selflink">Linked list</strong></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1008
+CPU time usage: 1.092 seconds
+Real time usage: 1.287 seconds
+Preprocessor visited node count: 1511/1000000
+Preprocessor generated node count: 8141/1500000
+Post‐expand include size: 54561/2048000 bytes
+Template argument size: 1060/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 7/500
+Lua time usage: 0.164/10.000 seconds
+Lua memory usage: 2.88 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:18167-0!*!0!!en!4!*!math=0 and timestamp 20140325030145
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;oldid=599615288">http://en.wikipedia.org/w/index.php?title=Linked_list&amp;oldid=599615288</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Linked_lists" title="Category:Linked lists">Linked lists</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Data_structures" title="Category:Data structures">Data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2014" title="Category:Articles needing additional references from February 2014">Articles needing additional references from February 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_October_2011" title="Category:Wikipedia articles needing clarification from October 2011">Wikipedia articles needing clarification from October 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_March_2012" title="Category:Articles lacking in-text citations from March 2012">Articles lacking in-text citations from March 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_inconsistent_citation_formats" title="Category:Articles with inconsistent citation formats">Articles with inconsistent citation formats</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_different_than_on_Wikidata" title="Category:Commons category with local link different than on Wikidata">Commons category with local link different than on Wikidata</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Linked+list&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Linked+list" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Linked_list.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Linked_list"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Linked_list.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Linked_list" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Linked_list" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;oldid=599615288" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q7003418" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Linked_list&amp;id=599615288" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Linked+list">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Linked+list&amp;oldid=599615288&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Linked_list&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/قائمة_متصلة" title="قائمة متصلة – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Llista_(estructura_de_dades)" title="Llista (estructura de dades) – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Lineární_seznam" title="Lineární seznam – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Liste_(datastruktur)" title="Liste (datastruktur) – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Liste_(Datenstruktur)" title="Liste (Datenstruktur) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Lista_(informática)" title="Lista (informática) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/لیست_پیوندی" title="لیست پیوندی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Liste_chaînée" title="Liste chaînée – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/연결_리스트" title="연결 리스트 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Vezana_lista" title="Vezana lista – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Senarai_berantai" title="Senarai berantai – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="http://is.wikipedia.org/wiki/Keðjulisti" title="Keðjulisti – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Lista_concatenata" title="Lista concatenata – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/רשימה_מקושרת" title="רשימה מקושרת – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="http://lv.wikipedia.org/wiki/Saistīts_saraksts" title="Saistīts saraksts – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Tiesinis_sąrašas" title="Tiesinis sąrašas – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Láncolt_lista" title="Láncolt lista – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Senarai_berpaut" title="Senarai berpaut – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Gelinkte_lijst" title="Gelinkte lijst – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/連結リスト" title="連結リスト – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Lenket_liste" title="Lenket liste – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Lista" title="Lista – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Lista_ligada" title="Lista ligada – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Связный_список" title="Связный список – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Povezani_seznam" title="Povezani seznam – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Linkitetty_lista" title="Linkitetty lista – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Länkad_lista" title="Länkad lista – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/รายการโยง" title="รายการโยง – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Bağlı_liste" title="Bağlı liste – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Зв%27язаний_список" title="Зв'язаний список – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/链表" title="链表 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q7003418#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 14 March 2014 at 18:29.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Linked_list" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1172 in 0.223 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Linked_list by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:54:41 GMT -->
+</html>

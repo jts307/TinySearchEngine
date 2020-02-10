@@ -1,0 +1,962 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/CPU_cache.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/CPU_cache by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>CPU cache - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/CPU_cache" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="CPU_cache.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CPU_cache","wgTitle":"CPU cache","wgCurRevisionId":600762186,"wgRevisionId":600762186,"wgArticleId":849181,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with dead external links","Articles with dead external links from July 2013","Articles to be merged from July 2013","All articles to be merged","All articles with unsourced statements","Articles with unsourced statements from March 2008","All accuracy disputes","Articles with disputed statements from December 2010","Central processing unit","Computer memory","Cache (computing)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CPU_cache","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-gb"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q352090"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-CPU_cache skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">CPU cache</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">"Cache memory" redirects here. For the general use in computing, see <a href="Cache_(computing).html" title="Cache (computing)">Cache (computing)</a>.</div>
+<table class="metadata plainlinks ambox ambox-move" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/50px-Mergefrom.svg.png" width="50" height="20" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/75px-Mergefrom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/100px-Mergefrom.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">It has been suggested that <i><a href="http://en.wikipedia.org/wiki/Tag_RAM" title="Tag RAM">Tag RAM</a></i> be <a href="http://en.wikipedia.org/wiki/Wikipedia:Merging" title="Wikipedia:Merging">merged</a> into this article. (<a href="http://en.wikipedia.org/wiki/Talk:CPU_cache#Proposed_merge_with_Tag_RAM" title="Talk:CPU cache">Discuss</a>) <small><i>Proposed since July 2013.</i></small></span></td>
+</tr>
+</table>
+<p>A <b>CPU cache</b> is a <a href="Cache_(computing).html" title="Cache (computing)">cache</a> used by the <a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">central processing unit</a> (CPU) of a <a href="Computer.html" title="Computer">computer</a> to reduce the average time to access <a href="Computer_storage.html" title="Computer storage" class="mw-redirect">memory</a>. The cache is a smaller, faster memory which stores copies of the data from frequently used <a href="http://en.wikipedia.org/wiki/Main_memory" title="Main memory" class="mw-redirect">main memory</a> locations. Most CPUs have different independent caches, including instruction and data caches, where the data cache is usually organized as a hierarchy of more cache levels (L1, L2 etc.)</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overviews"><span class="tocnumber">1</span> <span class="toctext">Overviews</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Cache_entries"><span class="tocnumber">1.1</span> <span class="toctext">Cache entries</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Cache_performance"><span class="tocnumber">1.2</span> <span class="toctext">Cache performance</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Replacement_policies"><span class="tocnumber">1.2.1</span> <span class="toctext">Replacement policies</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Write_policies"><span class="tocnumber">1.2.2</span> <span class="toctext">Write policies</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#CPU_stalls"><span class="tocnumber">1.2.3</span> <span class="toctext">CPU stalls</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Cache_entry_structure"><span class="tocnumber">2</span> <span class="toctext">Cache entry structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Example"><span class="tocnumber">2.1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Flag_bits"><span class="tocnumber">2.2</span> <span class="toctext">Flag bits</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Associativity"><span class="tocnumber">3</span> <span class="toctext">Associativity</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Direct-mapped_cache"><span class="tocnumber">3.1</span> <span class="toctext">Direct-mapped cache</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Two-way_set_associative_cache"><span class="tocnumber">3.2</span> <span class="toctext">Two-way set associative cache</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Speculative_execution"><span class="tocnumber">3.3</span> <span class="toctext">Speculative execution</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Two-way_skewed_associative_cache"><span class="tocnumber">3.4</span> <span class="toctext">Two-way skewed associative cache</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Pseudo-associative_cache"><span class="tocnumber">3.5</span> <span class="toctext">Pseudo-associative cache</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Cache_miss"><span class="tocnumber">4</span> <span class="toctext">Cache miss</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Address_translation"><span class="tocnumber">5</span> <span class="toctext">Address translation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Homonym_and_synonym_problems"><span class="tocnumber">5.1</span> <span class="toctext">Homonym and synonym problems</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Virtual_tags_and_vhints"><span class="tocnumber">5.2</span> <span class="toctext">Virtual tags and vhints</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Page_coloring"><span class="tocnumber">5.3</span> <span class="toctext">Page coloring</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Cache_hierarchy_in_a_modern_processor"><span class="tocnumber">6</span> <span class="toctext"> Cache hierarchy in a modern processor</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Specialized_caches"><span class="tocnumber">6.1</span> <span class="toctext">Specialized caches</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Victim_cache"><span class="tocnumber">6.1.1</span> <span class="toctext">Victim cache</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Trace_cache"><span class="tocnumber">6.1.2</span> <span class="toctext">Trace cache</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Micro-operation_.28uop.29_cache"><span class="tocnumber">6.1.3</span> <span class="toctext">Micro-operation (uop) cache</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-26"><a href="#Multi-level_caches"><span class="tocnumber">6.2</span> <span class="toctext">Multi-level caches</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Multi-core_chips"><span class="tocnumber">6.2.1</span> <span class="toctext">Multi-core chips</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Separate_versus_unified"><span class="tocnumber">6.2.2</span> <span class="toctext">Separate versus unified</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Exclusive_versus_inclusive"><span class="tocnumber">6.2.3</span> <span class="toctext">Exclusive versus inclusive</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="#Example:_the_K8"><span class="tocnumber">6.3</span> <span class="toctext">Example: the K8</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#More_hierarchies"><span class="tocnumber">6.4</span> <span class="toctext">More hierarchies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Implementation"><span class="tocnumber">7</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="#History"><span class="tocnumber">7.1</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#First_TLB_implementations"><span class="tocnumber">7.1.1</span> <span class="toctext">First TLB implementations</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#First_data_cache"><span class="tocnumber">7.1.2</span> <span class="toctext">First data cache</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#In_x86_microprocessors"><span class="tocnumber">7.1.3</span> <span class="toctext">In x86 microprocessors</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#Current_research"><span class="tocnumber">7.1.4</span> <span class="toctext">Current research</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-38"><a href="#Multi-ported_cache"><span class="tocnumber">7.2</span> <span class="toctext">Multi-ported cache</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-39"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="#Notes"><span class="tocnumber">9</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overviews">Overviews</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=1" title="Edit section: Overviews">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When the processor needs to read from or write to a location in main memory, it first checks whether a copy of that data is in the cache. If so, the processor immediately reads from or writes to the cache, which is much faster than reading from or writing to main memory.</p>
+<p>Most modern desktop and server CPUs have at least three independent caches: an <b>instruction cache</b> to speed up executable instruction fetch, a <b>data cache</b> to speed up data fetch and store, and a <a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">translation lookaside buffer</a> (TLB) used to speed up virtual-to-physical address translation for both executable instructions and data. The data cache is usually organized as a hierarchy of more cache levels (L1, L2, etc.; see <a href="#Multi-level_caches">Multi-level caches</a>).</p>
+<h3><span class="mw-headline" id="Cache_entries"><span id="cache_lines"></span>Cache entries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=2" title="Edit section: Cache entries">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Data is transferred between memory and cache in blocks of fixed size, called <i>cache lines</i>. When a cache line is copied from memory into the cache, a cache entry is created. The cache entry will include the copied data as well as the requested memory location (now called a tag).</p>
+<p>When the processor needs to read or write a location in main memory, it first checks for a corresponding entry in the cache. The cache checks for the contents of the requested memory location in any cache lines that might contain that address. If the processor finds that the memory location is in the cache, a cache hit has occurred. However, if the processor does not find the memory location in the cache, a cache miss has occurred. In the case of:</p>
+<ul>
+<li>a cache hit, the processor immediately reads or writes the data in the cache line</li>
+<li>a cache miss, the cache allocates a new entry, and copies in data from main memory; then, the request is fulfilled from the contents of the cache.</li>
+</ul>
+<h3><span class="mw-headline" id="Cache_performance">Cache performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=3" title="Edit section: Cache performance">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The proportion of accesses that result in a cache hit is known as the hit rate, and can be a measure of the effectiveness of the cache for a given program or algorithm.</p>
+<p>Read misses delay execution because they require data to be transferred from memory much more slowly than the cache itself. Write misses may occur without such penalty, since the processor can continue execution while data is copied to main memory in the background.</p>
+<h4><span class="mw-headline" id="Replacement_policies"><span id="EVICTION"></span>Replacement policies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=4" title="Edit section: Replacement policies">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">Cache algorithms</a></div>
+<p>In order to make room for the new entry on a cache miss, the cache may have to evict one of the existing entries. The heuristic that it uses to choose the entry to evict is called the replacement policy. The fundamental problem with any replacement policy is that it must predict which existing cache entry is least likely to be used in the future. Predicting the future is difficult, so there is no perfect way to choose among the variety of replacement policies available.</p>
+<p>One popular replacement policy, least-recently used (LRU), replaces the least recently accessed entry.</p>
+<p>Marking some memory ranges as non-cacheable can improve performance, by avoiding caching of memory regions that are rarely re-accessed. This avoids the overhead of loading something into the cache, without having any reuse.</p>
+<ul>
+<li>Cache entries may also be disabled or locked depending on the context.</li>
+</ul>
+<h4><span class="mw-headline" id="Write_policies">Write policies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=5" title="Edit section: Write policies">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink relarticle mainarticle">Main article: <a href="Cache_(computing).html#WRITEPOLICIES" title="Cache (computing)">Cache: Writing policies</a></div>
+<p>If data is written to the cache, at some point it must also be written to main memory. The timing of this write is known as the write policy.</p>
+<ul>
+<li>In a <a href="http://en.wikipedia.org/wiki/Write-through" title="Write-through" class="mw-redirect">write-through</a> cache, every write to the cache causes a write to main memory.</li>
+<li>Alternatively, in a <a href="http://en.wikipedia.org/wiki/Write-back" title="Write-back" class="mw-redirect">write-back</a> or copy-back cache, writes are not immediately mirrored to the main memory. Instead, the cache tracks which locations have been written over (these locations are marked <a href="http://en.wikipedia.org/wiki/Dirty_bit" title="Dirty bit">dirty</a>). The data in these locations are written back to the main memory only when that data is evicted from the cache. For this reason, a read miss in a write-back cache may sometimes require two memory accesses to service: one to first write the dirty location to memory and then another to read the new location from memory.</li>
+</ul>
+<p>There are intermediate policies as well. The cache may be write-through, but the writes may be held in a store data queue temporarily, usually so that multiple stores can be processed together (which can reduce bus turnarounds and improve bus utilization).</p>
+<p>The data in main memory being cached may be changed by other entities (e.g. peripherals using <a href="http://en.wikipedia.org/wiki/Direct_memory_access" title="Direct memory access">direct memory access</a> or <a href="http://en.wikipedia.org/wiki/Multi-core_processor" title="Multi-core processor">multi-core processor</a>), in which case the copy in the cache may become out-of-date or stale. Alternatively, when a CPU in a <a href="http://en.wikipedia.org/wiki/Multiprocessor" title="Multiprocessor" class="mw-redirect">multiprocessor</a> system updates data in the cache, copies of data in caches associated with other CPUs will become stale. Communication protocols between the cache managers which keep the data consistent are known as <a href="http://en.wikipedia.org/wiki/Cache_coherence" title="Cache coherence">cache coherence</a> protocols.</p>
+<h4><span class="mw-headline" id="CPU_stalls">CPU stalls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=6" title="Edit section: CPU stalls">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The time taken to fetch one cache line from memory (read latency) matters because the CPU will run out of things to do while waiting for the cache line. When a CPU reaches this state, it is called a stall.</p>
+<p>As CPUs become faster, stalls due to cache misses displace more potential computation; modern CPUs can execute hundreds of instructions in the time taken to fetch a single cache line from main memory. Various techniques have been employed to keep the CPU busy during this time.</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Out-of-order_execution" title="Out-of-order execution">Out-of-order CPUs</a> (the Pentium Pro and later Intel designs, for example) attempt to execute independent instructions after the instruction that is waiting for the cache miss data.</li>
+<li>Another technology, used by many processors, is <a href="http://en.wikipedia.org/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">simultaneous multithreading</a> (SMT), or — in Intel's terminology — <a href="http://en.wikipedia.org/wiki/Hyper-threading" title="Hyper-threading">hyper-threading</a> (HT), which allows an alternate thread to use the CPU core while a first thread waits for data to come from main memory.</li>
+</ul>
+<h2><span class="mw-headline" id="Cache_entry_structure">Cache entry structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=7" title="Edit section: Cache entry structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cache row entries usually have the following structure:</p>
+<table style="width:30%; text-align:center" border="1">
+<tr>
+<td>tag</td>
+<td>data block</td>
+<td>flag bits</td>
+</tr>
+</table>
+<p>The <i>data block</i> (cache line) contains the actual data fetched from the main memory. The <i>tag</i> contains (part of) the address of the actual data fetched from the main memory. The flag bits are discussed below.</p>
+<p>The "size" of the cache is the amount of main memory data it can hold. This size can be calculated as the number of bytes stored in each data block times the number of blocks stored in the cache. (The number of tag and flag bits is irrelevant to this calculation, although it does affect the physical area of a cache.)</p>
+<p>An effective memory address is split (<a href="http://en.wikipedia.org/wiki/Most_significant_bit" title="Most significant bit">MSB</a> to <a href="http://en.wikipedia.org/wiki/Least_significant_bit" title="Least significant bit">LSB</a>) into the tag, the index and the block offset.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<table style="width:30%; text-align:center" border="1">
+<tr>
+<td>tag</td>
+<td>index</td>
+<td>block offset</td>
+</tr>
+</table>
+<p>The index describes which cache row (which cache line) that the data has been put in. The index length is <img class="tex" alt="\lceil \log_2(r) \rceil" src="http://upload.wikimedia.org/math/1/f/d/1fdfe44d4276dc9510cb314fd317c44d.png" /> bits for <span class="texhtml mvar" style="font-style:italic;">r</span> cache rows. The block offset specifies the desired data within the stored data block within the cache row. Typically the effective address is in bytes, so the block offset length is <img class="tex" alt="\lceil \log_2(b) \rceil" src="http://upload.wikimedia.org/math/7/a/9/7a96b45388644a667e25c2de59d7f811.png" /> bits, where <span class="texhtml mvar" style="font-style:italic;">b</span> is the number of bytes per data block. The tag contains the most significant bits of the address, which are checked against the current row (the row has been retrieved by index) to see if it is the one we need or another, irrelevant memory location that happened to have the same index bits as the one we want. The tag length in bits is <code>address_length - index_length - block_offset_length</code>.</p>
+<p>Some authors refer to the block offset as simply the "offset"<sup id="cite_ref-ccs.neu.edu_3-0" class="reference"><a href="#cite_note-ccs.neu.edu-3"><span>[</span>3<span>]</span></a></sup> or the "displacement".<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=8" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The original <a href="http://en.wikipedia.org/wiki/Pentium_4" title="Pentium 4">Pentium 4</a> processor had a four-way set associative L1 data cache of 8&#160;<a href="http://en.wikipedia.org/wiki/Kibibyte" title="Kibibyte">KB</a> in size, with 64-byte cache blocks. Hence, there are 8&#160;KB&#160;/&#160;64&#160;=&#160;128 cache blocks. This implies 128&#160;/&#160;4&#160;=&#160;32 sets (and hence 2<sup>5</sup>&#160;=&#160;32 different indices). There are 2<sup>6</sup>&#160;=&#160;64 possible offsets. Since the CPU address is 32 bits wide, this implies 21&#160;+&#160;5&#160;+&#160;6&#160;=&#160;32, and hence 21 bits for the tag field.</p>
+<p>The original Pentium&#160;4 processor also had an eight-way set associative L2 integrated cache 256&#160;KB in size, with 128-byte cache blocks. This implies 17&#160;+&#160;8&#160;+&#160;7&#160;=&#160;32, and hence 17 bits for the tag field.<sup id="cite_ref-ccs.neu.edu_3-1" class="reference"><a href="#cite_note-ccs.neu.edu-3"><span>[</span>3<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Flag_bits">Flag bits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=9" title="Edit section: Flag bits">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An instruction cache requires only one flag bit per cache row entry: a valid bit. The valid bit indicates whether or not a cache block has been loaded with valid data.</p>
+<p>On power-up, the hardware sets all the valid bits in all the caches to "invalid". Some systems also set a valid bit to "invalid" at other times—such as when multi-master <a href="http://en.wikipedia.org/wiki/Bus_snooping" title="Bus snooping" class="mw-redirect">bus snooping</a> hardware in the cache of one processor hears an address broadcast from some other processor, and realizes that certain data blocks in the local cache are now stale and should be marked invalid.</p>
+<p>A data cache typically requires two flag bits per cache row entry: a valid bit and also a <a href="http://en.wikipedia.org/wiki/Dirty_bit" title="Dirty bit">dirty bit</a>. The dirty bit indicates whether that block has been unchanged since it was read from main memory – "clean" – or whether the processor has written data to that block (and the new value has not yet made it all the way to main memory) – "dirty".</p>
+<h2><span class="mw-headline" id="Associativity">Associativity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=10" title="Edit section: Associativity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:452px;"><a href="http://en.wikipedia.org/wiki/File:Cache,associative-fill-both.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cache%2Cassociative-fill-both.png/450px-Cache%2Cassociative-fill-both.png" width="450" height="223" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/9/93/Cache%2Cassociative-fill-both.png 1.5x, //upload.wikimedia.org/wikipedia/commons/9/93/Cache%2Cassociative-fill-both.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Cache,associative-fill-both.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Which memory locations can be cached by which cache locations</div>
+</div>
+</div>
+<p>The replacement policy decides where in the cache a copy of a particular entry of main memory will go. If the replacement policy is free to choose any entry in the cache to hold the copy, the cache is called <i>fully associative</i>. At the other extreme, if each entry in main memory can go in just one place in the cache, the cache is <i>direct mapped</i>. Many caches implement a compromise in which each entry in main memory can go to any one of N places in the cache, and are described as N-way set associative.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> For example, the level-1 data cache in an <a href="http://en.wikipedia.org/wiki/AMD_Athlon" title="AMD Athlon" class="mw-redirect">AMD Athlon</a> is two-way set associative, which means that any particular location in main memory can be cached in either of two locations in the level-1 data cache.</p>
+<p>Associativity is a <a href="http://en.wikipedia.org/wiki/Trade-off" title="Trade-off">trade-off</a>. If there are ten places to which the replacement policy could have mapped a memory location, then to check if that location is in the cache, ten cache entries must be searched. Checking more places takes more power, chip area, and potentially time. On the other hand, caches with more associativity suffer fewer misses (see conflict misses, below), so that the CPU wastes less time reading from the slow main memory. The rule of thumb is that doubling the associativity, from direct mapped to two-way, or from two-way to four-way, has about the same effect on hit rate as doubling the cache size. Associativity increases beyond four-way have much less effect on the hit rate,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> and are generally done for other reasons (see virtual aliasing, below).</p>
+<p>In order of worse but simple to better but complex:</p>
+<ul>
+<li>direct mapped cache&#160;–  the best (fastest) hit times, and so the best tradeoff for "large" caches</li>
+<li>two-way set associative cache</li>
+<li>two-way skewed associative cache&#160;–  in 1993, this was the best tradeoff for caches whose sizes were in the 4–8&#160;KB range<sup id="cite_ref-Seznec_8-0" class="reference"><a href="#cite_note-Seznec-8"><span>[</span>8<span>]</span></a></sup></li>
+<li>four-way set associative cache</li>
+<li>fully associative cache&#160;–  the best (lowest) miss rates, and so the best tradeoff when the miss penalty is very high.</li>
+</ul>
+<h3><span class="mw-headline" id="Direct-mapped_cache">Direct-mapped cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=11" title="Edit section: Direct-mapped cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Here each location in main memory can only go in one entry in the cache. It does not have a replacement policy as such, since there is no choice of which cache entry's contents to evict. This means that if two locations map to the same entry, they may continually knock each other out. Although simpler, a direct-mapped cache needs to be much larger than an associative one to give comparable performance, and is more unpredictable. Let <span class="texhtml mvar" style="font-style:italic;">x</span> be block number in cache, <span class="texhtml mvar" style="font-style:italic;">y</span> be block number of memory, and <span class="texhtml mvar" style="font-style:italic;">n</span> be number of blocks in cache, then mapping is done with the help of the equation <span class="texhtml mvar" style="font-style:italic;">x = y mod n</span>.</p>
+<h3><span class="mw-headline" id="Two-way_set_associative_cache">Two-way set associative cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=12" title="Edit section: Two-way set associative cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If each location in main memory can be cached in either of two locations in the cache, one logical question is: <i>which one of the two?</i> The simplest and most commonly used scheme, shown in the right-hand diagram above, is to use the least significant bits of the memory location's index as the index for the cache memory, and to have two entries for each index. One benefit of this scheme is that the tags stored in the cache do not have to include that part of the main memory address which is implied by the cache memory's index. Since the cache tags have fewer bits, they take less area on the microprocessor chip and can be read and compared faster. Also <a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">LRU</a> is especially simple since only one bit needs to be stored for each pair.</p>
+<h3><span class="mw-headline" id="Speculative_execution">Speculative execution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=13" title="Edit section: Speculative execution">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One of the advantages of a direct mapped cache is that it allows simple and fast <a href="http://en.wikipedia.org/wiki/Speculative_execution" title="Speculative execution">speculation</a>. Once the address has been computed, the one cache index which might have a copy of that location in memory is known. That cache entry can be read, and the processor can continue to work with that data before it finishes checking that the tag actually matches the requested address.</p>
+<p>The idea of having the processor use the cached data before the tag match completes can be applied to associative caches as well. A subset of the tag, called a <i>hint</i>, can be used to pick just one of the possible cache entries mapping to the requested address. The entry selected by the hint can then be used in parallel with checking the full tag. The hint technique works best when used in the context of address translation, as explained below.</p>
+<h3><span class="mw-headline" id="Two-way_skewed_associative_cache">Two-way skewed associative cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=14" title="Edit section: Two-way skewed associative cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Other schemes have been suggested, such as the <i>skewed cache</i>,<sup id="cite_ref-Seznec_8-1" class="reference"><a href="#cite_note-Seznec-8"><span>[</span>8<span>]</span></a></sup> where the index for way 0 is direct, as above, but the index for way 1 is formed with a <a href="Hash_function.html" title="Hash function">hash function</a>. A good hash function has the property that addresses which conflict with the direct mapping tend not to conflict when mapped with the hash function, and so it is less likely that a program will suffer from an unexpectedly large number of conflict misses due to a pathological access pattern. The downside is extra latency from computing the hash function.<sup id="cite_ref-CK_9-0" class="reference"><a href="#cite_note-CK-9"><span>[</span>9<span>]</span></a></sup> Additionally, when it comes time to load a new line and evict an old line, it may be difficult to determine which existing line was least recently used, because the new line conflicts with data at different indexes in each way; <a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">LRU</a> tracking for non-skewed caches is usually done on a per-set basis. Nevertheless, skewed-associative caches have major advantages over conventional set-associative ones.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Pseudo-associative_cache">Pseudo-associative cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=15" title="Edit section: Pseudo-associative cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A true set-associative cache tests all the possible ways simultaneously, using something like a <a href="http://en.wikipedia.org/wiki/Content_addressable_memory" title="Content addressable memory" class="mw-redirect">content addressable memory</a>. A pseudo-associative cache tests each possible way one at a time. A hash-rehash cache and a column-associative cache are examples of a pseudo-associative cache.</p>
+<p>In the common case of finding a hit in the first way tested, a pseudo-associative cache is as fast as a direct-mapped cache, but it has a much lower conflict miss rate than a direct-mapped cache, closer to the miss rate of a fully associative cache. <sup id="cite_ref-CK_9-1" class="reference"><a href="#cite_note-CK-9"><span>[</span>9<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Cache_miss"><span id="CACHE-MISS"></span>Cache miss</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=16" title="Edit section: Cache miss">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A cache miss refers to a failed attempt to read or write a piece of data in the cache, which results in a main memory access with much longer latency. There are three kinds of cache misses: instruction read miss, data read miss, and data write miss.</p>
+<p>A <i>cache read miss</i> from an <i>instruction</i> cache generally causes the most delay, because the processor, or at least the <a href="http://en.wikipedia.org/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">thread of execution</a>, has to wait (stall) until the instruction is fetched from main memory.</p>
+<p>A <i>cache read miss</i> from a <i>data</i> cache usually causes less delay, because instructions not dependent on the cache read can be issued and continue execution until the data is returned from main memory, and the dependent instructions can resume execution.</p>
+<p>A <i>cache write miss</i> to a <i>data</i> cache generally causes the least delay, because the write can be queued and there are few limitations on the execution of subsequent instructions. The processor can continue until the queue is full.</p>
+<p>In order to lower cache miss rate, a great deal of analysis has been done on cache behavior in an attempt to find the best combination of size, associativity, block size, and so on. Sequences of memory references performed by benchmark programs are saved as <i>address traces</i>. Subsequent analyses simulate many different possible cache designs on these long address traces. Making sense of how the many variables affect the cache hit rate can be quite confusing. One significant contribution to this analysis was made by <a rel="nofollow" class="external text" href="http://www.cs.wisc.edu/~markhill">Mark Hill</a>, who separated misses into three categories (known as the Three Cs):</p>
+<ul>
+<li><i>Compulsory misses</i> are those misses caused by the first reference to a location in memory. Cache size and associativity make no difference to the number of compulsory misses. Prefetching can help here, as can larger cache block sizes (which are a form of prefetching). Compulsory misses are sometimes referred to as <i>cold misses</i>.</li>
+</ul>
+<ul>
+<li><i>Capacity misses</i> are those misses that occur regardless of associativity or block size, solely due to the finite size of the cache. The curve of capacity miss rate versus cache size gives some measure of the temporal locality of a particular reference stream. Note that there is no useful notion of a cache being "full" or "empty" or "near capacity": CPU caches almost always have nearly every line filled with a copy of some line in main memory, and nearly every allocation of a new line requires the eviction of an old line.</li>
+</ul>
+<ul>
+<li><i>Conflict misses</i> are those misses that could have been avoided, had the cache not evicted an entry earlier. Conflict misses can be further broken down into <i>mapping misses</i>, that are unavoidable given a particular amount of associativity, and <i>replacement misses</i>, which are due to the particular victim choice of the replacement policy.</li>
+</ul>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:Cache,missrate.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Cache%2Cmissrate.png/400px-Cache%2Cmissrate.png" width="400" height="254" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/0/07/Cache%2Cmissrate.png 1.5x, //upload.wikimedia.org/wikipedia/commons/0/07/Cache%2Cmissrate.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Cache,missrate.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Miss rate versus cache size on the Integer portion of SPEC CPU2000</div>
+</div>
+</div>
+<p>The graph to the right summarizes the cache performance seen on the Integer portion of the SPEC CPU2000 benchmarks, as collected by Hill and Cantin.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> These <a href="http://en.wikipedia.org/wiki/Benchmark_(computing)" title="Benchmark (computing)">benchmarks</a> are intended to represent the kind of workload that an engineering workstation computer might see on any given day. The reader should keep in mind that finding benchmarks which are even usefully representative of many programs has been very difficult, and there will always be important programs with very different behavior than what is shown here.</p>
+<p>We can see the different effects of the three Cs in this graph.</p>
+<p>At the far right, with cache size labelled "Inf", we have the compulsory misses. If we wish to improve a machine's performance on SpecInt2000, increasing the cache size beyond 1&#160;<a href="http://en.wikipedia.org/wiki/Mebibyte" title="Mebibyte">MB</a> is essentially futile. That is the insight given by the compulsory misses.</p>
+<p>The fully associative cache miss rate here is almost representative of the capacity miss rate. The difference is that the data presented is from simulations assuming an <a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">LRU</a> replacement policy. Showing the capacity miss rate would require a <a href="http://en.wikipedia.org/wiki/Page_replacement_algorithm#The_theoretically_optimal_page_replacement_algorithm" title="Page replacement algorithm">perfect replacement policy</a>, i.e. an oracle that looks into the future to find a cache entry which is actually not going to be hit.</p>
+<p>Note that our approximation of the capacity miss rate falls steeply between 32&#160;KB and 64&#160;KB. This indicates that the benchmark has a <i><a href="http://en.wikipedia.org/wiki/Working_set" title="Working set">working set</a></i> of roughly 64&#160;KB. A CPU cache designer examining this benchmark will have a strong incentive to set the cache size to 64&#160;KB rather than 32&#160;KB. Note that, on this benchmark, no amount of associativity can make a 32&#160;KB cache perform as well as a 64&#160;KB 4-way, or even a direct-mapped 128&#160;KB cache.</p>
+<p>Finally, note that between 64&#160;KB and 1&#160;MB there is a large difference between direct-mapped and fully associative caches. This difference is the conflict miss rate. The insight from looking at conflict miss rates is that secondary caches benefit a great deal from high associativity.</p>
+<p>This benefit was well known in the late 1980s and early 1990s, when CPU designers could not fit large caches on-chip, and could not get sufficient bandwidth to either the cache data memory or cache tag memory to implement high associativity in off-chip caches. Desperate hacks were attempted: the <a href="http://en.wikipedia.org/wiki/MIPS_architecture" title="MIPS architecture">MIPS</a> <a href="http://en.wikipedia.org/wiki/R8000" title="R8000">R8000</a> used expensive off-chip dedicated tag <a href="http://en.wikipedia.org/wiki/Static_random_access_memory" title="Static random access memory" class="mw-redirect">SRAMs</a>, which had embedded tag comparators and large drivers on the match lines, in order to implement a 4&#160;MB four-way associative cache. The MIPS <a href="http://en.wikipedia.org/wiki/R10000" title="R10000">R10000</a> used ordinary SRAM chips for the tags. Tag access for both ways took two cycles. To reduce latency, the R10000 would guess which way of the cache would hit on each access.</p>
+<h2><span class="mw-headline" id="Address_translation"><span id="ADDRTRANS"></span>Address translation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=17" title="Edit section: Address translation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most general purpose CPUs implement some form of <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a>. To summarize, either each program running on the machine sees its own simplified <a href="http://en.wikipedia.org/wiki/Address_space" title="Address space">address space</a>, which contains code and data for that program only, or all programs run in a common virtual address space. A program uses the virtual address space in which it runs without regard for where particular locations in that address space exist in physical memory.</p>
+<p>Virtual memory requires the processor to translate virtual addresses generated by the program into physical addresses in main memory. The portion of the processor that does this translation is known as the <a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">memory management unit</a> (MMU). The fast path through the MMU can perform those translations stored in the <a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">translation lookaside buffer</a> (TLB), which is a cache of mappings from the operating system's <a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">page table</a>, segment table or both.</p>
+<p>For the purposes of the present discussion, there are three important features of address translation:</p>
+<ul>
+<li><i>Latency:</i> The physical address is available from the MMU some time, perhaps a few cycles, after the virtual address is available from the address generator.</li>
+</ul>
+<ul>
+<li><i>Aliasing:</i> Multiple virtual addresses can map to a single physical address. Most processors guarantee that all updates to that single physical address will happen in program order. To deliver on that guarantee, the processor must ensure that only one copy of a physical address resides in the cache at any given time.</li>
+</ul>
+<ul>
+<li><i>Granularity:</i> The virtual address space is broken up into pages. For instance, a 4&#160;<a href="http://en.wikipedia.org/wiki/Gibibyte" title="Gibibyte">GB</a> virtual address space might be cut up into 1048576 pages of 4&#160;KB size, each of which can be independently mapped. There may be multiple page sizes supported; see <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> for elaboration.</li>
+</ul>
+<p>A historical note: some early virtual memory systems were very slow, because they required an access to the page table (held in main memory) before every programmed access to main memory.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>NB 1<span>]</span></a></sup> With no caches, this effectively cut the speed of the machine in half. The first hardware cache used in a computer system was not actually a data or instruction cache, but rather a TLB.</p>
+<p>Caches can be divided into 4 types, based on whether the index or tag correspond to physical or virtual addresses:</p>
+<ul>
+<li><i>Physically indexed, physically tagged</i> (PIPT) caches use the physical address for both the index and the tag. While this is simple and avoids problems with aliasing, it is also slow, as the physical address must be looked up (which could involve a TLB miss and access to main memory) before that address can be looked up in the cache.</li>
+</ul>
+<ul>
+<li><i>Virtually indexed, virtually tagged</i> (VIVT) caches use the virtual address for both the index and the tag. This caching scheme can result in much faster lookups, since the MMU does not need to be consulted first to determine the physical address for a given virtual address. However, VIVT suffers from aliasing problems, where several different virtual addresses may refer to the same physical address. The result is that such addresses would be cached separately despite referring to the same memory, causing coherency problems. Another problem is homonyms, where the same virtual address maps to several different physical addresses. It is not possible to distinguish these mappings by only looking at the virtual index, though potential solutions include: flushing the cache after a <a href="Context_switch.html" title="Context switch">context switch</a>, forcing address spaces to be non-overlapping, tagging the virtual address with an address space ID (ASID), or using physical tags. Additionally, there is a problem that virtual-to-physical mappings can change, which would require flushing cache lines, as the VAs would no longer be valid.</li>
+</ul>
+<ul>
+<li><i>Virtually indexed, physically tagged</i> (VIPT) caches use the virtual address for the index and the physical address in the tag. The advantage over PIPT is lower latency, as the cache line can be looked up in parallel with the TLB translation, however the tag cannot be compared until the physical address is available. The advantage over VIVT is that since the tag has the physical address, the cache can detect homonyms. VIPT requires more tag bits, as the index bits no longer represent the same address.</li>
+</ul>
+<ul>
+<li><i>Physically indexed, virtually tagged</i> (PIVT) caches are only theoretical as they would basically be useless. A cache with this structure would be just as slow as PIPT, suffering from aliasing problems at the same time like VIVT.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>14<span>]</span></a></sup></li>
+</ul>
+<p>The speed of this recurrence (the <i>load latency</i>) is crucial to CPU performance, and so most modern level-1 caches are virtually indexed, which at least allows the MMU's TLB lookup to proceed in parallel with fetching the data from the cache RAM.</p>
+<p>But virtual indexing is not the best choice for all cache levels. The cost of dealing with virtual aliases grows with cache size, and as a result most level-2 and larger caches are physically indexed.</p>
+<p>Caches have historically used both virtual and physical addresses for the cache tags, although virtual tagging is now uncommon. If the TLB lookup can finish before the cache RAM lookup, then the physical address is available in time for tag compare, and there is no need for virtual tagging. Large caches, then, tend to be physically tagged, and only small, very low latency caches are virtually tagged. In recent general-purpose CPUs, virtual tagging has been superseded by vhints, as described below.</p>
+<h3><span class="mw-headline" id="Homonym_and_synonym_problems">Homonym and synonym problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=18" title="Edit section: Homonym and synonym problems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The cache that relies on the virtual indexing and tagging becomes inconsistent after the same virtual address is mapped into different physical addresses (<a href="http://en.wikipedia.org/wiki/Homonym" title="Homonym">homonym</a>). This can be solved by using physical address for tagging or by storing the address space id in the cache line. However the latter of these two approaches does not help against the <a href="http://en.wikipedia.org/wiki/Synonym" title="Synonym">synonym</a> problem, where several cache lines end up storing data for the same physical address. Writing to such location may update only one location in the cache, leaving others with inconsistent data. This problem might be solved by using non overlapping memory layouts for different address spaces or otherwise the cache (or part of it) must be flushed when the mapping changes.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>15<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Virtual_tags_and_vhints">Virtual tags and vhints</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=19" title="Edit section: Virtual tags and vhints">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The great advantage of virtual tags is that, for associative caches, they allow the tag match to proceed before the virtual to physical translation is done. However,</p>
+<ul>
+<li>coherence probes and evictions present a physical address for action. The hardware must have some means of converting the physical addresses into a cache index, generally by storing physical tags as well as virtual tags. For comparison, a physically tagged cache does not need to keep virtual tags, which is simpler.</li>
+</ul>
+<ul>
+<li>When a virtual to physical mapping is deleted from the TLB, cache entries with those virtual addresses will have to be flushed somehow. Alternatively, if cache entries are allowed on pages not mapped by the TLB, then those entries will have to be flushed when the access rights on those pages are changed in the page table.</li>
+</ul>
+<p>It is also possible for the operating system to ensure that no virtual aliases are simultaneously resident in the cache. The operating system makes this guarantee by enforcing page coloring, which is described below. Some early RISC processors (SPARC, RS/6000) took this approach. It has not been used recently, as the hardware cost of detecting and evicting virtual aliases has fallen and the software complexity and performance penalty of perfect page coloring has risen.</p>
+<p>It can be useful to distinguish the two functions of tags in an associative cache: they are used to determine which way of the entry set to select, and they are used to determine if the cache hit or missed. The second function must always be correct, but it is permissible for the first function to guess, and get the wrong answer occasionally.</p>
+<p>Some processors (e.g. early SPARCs) have caches with both virtual and physical tags. The virtual tags are used for way selection, and the physical tags are used for determining hit or miss. This kind of cache enjoys the latency advantage of a virtually tagged cache, and the simple software interface of a physically tagged cache. It bears the added cost of duplicated tags, however. Also, during miss processing, the alternate ways of the cache line indexed have to be probed for virtual aliases and any matches evicted.</p>
+<p>The extra area (and some latency) can be mitigated by keeping <i>virtual hints</i> with each cache entry instead of virtual tags. These hints are a subset or hash of the virtual tag, and are used for selecting the way of the cache from which to get data and a physical tag. Like a virtually tagged cache, there may be a virtual hint match but physical tag mismatch, in which case the cache entry with the matching hint must be evicted so that cache accesses after the cache fill at this address will have just one hint match. Since virtual hints have fewer bits than virtual tags distinguishing them from one another, a virtually hinted cache suffers more conflict misses than a virtually tagged cache.</p>
+<p>Perhaps the ultimate reduction of virtual hints can be found in the Pentium 4 (Willamette and Northwood cores). In these processors the virtual hint is effectively 2 bits, and the cache is 4-way set associative. Effectively, the hardware maintains a simple permutation from virtual address to cache index, so that no <a href="http://en.wikipedia.org/wiki/Content-addressable_memory" title="Content-addressable memory">content-addressable memory</a> (CAM) is necessary to select the right one of the four ways fetched.</p>
+<h3><span class="mw-headline" id="Page_coloring">Page coloring</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=20" title="Edit section: Page coloring">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Cache_coloring" title="Cache coloring">Cache coloring</a></div>
+<p>Large physically indexed caches (usually secondary caches) run into a problem: the operating system rather than the application controls which pages collide with one another in the cache. Differences in page allocation from one program run to the next lead to differences in the cache collision patterns, which can lead to very large differences in program performance. These differences can make it very difficult to get a consistent and repeatable timing for a benchmark run.</p>
+<p>To understand the problem, consider a CPU with a 1&#160;MB physically indexed direct-mapped level-2 cache and 4&#160;KB virtual memory pages. Sequential physical pages map to sequential locations in the cache until after 256 pages the pattern wraps around. We can label each physical page with a color of 0–255 to denote where in the cache it can go. Locations within physical pages with different colors cannot conflict in the cache.</p>
+<p>Programmers attempting to make maximum use of the cache may arrange their programs' access patterns so that only 1&#160;MB of data need be cached at any given time, thus avoiding capacity misses. But they should also ensure that the access patterns do not have conflict misses. One way to think about this problem is to divide up the virtual pages the program uses and assign them virtual colors in the same way as physical colors were assigned to physical pages before. Programmers can then arrange the access patterns of their code so that no two pages with the same virtual color are in use at the same time. There is a wide literature on such optimizations (e.g. <a href="http://en.wikipedia.org/wiki/Loop_nest_optimization" title="Loop nest optimization">loop nest optimization</a>), largely coming from the <a href="http://en.wikipedia.org/wiki/High_Performance_Computing" title="High Performance Computing" class="mw-redirect">High Performance Computing (HPC)</a> community.</p>
+<p>The snag is that while all the pages in use at any given moment may have different virtual colors, some may have the same physical colors. In fact, if the operating system assigns physical pages to virtual pages randomly and uniformly, it is extremely likely that some pages will have the same physical color, and then locations from those pages will collide in the cache (this is the <a href="http://en.wikipedia.org/wiki/Birthday_paradox" title="Birthday paradox" class="mw-redirect">birthday paradox</a>).</p>
+<p>The solution is to have the operating system attempt to assign different physical color pages to different virtual colors, a technique called <i>page coloring</i>. Although the actual mapping from virtual to physical color is irrelevant to system performance, odd mappings are difficult to keep track of and have little benefit, so most approaches to page coloring simply try to keep physical and virtual page colors the same.</p>
+<p>If the operating system can guarantee that each physical page maps to only one virtual color, then there are no virtual aliases, and the processor can use virtually indexed caches with no need for extra virtual alias probes during miss handling. Alternatively, the O/S can flush a page from the cache whenever it changes from one virtual color to another. As mentioned above, this approach was used for some early SPARC and RS/6000 designs.</p>
+<h2><span class="mw-headline" id="Cache_hierarchy_in_a_modern_processor"><span id="Cache_hierarchy"></span> Cache hierarchy in a modern processor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=21" title="Edit section: Cache hierarchy in a modern processor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Hwloc.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hwloc.png/300px-Hwloc.png" width="300" height="139" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hwloc.png/450px-Hwloc.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hwloc.png/600px-Hwloc.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Hwloc.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Memory hierarchy of an AMD Bulldozer server.</div>
+</div>
+</div>
+<p>Modern processors have multiple interacting caches on chip.</p>
+<p>The operation of a particular cache can be completely specified by:<sup id="cite_ref-ccs.neu.edu_3-2" class="reference"><a href="#cite_note-ccs.neu.edu-3"><span>[</span>3<span>]</span></a></sup></p>
+<ul>
+<li>the cache size</li>
+<li>the cache block size</li>
+<li>the number of blocks in a set</li>
+<li>the cache set replacement policy</li>
+<li>the cache write policy (write-through or write-back)</li>
+</ul>
+<p>While all of the cache blocks in a particular cache are the same size and have the same associativity, typically "lower-level" caches (such as the L1 cache) have a smaller size, have smaller blocks, and have fewer blocks in a set, while "higher-level" caches (such as the L3 cache) have larger size, larger blocks, and more blocks in a set.</p>
+<h3><span class="mw-headline" id="Specialized_caches">Specialized caches</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=22" title="Edit section: Specialized caches">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Pipelined CPUs access memory from multiple points in the <a href="http://en.wikipedia.org/wiki/Instruction_pipeline" title="Instruction pipeline">pipeline</a>: instruction fetch, <a href="Virtual_memory.html" title="Virtual memory">virtual-to-physical</a> address translation, and data fetch (see <a href="http://en.wikipedia.org/wiki/Classic_RISC_pipeline" title="Classic RISC pipeline">classic RISC pipeline</a>). The natural design is to use different physical caches for each of these points, so that no one physical resource has to be scheduled to service two points in the pipeline. Thus the pipeline naturally ends up with at least three separate caches (instruction, <a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">TLB</a>, and data), each specialized to its particular role.</p>
+<h4><span class="mw-headline" id="Victim_cache">Victim cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=23" title="Edit section: Victim cache">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A <b>victim cache</b> is a cache used to hold blocks evicted from a CPU cache upon replacement. The victim cache lies between the main cache and its refill path, and only holds blocks that were evicted from the main cache. The victim cache is usually fully associative, and is intended to reduce the number of conflict misses. Many commonly used programs do not require an associative mapping for all the accesses. In fact, only a small fraction of the memory accesses of the program require high associativity. The victim cache exploits this property by providing high associativity to only these accesses. It was introduced by <a href="http://en.wikipedia.org/w/index.php?title=Norman_Jouppi&amp;action=edit&amp;redlink=1" class="new" title="Norman Jouppi (page does not exist)">Norman Jouppi</a> from DEC in 1990.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>16<span>]</span></a></sup></p>
+<p>Intel's <i>Crystal Well</i><sup id="cite_ref-intel-ark-crystal-well_18-0" class="reference"><a href="#cite_note-intel-ark-crystal-well-18"><span>[</span>17<span>]</span></a></sup> variant of its <a href="http://en.wikipedia.org/wiki/Haswell_(microarchitecture)" title="Haswell (microarchitecture)">Haswell</a> processors, equipped with Intel's Iris Pro GT3e embedded graphics and 128&#160;MB of <a href="http://en.wikipedia.org/wiki/EDRAM" title="EDRAM">eDRAM</a>, introduced an on-package Level 4 cache which serves as a victim cache to the processors's Level 3 cache.<sup id="cite_ref-anandtech-i74950hq_19-0" class="reference"><a href="#cite_note-anandtech-i74950hq-19"><span>[</span>18<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Trace_cache"><span id="TRACE-CACHE"></span>Trace cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=24" title="Edit section: Trace cache">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>One of the more extreme examples of cache specialization is the <b>trace cache</b> found in the <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> <a href="http://en.wikipedia.org/wiki/Pentium_4" title="Pentium 4">Pentium 4</a> microprocessors. A trace cache is a mechanism for increasing the instruction fetch bandwidth and decreasing power consumption (in the case of the Pentium 4) by storing traces of <a href="http://en.wikipedia.org/wiki/Instruction_(computer_science)" title="Instruction (computer science)" class="mw-redirect">instructions</a> that have already been fetched and decoded.</p>
+<p>The earliest widely acknowledged academic publication of trace cache was by Eric Rotenberg, Steve Bennett, and Jim Smith in their 1996 paper <i>"Trace Cache: a Low Latency Approach to High Bandwidth Instruction Fetching"</i>.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>19<span>]</span></a></sup> An earlier publication is <span class="citation patent" id="CITEREFAlex_Peleg_and_Uri_Weiser_of_Intel_Corp.2014"><a rel="nofollow" class="external text" href="http://worldwide.espacenet.com/textdoc?DB=EPODOC&amp;IDX=US5381533">US patent 5381533</a>, Alex Peleg and Uri Weiser of Intel Corp., "Dynamic flow instruction cache memory organized around trace segments independent of virtual address line"</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Apatent&amp;rft.number=5381533&amp;rft.cc=US&amp;rft.title=Dynamic+flow+instruction+cache+memory+organized+around+trace+segments+independent+of+virtual+address+line&amp;rft.inventor=Alex+Peleg+and+Uri+Weiser+of+Intel+Corp.&amp;rft.appldate=1994-03-30"><span style="display: none;">&#160;</span></span>, a continuation of an application filed in 1992, later abandoned.</p>
+<p>A trace cache stores instructions either after they have been decoded, or as they are retired. Generally, instructions are added to trace caches in groups representing either individual <a href="http://en.wikipedia.org/wiki/Basic_block" title="Basic block">basic blocks</a> or dynamic instruction traces. A dynamic trace ("trace path") contains only instructions whose results are actually used, and eliminates instructions following taken branches (since they are not executed); a dynamic trace can be a concatenation of multiple basic blocks. This allows the instruction fetch unit of a processor to fetch several basic blocks, without having to worry about branches in the execution flow.<sup id="cite_ref-tc-slides_21-0" class="reference"><a href="#cite_note-tc-slides-21"><span>[</span>20<span>]</span></a></sup></p>
+<p>Trace lines are stored in the trace cache based on the <a href="http://en.wikipedia.org/wiki/Program_counter" title="Program counter">program counter</a> of the first instruction in the trace and a set of branch predictions. This allows for storing different trace paths that start on the same address, each representing different branch outcomes. In the instruction fetch stage of a <a href="http://en.wikipedia.org/wiki/Instruction_pipeline" title="Instruction pipeline">pipeline</a>, the current program counter along with a set of branch predictions is checked in the trace cache for a hit. If there is a hit, a trace line is supplied to fetch which does not have to go to a regular cache or to memory for these instructions. The trace cache continues to feed the fetch unit until the trace line ends or until there is a <a href="http://en.wikipedia.org/wiki/Misprediction" title="Misprediction" class="mw-redirect">misprediction</a> in the pipeline. If there is a miss, a new trace starts to be built.</p>
+<p>The Pentium 4's trace cache stores <a href="http://en.wikipedia.org/wiki/Micro-operations" title="Micro-operations" class="mw-redirect">micro-operations</a> resulting from decoding x86 instructions, providing also the functionality of a micro-operation cache. Having this, the next time an instruction is needed, it does not have to be decoded into micro-ops again.<sup id="cite_ref-agner.org_22-0" class="reference"><a href="#cite_note-agner.org-22"><span>[</span>21<span>]</span></a></sup><sup class="reference" style="white-space:nowrap;">:63–68</sup></p>
+<h4><span class="mw-headline" id="Micro-operation_.28uop.29_cache"><span id="UOP-CACHE"></span>Micro-operation (uop) cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=25" title="Edit section: Micro-operation (uop) cache">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A <b>micro-operation cache</b> (<b>Uop Cache</b>, <b>UC</b>) is a specialized cache that stores <a href="http://en.wikipedia.org/wiki/Micro-operation" title="Micro-operation">micro-operations</a> of decoded instructions, as received directly from the <a href="http://en.wikipedia.org/wiki/Instruction_decoder" title="Instruction decoder" class="mw-redirect">instruction decoders</a> or from the instruction cache. When an instruction needs to be decoded, the uop cache is checked for its decoded form which is re-used if cached; if it is not available, the instruction is decoded and then cached.</p>
+<p>One of the early works describing uop cache as an alternative frontend for the Intel <a href="http://en.wikipedia.org/wiki/P6_(microarchitecture)" title="P6 (microarchitecture)">P6 processor family</a>, is the 2001 paper <i>"Micro-Operation Cache: A Power Aware Frontend for Variable Instruction Length ISA"</i>.<sup id="cite_ref-uop-intel_23-0" class="reference"><a href="#cite_note-uop-intel-23"><span>[</span>22<span>]</span></a></sup> Later, Intel included uop caches in its <a href="http://en.wikipedia.org/wiki/Sandy_Bridge" title="Sandy Bridge">Sandy Bridge</a> processors and in successive microarchitectures like <a href="http://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)" title="Ivy Bridge (microarchitecture)">Ivy Bridge</a> and <a href="http://en.wikipedia.org/wiki/Haswell_(microarchitecture)" title="Haswell (microarchitecture)">Haswell</a>.<sup id="cite_ref-agner.org_22-1" class="reference"><a href="#cite_note-agner.org-22"><span>[</span>21<span>]</span></a></sup><sup class="reference" style="white-space:nowrap;">:121–123</sup><sup id="cite_ref-anandtech-haswell_24-0" class="reference"><a href="#cite_note-anandtech-haswell-24"><span>[</span>23<span>]</span></a></sup></p>
+<p>Fetching complete pre-decoded instructions eliminates the need to repeatedly decode variable length complex instructions into simpler fixed-length micro-operations, and simplifies the process of predicting, fetching, rotating and aligning fetched instructions. A uop cache effectively offloads the fetch and decode hardware, thus decreasing <a href="http://en.wikipedia.org/wiki/Power_consumption" title="Power consumption" class="mw-redirect">power consumption</a> and improving the frontend supply of decoded micro-operations. The uop cache also increases performance by more consistently delivering decoded micro-operations to the backend and eliminating various bottlenecks in the CPU's fetch and decode logic.<sup id="cite_ref-uop-intel_23-1" class="reference"><a href="#cite_note-uop-intel-23"><span>[</span>22<span>]</span></a></sup><sup id="cite_ref-anandtech-haswell_24-1" class="reference"><a href="#cite_note-anandtech-haswell-24"><span>[</span>23<span>]</span></a></sup></p>
+<p>A uop cache has many similarities with a trace cache, although a uop cache is much simpler thus providing better power efficiency. The main disadvantage of the trace cache, leading to its power inefficiency, is the hardware complexity required for its <a href="http://en.wikipedia.org/wiki/Heuristic" title="Heuristic">heuristic</a> deciding on caching and reusing dynamically created instruction traces.<sup id="cite_ref-tc-slides_21-1" class="reference"><a href="#cite_note-tc-slides-21"><span>[</span>20<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Multi-level_caches"><span id="MULTILEVEL"></span>Multi-level caches</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=26" title="Edit section: Multi-level caches">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Another issue is the fundamental tradeoff between cache latency and hit rate. Larger caches have better hit rates but longer latency. To address this tradeoff, many computers use multiple levels of cache, with small fast caches backed up by larger, slower caches. Multi-level caches generally operate by checking the fastest, <i>level 1</i> (L1) cache first; if it hits, the processor proceeds at high speed. If that smaller cache misses, the next fastest cache (<i>level 2</i>, L2) is checked, and so on, before external memory is checked.</p>
+<p>As the latency difference between main memory and the fastest cache has become larger, some processors have begun to utilize as many as three levels of on-chip cache. Price-sensitive designs used this to pull the entire cache hierarchy on-chip, but by the 2010s some of the highest-performance designs returned to having large off-chip caches—often implemented in <a href="http://en.wikipedia.org/wiki/EDRAM" title="EDRAM">eDRAM</a> and mounted on a <a href="http://en.wikipedia.org/wiki/Multi-chip_module" title="Multi-chip module">multi-chip module</a>—as a fourth cache level.</p>
+<p>For example, the <a href="http://en.wikipedia.org/wiki/Alpha_21164" title="Alpha 21164">Alpha 21164</a> (1995) had 1 to 64&#160;MB off-chip L3 cache; the IBM <a href="http://en.wikipedia.org/wiki/POWER4" title="POWER4">POWER4</a> (2001) had off-chip L3 caches of 32&#160;MB per processor, shared among several processors; the <a href="http://en.wikipedia.org/wiki/Itanium_2" title="Itanium 2" class="mw-redirect">Itanium 2</a> (2003) had a 6&#160;MB <a href="http://en.wikipedia.org/w/index.php?title=Unified_cache&amp;action=edit&amp;redlink=1" class="new" title="Unified cache (page does not exist)">unified</a> level 3 (L3) cache on-die; the <a href="http://en.wikipedia.org/wiki/Itanium_2" title="Itanium 2" class="mw-redirect">Itanium 2</a> (2003) MX 2 Module incorporates two Itanium2 processors along with a shared 64&#160;MB L4 cache on a <a href="http://en.wikipedia.org/wiki/Multi-chip_module" title="Multi-chip module">Multi-chip module</a> that was pin compatible with a Madison processor; Intel's <a href="http://en.wikipedia.org/wiki/Xeon" title="Xeon">Xeon</a> MP product code-named "Tulsa" (2006) features 16&#160;MB of on-die L3 cache shared between two processor cores; the AMD <a href="http://en.wikipedia.org/wiki/Phenom_II" title="Phenom II">Phenom II</a> (2008) has up to 6&#160;MB on-die unified L3 cache; the <a href="http://en.wikipedia.org/wiki/Intel_Core_i7" title="Intel Core i7" class="mw-redirect">Intel Core i7</a> (2008) has an 8&#160;MB on-die unified L3 cache that is inclusive, shared by all cores; Intel <a href="http://en.wikipedia.org/wiki/Haswell_(microarchitecture)" title="Haswell (microarchitecture)">Haswell</a> CPUs with integrated <a href="http://en.wikipedia.org/wiki/Intel_Iris_Pro_Graphics" title="Intel Iris Pro Graphics" class="mw-redirect">Intel Iris Pro Graphics</a> have 128&#160;MB of eDRAM acting essentially as an L4 cache.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>24<span>]</span></a></sup> The benefits of an L3 cache depend on the application's access patterns.</p>
+<p>Finally, at the other end of the memory hierarchy, the CPU <a href="http://en.wikipedia.org/wiki/Register_file" title="Register file">register file</a> itself can be considered the smallest, fastest cache in the system, with the special characteristic that it is scheduled in software—typically by a compiler, as it allocates registers to hold values retrieved from main memory. (See especially <a href="http://en.wikipedia.org/wiki/Loop_nest_optimization" title="Loop nest optimization">loop nest optimization</a>.) Register files sometimes also have hierarchy: The <a href="http://en.wikipedia.org/wiki/Cray-1" title="Cray-1">Cray-1</a> (circa 1976) had eight address "A" and eight scalar data "S" registers that were generally usable. There was also a set of 64 address "B" and 64 scalar data "T" registers that took longer to access, but were faster than main memory. The "B" and "T" registers were provided because the Cray-1 did not have a data cache. (The Cray-1 did, however, have an instruction cache.)</p>
+<h4><span class="mw-headline" id="Multi-core_chips"><span id="LLC"></span>Multi-core chips</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=27" title="Edit section: Multi-core chips">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>When considering a chip with multiple cores, there is a question of whether the caches should be shared or local to each core. Implementing shared cache undoubtedly introduces more wiring and complexity. But then, having one cache per <i>chip</i>, rather than <i>core</i>, greatly reduces the amount of space needed, and thus one can include a larger cache.</p>
+<p>Typically, sharing the L1 cache is undesirable since the latency increase is such that each core will run considerably slower than a single-core chip. On the other side, for the highest level (the last one called before accessing memory), having a global cache is desirable for several reasons. For example, an eight-core chip with three levels may include an L1 cache for each core, one intermediate L2 cache for each pair of cores, and one L3 cache shared by all cores.</p>
+<p>Shared highest-level cache, which is called before accessing memory, is usually referred to as the <i>last level cache</i> (LLC). Additional techniques are used for increasing the level of parallelism when LLC is shared between multiple cores, including slicing it into multiple pieces which are addressing certain ranges of memory addresses, and can be accessed independently.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>25<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Separate_versus_unified">Separate versus unified</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=28" title="Edit section: Separate versus unified">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In a separate cache structure, instructions and data are cached separately, meaning that a cache line is used to cache either instructions or data, but not both; various benefits have been demonstrated with separate data and instruction <a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">translation lookaside buffers</a>.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27"><span>[</span>26<span>]</span></a></sup> In a unified structure, this constraint is not present, and cache lines can be used to cache both instructions and data.</p>
+<h4><span class="mw-headline" id="Exclusive_versus_inclusive">Exclusive versus inclusive</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=29" title="Edit section: Exclusive versus inclusive">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Multi-level caches introduce new design decisions. For instance, in some processors, all data in the L1 cache must also be somewhere in the L2 cache. These caches are called <i>strictly inclusive</i>. Other processors (like the AMD Athlon) have <i>exclusive</i> caches: data is guaranteed to be in at most one of the L1 and L2 caches, never in both. Still other processors (like the Intel <a href="http://en.wikipedia.org/wiki/Pentium_II" title="Pentium II">Pentium II</a>, <a href="http://en.wikipedia.org/wiki/Pentium_III" title="Pentium III">III</a>, and <a href="http://en.wikipedia.org/wiki/Pentium_4" title="Pentium 4">4</a>), do not require that data in the L1 cache also reside in the L2 cache, although it may often do so. There is no universally accepted name for this intermediate policy.</p>
+<p>The advantage of exclusive caches is that they store more data. This advantage is larger when the exclusive L1 cache is comparable to the L2 cache, and diminishes if the L2 cache is many times larger than the L1 cache. When the L1 misses and the L2 hits on an access, the hitting cache line in the L2 is exchanged with a line in the L1. This exchange is quite a bit more work than just copying a line from L2 to L1, which is what an inclusive cache does.</p>
+<p>One advantage of strictly inclusive caches is that when external devices or other processors in a multiprocessor system wish to remove a cache line from the processor, they need only have the processor check the L2 cache. In cache hierarchies which do not enforce inclusion, the L1 cache must be checked as well. As a drawback, there is a correlation between the associativities of L1 and L2 caches: if the L2 cache does not have at least as many ways as all L1 caches together, the effective associativity of the L1 caches is restricted. Another disadvantage of inclusive cache is that whenever there is an eviction in L2 cache, the (possibly) corresponding lines in L1 also have to get evicted in order to maintain inclusiveness. This is quite a bit work, and would result in higher L1 miss rate.</p>
+<p>Another advantage of inclusive caches is that the larger cache can use larger cache lines, which reduces the size of the secondary cache tags. (Exclusive caches require both caches to have the same size cache lines, so that cache lines can be swapped on a L1 miss, L2 hit.) If the secondary cache is an order of magnitude larger than the primary, and the cache data is an order of magnitude larger than the cache tags, this tag area saved can be comparable to the incremental area needed to store the L1 cache data in the L2.</p>
+<h3><span class="mw-headline" id="Example:_the_K8">Example: the K8</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=30" title="Edit section: Example: the K8">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To illustrate both specialization and multi-level caching, here is the cache hierarchy of the K8 core in the AMD <a href="http://en.wikipedia.org/wiki/Athlon_64" title="Athlon 64">Athlon 64</a> CPU.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span>[</span>27<span>]</span></a></sup></p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:502px;"><a href="http://en.wikipedia.org/wiki/File:Cache,hierarchy-example.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/500px-Cache%2Chierarchy-example.svg.png" width="500" height="333" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/750px-Cache%2Chierarchy-example.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/1000px-Cache%2Chierarchy-example.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Cache,hierarchy-example.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Cache hierarchy of the K8 core in the AMD Athlon 64 CPU.</div>
+</div>
+</div>
+</div>
+<p>The K8 has 4 specialized caches: an instruction cache, an instruction <a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">TLB</a>, a data TLB, and a data cache. Each of these caches is specialized:</p>
+<ul>
+<li>The instruction cache keeps copies of 64-byte lines of memory, and fetches 16 bytes each cycle. Each byte in this cache is stored in ten bits rather than 8, with the extra bits marking the boundaries of instructions (this is an example of predecoding). The cache has only <a href="http://en.wikipedia.org/wiki/Parity_bit" title="Parity bit">parity</a> protection rather than <a href="http://en.wikipedia.org/wiki/Error-correcting_code" title="Error-correcting code" class="mw-redirect">ECC</a>, because parity is smaller and any damaged data can be replaced by fresh data fetched from memory (which always has an up-to-date copy of instructions).</li>
+</ul>
+<ul>
+<li>The instruction TLB keeps copies of page table entries (PTEs). Each cycle's instruction fetch has its virtual address translated through this TLB into a physical address. Each entry is either 4 or 8 bytes in memory. Because the K8 has a variable page size, each of the TLBs is split into two sections, one to keep PTEs that map 4&#160;KB pages, and one to keep PTEs that map 4&#160;MB or 2&#160;MB pages. The split allows the fully associative match circuitry in each section to be simpler. The operating system maps different sections of the virtual address space with different size PTEs.</li>
+</ul>
+<ul>
+<li>The data TLB has two copies which keep identical entries. The two copies allow two data accesses per cycle to translate virtual addresses to physical addresses. Like the instruction TLB, this TLB is split into two kinds of entries.</li>
+</ul>
+<ul>
+<li>The data cache keeps copies of 64-byte lines of memory. It is split into 8 banks (each storing 8&#160;KB of data), and can fetch two 8-byte data each cycle so long as those data are in different banks. There are two copies of the tags, because each 64-byte line is spread among all 8 banks. Each tag copy handles one of the two accesses per cycle.</li>
+</ul>
+<p>The K8 also has multiple-level caches. There are second-level instruction and data TLBs, which store only PTEs mapping 4&#160;KB. Both instruction and data caches, and the various TLBs, can fill from the large <b>unified</b> L2 cache. This cache is exclusive to both the L1 instruction and data caches, which means that any 8-byte line can only be in one of the L1 instruction cache, the L1 data cache, or the L2 cache. It is, however, possible for a line in the data cache to have a PTE which is also in one of the TLBs—the operating system is responsible for keeping the TLBs coherent by flushing portions of them when the page tables in memory are updated.</p>
+<p>The K8 also caches information that is never stored in memory—prediction information. These caches are not shown in the above diagram. As is usual for this class of CPU, the K8 has fairly complex <a href="http://en.wikipedia.org/wiki/Branch_prediction" title="Branch prediction" class="mw-redirect">branch prediction</a>, with tables that help predict whether branches are taken and other tables which predict the targets of branches and jumps. Some of this information is associated with instructions, in both the level 1 instruction cache and the unified secondary cache.</p>
+<p>The K8 uses an interesting trick to store prediction information with instructions in the secondary cache. Lines in the secondary cache are protected from accidental data corruption (e.g. by an <a href="http://en.wikipedia.org/wiki/Alpha_particle" title="Alpha particle">alpha particle</a> strike) by either <a href="http://en.wikipedia.org/wiki/Error-correcting_code" title="Error-correcting code" class="mw-redirect">ECC</a> or <a href="http://en.wikipedia.org/wiki/Parity_(telecommunication)" title="Parity (telecommunication)" class="mw-redirect">parity</a>, depending on whether those lines were evicted from the data or instruction primary caches. Since the parity code takes fewer bits than the ECC code, lines from the instruction cache have a few spare bits. These bits are used to cache branch prediction information associated with those instructions. The net result is that the branch predictor has a larger effective history table, and so has better accuracy.</p>
+<h3><span class="mw-headline" id="More_hierarchies">More hierarchies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=31" title="Edit section: More hierarchies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Other processors have other kinds of predictors (e.g. the store-to-load bypass predictor in the <a href="Digital_Equipment_Corporation.html" title="Digital Equipment Corporation">DEC</a> <a href="http://en.wikipedia.org/wiki/Alpha_21264" title="Alpha 21264">Alpha 21264</a>), and various specialized predictors are likely to flourish in future processors.</p>
+<p>These predictors are caches in that they store information that is costly to compute. Some of the terminology used when discussing predictors is the same as that for caches (one speaks of a <b>hit</b> in a branch predictor), but predictors are not generally thought of as part of the cache hierarchy.</p>
+<p>The K8 keeps the instruction and data caches <b><a href="http://en.wikipedia.org/wiki/Cache_coherency" title="Cache coherency" class="mw-redirect">coherent</a></b> in hardware, which means that a store into an instruction closely following the store instruction will change that following instruction. Other processors, like those in the Alpha and MIPS family, have relied on software to keep the instruction cache coherent. Stores are not guaranteed to show up in the instruction stream until a program calls an operating system facility to ensure coherency.</p>
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=32" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">Cache algorithms</a></div>
+<p>Cache <b>reads</b> are the most common CPU operation that takes more than a single cycle. Program execution time tends to be very sensitive to the latency of a level-1 data cache hit. A great deal of design effort, and often power and silicon area are expended making the caches as fast as possible.</p>
+<p>The simplest cache is a virtually indexed direct-mapped cache. The virtual address is calculated with an adder, the relevant portion of the address extracted and used to index an SRAM, which returns the loaded data. The data is byte aligned in a byte shifter, and from there is bypassed to the next operation. There is no need for any tag checking in the inner loop — in fact, the tags need not even be read. Later in the pipeline, but before the load instruction is retired, the tag for the loaded data must be read, and checked against the virtual address to make sure there was a cache hit. On a miss, the cache is updated with the requested cache line and the pipeline is restarted.</p>
+<p>An associative cache is more complicated, because some form of tag must be read to determine which entry of the cache to select. An N-way set-associative level-1 cache usually reads all N possible tags and N data in parallel, and then chooses the data associated with the matching tag. Level-2 caches sometimes save power by reading the tags first, so that only one data element is read from the data SRAM.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:Cache,associative-read.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Cache%2Cassociative-read.svg/400px-Cache%2Cassociative-read.svg.png" width="400" height="285" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Cache%2Cassociative-read.svg/600px-Cache%2Cassociative-read.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Cache%2Cassociative-read.svg/800px-Cache%2Cassociative-read.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Cache,associative-read.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Read path for a 2-way associative cache</div>
+</div>
+</div>
+<p>The diagram to the right is intended to clarify the manner in which the various fields of the address are used. Address bit 31 is most significant, bit 0 is least significant. The diagram shows the SRAMs, indexing, and multiplexing for a 4&#160;KB, 2-way set-associative, virtually indexed and virtually tagged cache with 64&#160;byte (B) lines, a 32-bit read width and 32-bit virtual address.</p>
+<p>Because the cache is 4&#160;KB and has 64&#160;B lines, there are just 64 lines in the cache, and we read two at a time from a Tag SRAM which has 32 rows, each with a pair of 21 bit tags. Although any function of virtual address bits 31 through 6 could be used to index the tag and data SRAMs, it is simplest to use the least significant bits.</p>
+<p>Similarly, because the cache is 4&#160;KB and has a 4&#160;B read path, and reads two ways for each access, the Data SRAM is 512 rows by 8 bytes wide.</p>
+<p>A more modern cache might be 16&#160;KB, 4-way set-associative, virtually indexed, virtually hinted, and physically tagged, with 32&#160;B lines, 32-bit read width and 36-bit physical addresses. The read path recurrence for such a cache looks very similar to the path above. Instead of tags, vhints are read, and matched against a subset of the virtual address. Later on in the pipeline, the virtual address is translated into a physical address by the TLB, and the physical tag is read (just one, as the vhint supplies which way of the cache to read). Finally the physical address is compared to the physical tag to determine if a hit has occurred.</p>
+<p>Some SPARC designs have improved the speed of their L1 caches by a few gate delays by collapsing the virtual address adder into the SRAM decoders. See <a href="http://en.wikipedia.org/wiki/Sum_addressed_decoder" title="Sum addressed decoder">Sum addressed decoder</a>.</p>
+<h3><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=33" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The early history of cache technology is closely tied to the invention and use of virtual memory.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2008)">citation needed</span></a></i>]</sup> Because of scarcity and cost of semi-conductors memories, early mainframe computers in the 1960s used a complex hierarchy of physical memory, mapped onto a flat virtual memory space used by programs. The memory technologies would span semi-conductor, magnetic core, drum and disc. Virtual memory seen and used by programs would be flat and caching would be used to fetch data and instructions into the fastest memory ahead of processor access. Extensive studies were done to optimize the cache sizes. Optimal values were found to depend greatly on the programming language used with Algol needing the smallest and Fortran and Cobol needing the largest cache sizes.<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Disputed_statement" title="Wikipedia:Disputed statement" class="mw-redirect"><span title="This claim has reliable sources with contradicting facts (December 2010)">disputed</span></a> <span class="metadata">– <a href="http://en.wikipedia.org/wiki/Talk:CPU_cache#Talk:CPU_cache.23Dispute_sequence_of_events_for_paging" title="Talk:CPU cache">discuss</a></span></i>]</sup></p>
+<p>In the early days of microcomputer technology, memory access was only slightly slower than <a href="http://en.wikipedia.org/wiki/Processor_register" title="Processor register">register</a> access. But since the 1980s<sup id="cite_ref-29" class="reference"><a href="#cite_note-29"><span>[</span>28<span>]</span></a></sup> the performance gap between processor and memory has been growing. Microprocessors have advanced much faster than memory, especially in terms of their operating <a href="http://en.wikipedia.org/wiki/Frequency" title="Frequency">frequency</a>, so memory became a performance <a href="http://en.wikipedia.org/wiki/Bottleneck" title="Bottleneck">bottleneck</a>. While it was technically possible to have all the main memory as fast as the CPU, a more economically viable path has been taken: use plenty of low-speed memory, but also introduce a small high-speed cache memory to alleviate the performance gap. This provided an order of magnitude more capacity—for the same price—with only a slightly reduced combined performance.</p>
+<h4><span class="mw-headline" id="First_TLB_implementations">First TLB implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=34" title="Edit section: First TLB implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The first documented uses of a TLB were on the <a href="General_Electric.html" title="General Electric">GE</a> <a href="http://en.wikipedia.org/wiki/GE_645" title="GE 645" class="mw-redirect">645</a><sup id="cite_ref-30" class="reference"><a href="#cite_note-30"><span>[</span>29<span>]</span></a></sup> and the <a href="IBM.html" title="IBM">IBM</a> <a href="http://en.wikipedia.org/wiki/IBM_System/360_Model_67" title="IBM System/360 Model 67">360/67</a>,<sup id="cite_ref-31" class="reference"><a href="#cite_note-31"><span>[</span>30<span>]</span></a></sup> both of which used an associative memory as a TLB.</p>
+<h4><span class="mw-headline" id="First_data_cache">First data cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=35" title="Edit section: First data cache">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The first documented use of a data cache was on the <a href="IBM.html" title="IBM">IBM</a> System/360 Model 85.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32"><span>[</span>31<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="In_x86_microprocessors">In x86 microprocessors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=36" title="Edit section: In x86 microprocessors">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>As the <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a> microprocessors reached clock rates of 20&#160;MHz and above in the <a href="http://en.wikipedia.org/wiki/Intel_80386" title="Intel 80386">386</a>, small amounts of fast cache memory began to be featured in systems to improve performance. This was because the <a href="http://en.wikipedia.org/wiki/DRAM" title="DRAM" class="mw-redirect">DRAM</a> used for main memory had significant latency, up to 120&#160;ns, as well as refresh cycles. The cache was constructed from more expensive, but significantly faster, <a href="http://en.wikipedia.org/wiki/Static_random_access_memory" title="Static random access memory" class="mw-redirect">SRAM</a>, which at the time had latencies around 10&#160;ns. The early caches were external to the processor and typically located on the motherboard in the form of eight or nine <a href="http://en.wikipedia.org/wiki/Dual_in-line_package" title="Dual in-line package">DIP</a> devices placed in sockets to enable the cache as an optional extra or upgrade feature.</p>
+<p>Some versions of the Intel 386 processor could support 16 to 64&#160;KB of external cache.</p>
+<p>With the <a href="http://en.wikipedia.org/wiki/Intel_80486" title="Intel 80486">486</a> processor, an 8&#160;KB cache was integrated directly into the CPU die. This cache was termed Level 1 or L1 cache to differentiate it from the slower on-motherboard, or Level 2 (L2) cache. These on-motherboard caches were much larger, with the most common size being 256&#160;KB. The popularity of on-motherboard cache continued on through the <a href="http://en.wikipedia.org/wiki/Intel_P5" title="Intel P5" class="mw-redirect">Pentium MMX</a> era but was made obsolete by the introduction of <a href="http://en.wikipedia.org/wiki/SDRAM" title="SDRAM" class="mw-redirect">SDRAM</a> and the growing disparity between bus clock rates and CPU clock rates, which caused on-motherboard cache to be only slightly faster than main memory.</p>
+<p>The next development in cache implementation in the x86 microprocessors began with the <a href="http://en.wikipedia.org/wiki/Pentium_Pro" title="Pentium Pro">Pentium Pro</a>, which brought the secondary cache onto the same package as the microprocessor, clocked at the same frequency as the microprocessor.</p>
+<p>On-motherboard caches enjoyed prolonged popularity thanks to the <a href="http://en.wikipedia.org/wiki/AMD_K6-2" title="AMD K6-2">AMD K6-2</a> and <a href="http://en.wikipedia.org/wiki/AMD_K6-III" title="AMD K6-III">AMD K6-III</a> processors that still used the venerable <a href="http://en.wikipedia.org/wiki/Socket_7" title="Socket 7">Socket 7</a>, which was previously used by Intel with on-motherboard caches. K6-III included 256&#160;KB on-die L2 cache and took advantage of the on-board cache as a third level cache, named L3 (motherboards with up to 2&#160;MB of on-board cache were produced). After the Socket&#160;7 became obsolete, on-motherboard cache disappeared from the x86 systems.</p>
+<p>The three-level caches were used again first with the introduction of multiple processor cores, where the L3 cache was added to the CPU die. It became common for the total cache sizes to be increasingly larger in newer processor generations, and recently (as of 2011) it is not uncommon to find Level 3 cache sizes of tens of megabytes.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33"><span>[</span>32<span>]</span></a></sup> This trend appears to continue for the foreseeable future.</p>
+<p><a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> introduced a Level 4 on-package cache with the <a href="http://en.wikipedia.org/wiki/Haswell_(microarchitecture)" title="Haswell (microarchitecture)">Haswell</a> <a href="Microarchitecture.html" title="Microarchitecture">microarchitecture</a>. <i>Crystal Well</i><sup id="cite_ref-intel-ark-crystal-well_18-1" class="reference"><a href="#cite_note-intel-ark-crystal-well-18"><span>[</span>17<span>]</span></a></sup> Haswell CPUs, equipped with the GT3e variant of Intel's integrated Iris Pro graphics, effectively feature 128&#160;MB of embedded DRAM (<a href="http://en.wikipedia.org/wiki/EDRAM" title="EDRAM">eDRAM</a>) on the same package. This L4 cache is shared dynamically between the on-die GPU and CPU, and serves as a victim cache to the CPU's L3 cache.<sup id="cite_ref-anandtech-i74950hq_19-1" class="reference"><a href="#cite_note-anandtech-i74950hq-19"><span>[</span>18<span>]</span></a></sup></p>
+<h4><span class="mw-headline" id="Current_research">Current research</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=37" title="Edit section: Current research">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Early cache designs focused entirely on the direct cost of cache and RAM and average execution speed. More recent cache designs also consider <a href="http://en.wikipedia.org/wiki/Low-power_electronics" title="Low-power electronics">energy efficiency</a>, fault tolerance, and other goals.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34"><span>[</span>33<span>]</span></a></sup></p>
+<p>There are several tools available to computer architects to help explore tradeoffs between cache cycle time, energy, and area. These tools include the open-source CACTI cache simulator<sup id="cite_ref-35" class="reference"><a href="#cite_note-35"><span>[</span>34<span>]</span></a></sup> and the open-source SimpleScalar instruction set simulator.</p>
+<h3><span class="mw-headline" id="Multi-ported_cache">Multi-ported cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=38" title="Edit section: Multi-ported cache">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A multi-ported cache is a cache which can serve more than one request at a time. When accessing a traditional cache we normally use a single memory address, whereas in a multi-ported cache we may request N addresses at a time - where N is the number of ports that connected through the processor and the cache. The benefit of this is that a pipelined processor may access memory from different phases in its pipeline. Another benefit is that it allows the concept of super-scalar processors through different cache levels.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=39" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="div-col columns column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cache_coherency" title="Cache coherency" class="mw-redirect">Cache coherency</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cache_algorithms" title="Cache algorithms">Cache algorithms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dinero_(cache_simulator)" title="Dinero (cache simulator)">Dinero</a> (Cache simulator by <a href="http://en.wikipedia.org/wiki/University_of_Wisconsin_System" title="University of Wisconsin System">University of Wisconsin System</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Instruction_unit" title="Instruction unit">Instruction unit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memoization" title="Memoization">Memoization</a>, briefly defined in <a href="http://en.wikipedia.org/wiki/List_of_computer_term_etymologies" title="List of computer term etymologies">List of computer term etymologies</a></li>
+<li><a href="http://en.wikipedia.org/wiki/No-write_allocation" title="No-write allocation" class="mw-redirect">No-write allocation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scratchpad_RAM" title="Scratchpad RAM" class="mw-redirect">Scratchpad RAM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Write_buffer" title="Write buffer">Write buffer</a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=40" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">The very first paging machine, the <a href="http://en.wikipedia.org/wiki/Ferranti" title="Ferranti">Ferranti</a> <a href="http://en.wikipedia.org/wiki/Atlas_Computer_(Manchester)" title="Atlas Computer (Manchester)" class="mw-redirect">Atlas</a><sup id="cite_ref-AtlasCPU_12-0" class="reference"><a href="#cite_note-AtlasCPU-12"><span>[</span>12<span>]</span></a></sup><sup id="cite_ref-AtlasSup_13-0" class="reference"><a href="#cite_note-AtlasSup-13"><span>[</span>13<span>]</span></a></sup> had no page tables in main memory; there was an associative memory with one entry for every 512 word page frame of core.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=41" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">John L. Hennessy, David A. Patterson. "Computer Architecture: A Quantitative Approach". 2011. <a href="http://en.wikipedia.org/wiki/Special:BookSources/012383872X" class="internal mw-magiclink-isbn">ISBN 0-12-383872-X</a>, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780123838728" class="internal mw-magiclink-isbn">ISBN 978-0-12-383872-8</a>. page B-9. <a rel="nofollow" class="external autonumber" href="http://books.google.com/books?id=v3-1hVwHnHwC&amp;pg=PA120&amp;lpg=PA120&amp;dq=Hennessey+%22block+offset%22&amp;source=bl&amp;ots=H0RmJ057vE&amp;sig=H5fFbBYAxvTyCeUv2yooeOKxnlM&amp;hl=en&amp;sa=X&amp;ei=NHrwTsPsOtHMsQK-poW-AQ&amp;ved=0CCUQ6AEwAQ#v=onepage&amp;q=%22block%20offset%22&amp;f=false">[1]</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">David A. Patterson, John L. Hennessy. "Computer organization and design: the hardware/software interface". 2009. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0123744938" class="internal mw-magiclink-isbn">ISBN 0-12-374493-8</a>, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780123744937" class="internal mw-magiclink-isbn">ISBN 978-0-12-374493-7</a> "Chapter 5: Large and Fast: Exploiting the Memory Hierarchy". p. 484. <a rel="nofollow" class="external autonumber" href="http://books.google.com/books?id=3b63x-0P3_UC&amp;pg=PA484&amp;lpg=PA484&amp;dq=Hennessey+%22block+offset%22&amp;source=bl&amp;ots=Nyek04rcQ5&amp;sig=w7tLCmRZDfyAZ5T8tG3xmfQeDAo&amp;hl=en&amp;sa=X&amp;ei=NHrwTsPsOtHMsQK-poW-AQ&amp;ved=0CCEQ6AEwAA#v=onepage&amp;q=Hennessey%20%22block%20offset%22&amp;f=false">[2]</a></span></li>
+<li id="cite_note-ccs.neu.edu-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-ccs.neu.edu_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ccs.neu.edu_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ccs.neu.edu_3-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">Gene Cooperman. "Cache Basics". 2003. <a rel="nofollow" class="external autonumber" href="http://www.ccs.neu.edu/course/com3200/parent/NOTES/cache-basics.html">[3]</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Ben Dugan. "Concerning Caches". 2002. <a rel="nofollow" class="external autonumber" href="http://www.cs.washington.edu/education/courses/cse378/02sp/sections/section9-1.html">[4]</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Harvey G. Cragon. "Memory systems and pipelined processors". 1996. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0867204745" class="internal mw-magiclink-isbn">ISBN 0-86720-474-5</a>, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780867204742" class="internal mw-magiclink-isbn">ISBN 978-0-86720-474-2</a>. "Chapter 4.1: Cache Addressing, Virtual or Real" p. 209 <a rel="nofollow" class="external autonumber" href="http://books.google.com/books?id=q2w3JSFD7l4C&amp;pg=PA209&amp;lpg=PA209&amp;dq=displacement+tag+cache&amp;source=bl&amp;ots=i3HOLDymZk&amp;sig=VOnTozBRVPb8BTcphIPSPvvFNSU&amp;hl=en&amp;sa=X&amp;ei=spTwTsm0KtHMsQK-poW-AQ&amp;ved=0CEkQ6AEwBQ#v=onepage&amp;q=displacement%20tag%20cache&amp;f=false">[5]</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://cseweb.ucsd.edu/classes/fa10/cse240a/pdf/08/CSE240A-MBT-L15-Cache.ppt.pdf">"Cache design"</a> (PDF). ucsd.edu. 2010-12-02. p.&#160;10–15<span class="reference-accessdate">. Retrieved 2014-02-24</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Cache+design&amp;rft.date=2010-12-02&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcseweb.ucsd.edu%2Fclasses%2Ffa10%2Fcse240a%2Fpdf%2F08%2FCSE240A-MBT-L15-Cache.ppt.pdf&amp;rft.pages=10%26ndash%3B15&amp;rft.pub=ucsd.edu&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5234663">IEEE Xplore - Phased set associative cache design for reduced power consumption</a>. Ieeexplore.ieee.org (2009-08-11). Retrieved on 2013-07-30.</span></li>
+<li id="cite_note-Seznec-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Seznec_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Seznec_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">André Seznec. <a rel="nofollow" class="external text" href="http://dl.acm.org/citation.cfm?doid=173682.165152">"A Case for Two-Way Skewed-Associative Caches"</a>. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F173682.165152">10.1145/173682.165152</a><span class="reference-accessdate">. Retrieved 2007-12-13</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=Andr%C3%A9+Seznec&amp;rft.aulast=Andr%C3%A9+Seznec&amp;rft.btitle=A+Case+for+Two-Way+Skewed-Associative+Caches&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdl.acm.org%2Fcitation.cfm%3Fdoid%3D173682.165152&amp;rft_id=info%3Adoi%2F10.1145%2F173682.165152&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CK-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-CK_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-CK_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.stanford.edu/class/ee282/08_handouts/L03-Cache.pdf">"Advanced Caching Techniques"</a> by C. Kozyrakis</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.irisa.fr/caps/PROJECTS/Architecture/">Micro-Architecture</a> "Skewed-associative caches have ... major advantages over conventional set-associative caches."</span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cs.wisc.edu/multifacet/misc/spec2000cache-data/">"Cache performance of SPEC CPU2000"</a>. Cs.wisc.edu<span class="reference-accessdate">. Retrieved 2010-05-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Cache+performance+of+SPEC+CPU2000&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.wisc.edu%2Fmultifacet%2Fmisc%2Fspec2000cache-data%2F&amp;rft.pub=Cs.wisc.edu&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-AtlasCPU-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-AtlasCPU_12-0">^</a></b></span> <span class="reference-text"><span class="citation book">Sumner, F. H.; Haley, G.; Chenh, E. C. Y. (1962), "The Central Control Unit of the 'Atlas' Computer", <i>Information Processing 1962</i>, IFIP Congress Proceedings, Proceedings of IFIP Congress 62, Spartan.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.atitle=Information+Processing+1962&amp;rft.au=Chenh%2C+E.+C.+Y.&amp;rft.aufirst=F.+H.&amp;rft.au=Haley%2C+G.&amp;rft.aulast=Sumner&amp;rft.au=Sumner%2C+F.+H.&amp;rft.btitle=The+Central+Control+Unit+of+the+%27Atlas%27+Computer&amp;rft.date=1962&amp;rft.genre=bookitem&amp;rft.pub=Spartan&amp;rft.series=IFIP+Congress+Proceedings&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=Proceedings+of+IFIP+Congress+62" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-AtlasSup-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-AtlasSup_13-0">^</a></b></span> <span class="reference-text"><span class="citation book">Kilburn, T.; Payne, R. B.; Howarth, D. J. (December 1961), <a rel="nofollow" class="external text" href="http://www.chilton-computing.org.uk/acl/technology/atlas/p019.htm">"The Atlas Supervisor"</a>, <i>Computers - Key to Total Systems Control</i>, Conferences Proceedings, 20 Proceedings of the Eastern Joint Computer Conference Washington, D.C., Macmillan, pp.&#160;279–294.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.atitle=Computers+-+Key+to+Total+Systems+Control&amp;rft.aufirst=T.&amp;rft.au=Howarth%2C+D.+J.&amp;rft.au=Kilburn%2C+T.&amp;rft.aulast=Kilburn&amp;rft.au=Payne%2C+R.+B.&amp;rft.btitle=The+Atlas+Supervisor&amp;rft.date=December+1961&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.chilton-computing.org.uk%2Facl%2Ftechnology%2Fatlas%2Fp019.htm&amp;rft.pages=279%E2%80%93294&amp;rft.pub=Macmillan&amp;rft.series=Conferences+Proceedings&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=20+Proceedings+of+the+Eastern+Joint+Computer+Conference+Washington%2C+D.C." class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.linuxjournal.com/article/7105">"Understanding Caching"</a>. Linux Journal<span class="reference-accessdate">. Retrieved 2010-05-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Understanding+Caching&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.linuxjournal.com%2Farticle%2F7105&amp;rft.pub=Linux+Journal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external autonumber" href="http://www.systems.ethz.ch/education/courses/fs09/aos/lectures/wk3-print.pdf">[6]</a><sup class="noprint Inline-Template"><span style="white-space: nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;since July 2013">dead link</span></a></i>]</span></sup></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">N.P.Jouppi. "Improving direct-mapped cache performance by the addition of a small fully-associative cache and prefetch buffers." - 17th Annual International Symposium on Computer Architecture, 1990. Proceedings., <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FISCA.1990.134547">10.1109/ISCA.1990.134547</a></span></li>
+<li id="cite_note-intel-ark-crystal-well-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-intel-ark-crystal-well_18-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-intel-ark-crystal-well_18-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://ark.intel.com/products/codename/51802/Crystal-Well">"Products (Formerly Crystal Well)"</a>. <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a><span class="reference-accessdate">. Retrieved 2013-09-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Products+%28Formerly+Crystal+Well%29&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fark.intel.com%2Fproducts%2Fcodename%2F51802%2FCrystal-Well&amp;rft.pub=Intel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-anandtech-i74950hq-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-anandtech-i74950hq_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-anandtech-i74950hq_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.anandtech.com/show/6993/intel-iris-pro-5200-graphics-review-core-i74950hq-tested/3">"Intel Iris Pro 5200 Graphics Review: Core i7-4950HQ Tested"</a>. <a href="http://en.wikipedia.org/wiki/AnandTech" title="AnandTech">AnandTech</a><span class="reference-accessdate">. Retrieved 2013-09-16</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Intel+Iris+Pro+5200+Graphics+Review%3A+Core+i7-4950HQ+Tested&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.anandtech.com%2Fshow%2F6993%2Fintel-iris-pro-5200-graphics-review-core-i74950hq-tested%2F3&amp;rft.pub=AnandTech&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.140.2177">"Trace Cache: a Low Latency Approach to High Bandwidth Instruction Fetching."</a>. 1996. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FMICRO.1996.566447">10.1109/MICRO.1996.566447</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Trace+Cache%3A+a+Low+Latency+Approach+to+High+Bandwidth+Instruction+Fetching.&amp;rft.date=1996&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.140.2177&amp;rft_id=info%3Adoi%2F10.1109%2FMICRO.1996.566447&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-tc-slides-21"><span class="mw-cite-backlink">^ <a href="#cite_ref-tc-slides_21-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-tc-slides_21-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Leon Gu; Dipti Motiani (October 2003). <a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/afs/cs/academic/class/15740-f03/www/lectures/TraceCache_slides.pdf">"Trace Cache"</a> (PDF)<span class="reference-accessdate">. Retrieved 2013-10-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=Dipti+Motiani&amp;rft.aulast=Leon+Gu&amp;rft.au=Leon+Gu&amp;rft.btitle=Trace+Cache&amp;rft.date=October+2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.cmu.edu%2Fafs%2Fcs%2Facademic%2Fclass%2F15740-f03%2Fwww%2Flectures%2FTraceCache_slides.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-agner.org-22"><span class="mw-cite-backlink">^ <a href="#cite_ref-agner.org_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-agner.org_22-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Agner Fog (2014-02-19). <a rel="nofollow" class="external text" href="http://www.agner.org/optimize/microarchitecture.pdf">"The microarchitecture of Intel, AMD and VIA CPUs: An optimization guide for assembly programmers and compiler makers"</a> (PDF). agner.org<span class="reference-accessdate">. Retrieved 2014-03-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=Agner+Fog&amp;rft.aulast=Agner+Fog&amp;rft.btitle=The+microarchitecture+of+Intel%2C+AMD+and+VIA+CPUs%3A+An+optimization+guide+for+assembly+programmers+and+compiler+makers&amp;rft.date=2014-02-19&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.agner.org%2Foptimize%2Fmicroarchitecture.pdf&amp;rft.pub=agner.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-uop-intel-23"><span class="mw-cite-backlink">^ <a href="#cite_ref-uop-intel_23-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-uop-intel_23-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Baruch Solomon; Avi Mendelson; Doron Orenstein; Yoav Almog; Ronny Ronen (August 2001). <a rel="nofollow" class="external text" href="http://cecs.uci.edu/~papers/compendium94-03/papers/2001/islped01/pdffiles/p004.pdf">"Micro-Operation Cache: A Power Aware Frontend for Variable Instruction Length ISA"</a> (PDF). <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a>. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FLPE.2001.945363">10.1109/LPE.2001.945363</a><span class="reference-accessdate">. Retrieved 2013-10-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=Avi+Mendelson&amp;rft.au=Baruch+Solomon&amp;rft.au=Doron+Orenstein&amp;rft.aulast=Baruch+Solomon&amp;rft.au=Ronny+Ronen&amp;rft.au=Yoav+Almog&amp;rft.btitle=Micro-Operation+Cache%3A+A+Power+Aware+Frontend+for+Variable+Instruction+Length+ISA&amp;rft.date=August+2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcecs.uci.edu%2F~papers%2Fcompendium94-03%2Fpapers%2F2001%2Fislped01%2Fpdffiles%2Fp004.pdf&amp;rft_id=info%3Adoi%2F10.1109%2FLPE.2001.945363&amp;rft.pub=Intel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-anandtech-haswell-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-anandtech-haswell_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-anandtech-haswell_24-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Anand Lal Shimpi (2012-10-05). <a rel="nofollow" class="external text" href="http://www.anandtech.com/show/6355/intels-haswell-architecture/6">"Intel's Haswell Architecture Analyzed"</a>. <a href="http://en.wikipedia.org/wiki/AnandTech" title="AnandTech">AnandTech</a><span class="reference-accessdate">. Retrieved 2013-10-20</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=Anand+Lal+Shimpi&amp;rft.aulast=Anand+Lal+Shimpi&amp;rft.btitle=Intel%27s+Haswell+Architecture+Analyzed&amp;rft.date=2012-10-05&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.anandtech.com%2Fshow%2F6355%2Fintels-haswell-architecture%2F6&amp;rft.pub=AnandTech&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.anandtech.com/show/6993/intel-iris-pro-5200-graphics-review-core-i74950hq-tested/3">"Intel Iris Pro 5200 Graphics Review: Core i7-4950HQ Tested"</a>. AnandTech<span class="reference-accessdate">. Retrieved 2014-02-25</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Intel+Iris+Pro+5200+Graphics+Review%3A+Core+i7-4950HQ+Tested&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.anandtech.com%2Fshow%2F6993%2Fintel-iris-pro-5200-graphics-review-core-i74950hq-tested%2F3&amp;rft.pub=AnandTech&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><span class="citation web">Oded Lempel (2013-07-28). <a rel="nofollow" class="external text" href="http://www.hotchips.org/wp-content/uploads/hc_archives/hc23/HC23.19.9-Desktop-CPUs/HC23.19.911-Sandy-Bridge-Lempel-Intel-Rev 7.pdf">"2nd Generation Intel Core Processor Family: Intel Core i7, i5 and i3"</a> (PDF). hotchips.org. p.&#160;7–10,31–45<span class="reference-accessdate">. Retrieved 2014-01-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.aulast=Oded+Lempel&amp;rft.au=Oded+Lempel&amp;rft.btitle=2nd+Generation+Intel+Core+Processor+Family%3A+Intel+Core+i7%2C+i5+and+i3&amp;rft.date=2013-07-28&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.hotchips.org%2Fwp-content%2Fuploads%2Fhc_archives%2Fhc23%2FHC23.19.9-Desktop-CPUs%2FHC23.19.911-Sandy-Bridge-Lempel-Intel-Rev%25207.pdf&amp;rft.pages=7%26ndash%3B10%2C31%26ndash%3B45&amp;rft.pub=hotchips.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><span class="citation journal">Chen, J. Bradley; Borg, Anita; Jouppi, Norman P. (1992). "A Simulation Based Study of TLB Performance". <i>SIGARCH Computer Architecture News</i> (20): 114–123. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F146628.139708">10.1145/146628.139708</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.atitle=A+Simulation+Based+Study+of+TLB+Performance&amp;rft.au=Borg%2C+Anita&amp;rft.au=Chen%2C+J.+Bradley&amp;rft.au=Jouppi%2C+Norman+P.&amp;rft.aulast=Chen%2C+J.+Bradley&amp;rft.date=1992&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F146628.139708&amp;rft.issue=20&amp;rft.jtitle=SIGARCH+Computer+Architecture+News&amp;rft.pages=114%26ndash%3B123&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.sandpile.org/impl/k8.htm">"AMD K8"</a>. Sandpile.org<span class="reference-accessdate">. Retrieved 2007-06-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=AMD+K8&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.sandpile.org%2Fimpl%2Fk8.htm&amp;rft.pub=Sandpile.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><span class="citation web">Mahapatra, Nihar R.; Venkatrao, Balakrishna. <a rel="nofollow" class="external text" href="https://epic.hpi.uni-potsdam.de/pub/Home/TrendsAndConceptsII2010/HW_Trends_The_Processor-Memory_bottleneck___Problems_and_Solutions..pdf">"The processor-memory bottleneck: problems and solutions"</a>. Association of Computing Machinery. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F357783.331677">10.1145/357783.331677</a><span class="reference-accessdate">. Retrieved 2013-03-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.aufirst=Nihar+R.&amp;rft.aulast=Mahapatra&amp;rft.au=Mahapatra%2C+Nihar+R.&amp;rft.au=Venkatrao%2C+Balakrishna&amp;rft.btitle=The+processor-memory+bottleneck%3A+problems+and+solutions&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fepic.hpi.uni-potsdam.de%2Fpub%2FHome%2FTrendsAndConceptsII2010%2FHW_Trends_The_Processor-Memory_bottleneck___Problems_and_Solutions..pdf&amp;rft_id=info%3Adoi%2F10.1145%2F357783.331677&amp;rft.pub=Association+of+Computing+Machinery&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><span class="citation book">GE (January 1968), <a rel="nofollow" class="external text" href="http://bitsavers.org/pdf/ge/GE-645/GE-645_SystemMan_Jan68.pdf"><i>GE-645 System Manual</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=GE&amp;rft.aulast=GE&amp;rft.btitle=GE-645+System+Manual&amp;rft.date=January+1968&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbitsavers.org%2Fpdf%2Fge%2FGE-645%2FGE-645_SystemMan_Jan68.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><span class="citation book">IBM (February 1972), <a rel="nofollow" class="external text" href="http://www.bitsavers.org/pdf/ibm/360/funcChar/GA27-2719-2_360-67_funcChar.pdf"><i>IBM System/360 Model 67 Functional Characteristics</i></a>, Third Edition, GA27-2719-2.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=IBM&amp;rft.aulast=IBM&amp;rft.btitle=IBM+System%2F360+Model+67+Functional+Characteristics&amp;rft.date=February+1972&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.bitsavers.org%2Fpdf%2Fibm%2F360%2FfuncChar%2FGA27-2719-2_360-67_funcChar.pdf&amp;rft.series=Third+Edition&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><span class="citation book">IBM (June 1968), <a rel="nofollow" class="external text" href="http://www.bitsavers.org/pdf/ibm/360/funcChar/A22-6916-1_360-85_funcChar_Jun68.pdf"><i>IBM System/360 Model 85 Functional Characteristics</i></a>, SECOND EDITION, A22-6916-1.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.au=IBM&amp;rft.aulast=IBM&amp;rft.btitle=IBM+System%2F360+Model+85+Functional+Characteristics&amp;rft.date=June+1968&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.bitsavers.org%2Fpdf%2Fibm%2F360%2FfuncChar%2FA22-6916-1_360-85_funcChar_Jun68.pdf&amp;rft.series=SECOND+EDITION&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://ark.intel.com/products/family/59139/Intel-Xeon-Processor-E7-Family/server">"Intel® Xeon® Processor E7 Family"</a>. <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a><span class="reference-accessdate">. Retrieved 2013-10-10</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=Intel%C2%AE+Xeon%C2%AE+Processor+E7+Family&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fark.intel.com%2Fproducts%2Ffamily%2F59139%2FIntel-Xeon-Processor-E7-Family%2Fserver&amp;rft.pub=Intel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://spectrum.ieee.org/computing/hardware/chip-design-thwarts-sneak-attack-on-data">"Chip Design Thwarts Sneak Attack on Data"</a> by Sally Adee 2009 discusses "A novel cache architecture with enhanced performance and security" <a rel="nofollow" class="external autonumber" href="http://portal.acm.org/citation.cfm?id=1521781">[7]</a> <a rel="nofollow" class="external autonumber" href="http://palms.princeton.edu/system/files/Micro08_Newcache.pdf">[8]</a> by Zhenghong Wang and Ruby B. Lee: (abstract) "Caches ideally should have low miss rates and short access times, and should be power efficient at the same time. Such design goals are often contradictory in practice."</span></li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.hpl.hp.com/research/cacti/">"CACTI"</a>. Hpl.hp.com<span class="reference-accessdate">. Retrieved 2010-05-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACPU+cache&amp;rft.btitle=CACTI&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.hpl.hp.com%2Fresearch%2Fcacti%2F&amp;rft.pub=Hpl.hp.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit&amp;section=42" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Microprocessor_Design" class="extiw" title="wikibooks:Microprocessor Design">Microprocessor Design</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Microprocessor_Design/Cache" class="extiw" title="wikibooks:Microprocessor Design/Cache">Cache</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://lwn.net/Articles/252125/">Memory part 2: CPU caches</a> An article on lwn.net by Ulrich Drepper describing CPU caches in detail.</li>
+<li><a rel="nofollow" class="external text" href="ftp://ftp.cs.wisc.edu/markhill/Papers/toc89_cpu_cache_associativity.pdf">Evaluating Associativity in CPU Caches</a> — Hill and Smith — 1989 — Introduces capacity, conflict, and compulsory classification.</li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.wisc.edu/multifacet/misc/spec2000cache-data/">Cache Performance for SPEC CPU2000 Benchmarks</a> — Hill and Cantin — 2003 — This reference paper has been updated several times. It has thorough and lucidly presented simulation results for a reasonably wide set of benchmarks and cache organizations.</li>
+<li><a rel="nofollow" class="external text" href="http://www.sun.com/blueprints/1102/817-0742.pdf">Memory Hierarchy in Cache-Based Systems</a>, by Ruud van der Pas, 2002, Sun Microsystems, is a nice introductory article to CPU memory caching.</li>
+<li><a rel="nofollow" class="external text" href="http://www.freescale.com/files/32bit/doc/app_note/AN2663.pdf">A Cache Primer</a> by Paul Genua, P.E., 2004, Freescale Semiconductor, another introductory article.</li>
+<li><a rel="nofollow" class="external text" href="http://www.zipcores.com/skin1/zipdocs/datasheets/cache_8way_set.pdf">An 8-way set-associative cache</a> written in <a href="http://en.wikipedia.org/wiki/VHDL" title="VHDL">VHDL</a></li>
+<li><a rel="nofollow" class="external text" href="http://arstechnica.com/old/content/2002/07/caching.ars">Understanding CPU caching and performance</a> An article on Ars Technica by Jon Stokes.</li>
+<li><a rel="nofollow" class="external text" href="http://ixbtlabs.com/articles/ibmpower4/">IBM POWER4 processor review</a> An article on ixbtlabs by Pavel Danilov</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CPU_technologies" title="Template:CPU technologies"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CPU_technologies" title="Template talk:CPU technologies"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CPU_technologies&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">CPU technologies</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Computer_architecture.html" title="Computer architecture">Architecture</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Harvard_architecture" title="Harvard architecture">Harvard</a> (<a href="http://en.wikipedia.org/wiki/Modified_Harvard_architecture" title="Modified Harvard architecture">Modified Harvard</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture" title="Von Neumann architecture">von Neumann</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dataflow_architecture" title="Dataflow architecture">Dataflow</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_instruction_set_architectures" title="Comparison of instruction set architectures">Comparison</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">Instruction set</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Application-specific_instruction-set_processor" title="Application-specific instruction-set processor">ASIP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Complex_instruction_set_computing" title="Complex instruction set computing">CISC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Explicit_Data_Graph_Execution" title="Explicit Data Graph Execution">EDGE</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Explicitly_parallel_instruction_computing" title="Explicitly parallel instruction computing">EPIC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Minimal_instruction_set_computer" title="Minimal instruction set computer">MISC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/One_instruction_set_computer" title="One instruction set computer">OISC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reduced_instruction_set_computing" title="Reduced instruction set computing">RISC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Very_long_instruction_word" title="Very long instruction word">VLIW</a></li>
+<li><a href="http://en.wikipedia.org/wiki/No_instruction_set_computing" title="No instruction set computing">NISC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zero_instruction_set_computer" title="Zero instruction set computer">ZISC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word size</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/1-bit_architecture" title="1-bit architecture">1-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/4-bit" title="4-bit">4-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/8-bit" title="8-bit">8-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)#Table_of_word_sizes" title="Word (computer architecture)">9-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ferranti_Mercury" title="Ferranti Mercury">10-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/12-bit" title="12-bit">12-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Apollo_Guidance_Computer" title="Apollo Guidance Computer">15-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/16-bit" title="16-bit">16-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/18-bit" title="18-bit">18-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Z3_(computer)" title="Z3 (computer)">22-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/24-bit" title="24-bit">24-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UNIVAC_III" title="UNIVAC III">25-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Saturn_Launch_Vehicle_Digital_Computer" title="Saturn Launch Vehicle Digital Computer">26-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/D-17B" title="D-17B">27-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/31-bit" title="31-bit">31-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/32-bit" title="32-bit">32-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ZEBRA_(computer)" title="ZEBRA (computer)">33-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fast_Universal_Digital_Computer_M-2" title="Fast Universal Digital Computer M-2">34-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/36-bit" title="36-bit">36-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)#Table_of_word_sizes" title="Word (computer architecture)">39-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IAS_machine" title="IAS machine">40-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/48-bit" title="48-bit">48-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Atanasoff–Berry_Computer" title="Atanasoff–Berry Computer" class="mw-redirect">50-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/60-bit" title="60-bit">60-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/64-bit_computing" title="64-bit computing">64-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/128-bit" title="128-bit">128-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/256-bit" title="256-bit">256-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/512-bit" title="512-bit">512-bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">variable</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Instruction_pipeline" title="Instruction pipeline">Instruction pipelining</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Out-of-order_execution" title="Out-of-order execution">In-order &amp; out-of-order execution</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Branch_predictor" title="Branch predictor">Branch predictor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Register_renaming" title="Register renaming">Register renaming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Speculative_execution" title="Speculative execution">Speculative execution</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hazard_(computer_architecture)" title="Hazard (computer architecture)">Hazards</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bubble_(computing)" title="Bubble (computing)">Bubble</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Parallel_computing.html" title="Parallel computing">Parallel level</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bit-serial_architecture" title="Bit-serial architecture">Bit-serial</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Scalar_processor" title="Scalar processor">Scalar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Superscalar" title="Superscalar">Superscalar</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Data_parallelism" title="Data parallelism">Data</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Vector_processor" title="Vector processor">Vector</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Task_parallelism" title="Task parallelism">Task</a>
+<ul>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal multithreading</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous multithreading</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hyper-threading" title="Hyper-threading">Hyper-threading</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">MIMD</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SPMD" title="SPMD">SPMD</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Digital_signal_processor" title="Digital signal processor">Digital signal processor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units" title="General-purpose computing on graphics processing units">GPGPU</a></li>
+<li><a href="Microcontroller.html" title="Microcontroller">Microcontroller</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Physics_processing_unit" title="Physics processing unit">Physics processing unit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/System_on_a_chip" title="System on a chip">System on a chip</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cellular_architecture" title="Cellular architecture">Cellular</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Components</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Arithmetic_logic_unit" title="Arithmetic logic unit">ALU</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Barrel_shifter" title="Barrel shifter">Barrel shifter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Floating-point_unit" title="Floating-point unit">Floating-point unit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Back-side_bus" title="Back-side bus">Back-side bus</a></li>
+<li>(<a href="http://en.wikipedia.org/wiki/Multiplexer" title="Multiplexer">Multiplexer</a>, <a href="http://en.wikipedia.org/wiki/Demultiplexer" title="Demultiplexer" class="mw-redirect">Demultiplexer</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Processor_register" title="Processor register">Registers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a></li>
+<li><a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">TLB</a></li>
+<li><strong class="selflink">Cache</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Register_file" title="Register file">Register file</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microcode" title="Microcode">Microcode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Control_unit" title="Control unit">Control unit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Clock_rate" title="Clock rate">Clock rate</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Power_management" title="Power management">Power<br />
+management</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Power_Management" title="Advanced Power Management">APM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface" title="Advanced Configuration and Power Interface">ACPI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_frequency_scaling" title="Dynamic frequency scaling">Dynamic frequency scaling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_voltage_scaling" title="Dynamic voltage scaling">Dynamic voltage scaling</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Clock_gating" title="Clock gating">Clock gating</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1177
+CPU time usage: 1.228 seconds
+Real time usage: 1.372 seconds
+Preprocessor visited node count: 3184/1000000
+Preprocessor generated node count: 15164/1500000
+Post‐expand include size: 72014/2048000 bytes
+Template argument size: 4885/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 8/500
+Lua time usage: 0.127/10.000 seconds
+Lua memory usage: 3.29 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:849181-0!*!0!!en!4!*!math=0 and timestamp 20140325014859
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;oldid=600762186">http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;oldid=600762186</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Central_processing_unit" title="Category:Central processing unit">Central processing unit</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_memory" title="Category:Computer memory">Computer memory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Cache_(computing)" title="Category:Cache (computing)">Cache (computing)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_dead_external_links_from_July_2013" title="Category:Articles with dead external links from July 2013">Articles with dead external links from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_to_be_merged_from_July_2013" title="Category:Articles to be merged from July 2013">Articles to be merged from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_to_be_merged" title="Category:All articles to be merged">All articles to be merged</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_March_2008" title="Category:Articles with unsourced statements from March 2008">Articles with unsourced statements from March 2008</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_accuracy_disputes" title="Category:All accuracy disputes">All accuracy disputes</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_disputed_statements_from_December_2010" title="Category:Articles with disputed statements from December 2010">Articles with disputed statements from December 2010</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=CPU+cache&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=CPU+cache" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="CPU_cache.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:CPU_cache"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="CPU_cache.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/CPU_cache" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/CPU_cache" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;oldid=600762186" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q352090" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=CPU_cache&amp;id=600762186" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=CPU+cache">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=CPU+cache&amp;oldid=600762186&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=CPU_cache&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Protsessori_vahemälu" title="Protsessori vahemälu – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/حافظه_نهان_سی‌پی‌یو" title="حافظه نهان سی‌پی‌یو – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ga"><a href="http://ga.wikipedia.org/wiki/Taisc-chuimhne" title="Taisc-chuimhne – Irish" lang="ga" hreflang="ga">Gaeilge</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/CPU_캐시" title="CPU 캐시 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/L1_priručna_memorija" title="L1 priručna memorija – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Tembolok_CPU" title="Tembolok CPU – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/CPU_cache" title="CPU cache – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="http://lv.wikipedia.org/wiki/Procesora_kešatmiņa" title="Procesora kešatmiņa – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Gyorsítótár" title="Gyorsítótár – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-mk"><a href="http://mk.wikipedia.org/wiki/Кеш_меморија" title="Кеш меморија – Macedonian" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/キャッシュメモリ" title="キャッシュメモリ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Hurtigminne" title="Hurtigminne – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Pamięć_podręczna_procesora" title="Pamięć podręczna procesora – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/CPU_cache" title="CPU cache – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Кэш_процессора" title="Кэш процессора – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Rýchla_vyrovnávacia_pamäť_procesora" title="Rýchla vyrovnávacia pamäť procesora – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Кеш_централне_процесорске_јединице" title="Кеш централне процесорске јединице – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/பதுக்கு_நினைவகம்" title="பதுக்கு நினைவகம் – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/CPU缓存" title="CPU缓存 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q352090#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 March 2014 at 18:09.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/CPU_cache" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1167 in 0.302 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/CPU_cache by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+</html>

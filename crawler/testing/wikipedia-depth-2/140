@@ -1,0 +1,503 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pearson_hashing.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pearson_hashing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Pearson hashing - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Pearson_hashing" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Pearson_hashing.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Pearson_hashing","wgTitle":"Pearson hashing","wgCurRevisionId":586534035,"wgRevisionId":586534035,"wgArticleId":101219,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Error detection and correction","Hash functions","Articles with example pseudocode"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Pearson_hashing","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","en-en","en-us","de","de-de"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q7158377"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","wikibase.client.nolanglinks","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Pearson_hashing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Pearson hashing</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><b>Pearson hashing</b><sup id="cite_ref-acmref_1-0" class="reference"><a href="#cite_note-acmref-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> is a <a href="Hash_function.html" title="Hash function">hash function</a> designed for fast execution on processors with 8-bit <a href="http://en.wikipedia.org/wiki/Processor_register" title="Processor register">registers</a>. Given an input consisting of any number of bytes, it produces as output a single byte that is strongly dependent<sup id="cite_ref-acmref_1-1" class="reference"><a href="#cite_note-acmref-1"><span>[</span>1<span>]</span></a></sup> on every byte of the input. Its implementation requires only a few instructions, plus a 256-byte <a href="http://en.wikipedia.org/wiki/Lookup_table" title="Lookup table">lookup table</a> containing a <a href="http://en.wikipedia.org/wiki/Permutation" title="Permutation">permutation</a> of the values 0 through 255.</p>
+<p>This hash function is a <a href="http://en.wikipedia.org/wiki/CBC-MAC" title="CBC-MAC">CBC-MAC</a> that uses an 8-bit <a href="http://en.wikipedia.org/w/index.php?title=Random_block_cipher&amp;action=edit&amp;redlink=1" class="new" title="Random block cipher (page does not exist)">random block cipher</a> implemented via the permutation table. An 8-bit <a href="http://en.wikipedia.org/wiki/Block_cipher" title="Block cipher">block cipher</a> has negligible cryptographic security, so the Pearson hash function is not <a href="http://en.wikipedia.org/wiki/Cryptographically_strong" title="Cryptographically strong" class="mw-redirect">cryptographically strong</a>; but it offers these benefits:</p>
+<ul>
+<li>It is extremely simple.</li>
+<li>It executes quickly on resource-limited processors.</li>
+<li>There is no simple class of inputs for which <a href="http://en.wikipedia.org/wiki/Hash_collision" title="Hash collision" class="mw-redirect">collisions</a> (identical outputs) are especially likely.</li>
+<li>Given a small, privileged set of inputs (e.g., <a href="http://en.wikipedia.org/wiki/Reserved_word" title="Reserved word">reserved words</a> for a <a href="Compiler.html" title="Compiler">compiler</a>), the permutation table can be adjusted so that those inputs yield distinct hash values, producing what is called a <a href="Perfect_hash_function.html" title="Perfect hash function">perfect hash function</a>.</li>
+</ul>
+<p>One of its drawbacks when compared with other hashing algorithms designed for 8-bit processors is the suggested 256 byte lookup table, which can be prohibitively large for a small <a href="Microcontroller.html" title="Microcontroller">microcontroller</a> with a program memory size on the order of hundreds of bytes. A workaround to this is to use a simple permutation function instead of a table stored in program memory. However, using a too simple function, such as <i>T[i] = 255-i</i> partly defeats the usability as a hash function as <a href="http://en.wikipedia.org/wiki/Anagram" title="Anagram">anagrams</a> will result in the same hash value; using a too complex function, on the other hand, will affect speed negatively.</p>
+<p>The algorithm can be described by the following <a href="Pseudocode.html" title="Pseudocode">pseudocode</a>, which computes the hash of message&#160;<i>C</i> using the permutation table&#160;<i>T</i>:</p>
+<pre>
+<code lang="pseudo" xml:lang="pseudo">h := 0
+<b>for each</b> c <b>in</b> C <b>loop</b>
+  index := h <b>xor</b> c
+  h := T[index]
+<b>end loop</b>
+<b>return</b> h
+</code>
+</pre>
+<h2><span class="mw-headline" id="C_implementation_to_generate_64-bit_.2816_hex_byte.29_hash">C implementation to generate 64-bit (16 hex byte) hash</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=edit&amp;section=1" title="Edit section: C implementation to generate 64-bit (16 hex byte) hash">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<ol>
+<li class="li1">
+<pre class="de1">
+   <span class="kw4">unsigned</span> <span class="kw4">char</span> xPear16<span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">char</span> <span class="sy0">*</span>x<span class="sy0">,</span> <span class="kw4">int</span> len<span class="br0">)</span> <span class="br0">{</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="kw4">int</span> h<span class="sy0">,</span> i<span class="sy0">,</span> j<span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="kw4">unsigned</span> <span class="kw4">char</span> ch<span class="sy0">,</span> hex<span class="br0">[</span><span class="nu0">20</span><span class="br0">]</span><span class="sy0">=</span><span class="st0">""</span><span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+ 
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="kw4">struct</span> <span class="br0">{</span> <span class="co1">// to store h values</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         <span class="kw4">int</span> a<span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="br0">}</span> hh<span class="br0">[</span><span class="nu0">8</span><span class="br0">]</span><span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="kw4">struct</span> <span class="br0">{</span> <span class="co1">// 256 values 0-255 in any (random) order suffices</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         <span class="kw4">int</span> a<span class="sy0">;</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="br0">}</span> T<span class="br0">[</span><span class="nu0">256</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">98</span><span class="sy0">,</span>  <span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">85</span><span class="sy0">,</span><span class="nu0">150</span><span class="sy0">,</span> <span class="nu0">36</span><span class="sy0">,</span> <span class="nu0">23</span><span class="sy0">,</span><span class="nu0">112</span><span class="sy0">,</span><span class="nu0">164</span><span class="sy0">,</span><span class="nu0">135</span><span class="sy0">,</span><span class="nu0">207</span><span class="sy0">,</span><span class="nu0">169</span><span class="sy0">,</span>  <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">26</span><span class="sy0">,</span> <span class="nu0">64</span><span class="sy0">,</span><span class="nu0">165</span><span class="sy0">,</span><span class="nu0">219</span><span class="sy0">,</span> <span class="co1">//  1</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">61</span><span class="sy0">,</span> <span class="nu0">20</span><span class="sy0">,</span> <span class="nu0">68</span><span class="sy0">,</span> <span class="nu0">89</span><span class="sy0">,</span><span class="nu0">130</span><span class="sy0">,</span> <span class="nu0">63</span><span class="sy0">,</span> <span class="nu0">52</span><span class="sy0">,</span><span class="nu0">102</span><span class="sy0">,</span> <span class="nu0">24</span><span class="sy0">,</span><span class="nu0">229</span><span class="sy0">,</span><span class="nu0">132</span><span class="sy0">,</span><span class="nu0">245</span><span class="sy0">,</span> <span class="nu0">80</span><span class="sy0">,</span><span class="nu0">216</span><span class="sy0">,</span><span class="nu0">195</span><span class="sy0">,</span><span class="nu0">115</span><span class="sy0">,</span> <span class="co1">//  2</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">90</span><span class="sy0">,</span><span class="nu0">168</span><span class="sy0">,</span><span class="nu0">156</span><span class="sy0">,</span><span class="nu0">203</span><span class="sy0">,</span><span class="nu0">177</span><span class="sy0">,</span><span class="nu0">120</span><span class="sy0">,</span>  <span class="nu0">2</span><span class="sy0">,</span><span class="nu0">190</span><span class="sy0">,</span><span class="nu0">188</span><span class="sy0">,</span>  <span class="nu0">7</span><span class="sy0">,</span><span class="nu0">100</span><span class="sy0">,</span><span class="nu0">185</span><span class="sy0">,</span><span class="nu0">174</span><span class="sy0">,</span><span class="nu0">243</span><span class="sy0">,</span><span class="nu0">162</span><span class="sy0">,</span> <span class="nu0">10</span><span class="sy0">,</span> <span class="co1">//  3</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">237</span><span class="sy0">,</span> <span class="nu0">18</span><span class="sy0">,</span><span class="nu0">253</span><span class="sy0">,</span><span class="nu0">225</span><span class="sy0">,</span>  <span class="nu0">8</span><span class="sy0">,</span><span class="nu0">208</span><span class="sy0">,</span><span class="nu0">172</span><span class="sy0">,</span><span class="nu0">244</span><span class="sy0">,</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">126</span><span class="sy0">,</span><span class="nu0">101</span><span class="sy0">,</span> <span class="nu0">79</span><span class="sy0">,</span><span class="nu0">145</span><span class="sy0">,</span><span class="nu0">235</span><span class="sy0">,</span><span class="nu0">228</span><span class="sy0">,</span><span class="nu0">121</span><span class="sy0">,</span> <span class="co1">//  4</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="nu0">123</span><span class="sy0">,</span><span class="nu0">251</span><span class="sy0">,</span> <span class="nu0">67</span><span class="sy0">,</span><span class="nu0">250</span><span class="sy0">,</span><span class="nu0">161</span><span class="sy0">,</span>  <span class="nu0">0</span><span class="sy0">,</span><span class="nu0">107</span><span class="sy0">,</span> <span class="nu0">97</span><span class="sy0">,</span><span class="nu0">241</span><span class="sy0">,</span><span class="nu0">111</span><span class="sy0">,</span><span class="nu0">181</span><span class="sy0">,</span> <span class="nu0">82</span><span class="sy0">,</span><span class="nu0">249</span><span class="sy0">,</span> <span class="nu0">33</span><span class="sy0">,</span> <span class="nu0">69</span><span class="sy0">,</span> <span class="nu0">55</span><span class="sy0">,</span> <span class="co1">//  5</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">59</span><span class="sy0">,</span><span class="nu0">153</span><span class="sy0">,</span> <span class="nu0">29</span><span class="sy0">,</span>  <span class="nu0">9</span><span class="sy0">,</span><span class="nu0">213</span><span class="sy0">,</span><span class="nu0">167</span><span class="sy0">,</span> <span class="nu0">84</span><span class="sy0">,</span> <span class="nu0">93</span><span class="sy0">,</span> <span class="nu0">30</span><span class="sy0">,</span> <span class="nu0">46</span><span class="sy0">,</span> <span class="nu0">94</span><span class="sy0">,</span> <span class="nu0">75</span><span class="sy0">,</span><span class="nu0">151</span><span class="sy0">,</span><span class="nu0">114</span><span class="sy0">,</span> <span class="nu0">73</span><span class="sy0">,</span><span class="nu0">222</span><span class="sy0">,</span> <span class="co1">//  6</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">197</span><span class="sy0">,</span> <span class="nu0">96</span><span class="sy0">,</span><span class="nu0">210</span><span class="sy0">,</span> <span class="nu0">45</span><span class="sy0">,</span> <span class="nu0">16</span><span class="sy0">,</span><span class="nu0">227</span><span class="sy0">,</span><span class="nu0">248</span><span class="sy0">,</span><span class="nu0">202</span><span class="sy0">,</span> <span class="nu0">51</span><span class="sy0">,</span><span class="nu0">152</span><span class="sy0">,</span><span class="nu0">252</span><span class="sy0">,</span><span class="nu0">125</span><span class="sy0">,</span> <span class="nu0">81</span><span class="sy0">,</span><span class="nu0">206</span><span class="sy0">,</span><span class="nu0">215</span><span class="sy0">,</span><span class="nu0">186</span><span class="sy0">,</span> <span class="co1">//  7</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">39</span><span class="sy0">,</span><span class="nu0">158</span><span class="sy0">,</span><span class="nu0">178</span><span class="sy0">,</span><span class="nu0">187</span><span class="sy0">,</span><span class="nu0">131</span><span class="sy0">,</span><span class="nu0">136</span><span class="sy0">,</span>  <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">49</span><span class="sy0">,</span> <span class="nu0">50</span><span class="sy0">,</span> <span class="nu0">17</span><span class="sy0">,</span><span class="nu0">141</span><span class="sy0">,</span> <span class="nu0">91</span><span class="sy0">,</span> <span class="nu0">47</span><span class="sy0">,</span><span class="nu0">129</span><span class="sy0">,</span> <span class="nu0">60</span><span class="sy0">,</span> <span class="nu0">99</span><span class="sy0">,</span> <span class="co1">//  8</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">154</span><span class="sy0">,</span> <span class="nu0">35</span><span class="sy0">,</span> <span class="nu0">86</span><span class="sy0">,</span><span class="nu0">171</span><span class="sy0">,</span><span class="nu0">105</span><span class="sy0">,</span> <span class="nu0">34</span><span class="sy0">,</span> <span class="nu0">38</span><span class="sy0">,</span><span class="nu0">200</span><span class="sy0">,</span><span class="nu0">147</span><span class="sy0">,</span> <span class="nu0">58</span><span class="sy0">,</span> <span class="nu0">77</span><span class="sy0">,</span><span class="nu0">118</span><span class="sy0">,</span><span class="nu0">173</span><span class="sy0">,</span><span class="nu0">246</span><span class="sy0">,</span> <span class="nu0">76</span><span class="sy0">,</span><span class="nu0">254</span><span class="sy0">,</span> <span class="co1">//  9</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="nu0">133</span><span class="sy0">,</span><span class="nu0">232</span><span class="sy0">,</span><span class="nu0">196</span><span class="sy0">,</span><span class="nu0">144</span><span class="sy0">,</span><span class="nu0">198</span><span class="sy0">,</span><span class="nu0">124</span><span class="sy0">,</span> <span class="nu0">53</span><span class="sy0">,</span>  <span class="nu0">4</span><span class="sy0">,</span><span class="nu0">108</span><span class="sy0">,</span> <span class="nu0">74</span><span class="sy0">,</span><span class="nu0">223</span><span class="sy0">,</span><span class="nu0">234</span><span class="sy0">,</span><span class="nu0">134</span><span class="sy0">,</span><span class="nu0">230</span><span class="sy0">,</span><span class="nu0">157</span><span class="sy0">,</span><span class="nu0">139</span><span class="sy0">,</span> <span class="co1">// 10</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">189</span><span class="sy0">,</span><span class="nu0">205</span><span class="sy0">,</span><span class="nu0">199</span><span class="sy0">,</span><span class="nu0">128</span><span class="sy0">,</span><span class="nu0">176</span><span class="sy0">,</span> <span class="nu0">19</span><span class="sy0">,</span><span class="nu0">211</span><span class="sy0">,</span><span class="nu0">236</span><span class="sy0">,</span><span class="nu0">127</span><span class="sy0">,</span><span class="nu0">192</span><span class="sy0">,</span><span class="nu0">231</span><span class="sy0">,</span> <span class="nu0">70</span><span class="sy0">,</span><span class="nu0">233</span><span class="sy0">,</span> <span class="nu0">88</span><span class="sy0">,</span><span class="nu0">146</span><span class="sy0">,</span> <span class="nu0">44</span><span class="sy0">,</span> <span class="co1">// 11</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">183</span><span class="sy0">,</span><span class="nu0">201</span><span class="sy0">,</span> <span class="nu0">22</span><span class="sy0">,</span> <span class="nu0">83</span><span class="sy0">,</span> <span class="nu0">13</span><span class="sy0">,</span><span class="nu0">214</span><span class="sy0">,</span><span class="nu0">116</span><span class="sy0">,</span><span class="nu0">109</span><span class="sy0">,</span><span class="nu0">159</span><span class="sy0">,</span> <span class="nu0">32</span><span class="sy0">,</span> <span class="nu0">95</span><span class="sy0">,</span><span class="nu0">226</span><span class="sy0">,</span><span class="nu0">140</span><span class="sy0">,</span><span class="nu0">220</span><span class="sy0">,</span> <span class="nu0">57</span><span class="sy0">,</span> <span class="nu0">12</span><span class="sy0">,</span> <span class="co1">// 12</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="nu0">221</span><span class="sy0">,</span> <span class="nu0">31</span><span class="sy0">,</span><span class="nu0">209</span><span class="sy0">,</span><span class="nu0">182</span><span class="sy0">,</span><span class="nu0">143</span><span class="sy0">,</span> <span class="nu0">92</span><span class="sy0">,</span><span class="nu0">149</span><span class="sy0">,</span><span class="nu0">184</span><span class="sy0">,</span><span class="nu0">148</span><span class="sy0">,</span> <span class="nu0">62</span><span class="sy0">,</span><span class="nu0">113</span><span class="sy0">,</span> <span class="nu0">65</span><span class="sy0">,</span> <span class="nu0">37</span><span class="sy0">,</span> <span class="nu0">27</span><span class="sy0">,</span><span class="nu0">106</span><span class="sy0">,</span><span class="nu0">166</span><span class="sy0">,</span> <span class="co1">// 13</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+        <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">14</span><span class="sy0">,</span><span class="nu0">204</span><span class="sy0">,</span> <span class="nu0">72</span><span class="sy0">,</span> <span class="nu0">21</span><span class="sy0">,</span> <span class="nu0">41</span><span class="sy0">,</span> <span class="nu0">56</span><span class="sy0">,</span> <span class="nu0">66</span><span class="sy0">,</span> <span class="nu0">28</span><span class="sy0">,</span><span class="nu0">193</span><span class="sy0">,</span> <span class="nu0">40</span><span class="sy0">,</span><span class="nu0">217</span><span class="sy0">,</span> <span class="nu0">25</span><span class="sy0">,</span> <span class="nu0">54</span><span class="sy0">,</span><span class="nu0">179</span><span class="sy0">,</span><span class="nu0">117</span><span class="sy0">,</span> <span class="co1">// 14</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="nu0">238</span><span class="sy0">,</span> <span class="nu0">87</span><span class="sy0">,</span><span class="nu0">240</span><span class="sy0">,</span><span class="nu0">155</span><span class="sy0">,</span><span class="nu0">180</span><span class="sy0">,</span><span class="nu0">170</span><span class="sy0">,</span><span class="nu0">242</span><span class="sy0">,</span><span class="nu0">212</span><span class="sy0">,</span><span class="nu0">191</span><span class="sy0">,</span><span class="nu0">163</span><span class="sy0">,</span> <span class="nu0">78</span><span class="sy0">,</span><span class="nu0">218</span><span class="sy0">,</span><span class="nu0">137</span><span class="sy0">,</span><span class="nu0">194</span><span class="sy0">,</span><span class="nu0">175</span><span class="sy0">,</span><span class="nu0">110</span><span class="sy0">,</span> <span class="co1">// 15</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+       <span class="nu0">43</span><span class="sy0">,</span><span class="nu0">119</span><span class="sy0">,</span><span class="nu0">224</span><span class="sy0">,</span> <span class="nu0">71</span><span class="sy0">,</span><span class="nu0">122</span><span class="sy0">,</span><span class="nu0">142</span><span class="sy0">,</span> <span class="nu0">42</span><span class="sy0">,</span><span class="nu0">160</span><span class="sy0">,</span><span class="nu0">104</span><span class="sy0">,</span> <span class="nu0">48</span><span class="sy0">,</span><span class="nu0">247</span><span class="sy0">,</span><span class="nu0">103</span><span class="sy0">,</span> <span class="nu0">15</span><span class="sy0">,</span> <span class="nu0">11</span><span class="sy0">,</span><span class="nu0">138</span><span class="sy0">,</span><span class="nu0">239</span>  <span class="co1">// 16</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="br0">}</span><span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+ 
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      ch<span class="sy0">=</span>x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">;</span> <span class="co1">// save first byte</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="kw1">for</span> <span class="br0">(</span>j<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> j<span class="sy0">&lt;</span><span class="nu0">8</span><span class="sy0">;</span> j<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         <span class="co1">// standard Pearson hash (output is h)</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         h<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         <span class="kw1">for</span> <span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span> i<span class="sy0">&lt;</span>len<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+            h<span class="sy0">=</span>T<span class="br0">[</span>h <span class="sy0">^</span> x<span class="br0">[</span>i<span class="br0">]</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">;</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+         <span class="br0">}</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         hh<span class="br0">[</span>j<span class="br0">]</span>.<span class="me1">a</span><span class="sy0">=</span>h<span class="sy0">;</span> <span class="co1">// store result</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">=</span>x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">+</span><span class="nu0">1</span><span class="sy0">;</span> <span class="co1">// increment first data byte by 1</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="br0">}</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      x<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span><span class="sy0">=</span>ch<span class="sy0">;</span> <span class="co1">// restore first byte</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+      <span class="co1">// concatenate the 8 stored values of h</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      wsprintf<span class="br0">(</span>hex<span class="sy0">,</span><span class="st0">"%02X%02X%02X%02X%02X%02X%02X%02X"</span><span class="sy0">,</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         hh<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span> hh<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         hh<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span> hh<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+         hh<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span> hh<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span>
+</pre></li>
+<li class="li2">
+<pre class="de2">
+         hh<span class="br0">[</span><span class="nu0">6</span><span class="br0">]</span>.<span class="me1">a</span><span class="sy0">,</span> hh<span class="br0">[</span><span class="nu0">7</span><span class="br0">]</span>.<span class="me1">a</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+      <span class="kw1">return</span> hex<span class="sy0">;</span> <span class="co1">// output 64-bit 16 hex bytes hash</span>
+</pre></li>
+<li class="li1">
+<pre class="de1">
+   <span class="br0">}</span>
+</pre></li>
+</ol>
+</div>
+</div>
+<p>For a given string or chunk of data, Pearson's original algorithm produces only an 8 bit byte or integer, 0-255. But the algorithm makes it extremely easy to generate whatever length of hash is desired. The scheme used above is a very straightforward implementation of the algorithm. As Pearson noted: a change to any bit in the string causes his algorithm to create a completely different hash (0-255). In the code above, following every completion of the inner loop, the first byte of the string is incremented by one. x[0]=x[0]+1</p>
+<p>Every time that simple change to the first byte of the data is made, a different Pearson hash, h, is generated. xPear16 builds a 16 hex byte hash by concatenating a series of 8-bit Pearson (h) hashes. Instead of producing a value from 0 to 255, it generates a value from 0 to 18,446,744,073,709,551,615.</p>
+<p>Pearson's algorithm can be made to generate hashes of any desired length, simply by adding 1 to the first byte of the string, re-computing h for the string, and concatenating the results. Thus the same core logic can be made to generate 32-bit or 128-bit hashes.</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=edit&amp;section=2" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-acmref-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-acmref_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-acmref_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFPearson1990" class="citation">Pearson, Peter K. (June 1990), <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=78978">"Fast Hashing of Variable-Length Text Strings"</a>, <i><a href="Communications_of_the_ACM.html" title="Communications of the ACM">Communications of the ACM</a></i> <b>33</b> (6): 677, <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F78973.78978">10.1145/78973.78978</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APearson+hashing&amp;rft.atitle=Fast+Hashing+of+Variable-Length+Text+Strings&amp;rft.aufirst=Peter+K.&amp;rft.aulast=Pearson&amp;rft.au=Pearson%2C+Peter+K.&amp;rft.date=June+1990&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D78978&amp;rft_id=info%3Adoi%2F10.1145%2F78973.78978&amp;rft.issue=6&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=677&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=33" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://cs.mwsu.edu/~griffin/courses/2133/downloads/Spring11/p677-pearson.pdf">Online PDF file of the CACM paper</a>.</span></li>
+</ol>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1080
+CPU time usage: 0.136 seconds
+Real time usage: 0.161 seconds
+Preprocessor visited node count: 131/1000000
+Preprocessor generated node count: 1409/1500000
+Post‐expand include size: 2616/2048000 bytes
+Template argument size: 0/2048000 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/500
+Lua time usage: 0.013/10.000 seconds
+Lua memory usage: 813 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:101219-0!*!0!!*!*!* and timestamp 20140319053537
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;oldid=586534035">http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;oldid=586534035</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Error_detection_and_correction" title="Category:Error detection and correction">Error detection and correction</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Hash_functions" title="Category:Hash functions">Hash functions</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pearson+hashing&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pearson+hashing" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Pearson_hashing.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Pearson_hashing"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Pearson_hashing.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Pearson_hashing" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Pearson_hashing" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;oldid=586534035" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q7158377" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Pearson_hashing&amp;id=586534035" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Pearson+hashing">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Pearson+hashing&amp;oldid=586534035&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Pearson_hashing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q7158377#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 December 2013 at 19:23.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Pearson_hashing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1182 in 0.295 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pearson_hashing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:08 GMT -->
+</html>

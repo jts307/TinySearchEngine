@@ -1,0 +1,474 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Doubly_linked_list.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Doubly_linked_list by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Doubly linked list - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Doubly_linked_list" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Doubly_linked_list.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Doubly_linked_list","wgTitle":"Doubly linked list","wgCurRevisionId":600157549,"wgRevisionId":600157549,"wgArticleId":4731859,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from January 2014","All articles needing additional references","Linked lists"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Doubly_linked_list","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q5300179"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Doubly_linked_list skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Doubly linked list</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(January 2014)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>doubly-linked list</b> is a <a href="Linked_data_structure.html" title="Linked data structure">linked data structure</a> that consists of a set of sequentially linked <a href="http://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">records</a> called <a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">nodes</a>. Each node contains two <a href="http://en.wikipedia.org/wiki/Field_(computer_science)" title="Field (computer science)">fields</a>, called <i>links</i>, that are <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> to the previous and to the next node in the sequence of nodes. The beginning and ending nodes' <b>previous</b> and <b>next</b> links, respectively, point to some kind of terminator, typically a <a href="Sentinel_node.html" title="Sentinel node">sentinel node</a> or <a href="Null_pointer.html" title="Null pointer" class="mw-redirect">null</a>, to facilitate traversal of the list. If there is only one sentinel node, then the list is circularly linked via the sentinel node. It can be conceptualized as two <a href="Linked_list.html" title="Linked list">singly linked lists</a> formed from the same data items, but in opposite sequential orders.</p>
+<center><a href="http://en.wikipedia.org/wiki/File:Doubly-linked-list.svg" class="image"><img alt="Doubly-linked-list.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/610px-Doubly-linked-list.svg.png" width="610" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/915px-Doubly-linked-list.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Doubly-linked-list.svg/1220px-Doubly-linked-list.svg.png 2x" /></a><br />
+<small>A doubly-linked list whose nodes contain three fields: an integer value, the link to the next node, and the link to the previous node.</small></center>
+<p>The two node links allow traversal of the list in either direction. While adding or removing a node in a doubly-linked list requires changing more links than the same operations on a singly linked list, the operations are simpler and potentially more efficient (for nodes other than first nodes) because there is no need to keep track of the previous node during traversal or no need to traverse the list to find the previous node, so that its link can be modified.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Nomenclature_and_implementation"><span class="tocnumber">1</span> <span class="toctext">Nomenclature and implementation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_algorithms"><span class="tocnumber">2</span> <span class="toctext">Basic algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Open_doubly-linked_lists"><span class="tocnumber">2.1</span> <span class="toctext">Open doubly-linked lists</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Traversing_the_list"><span class="tocnumber">2.1.1</span> <span class="toctext">Traversing the list</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Inserting_a_node"><span class="tocnumber">2.1.2</span> <span class="toctext">Inserting a node</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Removing_a_node"><span class="tocnumber">2.1.3</span> <span class="toctext">Removing a node</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Circular_doubly-linked_lists"><span class="tocnumber">2.2</span> <span class="toctext">Circular doubly-linked lists</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Traversing_the_list_2"><span class="tocnumber">2.2.1</span> <span class="toctext">Traversing the list</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Inserting_a_node_2"><span class="tocnumber">2.2.2</span> <span class="toctext">Inserting a node</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Advanced_concepts"><span class="tocnumber">3</span> <span class="toctext">Advanced concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Asymmetric_doubly-linked_list"><span class="tocnumber">3.1</span> <span class="toctext">Asymmetric doubly-linked list</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Inserting_a_node_3"><span class="tocnumber">3.1.1</span> <span class="toctext">Inserting a node</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Deleting_a_node"><span class="tocnumber">3.1.2</span> <span class="toctext">Deleting a node</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Nomenclature_and_implementation">Nomenclature and implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=1" title="Edit section: Nomenclature and implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first and last nodes of a doubly-linked list are immediately accessible (i.e., accessible without traversal, and usually called <i>head</i> and <i>tail</i>) and therefore allow traversal of the list from the beginning or end of the list, respectively: e.g., traversing the list from beginning to end, or from end to beginning, in a search of the list for a node with specific data value. Any node of a doubly-linked list, once obtained, can be used to begin a new traversal of the list, in either direction (towards beginning or end), from the given node.</p>
+<p>The link fields of a doubly-linked list node are often called <b>next</b> and <b>previous</b> or <b>forward</b> and <b>backward</b>. The references stored in the link fields are usually implemented as <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a>, but (as in any linked data structure) they may also be address offsets or indices into an <a href="Array_data_structure.html" title="Array data structure">array</a> where the nodes live.</p>
+<h2><span class="mw-headline" id="Basic_algorithms">Basic algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=2" title="Edit section: Basic algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Open_doubly-linked_lists">Open doubly-linked lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=3" title="Edit section: Open doubly-linked lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>
+<b>record</b> <i>DoublyLinkedNode</i> {
+    prev <i>// A reference to the previous node</i>
+    next <i>// A reference to the next node</i>
+    data <i>// Data or a reference to data</i>
+ }
+</pre>
+<pre>
+<b>record</b> <i>DoublyLinkedList</i> {
+     <i>DoublyLinkedNode</i> firstNode   <i>// points to first node of list</i>
+      <i>DoublyLinkedNode</i> lastNode    <i>// points to last node of list</i>
+ }
+</pre>
+<h4><span class="mw-headline" id="Traversing_the_list">Traversing the list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=4" title="Edit section: Traversing the list">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Traversal of a doubly-linked list can be in either direction. In fact, the direction of traversal can change many times, if desired. <b>Traversal</b> is often called <b><a href="Iteration.html" title="Iteration">iteration</a></b>, but that choice of terminology is unfortunate, for <b>iteration</b> has well-defined semantics (e.g., in mathematics) which are not analogous to <b>traversal</b>.</p>
+<p><i>Forwards</i></p>
+<pre>
+node  := list.firstNode
+ <b>while</b> node ≠ <b>null</b>
+     &lt;do something with node.data&gt;
+     node  := node.next
+</pre>
+<p><i>Backwards</i></p>
+<pre>
+node  := list.lastNode
+ <b>while</b> node ≠ <b>null</b>
+     &lt;do something with node.data&gt;
+     node  := node.prev
+</pre>
+<h4><span class="mw-headline" id="Inserting_a_node">Inserting a node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=5" title="Edit section: Inserting a node">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>These symmetric functions insert a node either after or before a given node:</p>
+<pre>
+<b>function</b> insertAfter(<i>List</i> list, <i>Node</i> node, <i>Node</i> newNode)
+     newNode.prev  := node
+     newNode.next  := node.next
+     <b>if</b> node.next == <b>null</b>
+         list.lastNode  := newNode
+     <b>else</b>
+         node.next.prev  := newNode
+     node.next  := newNode
+</pre>
+<pre>
+<b>function</b> insertBefore(<i>List</i> list, <i>Node</i> node, <i>Node</i> newNode)
+     newNode.prev  := node.prev
+     newNode.next  := node
+     <b>if</b> node.prev == <b>null</b>
+         list.firstNode  := newNode
+     <b>else</b>
+         node.prev.next  := newNode
+     node.prev  := newNode
+</pre>
+<p>We also need a function to insert a node at the beginning of a possibly empty list:</p>
+<pre>
+<b>function</b> insertBeginning(<i>List</i> list, <i>Node</i> newNode)
+     <b>if</b> list.firstNode == <b>null</b>
+         list.firstNode  := newNode
+         list.lastNode   := newNode
+         newNode.prev  := null
+         newNode.next  := null
+     <b>else</b>
+         insertBefore(list, list.firstNode, newNode)
+</pre>
+<p>A symmetric function inserts at the end:</p>
+<pre>
+<b>function</b> insertEnd(<i>List</i> list, <i>Node</i> newNode)
+     <b>if</b> list.lastNode == <b>null</b>
+         insertBeginning(list, newNode)
+     <b>else</b>
+         insertAfter(list, list.lastNode, newNode)
+</pre>
+<h4><span class="mw-headline" id="Removing_a_node">Removing a node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=6" title="Edit section: Removing a node">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Removal of a node is easier than insertion, but requires special handling if the node to be removed is the <i>firstNode</i> or <i>lastNode</i>:</p>
+<pre>
+<b>function</b> remove(<i>List</i> list, <i>Node</i> node)
+   <b>if</b> node.prev == <b>null</b>
+       list.firstNode  := node.next
+   <b>else</b>
+       node.prev.next  := node.next
+   <b>if</b> node.next == <b>null</b>
+       list.lastNode  := node.prev
+   <b>else</b>
+       node.next.prev  := node.prev
+   <b>destroy</b> node
+</pre>
+<p>One subtle consequence of the above procedure is that deleting the last node of a list sets both <i>firstNode</i> and <i>lastNode</i> to <i>null</i>, and so it handles removing the last node from a one-element list correctly. Notice that we also don't need separate "removeBefore" or "removeAfter" methods, because in a doubly-linked list we can just use "remove(node.prev)" or "remove(node.next)" where these are valid. This also assumes that the node being removed is guaranteed to exist. If the node does not exist in this list, then some error handling would be required.</p>
+<h3><span class="mw-headline" id="Circular_doubly-linked_lists">Circular doubly-linked lists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=7" title="Edit section: Circular doubly-linked lists">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Traversing_the_list_2">Traversing the list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=8" title="Edit section: Traversing the list">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Assuming that <i>someNode</i> is some node in a non-empty list, this code traverses through that list starting with <i>someNode</i> (any node will do):</p>
+<p><i>Forwards</i></p>
+<pre>
+node  := someNode
+ <b>do</b>
+     do something with node.value
+     node  := node.next
+ <b>while</b> node ≠ someNode
+</pre>
+<p><i>Backwards</i></p>
+<pre>
+node  := someNode
+ <b>do</b>
+     do something with node.value
+     node  := node.prev
+ <b>while</b> node ≠ someNode
+</pre>
+<p>Notice the postponing of the test to the end of the loop. This is important for the case where the list contains only the single node <i>someNode</i>.</p>
+<h4><span class="mw-headline" id="Inserting_a_node_2">Inserting a node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=9" title="Edit section: Inserting a node">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>This simple function inserts a node into a doubly-linked circularly linked list after a given element:</p>
+<pre>
+<b>function</b> insertAfter(<i>Node</i> node, <i>Node</i> newNode)
+     newNode.next  := node.next
+     newNode.prev  := node
+     node.next.prev  := newNode
+     node.next       := newNode
+</pre>
+<p>To do an "insertBefore", we can simply "insertAfter(node.prev, newNode)".</p>
+<p>Inserting an element in a possibly empty list requires a special function:</p>
+<pre>
+<b>function</b> insertEnd(<i>List</i> list, <i>Node</i> node)
+     <b>if</b> list.lastNode == <b>null</b>
+         node.prev := node
+         node.next := node
+     <b>else</b>
+         insertAfter(list.lastNode, node)
+     list.lastNode := node
+</pre>
+<p>To insert at the beginning we simply "insertAfter(list.lastNode, node)".</p>
+<p>Finally, removing a node must deal with the case where the list empties:</p>
+<pre>
+<b>function</b> remove(<i>List</i> list, <i>Node</i> node)
+     <b>if</b> node.next == node
+         list.lastNode := <i>null</i>
+     <b>else</b>
+         node.next.prev := node.prev
+         node.prev.next := node.next
+         <b>if</b> node == list.lastNode
+             list.lastNode := node.prev;
+     <b>destroy</b> node
+</pre>
+<p><br /></p>
+<h2><span class="mw-headline" id="Advanced_concepts">Advanced concepts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=10" title="Edit section: Advanced concepts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Asymmetric_doubly-linked_list">Asymmetric doubly-linked list</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=11" title="Edit section: Asymmetric doubly-linked list">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An asymmetric doubly-linked list is somewhere between the singly-linked list and the regular doubly-linked list. It shares some features with the singly linked list (single-direction traversal) and others from the doubly-linked list (ease of modification)</p>
+<p>It is a list where each node's <i>previous</i> link points not to the previous node, but to the link to itself. While this makes little difference between nodes (it just points to an offset within the previous node), it changes the head of the list: It allows the first node to modify the <i>firstNode</i> link easily.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>As long as a node is in a list, its <i>previous</i> link is never null.</p>
+<h4><span class="mw-headline" id="Inserting_a_node_3">Inserting a node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=12" title="Edit section: Inserting a node">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To insert a node before another, we change the link that pointed to the old node, using the <i>prev</i> link; then set the new node's <i>next</i> link to point to the old node, and change that node's <i>prev</i> link accordingly.</p>
+<pre>
+<b>function</b> insertBefore(<i>Node</i> node, <i>Node</i> newNode)
+     <b>if</b> node.prev == <b>null</b>
+          <b>error</b> "The node is not in a list"
+     newNode.prev  := node.prev
+     atAddress(newNode.prev)  := newNode
+     newNode.next  := node
+     node.prev = addressOf(newNode.next)
+</pre>
+<pre>
+<b>function</b> insertAfter(<i>Node</i> node, <i>Node</i> newNode)
+     newNode.next  := node.next
+     <b>if</b> newNode.next != <b>null</b>
+         newNode.next.prev = addressOf(newNode.next)
+     node.next  := newNode
+     newNode.prev  := addressOf(node.next)
+</pre>
+<h4><span class="mw-headline" id="Deleting_a_node">Deleting a node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=13" title="Edit section: Deleting a node">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To remove a node, we simply modify the link pointed by <i>prev</i>, regardless of whether the node was the first one of the list.</p>
+<pre>
+<b>function</b> remove(<i>Node</i> node)
+     atAddress(node.prev)  := node.next
+     <b>if</b> node.next != <b>null</b>
+         node.next.prev = node.prev
+     <b>destroy</b> node
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SLIP_(programming_language)" title="SLIP (programming language)">SLIP (programming language)</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit&amp;section=15" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.codeofhonor.com/blog/avoiding-game-crashes-related-to-linked-lists">http://www.codeofhonor.com/blog/avoiding-game-crashes-related-to-linked-lists</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://github.com/webcoyote/coho/blob/master/Base/List.h">https://github.com/webcoyote/coho/blob/master/Base/List.h</a></span></li>
+</ol>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1215
+CPU time usage: 0.228 seconds
+Real time usage: 0.262 seconds
+Preprocessor visited node count: 195/1000000
+Preprocessor generated node count: 847/1500000
+Post‐expand include size: 3597/2048000 bytes
+Template argument size: 12/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 2/500
+Lua time usage: 0.030/10.000 seconds
+Lua memory usage: 805 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4731859-0!*!0!!en!4!* and timestamp 20140325065401
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;oldid=600157549">http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;oldid=600157549</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Linked_lists" title="Category:Linked lists">Linked lists</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_January_2014" title="Category:Articles needing additional references from January 2014">Articles needing additional references from January 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Doubly+linked+list&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Doubly+linked+list" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Doubly_linked_list.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Doubly_linked_list"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Doubly_linked_list.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Doubly_linked_list" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Doubly_linked_list" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;oldid=600157549" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q5300179" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Doubly_linked_list&amp;id=600157549" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Doubly+linked+list">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Doubly+linked+list&amp;oldid=600157549&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Doubly_linked_list&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/فهرست_پیوندی_دوطرفه" title="فهرست پیوندی دوطرفه – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Двобічно_зв%27язаний_список" title="Двобічно зв'язаний список – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/双向链表" title="双向链表 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q5300179#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 March 2014 at 13:59.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Doubly_linked_list" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1019 in 0.420 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Doubly_linked_list by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:14 GMT -->
+</html>

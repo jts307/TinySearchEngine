@@ -1,0 +1,581 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Switch_statement.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Switch_statement by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Switch statement - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Switch_statement" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Switch_statement.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Switch_statement","wgTitle":"Switch statement","wgCurRevisionId":596555414,"wgRevisionId":596555414,"wgArticleId":1831479,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from April 2013","All articles needing additional references","Wikipedia articles needing style editing from April 2013","Articles containing pro and con lists","All articles with unsourced statements","Articles with unsourced statements from October 2011","Conditional constructs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Switch_statement","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q838092"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-java {line-height: normal;}
+.source-java li, .source-java pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.java.source-java .de1, .java.source-java .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.java.source-java  {font-family:monospace;}
+.java.source-java .imp {font-weight: bold; color: red;}
+.java.source-java li, .java.source-java .li1 {font-weight: normal; vertical-align:top;}
+.java.source-java .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.java.source-java .li2 {font-weight: bold; vertical-align:top;}
+.java.source-java .kw1 {color: #000000; font-weight: bold;}
+.java.source-java .kw2 {color: #000066; font-weight: bold;}
+.java.source-java .kw3 {color: #003399;}
+.java.source-java .kw4 {color: #000066; font-weight: bold;}
+.java.source-java .co1 {color: #666666; font-style: italic;}
+.java.source-java .co2 {color: #006699;}
+.java.source-java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java.source-java .coMULTI {color: #666666; font-style: italic;}
+.java.source-java .es0 {color: #000099; font-weight: bold;}
+.java.source-java .br0 {color: #009900;}
+.java.source-java .sy0 {color: #339933;}
+.java.source-java .st0 {color: #0000ff;}
+.java.source-java .nu0 {color: #cc66cc;}
+.java.source-java .me1 {color: #006633;}
+.java.source-java .me2 {color: #006633;}
+.java.source-java .ln-xtra, .java.source-java li.ln-xtra, .java.source-java div.ln-xtra {background-color: #ffc;}
+.java.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-php {line-height: normal;}
+.source-php li, .source-php pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for php
+ * CSS class: source-php, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.php.source-php .de1, .php.source-php .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.php.source-php  {font-family:monospace;}
+.php.source-php .imp {font-weight: bold; color: red;}
+.php.source-php li, .php.source-php .li1 {font-weight: normal; vertical-align:top;}
+.php.source-php .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.php.source-php .li2 {font-weight: bold; vertical-align:top;}
+.php.source-php .kw1 {color: #b1b100;}
+.php.source-php .kw2 {color: #000000; font-weight: bold;}
+.php.source-php .kw3 {color: #990000;}
+.php.source-php .kw4 {color: #009900; font-weight: bold;}
+.php.source-php .co1 {color: #666666; font-style: italic;}
+.php.source-php .co2 {color: #666666; font-style: italic;}
+.php.source-php .co3 {color: #0000cc; font-style: italic;}
+.php.source-php .co4 {color: #009933; font-style: italic;}
+.php.source-php .coMULTI {color: #666666; font-style: italic;}
+.php.source-php .es0 {color: #000099; font-weight: bold;}
+.php.source-php .es1 {color: #000099; font-weight: bold;}
+.php.source-php .es2 {color: #660099; font-weight: bold;}
+.php.source-php .es3 {color: #660099; font-weight: bold;}
+.php.source-php .es4 {color: #006699; font-weight: bold;}
+.php.source-php .es5 {color: #006699; font-weight: bold; font-style: italic;}
+.php.source-php .es6 {color: #009933; font-weight: bold;}
+.php.source-php .es_h {color: #000099; font-weight: bold;}
+.php.source-php .br0 {color: #009900;}
+.php.source-php .sy0 {color: #339933;}
+.php.source-php .sy1 {color: #000000; font-weight: bold;}
+.php.source-php .st0 {color: #0000ff;}
+.php.source-php .st_h {color: #0000ff;}
+.php.source-php .nu0 {color: #cc66cc;}
+.php.source-php .nu8 {color: #208080;}
+.php.source-php .nu12 {color: #208080;}
+.php.source-php .nu19 {color:#800080;}
+.php.source-php .me1 {color: #004000;}
+.php.source-php .me2 {color: #004000;}
+.php.source-php .re0 {color: #000088;}
+.php.source-php .ln-xtra, .php.source-php li.ln-xtra, .php.source-php div.ln-xtra {background-color: #ffc;}
+.php.source-php span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-ruby {line-height: normal;}
+.source-ruby li, .source-ruby pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for ruby
+ * CSS class: source-ruby, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.ruby.source-ruby .de1, .ruby.source-ruby .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.ruby.source-ruby  {font-family:monospace;}
+.ruby.source-ruby .imp {font-weight: bold; color: red;}
+.ruby.source-ruby li, .ruby.source-ruby .li1 {font-weight: normal; vertical-align:top;}
+.ruby.source-ruby .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.ruby.source-ruby .li2 {font-weight: bold; vertical-align:top;}
+.ruby.source-ruby .kw1 {color:#9966CC; font-weight:bold;}
+.ruby.source-ruby .kw2 {color:#0000FF; font-weight:bold;}
+.ruby.source-ruby .kw3 {color:#CC0066; font-weight:bold;}
+.ruby.source-ruby .kw4 {color:#CC00FF; font-weight:bold;}
+.ruby.source-ruby .co1 {color:#008000; font-style:italic;}
+.ruby.source-ruby .co4 {color: #cc0000; font-style: italic;}
+.ruby.source-ruby .coMULTI {color:#000080; font-style:italic;}
+.ruby.source-ruby .es0 {color:#000099;}
+.ruby.source-ruby .br0 {color:#006600; font-weight:bold;}
+.ruby.source-ruby .sy0 {color:#006600; font-weight:bold;}
+.ruby.source-ruby .st0 {color:#996600;}
+.ruby.source-ruby .nu0 {color:#006666;}
+.ruby.source-ruby .me1 {color:#9900CC;}
+.ruby.source-ruby .re0 {color:#ff6633; font-weight:bold;}
+.ruby.source-ruby .re1 {color:#0066ff; font-weight:bold;}
+.ruby.source-ruby .re2 {color:#6666ff; font-weight:bold;}
+.ruby.source-ruby .re3 {color:#ff3333; font-weight:bold;}
+.ruby.source-ruby .ln-xtra, .ruby.source-ruby li.ln-xtra, .ruby.source-ruby div.ln-xtra {background-color: #ffc;}
+.ruby.source-ruby span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Switch_statement skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Switch statement</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(April 2013)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="http://en.wikipedia.org/wiki/Computer_programming_language" title="Computer programming language" class="mw-redirect">computer programming languages</a>, a <b>switch statement</b> is a type of selection control mechanism used to allow the value of a <a href="Variable_(programming).html" title="Variable (programming)" class="mw-redirect">variable</a> or expression to change the <a href="http://en.wikipedia.org/wiki/Control_flow" title="Control flow">control flow</a> of program execution via a <a href="http://en.wikipedia.org/wiki/Multiway_branch" title="Multiway branch">multiway branch</a>.</p>
+<p>Switch statements exist in most high-level <a href="Imperative_programming.html" title="Imperative programming">imperative programming</a> languages such as <a href="Pascal_(programming_language).html" title="Pascal (programming language)">Pascal</a>, <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>, <a href="C_(programming_language).html" title="C (programming language)">C</a>/<a href="C%2b%2b.html" title="C++">C++</a>, <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a> and <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, and in many other types of language, using such <a href="http://en.wikipedia.org/wiki/Keyword_(computer_programming)" title="Keyword (computer programming)" class="mw-redirect">keywords</a> as <code>switch</code>, <code>case</code>, <code>select</code> or <code>inspect</code>.</p>
+<p>Switch statements come in two main variants: a structured switch, as in Pascal, which takes exactly one branch, and an unstructured switch, as in C, which functions as a type of <a href="Goto.html" title="Goto">goto</a>. The main reasons for using a switch include improving clarity, by reducing otherwise repetitive coding, and (if the <a href="http://en.wikipedia.org/wiki/Heuristic" title="Heuristic">heuristics</a> permit) also offering the potential for faster execution through easier <a href="http://en.wikipedia.org/wiki/Compiler_optimization" title="Compiler optimization" class="mw-redirect">compiler optimization</a> in many cases.</p>
+<table align="right">
+<caption><b>Unstructured switch statement in Java</b></caption>
+<tr>
+<td>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+<span class="kw1">switch</span> <span class="br0">(</span>age<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">case</span> <span class="nu0">1</span><span class="sy0">:</span> <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"You're one."</span><span class="br0">)</span><span class="sy0">;</span> <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">case</span> <span class="nu0">2</span><span class="sy0">:</span> <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"You're two."</span><span class="br0">)</span><span class="sy0">;</span> <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">case</span> <span class="nu0">3</span><span class="sy0">:</span> <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"You're three."</span><span class="br0">)</span><span class="sy0">;</span> <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">case</span> <span class="nu0">4</span><span class="sy0">:</span> <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"You're four."</span><span class="br0">)</span><span class="sy0">;</span> <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">default</span><span class="sy0">:</span> <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">printf</span><span class="br0">(</span><span class="st0">"You're neither!"</span><span class="br0">)</span><span class="sy0">;</span> <span class="kw1">break</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</table>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Typical_syntax"><span class="tocnumber">2</span> <span class="toctext">Typical syntax</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Semantics"><span class="tocnumber">3</span> <span class="toctext">Semantics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Fallthrough"><span class="tocnumber">3.1</span> <span class="toctext">Fallthrough</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Compilation"><span class="tocnumber">4</span> <span class="toctext">Compilation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Advantages_and_disadvantages"><span class="tocnumber">5</span> <span class="toctext">Advantages and disadvantages</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Alternative_uses"><span class="tocnumber">6</span> <span class="toctext">Alternative uses</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Exception_handling"><span class="tocnumber">6.1</span> <span class="toctext">Exception handling</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Alternatives"><span class="tocnumber">7</span> <span class="toctext">Alternatives</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">10</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In his 1952 text <i>Introduction to Metamathematics</i>, <a href="http://en.wikipedia.org/wiki/Stephen_Kleene" title="Stephen Kleene" class="mw-redirect">Stephen Kleene</a> formally proved that the CASE function (the IF-THEN-ELSE function being its simplest form) is a <a href="http://en.wikipedia.org/wiki/Primitive_recursive_function" title="Primitive recursive function">primitive recursive function</a>, where he defines the notion <code>definition by cases</code> in the following manner:</p>
+<dl>
+<dd>"#F. The function φ defined thus
+<dl>
+<dd>φ(x<sub>1</sub> , ... , x<sub>n</sub> ) =
+<dl>
+<dd>
+<ul>
+<li>φ<sub>1</sub>(x<sub>1</sub> , ... , x<sub>n</sub> ) if Q<sub>1</sub>(x<sub>1</sub> , ... , x<sub>n</sub> ),</li>
+<li>. . . . . . . . . . . .</li>
+<li>φ<sub>m</sub>(x<sub>1</sub> , ... , x<sub>n</sub> ) if Q<sub>m</sub>(x<sub>1</sub> , ... , x<sub>n</sub> ),</li>
+<li>φ<sub>m+1</sub>(x<sub>1</sub> , ... , x<sub>n</sub> ) otherwise,</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>where Q<sub>1</sub> , ... , Q<sub>m</sub> are mutually exclusive predicates (or φ(x<sub>1</sub> , ... , x<sub>n</sub>) shall have the value given by the first clause which applies) is primitive recursive in φ<sub>1</sub>, ..., φ<sub>m+1</sub>, Q<sub>1</sub>, ..., Q<sub>m+1</sub>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></dd>
+</dl>
+<p>Kleene provides a proof of this in terms of the Boolean-like recursive functions "sign-of" sg( ) and "not sign of" ~sg( ) (Kleene 1952:222-223); the first returns 1 if its input is positive and −1 if its input is negative.</p>
+<p>Boolos-Burgess-Jeffrey make the additional observation that "definition by cases" must be both mutually exclusive and collectively exhaustive. They too offer a proof of the primitive recursiveness of this function (Boolos-Burgess-Jeffrey 2002:74-75).</p>
+<p>The IF-THEN-ELSE is the basis of the <a href="http://en.wikipedia.org/wiki/McCarthy_formalism" title="McCarthy formalism" class="mw-redirect">McCarthy formalism</a>: its usage replaces both primitive recursion and the <a href="http://en.wikipedia.org/wiki/Mu-operator" title="Mu-operator" class="mw-redirect">mu-operator</a>.</p>
+<h2><span class="mw-headline" id="Typical_syntax">Typical syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=2" title="Edit section: Typical syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In most languages, a switch statement is defined across many individual lines using one or two keywords. A typical syntax is:</p>
+<ul>
+<li>The first line contains the basic keyword, usually <code>switch</code>, <code>case</code> or <code>select</code>, followed by an expression which is often referred to as the <i>control expression</i> or <i>control variable</i> of the switch statement.</li>
+<li>Subsequent lines define the actual cases (the values) with corresponding sequences of statements that should be executed when a match occurs.</li>
+</ul>
+<p>Each alternative begins with the particular value, or list of values (see below), that the control variable may match and which will cause the control to <a href="http://en.wikipedia.org/wiki/Go_to" title="Go to" class="mw-redirect">go to</a> the corresponding sequence of statements. The value (or list/range of values) is usually separated from the corresponding statement sequence by a colon or an implication arrow. In many languages, every case must also be preceded by a keyword such as <code>case</code> or <code>when</code>. An optional default case is typically also allowed, specified by a <code>default</code> or <code>else</code> keyword; this is executed when none of the other cases matches the control expression.</p>
+<h2><span class="mw-headline" id="Semantics">Semantics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=3" title="Edit section: Semantics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Semantically, there are two main forms of switch statements.</p>
+<p>The first form are structured switches, as in Pascal, where exactly one branch is taken, and the cases are treated as separate, exclusive blocks. This functions as a generalized if–then–else <a href="http://en.wikipedia.org/wiki/Conditional_(computer_programming)" title="Conditional (computer programming)">conditional</a>, here with any number of branches, not just two.</p>
+<p>The second form are unstructured switches, as in C, where the cases are treated as labels within a single block, and the switch functions as a generalized goto. This distinction is referred to as the treatment of fallthrough, which is elaborated below.</p>
+<h3><span class="mw-headline" id="Fallthrough">Fallthrough</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=4" title="Edit section: Fallthrough">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In many languages, only the matching block is executed, and then execution continues at the end of the switch statement. These include the <a href="Pascal_(programming_language).html" title="Pascal (programming language)">Pascal</a> family (Object Pascal, Modula, Oberon, Ada, etc.), as well as modern <a href="BASIC.html" title="BASIC">BASIC</a> dialects influenced by Pascal, most functional languages, and many others. To allow multiple values to execute the same code (and avoid needing to duplicate code), Pascal-type languages permit any number of values per case, given as a comma-separated list, as a range, or as a combination.</p>
+<p>Languages derived from C, and more generally those influenced by Fortran, instead feature fallthrough, where control moves to the matching case, and then execution continues ("falls through") to the statements associated with the <i>next</i> case in the source text; this behaves as a <a href="http://en.wikipedia.org/wiki/Computed_GOTO" title="Computed GOTO" class="mw-redirect">computed GOTO</a> in languages such as Fortran. This also allows multiple values to match the same point without any special syntax: they are just listed with empty bodies. Fallthrough can be prevented with a <code>break</code> keyword at the end of the matching body, which is used to go to the end of the switch, thus completing execution of the switch statement, but switch statements have default fallthrough. Syntactically, the cases are interpreted as labels, not blocks, and the switch and break statements explicitly change control flow. This can cause bugs due to unintentional fallthrough, and requires a <code>break</code> keyword at the end of each case in the common case of exclusive switches. This is thus seen by many as a language wart, and warned against in some lint tools. Some languages influenced by C, such as <a href="JavaScript.html" title="JavaScript">JavaScript</a>, retain default fallthrough, while others remove fallthrough, or only allow it in special circumstances. Notable variations on this in the C-family include <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>, in which all blocks must be terminated with a <code>break</code> unless the block is empty (i.e. fallthrough is used as a way to specify multiple values).</p>
+<p>In some cases languages provide optional fallthrough. For example, <a href="Perl.html" title="Perl">Perl</a> does not fall through by default, but a case may explicitly do so using a <code>continue</code> keyword. This prevents unintentional fallthrough but allows it when desired. Similarly, bash defaults to not falling through, when terminated with&#160;;; but more recent versions allow fallthrough with&#160;;&amp; instead.</p>
+<h2><span class="mw-headline" id="Compilation">Compilation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=5" title="Edit section: Compilation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Optimization_(computer_science)" title="Optimization (computer science)" class="mw-redirect">Optimizing compilers</a> such as <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a> or <a href="Clang.html" title="Clang">Clang</a> may compile a switch statement into either a <a href="http://en.wikipedia.org/wiki/Branch_table" title="Branch table">branch table</a> or a <a href="http://en.wikipedia.org/wiki/Binary_search_algorithm" title="Binary search algorithm">binary search</a> through the values in the cases.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> A branch table allows the switch statement to determine with a small, constant number of comparisons which branch to execute without having to go through a list of comparisons, while a binary search takes only a logarithmic number of comparisons, measured in the number of cases in the switch statement.</p>
+<p>Normally, the only method of finding out if this optimization has occurred is by actually looking at the resultant <a href="Assembly_language.html" title="Assembly language">assembly</a> or <a href="http://en.wikipedia.org/wiki/Machine_code" title="Machine code">machine code</a> output that has been generated by the compiler (and is therefore seldom, if ever, done by <a href="High-level_programming_language.html" title="High-level programming language">HLL</a> programmers). The first 'C' example below would be eligible for this kind of optimization if the compiler supported it (the range '0' through '9' with zero gaps without a defined case label).</p>
+<h2><span class="mw-headline" id="Advantages_and_disadvantages">Advantages and disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=6" title="Edit section: Advantages and disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>contains a <a href="http://en.wikipedia.org/wiki/Wikipedia:Pro_and_con_lists" title="Wikipedia:Pro and con lists">pro and con list</a></b>, which is sometimes inappropriate. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit">improve it</a> by integrating both sides into a more <a href="http://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral</a> presentation, or remove this template if you feel that such a list is appropriate for this article.</span> <small><i>(April 2013)</i></small></span></td>
+</tr>
+</table>
+<p>In some languages and programming environments, the use of a <code>case</code> or <code>switch</code> statement is considered superior to an equivalent series of <i>if <a href="http://en.wikipedia.org/wiki/Else_if" title="Else if" class="mw-redirect">else if</a></i> statements because it is:</p>
+<ul>
+<li>Easier to debug (e.g. setting breakpoints on code vs. a call table, if the debugger has no conditional breakpoint capability)</li>
+<li>Easier to read (subjectively)</li>
+<li>Easier to understand, and therefore</li>
+<li>Easier to maintain</li>
+<li>Fixed depth: a sequence of "if else if" statements yields deep nesting, making compilation more difficult (especially in automatically generated code)</li>
+<li>Faster execution potential</li>
+</ul>
+<p>Additionally, an <a href="http://en.wikipedia.org/wiki/Optimization_(computer_science)" title="Optimization (computer science)" class="mw-redirect">optimized</a> implementation may execute much faster than the alternative, because it is often implemented by using an indexed <a href="http://en.wikipedia.org/wiki/Branch_table" title="Branch table">branch table</a>. For example, deciding program flow based on a single character's value, if correctly implemented, is vastly more efficient than the alternative, reducing <a href="http://en.wikipedia.org/wiki/Instruction_path_length" title="Instruction path length">instruction path lengths</a> considerably. When implemented as such, a switch statement essentially becomes a <a href="http://en.wikipedia.org/wiki/Perfect_hash" title="Perfect hash" class="mw-redirect">perfect hash</a>.</p>
+<p>In terms of the <a href="http://en.wikipedia.org/wiki/Control_flow_graph" title="Control flow graph">control flow graph</a>, a switch statement consists of two nodes (entrance and exit), plus one edge between them for each option. By contrast, a sequence of "if...else if...else if" statements has an additional node for every case other than the first and last, together with a corresponding edge. The resulting control flow graph for the sequences of "if"s thus has many more nodes and almost twice as many edges, with these not adding any useful information. However, the simple branches in the if statements are individually conceptually easier than the complex branch of a switch statement. In terms of <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity" title="Cyclomatic complexity">cyclomatic complexity</a>, both of these options increase it by <i>k</i>−1 if given <i>k</i> cases.</p>
+<p>When implemented with fall-through as the default path, switch/case statements are a frequent source of bugs among even experienced programmers, given that, in practice, the "break" is almost always the desired path, but not the default behavior of the switch/case construct (at least in C and Java).</p>
+<h2><span class="mw-headline" id="Alternative_uses">Alternative uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=7" title="Edit section: Alternative uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many languages evaluate expressions inside <code>switch</code> blocks at runtime, allowing a number of less obvious uses for the construction. This prohibits certain compiler optimizations, so is more common in dynamic and scripting languages where the enhanced flexibility is more important than the performance overhead.</p>
+<p>For example, in <a href="PHP.html" title="PHP">PHP</a>, a constant can be used as the "variable" to check against, and the first case statement which evaluates to that constant will be executed:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="php source-php">
+<pre class="de1">
+<span class="kw1">switch</span><span class="br0">(</span><span class="kw4">true</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">case</span> <span class="br0">(</span><span class="re0">$x</span> <span class="sy0">==</span> <span class="st_h">'hello'</span><span class="br0">)</span><span class="sy0">:</span>
+    foo<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">case</span> <span class="br0">(</span><span class="re0">$z</span> <span class="sy0">==</span> <span class="st_h">'howdy'</span><span class="br0">)</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+<span class="br0">}</span>
+<span class="kw1">switch</span><span class="br0">(</span><span class="nu0">5</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">case</span> <span class="re0">$x</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+  <span class="kw1">case</span> <span class="re0">$y</span><span class="sy0">:</span> <span class="kw1">break</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>This feature is also useful for checking multiple variables against one value rather than one variable against many values. COBOL also supports this form (and others forms) in the <code>EVALUATE</code> statement.</p>
+<p>In <a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a>, due to its handling of <code>===</code> equality, the statement can be used to test for variable’s class:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ruby source-ruby">
+<pre class="de1">
+<span class="kw1">case</span> input
+<span class="kw1">when</span> <span class="kw3">Array</span>; <span class="kw3">puts</span> <span class="st0">'input is an Array!'</span>
+<span class="kw1">when</span> <span class="kw4">Hash</span>;  <span class="kw3">puts</span> <span class="st0">'input is a Hash!'</span>
+<span class="kw1">end</span>
+</pre></div>
+</div>
+<p>Ruby also returns a value that can be assigned to a variable, and doesn’t actually require the <code>case</code> to have any parameters (acting a bit like an <code>else if</code> statement):</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="ruby source-ruby">
+<pre class="de1">
+catfood =
+  <span class="kw1">case</span>
+  <span class="kw1">when</span> cat.<span class="me1">age</span> <span class="sy0">&lt;</span>= <span class="nu0">1</span>
+    junior
+  <span class="kw1">when</span> cat.<span class="me1">age</span> <span class="sy0">&gt;</span> <span class="nu0">10</span>
+    senior
+  <span class="kw1">else</span>
+    normal
+  <span class="kw1">end</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Exception_handling">Exception handling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=8" title="Edit section: Exception handling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A number of languages implement a form of switch statement in <a href="http://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">exception handling</a>, where if an exception is raised in a block, a separate branch is chosen, depending on the exception. In some cases a default branch, if no exception is raised, is also present. An early example is <a href="http://en.wikipedia.org/wiki/Modula-3" title="Modula-3">Modula-3</a>, which use the <code>TRY</code>...<code>EXCEPT</code> syntax, where each <code>EXCEPT</code> defines a case. This is also found in <a href="http://en.wikipedia.org/wiki/Delphi_(programming_language)" title="Delphi (programming language)" class="mw-redirect">Delphi</a>, <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>, <a href="http://en.wikipedia.org/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a>, and <a href="http://en.wikipedia.org/wiki/Visual_Basic.NET" title="Visual Basic.NET" class="mw-redirect">Visual Basic.NET</a>.</p>
+<h2><span class="mw-headline" id="Alternatives">Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=9" title="Edit section: Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>A series of nested <i>if-else</i> <a href="Conditional_(programming).html" title="Conditional (programming)" class="mw-redirect">conditionals</a> that examine the target one value at a time.</li>
+<li>A <a href="http://en.wikipedia.org/wiki/Lookup_table" title="Lookup table">lookup table</a>, which contains, as keys, the <code>case</code> values and, as values, the part under the <code>case</code> statement.</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd>(In some languages, only actual data types are allowed as values in the lookup table. In other languages, it is also possible to assign <a href="http://en.wikipedia.org/wiki/Function_(computer_science)" title="Function (computer science)" class="mw-redirect">functions</a> as lookup table values, gaining the same flexibility as a real <code>switch</code> statement. See <a href="http://en.wikipedia.org/wiki/Control_table" title="Control table">Control table</a> article for more detail on this).</dd>
+<dd><a href="http://en.wikipedia.org/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a> does now support case/switch statements: <a rel="nofollow" class="external free" href="http://lua-users.org/wiki/SwitchStatement">http://lua-users.org/wiki/SwitchStatement</a> . This lookup technique is one way to implement <code>switch</code> statements in the Lua language, which has no built-in <code>switch</code>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></dd>
+<dd>In some cases, lookup tables are more efficient than non-<a href="http://en.wikipedia.org/wiki/Program_optimization" title="Program optimization">optimized</a> <code>switch</code> statements since many languages can optimize table lookups, whereas switch statements are not optimized unless the range of values is small with few gaps. A non-optimized, non-<a href="http://en.wikipedia.org/wiki/Binary_search" title="Binary search" class="mw-redirect">binary search</a> lookup, however, will almost certainly be slower than either a non-optimized switch or the equivalent multiple <i>if-else</i> statements.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2011)">citation needed</span></a></i>]</sup></dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>A <a href="http://en.wikipedia.org/wiki/Control_table" title="Control table">control table</a> (that may be implemented as a simple lookup table) can also be customized to accommodate multiple conditions on multiple inputs if required and usually exhibits greater 'visual compactness' than an equivalent switch (that can occupy many statements).</li>
+<li>For <a href="Object-oriented_programming.html" title="Object-oriented programming">object-oriented programs</a>, extensive use of <a href="Type_polymorphism.html" title="Type polymorphism" class="mw-redirect">polymorphism</a> can be used.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Algorithmic_efficiency" title="Algorithmic efficiency">Algorithmic efficiency</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Branch_table" title="Branch table">Branch table</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Control_table" title="Control table">Control table</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Duff%27s_device" title="Duff's device">Duff's device</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">"Definition by cases", Kleene 1952:229</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Vlad Lazarenko. <a rel="nofollow" class="external text" href="http://741mhz.com/switch/">From Switch Statement Down to Machine Code</a>. Ranting @ 741 MHz (blog), 13 January 2013.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://lua-users.org/wiki/SwitchStatement">Switch statement in Lua</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit&amp;section=12" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Stephen_Kleene" title="Stephen Kleene" class="mw-redirect">Stephen Kleene</a>, 1952 (10th reprint 1991), <i>Introduction to Metamathematics</i>, North-Holland Publishing Company, Amsterdam NY, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0720421039" class="internal mw-magiclink-isbn">ISBN 0-7204-2103-9</a></li>
+<li><a href="http://en.wikipedia.org/wiki/George_Boolos" title="George Boolos">George Boolos</a>, <a href="http://en.wikipedia.org/wiki/John_P._Burgess" title="John P. Burgess">John Burgess</a>, and <a href="http://en.wikipedia.org/wiki/Richard_Jeffrey" title="Richard Jeffrey">Richard Jeffrey</a>, 2002, <i>Computability and Logic: Fourth Edition</i>, Cambridge University Press, Cambridge UK, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0521007585" class="internal mw-magiclink-isbn">ISBN 0-521-00758-5</a> paperback. cf page 74-75.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1034
+CPU time usage: 0.476 seconds
+Real time usage: 0.519 seconds
+Preprocessor visited node count: 419/1000000
+Preprocessor generated node count: 2023/1500000
+Post‐expand include size: 8986/2048000 bytes
+Template argument size: 548/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 5/500
+Lua time usage: 0.045/10.000 seconds
+Lua memory usage: 1.02 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1831479-0!*!0!!en!4!* and timestamp 20140325041021
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;oldid=596555414">http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;oldid=596555414</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Conditional_constructs" title="Category:Conditional constructs">Conditional constructs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_April_2013" title="Category:Articles needing additional references from April 2013">Articles needing additional references from April 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_style_editing_from_April_2013" title="Category:Wikipedia articles needing style editing from April 2013">Wikipedia articles needing style editing from April 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_containing_pro_and_con_lists" title="Category:Articles containing pro and con lists">Articles containing pro and con lists</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2011" title="Category:Articles with unsourced statements from October 2011">Articles with unsourced statements from October 2011</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Switch+statement&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Switch+statement" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Switch_statement.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Switch_statement"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Switch_statement.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Switch_statement" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Switch_statement" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;oldid=596555414" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q838092" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Switch_statement&amp;id=596555414" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Switch+statement">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Switch+statement&amp;oldid=596555414&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Switch_statement&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Switch-sætning" title="Switch-sætning – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Switch_case" title="Switch case – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Switch_(instruction)" title="Switch (instruction) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/Switch_문" title="Switch 문 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Switch_naredba" title="Switch naredba – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="http://is.wikipedia.org/wiki/Switch-setning" title="Switch-setning – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Switch_(programmazione)" title="Switch (programmazione) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Switch文" title="Switch文 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Instrukcja_wyboru" title="Instrukcja wyboru – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Оператор_ветвления#.D0.9F.D0.B5.D1.80.D0.B5.D0.BA.D0.BB.D1.8E.D1.87.D0.B0.D1.82.D0.B5.D0.BB.D1.8C" title="Оператор ветвления – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Інструкція_перемикач" title="Інструкція перемикач – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q838092#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 21 February 2014 at 22:38.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Switch_statement" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1216 in 0.305 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Switch_statement by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:07 GMT -->
+</html>

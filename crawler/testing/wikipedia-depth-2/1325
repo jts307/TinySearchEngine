@@ -1,0 +1,923 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/D_(programming_language).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/D_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:56:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>D (programming language) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/D_(programming_language)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="D_(programming_language).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"D_(programming_language)","wgTitle":"D (programming language)","wgCurRevisionId":601384973,"wgRevisionId":601384973,"wgArticleId":243881,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles using fixed number of columns in reflist","C programming language family","Class-based programming languages","Multi-paradigm programming languages","Systems programming languages","Programming languages created in the 2000s","Statically typed programming languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"D_(programming_language)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-gb","en","ro"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q319268"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-d {line-height: normal;}
+.source-d li, .source-d pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for d
+ * CSS class: source-d, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.d.source-d .de1, .d.source-d .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.d.source-d  {font-family:monospace;}
+.d.source-d .imp {font-weight: bold; color: red;}
+.d.source-d li, .d.source-d .li1 {font-weight: normal; vertical-align:top;}
+.d.source-d .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.d.source-d .li2 {font-weight: bold; vertical-align:top;}
+.d.source-d .kw1 {color: #b1b100;}
+.d.source-d .kw2 {color: #000000; font-weight: bold;}
+.d.source-d .kw3 {color: #aaaadd; font-weight: bold;}
+.d.source-d .kw4 {color: #993333;}
+.d.source-d .co1 {color: #808080; font-style: italic;}
+.d.source-d .co2 {color: #009933; font-style: italic;}
+.d.source-d .co3 {color: #009933; font-style: italic;}
+.d.source-d .co4 {color: #ff0000;}
+.d.source-d .co5 {color: #0040ff;}
+.d.source-d .coMULTI {color: #808080; font-style: italic;}
+.d.source-d .es0 {color: #000099; font-weight: bold;}
+.d.source-d .es1 {color: #000099; font-weight: bold;}
+.d.source-d .es2 {color: #660099; font-weight: bold;}
+.d.source-d .es3 {color: #660099; font-weight: bold;}
+.d.source-d .es4 {color: #660099; font-weight: bold;}
+.d.source-d .es5 {color: #006699; font-weight: bold;}
+.d.source-d .es6 {color: #666699; font-weight: bold; font-style: italic;}
+.d.source-d .br0 {color: #66cc66;}
+.d.source-d .sy0 {color: #66cc66;}
+.d.source-d .st0 {color: #ff0000;}
+.d.source-d .st_h {color: #ff0000;}
+.d.source-d .nu0 {color: #0000dd;}
+.d.source-d .nu6 {color: #208080;}
+.d.source-d .nu8 {color: #208080;}
+.d.source-d .nu12 {color: #208080;}
+.d.source-d .nu16 {color:#800080;}
+.d.source-d .nu17 {color:#800080;}
+.d.source-d .nu18 {color:#800080;}
+.d.source-d .nu19 {color:#800080;}
+.d.source-d .me1 {color: #006600;}
+.d.source-d .me2 {color: #006600;}
+.d.source-d .ln-xtra, .d.source-d li.ln-xtra, .d.source-d div.ln-xtra {background-color: #ffc;}
+.d.source-d span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-D_programming_language skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">D (programming language)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">For other programming languages named D, see <a href="http://en.wikipedia.org/wiki/D_(disambiguation)#Computing" title="D (disambiguation)">D (disambiguation)#Computing</a>.  For other uses, see <a href="http://en.wikipedia.org/wiki/D_(disambiguation)" title="D (disambiguation)">D (disambiguation)</a>.</div>
+<table class="infobox vevent" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption class="summary">D programming language</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:D_programming_language_logo.png" class="image"><img alt="D programming language logo.png" src="http://upload.wikimedia.org/wikipedia/en/thumb/d/da/D_programming_language_logo.png/120px-D_programming_language_logo.png" width="120" height="91" srcset="//upload.wikimedia.org/wikipedia/en/d/da/D_programming_language_logo.png 1.5x, //upload.wikimedia.org/wikipedia/en/d/da/D_programming_language_logo.png 2x" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Programming_paradigm.html" title="Programming paradigm">Paradigm(s)</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Multi-paradigm_programming_language" title="Multi-paradigm programming language" class="mw-redirect">multi-paradigm</a>: <a href="Imperative_programming.html" title="Imperative programming">imperative</a>, <a href="Object-oriented_programming.html" title="Object-oriented programming">object-oriented</a>, <a href="Functional_programming.html" title="Functional programming">functional</a>, <a href="http://en.wikipedia.org/wiki/Metaprogramming" title="Metaprogramming">meta</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_design.html" title="Software design">Designed by</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Walter_Bright" title="Walter Bright">Walter Bright</a>, <a href="http://en.wikipedia.org/wiki/Andrei_Alexandrescu" title="Andrei Alexandrescu">Andrei Alexandrescu</a> (since 2006)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_developer.html" title="Software developer">Developer</a></th>
+<td class="organiser"><a href="http://en.wikipedia.org/wiki/Digital_Mars" title="Digital Mars">Digital Mars</a>, <a href="http://en.wikipedia.org/wiki/Andrei_Alexandrescu" title="Andrei Alexandrescu">Andrei Alexandrescu</a> (since 2006)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Appeared in</th>
+<td>2001<span style="display:none">&#160;(<span class="dtstart">2001</span>)</span><sup id="cite_ref-D1_changelog1_1-0" class="reference"><a href="#cite_note-D1_changelog1-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_release_life_cycle.html" title="Software release life cycle">Stable release</a></th>
+<td>2.064.2 <sup id="cite_ref-D2_changelog_2-0" class="reference"><a href="#cite_note-D2_changelog-2"><span>[</span>2<span>]</span></a></sup> / November&#160;5, 2013<span class="noprint">; 4 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2013-11-05</span>)</span><sup id="cite_ref-dmd-announcement_3-0" class="reference"><a href="#cite_note-dmd-announcement-3"><span>[</span>3<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Type_system.html" title="Type system">Typing discipline</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Strong_typing" title="Strong typing" class="mw-redirect">strong</a>, <a href="Static_typing.html" title="Static typing" class="mw-redirect">static</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Programming_language_implementation.html" title="Programming language implementation">Major implementations</a></th>
+<td>DMD (<a href="http://en.wikipedia.org/wiki/Reference_implementation" title="Reference implementation">reference implementation</a>), GDC, LDC</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Influenced by</th>
+<td><a href="C_(programming_language).html" title="C (programming language)">C</a>, <a href="C%2b%2b.html" title="C++">C++</a>, <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>, <a href="http://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>, <a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Influenced</th>
+<td><a href="http://en.wikipedia.org/wiki/MiniD" title="MiniD">MiniD</a>, <a href="http://en.wikipedia.org/w/index.php?title=DScript&amp;action=edit&amp;redlink=1" class="new" title="DScript (page does not exist)">DScript</a>, <a href="Vala_(programming_language).html" title="Vala (programming language)">Vala</a>, <a href="http://en.wikipedia.org/w/index.php?title=Qore_Language&amp;action=edit&amp;redlink=1" class="new" title="Qore Language (page does not exist)">Qore</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Operating_system.html" title="Operating system">OS</a></th>
+<td>DMD: <a href="Unix-like.html" title="Unix-like">Unix-like</a>, <a href="Microsoft_Windows.html" title="Microsoft Windows">Windows</a>, <a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Software_license.html" title="Software license">License</a></th>
+<td><a href="GNU_General_Public_License.html" title="GNU General Public License">GPL</a>/<a href="http://en.wikipedia.org/wiki/Artistic_License" title="Artistic License">Artistic</a> (DMD frontend),<br />
+<a href="http://en.wikipedia.org/wiki/Boost_Software_License" title="Boost Software License">Boost</a> (standard and runtime libraries),<br />
+source available (DMD backend),<sup id="cite_ref-D-backend-license_4-0" class="reference"><a href="#cite_note-D-backend-license-4"><span>[</span>4<span>]</span></a></sup><br />
+Fully open-source (LDC and GDC)<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;"><a href="Filename_extension.html" title="Filename extension">Filename extension(s)</a></th>
+<td><code>.d</code></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://dlang.org/">dlang.org</a></span></td>
+</tr>
+<tr>
+<td colspan="2" class="hlist" style="text-align:center;">
+<ul>
+<li><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/16px-Wikibooks-logo-en-noslogan.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/24px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/32px-Wikibooks-logo-en-noslogan.svg.png 2x" /> <a href="http://en.wikibooks.org/wiki/D_Programming" class="extiw" title="wikibooks:D Programming">D Programming</a> at Wikibooks</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>The <b>D programming language</b> is an <a href="Object-oriented_programming.html" title="Object-oriented programming">object-oriented</a>, <a href="Imperative_programming.html" title="Imperative programming">imperative</a>, <a href="http://en.wikipedia.org/wiki/Multi-paradigm_programming_language" title="Multi-paradigm programming language" class="mw-redirect">multi-paradigm</a> <a href="http://en.wikipedia.org/wiki/System_programming_language" title="System programming language">system programming language</a> created by <a href="http://en.wikipedia.org/wiki/Walter_Bright" title="Walter Bright">Walter Bright</a> of <a href="http://en.wikipedia.org/wiki/Digital_Mars" title="Digital Mars">Digital Mars</a>. Though it originated as a re-engineering of <a href="C%2b%2b.html" title="C++">C++</a>, D is a distinct language, having redesigned some core C++ features while also taking inspiration from other languages, notably <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>, <a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a>, <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>, and <a href="http://en.wikipedia.org/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a>.</p>
+<p>D's design goals attempt to combine the performance of <a href="http://en.wikipedia.org/wiki/Compiled_language" title="Compiled language">compiled languages</a> with the safety and <a href="http://en.wikipedia.org/wiki/Expressive_power" title="Expressive power">expressive power</a> of modern <a href="http://en.wikipedia.org/wiki/Dynamic_programming_language" title="Dynamic programming language">dynamic languages</a>. Idiomatic D code is commonly as fast as equivalent C++ code, while being shorter and <a href="http://en.wikipedia.org/wiki/Memory_safety" title="Memory safety">memory-safe</a>. <sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p><a href="http://en.wikipedia.org/wiki/Type_inference" title="Type inference">Type inference</a>, <a href="http://en.wikipedia.org/wiki/Automatic_memory_management" title="Automatic memory management" class="mw-redirect">automatic memory management</a> and <a href="Syntactic_sugar.html" title="Syntactic sugar">syntactic sugar</a> for common types allow faster <a href="Software_development.html" title="Software development">development</a>, while <a href="Bounds_checking.html" title="Bounds checking">bounds checking</a>, <a href="http://en.wikipedia.org/wiki/Design_by_contract" title="Design by contract">design by contract</a> features and a <a href="http://en.wikipedia.org/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">concurrency</a>-aware type system help reduce the occurrence of <a href="http://en.wikipedia.org/wiki/Software_bug" title="Software bug">bugs</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Features"><span class="tocnumber">1</span> <span class="toctext">Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Programming_paradigms"><span class="tocnumber">1.1</span> <span class="toctext">Programming paradigms</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Imperative"><span class="tocnumber">1.1.1</span> <span class="toctext">Imperative</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Object-oriented"><span class="tocnumber">1.1.2</span> <span class="toctext">Object-oriented</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Metaprogramming"><span class="tocnumber">1.1.3</span> <span class="toctext">Metaprogramming</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Functional"><span class="tocnumber">1.1.4</span> <span class="toctext">Functional</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Parallel"><span class="tocnumber">1.1.5</span> <span class="toctext">Parallel</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Concurrent"><span class="tocnumber">1.1.6</span> <span class="toctext">Concurrent</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Memory_management"><span class="tocnumber">1.2</span> <span class="toctext">Memory management</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Interaction_with_other_systems"><span class="tocnumber">1.3</span> <span class="toctext">Interaction with other systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Implementations"><span class="tocnumber">3</span> <span class="toctext">Implementations</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Development_tools"><span class="tocnumber">4</span> <span class="toctext">Development tools</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Examples"><span class="tocnumber">5</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Example_1"><span class="tocnumber">5.1</span> <span class="toctext">Example 1</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Example_2"><span class="tocnumber">5.2</span> <span class="toctext">Example 2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>D is designed with lessons learned from practical C++ usage rather than from a theoretical perspective. Even though it uses many C/C++ concepts it also discards some, and as such is not compatible with C/C++ source code. It adds to the functionality of C++ by also implementing <a href="http://en.wikipedia.org/wiki/Design_by_contract" title="Design by contract">design by contract</a>, <a href="http://en.wikipedia.org/wiki/Unit_test" title="Unit test" class="mw-redirect">unit testing</a>, true <a href="http://en.wikipedia.org/wiki/Module_(programming)" title="Module (programming)" class="mw-redirect">modules</a>, <a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a>, <a href="http://en.wikipedia.org/wiki/First-class_object" title="First-class object" class="mw-redirect">first class</a> <a href="Array_data_type.html" title="Array data type">arrays</a>, <a href="Associative_array.html" title="Associative array">associative arrays</a>, <a href="Dynamic_array.html" title="Dynamic array">dynamic arrays</a>, <a href="http://en.wikipedia.org/wiki/Array_slicing" title="Array slicing">array slicing</a>, <a href="http://en.wikipedia.org/wiki/Nested_function" title="Nested function">nested functions</a>, <a href="http://en.wikipedia.org/wiki/Inner_class" title="Inner class">inner classes</a>, <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)" title="Closure (computer science)" class="mw-redirect">closures</a>, <a href="http://en.wikipedia.org/wiki/Anonymous_functions" title="Anonymous functions" class="mw-redirect">anonymous functions</a>, <a href="http://en.wikipedia.org/wiki/Compile_time_function_execution" title="Compile time function execution">compile time function execution</a>, <a href="http://en.wikipedia.org/wiki/Lazy_evaluation" title="Lazy evaluation">lazy evaluation</a> and has a reengineered <a href="Generic_programming.html#Templates_in_C.2B.2B" title="Generic programming">template</a> syntax. D retains C++'s ability to do <a href="http://en.wikipedia.org/wiki/Low-level_programming_language" title="Low-level programming language">low-level coding</a>, and adds to it with support for an integrated <a href="http://en.wikipedia.org/wiki/Inline_assembler" title="Inline assembler">inline</a> <a href="Assembly_language.html" title="Assembly language">assembler</a>. C++ <a href="http://en.wikipedia.org/wiki/Multiple_inheritance" title="Multiple inheritance">multiple inheritance</a> is replaced by Java style <a href="http://en.wikipedia.org/wiki/Multiple_inheritance" title="Multiple inheritance">single inheritance</a> with <a href="http://en.wikipedia.org/wiki/Interface_(computer_science)" title="Interface (computer science)" class="mw-redirect">interfaces</a> and <a href="http://en.wikipedia.org/wiki/Mixin" title="Mixin">mixins</a>. D's declaration, statement and expression <a href="http://en.wikipedia.org/wiki/Syntax" title="Syntax">syntax</a> closely matches that of C++.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/Inline_assembler" title="Inline assembler">inline assembler</a> typifies the differences between D and application languages like <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> and <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>. An inline assembler lets programmers enter machine-specific <a href="Assembly_language.html" title="Assembly language">assembly</a> code within standard D code, a method often used by system programmers to access the low-level features of the <a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">processor</a> needed to run programs that interface directly with the underlying <a href="Computer_hardware.html" title="Computer hardware">hardware</a>, such as <a href="Operating_system.html" title="Operating system">operating systems</a> and <a href="Device_driver.html" title="Device driver">device drivers</a>.</p>
+<p>D has built-in support for documentation comments, allowing automatic <a href="http://en.wikipedia.org/wiki/Documentation_generator" title="Documentation generator">documentation generation</a>.</p>
+<h3><span class="mw-headline" id="Programming_paradigms">Programming paradigms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Programming paradigms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>D supports five main <a href="Programming_paradigm.html" title="Programming paradigm">programming paradigms</a>—<a href="Imperative_programming.html" title="Imperative programming">imperative</a>, <a href="http://en.wikipedia.org/wiki/Object-oriented" title="Object-oriented" class="mw-redirect">object-oriented</a>, <a href="http://en.wikipedia.org/wiki/Metaprogramming" title="Metaprogramming">metaprogramming</a>, <a href="Functional_programming.html" title="Functional programming">functional</a> and <a href="http://en.wikipedia.org/wiki/Concurrent_programming_language" title="Concurrent programming language" class="mw-redirect">concurrent</a> (<a href="http://en.wikipedia.org/wiki/Actor_model" title="Actor model">Actor model</a>).</p>
+<h4><span class="mw-headline" id="Imperative">Imperative</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: Imperative">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Imperative programming in D is almost identical to C. Functions, data, statements, declarations and expressions work just as in C, and the C runtime library can be accessed directly. Some notable differences between D and C in the area of imperative programming include D's <a href="http://en.wikipedia.org/wiki/Foreach" title="Foreach" class="mw-redirect"><code>foreach</code></a> loop construct, which allows looping over a collection, and <a href="http://en.wikipedia.org/wiki/Nested_function" title="Nested function">nested functions</a>, which are functions that are declared inside of another and may access the enclosing function's <a href="http://en.wikipedia.org/wiki/Local_variable" title="Local variable">local variables</a>.</p>
+<h4><span class="mw-headline" id="Object-oriented">Object-oriented</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: Object-oriented">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Object-oriented programming in D is based on a single inheritance hierarchy, with all classes derived from class Object. D does not support multiple inheritance; instead, it uses Java-style <a href="http://en.wikipedia.org/wiki/Interface_(Java)" title="Interface (Java)">interfaces</a>, which are comparable to C++ pure abstract classes, and <a href="http://en.wikipedia.org/wiki/Mixin" title="Mixin">mixins</a>, which allow separating common functionality out of the inheritance hierarchy. D also allows defining static and final (non-virtual) methods in interfaces.</p>
+<h4><span class="mw-headline" id="Metaprogramming">Metaprogramming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: Metaprogramming">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Metaprogramming is supported by a combination of templates, compile time function execution, <a href="http://en.wikipedia.org/wiki/Tuple" title="Tuple">tuples</a>, and string mixins. The following examples demonstrate some of D's compile-time features.</p>
+<p>Templates in D can be written in a more imperative style compared to C++ functional style for templates. This is a regular function that calculates the <a href="http://en.wikipedia.org/wiki/Factorial" title="Factorial">factorial</a> of a number:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw4">ulong</span> factorial<span class="br0">(</span><span class="kw4">ulong</span> n<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">if</span><span class="br0">(</span>n <span class="sy0">&lt;</span> <span class="nu0">2</span><span class="br0">)</span>
+        <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+        <span class="kw1">return</span> n <span class="sy0">*</span> factorial<span class="br0">(</span>n <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Here, the use of <code>static if</code>, D's compile-time conditional construct, is demonstrated to construct a template that performs the same calculation using code that is similar to that of the above function:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw4">template</span> Factorial<span class="br0">(</span><span class="kw4">ulong</span> n<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">static</span> <span class="kw1">if</span><span class="br0">(</span>n <span class="sy0">&lt;</span> <span class="nu0">2</span><span class="br0">)</span>
+        <span class="kw4">enum</span> Factorial <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+        <span class="kw4">enum</span> Factorial <span class="sy0">=</span> n <span class="sy0">*</span> Factorial<span class="sy0">!</span><span class="br0">(</span>n <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>In the following two examples, the template and function defined above are used to compute factorials. The types of constants need not be specified explicitly as the compiler <a href="http://en.wikipedia.org/wiki/Type_inference" title="Type inference">infers their types</a> from the right-hand sides of assignments:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw4">enum</span> fact_7 <span class="sy0">=</span> Factorial<span class="sy0">!</span><span class="br0">(</span><span class="nu0">7</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This is an example of <a href="http://en.wikipedia.org/wiki/Compile_time_function_execution" title="Compile time function execution">compile time function execution</a>. Ordinary functions may be used in constant, compile-time expressions provided they meet certain criteria:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw4">enum</span> fact_9 <span class="sy0">=</span> factorial<span class="br0">(</span><span class="nu0">9</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>The <code>std.string.format</code> function performs <a href="Printf.html" title="Printf" class="mw-redirect"><code>printf</code></a>-like data formatting (also at compile-time, through <a href="http://en.wikipedia.org/wiki/Compile_time_function_execution" title="Compile time function execution">CTFE</a>), and the "msg" <a href="http://en.wikipedia.org/wiki/Directive_(programming)" title="Directive (programming)">pragma</a> displays the result at compile time:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="kw4">string</span> <span class="sy0">:</span> format<span class="sy0">;</span>
+<span class="kw2">pragma</span><span class="br0">(</span>msg<span class="sy0">,</span> format<span class="br0">(</span><span class="st0">"7! = %s"</span><span class="sy0">,</span> fact_7<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="kw2">pragma</span><span class="br0">(</span>msg<span class="sy0">,</span> format<span class="br0">(</span><span class="st0">"9! = %s"</span><span class="sy0">,</span> fact_9<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>String mixins, combined with compile-time function execution, allow generating D code using string operations at compile time. This can be used to parse <a href="http://en.wikipedia.org/wiki/Domain-specific_language" title="Domain-specific language">domain-specific languages</a> to D code, which will be compiled as part of the program:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> FooToD<span class="sy0">;</span> <span class="co1">// hypothetical module which contains a function that parses Foo source code</span>
+               <span class="co1">// and returns equivalent D code</span>
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw2">mixin</span><span class="br0">(</span>fooToD<span class="br0">(</span><span class="kw2">import</span><span class="br0">(</span><span class="st0">"example.foo"</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Functional">Functional</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=6" title="Edit section: Functional">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>D supports <a href="Functional_programming.html" title="Functional programming">functional programming</a> features such as <a href="http://en.wikipedia.org/wiki/Anonymous_function" title="Anonymous function">function literals</a>, <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)" title="Closure (computer science)" class="mw-redirect">closures</a>, and the use of <a href="Higher-order_function.html" title="Higher-order function">higher-order functions</a>. There are two syntaxes for anonymous functions, including a multiple-statement form and a "shorthand" single-expression notation:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw4">int</span> <span class="kw2">function</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span> g<span class="sy0">;</span>
+g <span class="sy0">=</span> <span class="br0">(</span>x<span class="br0">)</span> <span class="br0">{</span> <span class="kw1">return</span> x <span class="sy0">*</span> x<span class="sy0">;</span> <span class="br0">}</span><span class="sy0">;</span> <span class="co1">// longhand</span>
+g <span class="sy0">=</span> <span class="br0">(</span>x<span class="br0">)</span> <span class="sy0">=&gt;</span> x <span class="sy0">*</span> x<span class="sy0">;</span>          <span class="co1">// shorthand</span>
+</pre></div>
+</div>
+<p>There are two builtin types for function literals, <code>function</code>, which is simply a pointer to a stack-allocated function, and <code>delegate</code>, which also includes a pointer to the surrounding environment. Type inference can be used with an anonymous function, in which case the compiler creates a <code>delegate</code> unless it can prove that an environment pointer is not necessary. Likewise, to implement a closure, the compiler places enclosed local variables on the heap only if necessary (for example, if a closure is returned by another function, and exits that function's scope). When using type inference, the compiler will also add attributes such as <code>pure</code> and <code>nothrow</code> to a function's type, if it can prove that they apply.</p>
+<p>Other functional features such as <a href="http://en.wikipedia.org/wiki/Currying" title="Currying">currying</a> and common higher-order functions such as <a href="http://en.wikipedia.org/wiki/Map_(higher-order_function)" title="Map (higher-order function)">map</a>, <a href="http://en.wikipedia.org/wiki/Filter_(higher-order_function)" title="Filter (higher-order function)">filter</a>, and <a href="http://en.wikipedia.org/wiki/Fold_(higher-order_function)" title="Fold (higher-order function)">reduce</a> are available through the standard library modules <code>std.functional</code> and <code>std.algorithm</code>.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="me1">stdio</span><span class="sy0">,</span> std.<span class="me1">algorithm</span><span class="sy0">,</span> std.<span class="me1">range</span><span class="sy0">;</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">int</span><span class="br0">[</span><span class="br0">]</span> a1 <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">9</span><span class="br0">]</span><span class="sy0">;</span>
+    <span class="kw4">int</span><span class="br0">[</span><span class="br0">]</span> a2 <span class="sy0">=</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">9</span><span class="br0">]</span><span class="sy0">;</span>
+ 
+    <span class="co1">// must be immutable to allow access from inside a pure function</span>
+    <span class="kw4">immutable</span> pivot <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span>
+ 
+    <span class="kw4">int</span> mySum<span class="br0">(</span><span class="kw4">int</span> a<span class="sy0">,</span> <span class="kw4">int</span> b<span class="br0">)</span> <span class="kw4">pure</span> <span class="kw4">nothrow</span> <span class="co1">// pure function</span>
+    <span class="br0">{</span>
+        <span class="kw1">if</span> <span class="br0">(</span>b <span class="sy0">&lt;=</span> pivot<span class="br0">)</span> <span class="co1">// ref to enclosing-scope</span>
+            <span class="kw1">return</span> a <span class="sy0">+</span> b<span class="sy0">;</span>
+        <span class="kw1">else</span>
+            <span class="kw1">return</span> a<span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    <span class="co1">// passing a delegate (closure)</span>
+    <span class="kw4">auto</span> result <span class="sy0">=</span> reduce<span class="sy0">!</span>mySum<span class="br0">(</span>chain<span class="br0">(</span>a1<span class="sy0">,</span> a2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    writeln<span class="br0">(</span><span class="st0">"Result: "</span><span class="sy0">,</span> result<span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Result: 15</span>
+ 
+    <span class="co1">// passing a delegate literal</span>
+    result <span class="sy0">=</span> reduce<span class="sy0">!</span><span class="br0">(</span><span class="br0">(</span>a<span class="sy0">,</span> b<span class="br0">)</span> <span class="sy0">=&gt;</span> <span class="br0">(</span>b <span class="sy0">&lt;=</span> pivot<span class="br0">)</span> <span class="sy0">?</span> a <span class="sy0">+</span> b <span class="sy0">:</span> a<span class="br0">)</span><span class="br0">(</span>chain<span class="br0">(</span>a1<span class="sy0">,</span> a2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    writeln<span class="br0">(</span><span class="st0">"Result: "</span><span class="sy0">,</span> result<span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Result: 15</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Alternatively, the above function compositions can be expressed using UFCS (Uniform Function Call Syntax) for more natural left-to-right reading:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+    <span class="kw4">auto</span> result <span class="sy0">=</span> a1.<span class="me1">chain</span><span class="br0">(</span>a2<span class="br0">)</span>.<span class="me1">reduce</span><span class="sy0">!</span>mySum<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    writeln<span class="br0">(</span><span class="st0">"Result: "</span><span class="sy0">,</span> result<span class="br0">)</span><span class="sy0">;</span>
+ 
+    result <span class="sy0">=</span> a1.<span class="me1">chain</span><span class="br0">(</span>a2<span class="br0">)</span>.<span class="me1">reduce</span><span class="sy0">!</span><span class="br0">(</span><span class="br0">(</span>a<span class="sy0">,</span> b<span class="br0">)</span> <span class="sy0">=&gt;</span> <span class="br0">(</span>b <span class="sy0">&lt;=</span> pivot<span class="br0">)</span> <span class="sy0">?</span> a <span class="sy0">+</span> b <span class="sy0">:</span> a<span class="br0">)</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    writeln<span class="br0">(</span><span class="st0">"Result: "</span><span class="sy0">,</span> result<span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Parallel">Parallel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=7" title="Edit section: Parallel">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="me1">stdio</span> <span class="sy0">:</span> writeln<span class="sy0">;</span>
+<span class="kw2">import</span> std.<span class="me1">range</span> <span class="sy0">:</span> iota<span class="sy0">;</span>
+<span class="kw2">import</span> std.<span class="me1">parallelism</span> <span class="sy0">:</span> parallel<span class="sy0">;</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">foreach</span> <span class="br0">(</span>i<span class="sy0">;</span> iota<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span>.<span class="me1">parallel</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="co1">// The body of the foreach loop is executed in parallel for each i</span>
+        writeln<span class="br0">(</span><span class="st0">"processing "</span><span class="sy0">,</span> i<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h4><span class="mw-headline" id="Concurrent">Concurrent</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=8" title="Edit section: Concurrent">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="me1">stdio</span><span class="sy0">,</span> std.<span class="me1">concurrency</span><span class="sy0">;</span>
+ 
+<span class="kw4">void</span> foo<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">bool</span> cont <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+ 
+    <span class="kw1">while</span> <span class="br0">(</span>cont<span class="br0">)</span>
+    <span class="br0">{</span>
+        receive<span class="br0">(</span> <span class="co1">// delegates are used to match the message type</span>
+            <span class="br0">(</span><span class="kw4">int</span> msg<span class="br0">)</span> <span class="sy0">=&gt;</span> writeln<span class="br0">(</span><span class="st0">"int received: "</span><span class="sy0">,</span> msg<span class="br0">)</span><span class="sy0">,</span>
+            <span class="br0">(</span>Tid sender<span class="br0">)</span> <span class="br0">{</span> cont <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span> sender.<span class="me1">send</span><span class="br0">(</span><span class="sy0">-</span><span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span><span class="sy0">,</span>
+            <span class="br0">(</span>Variant v<span class="br0">)</span> <span class="sy0">=&gt;</span> writeln<span class="br0">(</span><span class="st0">"huh?"</span><span class="br0">)</span> <span class="co1">// Variant matches any type</span>
+        <span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">auto</span> tid <span class="sy0">=</span> spawn<span class="br0">(</span><span class="sy0">&amp;</span>foo<span class="br0">)</span><span class="sy0">;</span> <span class="co1">// spawn a new thread running foo()</span>
+ 
+    <span class="kw1">foreach</span> <span class="br0">(</span>i<span class="sy0">;</span> <span class="nu0">0</span> <span class="sy0">..</span> <span class="nu0">10</span><span class="br0">)</span>
+        tid.<span class="me1">send</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">// send some integers</span>
+    tid.<span class="me1">send</span><span class="br0">(</span><span class="nu17">1.0f</span><span class="br0">)</span><span class="sy0">;</span>    <span class="co1">// send a float</span>
+    tid.<span class="me1">send</span><span class="br0">(</span><span class="st0">"hello"</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// send a string</span>
+    tid.<span class="me1">send</span><span class="br0">(</span>thisTid<span class="br0">)</span><span class="sy0">;</span> <span class="co1">// send a struct (Tid)</span>
+ 
+    receive<span class="br0">(</span><span class="br0">(</span><span class="kw4">int</span> x<span class="br0">)</span> <span class="sy0">=&gt;</span> writeln<span class="br0">(</span><span class="st0">"Main thread received message: "</span><span class="sy0">,</span> x<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="Memory_management">Memory management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=9" title="Edit section: Memory management">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Memory is usually managed with <a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a>, but specific objects can be finalized immediately when they go out of scope. Explicit memory management is possible using the <a href="http://en.wikipedia.org/wiki/Operator_overloading" title="Operator overloading">overloaded operators</a> <code>new</code> and <code>delete</code>, and by simply calling <a href="C_(programming_language).html" title="C (programming language)">C</a>'s <a href="Malloc.html" title="Malloc" class="mw-redirect">malloc and free</a> directly. Garbage collection can be controlled: programmers can add and exclude memory ranges from being observed by the collector, can disable and enable the collector and force a generational or a full collection cycle.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> The manual gives many examples of how to implement different highly optimized memory management schemes for when garbage collection is inadequate in a program.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Interaction_with_other_systems">Interaction with other systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=10" title="Edit section: Interaction with other systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="C_(programming_language).html" title="C (programming language)">C</a>'s <a href="http://en.wikipedia.org/wiki/Application_binary_interface" title="Application binary interface">application binary interface (ABI)</a> is supported as well as all of C's fundamental and derived types, enabling direct access to existing C code and libraries. D <a href="http://en.wikipedia.org/wiki/Language_binding" title="Language binding">bindings</a> are available for many popular C libraries. C's standard <a href="http://en.wikipedia.org/wiki/Library_(computer_science)" title="Library (computer science)" class="mw-redirect">library</a> is part of standard D.</p>
+<p>Because C++ does not have a single standard ABI, D can only fully access C++ code that is written to the C ABI. The D parser understands an extern (C++) calling convention for limited linking to C++ objects.</p>
+<p>On Microsoft Windows, D can access <a href="http://en.wikipedia.org/wiki/Component_Object_Model" title="Component Object Model">Component Object Model</a> (COM) code.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=11" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Walter_Bright" title="Walter Bright">Walter Bright</a> decided to start working on a new language in 1999. D was first released in December 2001,<sup id="cite_ref-D1_changelog1_1-1" class="reference"><a href="#cite_note-D1_changelog1-1"><span>[</span>1<span>]</span></a></sup> and reached version 1.0 in January 2007.<sup id="cite_ref-D1_changelog2_11-0" class="reference"><a href="#cite_note-D1_changelog2-11"><span>[</span>11<span>]</span></a></sup> The first version of the language (D1) concentrated on the imperative, object oriented and metaprogramming paradigms,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup> similar to C++.</p>
+<p>Dissatisfied with Phobos, D's official <a href="http://en.wikipedia.org/wiki/Runtime_library" title="Runtime library">runtime</a> and <a href="http://en.wikipedia.org/wiki/Standard_library" title="Standard library">standard library</a>, members of the D community created an alternative runtime and standard library named Tango. The first public Tango announcement came within days of D 1.0's release.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup> Tango adopted a different programming style, embracing OOP and high modularity. Being a community-led project, Tango was more open to contributions, which allowed it to progress faster than the official standard library. At that time, Tango and Phobos were incompatible due to different runtime support APIs (the garbage collector, threading support, etc.). This made it impossible to use both libraries in the same project. The existence of two libraries, both widely in use, has led to significant dispute due to some packages using Phobos and others using Tango.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></p>
+<p>In June 2007, the first version of D2 was released.<sup id="cite_ref-D2_changelog_2-1" class="reference"><a href="#cite_note-D2_changelog-2"><span>[</span>2<span>]</span></a></sup> The beginning of D2's development signalled the stabilization of D1; the first version of the language has been placed in maintenance, only receiving corrections and implementation bugfixes. D2 was to introduce <a href="http://en.wikipedia.org/wiki/Breaking_changes" title="Breaking changes" class="mw-redirect">breaking changes</a> to the language, beginning with its first experimental <a href="http://en.wikipedia.org/wiki/Const-correctness" title="Const-correctness">const system</a>. D2 later added numerous other language features, such as <a href="http://en.wikipedia.org/wiki/Closure_(computer_science)" title="Closure (computer science)" class="mw-redirect">closures</a>, <a href="http://en.wikipedia.org/wiki/Pure_function" title="Pure function">purity</a>, and support for the functional and concurrent programming paradigms. D2 also solved standard library problems by separating the runtime from the standard library. The completion of a D2 Tango port was announced in February 2012.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup></p>
+<p>The release of <a href="http://en.wikipedia.org/wiki/Andrei_Alexandrescu" title="Andrei Alexandrescu">Andrei Alexandrescu</a>'s book <i>The D Programming Language</i> on June 12, 2010 marked the stabilization of D2, which today is commonly referred to as just "D".</p>
+<p>In January 2011, D development moved from a bugtracker / patch-submission basis to <a href="http://en.wikipedia.org/wiki/GitHub" title="GitHub">GitHub</a>. This has led to a significant increase in contributions to the compiler, runtime and standard library.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup></p>
+<p>In December 2011, Andrei Alexandrescu announced that D1, the first version of the language, would be discontinued on December 31, 2012.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> The final D1 release, D v1.076, was on December 31, 2012.<sup id="cite_ref-D1_changelog_18-0" class="reference"><a href="#cite_note-D1_changelog-18"><span>[</span>18<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=12" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most current D implementations <a href="Compiler.html" title="Compiler">compile</a> directly into <a href="http://en.wikipedia.org/wiki/Machine_code" title="Machine code">machine code</a> for efficient execution.</p>
+<ul>
+<li><i>DMD</i> — The Digital Mars D compiler is the official D compiler by Walter Bright. The <a href="http://en.wikipedia.org/wiki/Front-end_and_back-end" title="Front-end and back-end" class="mw-redirect">compiler front-end</a> is licensed under both the <a href="http://en.wikipedia.org/wiki/Artistic_License" title="Artistic License">Artistic License</a> and the <a href="http://en.wikipedia.org/wiki/GNU_GPL" title="GNU GPL" class="mw-redirect">GNU GPL</a>; the <a href="Source_code.html" title="Source code">source code</a> for the front-end is distributed with the compiler binaries. The compiler back-end source code is available but not under an <a href="http://en.wikipedia.org/wiki/Open_source_license" title="Open source license" class="mw-redirect">open source license</a>.<sup id="cite_ref-D-backend-license_4-1" class="reference"><a href="#cite_note-D-backend-license-4"><span>[</span>4<span>]</span></a></sup></li>
+<li><i>GDC</i> — A front-end for the <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a> back-end, built using the open DMD compiler source code.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup></li>
+<li><i>LDC</i> — A compiler based on the DMD front-end that uses <a href="http://en.wikipedia.org/wiki/LLVM" title="LLVM">LLVM</a> as its compiler back-end. The first release-quality version was published on January 9, 2009.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup> It supports both versions: 1.0 and version 2.0.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup></li>
+<li><i>D Compiler for .NET</i> — A back-end for the D programming language 2.0 compiler.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup><sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup> It compiles the code to <a href="http://en.wikipedia.org/wiki/Common_Intermediate_Language" title="Common Intermediate Language">Common Intermediate Language</a> (CIL) bytecode rather than to machine code. The CIL can then be run via a <a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a> (CLR) <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="Development_tools">Development tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=13" title="Edit section: Development tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Editors and <a href="Integrated_development_environment.html" title="Integrated development environment">integrated development environments</a> (IDEs) supporting D include <a href="Eclipse_(software).html" title="Eclipse (software)">Eclipse</a>, <a href="Microsoft_Visual_Studio.html" title="Microsoft Visual Studio">Microsoft Visual Studio</a>, <a href="http://en.wikipedia.org/wiki/SlickEdit" title="SlickEdit">SlickEdit</a>, <a href="http://en.wikipedia.org/wiki/Emacs" title="Emacs">Emacs</a>, <a href="http://en.wikipedia.org/wiki/Vim" title="Vim">vim</a>, <a href="http://en.wikipedia.org/wiki/SciTE" title="SciTE">SciTE</a>, <a href="http://en.wikipedia.org/wiki/Smultron" title="Smultron">Smultron</a>, <a href="http://en.wikipedia.org/wiki/TextMate" title="TextMate">TextMate</a>, <a href="MonoDevelop.html" title="MonoDevelop">MonoDevelop</a>, Zeus,<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup> and <a href="Geany.html" title="Geany">Geany</a> among others.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>25<span>]</span></a></sup></p>
+<ul>
+<li>Eclipse plug-ins for D include: DDT,<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>26<span>]</span></a></sup> and Descent (dead project).<sup id="cite_ref-27" class="reference"><a href="#cite_note-27"><span>[</span>27<span>]</span></a></sup></li>
+<li>Visual Studio integration is provided by VisualD.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span>[</span>28<span>]</span></a></sup></li>
+<li>Vim supports both syntax highlighting and code completion (through patched <a href="http://en.wikipedia.org/wiki/Ctags" title="Ctags">Ctags</a>).</li>
+<li>A bundle is available for <a href="http://en.wikipedia.org/wiki/TextMate" title="TextMate">TextMate</a>, and the <a href="http://en.wikipedia.org/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a> IDE includes partial support for the language. However, standard IDE features such as <a href="http://en.wikipedia.org/wiki/Code_completion" title="Code completion" class="mw-redirect">code completion</a> or <a href="http://en.wikipedia.org/wiki/Refactoring" title="Refactoring" class="mw-redirect">refactoring</a> are not yet available, though they do work partially in Code::Blocks (due to D's similarity to C).</li>
+<li>A plugin for <a href="http://en.wikipedia.org/wiki/Xcode_3" title="Xcode 3" class="mw-redirect">Xcode 3</a> is available, D for Xcode, to enable D-based projects and development.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29"><span>[</span>29<span>]</span></a></sup></li>
+<li>An AddIn for MonoDevelop is available, named Mono-D.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30"><span>[</span>30<span>]</span></a></sup></li>
+<li>KDevelop (as well as its text editor backend, Kate) autocompletion plugin is available. <sup id="cite_ref-31" class="reference"><a href="#cite_note-31"><span>[</span>31<span>]</span></a></sup></li>
+</ul>
+<p><a href="Open_source.html" title="Open source">Open source</a> D IDEs for <a href="http://en.wikipedia.org/wiki/Windows" title="Windows" class="mw-redirect">Windows</a> exist, some written in D, such as Poseidon,<sup id="cite_ref-32" class="reference"><a href="#cite_note-32"><span>[</span>32<span>]</span></a></sup> D-IDE,<sup id="cite_ref-33" class="reference"><a href="#cite_note-33"><span>[</span>33<span>]</span></a></sup> and Entice Designer.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34"><span>[</span>34<span>]</span></a></sup></p>
+<p>D applications can be debugged using any C/C++ debugger, like <a href="http://en.wikipedia.org/wiki/GNU_Debugger" title="GNU Debugger">GDB</a> or <a href="http://en.wikipedia.org/wiki/WinDbg" title="WinDbg">WinDbg</a>, although support for various D-specific language features is extremely limited. On Windows, D programs can be debugged using <a rel="nofollow" class="external text" href="http://ddbg.mainia.de/">Ddbg</a>, or Microsoft debugging tools (WinDBG and Visual Studio), after having converted the debug information using <a rel="nofollow" class="external text" href="http://dsource.org/projects/cv2pdb">cv2pdb</a>. The <a rel="nofollow" class="external text" href="http://zerobugs.codeplex.com/">ZeroBUGS</a> debugger for Linux has experimental support for the D language. Ddbg can be used with various IDEs or from the command line; ZeroBUGS has its own <a href="Graphical_user_interface.html" title="Graphical user interface">graphical user interface</a> (GUI).</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=14" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Example_1">Example 1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=15" title="Edit section: Example 1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This example program prints its command line arguments. The <code>main</code> function is the entry point of a D program, and <code>args</code> is an array of strings representing the command line arguments. A <code>string</code> in D is an array of characters, represented by <code>char[]</code> in D1, or <code>immutable(char)[]</code> in D2.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="me1">stdio</span><span class="sy0">:</span> writefln<span class="sy0">;</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="kw4">string</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">foreach</span> <span class="br0">(</span>i<span class="sy0">,</span> arg<span class="sy0">;</span> args<span class="br0">)</span>
+        writefln<span class="br0">(</span><span class="st0">"args[%d] = '%s'"</span><span class="sy0">,</span> i<span class="sy0">,</span> arg<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>The <code>foreach</code> statement can iterate over any collection. In this case, it is producing a sequence of indexes (<code>i</code>) and values (<code>arg</code>) from the array <code>args</code>. The index <code>i</code> and the value <code>arg</code> have their types inferred from the type of the array <code>args</code>.</p>
+<h3><span class="mw-headline" id="Example_2">Example 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=16" title="Edit section: Example 2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following shows several D capabilities and D design trade-offs in a very short program. It iterates the lines of a text file named <code>words.txt</code> that contains a different word on each line, and prints all the words that are anagrams of other words.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="d source-d">
+<pre class="de1">
+<span class="kw2">import</span> std.<span class="me1">stdio</span><span class="sy0">,</span> std.<span class="me1">algorithm</span><span class="sy0">,</span> std.<span class="me1">range</span><span class="sy0">,</span> std.<span class="kw4">string</span><span class="sy0">;</span>
+ 
+<span class="kw4">void</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">dstring</span><span class="br0">[</span><span class="br0">]</span><span class="br0">[</span><span class="kw4">dstring</span><span class="br0">]</span> signs2words<span class="sy0">;</span>
+    <span class="kw1">foreach</span><span class="br0">(</span><span class="kw4">dchar</span><span class="br0">[</span><span class="br0">]</span> w<span class="sy0">;</span> lines<span class="br0">(</span>File<span class="br0">(</span><span class="st0">"words.txt"</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="br0">{</span>
+        w <span class="sy0">=</span> w.<span class="me1">chomp</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">toLower</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw4">immutable</span> key <span class="sy0">=</span> w.<span class="me1">dup</span>.<span class="me1">sort</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">release</span><span class="br0">(</span><span class="br0">)</span>.<span class="me1">idup</span><span class="sy0">;</span>
+        signs2words<span class="br0">[</span>key<span class="br0">]</span> <span class="sy0">~=</span> w.<span class="me1">idup</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    <span class="kw1">foreach</span><span class="br0">(</span>words<span class="sy0">;</span> signs2words<span class="br0">)</span>
+        <span class="kw1">if</span><span class="br0">(</span>words.<span class="me1">length</span> <span class="sy0">&gt;</span> <span class="nu0">1</span><span class="br0">)</span>
+            writefln<span class="br0">(</span>words.<span class="me1">join</span><span class="br0">(</span><span class="st0">" "</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<ol>
+<li><code>signs2words</code> is a built-in associative array that maps dstring (32-bit / char) keys to arrays of dstrings. It is similar to <code>defaultdict(list)</code> in <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>.</li>
+<li><code>lines(File())</code> yields lines lazily, with the newline. It has to then be copied with <code>idup</code> to obtain a string to be used for the associative array values (the <code>idup</code> property of arrays returns an immutable duplicate of the array, which is required since the <code>dstring</code> type is actually <code>immutable(dchar)[]</code>). Built-in associative arrays require immutable keys.</li>
+<li>The <code>~=</code> operator appends a new dstring to the values of the associate dynamic array.</li>
+<li><code>toLower</code>, <code>join</code> and <code>chomp</code> are string functions that D allows to use with a method syntax. The name of such functions is often very similar to Python string methods. The <code>toLower</code> converts a string to lower case, <code>join("&#160;")</code> joins an array of strings into a single string using a single space as separator, and <code>chomp</code> removes a newline from the end of the string if one is present.</li>
+<li>The <code>sort</code> is an std.algorithm function that sorts the array in place, creating a unique signature for words that are anagrams of each other. The <code>release()</code> method on the return value of <code>sort()</code> is handy to keep the code as a single expression.</li>
+<li>The second <code>foreach</code> iterates on the values of the associative array, it's able to infer the type of <code>words</code>.</li>
+<li><code>key</code> is assigned to an immutable variable, its type is inferred.</li>
+<li>UTF-32 dchar[] is used instead of normal UTF-8 char[] otherwise <code>sort()</code> refuses to sort it. There are more efficient ways to write this program, that use just UTF-8.</li>
+</ol>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:8bit-dynamiclist.gif" class="image"><img alt="Portal icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/8bit-dynamiclist.gif/28px-8bit-dynamiclist.gif" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/1/1d/8bit-dynamiclist.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/1/1d/8bit-dynamiclist.gif 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming portal</a></td>
+</tr>
+<tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Computer-aj_aj_ashton_01.svg" class="image"><img alt="Portal icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/28px-Computer-aj_aj_ashton_01.svg.png" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/42px-Computer-aj_aj_ashton_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Computer-aj_aj_ashton_01.svg/56px-Computer-aj_aj_ashton_01.svg.png 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Information_technology" title="Portal:Information technology">Information technology portal</a></td>
+</tr>
+</table>
+</div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ddoc" title="Ddoc">Ddoc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_language_bindings_for_GTK+" title="List of language bindings for GTK+">Gtk+ D Support</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=18" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-D1_changelog1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-D1_changelog1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-D1_changelog1_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.digitalmars.com/d/1.0/changelog1.html">"D Change Log to Nov 7 2005"</a>. <i>D Programming Language 1.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 1 December 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=D+Change+Log+to+Nov+7+2005&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.digitalmars.com%2Fd%2F1.0%2Fchangelog1.html&amp;rft.jtitle=D+Programming+Language+1.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-D2_changelog-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-D2_changelog_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-D2_changelog_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dlang.org/changelog.html">"Changelog"</a>. <i>D Programming Language 2.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 31 January 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=Changelog&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdlang.org%2Fchangelog.html&amp;rft.jtitle=D+Programming+Language+2.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-dmd-announcement-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-dmd-announcement_3-0">^</a></b></span> <span class="reference-text"><span class="citation web">Walter Bright. <a rel="nofollow" class="external text" href="http://forum.dlang.org/post/l5bq9f$1j8c$1@digitalmars.com">"dmd 2.064.2"</a><span class="reference-accessdate">. Retrieved 31 January 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.aulast=Walter+Bright&amp;rft.au=Walter+Bright&amp;rft.btitle=dmd+2.064.2&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.dlang.org%2Fpost%2Fl5bq9f%241j8c%241%40digitalmars.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-D-backend-license-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-D-backend-license_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-D-backend-license_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://github.com/D-Programming-Language/dmd/blob/master/src/readme.txt">"readme.txt"</a>. <i>DMD source code</i>. GitHub<span class="reference-accessdate">. Retrieved March 5, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=readme.txt&amp;rft.genre=article&amp;rft_id=https%3A%2F%2Fgithub.com%2FD-Programming-Language%2Fdmd%2Fblob%2Fmaster%2Fsrc%2Freadme.txt&amp;rft.jtitle=DMD+source+code&amp;rft.pub=GitHub&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://dlang.org/faq.html">FAQ of digitalmars</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation book">Bright, Walter. <i>D programming Language Specification</i> (in English) (e-book ed.). 7227: Digital Mars (via Amazon).</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=Bright%2C+Walter&amp;rft.aufirst=Walter&amp;rft.aulast=Bright&amp;rft.btitle=D+programming+Language+Specification&amp;rft.edition=e-book&amp;rft.genre=book&amp;rft.place=7227&amp;rft.pub=Digital+Mars+%28via+Amazon%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> Memory Safety has an entire chapter, with recipes. It's a major theme of the language. Failures to reach this standard are defects.</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation audio-visual">Andrei Alexandrescu (August 2, 2010). <a rel="nofollow" class="external text" href="http://www.youtube.com/watch?v=RlVpPstLPEc"><i>Three Cool Things About D</i></a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Three+Cool+Things+About+D&amp;rft.date=August+2%2C+2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRlVpPstLPEc&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dlang.org/expression.html#Lambda">"Expressions"</a>. Digital Mars<span class="reference-accessdate">. Retrieved December 27, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Expressions&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdlang.org%2Fexpression.html%23Lambda&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.digitalmars.com/d/1.0/phobos/std_gc.html">"std.gc"</a>. <i>D Programming Language 1.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 6 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=std.gc&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.digitalmars.com%2Fd%2F1.0%2Fphobos%2Fstd_gc.html&amp;rft.jtitle=D+Programming+Language+1.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dlang.org/memory.html">"Memory Management"</a>. <i>D Programming Language 2.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved February 17, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=Memory+Management&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdlang.org%2Fmemory.html&amp;rft.jtitle=D+Programming+Language+2.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-D1_changelog2-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-D1_changelog2_11-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.digitalmars.com/d/1.0/changelog2.html">"D Change Log"</a>. <i>D Programming Language 1.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 11 January 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=D+Change+Log&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.digitalmars.com%2Fd%2F1.0%2Fchangelog2.html&amp;rft.jtitle=D+Programming+Language+1.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.digitalmars.com/d/1.0/">"Intro"</a>. <i>D Programming Language 1.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 1 December 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=Intro&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.digitalmars.com%2Fd%2F1.0%2F&amp;rft.jtitle=D+Programming+Language+1.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://forum.dlang.org/post/en9ou4$23hr$1@digitaldaemon.com">"Announcing a new library"</a><span class="reference-accessdate">. Retrieved 15 February 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Announcing+a+new+library&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.dlang.org%2Fpost%2Fen9ou4%2423hr%241%40digitaldaemon.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.prowiki.org/wiki4d/wiki.cgi?StandardLib">"Wiki4D - Standard Lib"</a><span class="reference-accessdate">. Retrieved 6 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Wiki4D+-+Standard+Lib&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.prowiki.org%2Fwiki4d%2Fwiki.cgi%3FStandardLib&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://forum.dlang.org/post/jgagrl$1ta5$1@digitalmars.com">"Tango for D2: All user modules ported"</a><span class="reference-accessdate">. Retrieved 16 February 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Tango+for+D2%3A+All+user+modules+ported&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.dlang.org%2Fpost%2Fjgagrl%241ta5%241%40digitalmars.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><span class="citation web">Walter Bright. <a rel="nofollow" class="external text" href="http://forum.dlang.org/post/iv524m$98r$1@digitalmars.com">"Re: GitHub or dsource?"</a><span class="reference-accessdate">. Retrieved 15 February 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.aulast=Walter+Bright&amp;rft.au=Walter+Bright&amp;rft.btitle=Re%3A+GitHub+or+dsource%3F&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.dlang.org%2Fpost%2Fiv524m%2498r%241%40digitalmars.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><span class="citation web">Andrei Alexandrescu. <a rel="nofollow" class="external text" href="http://forum.dlang.org/post/jc0ic5$18bv$2@digitalmars.com">"D1 to be discontinued on December 31, 2012"</a><span class="reference-accessdate">. Retrieved 31 January 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=Andrei+Alexandrescu&amp;rft.aulast=Andrei+Alexandrescu&amp;rft.btitle=D1+to+be+discontinued+on+December+31%2C+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fforum.dlang.org%2Fpost%2Fjc0ic5%2418bv%242%40digitalmars.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-D1_changelog-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-D1_changelog_18-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.digitalmars.com/d/1.0/changelog.html">"D Change Log"</a>. <i>D Programming Language 1.0</i>. Digital Mars<span class="reference-accessdate">. Retrieved 31 January 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.atitle=D+Change+Log&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.digitalmars.com%2Fd%2F1.0%2Fchangelog.html&amp;rft.jtitle=D+Programming+Language+1.0&amp;rft.pub=Digital+Mars&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://gdcproject.org/">"gdc project homepage"</a><span class="reference-accessdate">. Retrieved 14 October 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=gdc+project+homepage&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgdcproject.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dsource.org/projects/ldc">"LLVM D compiler project on DSource"</a><span class="reference-accessdate">. Retrieved 3 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=LLVM+D+compiler+project+on+DSource&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdsource.org%2Fprojects%2Fldc&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.dsource.org/projects/ldc/wiki/BuildInstructionsPhobosDruntimeTrunk">BuildInstructionsPhobosDruntimeTrunk - ldc - D Programming Language - Trac</a></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://dnet.codeplex.com/">"D .NET project on CodePlex"</a><span class="reference-accessdate">. Retrieved 3 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=D+.NET+project+on+CodePlex&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdnet.codeplex.com%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><span class="citation web">Jonathan Allen (15 May 2009). <a rel="nofollow" class="external text" href="http://www.infoq.com/news/2009/05/D-Source">"Source for the D.NET Compiler is Now Available"</a>. InfoQ<span class="reference-accessdate">. Retrieved 6 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=Jonathan+Allen&amp;rft.aulast=Jonathan+Allen&amp;rft.btitle=Source+for+the+D.NET+Compiler+is+Now+Available&amp;rft.date=15+May+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2009%2F05%2FD-Source&amp;rft.pub=InfoQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.prowiki.org/wiki4d/wiki.cgi?EditorSupport/ZeusForWindows">Zeus</a></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.prowiki.org/wiki4d/wiki.cgi?EditorSupport">"Wiki4D - Editor Support"</a><span class="reference-accessdate">. Retrieved 3 July 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.btitle=Wiki4D+-+Editor+Support&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.prowiki.org%2Fwiki4d%2Fwiki.cgi%3FEditorSupport&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://code.google.com/p/ddt/">DDT</a></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://dsource.org/projects/descent">Descent</a></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.dsource.org/projects/visuald">VisualD</a></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://michelf.com/projects/d-for-xcode/">D for Xcode</a></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://mono-d.sourceforge.net/">Mono-D</a></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external autonumber" href="https://github.com/Dav1dde/lumen">[1]</a></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://dsource.org/projects/poseidon">Poseidon</a></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://d-ide.sourceforge.net/">D-IDE</a></span></li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.dprogramming.com/entice.php">Entice Designer</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=19" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation book">Alexandrescu, Andrei (January 4, 2010). <i>The D Programming Language</i> (1 ed.). Addison-Wesley Professional. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-321-63536-5" title="Special:BookSources/978-0-321-63536-5">978-0-321-63536-5</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=Alexandrescu%2C+Andrei&amp;rft.aufirst=Andrei&amp;rft.aulast=Alexandrescu&amp;rft.btitle=The+D+Programming+Language&amp;rft.date=January+4%2C+2010&amp;rft.edition=1&amp;rft.genre=book&amp;rft.isbn=978-0-321-63536-5&amp;rft.pub=Addison-Wesley+Professional&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Alexandrescu, Andrei (June 15, 2009). <a rel="nofollow" class="external text" href="http://www.ddj.com/hpc-high-performance-computing/217801225">"The Case for D"</a>. Dr. Dobb's Journal.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=Alexandrescu%2C+Andrei&amp;rft.aufirst=Andrei&amp;rft.aulast=Alexandrescu&amp;rft.btitle=The+Case+for+D&amp;rft.date=June+15%2C+2009&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.ddj.com%2Fhpc-high-performance-computing%2F217801225&amp;rft.pub=Dr.+Dobb%27s+Journal&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Çehreli, Ali (February 1, 2012). <a rel="nofollow" class="external text" href="http://ddili.org/ders/d.en/index.html">"Programming in D"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AD+%28programming+language%29&amp;rft.au=%C3%87ehreli%2C+Ali&amp;rft.aufirst=Ali&amp;rft.aulast=%C3%87ehreli&amp;rft.btitle=Programming+in+D&amp;rft.date=February+1%2C+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fddili.org%2Fders%2Fd.en%2Findex.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> (distributed under CC-BY-NC-SA license). This book provides a basic level introduction.</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikibooks has a book on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D" class="extiw" title="wikibooks:A Beginner's Guide to D">A Beginner's Guide to D</a></b></i></td>
+</tr>
+</table>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikibooks has a book on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/D_Programming" class="extiw" title="wikibooks:D Programming">D Programming</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><span class="official website"><span class="url"><a rel="nofollow" class="external text" href="http://dlang.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.digitalmars.com/">Digital Mars</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/D-Programming-Language">D (programming language)</a> repository at <a href="http://en.wikipedia.org/wiki/GitHub" title="GitHub">GitHub</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CProLang" title="Template:CProLang"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CProLang" title="Template talk:CProLang"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CProLang&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="C_(programming_language).html" title="C (programming language)">C programming language</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="ANSI_C.html" title="ANSI C">ANSI C</a>
+<ul>
+<li><a href="ANSI_C.html#C89_and_C90" title="ANSI C">C89 and C90</a></li>
+</ul>
+</li>
+<li><a href="C99.html" title="C99">C99</a></li>
+<li><a href="C11_(C_standard_revision).html" title="C11 (C standard revision)">C11</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Amsterdam_Compiler_Kit.html" title="Amsterdam Compiler Kit">Amsterdam Compiler Kit</a></li>
+<li><a href="Borland_Turbo_C.html" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="Clang.html" title="Clang">Clang</a></li>
+<li><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="LCC_(compiler).html" title="LCC (compiler)">LCC</a></li>
+<li><a href="Pelles_C.html" title="Pelles C">Pelles C</a></li>
+<li><a href="Portable_C_Compiler.html" title="Portable C Compiler">PCC</a></li>
+<li><a href="Tiny_C_Compiler.html" title="Tiny C Compiler">TCC</a></li>
+<li><a href="Visual_C%2b%2b.html" title="Visual C++">Visual C++</a>
+<ul>
+<li><a href="C%2b%2b/CLI.html" title="C++/CLI">C++/CLI</a></li>
+<li><a href="C%2b%2b/CX.html" title="C++/CX">C++/CX</a></li>
+</ul>
+</li>
+<li><a href="Watcom_C/C%2b%2b_compiler.html" title="Watcom C/C++ compiler">Watcom C/C++ compiler</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="C_standard_library.html" title="C standard library">C standard library</a></li>
+<li><a href="Bionic_(software).html" title="Bionic (software)">Bionic</a></li>
+<li><a href="Dietlibc.html" title="Dietlibc">dietlibc</a></li>
+<li><a href="Embedded_GLIBC.html" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="GNU_C_Library.html" title="GNU C Library">glibc</a></li>
+<li><a href="Klibc.html" title="Klibc">klibc</a></li>
+<li><a href="Hybris_(software).html" title="Hybris (software)">libhybris</a></li>
+<li><a href="Musl.html" title="Musl">musl</a></li>
+<li><a href="Newlib.html" title="Newlib">Newlib</a></li>
+<li><a href="UClibc.html" title="UClibc">uClibc</a></li>
+<li><a href="BSD_libc.html" title="BSD libc" class="mw-redirect">BSD libc</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Features</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Null-terminated_string.html" title="Null-terminated string">String</a></li>
+<li><a href="C_syntax.html" title="C syntax">Syntax</a></li>
+<li><a href="C_preprocessor.html" title="C preprocessor">Preprocessor</a></li>
+<li><a href="C_data_types.html" title="C data types">Variable types and declarations</a></li>
+<li><a href="C_standard_library.html" title="C standard library">Functions</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Select descendants</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="C%2b%2b.html" title="C++">C++</a></li>
+<li><a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a></li>
+<li><strong class="selflink">D</strong></li>
+<li><a href="Objective-C.html" title="Objective-C">Objective-C</a></li>
+<li><a href="Alef_(programming_language).html" title="Alef (programming language)">Alef</a></li>
+<li><a href="Limbo_(programming_language).html" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="Go_(programming_language).html" title="Go (programming language)">Go</a></li>
+<li><a href="Vala_(programming_language).html" title="Vala (programming language)">Vala</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">C and other languages</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li>C and C++
+<ul>
+<li><a href="Compatibility_of_C_and_C%2b%2b.html" title="Compatibility of C and C++">Compatibility</a></li>
+<li><a href="Operators_in_C_and_C%2b%2b.html" title="Operators in C and C++">Operators</a></li>
+</ul>
+</li>
+<li><a href="Comparison_of_Pascal_and_C.html" title="Comparison of Pascal and C">Comparison of Pascal and C</a></li>
+<li><a href="Java_virtual_machine.html#C_to_bytecode_compilers" title="Java virtual machine">C to Java byte-code compiler</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Category:C_programming_language" title="Category:C programming language">Category</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1039
+CPU time usage: 1.428 seconds
+Real time usage: 1.532 seconds
+Preprocessor visited node count: 2558/1000000
+Preprocessor generated node count: 13732/1500000
+Post‐expand include size: 58623/2048000 bytes
+Template argument size: 3584/2048000 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 3/500
+Lua time usage: 0.147/10.000 seconds
+Lua memory usage: 3.19 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:243881-0!*!0!default!!en!4!* and timestamp 20140326235835
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;oldid=601384973">http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;oldid=601384973</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:C_programming_language_family" title="Category:C programming language family">C programming language family</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Class-based_programming_languages" title="Category:Class-based programming languages">Class-based programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Multi-paradigm_programming_languages" title="Category:Multi-paradigm programming languages">Multi-paradigm programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Systems_programming_languages" title="Category:Systems programming languages">Systems programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Programming_languages_created_in_the_2000s" title="Category:Programming languages created in the 2000s">Programming languages created in the 2000s</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Statically_typed_programming_languages" title="Category:Statically typed programming languages">Statically typed programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=D+%28programming+language%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=D+%28programming+language%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="D_(programming_language).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:D_(programming_language)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="D_(programming_language).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/D_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/D_(programming_language)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;oldid=601384973" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q319268" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=D_%28programming_language%29&amp;id=601384973" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=D+%28programming+language%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=D+%28programming+language%29&amp;oldid=601384973&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/دي_(لغة_برمجة)" title="دي (لغة برمجة) – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/D_(език_за_програмиране)" title="D (език за програмиране) – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Llenguatge_D" title="Llenguatge D – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/D_(programovací_jazyk)" title="D (programovací jazyk) – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/D_(Programmiersprache)" title="D (Programmiersprache) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/D_(lenguaje_de_programación)" title="D (lenguaje de programación) – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/D_(programlingvo)" title="D (programlingvo) – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/دی_(زبان_برنامه‌نویسی)" title="دی (زبان برنامه‌نویسی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/D_(langage)" title="D (langage) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Linguaxe_de_programación_D" title="Linguaxe de programación D – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/D_(프로그래밍_언어)" title="D (프로그래밍 언어) – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/D_(bahasa_pemrograman)" title="D (bahasa pemrograman) – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/D_(linguaggio)" title="D (linguaggio) – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ka"><a href="http://ka.wikipedia.org/wiki/D_(პროგრამირების_ენა)" title="D (პროგრამირების ენა) – Georgian" lang="ka" hreflang="ka">ქართული</a></li>
+			<li class="interlanguage-link interwiki-la"><a href="http://la.wikipedia.org/wiki/D_(lingua_programmandi)" title="D (lingua programmandi) – Latin" lang="la" hreflang="la">Latina</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/D_(programozási_nyelv)" title="D (programozási nyelv) – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Bahasa_pengaturcaraan_D" title="Bahasa pengaturcaraan D – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/D_(programmeertaal)" title="D (programmeertaal) – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/D言語" title="D言語 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/D_(programmeringsspråk)" title="D (programmeringsspråk) – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/D_(język_programowania)" title="D (język programowania) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/D_(linguagem_de_programação)" title="D (linguagem de programação) – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/D_(язык_программирования)" title="D (язык программирования) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/D_(programovací_jazyk)" title="D (programovací jazyk) – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/D_(ohjelmointikieli)" title="D (ohjelmointikieli) – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/D_(programspråk)" title="D (programspråk) – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/D_programlama_dili" title="D programlama dili – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/D_(мова_програмування)" title="D (мова програмування) – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/D語言" title="D語言 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q319268#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 March 2014 at 17:56.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/D_(programming_language)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1058 in 0.332 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/D_(programming_language) by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:56:50 GMT -->
+</html>

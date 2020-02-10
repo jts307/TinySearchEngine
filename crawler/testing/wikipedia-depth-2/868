@@ -1,0 +1,454 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Year_2038_problem.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Year_2038_problem by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Year 2038 problem - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Year_2038_problem" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Year_2038_problem.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Year_2038_problem","wgTitle":"Year 2038 problem","wgCurRevisionId":600708905,"wgRevisionId":600708905,"wgArticleId":300127,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles containing potentially dated statements from 2012","All articles containing potentially dated statements","All articles with unsourced statements","Articles with unsourced statements from December 2011","Use dmy dates from August 2010","Unix","Operating system technology","Time formatting and storage bugs","Future problems","2038"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Year_2038_problem","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["nl-nl","nl","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q459405"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Year_2038_problem skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Year 2038 problem</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:Year_2038_problem.gif" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/e/e9/Year_2038_problem.gif" width="400" height="130" class="thumbimage" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Year_2038_problem.gif" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Example showing how the date would reset, represented as a signed 32bit integer (at 03:14:08 UTC on 19 January 2038).</div>
+</div>
+</div>
+<p>The <b>year 2038 problem</b> may cause some <a href="http://en.wikipedia.org/wiki/Computer_software" title="Computer software" class="mw-redirect">computer software</a> to fail at some point near the year 2038. The problem affects all software and systems that both store <a href="System_time.html" title="System time">system time</a> as a <a href="http://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">signed 32-bit integer</a>, and interpret this number as the number of seconds since 00:00:00 <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time" title="Coordinated Universal Time">UTC</a> on Thursday, 1 January 1970.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The furthest time that can be represented this way is 03:14:07 <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time" title="Coordinated Universal Time">UTC</a> on Tuesday, 19 January 2038.<sup id="cite_ref-spinellis_2-0" class="reference"><a href="#cite_note-spinellis-2"><span>[</span>2<span>]</span></a></sup> Times beyond this moment will "wrap around" and be stored internally as a negative number, which these systems will interpret as a date in December 13, 1901 rather than January 19, 2038. This is caused by <a href="http://en.wikipedia.org/wiki/Integer_overflow" title="Integer overflow">integer overflow</a>. The counter "runs out" of usable digits, "increments" the sign bit instead, and reports a maximally negative number (continuing to count <i>up</i>, toward zero). This is likely to cause problems for users of these systems due to erroneous calculations.</p>
+<p>Further, while most programs will only be affected in or very close to 2038, programs that work with future dates will begin to run into problems much sooner. For example, a program that works with dates 23 years in the future will have to be fixed no later than 2015.</p>
+<p>Because most <a href="http://en.wikipedia.org/wiki/32-bit" title="32-bit">32-bit</a> <a href="Unix-like.html" title="Unix-like">Unix-like</a> systems store and manipulate time in this format, it is usually called <a href="Unix_time.html" title="Unix time">Unix time</a>, and so the year 2038 problem is often referred to as the Unix <a href="http://en.wikipedia.org/wiki/Year_2000_problem" title="Year 2000 problem">Millennium Bug</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Early_problems"><span class="tocnumber">1</span> <span class="toctext">Early problems</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Vulnerable_systems"><span class="tocnumber">2</span> <span class="toctext">Vulnerable systems</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Data_structures_with_time_problems"><span class="tocnumber">3</span> <span class="toctext">Data structures with time problems</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#NTP_timestamps"><span class="tocnumber">4</span> <span class="toctext">NTP timestamps</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solutions"><span class="tocnumber">5</span> <span class="toctext">Solutions</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Notes"><span class="tocnumber">7</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Early_problems">Early problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=1" title="Edit section: Early problems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In May 2006, reports surfaced of an early manifestation of the Y2038 problem in the <a href="http://en.wikipedia.org/wiki/AOLserver" title="AOLserver">AOLserver</a> software. The software was designed with a <a href="Kludge.html" title="Kludge">kludge</a> to handle a database request that should "never" time out. Rather than specifically handling this special case, the initial design simply specified an arbitrary <a href="http://en.wikipedia.org/wiki/Timeout_(computing)" title="Timeout (computing)">time-out</a> date in the future.</p>
+<p>The default configuration for the server specified that the request should time out after one billion seconds. One billion seconds (approximately thirty-two years) after 9:27.28&#160;pm on 12 May 2006 is beyond the 2038 cutoff date. Thus, after this time, the time-out calculation overflowed and returned a date that was actually in the past, causing the software to crash. When the problem was discovered, AOL server managers had to edit the configuration file and set the time-out to a lower value.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>Players of games or apps which are programmed to impose waiting-periods<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> are running into this problem when they attempt to work-around the waiting-period on devices which harbor the coding by manually setting their devices (such-as the <a href="http://en.wikipedia.org/wiki/Nexus_7" title="Nexus 7" class="mw-redirect">Nexus 7</a><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup>) to a date past 19 January 2038.</p>
+<h2><span class="mw-headline" id="Vulnerable_systems">Vulnerable systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=2" title="Edit section: Vulnerable systems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="Embedded_systems.html" title="Embedded systems" class="mw-redirect">Embedded systems</a> that use dates for either computation or diagnostic logging are most likely to be affected by the 2038 bug.</p>
+<p>Many transportation systems from flight to automobiles use embedded systems extensively. In automotive systems, this may include anti-lock braking system (ABS), electronic stability control (ESC/ESP), traction control (TCS) and automatic four-wheel drive; aircraft may use inertial guidance systems and GPS receivers. However this does not imply that all these systems will suffer from the bug. Many such systems will not require access to dates. For those that do, those systems which only track the difference between times/dates and not absolute times/dates will, by the nature of the calculation, not experience a problem. This is the case for automotive diagnostics based on legislative standards such as CARB.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>Another major use of embedded systems is in communications devices, including cell phones and Internet appliances (routers, wireless access points, etc.) which rely on storing an accurate time and date and are increasingly based on UNIX-like operating systems. For example, the bug makes some Android devices crash and not restart when the time is changed to that date.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>As of 2012<sup class="plainlinks noprint asof-tag update" style="display:none;"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit">[update]</a></sup>, most embedded systems use <a href="http://en.wikipedia.org/wiki/8-bit" title="8-bit">8-bit</a> or <a href="http://en.wikipedia.org/wiki/16-bit" title="16-bit">16-bit</a> <a href="http://en.wikipedia.org/wiki/Microprocessors" title="Microprocessors" class="mw-redirect">microprocessors</a>,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> even as desktop systems are transitioning to <a href="http://en.wikipedia.org/wiki/64-bit" title="64-bit" class="mw-redirect">64-bit</a> systems.</p>
+<p>Despite the modern <a href="http://en.wikipedia.org/wiki/Moore%27s_Law" title="Moore's Law" class="mw-redirect">18–24-month</a> generational update in computer systems technology, embedded systems are designed to last the lifetime of the machine in which they are a component. It is conceivable that some of these systems may still be in use in 2038. It may be impractical or, in some cases, impossible to upgrade the software running these systems, ultimately requiring replacement if 32-bit <tt><a href="Time_t.html" title="Time t" class="mw-redirect">time_t</a></tt> limitations are to be corrected.</p>
+<p>The use of 32-bit <tt>time_t</tt> has also been encoded into some file formats,<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2011)">citation needed</span></a></i>]</sup> which means it can live on well beyond the life of the machines on which such file formats were originally supported.</p>
+<p><a href="http://en.wikipedia.org/wiki/MySQL" title="MySQL">MySQL</a> database's inbuilt functions like UNIX_TIMESTAMP() will return 0 after 03:14:07 <a href="http://en.wikipedia.org/wiki/UTC" title="UTC" class="mw-redirect">UTC</a> on 19 January 2038.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Data_structures_with_time_problems">Data structures with time problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=3" title="Edit section: Data structures with time problems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many data structures in use today have 32-bit time representations embedded into their structure. A full list of these data structures is virtually impossible to derive but there are well-known data structures that have the Unix time problem:</p>
+<ul>
+<li>file systems (many filesystems use only 32 bits to represent times in <a href="Inode.html" title="Inode">inode</a>)</li>
+<li>binary file formats (that use 32-bit time fields)</li>
+<li>databases (that have 32-bit time fields)</li>
+<li>database query languages, like <a href="SQL.html" title="SQL">SQL</a> that have UNIX_TIMESTAMP() like commands</li>
+<li><a href="COBOL.html" title="COBOL">COBOL</a> systems of 1970s - 1990s vintage that have not been replaced by 2038-compliant systems</li>
+<li>embedded factory, refinery control and monitoring subsystems</li>
+<li>assorted medical devices</li>
+<li>assorted military devices</li>
+</ul>
+<p>Each one of these places where data structures using 32-bit time are in place has its own risks related to failure of the product to perform as designed.</p>
+<p>Real-time data structures with the 2038 problem:</p>
+<ul>
+<li>The <a href="http://en.wikipedia.org/wiki/Digital_Video_Broadcast" title="Digital Video Broadcast" class="mw-redirect">Digital Video Broadcast</a> system has a similar issue on April 22, 2038, when the 16 bits used to transmit <a href="http://en.wikipedia.org/wiki/Modified_Julian_Day" title="Modified Julian Day" class="mw-redirect">Modified Julian Days</a> used for electronic guide scheduling will restart from zero. The <a href="http://en.wikipedia.org/wiki/ETSI" title="ETSI">ETSI</a> EN 300 368 specification mentions in Annex C that the provided MJD formulas are valid til February 28, 2100, but makes no mention of the limits imposed by the 16 bits used to transmit the resulting value.</li>
+<li>The rival <a href="http://en.wikipedia.org/wiki/ATSC" title="ATSC" class="mw-redirect">ATSC</a> system will not have this issue until 2048 due to its use of unsigned 32-bit GPS seconds that begin from January 6, 1980.</li>
+</ul>
+<h2><span class="mw-headline" id="NTP_timestamps">NTP timestamps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=4" title="Edit section: NTP timestamps">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="http://en.wikipedia.org/wiki/Network_Time_Protocol" title="Network Time Protocol">Network Time Protocol</a> has a related overflow issue, which manifests itself in 2036, rather than 2038. The 64-bit timestamps used by NTP consist of a 32-bit part for seconds and a 32-bit part for fractional second, giving NTP a time scale that <a href="http://en.wikipedia.org/wiki/Integer_overflow" title="Integer overflow">rolls over</a> every 2<sup>32</sup> seconds (136 years) and a theoretical resolution of 2<sup>−32</sup> seconds (233 picoseconds). NTP uses an <a href="http://en.wikipedia.org/wiki/Epoch_(reference_date)" title="Epoch (reference date)">epoch</a> of January 1, 1900. The first rollover occurs in 2036, prior to the UNIX year 2038 problem.</p>
+<p>Implementations should disambiguate NTP time using a knowledge of the approximate time from other sources. Since NTP only works with the differences between timestamps and never their absolute values, the wraparound is invisible as long as the timestamps are within 68 years of each other.</p>
+<p>This means that for NTP the rollover will be invisible for most running systems, since they will have the correct time to within a very small tolerance. However, systems that are starting up need to know the date within no more than 68 years. Given the large allowed error, it is not expected that this is too onerous a requirement. One suggested method is to set the clock to no earlier than the system build date. Many systems use a battery powered hardware clock to avoid this problem.</p>
+<p>Even so, future versions of NTP may extend the time representation to 128 bits: 64 bits for the second and 64 bits for the fractional-second. The current NTP4 format has support for <i>Era Number</i> and <i>Era Offset</i>, that when used properly should aid fixing date rollover issues. According to Mills, "The 64 bit value for the fraction is enough to resolve the amount of time it takes a <a href="http://en.wikipedia.org/wiki/Photon" title="Photon">photon</a> to pass an <a href="http://en.wikipedia.org/wiki/Electron" title="Electron">electron</a> at the speed of light. The 64 bit second value is enough to provide unambiguous time representation until the <a href="http://en.wikipedia.org/wiki/Ultimate_fate_of_the_universe" title="Ultimate fate of the universe">universe goes dim</a>."<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>note 1<span>]</span></a></sup></p>
+<p><span id="292.2C277.2C026.2C596"></span></p>
+<h2><span class="mw-headline" id="Solutions">Solutions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=5" title="Edit section: Solutions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There is no universal solution for the Year 2038 problem. Any change to the definition of the <tt>time_t</tt> data type would result in <a href="http://en.wikipedia.org/wiki/Binary_code_compatibility" title="Binary code compatibility">code compatibility</a> problems in any application in which date and time representations are dependent on the nature of the signed 32-bit <tt>time_t</tt> integer. For example, changing <tt>time_t</tt> to an unsigned 32-bit integer, which would extend the range to the year 2106, would adversely affect programs that store, retrieve, or manipulate dates prior to 1970, as such dates are represented by negative numbers. Increasing the size of the <tt><a href="Time_t.html" title="Time t" class="mw-redirect">time_t</a></tt> type to 64-bit in an existing system would cause incompatible changes to the layout of structures and the binary interface of functions.</p>
+<p>There is also no universal solution for the issue with <a href="http://en.wikipedia.org/wiki/Digital_Video_Broadcasting" title="Digital Video Broadcasting">DVB</a> and <a href="http://en.wikipedia.org/wiki/ATSC" title="ATSC" class="mw-redirect">ATSC</a> real time transmitted dates due to issues with legacy receivers. Also the issue has yet to be acknowledged or resolved by either organization. The only work around would be to discontinue all time related <a href="http://en.wikipedia.org/wiki/Metadata" title="Metadata">metadata</a> services such as programming guides and automatic date synchronization after the affected dates. One possible option would be to create new table types for the affected part of the specifications and use <a href="http://en.wikipedia.org/wiki/ISO_8601" title="ISO 8601">ISO 8601</a> date strings rather than fixed integers as is used in <a href="http://en.wikipedia.org/wiki/ISO_9660" title="ISO 9660">ISO 9660</a> and <a href="http://en.wikipedia.org/wiki/ISO_13346" title="ISO 13346" class="mw-redirect">ISO 13346</a> filesystems.</p>
+<p>Most operating systems designed to run on 64-bit <a href="http://en.wikipedia.org/wiki/Hardware_architecture" title="Hardware architecture">hardware</a> already use signed 64-bit <tt>time_t</tt> integers. Using a signed 64-bit value introduces a new wraparound date that is over twenty times greater than the estimated <a href="http://en.wikipedia.org/wiki/Age_of_the_universe" title="Age of the universe">age of the universe</a>: approximately 292&#160;billion years from now, at 15:30:08 on Sunday, 4 December 292,277,026,596. The ability to make computations on dates is limited by the fact that <code>tm_year</code> uses a signed 32 bit int value starting at 1900 for the year. This limits the year to a maximum of 2,147,485,547 (2,147,483,647 + 1900).<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>12<span>]</span></a></sup></p>
+<p>Starting with <a href="NetBSD.html" title="NetBSD">NetBSD</a> version 6.0 (released in October 2012), the NetBSD operating system uses a 64-bit <tt>time_t</tt> for both 32-bit and 64-bit architectures. Applications that were compiled for an older NetBSD release with 32-bit <tt>time_t</tt> are supported via a binary compatibility layer, but such older applications will still suffer from the Year 2038 problem.</p>
+<p><a href="OpenBSD.html" title="OpenBSD">OpenBSD</a> in version 5.5, to be released in May 2014, will also use a 64-bit <tt>time_t</tt> for both 32-bit and 64-bit architectures. In contrast to <a href="NetBSD.html" title="NetBSD">NetBSD</a>, there will be no binary compatibility layer. Therefore, applications expecting a 32-bit <tt>time_t</tt> will, and applications using anything different from <tt>time_t</tt> to store time values, may break.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/X32_ABI" title="X32 ABI">x32 ABI</a> for Linux (which defines an environment for programs with 32-bit addresses but running the processor in 64-bit mode) also uses a 64-bit <tt>time_t</tt>. Since it was a new environment, there was no need for special compatibility precautions.</p>
+<p>Alternative proposals have been made (some of which are in use), such as storing either <a href="http://en.wikipedia.org/wiki/Millisecond" title="Millisecond">milliseconds</a> or <a href="http://en.wikipedia.org/wiki/Microsecond" title="Microsecond">microseconds</a> since an <a href="http://en.wikipedia.org/wiki/Epoch_(computing)" title="Epoch (computing)" class="mw-redirect">epoch</a> (typically either 1 January 1970 or 1 January 2000) in a signed 64-bit integer, providing a minimum range of 300,000 years.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>13<span>]</span></a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>14<span>]</span></a></sup> Other proposals for new time representations provide different precisions, ranges, and sizes (almost always wider than 32 bits), as well as solving other related problems, such as the handling of <a href="http://en.wikipedia.org/wiki/Leap_second" title="Leap second">leap seconds</a>. In particular, TAI64<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>15<span>]</span></a></sup> is an implementation of the <a href="http://en.wikipedia.org/wiki/International_Atomic_Time" title="International Atomic Time"><i>Temps Atomique International</i></a> standard, the current international real-time standard for defining a second and frame of reference.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs" title="Time formatting and storage bugs">Time formatting and storage bugs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unix_billennium" title="Unix billennium" class="mw-redirect">Unix billennium</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=7" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">2<sup>−64</sup> seconds is about <a href="http://en.wikipedia.org/wiki/1_E-21_s" title="1 E-21 s" class="mw-redirect">54 zeptoseconds</a> (light would travel 16.26 picometres, or approximately 0.31 × <a href="http://en.wikipedia.org/wiki/Bohr_radius" title="Bohr radius">Bohr radius</a>), and 2<sup>64</sup> seconds is about <a href="http://en.wikipedia.org/wiki/1_E19_s_and_more" title="1 E19 s and more" class="mw-redirect">585 billion years</a>.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.opengroup.org/onlinepubs/000095399/">"The Open Group Base Specifications Issue 6 IEEE Std 1003.1, 2004 Edition (definition of epoch)"</a>. <i><a href="IEEE.html" title="IEEE" class="mw-redirect">IEEE</a> and <a href="The_Open_Group.html" title="The Open Group">The Open Group</a></i>. <a href="The_Open_Group.html" title="The Open Group">The Open Group</a>. 2004<span class="reference-accessdate">. Retrieved 7 March 2008</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.atitle=The+Open+Group+Base+Specifications+Issue+6+IEEE+Std+1003.1%2C+2004+Edition+%28definition+of+epoch%29&amp;rft.date=2004&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.opengroup.org%2Fonlinepubs%2F000095399%2F&amp;rft.jtitle=IEEE+and+The+Open+Group&amp;rft.pub=The+Open+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-spinellis-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-spinellis_2-0">^</a></b></span> <span class="reference-text"><span class="citation book">Diomidis Spinellis (2006). <a rel="nofollow" class="external text" href="http://books.google.es/books?id=vEN-ckcdtCwC&amp;pg=PA49&amp;dq=292,277,026,596&amp;cd=1#v=onepage&amp;q=292%2C277%2C026%2C596&amp;f=false"><i>Code quality: the open source perspective.</i></a>. Effective software development serie in <a href="http://en.wikipedia.org/wiki/Safari_Books_Online" title="Safari Books Online">Safari Books Online</a> (illustrated ed.). <a href="http://en.wikipedia.org/wiki/Adobe_Press" title="Adobe Press" class="mw-redirect">Adobe Press</a>. p.&#160;49. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-321-16607-8" title="Special:BookSources/0-321-16607-8">0-321-16607-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.au=Diomidis+Spinellis&amp;rft.aulast=Diomidis+Spinellis&amp;rft.btitle=Code+quality%3A+the+open+source+perspective.&amp;rft.date=2006&amp;rft.edition=illustrated&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.es%2Fbooks%3Fid%3DvEN-ckcdtCwC%26pg%3DPA49%26dq%3D292%2C277%2C026%2C596%26cd%3D1%23v%3Donepage%26q%3D292%252C277%252C026%252C596%26f%3Dfalse&amp;rft.isbn=0-321-16607-8&amp;rft.pages=49&amp;rft.pub=Adobe+Press&amp;rft.series=Effective+software+development+serie+in+Safari+Books+Online&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://substitute.livejournal.com/1430908.html">"The Future Lies Ahead"</a>. 28 June 2006<span class="reference-accessdate">. Retrieved 19 November 2006</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=The+Future+Lies+Ahead&amp;rft.date=28+June+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsubstitute.livejournal.com%2F1430908.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.mail-archive.com/aolserver@listserv.aol.com/msg09844.html">Weird "memory leak" problem in AOLserver 3.4.2/3.x</a> 12 May 2006</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://kotaku.com/5977630/infinite-lives-in-candy-crush-saga-isnt-cheating-its-time-travel">"It isn't cheating it's time travel"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=It+isn%27t+cheating+it%27s+time+travel&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fkotaku.com%2F5977630%2Finfinite-lives-in-candy-crush-saga-isnt-cheating-its-time-travel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.informationweek.com/byte/25-years-from-today-a-time-for-bugs/240146640">"25 Years From Today A Time For Bugs"</a>. "Update: I have confirmed Mikko's Android report on a Google Nexus 7 tablet running Android 4.1 Jelly Bean — Even though years beyond 2038 are listed in the Set Date and Time function of the Settings app, try to set it to a date past 1/19/2038 and it refuses."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=25+Years+From+Today+A+Time+For+Bugs&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.informationweek.com%2Fbyte%2F25-years-from-today-a-time-for-bugs%2F240146640&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.arb.ca.gov/testmeth/testmeth.htm#vehicles">CARB - Vehicles and Engines (Mobile Source) Test Procedures</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://code.google.com/p/android/issues/detail?id=16899">Issue 16899 - android - Year 2038 problem</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.embedded.com/electronics-blogs/barr-code/4372183/Trends-in-embedded-software-design">Trends in embedded software design</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://ajoeblk.blogspot.in/2012/09/year-2038-bug.html">"aj_blk: Year 2038 Bug"</a>. Ajoeblk.blogspot.in<span class="reference-accessdate">. Retrieved 2013-03-12</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=aj_blk%3A+Year+2038+Bug&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fajoeblk.blogspot.in%2F2012%2F09%2Fyear-2038-bug.html&amp;rft.pub=Ajoeblk.blogspot.in&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a href="http://en.wikipedia.org/wiki/University_of_Delaware" title="University of Delaware">University of Delaware</a> Digital Systems Seminar presentation by David Mills, 2006-04-26</span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://stablecross.com/files/End_Of_Time.html">"The End of Time"</a>. 17 April 2010<span class="reference-accessdate">. Retrieved 19 March 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=The+End+of+Time&amp;rft.date=17+April+2010&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fstablecross.com%2Ffiles%2FEnd_Of_Time.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://web.archive.org/web/20060408161959/http://unununium.org/articles/uuutime">"Unununium Time"</a>. Archived from <a rel="nofollow" class="external text" href="http://unununium.org/articles/uuutime">the original</a> on 4 August 2006<span class="reference-accessdate">. Retrieved 19 November 2006</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.btitle=Unununium+Time&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Funununium.org%2Farticles%2Fuuutime&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web">Sun Microsystems. <a rel="nofollow" class="external text" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/System.html#currentTimeMillis()">"Java API documentation: System.currentTimeMillis"</a><span class="reference-accessdate">. Retrieved 7 May 2007</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.aulast=Sun+Microsystems&amp;rft.au=Sun+Microsystems&amp;rft.btitle=Java+API+documentation%3A+System.currentTimeMillis&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fj2se%2F1.4.2%2Fdocs%2Fapi%2Fjava%2Flang%2FSystem.html%23currentTimeMillis%28%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://cr.yp.to/libtai/tai64.html">TAI64</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://computer.howstuffworks.com/question75.htm">Entry in How Stuff Works</a></li>
+<li><a rel="nofollow" class="external text" href="http://maul.deepsky.com/~merovech/2038.html">The Project 2038 Frequently Asked Questions</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.merlyn.demon.co.uk/critdate.htm#Y2038">Critical dates 2038</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/schwern/y2038/wiki">A 2038-safe replacement for time.h on 32 bit systems</a></li>
+<li><span class="citation web">Clewett, James. <a rel="nofollow" class="external text" href="http://www.numberphile.com/videos/unix_time.html">"2,147,483,647 – The End of Time [Unix]"</a>. <i>Numberphile</i>. <a href="http://en.wikipedia.org/wiki/Brady_Haran" title="Brady Haran">Brady Haran</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AYear+2038+problem&amp;rft.atitle=2%2C147%2C483%2C647+%E2%80%93+The+End+of+Time+%5BUnix%5D&amp;rft.au=Clewett%2C+James&amp;rft.aufirst=James&amp;rft.aulast=Clewett&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.numberphile.com%2Fvideos%2Funix_time.html&amp;rft.jtitle=Numberphile&amp;rft.pub=Brady+Haran&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Year-related_problems" title="Template:Year-related problems"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Year-related_problems" title="Template talk:Year-related problems"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Year-related_problems&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">Year-related problems</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Decimal or BCD storage related</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Year_1900_problem" title="Year 1900 problem">Year 1900 problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Year_2000_problem" title="Year 2000 problem">Year 2000 problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Y1C_Problem" title="Y1C Problem">Y1C Problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_2042" title="Time formatting and storage bugs">Year 2042 problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Year_10,000_problem" title="Year 10,000 problem">Year 10,000 problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Leap_year_bug" title="Leap year bug">Leap year problem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Binary storage related</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Network_Time_Protocol#Timestamps" title="Network Time Protocol">2036 NTP wraparound</a></li>
+<li><strong class="selflink">Year 2038 problem</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Year_2107" title="Time formatting and storage bugs">Year 2107 problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs#Years_32.2C768_and_65.2C536" title="Time formatting and storage bugs">Years 32,768 and 65,536 problems</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hexadecimal storage related</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Year_2000_problem#Year_2010_problem" title="Year 2000 problem">Year 2010 problem</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs" title="Time formatting and storage bugs">Time formatting and storage bugs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Time_code_ambiguity" title="Time code ambiguity">Time code ambiguity</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Epoch_(reference_date)#Computing" title="Epoch (reference date)">Epoch</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1108
+CPU time usage: 0.688 seconds
+Real time usage: 0.768 seconds
+Preprocessor visited node count: 1046/1000000
+Preprocessor generated node count: 4799/1500000
+Post‐expand include size: 26112/2048000 bytes
+Template argument size: 1043/2048000 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 5/500
+Lua time usage: 0.083/10.000 seconds
+Lua memory usage: 2.6 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:300127-0!*!0!!en!4!* and timestamp 20140324154033
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;oldid=600708905">http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;oldid=600708905</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Unix" title="Category:Unix">Unix</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Operating_system_technology" title="Category:Operating system technology">Operating system technology</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Time_formatting_and_storage_bugs" title="Category:Time formatting and storage bugs">Time formatting and storage bugs</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Future_problems" title="Category:Future problems">Future problems</a></li><li><a href="http://en.wikipedia.org/wiki/Category:2038" title="Category:2038">2038</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2012" title="Category:Articles containing potentially dated statements from 2012">Articles containing potentially dated statements from 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2011" title="Category:Articles with unsourced statements from December 2011">Articles with unsourced statements from December 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_August_2010" title="Category:Use dmy dates from August 2010">Use dmy dates from August 2010</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Year+2038+problem&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Year+2038+problem" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Year_2038_problem.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Year_2038_problem"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Year_2038_problem.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Year_2038_problem" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Year_2038_problem" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;oldid=600708905" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q459405" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Year_2038_problem&amp;id=600708905" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Year+2038+problem">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Year+2038+problem&amp;oldid=600708905&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Year_2038_problem&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-az"><a href="http://az.wikipedia.org/wiki/2038-ci_il_problemi" title="2038-ci il problemi – Azerbaijani" lang="az" hreflang="az">Azərbaycanca</a></li>
+			<li class="interlanguage-link interwiki-be-x-old"><a href="http://be-x-old.wikipedia.org/wiki/Праблема_2038_году" title="Праблема 2038 году – беларуская (тарашкевіца)‎" lang="be-x-old" hreflang="be-x-old">Беларуская (тарашкевіца)‎</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Проблемът_2038_година" title="Проблемът 2038 година – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Problema_de_l%27any_2038" title="Problema de l'any 2038 – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Problém_roku_2038" title="Problém roku 2038 – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Jahr-2038-Problem" title="Jahr-2038-Problem – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Problema_del_año_2038" title="Problema del año 2038 – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Problemo_de_jaro_2038" title="Problemo de jaro 2038 – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/2038_efektua" title="2038 efektua – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Bug_de_l%27an_2038" title="Bug de l'an 2038 – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/2038년_문제" title="2038년 문제 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="http://is.wikipedia.org/wiki/2038-vandinn" title="2038-vandinn – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Bug_dell%27anno_2038" title="Bug dell'anno 2038 – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/באג_2038" title="באג 2038 – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="http://lv.wikipedia.org/wiki/2038._gada_problēma" title="2038. gada problēma – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/2038-probléma" title="2038-probléma – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ml"><a href="http://ml.wikipedia.org/wiki/വൈ._2_കെ._38" title="വൈ. 2 കെ. 38 – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Softwareprobleem_jaar_2038" title="Softwareprobleem jaar 2038 – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/2038年問題" title="2038年問題 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/År_2038-problemet" title="År 2038-problemet – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Problem_roku_2038" title="Problem roku 2038 – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Problema_do_ano_2038" title="Problema do ano 2038 – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Problema_2038" title="Problema 2038 – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Проблема_2038_года" title="Проблема 2038 года – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Year_2038_Problem" title="Year 2038 Problem – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Y2K38" title="Y2K38 – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/År_2038-problemet" title="År 2038-problemet – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/2038_yılı_problemi" title="2038 yılı problemi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Проблема_2038_року" title="Проблема 2038 року – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh-yue"><a href="http://zh-yue.wikipedia.org/wiki/2038年問題" title="2038年問題 – Cantonese" lang="zh-yue" hreflang="zh-yue">粵語</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/2038年问题" title="2038年问题 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q459405#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 March 2014 at 08:49.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Year_2038_problem" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1049 in 0.388 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Year_2038_problem by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:18 GMT -->
+</html>

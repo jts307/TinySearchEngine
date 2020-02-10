@@ -1,0 +1,715 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/GNU_Multi-Precision_Library.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/GNU_Multi-Precision_Library by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>GNU Multiple Precision Arithmetic Library - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"GNU_Multiple_Precision_Arithmetic_Library","wgTitle":"GNU Multiple Precision Arithmetic Library","wgCurRevisionId":586167683,"wgRevisionId":586167683,"wgArticleId":483126,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Numerical libraries","Computer arithmetic","GNU Project software","C libraries","Free software programmed in C","Software written in assembly language","Software using the LGPL license"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"GNU_Multiple_Precision_Arithmetic_Library","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"GNU_Multi-Precision_Library","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1205818"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-text {line-height: normal;}
+.source-text li, .source-text pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for text
+ * CSS class: source-text, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.text.source-text .de1, .text.source-text .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.text.source-text  {font-family:monospace;}
+.text.source-text .imp {font-weight: bold; color: red;}
+.text.source-text li, .text.source-text .li1 {font-weight: normal; vertical-align:top;}
+.text.source-text .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.text.source-text .li2 {font-weight: bold; vertical-align:top;}
+.text.source-text .ln-xtra, .text.source-text li.ln-xtra, .text.source-text div.ln-xtra {background-color: #ffc;}
+.text.source-text span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000ff;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #666666;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #006699; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #FF0000;}
+.cpp.source-cpp .nu0 {color: #0000dd;}
+.cpp.source-cpp .nu6 {color: #208080;}
+.cpp.source-cpp .nu8 {color: #208080;}
+.cpp.source-cpp .nu12 {color: #208080;}
+.cpp.source-cpp .nu16 {color:#800080;}
+.cpp.source-cpp .nu17 {color:#800080;}
+.cpp.source-cpp .nu18 {color:#800080;}
+.cpp.source-cpp .nu19 {color:#800080;}
+.cpp.source-cpp .me1 {color: #007788;}
+.cpp.source-cpp .me2 {color: #007788;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-GNU_Multiple_Precision_Arithmetic_Library skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">GNU Multiple Precision Arithmetic Library</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=GNU_Multi-Precision_Library&amp;redirect=no" title="GNU Multi-Precision Library">GNU Multi-Precision Library</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="infobox vevent" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption class="summary">GNU Multiple Precision Arithmetic Library</caption>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_developer.html" title="Software developer">Developer(s)</a></th>
+<td><a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Initial release</th>
+<td>1991<span style="display:none">&#160;(<span class="bday dtstart published updated">1991</span>)</span><sup id="cite_ref-main_1-0" class="reference"><a href="#cite_note-main-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_release_life_cycle.html" title="Software release life cycle">Stable release</a></th>
+<td>6.0.0 <small>(24&#160;March 2014<span class="noprint">; 3 days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2014-03-24</span>)</span>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Written in</th>
+<td><a href="C_(programming_language).html" title="C (programming language)">C</a>, (<a href="C%2b%2b.html" title="C++">C++</a>, <a href="Assembly_language.html" title="Assembly language">assembly</a> optionally)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Operating_system.html" title="Operating system">Operating system</a></th>
+<td><a href="Cross-platform.html" title="Cross-platform">Cross-platform</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/List_of_software_categories" title="List of software categories">Type</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Mathematical_software" title="Mathematical software">Mathematical software</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_license.html" title="Software license">License</a></th>
+<td><a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">LGPL</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://gmplib.org/">gmplib.org</a></span></td>
+</tr>
+</table>
+<p>The <b>GNU Multiple Precision Arithmetic Library</b> (<b>GMP</b>) is a <a href="Free_software.html" title="Free software">free</a> library for <a href="http://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">arbitrary-precision arithmetic</a>, operating on signed <a href="http://en.wikipedia.org/wiki/Integer" title="Integer">integers</a>, <a href="http://en.wikipedia.org/wiki/Rational_number" title="Rational number">rational numbers</a>, and <a href="Floating_point.html" title="Floating point">floating point</a> numbers.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> There are no practical limits to the precision except the ones implied by the available <a href="Virtual_memory.html" title="Virtual memory">memory</a> in the machine GMP runs on (operand dimension limit is 2<sup>32</sup>-1 bits on 32-bit machines and 2<sup>37</sup> bits on 64-bit machines).<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> GMP has a rich set of functions, and the functions have a regular interface. The basic interface is for <a href="C_(programming_language).html" title="C (programming language)">C</a> but wrappers exist for other languages including <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>, <a href="C%2b%2b.html" title="C++">C++</a>, <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>, <a href="http://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a>, <a href="Perl.html" title="Perl">Perl</a>, <a href="PHP.html" title="PHP">PHP</a>, and <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>. In the past, the <a href="http://en.wikipedia.org/wiki/Kaffe" title="Kaffe">Kaffe</a> <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> virtual machine used GMP to support Java built-in arbitrary precision arithmetic. This feature has been removed from recent releases, causing protests from people who claim that they used Kaffe solely for the speed benefits afforded by GMP.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> As a result, GMP support has been added to <a href="http://en.wikipedia.org/wiki/GNU_Classpath" title="GNU Classpath">GNU Classpath</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>The main target applications of GMP are <a href="http://en.wikipedia.org/wiki/Cryptography" title="Cryptography">cryptography</a> applications and research, Internet security applications, and <a href="http://en.wikipedia.org/wiki/Computer_algebra_system" title="Computer algebra system">computer algebra systems</a>.</p>
+<p>GMP aims to be faster than any other <a href="http://en.wikipedia.org/wiki/Bignum" title="Bignum" class="mw-redirect">bignum</a> library for all operand sizes. Some important factors in doing this are:</p>
+<ul>
+<li>Using full <a href="http://en.wikipedia.org/wiki/Word_(data_type)" title="Word (data type)" class="mw-redirect">words</a> as the basic arithmetic type.</li>
+<li>Using different <a href="Algorithm.html" title="Algorithm">algorithms</a> for different <a href="http://en.wikipedia.org/wiki/Operand" title="Operand">operand</a> sizes; algorithms that are faster for very big numbers are usually slower for small numbers.</li>
+<li>Highly <a href="http://en.wikipedia.org/wiki/Optimization_(computer_science)" title="Optimization (computer science)" class="mw-redirect">optimized</a> <a href="Assembly_language.html" title="Assembly language">assembly language</a> code for the most important <a href="http://en.wikipedia.org/wiki/Inner_loop" title="Inner loop">inner loops</a>, specialized for different <a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">processors</a>.</li>
+</ul>
+<p>The first GMP release was made in 1991. It is constantly developed and maintained.<sup id="cite_ref-main_1-1" class="reference"><a href="#cite_note-main-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>GMP is part of the <a href="GNU.html" title="GNU">GNU</a> project (although its website being off gnu.org may cause confusion), and is distributed under the <a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a> (LGPL).</p>
+<p>GMP is used for integer arithmetic in many <a href="http://en.wikipedia.org/wiki/Computer_algebra_system" title="Computer algebra system">computer algebra systems</a> such as <a href="http://en.wikipedia.org/wiki/Mathematica" title="Mathematica">Mathematica</a><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> and <a href="http://en.wikipedia.org/wiki/Maple_(software)" title="Maple (software)">Maple</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> It is also used in the <a href="http://en.wikipedia.org/wiki/Computational_Geometry_Algorithms_Library" title="Computational Geometry Algorithms Library" class="mw-redirect">Computational Geometry Algorithms Library</a> (CGAL) because geometry algorithms tend to 'explode' when using ordinary floating point CPU math.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>GMP is needed to build the <a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GNU Compiler Collection</a> (GCC).<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Language_bindings"><span class="tocnumber">2</span> <span class="toctext">Language bindings</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Here is an example of C code showing the use of the GMP library to multiply and print large numbers:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;gmp.h&gt;</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+<span class="br0">{</span>
+ mpz_t x<span class="sy0">;</span>
+ mpz_t y<span class="sy0">;</span>
+ mpz_t result<span class="sy0">;</span>
+ 
+ mpz_init<span class="br0">(</span>x<span class="br0">)</span><span class="sy0">;</span>
+ mpz_init<span class="br0">(</span>y<span class="br0">)</span><span class="sy0">;</span>
+ mpz_init<span class="br0">(</span>result<span class="br0">)</span><span class="sy0">;</span>
+ 
+ mpz_set_str<span class="br0">(</span>x<span class="sy0">,</span> <span class="st0">"7612058254738945"</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span>
+ mpz_set_str<span class="br0">(</span>y<span class="sy0">,</span> <span class="st0">"9263591128439081"</span><span class="sy0">,</span> <span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span>
+ 
+ mpz_mul<span class="br0">(</span>result<span class="sy0">,</span> x<span class="sy0">,</span> y<span class="br0">)</span><span class="sy0">;</span>
+ gmp_printf<span class="br0">(</span><span class="st0">"<span class="es1">\n</span>    %Zd<span class="es1">\n</span>*<span class="es1">\n</span>    %Zd<span class="es1">\n</span>--------------------<span class="es1">\n</span>%Zd<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="sy0">,</span> x<span class="sy0">,</span> y<span class="sy0">,</span> result<span class="br0">)</span><span class="sy0">;</span>
+ 
+ <span class="coMULTI">/* free used memory */</span>
+ mpz_clear<span class="br0">(</span>x<span class="br0">)</span><span class="sy0">;</span>
+ mpz_clear<span class="br0">(</span>y<span class="br0">)</span><span class="sy0">;</span>
+ mpz_clear<span class="br0">(</span>result<span class="br0">)</span><span class="sy0">;</span>
+ <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>This code calculates the value of 7612058254738945 × 9263591128439081.</p>
+<p>Compiling and running this program gives this result. (The -lgmp flag is used if compiling on Unix-type systems.)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="text source-text">
+<pre class="de1">
+    7612058254738945
+*
+    9263591128439081
+--------------------
+70514995317761165008628990709545
+</pre></div>
+</div>
+<p>For simplicity, one can write instead the following equivalent C++ program. (The -lgmpxx -lgmp flags are used if compiling on Unix-type systems.)</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="cpp source-cpp">
+<pre class="de1">
+<span class="co2">#include &lt;iostream&gt;</span>
+<span class="co2">#include &lt;gmpxx.h&gt;</span>
+ 
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+  mpz_class x<span class="br0">(</span><span class="st0">"7612058254738945"</span><span class="br0">)</span><span class="sy4">;</span>
+  mpz_class y<span class="br0">(</span><span class="st0">"9263591128439081"</span><span class="br0">)</span><span class="sy4">;</span>
+ 
+  std<span class="sy4">::</span><span class="kw3">cout</span> <span class="sy1">&lt;&lt;</span> <span class="st0">"<span class="es1">\n</span>    "</span> <span class="sy1">&lt;&lt;</span> x <span class="sy1">&lt;&lt;</span> <span class="st0">"<span class="es1">\n</span>*<span class="es1">\n</span>    "</span> <span class="sy1">&lt;&lt;</span> y<span class="sy4">;</span>
+  std<span class="sy4">::</span><span class="kw3">cout</span> <span class="sy1">&lt;&lt;</span> <span class="st0">"<span class="es1">\n</span>--------------------<span class="es1">\n</span>"</span> <span class="sy1">&lt;&lt;</span> x <span class="sy2">*</span> y <span class="sy1">&lt;&lt;</span> <span class="st0">"<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="sy4">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Language_bindings">Language bindings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit&amp;section=2" title="Edit section: Language bindings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tr>
+<th>Library name</th>
+<th>Language</th>
+<th>License</th>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://gmplib.org/">GNU Multi-Precision Library</a></td>
+<td><a href="C_(programming_language).html" title="C (programming language)">C</a>, <a href="C%2b%2b.html" title="C++">C++</a></td>
+<td><a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">LGPL</a></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://search.cpan.org/~chipt/Math-GMP/lib/Math/GMP.pm">Math::GMP</a></td>
+<td><a href="Perl.html" title="Perl">Perl</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.emilstefanov.net/Projects/GnuMpDotNet/">GNU Multi-Precision Library for .NET</a></td>
+<td><a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a>, <a href=".html" title=".NET Framework">.NET</a></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.aleax.it/gmpy.html">General Multiprecision Python Project</a></td>
+<td><a href="Python_(programming_language).html" title="Python (programming language)">Python</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://rubygems.org/gems/gmp">The RubyGems project</a></td>
+<td><a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://php.net/gmp">GNU Multi-Precision Library for PHP</a></td>
+<td><a href="PHP.html" title="PHP">PHP</a></td>
+<td><a href="http://en.wikipedia.org/wiki/PHP_License" title="PHP License">PHP</a></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://www.math.uni.wroc.pl/~hebisch/prog/">GNU Multi-Precision Routines for SBCL</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a rel="nofollow" class="external text" href="http://chgmp.sourceforge.net/">Ch GMP</a></td>
+<td><a href="Ch_(computer_programming).html" title="Ch (computer programming)">Ch</a></td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">Glasgow Haskell Compiler</a><br />
+<small>(The implementation of <code>Integer</code><br />
+is basically a binding to GMP)</small></td>
+<td><a href="http://en.wikipedia.org/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></td>
+<td><a href="http://en.wikipedia.org/wiki/BSD_licenses" title="BSD licenses">BSD</a></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit&amp;section=3" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/MPFR" title="MPFR">MPFR</a> – library for arbitrary-precision computations with correct rounding, based on GNU MP</li>
+<li><a href="http://en.wikipedia.org/wiki/Class_Library_for_Numbers" title="Class Library for Numbers">CLN</a> – a class library for arbitrary precision</li>
+<li><a href="http://en.wikipedia.org/wiki/MPIR_(mathematics_software)" title="MPIR (mathematics software)">MPIR</a> – a fork of GMP</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-main-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-main_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-main_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://gmplib.org/">"The GNU MP Bignum Library"</a><span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=The+GNU+MP+Bignum+Library&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgmplib.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://gmplib.org/#WHAT">"What is GMP?"</a><span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=What+is+GMP%3F&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgmplib.org%2F%23WHAT&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web">Granlund, Torbjorn (2009-07-06). <a rel="nofollow" class="external text" href="http://gmplib.org/list-archives/gmp-bugs/2009-July/001538.html">"Problems with mpz_set_str and huge strings"</a><span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.aufirst=Torbjorn&amp;rft.au=Granlund%2C+Torbjorn&amp;rft.aulast=Granlund&amp;rft.btitle=Problems+with+mpz_set_str+and+huge+strings&amp;rft.date=2009-07-06&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgmplib.org%2Flist-archives%2Fgmp-bugs%2F2009-July%2F001538.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web">Hughes, Andrew John (2008-02-28). <a rel="nofollow" class="external text" href="http://www.kaffe.org/pipermail/kaffe/2008-February/191039.html">"Removed GMP math?"</a><span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.aufirst=Andrew+John&amp;rft.au=Hughes%2C+Andrew+John&amp;rft.aulast=Hughes&amp;rft.btitle=Removed+GMP+math%3F&amp;rft.date=2008-02-28&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.kaffe.org%2Fpipermail%2Fkaffe%2F2008-February%2F191039.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/classpath/announce/20090205.html">"GNU Classpath 0.98 "Better Late Than Never<span style="padding-right:0.2em;">"</span>"</a>. 2009-02-05<span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=GNU+Classpath+0.98+%22Better+Late+Than+Never%22&amp;rft.date=2009-02-05&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fclasspath%2Fannounce%2F20090205.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://library.wolfram.com/infocenter/Conferences/7518/Macalester_talk.txt">"The Mathematica Kernel: Issues in the Design and Implementation"</a>. October 2006<span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=The+Mathematica+Kernel%3A+Issues+in+the+Design+and+Implementation&amp;rft.date=October+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flibrary.wolfram.com%2Finfocenter%2FConferences%2F7518%2FMacalester_talk.txt&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.maplesoft.com/support/help/AddOns/view.aspx?path=GMP">"The GNU Multiple Precision (GMP) Library"</a>. <a href="http://en.wikipedia.org/wiki/Maplesoft" title="Maplesoft" class="mw-redirect">Maplesoft</a><span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=The+GNU+Multiple+Precision+%28GMP%29+Library&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.maplesoft.com%2Fsupport%2Fhelp%2FAddOns%2Fview.aspx%3Fpath%3DGMP&amp;rft.pub=Maplesoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cgal.org/Manual/">"CGAL Manuals"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=CGAL+Manuals&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cgal.org%2FManual%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">GCC uses the <a href="http://en.wikipedia.org/wiki/MPFR" title="MPFR">MPFR</a> library, which in turn relies on GMP. <span class="citation web"><a rel="nofollow" class="external text" href="http://gcc.gnu.org/gcc-4.3/changes.html#mpfropts">"GCC 4.3 Release Series: Changes, New Features, and Fixes"</a>. 2012-11-02<span class="reference-accessdate">. Retrieved 2013-03-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGNU+Multiple+Precision+Arithmetic+Library&amp;rft.btitle=GCC+4.3+Release+Series%3A+Changes%2C+New+Features%2C+and+Fixes&amp;rft.date=2012-11-02&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgcc.gnu.org%2Fgcc-4.3%2Fchanges.html%23mpfropts&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official website"><span class="url"><a rel="nofollow" class="external text" href="http://gmplib.org/">Official website</a></span></span></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:GNU" title="Template:GNU"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:GNU" title="Template talk:GNU"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:GNU&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">History</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Manifesto" title="GNU Manifesto">GNU Manifesto</a></li>
+<li><a href="Free_Software_Foundation.html" title="Free Software Foundation">Free Software Foundation</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_Europe" title="Free Software Foundation Europe">Europe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_of_India" title="Free Software Foundation of India">India</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_Latin_America" title="Free Software Foundation Latin America">Latin America</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/History_of_free_and_open-source_software" title="History of free and open-source software">History of free software</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="9" style="width:0%;padding:0px 0px 0px 2px;">
+<div><a href="http://en.wikipedia.org/wiki/File:Heckert_GNU_white.svg" class="image" title="GNU's not UNIX"><img alt="GNU's not UNIX" src="http://upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/64px-Heckert_GNU_white.svg.png" width="64" height="63" srcset="//upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/96px-Heckert_GNU_white.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/2/22/Heckert_GNU_white.svg/128px-Heckert_GNU_white.svg.png 2x" /></a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Licenses</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="GNU_General_Public_License.html" title="GNU General Public License">GNU General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Affero_General_Public_License" title="Affero General Public License">Affero General Public License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GNU Free Documentation License</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GPL_linking_exception" title="GPL linking exception">GPL linking exception</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Software</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="GNU.html" title="GNU">GNU</a> (<a href="http://en.wikipedia.org/wiki/GNU_variants" title="GNU variants">variants</a>)</li>
+<li><a href="GNU_Hurd.html" title="GNU Hurd">Hurd</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li>
+<li><a href="GNU_C_Library.html" title="GNU C Library">glibc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bash_(Unix_shell)" title="Bash (Unix shell)">Bash</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Core_Utilities" title="GNU Core Utilities">coreutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Find_Utilities" title="GNU Find Utilities">findutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_build_system" title="GNU build system">Build system</a></li>
+<li><a href="GNU_Compiler_Collection.html" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Binutils" title="GNU Binutils">binutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Debugger" title="GNU Debugger">GDB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_GRUB" title="GNU GRUB">GRUB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNOME" title="GNOME">GNOME</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUstep" title="GNUstep">GNUstep</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GIMP" title="GIMP">GIMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Emacs" title="Emacs">GNU Emacs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_TeXmacs" title="GNU TeXmacs">GNU TeXmacs</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a></li>
+<li><a href="http://en.wikipedia.org/wiki/R_(programming_language)" title="R (programming language)">GNU R</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Scientific_Library" title="GNU Scientific Library">GSL</a></li>
+<li><strong class="selflink">GMP</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Electric_(software)" title="Electric (software)">GNU Electric</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Archimedes" title="GNU Archimedes">GNU Archimedes</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUnet" title="GNUnet">GNUnet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Privacy_Guard" title="GNU Privacy Guard">GNU Privacy Guard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gnuzilla" title="Gnuzilla">Gnuzilla</a> (<a href="http://en.wikipedia.org/wiki/GNU_IceCat" title="GNU IceCat">IceCat</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Health" title="GNU Health">GNU Health</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNUmed" title="GNUmed">GNUmed</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LilyPond" title="LilyPond">GNU LilyPond</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Go" title="GNU Go">GNU Go</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Chess" title="GNU Chess">GNU Chess</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gnash" title="Gnash">Gnash</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_GNU_packages" title="List of GNU packages"><i>more...</i></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Public<br />
+speakers</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Alexandre_Oliva" title="Alexandre Oliva">Alexandre Oliva</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Benjamin_Mako_Hill" title="Benjamin Mako Hill">Benjamin Mako Hill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bradley_M._Kuhn" title="Bradley M. Kuhn">Bradley M. Kuhn</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eben_Moglen" title="Eben Moglen">Eben Moglen</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Georg_C._F._Greve" title="Georg C. F. Greve">Georg C. F. Greve</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Loïc_Dachary" title="Loïc Dachary">Loïc Dachary</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ricardo_Galli" title="Ricardo Galli">Ricardo Galli</a></li>
+<li><a href="Richard_Stallman.html" title="Richard Stallman">Richard Stallman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Robert_J._Chassell" title="Robert J. Chassell">Robert J. Chassell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/William_John_Sullivan" title="William John Sullivan">John Sullivan</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other topics</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GNU/Linux_naming_controversy" title="GNU/Linux naming controversy">GNU/Linux naming controversy</a></li>
+<li><i><a href="http://en.wikipedia.org/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Foundation_anti-Windows_campaigns" title="Free Software Foundation anti-Windows campaigns">Free Software Foundation anti-Windows campaigns</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Defective_by_Design" title="Defective by Design">Defective by Design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1055
+CPU time usage: 0.696 seconds
+Real time usage: 0.764 seconds
+Preprocessor visited node count: 1010/1000000
+Preprocessor generated node count: 5652/1500000
+Post‐expand include size: 35895/2048000 bytes
+Template argument size: 1256/2048000 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 4/500
+Lua time usage: 0.077/10.000 seconds
+Lua memory usage: 2.61 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:483126-0!*!0!!en!4!* and timestamp 20140327001743
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;oldid=586167683">http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;oldid=586167683</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Numerical_libraries" title="Category:Numerical libraries">Numerical libraries</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_arithmetic" title="Category:Computer arithmetic">Computer arithmetic</a></li><li><a href="http://en.wikipedia.org/wiki/Category:GNU_Project_software" title="Category:GNU Project software">GNU Project software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:C_libraries" title="Category:C libraries">C libraries</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_written_in_assembly_language" title="Category:Software written in assembly language">Software written in assembly language</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_using_the_LGPL_license" title="Category:Software using the LGPL license">Software using the LGPL license</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GNU+Multiple+Precision+Arithmetic+Library&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=GNU+Multiple+Precision+Arithmetic+Library" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:GNU_Multiple_Precision_Arithmetic_Library"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/GNU_Multiple_Precision_Arithmetic_Library" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/GNU_Multiple_Precision_Arithmetic_Library" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;oldid=586167683" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1205818" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=GNU_Multiple_Precision_Arithmetic_Library&amp;id=586167683" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=GNU+Multiple+Precision+Arithmetic+Library">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=GNU+Multiple+Precision+Arithmetic+Library&amp;oldid=586167683&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=GNU_Multiple_Precision_Arithmetic_Library&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/GNU_Multi-Precision_Arithmetic_Library" title="GNU Multi-Precision Arithmetic Library – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" title="GNU Multiple Precision Arithmetic Library – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" title="GNU Multiple Precision Arithmetic Library – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/GNU_MP" title="GNU MP – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/GMP_(라이브러리)" title="GMP (라이브러리) – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/GNU_Multi-Precision_Library" title="GNU Multi-Precision Library – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" title="GNU Multiple Precision Arithmetic Library – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/GNU_Multi-Precision_Library" title="GNU Multi-Precision Library – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/GNU_Multi-Precision_Library" title="GNU Multi-Precision Library – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/GNU多重精度运算库" title="GNU多重精度运算库 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1205818#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 December 2013 at 09:53.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/GNU_Multiple_Precision_Arithmetic_Library" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1064 in 0.295 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/GNU_Multi-Precision_Library by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:59 GMT -->
+</html>

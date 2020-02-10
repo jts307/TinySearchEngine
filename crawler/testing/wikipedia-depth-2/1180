@@ -1,0 +1,357 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Preprocessing.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Preprocessing by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Preprocessor - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Preprocessor" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Preprocessor" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Preprocessor","wgTitle":"Preprocessor","wgCurRevisionId":596815661,"wgRevisionId":596815661,"wgArticleId":81971,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2013","All articles needing additional references","Programming language implementation"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Preprocessor","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Preprocessing","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q918333"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Preprocessor skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Preprocessor</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Preprocessing&amp;redirect=no" title="Preprocessing">Preprocessing</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2013)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>preprocessor</b> is a <a href="http://en.wikipedia.org/wiki/Computer_program" title="Computer program">program</a> that processes its input data to produce output that is used as input to another program. The output is said to be a <b>preprocessed</b> form of the input data, which is often used by some subsequent programs like <a href="Compiler.html" title="Compiler">compilers</a>. The amount and kind of processing done depends on the nature of the preprocessor; some preprocessors are only capable of performing relatively simple textual substitutions and <a href="http://en.wikipedia.org/wiki/Macro_(computer_science)" title="Macro (computer science)">macro</a> expansions, while others have the power of full-fledged <a href="Programming_language.html" title="Programming language">programming languages</a>.</p>
+<p>A common example from <a href="Computer_programming.html" title="Computer programming">computer programming</a> is the processing performed on <a href="Source_code.html" title="Source code">source code</a> before the next step of compilation. In some <a href="http://en.wikipedia.org/wiki/Computer_language" title="Computer language" class="mw-redirect">computer languages</a> (e.g., <a href="C_(programming_language).html" title="C (programming language)">C</a> and <a href="http://en.wikipedia.org/wiki/PL/I_(programming_language)" title="PL/I (programming language)" class="mw-redirect">PL/I</a>) there is a phase of <a href="Compiler.html" title="Compiler">translation</a> known as <i>preprocessing</i>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Lexical_preprocessors"><span class="tocnumber">1</span> <span class="toctext">Lexical preprocessors</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#C_preprocessor"><span class="tocnumber">1.1</span> <span class="toctext">C preprocessor</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Other_lexical_preprocessors"><span class="tocnumber">1.2</span> <span class="toctext">Other lexical preprocessors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Syntactic_preprocessors"><span class="tocnumber">2</span> <span class="toctext">Syntactic preprocessors</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Customizing_syntax"><span class="tocnumber">2.1</span> <span class="toctext">Customizing syntax</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Extending_a_language"><span class="tocnumber">2.2</span> <span class="toctext">Extending a language</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Specializing_a_language"><span class="tocnumber">2.3</span> <span class="toctext">Specializing a language</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#General_purpose_preprocessor"><span class="tocnumber">3</span> <span class="toctext">General purpose preprocessor</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Lexical_preprocessors">Lexical preprocessors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=1" title="Edit section: Lexical preprocessors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Lexical preprocessors are the lowest-level of preprocessors, in so far as they only require <a href="http://en.wikipedia.org/wiki/Lexical_analysis" title="Lexical analysis">lexical analysis</a>, that is, they operate on the source text, prior to any <a href="http://en.wikipedia.org/wiki/Parser" title="Parser" class="mw-redirect">parsing</a>, by performing simple substitution of <a href="http://en.wikipedia.org/wiki/Lexical_analysis" title="Lexical analysis">tokenized</a> character sequences for other tokenized character sequences, according to user-defined rules. They typically perform <a href="http://en.wikipedia.org/wiki/Macro_substitution" title="Macro substitution" class="mw-redirect">macro substitution</a>, <a href="Header_file.html" title="Header file" class="mw-redirect">textual inclusion</a> of other files, and conditional compilation or inclusion.</p>
+<h3><span class="mw-headline" id="C_preprocessor">C preprocessor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=2" title="Edit section: C preprocessor">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="C_preprocessor.html" title="C preprocessor">C preprocessor</a></div>
+<p>The most common example of this is the <a href="C_preprocessor.html" title="C preprocessor">C preprocessor</a>, which takes lines beginning with '#' as <a href="http://en.wikipedia.org/wiki/Directive_(programming)" title="Directive (programming)">directives</a>. Because it knows nothing about the underlying language, its use has been criticized and many of its features built directly into other languages. For example, macros replaced with aggressive inlining and templates, includes with compile-time imports (this requires the preservation of type information in the object code, making this feature impossible to retrofit into a language); <a href="Conditional_compilation.html" title="Conditional compilation">conditional compilation</a> is effectively accomplished with <code>if-then-else</code> and dead code elimination in some languages.</p>
+<h3><span class="mw-headline" id="Other_lexical_preprocessors">Other lexical preprocessors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=3" title="Edit section: Other lexical preprocessors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Other lexical preprocessors include the general-purpose <a href="http://en.wikipedia.org/wiki/M4_(language)" title="M4 (language)" class="mw-redirect">m4</a>, most commonly used in cross-platform build systems such as <a href="http://en.wikipedia.org/wiki/Autoconf" title="Autoconf">autoconf</a>, and <a href="http://en.wikipedia.org/wiki/General_purpose_macro_processor" title="General purpose macro processor" class="mw-redirect">GEMA</a>, an open source macro processor which operates on patterns of context.</p>
+<h2><span class="mw-headline" id="Syntactic_preprocessors">Syntactic preprocessors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=4" title="Edit section: Syntactic preprocessors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Syntactic preprocessors were introduced with the <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a> family of languages. Their role is to transform syntax trees according to a number of user-defined rules. For some programming languages, the rules are written in the same language as the program (compile-time reflection). This is the case with <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a> and <a href="http://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a>. Some other languages rely on a fully external language to define the transformations, such as the <a href="http://en.wikipedia.org/wiki/XSLT" title="XSLT">XSLT</a> preprocessor for <a href="http://en.wikipedia.org/wiki/XML" title="XML">XML</a>, or its statically typed counterpart <a href="http://en.wikipedia.org/wiki/CDuce" title="CDuce">CDuce</a>.</p>
+<p>Syntactic preprocessors are typically used to customize the syntax of a language, extend a language by adding new primitives, or embed a <a href="http://en.wikipedia.org/wiki/Domain-specific_programming_language" title="Domain-specific programming language" class="mw-redirect">domain-specific programming language</a> (DSL) inside a general purpose language.</p>
+<h3><span class="mw-headline" id="Customizing_syntax">Customizing syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=5" title="Edit section: Customizing syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A good example of syntax customization is the existence of two different syntaxes in the <a href="http://en.wikipedia.org/wiki/OCaml" title="OCaml">Objective Caml</a> programming language.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> Programs may be written indifferently using the "normal syntax" or the "revised syntax", and may be pretty-printed with either syntax on demand.</p>
+<p>Similarly, a number of programs written in <a href="http://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a> customize the syntax of the language by the addition of new operators.</p>
+<h3><span class="mw-headline" id="Extending_a_language">Extending a language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=6" title="Edit section: Extending a language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The best examples of language extension through macros are found in the <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a> family of languages. While the languages, by themselves, are simple dynamically typed functional cores, the standard distributions of <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> or <a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> permit imperative or object-oriented programming, as well as static typing. Almost all of these features are implemented by syntactic preprocessing, although it bears noting that the "macro expansion" phase of compilation is handled by the compiler in Lisp. This can still be considered a form of preprocessing, since it takes place before other phases of compilation.</p>
+<h3><span class="mw-headline" id="Specializing_a_language">Specializing a language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=7" title="Edit section: Specializing a language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One of the unusual features of the <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a> family of languages is the possibility of using macros to create an internl DSL. Typically, in a large <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a>-based project, a module may be written in a variety of such <a href="http://en.wikipedia.org/wiki/Minilanguage" title="Minilanguage" class="mw-redirect">minilanguages</a>, one perhaps using a <a href="SQL.html" title="SQL">SQL</a>-based dialect of <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a>, another written in a dialect specialized for <a href="Graphical_user_interface.html" title="Graphical user interface">GUIs</a> or pretty-printing, etc. <a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>'s standard library contains an example of this level of syntactic abstraction in the form of the LOOP macro, which implements an Algol-like minilanguage to describe complex iteration, while still enabling the use of standard Lisp operators.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/MetaOCaml" title="MetaOCaml" class="mw-redirect">MetaOCaml</a> preprocessor/language provides similar features for external DSLs. This preprocessor takes the description of the semantics of a language (i.e. an interpreter) and, by combining compile-time interpretation and code generation, turns that definition into a compiler to the <a href="http://en.wikipedia.org/wiki/OCaml" title="OCaml">OCaml</a> programming language—and from that language, either to bytecode or to native code.</p>
+<h2><span class="mw-headline" id="General_purpose_preprocessor">General purpose preprocessor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=8" title="Edit section: General purpose preprocessor">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/General-purpose_macro_processor" title="General-purpose macro processor">General-purpose macro processor</a></div>
+<p>Most preprocessors are specific to a particular data processing task (e.g., <a href="http://en.wikipedia.org/wiki/Compilers" title="Compilers" class="mw-redirect">compiling</a> the C language). A preprocessor may be promoted as being <i>general purpose</i>, meaning that it is not aimed at a specific usage or programming language, and is intended to be used for a wide variety of text processing tasks.</p>
+<p><a href="http://en.wikipedia.org/wiki/M4_(computer_language)" title="M4 (computer language)">M4</a> is probably the most well known example of such a general purpose preprocessor, although the C preprocessor is sometimes used in a non-C specific role. Examples:</p>
+<ul>
+<li>using C preprocessor for <a href="JavaScript.html" title="JavaScript">JavaScript</a> preprocessing.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></li>
+<li>using <a href="http://en.wikipedia.org/wiki/M4_(computer_language)" title="M4 (computer language)">M4</a> <small>(see on-article example)</small> or C preprocessor<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> as a <a href="http://en.wikipedia.org/wiki/Template_engine" title="Template engine">template engine</a>, to <a href="http://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a> generation.</li>
+<li><a href="http://en.wikipedia.org/wiki/Imake" title="Imake">imake</a>, a <a href="Make_(software).html" title="Make (software)">make</a> interface using the C preprocessor, written for the <a href="X_Window_System.html" title="X Window System">X Window System</a> but now deprecated in favour of <a href="http://en.wikipedia.org/wiki/Automake" title="Automake">automake</a>.</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Grompp&amp;action=edit&amp;redlink=1" class="new" title="Grompp (page does not exist)">grompp</a>, a preprocessor for simulation input files for <a href="http://en.wikipedia.org/wiki/GROMACS" title="GROMACS">GROMACS</a> (a fast, free, open-source code for some problems in <a href="http://en.wikipedia.org/wiki/Computational_chemistry" title="Computational chemistry">computational chemistry</a>) which calls the system C preprocessor (or other preprocessor as determined by the simulation input file) to parse the topology, using mostly the #define and #include mechanisms to determine the effective topology at grompp run time.</li>
+<li>using <a href="http://en.wikipedia.org/w/index.php?title=Gmpp&amp;action=edit&amp;redlink=1" class="new" title="Gmpp (page does not exist)">gmpp</a> for preprocessing markdown files<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Directive_(programming)" title="Directive (programming)">Directive (programming)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Macro_(computer_science)" title="Macro (computer science)">Macros</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Snippet_management" title="Snippet management" class="mw-redirect">Snippet management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Template_engine" title="Template engine">Template engine</a></li>
+<li>The <a href="C_preprocessor.html" title="C preprocessor">C preprocessor</a></li>
+<li>The <a href="http://en.wikipedia.org/wiki/Camlp4" title="Camlp4">OCaml preprocessor-pretty-printer</a></li>
+<li>The <a href="http://en.wikipedia.org/wiki/PL/I_preprocessor" title="PL/I preprocessor">PL/I preprocessor</a></li>
+<li>The <a href="http://en.wikipedia.org/wiki/Windows_software_trace_preprocessor" title="Windows software trace preprocessor">Windows software trace preprocessor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/General_purpose_macro_processor" title="General purpose macro processor" class="mw-redirect">General purpose macro processor</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://caml.inria.fr/pub/docs/manual-camlp4/manual007.html">The Revised syntax</a> from The Caml language website</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Show how to use <a href="C_preprocessor.html" title="C preprocessor">C-preprocessor</a> on JavaScript files. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20080116034428/http://blog.inetoffice.com/?p=12">"JavaScript is Not Industrial Strength"</a> <i>by T. Snyder</i>.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Show how to use <a href="C_preprocessor.html" title="C preprocessor">C-preprocessor</a> as <a href="http://en.wikipedia.org/wiki/Template_engine_(web)" title="Template engine (web)" class="mw-redirect">template engine</a>. <a rel="nofollow" class="external text" href="http://www.cs.tut.fi/~jkorpela/html/cpre.html">"Using a C preprocessor as an HTML authoring tool"</a> <i>by J. Korpela</i>, 2000.</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://randomdeterminism.wordpress.com/2012/06/01/how-i-stopped-worring-and-started-using-markdown-like-tex/">http://randomdeterminism.wordpress.com/2012/06/01/how-i-stopped-worring-and-started-using-markdown-like-tex/</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/37px-Wiktionary-logo-en.svg.png" width="37" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/55px-Wiktionary-logo-en.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/73px-Wiktionary-logo-en.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Look up <i><b><a href="http://en.wiktionary.org/wiki/preprocessor" class="extiw" title="wiktionary:preprocessor">preprocessor</a></b></i> in Wiktionary, the free dictionary.</td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://lispm.dyndns.org/news?ID=NEWS-2005-07-08-1">DSL Design in Lisp</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.paulgraham.com/progbot.html">Programming from the bottom up</a></li>
+<li>The <a rel="nofollow" class="external text" href="http://www.owl-s.org/tools.en.html#gpp">Generic PreProcessor</a></li>
+<li>Gema, the <a rel="nofollow" class="external text" href="http://gema.sourceforge.net/">General Purpose Macro Processor</a></li>
+<li>The <a href="http://en.wikipedia.org/wiki/PIKT" title="PIKT">PIKT</a> <a rel="nofollow" class="external text" href="http://pikt.org/pikt/ref/ref.4.piktc.html">piktc</a> <a rel="nofollow" class="external text" href="http://pikt.org/pikt/ref/ref.3.html">text, script, and configuration file preprocessor</a></li>
+<li><a rel="nofollow" class="external text" href="http://pyexpander.sourceforge.net/">pyexpander, a python based general purpose macro processor</a></li>
+<li><a rel="nofollow" class="external text" href="http://freshmeat.net/projects/minimac-macro-processor">minimac, a minimalist macro processor</a></li>
+<li><a rel="nofollow" class="external text" href="http://code.google.com/p/java-comment-preprocessor/">Java Comment Preprocessor</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1176
+CPU time usage: 0.316 seconds
+Real time usage: 0.370 seconds
+Preprocessor visited node count: 430/1000000
+Preprocessor generated node count: 2671/1500000
+Post‐expand include size: 5602/2048000 bytes
+Template argument size: 708/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 2/500
+Lua time usage: 0.029/10.000 seconds
+Lua memory usage: 805 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:81971-0!*!0!!en!4!* and timestamp 20140324125934
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;oldid=596815661">http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;oldid=596815661</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Programming_language_implementation" title="Category:Programming language implementation">Programming language implementation</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2013" title="Category:Articles needing additional references from February 2013">Articles needing additional references from February 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Preprocessor&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Preprocessor" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Preprocessor"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Preprocessor"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Preprocessor" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Preprocessor" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Preprocessor" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;oldid=596815661" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q918333" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Preprocessor&amp;id=596815661" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Preprocessor">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Preprocessor&amp;oldid=596815661&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Preprocessor&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Предпроцесор" title="Предпроцесор – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Preprocesor" title="Preprocesor – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Præprocessor" title="Præprocessor – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Präprozessor" title="Präprozessor – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Προεπεξεργαστής" title="Προεπεξεργαστής – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Preprocesador" title="Preprocesador – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/پیش‌پردازنده" title="پیش‌پردازنده – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Préprocesseur" title="Préprocesseur – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Preprocessore" title="Preprocessore – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/קדם-מעבד" title="קדם-מעבד – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ky"><a href="http://ky.wikipedia.org/wiki/Препроцессор" title="Препроцессор – Kyrgyz" lang="ky" hreflang="ky">Кыргызча</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Parengiamoji_doroklė" title="Parengiamoji doroklė – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-mk"><a href="http://mk.wikipedia.org/wiki/Препроцесори" title="Препроцесори – Macedonian" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Preprocessor" title="Preprocessor – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/プリプロセッサ" title="プリプロセッサ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Preprocesor" title="Preprocesor – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Pré-processador" title="Pré-processador – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Препроцессор" title="Препроцессор – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Esikääntäjä" title="Esikääntäjä – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Препроцесор" title="Препроцесор – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Tiền_xử_lý" title="Tiền xử lý – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/预处理器" title="预处理器 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q918333#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 23 February 2014 at 20:26.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Preprocessor" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1100 in 0.267 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Preprocessing by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:42 GMT -->
+</html>

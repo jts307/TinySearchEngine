@@ -1,0 +1,544 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dynamic_array.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Dynamic_array by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Dynamic array - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Dynamic_array" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Dynamic_array.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Dynamic_array","wgTitle":"Dynamic array","wgCurRevisionId":600137592,"wgRevisionId":600137592,"wgArticleId":1456434,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Arrays","Articles with example pseudocode"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Dynamic_array","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["ru-ru"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q128555"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Dynamic_array skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Dynamic array</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Dynamic_array.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Dynamic_array.svg/220px-Dynamic_array.svg.png" width="220" height="260" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Dynamic_array.svg/330px-Dynamic_array.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Dynamic_array.svg/440px-Dynamic_array.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Dynamic_array.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Several values are inserted at the end of a dynamic array using geometric expansion. Grey cells indicate space reserved for expansion. Most insertions are fast (constant time), while some are slow due to the need for reallocation (Θ(<i>n</i>) time, labelled with turtles). The <i>logical size</i> and <i>capacity</i> of the final array are shown.</div>
+</div>
+</div>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>dynamic array</b>, <b>growable array</b>, <b>resizable array</b>, <b>dynamic table</b>, <b>mutable array</b>, or <b>array list</b> is a <a href="Random_access.html" title="Random access">random access</a>, variable-size list <a href="Data_structure.html" title="Data structure">data structure</a> that allows elements to be added or removed. It is supplied with standard libraries in many modern mainstream programming languages.</p>
+<p>A dynamic array is not the same thing as a <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">dynamically allocated array</a>, which is a fixed-size <a href="Array_data_structure.html" title="Array data structure">array</a> whose size is fixed when the array is allocated, although a dynamic array may use such a fixed-size array as a back end.<sup id="cite_ref-java_util_ArrayList_1-0" class="reference"><a href="#cite_note-java_util_ArrayList-1"><span>[</span>1<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Bounded-size_dynamic_arrays_and_capacity"><span class="tocnumber">1</span> <span class="toctext">Bounded-size dynamic arrays and capacity</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Geometric_expansion_and_amortized_cost"><span class="tocnumber">2</span> <span class="toctext">Geometric expansion and amortized cost</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Performance"><span class="tocnumber">3</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Variants"><span class="tocnumber">4</span> <span class="toctext">Variants</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Language_support"><span class="tocnumber">5</span> <span class="toctext">Language support</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Bounded-size_dynamic_arrays_and_capacity">Bounded-size dynamic arrays and capacity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=1" title="Edit section: Bounded-size dynamic arrays and capacity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The simplest dynamic array is constructed by allocating a fixed-size array and then dividing it into two parts: the first stores the elements of the dynamic array and the second is reserved, or unused. We can then add or remove elements at the end of the dynamic array in constant time by using the reserved space, until this space is completely consumed. The number of elements used by the dynamic array contents is its <i>logical size</i> or <i>size</i>, while the size of the underlying array is called the dynamic array's <i>capacity</i> or <i>physical size</i>, which is the maximum possible size without relocating data.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>In applications where the logical size is bounded, the fixed-size data structure suffices. This may be short-sighted, as more space may be needed later. A <a href="http://en.wikipedia.org/wiki/List_of_software_development_philosophies" title="List of software development philosophies">philosophical programmer</a> may prefer to write the code to make every array capable of resizing from the outset, then return to using fixed-size arrays during <a href="http://en.wikipedia.org/wiki/Program_optimization" title="Program optimization">program optimization</a>. Resizing the underlying array is an expensive task, typically involving copying the entire contents of the array.</p>
+<h2><span class="mw-headline" id="Geometric_expansion_and_amortized_cost">Geometric expansion and amortized cost</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=2" title="Edit section: Geometric expansion and amortized cost">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>To avoid incurring the cost of resizing many times, dynamic arrays resize by a large amount, such as doubling in size, and use the reserved space for future expansion. The operation of adding an element to the end might work as follows:</p>
+<pre>
+<b>function</b> insertEnd(<i>dynarray</i> a, <i>element</i> e)
+    <b>if</b> (a.size = a.capacity)
+        <i>// resize a to twice its current capacity:</i>
+        a.capacity ← a.capacity * 2  
+        <i>// (copy the contents to the new memory location here)</i>
+    a[a.size] ← e
+    a.size ← a.size + 1
+</pre>
+<p>As <i>n</i> elements are inserted, the capacities form a <a href="http://en.wikipedia.org/wiki/Geometric_progression" title="Geometric progression">geometric progression</a>. Expanding the array by any constant proportion ensures that inserting <i>n</i> elements takes <a href="Big_O_notation.html" title="Big O notation"><i>O</i>(<i>n</i>)</a> time overall, meaning that each insertion takes <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a> constant time. The value of this proportion <i>a</i> leads to a time-space tradeoff: the average time per insertion operation is about <i>a</i>/(<i>a</i>−1), while the number of wasted cells is bounded above by (<i>a</i>−1)<i>n</i>. The choice of <i>a</i> depends on the library or application: some textbooks use <i>a</i>&#160;=&#160;2,<sup id="cite_ref-gt-ad_3-0" class="reference"><a href="#cite_note-gt-ad-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-clrs_4-0" class="reference"><a href="#cite_note-clrs-4"><span>[</span>4<span>]</span></a></sup> but Java's ArrayList implementation uses <i>a</i>&#160;=&#160;3/2<sup id="cite_ref-java_util_ArrayList_1-1" class="reference"><a href="#cite_note-java_util_ArrayList-1"><span>[</span>1<span>]</span></a></sup> and the C implementation of <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>'s list data structure uses <i>a</i>&#160;=&#160;9/8.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>Many dynamic arrays also deallocate some of the underlying storage if its size drops below a certain threshold, such as 30% of the capacity. This threshold must be strictly smaller than 1/<i>a</i> in order to support mixed sequences of insertions and removals with amortized constant cost.</p>
+<p>Dynamic arrays are a common example when teaching <a href="Amortized_analysis.html" title="Amortized analysis">amortized analysis</a>.<sup id="cite_ref-gt-ad_3-1" class="reference"><a href="#cite_note-gt-ad-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-clrs_4-1" class="reference"><a href="#cite_note-clrs-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=3" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="tright" align="right">
+<table class="wikitable">
+<tr>
+<th>&#160;</th>
+<th><a href="Linked_list.html" title="Linked list">Linked list</a></th>
+<th><a href="Array_data_structure.html" title="Array data structure">Array</a></th>
+<th><strong class="selflink">Dynamic<br />
+array</strong></th>
+<th><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Balanced<br />
+tree</a></th>
+<th><a href="http://en.wikipedia.org/w/index.php?title=Random_access_list&amp;action=edit&amp;redlink=1" class="new" title="Random access list (page does not exist)">Random access<br />
+list</a></th>
+</tr>
+<tr>
+<td>Indexing</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+</tr>
+<tr>
+<td>Insert/delete at beginning</td>
+<td style="background:#ddffdd">Θ(1)</td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log n)</td>
+<td style="background:#ddffdd">Θ(1)</td>
+</tr>
+<tr>
+<td>Insert/delete at end</td>
+<td style="background:#ffffdd">Θ(<i>n</i>)<br />
+last element is unknown<br />
+Θ(1)<br />
+last element is known</td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ddffdd">Θ(1) <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a></td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+</tr>
+<tr>
+<td>Insert/delete in middle</td>
+<td style="background:#ddffdd">search time +<br />
+Θ(1)<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></td>
+<td style="background: #ececec; color: grey; vertical-align: middle; text-align: center;" class="table-na"><small>N/A</small></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>)</td>
+<td style="background:#ffffdd">Θ(log <i>n</i>) updating</td>
+</tr>
+<tr>
+<td>Wasted space (average)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ddffdd">0</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)<sup id="cite_ref-brodnik_9-0" class="reference"><a href="#cite_note-brodnik-9"><span>[</span>9<span>]</span></a></sup></td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+<td style="background:#ffdddd">Θ(<i>n</i>)</td>
+</tr>
+</table>
+</div>
+<p>The dynamic array has performance similar to an array, with the addition of new operations to add and remove elements from the end:</p>
+<ul>
+<li>Getting or setting the value at a particular index (constant time)</li>
+<li>Iterating over the elements in order (linear time, good cache performance)</li>
+<li>Inserting or deleting an element in the middle of the array (linear time)</li>
+<li>Inserting or deleting an element at the end of the array (constant amortized time)</li>
+</ul>
+<p>Dynamic arrays benefit from many of the advantages of arrays, including good <a href="Locality_of_reference.html" title="Locality of reference">locality of reference</a> and <a href="http://en.wikipedia.org/wiki/Data_cache" title="Data cache" class="mw-redirect">data cache</a> utilization, compactness (low memory use), and <a href="Random_access.html" title="Random access">random access</a>. They usually have only a small fixed additional overhead for storing information about the size and capacity. This makes dynamic arrays an attractive tool for building cache-friendly data structures. However, in languages like Python or Java that enforce reference semantics, the dynamic array generally will not store the actual data, but rather it will store references to the data that resides in other areas of memory. In this case, accessing items in the array sequentially will actually involve accessing multiple non-contiguous areas of memory, so the many advantages of the cache-friendliness of this data structure are lost.</p>
+<p>Compared to <a href="Linked_list.html" title="Linked list">linked lists</a>, dynamic arrays have faster indexing (constant time versus linear time) and typically faster iteration due to improved locality of reference; however, dynamic arrays require linear time to insert or delete at an arbitrary location, since all following elements must be moved, while linked lists can do this in constant time. This disadvantage is mitigated by the <a href="http://en.wikipedia.org/wiki/Gap_buffer" title="Gap buffer">gap buffer</a> and <i>tiered vector</i> variants discussed under <i>Variants</i> below. Also, in a highly <a href="Fragmentation_(computer).html" title="Fragmentation (computer)" class="mw-redirect">fragmented</a> memory region, it may be expensive or impossible to find contiguous space for a large dynamic array, whereas linked lists do not require the whole data structure to be stored contiguously.</p>
+<p>A <a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">balanced tree</a> can store a list while providing all operations of both dynamic arrays and linked lists reasonably efficiently, but both insertion at the end and iteration over the list are slower than for a dynamic array, in theory and in practice, due to non-contiguous storage and tree traversal/manipulation overhead.</p>
+<h2><span class="mw-headline" id="Variants">Variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=4" title="Edit section: Variants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Gap_buffer" title="Gap buffer">Gap buffers</a> are similar to dynamic arrays but allow efficient insertion and deletion operations clustered near the same arbitrary location. Some <a href="http://en.wikipedia.org/wiki/Deque" title="Deque" class="mw-redirect">deque</a> implementations use <a href="http://en.wikipedia.org/wiki/Deque#Implementations" title="Deque" class="mw-redirect">array deques</a>, which allow amortized constant time insertion/removal at both ends, instead of just one end.</p>
+<p>Goodrich<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> presented a dynamic array algorithm called <i>Tiered Vectors</i> that provided O(n<sup>1/2</sup>) performance for order preserving insertions or deletions from the middle of the array.</p>
+<p><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed Array Tree</a> (HAT) is a dynamic array algorithm published by Sitarski in 1996.<sup id="cite_ref-sitarski96_11-0" class="reference"><a href="#cite_note-sitarski96-11"><span>[</span>11<span>]</span></a></sup> Hashed Array Tree wastes order n<sup>1/2</sup> amount of storage space, where n is the number of elements in the array. The algorithm has O(1) amortized performance when appending a series of objects to the end of a Hashed Array Tree.</p>
+<p>In a 1999 paper,<sup id="cite_ref-brodnik_9-1" class="reference"><a href="#cite_note-brodnik-9"><span>[</span>9<span>]</span></a></sup> Brodnik et al. describe a tiered dynamic array data structure, which wastes only n<sup>1/2</sup> space for <i>n</i> elements at any point in time, and they prove a lower bound showing that any dynamic array must waste this much space if the operations are to remain amortized constant time. Additionally, they present a variant where growing and shrinking the buffer has not only amortized but worst-case constant time.</p>
+<p>Bagwell (2002)<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup> presented the <a href="http://en.wikipedia.org/wiki/VList" title="VList">VList</a> algorithm, which can be adapted to implement a dynamic array.</p>
+<h2><span class="mw-headline" id="Language_support">Language support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=5" title="Edit section: Language support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="C%2b%2b.html" title="C++">C++</a>'s <a href="http://en.wikipedia.org/wiki/Vector_(C++)" title="Vector (C++)" class="mw-redirect"><code>std::vector</code></a> is an implementation of dynamic arrays, as are the <code>ArrayList</code><sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup> classes supplied with the <a href="Java_(programming_language).html" title="Java (programming language)">Java</a> API and the <a href=".html" title=".NET Framework">.NET Framework</a>. The generic <code>List&lt;&gt;</code> class supplied with version 2.0 of the .NET Framework is also implemented with dynamic arrays. <a href="Smalltalk.html" title="Smalltalk">Smalltalk</a>'s <code>OrderedCollection</code> is a dynamic array with dynamic start and end-index, making the removal of the first element also O(1). <a href="http://en.wikipedia.org/wiki/Python_(Programming_Language)" title="Python (Programming Language)" class="mw-redirect">Python</a>'s <code>list</code> datatype implementation is a dynamic array. <a href="http://en.wikipedia.org/wiki/Delphi_(programming_language)" title="Delphi (programming language)" class="mw-redirect">Delphi</a> and <a href="D_(programming_language).html" title="D (programming language)">D</a> implement dynamic arrays at the language's core. <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>'s <a href="http://en.wikibooks.org/wiki/Ada_Programming/Libraries/Ada.Containers.Vectors" class="extiw" title="wikibooks:Ada Programming/Libraries/Ada.Containers.Vectors"><code>Ada.Containers.Vectors</code></a> generic package provides dynamic array implementation for a given subtype. Many scripting languages such as <a href="Perl.html" title="Perl">Perl</a> and <a href="Ruby_(programming_language).html" title="Ruby (programming language)">Ruby</a> offer dynamic arrays as a built-in <a href="http://en.wikipedia.org/wiki/Primitive_data_type" title="Primitive data type">primitive data type</a>. Several cross-platform frameworks provide dynamic array implementations for <a href="C_(programming_language).html" title="C (programming language)">C</a>: <code>CFArray</code> and <code>CFMutableArray</code> in <a href="http://en.wikipedia.org/wiki/Core_Foundation" title="Core Foundation">Core Foundation</a>; <code>GArray</code> and <code>GPtrArray</code> in <a href="http://en.wikipedia.org/wiki/GLib" title="GLib">GLib</a>.</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-java_util_ArrayList-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-java_util_ArrayList_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-java_util_ArrayList_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">See, for example, the <a rel="nofollow" class="external text" href="http://hg.openjdk.java.net/jdk6/jdk6/jdk/file/e0e25ac28560/src/share/classes/java/util/ArrayList.java">source code of java.util.ArrayList class from OpenJDK 6</a>.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span id="CITEREFLambert.2C_Kenneth_Alfred2009" class="citation">Lambert, Kenneth Alfred (2009), <a rel="nofollow" class="external text" href="http://books.google.com/books?id=VtfM3YGW5jYC&amp;pg=PA518&amp;lpg=PA518&amp;dq=%22logical+size%22+%22dynamic+array%22&amp;source=bl&amp;ots=9rXJ9tGomJ&amp;sig=D5dRs802ax43NmEpKa1BUWFk1qs&amp;hl=en&amp;sa=X&amp;ei=CC1JUcLqGufLigKTjYGwCA&amp;ved=0CGkQ6AEwBw#v=onepage&amp;q=%22logical%20size%22%20%22dynamic%20array%22&amp;f=false">"Physical size and logical size"</a>, <i>Fundamentals of Python: From First Programs Through Data Structures</i> (Cengage Learning): 510, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1423902181" title="Special:BookSources/1423902181">1423902181</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.atitle=Physical+size+and+logical+size&amp;rft.au=Lambert%2C+Kenneth+Alfred&amp;rft.aulast=Lambert%2C+Kenneth+Alfred&amp;rft.date=2009&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DVtfM3YGW5jYC%26pg%3DPA518%26lpg%3DPA518%26dq%3D%2522logical%2Bsize%2522%2B%2522dynamic%2Barray%2522%26source%3Dbl%26ots%3D9rXJ9tGomJ%26sig%3DD5dRs802ax43NmEpKa1BUWFk1qs%26hl%3Den%26sa%3DX%26ei%3DCC1JUcLqGufLigKTjYGwCA%26ved%3D0CGkQ6AEwBw%23v%3Donepage%26q%3D%2522logical%2520size%2522%2520%2522dynamic%2520array%2522%26f%3Dfalse&amp;rft.isbn=1423902181&amp;rft.jtitle=Fundamentals+of+Python%3A+From+First+Programs+Through+Data+Structures&amp;rft.pages=510&amp;rft.pub=Cengage+Learning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-gt-ad-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-gt-ad_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-gt-ad_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFGoodrichTamassia2002" class="citation"><a href="http://en.wikipedia.org/wiki/Michael_T._Goodrich" title="Michael T. Goodrich">Goodrich, Michael T.</a>; <a href="http://en.wikipedia.org/wiki/Roberto_Tamassia" title="Roberto Tamassia">Tamassia, Roberto</a> (2002), "1.5.2 Analyzing an Extendable Array Implementation", <i>Algorithm Design: Foundations, Analysis and Internet Examples</i>, Wiley, pp.&#160;39–41</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.atitle=Algorithm+Design%3A+Foundations%2C+Analysis+and+Internet+Examples&amp;rft.aufirst=Michael+T.&amp;rft.au=Goodrich%2C+Michael+T.&amp;rft.aulast=Goodrich&amp;rft.au=Tamassia%2C+Roberto&amp;rft.btitle=1.5.2+Analyzing+an+Extendable+Array+Implementation&amp;rft.date=2002&amp;rft.genre=bookitem&amp;rft.pages=39%E2%80%9341&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-clrs-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-clrs_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-clrs_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><a href="Thomas_H.html" title="Thomas H. Cormen">Cormen, Thomas H.</a>; <a href="Charles_E-2.html" title="Charles E. Leiserson">Leiserson, Charles E.</a>, <a href="http://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Rivest, Ronald L.</a>, <a href="Clifford_Stein.html" title="Clifford Stein">Stein, Clifford</a> (2001) [1990]. "17.4 Dynamic tables". <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i> (2nd ed.). MIT Press and McGraw-Hill. pp.&#160;416–424. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-03293-7" title="Special:BookSources/0-262-03293-7">0-262-03293-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.atitle=Introduction+to+Algorithms&amp;rft.au=Cormen%2C+Thomas+H.&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.au=Leiserson%2C+Charles+E.%2C+Rivest%2C+Ronald+L.%2C+Stein%2C+Clifford&amp;rft.btitle=17.4+Dynamic+tables&amp;rft.date=2001&amp;rft.edition=2nd&amp;rft.genre=bookitem&amp;rft.isbn=0-262-03293-7&amp;rft.pages=416%E2%80%93424&amp;rft.pub=MIT+Press+and+McGraw-Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://svn.python.org/projects/python/trunk/Objects/listobject.c">List object implementation</a> from python.org, retrieved 2011-09-27.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Gerald Kruse. <a rel="nofollow" class="external text" href="http://www.juniata.edu/faculty/kruse/cs240/syllabus.htm">CS 240 Lecture Notes</a>: <a rel="nofollow" class="external text" href="http://www.juniata.edu/faculty/kruse/cs240/linkedlist2.htm">Linked Lists Plus: Complexity Trade-offs</a>. Juniata College. Spring 2008.</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://channel9.msdn.com/Events/GoingNative/GoingNative-2012/Keynote-Bjarne-Stroustrup-Cpp11-Style"><i>Day 1 Keynote - Bjarne Stroustrup: C++11 Style</i></a> at <i>GoingNative 2012</i> on <i>channel9.msdn.com</i> from minute 45 or foil 44</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://kjellkod.wordpress.com/2012/02/25/why-you-should-never-ever-ever-use-linked-list-in-your-code-again/"><i>Number crunching: Why you should never, ever, EVER use linked-list in your code again</i></a> at <i>kjellkod.wordpress.com</i></span></li>
+<li id="cite_note-brodnik-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-brodnik_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-brodnik_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFBrodnikCarlssonSedgewickMunro1999" class="citation">Brodnik, Andrej; Carlsson, Svante; <a href="http://en.wikipedia.org/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, Robert</a>; Munro, JI; Demaine, ED (1999), <a rel="nofollow" class="external text" href="http://www.cs.uwaterloo.ca/research/tr/1999/09/CS-99-09.pdf"><i>Resizable Arrays in Optimal Time and Space (Technical Report CS-99-09)</i></a>, Department of Computer Science, University of Waterloo</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.au=Brodnik%2C+Andrej&amp;rft.au=Carlsson%2C+Svante&amp;rft.au=Demaine%2C+ED&amp;rft.aufirst=Andrej&amp;rft.aulast=Brodnik&amp;rft.au=Munro%2C+JI&amp;rft.au=Sedgewick%2C+Robert&amp;rft.btitle=Resizable+Arrays+in+Optimal+Time+and+Space+%28Technical+Report+CS-99-09%29&amp;rft.date=1999&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.uwaterloo.ca%2Fresearch%2Ftr%2F1999%2F09%2FCS-99-09.pdf&amp;rft.pub=Department+of+Computer+Science%2C+University+of+Waterloo&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span id="CITEREFGoodrichKloss_II1999" class="citation"><a href="http://en.wikipedia.org/wiki/Michael_T._Goodrich" title="Michael T. Goodrich">Goodrich, Michael T.</a>; Kloss II, John G. (1999), <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.7503">"Tiered Vectors: Efficient Dynamic Arrays for Rank-Based Sequences"</a>, <i><a href="http://en.wikipedia.org/wiki/Workshop_on_Algorithms_and_Data_Structures" title="Workshop on Algorithms and Data Structures" class="mw-redirect">Workshop on Algorithms and Data Structures</a></i>, Lecture Notes in Computer Science <b>1663</b>: 205–216, <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1007%2F3-540-48447-7_21">10.1007/3-540-48447-7_21</a>, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-3-540-66279-2" title="Special:BookSources/978-3-540-66279-2">978-3-540-66279-2</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.atitle=Tiered+Vectors%3A+Efficient+Dynamic+Arrays+for+Rank-Based+Sequences&amp;rft.aufirst=Michael+T.&amp;rft.au=Goodrich%2C+Michael+T.&amp;rft.au=Kloss+II%2C+John+G.&amp;rft.aulast=Goodrich&amp;rft.date=1999&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.17.7503&amp;rft_id=info%3Adoi%2F10.1007%2F3-540-48447-7_21&amp;rft.isbn=978-3-540-66279-2&amp;rft.jtitle=Workshop+on+Algorithms+and+Data+Structures&amp;rft.pages=205%E2%80%93216&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=1663" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-sitarski96-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-sitarski96_11-0">^</a></b></span> <span class="reference-text"><span id="CITEREFSitarski1996" class="citation">Sitarski, Edward (September 1996), <a rel="nofollow" class="external text" href="http://www.ddj.com/architect/184409965?pgno=5"><i>Algorithm Alley</i></a>, "HATs: Hashed array trees", <i>Dr. Dobb's Journal</i> <b>21</b> (11)</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.atitle=HATs%3A+Hashed+array+trees&amp;rft.aufirst=Edward&amp;rft.aulast=Sitarski&amp;rft.au=Sitarski%2C+Edward&amp;rft.btitle=Algorithm+Alley&amp;rft.date=September+1996&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.ddj.com%2Farchitect%2F184409965%3Fpgno%3D5&amp;rft.issue=11&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=21" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span id="CITEREFBagwell2002" class="citation">Bagwell, Phil (2002), <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/bagwell02fast.html"><i>Fast Functional Lists, Hash-Lists, Deques and Variable Length Arrays</i></a>, EPFL</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+array&amp;rft.au=Bagwell%2C+Phil&amp;rft.aufirst=Phil&amp;rft.aulast=Bagwell&amp;rft.btitle=Fast+Functional+Lists%2C+Hash-Lists%2C+Deques+and+Variable+Length+Arrays&amp;rft.date=2002&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fbagwell02fast.html&amp;rft.pub=EPFL&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">Javadoc on <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">ArrayList</a></code></span></li>
+</ol>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.nist.gov/dads/HTML/dynamicarray.html">NIST Dictionary of Algorithms and Data Structures: Dynamic array</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.bsdua.org/libbsdua.html#vpool">VPOOL</a> - C language implementation of dynamic array.</li>
+<li><a rel="nofollow" class="external text" href="http://www.collectionspy.com/">CollectionSpy</a> — A Java profiler with explicit support for debugging ArrayList- and Vector-related issues.</li>
+<li><a rel="nofollow" class="external text" href="http://opendatastructures.org/versions/edition-0.1e/ods-java/2_Array_Based_Lists.html">Open Data Structures - Chapter 2 - Array-Based Lists</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cirvirlab.com/index.php/c-sharp-code-examples/112-c-sharp-arraylist-example.html">C# code for Arraylist</a> – Gives C# code for Arraylist.</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><strong class="selflink">Dynamic array</strong></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1023
+CPU time usage: 0.432 seconds
+Real time usage: 0.475 seconds
+Preprocessor visited node count: 872/1000000
+Preprocessor generated node count: 4008/1500000
+Post‐expand include size: 35541/2048000 bytes
+Template argument size: 78/2048000 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 2/500
+Lua time usage: 0.037/10.000 seconds
+Lua memory usage: 1.57 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1456434-0!*!0!!en!4!* and timestamp 20140320015700
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;oldid=600137592">http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;oldid=600137592</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Arrays" title="Category:Arrays">Arrays</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Dynamic+array&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Dynamic+array" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Dynamic_array.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Dynamic_array"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Dynamic_array.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Dynamic_array" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Dynamic_array" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;oldid=600137592" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q128555" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Dynamic_array&amp;id=600137592" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Dynamic+array">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Dynamic+array&amp;oldid=600137592&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Dynamic_array&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Δυναμικός_πίνακας" title="Δυναμικός πίνακας – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Array_dinámico" title="Array dinámico – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/آرایه_پویا" title="آرایه پویا – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/동적_배열" title="동적 배열 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Array_dinamico" title="Array dinamico – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Динамический_массив" title="Динамический массив – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/แถวลำดับพลวัต" title="แถวลำดับพลวัต – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q128555#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 March 2014 at 10:32.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Dynamic_array" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1024 in 0.312 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Dynamic_array by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+</html>

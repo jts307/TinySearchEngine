@@ -1,0 +1,829 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Logic_programming.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Logic_programming by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Logic programming - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Logic_programming" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Logic_programming.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Logic_programming","wgTitle":"Logic programming","wgCurRevisionId":601661244,"wgRevisionId":601661244,"wgArticleId":17927,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing cleanup from June 2010","All articles needing cleanup","Cleanup tagged articles without a reason field from June 2010","Wikipedia pages needing cleanup from June 2010","All articles with unsourced statements","Articles with unsourced statements from July 2013","Articles lacking in-text citations from February 2012","All articles lacking in-text citations","Articles that may contain original research from February 2014","All articles that may contain original research","1972 introductions","Logic programming","Programming paradigms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Logic_programming","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q275603"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Logic_programming skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Logic programming</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-Cleanup" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may require <a href="http://en.wikipedia.org/wiki/Wikipedia:Cleanup" title="Wikipedia:Cleanup">cleanup</a> to meet Wikipedia's <a href="http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style" title="Wikipedia:Manual of Style">quality standards</a></b>. <span class="hide-when-compact">No <a href="http://en.wikipedia.org/wiki/Template:Cleanup/doc" title="Template:Cleanup/doc">cleanup reason</a> has been specified. Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit">improve this article</a> if you can.</span> <small><i>(June 2010)</i></small></span></td>
+</tr>
+</table>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="Programming_paradigm.html" title="Programming paradigm">Programming paradigms</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;text-align: left;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Action_language" title="Action language">Action</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Agent-oriented_programming" title="Agent-oriented programming">Agent-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Automata-based_programming" title="Automata-based programming">Automata-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Relativistic_programming" title="Relativistic programming">Relativistic programming</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Data-driven_programming" title="Data-driven programming">Data-driven</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Declarative_programming" title="Declarative programming">Declarative</a> (contrast: <a href="Imperative_programming.html" title="Imperative programming">Imperative</a>)
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Constraint_programming" title="Constraint programming">Constraint</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Flow-based_programming" title="Flow-based programming">Flow-based</a></li>
+<li>Cell-oriented (<a href="http://en.wikipedia.org/wiki/Spreadsheet" title="Spreadsheet">spreadsheets</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Reactive_programming" title="Reactive programming">Reactive</a></li>
+</ul>
+</li>
+<li><a href="Functional_programming.html" title="Functional programming">Functional</a></li>
+<li><strong class="selflink">Logic</strong>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Abductive_logic_programming" title="Abductive logic programming">Abductive logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Answer_set_programming" title="Answer set programming">Answer set</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Constraint_logic_programming" title="Constraint logic programming">Constraint logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Functional_logic_programming" title="Functional logic programming">Functional logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inductive_logic_programming" title="Inductive logic programming">Inductive logic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/End-user_development" title="End-user development">End-user programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Service-oriented_architecture" title="Service-oriented architecture">Service-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Time-driven_programming" title="Time-driven programming">Time-driven</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Expression-oriented_programming_language" title="Expression-oriented programming language">Expression-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Feature-oriented_programming" title="Feature-oriented programming">Feature-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Function-level_programming" title="Function-level programming">Function-level</a> (contrast: <a href="http://en.wikipedia.org/wiki/Value-level_programming" title="Value-level programming">Value-level</a>)</li>
+<li><a href="Generic_programming.html" title="Generic programming">Generic</a></li>
+<li><a href="Imperative_programming.html" title="Imperative programming">Imperative</a> (contrast: <a href="http://en.wikipedia.org/wiki/Declarative_programming" title="Declarative programming">Declarative</a>)
+<ul>
+<li><a href="Procedural_programming.html" title="Procedural programming">Procedural</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Language-oriented_programming" title="Language-oriented programming">Language-oriented</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Service-oriented_modeling#Discipline-specific_modeling" title="Service-oriented modeling">Discipline-specific</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Grammar-oriented_programming" title="Grammar-oriented programming">Grammar-oriented</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Dialecting" title="Dialecting">Dialecting</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Intentional_programming" title="Intentional programming">Intentional</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Automatic_programming" title="Automatic programming">Automatic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Attribute-oriented_programming" title="Attribute-oriented programming">Attribute-oriented</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Homoiconicity" title="Homoiconicity">Homoiconic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Template_metaprogramming" title="Template metaprogramming">Template</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Policy-based_design" title="Policy-based design">Policy-based</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a> (contrast: <a href="Structured_programming.html" title="Structured programming">Structured</a>)
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Array_programming" title="Array programming">Array</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Nondeterministic_programming" title="Nondeterministic programming">Nondeterministic</a></li>
+<li><a href="Parallel_computing.html" title="Parallel computing">Parallel computing</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Process-oriented_programming" title="Process-oriented programming">Process-oriented</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Pointless_programming" title="Pointless programming" class="mw-redirect">Point-free style</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Semantic-oriented_programming" title="Semantic-oriented programming">Semantic</a></li>
+<li><a href="Structured_programming.html" title="Structured programming">Structured</a> (contrast: <a href="http://en.wikipedia.org/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a>)
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Block_(programming)" title="Block (programming)">Block-structured</a></li>
+<li><a href="Modular_programming.html" title="Modular programming">Modular</a> (contrast: <a href="http://en.wikipedia.org/wiki/Monolithic_application" title="Monolithic application">Monolithic</a>)</li>
+<li><a href="Object-oriented_programming.html" title="Object-oriented programming">Object-oriented (OOP)</a>
+<ul>
+<li>By <a href="http://en.wikipedia.org/wiki/Separation_of_concerns" title="Separation of concerns">separation of concerns</a>:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Role-oriented_programming" title="Role-oriented programming">Role-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Subject-oriented_programming" title="Subject-oriented programming">Subject-oriented</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursive</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Value-level_programming" title="Value-level programming">Value-level</a> (contrast: <a href="http://en.wikipedia.org/wiki/Function-level_programming" title="Function-level programming">Function-level</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Probabilistic_relational_programming_language" title="Probabilistic relational programming language" class="mw-redirect">Probabilistic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concept_programming" title="Concept programming">Concept</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Programming_paradigms" title="Template:Programming paradigms"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Programming_paradigms" title="Template talk:Programming paradigms"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Programming_paradigms&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p><b>Logic programming</b> is a <a href="Programming_paradigm.html" title="Programming paradigm">programming paradigm</a> based on <a href="http://en.wikipedia.org/wiki/Formal_logic" title="Formal logic" class="mw-redirect">formal logic</a>. Programs written in a logical <a href="Programming_language.html" title="Programming language">programming language</a> are sets of logical sentences, expressing facts and rules about some problem domain. Together with an inference algorithm, they form a program. Major <a href="http://en.wikipedia.org/wiki/Logic_programming_language" title="Logic programming language" class="mw-redirect">logic programming languages</a> include <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a> and <a href="http://en.wikipedia.org/wiki/Datalog" title="Datalog">Datalog</a>.</p>
+<p>A form of logical sentences commonly found in logic programming, but not exclusively, is the <a href="http://en.wikipedia.org/wiki/Horn_clause" title="Horn clause">Horn clause</a>. An example is:</p>
+<dl>
+<dd>
+<dl>
+<dd><tt>p(X, Y) if <tt>q(X) and r(Y)</tt></tt></dd>
+</dl>
+</dd>
+</dl>
+<p>Logical sentences can be understood purely <a href="http://en.wikipedia.org/wiki/Declarative_programming" title="Declarative programming">declaratively</a>. They can also be understood <a href="Procedural_programming.html" title="Procedural programming">procedurally</a> as goal-reduction procedures: to solve <tt>p(X, Y)</tt>, first solve <tt>q(X)</tt>, then solve <tt>r(Y)</tt>.</p>
+<p>The programmer can use the declarative reading of logic programs to verify their correctness. In addition, the programmer can use the known behaviour of the program executor to develop a procedural understanding of his program. This may be helpful when seeking better execution speed. However, many logic-based <a href="http://en.wikipedia.org/wiki/Program_transformation" title="Program transformation">program transformation</a> techniques have been developed to transform logic programs automatically and make them efficient.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Prolog"><span class="tocnumber">2</span> <span class="toctext">Prolog</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Negation_as_failure"><span class="tocnumber">3</span> <span class="toctext">Negation as failure</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Problem_solving"><span class="tocnumber">4</span> <span class="toctext">Problem solving</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Knowledge_representation"><span class="tocnumber">5</span> <span class="toctext">Knowledge representation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Abductive_logic_programming"><span class="tocnumber">6</span> <span class="toctext">Abductive logic programming</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Metalogic_programming"><span class="tocnumber">7</span> <span class="toctext">Metalogic programming</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Constraint_logic_programming"><span class="tocnumber">8</span> <span class="toctext">Constraint logic programming</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Concurrent_logic_programming"><span class="tocnumber">9</span> <span class="toctext">Concurrent logic programming</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Concurrent_constraint_logic_programming"><span class="tocnumber">10</span> <span class="toctext">Concurrent constraint logic programming</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Inductive_logic_programming"><span class="tocnumber">11</span> <span class="toctext">Inductive logic programming</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Higher-order_logic_programming"><span class="tocnumber">12</span> <span class="toctext">Higher-order logic programming</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Linear_logic_programming"><span class="tocnumber">13</span> <span class="toctext">Linear logic programming</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Object-oriented_logic_programming"><span class="tocnumber">14</span> <span class="toctext">Object-oriented logic programming</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Transaction_logic_programming"><span class="tocnumber">15</span> <span class="toctext">Transaction logic programming</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">16</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#References"><span class="tocnumber">17</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#General_introductions"><span class="tocnumber">17.1</span> <span class="toctext">General introductions</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Other_sources"><span class="tocnumber">17.2</span> <span class="toctext">Other sources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Further_reading"><span class="tocnumber">18</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#External_links"><span class="tocnumber">19</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The use of mathematical logic to represent and execute computer programs is also a feature of the <a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a>, developed by <a href="http://en.wikipedia.org/wiki/Alonzo_Church" title="Alonzo Church">Alonzo Church</a> in the 1930s. However, the first proposal to use the <a href="http://en.wikipedia.org/wiki/Clausal_normal_form" title="Clausal normal form" class="mw-redirect">clausal</a> form of logic for representing computer programs was made by Cordell Green (1969). This used an axiomatization of a subset of <a href="LISP.html" title="LISP" class="mw-redirect">LISP</a>, together with a representation of an input-output relation, to compute the relation by simulating the execution of the program in LISP. Foster and Elcock's <a href="http://en.wikipedia.org/w/index.php?title=Absys&amp;action=edit&amp;redlink=1" class="new" title="Absys (de pagina bestaat niet)">Absys</a> (1969), on the other hand, employed a combination of equations and lambda calculus in an assertional programming language which places no constraints on the order in which operations are performed.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2013)">citation needed</span></a></i>]</sup></p>
+<p>Logic programming in its present form can be traced back to debates in the late 1960s and early 1970s about declarative versus procedural representations of knowledge in Artificial Intelligence. Advocates of declarative representations were notably working at <a href="http://en.wikipedia.org/wiki/Stanford_University" title="Stanford University">Stanford</a>, associated with <a href="http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a>, <a href="http://en.wikipedia.org/wiki/Bertram_Raphael" title="Bertram Raphael">Bertram Raphael</a> and <a href="http://en.wikipedia.org/w/index.php?title=Cordell_Green&amp;action=edit&amp;redlink=1" class="new" title="Cordell Green (de pagina bestaat niet)">Cordell Green</a>, and in <a href="http://en.wikipedia.org/wiki/University_of_Edinburgh" title="University of Edinburgh">Edinburgh</a>, with <a href="http://en.wikipedia.org/wiki/John_Alan_Robinson" title="John Alan Robinson">John Alan Robinson</a> (an academic visitor from <a href="http://en.wikipedia.org/wiki/Syracuse_University" title="Syracuse University">Syracuse University</a>), <a href="http://en.wikipedia.org/wiki/Patrick_J._Hayes" title="Patrick J. Hayes" class="mw-redirect">Pat Hayes</a>, and <a href="http://en.wikipedia.org/wiki/Robert_Kowalski" title="Robert Kowalski">Robert Kowalski</a>. Advocates of procedural representations were mainly centered at <a href="http://en.wikipedia.org/wiki/MIT" title="MIT" class="mw-redirect">MIT</a>, under the leadership of <a href="http://en.wikipedia.org/wiki/Marvin_Minsky" title="Marvin Minsky">Marvin Minsky</a> and <a href="http://en.wikipedia.org/wiki/Seymour_Papert" title="Seymour Papert">Seymour Papert</a>.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2013)">citation needed</span></a></i>]</sup></p>
+<p>Although it was based on the proof methods of logic, <a href="http://en.wikipedia.org/wiki/Planner_(programming_language)" title="Planner (programming language)">Planner</a>, developed at MIT, was the first language to emerge within this proceduralist paradigm [Hewitt, 1969]. Planner featured pattern-directed invocation of procedural plans from goals (i.e. goal-reduction or <a href="http://en.wikipedia.org/wiki/Backward_chaining" title="Backward chaining">backward chaining</a>) and from assertions (i.e. <a href="http://en.wikipedia.org/wiki/Forward_chaining" title="Forward chaining">forward chaining</a>). The most influential implementation of Planner was the subset of Planner, called Micro-Planner, implemented by <a href="http://en.wikipedia.org/wiki/Gerald_Jay_Sussman" title="Gerald Jay Sussman">Gerry Sussman</a>, <a href="http://en.wikipedia.org/wiki/Eugene_Charniak" title="Eugene Charniak">Eugene Charniak</a> and <a href="http://en.wikipedia.org/wiki/Terry_Winograd" title="Terry Winograd">Terry Winograd</a>. It was used to implement Winograd's natural-language understanding program <a href="http://en.wikipedia.org/wiki/SHRDLU" title="SHRDLU">SHRDLU</a>, which was a landmark at that time. To cope with the very limited memory systems at the time, Planner used a backtracking control structure so that only one possible computation path had to be stored at a time. Planner gave rise to the programming languages QA-4, Popler, Conniver, QLISP, and the concurrent language Ether.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2013)">citation needed</span></a></i>]</sup></p>
+<p>Hayes and Kowalski in Edinburgh tried to reconcile the logic-based declarative approach to knowledge representation with Planner's procedural approach. Hayes (1973) developed an equational language, Golux, in which different procedures could be obtained by altering the behavior of the theorem prover. Kowalski, on the other hand, showed how SL-resolution treats implications as goal-reduction procedures. Kowalski collaborated with Colmerauer in Marseille, who developed these ideas in the design and implementation of the programming language <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>. Prolog gave rise to the programming languages <a href="http://en.wikipedia.org/wiki/Algebraic_Logic_Functional_programming_language" title="Algebraic Logic Functional programming language">ALF</a>, <a href="http://en.wikipedia.org/wiki/Fril" title="Fril">Fril</a>, <a href="http://en.wikipedia.org/wiki/Gödel_(programming_language)" title="Gödel (programming language)">Gödel</a>, <a href="http://en.wikipedia.org/wiki/Mercury_programming_language" title="Mercury programming language" class="mw-redirect">Mercury</a>, <a href="http://en.wikipedia.org/wiki/Oz_(programming_language)" title="Oz (programming language)">Oz</a>, <a href="http://en.wikipedia.org/wiki/Ciao_(programming_language)" title="Ciao (programming language)">Ciao</a>, <a href="http://en.wikipedia.org/wiki/Visual_Prolog" title="Visual Prolog">Visual Prolog</a>, <a href="http://en.wikipedia.org/wiki/XSB" title="XSB">XSB</a>, and <a href="http://en.wikipedia.org/wiki/ΛProlog" title="ΛProlog">λProlog</a>, as well as a variety of <a href="http://en.wikipedia.org/w/index.php?title=Concurrent_logic_programming_languages&amp;action=edit&amp;redlink=1" class="new" title="Concurrent logic programming languages (de pagina bestaat niet)">concurrent logic programming languages</a> (see Shapiro (1989) for a survey), <a href="http://en.wikipedia.org/wiki/Constraint_logic_programming" title="Constraint logic programming">constraint logic programming</a> languages and <a href="http://en.wikipedia.org/wiki/Datalog" title="Datalog">datalog</a>.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2013)">citation needed</span></a></i>]</sup></p>
+<p>In 1997, the Association of Logic Programming bestowed to fifteen recognized researchers in logic programming the title <i>Founders of Logic Programming</i> to recognize them as pioneers in the field:<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Maurice_Bruynooghe&amp;action=edit&amp;redlink=1" class="new" title="Maurice Bruynooghe (de pagina bestaat niet)">Maurice Bruynooghe</a> (Belgium)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Jacques_Cohen_2&amp;action=edit&amp;redlink=1" class="new" title="Jacques Cohen 2 (de pagina bestaat niet)">Jacques Cohen</a> (US)</li>
+<li><a href="http://en.wikipedia.org/wiki/Alain_Colmerauer" title="Alain Colmerauer">Alain Colmerauer</a> (France)</li>
+<li><a href="http://en.wikipedia.org/wiki/Keith_Clark" title="Keith Clark">Keith Clark</a> (UK)</li>
+<li><a href="http://en.wikipedia.org/wiki/Veronica_Dahl" title="Veronica Dahl">Veronica Dahl</a> (Canada/Argentina)</li>
+<li>Maarten van Emden (Canada)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Herv%C3%A9_Gallaire&amp;action=edit&amp;redlink=1" class="new" title="Hervé Gallaire (de pagina bestaat niet)">Hervé Gallaire</a> (France)</li>
+<li><a href="http://en.wikipedia.org/wiki/Robert_Kowalski" title="Robert Kowalski">Robert Kowalski</a> (UK)</li>
+<li><a href="http://en.wikipedia.org/wiki/Jack_Minker" title="Jack Minker">Jack Minker</a> (US)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Fernando_Pereira_(programmer)&amp;action=edit&amp;redlink=1" class="new" title="Fernando Pereira (programmer) (de pagina bestaat niet)">Fernando Pereira</a> (US)</li>
+<li><a href="http://en.wikipedia.org/wiki/Luis_Moniz_Pereira" title="Luis Moniz Pereira" class="mw-redirect">Luis Moniz Pereira</a> (Portugal)</li>
+<li><a href="http://en.wikipedia.org/wiki/Ray_Reiter" title="Ray Reiter" class="mw-redirect">Ray Reiter</a> (Canada)</li>
+<li><a href="http://en.wikipedia.org/wiki/John_Alan_Robinson" title="John Alan Robinson">J. Alan Robinson</a> (US)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Peter_Szeredi&amp;action=edit&amp;redlink=1" class="new" title="Peter Szeredi (de pagina bestaat niet)">Peter Szeredi</a> (Hungary)</li>
+<li><a href="http://en.wikipedia.org/wiki/David_H._D._Warren" title="David H. D. Warren">David H. D. Warren</a> (UK)</li>
+</ul>
+<h2><span class="mw-headline" id="Prolog">Prolog</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=2" title="Edit section: Prolog">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a></div>
+<p>The programming language <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a> was developed in 1972 by <a href="http://en.wikipedia.org/wiki/Alain_Colmerauer" title="Alain Colmerauer">Alain Colmerauer</a>. It emerged from a collaboration between Colmerauer in <a href="http://en.wikipedia.org/wiki/Marseille" title="Marseille">Marseille</a> and <a href="http://en.wikipedia.org/wiki/Robert_Kowalski" title="Robert Kowalski">Robert Kowalski</a> in Edinburgh. Colmerauer was working on natural language understanding, using logic to represent semantics and using resolution for question-answering. During the summer of 1971, Colmerauer and Kowalski discovered that the clausal form of logic could be used to represent formal grammars and that resolution theorem provers could be used for parsing. They observed that some theorem provers, like hyper-resolution, behave as bottom-up parsers and others, like <a href="http://en.wikipedia.org/wiki/SLD_resolution" title="SLD resolution">SL-resolution</a> (1971), behave as top-down parsers.</p>
+<p>It was in the following summer of 1972, that Kowalski, again working with Colmerauer, developed the procedural interpretation of implications. This dual declarative/procedural interpretation later became formalised in the Prolog notation</p>
+<dl>
+<dd><tt>H&#160;:- B<sub>1</sub>, …, B<sub>n</sub>.</tt></dd>
+</dl>
+<p>which can be read (and used) both declaratively and procedurally. It also became clear that such clauses could be restricted to definite clauses or <a href="http://en.wikipedia.org/wiki/Horn_clause" title="Horn clause">Horn clauses</a>, where <tt>H</tt>, <tt>B<sub>1</sub></tt>, …, <tt>B<sub>n</sub></tt> are all atomic predicate logic formulae, and that SL-resolution could be restricted (and generalised) to LUSH or <a href="http://en.wikipedia.org/wiki/SLD_resolution" title="SLD resolution">SLD-resolution</a>. Kowalski's procedural interpretation and LUSH were described in a 1973 memo, published in 1974.</p>
+<p>Colmerauer, with Philippe Roussel, used this dual interpretation of clauses as the basis of Prolog, which was implemented in the summer and autumn of 1972. The first Prolog program, also written in 1972 and implemented in Marseille, was a French question-answering system. The use of Prolog as a practical programming language was given great momentum by the development of a compiler by David Warren in Edinburgh in 1977. Experiments demonstrated that Edinburgh Prolog could compete with the processing speed of other symbolic programming languages such as <a href="Lisp_(programming_language).html" title="Lisp (programming language)">Lisp</a>. Edinburgh Prolog became the <i>de facto</i> standard and strongly influenced the definition of <a href="International_Organization_for_Standardization.html" title="International Organization for Standardization">ISO</a> standard Prolog.</p>
+<h2><span class="mw-headline" id="Negation_as_failure">Negation as failure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=3" title="Edit section: Negation as failure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Negation_as_failure" title="Negation as failure">Negation as failure</a></div>
+<p>Micro-Planner had a construct, called "thnot", which when applied to an expression returns the value true if (and only if) the evaluation of the expression fails. An equivalent operator is normally built-in in modern <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>'s implementations and has been called "<a href="http://en.wikipedia.org/wiki/Negation_as_failure" title="Negation as failure">negation as failure</a>". It is normally written as <code>not(<i>Goal</i>)</code> or <code>\+ <i>Goal</i></code>, where <code><i>Goal</i></code> is some goal (proposition) to be proved by the program. This operator differs from negation in first-order logic: a negation such as <code>\+ X == 1</code> fails when the variable <code>X</code> has been bound to the atom <code>1</code>, but it succeeds in all other cases, including when <code>X</code> is unbound. This makes Prolog's reasoning <a href="http://en.wikipedia.org/wiki/Non-monotonic_logic" title="Non-monotonic logic">non-monotonic</a>: <code>X = 1, \+ X == 1</code> always fails, while <code>\+ X == 1, X = 1</code> can succeed, binding <code>X</code> to <code>1</code>, depending on whether <code>X</code> was initially bound (note that standard Prolog executes goals in left-to-right order).</p>
+<p>The logical status of negation as failure was unresolved until Keith Clark [1978] showed that, under certain natural conditions, it is a correct (and sometimes complete) implementation of classical negation with respect to the completion of the program. Completion amounts roughly to regarding the set of all the program clauses with the same predicate on the left hand side, say</p>
+<dl>
+<dd><tt>H&#160;:- Body<sub>1</sub>.</tt></dd>
+<dd><tt>…</tt></dd>
+<dd><tt>H&#160;:- Body<sub>k</sub>.</tt></dd>
+</dl>
+<p>as a definition of the predicate</p>
+<dl>
+<dd><tt>H iff (Body<sub>1</sub> or … or Body<sub>k</sub>)</tt></dd>
+</dl>
+<p>where "iff" means "if and only if". Writing the completion also requires explicit use of the equality predicate and the inclusion of a set of appropriate axioms for equality. However, the implementation of negation by failure needs only the if-halves of the definitions without the axioms of equality.</p>
+<p>The notion of completion is closely related to McCarthy's <a href="http://en.wikipedia.org/wiki/Circumscription_(logic)" title="Circumscription (logic)">circumscription</a> semantics for default reasoning, and to the <a href="http://en.wikipedia.org/wiki/Closed_world_assumption" title="Closed world assumption">closed world assumption</a>.</p>
+<p>As an alternative to the completion semantics, negation as failure can also be interpreted epistemically, as in the <a href="http://en.wikipedia.org/wiki/Stable_model_semantics" title="Stable model semantics">stable model semantics</a> of <a href="http://en.wikipedia.org/wiki/Answer_set_programming" title="Answer set programming">answer set programming</a>. In this interpretation not(B<sub>i</sub>) means literally that B<sub>i</sub> is not known or not believed. The epistemic interpretation has the advantage that it can be combined very simply with classical negation, as in "extended logic programming", to formalise such phrases as "the contrary can not be shown", where "contrary" is classical negation and "can not be shown" is the epistemic interpretation of negation as failure.</p>
+<h2><span class="mw-headline" id="Problem_solving">Problem solving</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=4" title="Edit section: Problem solving">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the simplified, propositional case in which a logic program and a top-level atomic goal contain no variables, backward reasoning determines an <a href="http://en.wikipedia.org/wiki/And-or_tree" title="And-or tree" class="mw-redirect">and-or tree</a>, which constitutes the search space for solving the goal. The top-level goal is the root of the tree. Given any node in the tree and any clause whose head matches the node, there exists a set of child nodes corresponding to the sub-goals in the body of the clause. These child nodes are grouped together by an "and". The alternative sets of children corresponding to alternative ways of solving the node are grouped together by an "or".</p>
+<p>Any search strategy can be used to search this space. Prolog uses a sequential, last-in-first-out, backtracking strategy, in which only one alternative and one sub-goal is considered at a time. Other search strategies, such as parallel search, intelligent backtracking, or best-first search to find an optimal solution, are also possible.</p>
+<p>In the more general case, where sub-goals share variables, other strategies can be used, such as choosing the subgoal that is most highly instantiated or that is sufficiently instantiated so that only one procedure applies. Such strategies are used, for example, in <a href="http://en.wikipedia.org/w/index.php?title=Concurrent_logic_programming&amp;action=edit&amp;redlink=1" class="new" title="Concurrent logic programming (de pagina bestaat niet)">concurrent logic programming</a>.</p>
+<p>The fact that there are alternative ways of executing a logic program has been characterised by the equation:</p>
+<p>Algorithm = Logic + Control</p>
+<p>where "Logic" represents a logic program and "Control" represents different theorem-proving strategies.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Knowledge_representation">Knowledge representation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=5" title="Edit section: Knowledge representation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The fact that Horn clauses can be given a procedural interpretation and, vice versa, that goal-reduction procedures can be understood as Horn clauses + backward reasoning means that logic programs combine declarative and procedural representations of <a href="Knowledge_representation.html" title="Knowledge representation" class="mw-redirect">knowledge</a>. The inclusion of <a href="http://en.wikipedia.org/wiki/Negation_as_failure" title="Negation as failure">negation as failure</a> means that logic programming is a kind of <a href="http://en.wikipedia.org/wiki/Non-monotonic_logic" title="Non-monotonic logic">non-monotonic logic</a>.</p>
+<p>Despite its simplicity compared with classical logic, this combination of Horn clauses and negation as failure has proved to be surprisingly expressive. For example, it has been shown to correspond, with some further extensions, quite naturally to the semi-formal language of legislation. It is also a natural language for expressing common-sense laws of cause and effect, as in the <a href="http://en.wikipedia.org/wiki/Situation_calculus" title="Situation calculus">situation calculus</a> and <a href="http://en.wikipedia.org/wiki/Event_calculus" title="Event calculus">event calculus</a>.</p>
+<h2><span class="mw-headline" id="Abductive_logic_programming">Abductive logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=6" title="Edit section: Abductive logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Abductive_Logic_Programming" title="Abductive Logic Programming" class="mw-redirect">Abductive Logic Programming</a> is an extension of normal Logic Programming that allows some predicates, declared as abducible predicates, to be incompletely defined. Problem solving is achieved by deriving hypotheses expressed in terms of the abducible predicates as solutions of problems to be solved. These problems can be either observations that need to be explained (as in classical <a href="http://en.wikipedia.org/wiki/Abductive_reasoning" title="Abductive reasoning">abductive reasoning</a>) or goals to be achieved (as in normal logic programming). It has been used to solve problems in Diagnosis, Planning, Natural Language and Machine Learning. It has also been used to interpret Negation as Failure as a form of abductive reasoning.</p>
+<h2><span class="mw-headline" id="Metalogic_programming">Metalogic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=7" title="Edit section: Metalogic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Because mathematical logic has a long tradition of distinguishing between object language and metalanguage, logic programming also allows metalevel programming. The simplest metalogic program is the so-called "<a href="http://en.wikipedia.org/wiki/Vanilla_(computing)" title="Vanilla (computing)" class="mw-redirect">vanilla</a>" meta-interpreter:</p>
+<pre>
+   solve(true).
+   solve((A,B)):- solve(A),solve(B).
+   solve(A):- clause(A,B),solve(B).
+</pre>
+<p>where true represents an empty conjunction, and clause(A,B) means there is an object-level clause of the form A&#160;:- B.</p>
+<p>Metalogic programming allows object-level and metalevel representations to be combined, as in natural language. It can also be used to implement any logic that is specified by means of inference rules.</p>
+<h2><span class="mw-headline" id="Constraint_logic_programming">Constraint logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=8" title="Edit section: Constraint logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Constraint_logic_programming" title="Constraint logic programming">Constraint logic programming</a> is an extension of normal Logic Programming that allows some predicates, declared as constraint predicates, to occur as literals in the body of clauses. These literals are not solved by goal-reduction using program clauses, but are added to a store of constraints, which is required to be consistent with some built-in semantics of the constraint predicates.</p>
+<p>Problem solving is achieved by reducing the initial problem to a satisfiable set of constraints. Constraint logic programming has been used to solve problems in such fields as <a href="Civil_engineering.html" title="Civil engineering">civil engineering</a>, <a href="Mechanical_engineering.html" title="Mechanical engineering">mechanical engineering</a>, <a href="http://en.wikipedia.org/wiki/Digital_circuit" title="Digital circuit" class="mw-redirect">digital circuit</a> verification, <a href="http://en.wikipedia.org/w/index.php?title=Automated_timetabling&amp;action=edit&amp;redlink=1" class="new" title="Automated timetabling (de pagina bestaat niet)">automated timetabling</a>, <a href="http://en.wikipedia.org/wiki/Air_traffic_control" title="Air traffic control">air traffic control</a>, and finance. It is closely related to <a href="http://en.wikipedia.org/wiki/Abductive_logic_programming" title="Abductive logic programming">abductive logic programming</a>.</p>
+<h2><span class="mw-headline" id="Concurrent_logic_programming">Concurrent logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=9" title="Edit section: Concurrent logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Keith_Clark" title="Keith Clark">Keith Clark</a>, Steve Gregory, Vijay Saraswat, <a href="http://en.wikipedia.org/wiki/Ehud_Shapiro" title="Ehud Shapiro">Ehud Shapiro</a>, Kazunori Ueda, etc. developed a family of <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>-like concurrent message passing systems using unification of shared variables and data structure streams for messages. Efforts were made to base these systems on mathematical logic, and they were used as the basis of the <a href="http://en.wikipedia.org/wiki/Fifth_generation_computer" title="Fifth generation computer">Japanese Fifth Generation Project (FGCS)</a>. The Fifth Generation Computer Systems project (FGCS) was a $400M initiative by Japan's Ministry of International Trade and Industry, begun in 1982, to create an "epoch-making computer" with-supercomputer-like performance using massively parallel computing/processing. The aim was to build parallel computers for artificial intelligence applications using Concurrent logic programming. The FGCS project and its vast findings contributed greatly to the development of the Concurrent logic programming field.</p>
+<p>In 1982 the government decided to go ahead with the project, and established the Institute for New Generation Computer Technology (ICOT). In his 1982 visit to the ICOT, Ehud Shapiro invented Concurrent Prolog, a novel concurrent programming language that integrated logic programming and <a href="http://en.wikipedia.org/wiki/Concurrent_programming" title="Concurrent programming" class="mw-redirect">concurrent programming</a>. Concurrent Prolog is a logic programming language designed for concurrent programming and parallel execution. It is a <a href="http://en.wikipedia.org/wiki/Process-oriented_programming" title="Process-oriented programming">process oriented language</a>, which embodies <a href="http://en.wikipedia.org/wiki/Dataflow" title="Dataflow">dataflow</a> synchronization and <a href="http://en.wikipedia.org/wiki/Indeterminacy_in_concurrent_computation" title="Indeterminacy in concurrent computation">guarded-command indeterminacy</a> as its basic control mechanisms.</p>
+<p>The language was described in a Report marked as ICOT Technical Report 003,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> which presented a Concurrent Prolog <a href="Interpreter_(computing).html" title="Interpreter (computing)">interpreter</a> written in <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a>. The concurrent logic programming presented in this work, was at the heart of the FGCS project, by serving as its “<a href="http://en.wikipedia.org/wiki/Machine_language" title="Machine language" class="mw-redirect">machine language</a>” — the basic operating system and application programming language of the parallel machines planned to be built by the project. Shapiro and his team at the Weizmann Institute in Israel proceeded in developing the parallel and distributed implementation of Concurrent Prolog, starting the burst of research into concurrent logic programming, a new discipline of high-level concurrent programming.</p>
+<h2><span class="mw-headline" id="Concurrent_constraint_logic_programming">Concurrent constraint logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=10" title="Edit section: Concurrent constraint logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Concurrent_constraint_logic_programming" title="Concurrent constraint logic programming">Concurrent constraint logic programming</a></div>
+<p>However, the Prolog-like concurrent systems were based on message passing and consequently were subject to the same indeterminacy as other concurrent message-passing systems, such as <a href="http://en.wikipedia.org/wiki/Actor_model" title="Actor model">Actors</a> (see <a href="http://en.wikipedia.org/wiki/Indeterminacy_in_concurrent_computation" title="Indeterminacy in concurrent computation">Indeterminacy in concurrent computation</a>). Consequently, the ICOT languages were not based on logic in the sense that computational steps could not be logically deduced [Hewitt and Agha, 1988].</p>
+<p><a href="http://en.wikipedia.org/wiki/Concurrent_constraint_logic_programming" title="Concurrent constraint logic programming">Concurrent constraint logic programming</a> combines concurrent logic programming and <a href="http://en.wikipedia.org/wiki/Constraint_logic_programming" title="Constraint logic programming">constraint logic programming</a>, using constraints to control concurrency. A clause can contain a guard, which is a set of constraints that may block the applicability of the clause. When the guards of several clauses are satisfied, concurrent constraint logic programming makes a committed choice to the use of only one.</p>
+<h2><span class="mw-headline" id="Inductive_logic_programming">Inductive logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=11" title="Edit section: Inductive logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Inductive_logic_programming" title="Inductive logic programming">Inductive logic programming</a></div>
+<p>Inductive logic programming is concerned with generalizing positive and negative examples in the context of background knowledge. Generalizations, as well as the examples and background knowledge, are expressed in logic programming syntax. Recent work in this area, combining logic programming, learning and probability, has given rise to the new field of <a href="http://en.wikipedia.org/wiki/Statistical_relational_learning" title="Statistical relational learning">statistical relational learning</a> and <a href="http://en.wikipedia.org/w/index.php?title=Probabilistic_inductive_logic_programming&amp;action=edit&amp;redlink=1" class="new" title="Probabilistic inductive logic programming (de pagina bestaat niet)">probabilistic inductive logic programming</a>.</p>
+<h2><span class="mw-headline" id="Higher-order_logic_programming">Higher-order logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=12" title="Edit section: Higher-order logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Several researchers have extended logic programming with <a href="http://en.wikipedia.org/wiki/Higher-order_programming" title="Higher-order programming">higher-order programming</a> features derived from <a href="http://en.wikipedia.org/wiki/Higher-order_logic" title="Higher-order logic">higher-order logic</a>, such as predicate variables. Such languages include the Prolog extensions <a href="http://en.wikipedia.org/wiki/HiLog" title="HiLog">HiLog</a> and <a href="http://en.wikipedia.org/wiki/ΛProlog" title="ΛProlog">λProlog</a>.</p>
+<h2><span class="mw-headline" id="Linear_logic_programming">Linear logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=13" title="Edit section: Linear logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Basing logic programming within <a href="http://en.wikipedia.org/wiki/Linear_logic" title="Linear logic">linear logic</a> has resulted in the design of logic programming languages that are considerably more expressive than those based on classical logic. Horn clause programs can only represent state change by the change in arguments to predicates. In linear logic programming, one can use the ambient linear logic to support state change. Some early designs of logic programming languages based on linear logic include LO [Andreoli &amp; Pareschi, 1991], Lolli [Hodas &amp; Miller, 1994], ACL [Kobayashi &amp; Yonezawa, 1994], and Forum [Miller, 1996]. Forum provides a goal-directed interpretation of all of linear logic.</p>
+<h2><span class="mw-headline" id="Object-oriented_logic_programming">Object-oriented logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=14" title="Edit section: Object-oriented logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/F-logic" title="F-logic">F-logic</a> extends logic programming with objects and the frame syntax. A number of systems are based on F-logic, including <a href="http://en.wikipedia.org/wiki/Flora-2" title="Flora-2">Flora-2</a>, <a rel="nofollow" class="external text" href="http://dbis.informatik.uni-freiburg.de/index.php?project=Florid">FLORID</a>, and a highly scalable commercial system <a rel="nofollow" class="external text" href="http://www.semafora-systems.com/en/products/ontobroker/">Ontobroker</a>.</p>
+<h2><span class="mw-headline" id="Transaction_logic_programming">Transaction logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=15" title="Edit section: Transaction logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Transaction_logic" title="Transaction logic">Transaction logic</a> is an extension of logic programming with a logical theory of state-modifying updates. It has both a model-theoretic semantics and a procedural one. An implementation of a subset of Transaction logic is available in the <a href="http://en.wikipedia.org/wiki/Flora-2" title="Flora-2">Flora-2</a> system. Other prototypes are also <a href="http://en.wikipedia.org/wiki/Transaction_logic" title="Transaction logic">available</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=16" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boolean_satisfiability_problem" title="Boolean satisfiability problem">Boolean satisfiability problem</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Constraint_logic_programming" title="Constraint logic programming">Constraint logic programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Datalog" title="Datalog">Datalog</a></li>
+<li><a href="Functional_programming.html" title="Functional programming">Functional programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inductive_logic_programming" title="Inductive logic programming">Inductive logic programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fuzzy_logic" title="Fuzzy logic">Fuzzy logic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Logic_in_computer_science" title="Logic in computer science">Logic in computer science</a> (includes <a href="Formal_methods.html" title="Formal methods">Formal methods</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Logic_programming_languages" title="Category:Logic programming languages">Logic programming languages</a></li>
+<li><a href="Programming_paradigm.html" title="Programming paradigm">Programming paradigm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/R++" title="R++">R++</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reasoning_system" title="Reasoning system">Reasoning system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Satisfiability" title="Satisfiability">Satisfiability</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=17" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="http://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(February 2012)</i></small></span></td>
+</tr>
+</table>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.cs.nmsu.edu/ALP/the-association-for-logic-programming/alp-awards/">"ALP Awards"</a><span class="reference-accessdate">. Retrieved 12 May 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogic+programming&amp;rft.btitle=ALP+Awards&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.nmsu.edu%2FALP%2Fthe-association-for-logic-programming%2Falp-awards%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation journal">R.A.Kowalski (July 1979). "Algorithm=Logic + Control". <i>Communications of the ACM</i> <b>22</b> (7): 424–436.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogic+programming&amp;rft.atitle=Algorithm%3DLogic+%2B+Control&amp;rft.aulast=R.A.Kowalski&amp;rft.au=R.A.Kowalski&amp;rft.date=July+1979&amp;rft.genre=article&amp;rft.issue=7&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=424%E2%80%93436&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=22" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Shapiro E. A subset of Concurrent Prolog and its interpreter, ICOT Technical Report TR-003, Institute for New Generation Computer Technology, Tokyo, 1983. Also in Concurrent Prolog: Collected Papers, E. Shapiro (ed.), MIT Press, 1987, Chapter 2.</span></li>
+</ol>
+</div>
+<h3><span class="mw-headline" id="General_introductions">General introductions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=18" title="Edit section: General introductions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Chitta Baral and Michael Gelfond. <a rel="nofollow" class="external text" href="http://www.cs.ttu.edu/~mgelfond/papers/survey.pdf"><b>Logic programming and knowledge representation</b></a> Journal of Logic Programming. 1994, Vol. 19, 73-148.</li>
+<li>Robert Kowalski. <a rel="nofollow" class="external text" href="http://www.doc.ic.ac.uk/~rak/papers/the early years.pdf"><b>The Early Years of Logic Programming</b></a> CACM. January 1988.</li>
+<li>J. W. Lloyd. <b>Foundations of Logic Programming</b> (2nd edition). Springer-Verlag 1987.</li>
+</ul>
+<h3><span class="mw-headline" id="Other_sources">Other sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=19" title="Edit section: Other sources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Fisher Black. <b>A deductive question answering system</b> Harvard University. Thesis. 1964.</li>
+<li>J.M. Foster and E.W. Elcock. ABSYS 1: An Incremental Compiler for Assertions: an Introduction, Machine Intelligence 4, Edinburgh U Press, 1969, pp.&#160;423–429</li>
+<li>Cordell Green. <b>Application of Theorem Proving to Problem Solving</b> IJCAI 1969.</li>
+<li>Pat Hayes. Computation and Deduction. In Proceedings of the 2nd MFCS Symposium. Czechoslovak Academy of Sciences, 1973, pp.&#160;105–118.</li>
+<li>Carl Hewitt. <b>Planner: A Language for Proving Theorems in Robots</b> IJCAI 1969.</li>
+<li>Joshua Hodas and Dale Miller. <b>Logic Programming in a Fragment of Intuitionistic Linear Logic</b>, Information and Computation, 1994, 110(2), 327-365.</li>
+<li>Naoki Kobayashi and <a href="http://en.wikipedia.org/wiki/Akinori_Yonezawa" title="Akinori Yonezawa">Akinori Yonezawa</a>. <b>Asynchronous communication model based on linear logic</b>, Formal Aspects of Computing, 1994, 279-294.</li>
+<li>Robert Kowalski and Donald and Kuehner, <a rel="nofollow" class="external text" href="http://www.doc.ic.ac.uk/~rak/papers/sl.pdf"><b>Linear Resolution with Selection Function</b></a> Artificial Intelligence, Vol. 2, 1971, pp.&#160;227–60.</li>
+<li>Robert Kowalski <a rel="nofollow" class="external text" href="http://www.doc.ic.ac.uk/~rak/papers/IFIP 74.pdf"><b>Predicate Logic as a Programming Language</b></a> Memo 70, Department of Artificial Intelligence, Edinburgh University. 1973. Also in Proceedings IFIP Congress, Stockholm, North Holland Publishing Co., 1974, pp.&#160;569–574.</li>
+<li>John McCarthy. <b>Programs with <a href="http://en.wikipedia.org/wiki/Common_sense" title="Common sense">common sense</a></b> Symposium on Mechanization of Thought Processes. National Physical Laboratory. Teddington, England. 1958.</li>
+<li>D. Miller, G. Nadathur, F. Pfenning, A. Scedrov. <b>Uniform proofs as a foundation for logic programming</b>, Annals of Pure and Applied Logic, vol. 51, pp 125–157, 1991.</li>
+<li>Ehud Shapiro (Editor). <b>Concurrent Prolog</b> MIT Press. 1987.</li>
+<li>Ehud Shapiro. <b>The family of concurrent logic programming languages</b> ACM Computing Surveys. September 1989.</li>
+<li>James Slagle. <b>Experiments with a Deductive Question-Answering Program</b> CACM. December 1965.</li>
+<li>Shunichi Uchida and Kazuhiro Fuchi <b>Proceedings of the FGCS Project Evaluation Workshop</b> Institute for New Generation Computer Technology (ICOT). 1992.</li>
+</ul>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=20" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Carl Hewitt. <b>Procedural Embedding of Knowledge In Planner</b> IJCAI 1971.</li>
+<li>Carl Hewitt. <b><a rel="nofollow" class="external text" href="http://aaaipress.org/Papers/Symposia/Spring/2006/SS-06-08/SS06-08-003.pdf">The repeated demise of logic programming and why it will be reincarnated</a></b> What Went Wrong and Why: Lessons from AI Research and Applications. Technical Report SS-06-08. AAAI Press. March 2006.</li>
+<li>Evgeny Dantsin, Thomas Eiter, Georg Gottlob, Andrei Voronkov: Complexity and expressive power of logic programming. ACM Comput. Surv. 33(3): 374-425 (2001)</li>
+<li>Ulf Nilsson and Jan Maluszynski, <a rel="nofollow" class="external text" href="http://www.ida.liu.se/~ulfni/lpp/">Logic, Programming and Prolog</a></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit&amp;section=21" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://vl.fmnet.info/logic-prog/"><i>Logic Programming</i> Virtual Library entry</a></li>
+<li><a rel="nofollow" class="external text" href="http://liinwww.ira.uka.de/bibliography/LogicProgramming/">Bibliographies on Logic Programming</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.kuleuven.be/~dtai/projects/ALP/">Association for Logic Programming (ALP)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.kuleuven.be/~dtai/projects/ALP/TPLP/">Theory and Practice of Logic Programming</a> journal</li>
+<li><a rel="nofollow" class="external text" href="http://www.mpprogramming.com/Cpp/">Logic programming in C++ with Castor</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mozart-oz.org/documentation/tutorial/node12.html">Logic programming in</a> <a href="http://en.wikipedia.org/wiki/Oz_programming_language" title="Oz programming language" class="mw-redirect">Oz</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.pdc.dk/">Prolog Development Center</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.racket-lang.org/racklog/">Racklog: Logic Programming in Racket</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Types_of_programming_languages" title="Template:Types of programming languages"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Types_of_programming_languages" title="Template talk:Types of programming languages"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Types_of_programming_languages&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Programming_paradigm.html" title="Programming paradigm">Types of programming languages</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Array_programming" title="Array programming">Array</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concurrent_computing" title="Concurrent computing">Concurrent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Data-structured_language" title="Data-structured language">Data-structured</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Declarative_programming" title="Declarative programming">Declarative</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_programming_language" title="Dynamic programming language">Dynamic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Esoteric_programming_language" title="Esoteric programming language">Esoteric</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extensible_programming" title="Extensible programming">Extensible</a></li>
+<li><a href="Functional_programming.html" title="Functional programming">Functional</a></li>
+<li><a href="Imperative_programming.html" title="Imperative programming">Imperative</a></li>
+<li><strong class="selflink">Logic</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Macro_(computer_science)" title="Macro (computer science)">Macro</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multi-paradigm_programming_language" title="Multi-paradigm programming language" class="mw-redirect">Multi-paradigm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Object-based_language" title="Object-based language">Object-based</a></li>
+<li><a href="Object-oriented_programming.html" title="Object-oriented programming">Object-oriented</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pipeline_programming" title="Pipeline programming" class="mw-redirect">Pipeline</a></li>
+<li><a href="Procedural_programming.html" title="Procedural programming">Procedural</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rule-based_system" title="Rule-based system">Rule-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">Scripting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Synchronous_programming_language" title="Synchronous programming language">Synchronous</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Templating_language" title="Templating language" class="mw-redirect">Templating</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Assembly_language.html" title="Assembly language">Assembly</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Compiled_language" title="Compiled language">Compiled</a></li>
+<li><a href="Interpreted_language.html" title="Interpreted language">Interpreted</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Machine_code" title="Machine code">Machine</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Low-level_programming_language" title="Low-level programming language">Low-level</a></li>
+<li><a href="High-level_programming_language.html" title="High-level programming language">High-level</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Very_high-level_programming_language" title="Very high-level programming language">Very high-level</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Non-English-based_programming_languages.html" title="Non-English-based programming languages">Non-English-based</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Off-side_rule" title="Off-side rule">Off-side rule</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Visual_programming_language" title="Visual programming language">Visual</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Computable_knowledge" title="Template:Computable knowledge"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Computable_knowledge" title="Template talk:Computable knowledge"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Computable_knowledge&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/w/index.php?title=Computable_knowledge&amp;action=edit&amp;redlink=1" class="new" title="Computable knowledge (de pagina bestaat niet)">Computable knowledge</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Topics and<br />
+concepts</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<table class="metadata plainlinks ambox ambox-content ambox-Original_research" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/f/f4/Ambox_content.png" width="40" height="40" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>possibly contains <a href="http://en.wikipedia.org/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>. <span class="hide-when-compact">Please <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit">improve it</a> by <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research may be removed.</span> <small><i>(February 2014)</i></small></span></td>
+</tr>
+</table>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Alphabet_of_human_thought" title="Alphabet of human thought">Alphabet of human thought</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Authority_control" title="Authority control">Authority control</a></li>
+<li><a href="Automated_reasoning.html" title="Automated reasoning">Automated reasoning</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Commonsense_knowledge_base" title="Commonsense knowledge base" class="mw-redirect">Commonsense knowledge base</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Commonsense_reasoning" title="Commonsense reasoning">Commonsense reasoning</a></li>
+<li><a href="Computability.html" title="Computability">Computability</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Formal_system" title="Formal system">Formal system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inference_engine" title="Inference engine">Inference engine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_base" title="Knowledge base">Knowledge base</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge-based_systems" title="Knowledge-based systems">Knowledge-based systems</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_discovery" title="Knowledge discovery" class="mw-redirect">Knowledge discovery</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_engineering" title="Knowledge engineering">Knowledge engineering</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning" title="Knowledge representation and reasoning">Knowledge representation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_retrieval" title="Knowledge retrieval">Knowledge retrieval</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_extraction" title="Knowledge extraction">Knowledge extraction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Library_classification" title="Library classification">Library classification</a></li>
+<li><strong class="selflink">Logic programming</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Ontology_(information_science)" title="Ontology (information science)">Ontology</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Question_answering#Deep" title="Question answering">Question answering</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Semantic_reasoner" title="Semantic reasoner">Semantic reasoner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Proposals and<br />
+implementations</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Zairja" title="Zairja">Zairja</a></li>
+<li><i><a href="http://en.wikipedia.org/wiki/Ramon_Llull#Ars_generalis_ultima_.28Ars_Magna.29" title="Ramon Llull">Ars Magna</a></i> (<a href="http://en.wikipedia.org/wiki/Ramon_Llull" title="Ramon Llull">Ramon Llull</a>, 1300)</li>
+<li><i><a href="http://en.wikipedia.org/wiki/An_Essay_towards_a_Real_Character_and_a_Philosophical_Language" title="An Essay towards a Real Character and a Philosophical Language">An Essay towards a Real Character and a Philosophical Language</a></i> (<a href="http://en.wikipedia.org/wiki/John_Wilkins" title="John Wilkins">John Wilkins</a>, 1688)</li>
+<li><a href="http://en.wikipedia.org/wiki/Calculus_ratiocinator" title="Calculus ratiocinator">Calculus ratiocinator</a> &amp; <a href="http://en.wikipedia.org/wiki/Characteristica_universalis" title="Characteristica universalis">Characteristica universalis</a> (<a href="Gottfried_Leibniz.html" title="Gottfried Leibniz" class="mw-redirect">Gottfried Leibniz</a>, 1700)</li>
+<li><a href="http://en.wikipedia.org/wiki/Dewey_Decimal_Classification" title="Dewey Decimal Classification">Dewey Decimal Classification</a> (<a href="http://en.wikipedia.org/wiki/Melvil_Dewey" title="Melvil Dewey">Melvil Dewey</a>, 1876)</li>
+<li><a href="http://en.wikipedia.org/wiki/Begriffsschrift" title="Begriffsschrift">Begriffsschrift</a> (<a href="http://en.wikipedia.org/wiki/Gottlob_Frege" title="Gottlob Frege">Gottlob Frege</a>, 1879)</li>
+<li><a href="http://en.wikipedia.org/wiki/Mundaneum" title="Mundaneum">Mundaneum</a> (<a href="http://en.wikipedia.org/wiki/Paul_Otlet" title="Paul Otlet">Paul Otlet</a> &amp; <a href="http://en.wikipedia.org/wiki/Henri_La_Fontaine" title="Henri La Fontaine">Henri La Fontaine</a>, 1910)</li>
+<li><a href="http://en.wikipedia.org/wiki/Logical_atomism" title="Logical atomism">Logical atomism</a> (<a href="http://en.wikipedia.org/wiki/Bertrand_Russell" title="Bertrand Russell">Bertrand Russell</a>, 1918)</li>
+<li><i><a href="http://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus" title="Tractatus Logico-Philosophicus">Tractatus Logico-Philosophicus</a></i> (<a href="http://en.wikipedia.org/wiki/Ludwig_Wittgenstein" title="Ludwig Wittgenstein">Ludwig Wittgenstein</a>, 1921)</li>
+<li><a href="http://en.wikipedia.org/wiki/Hilbert%27s_program" title="Hilbert's program">Hilbert's program</a> (<a href="http://en.wikipedia.org/wiki/David_Hilbert" title="David Hilbert">David Hilbert</a>, 1920s)</li>
+<li><a href="http://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems" title="Gödel's incompleteness theorems">Incompleteness theorem</a> (<a href="Kurt_G%c3%b6del.html" title="Kurt Gödel">Kurt Gödel</a>, 1931)</li>
+<li><a href="http://en.wikipedia.org/wiki/Memex" title="Memex">Memex</a> (<a href="http://en.wikipedia.org/wiki/Vannevar_Bush" title="Vannevar Bush">Vannevar Bush</a>, 1945)</li>
+<li><a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a> (1972)</li>
+<li><a href="http://en.wikipedia.org/wiki/Cyc" title="Cyc">Cyc</a> (1984)</li>
+<li><a href="http://en.wikipedia.org/wiki/True_Knowledge" title="True Knowledge" class="mw-redirect">True Knowledge</a> (<a href="http://en.wikipedia.org/wiki/True_Knowledge" title="True Knowledge" class="mw-redirect">True Knowledge Ltd.</a>, 2007)</li>
+<li><a href="http://en.wikipedia.org/wiki/Wolfram_Alpha" title="Wolfram Alpha">Wolfram Alpha</a> (<a href="http://en.wikipedia.org/wiki/Wolfram_Research" title="Wolfram Research">Wolfram Research</a>, 2009)</li>
+<li><a href="http://en.wikipedia.org/wiki/Watson_(computer)" title="Watson (computer)">Watson</a> (<a href="IBM.html" title="IBM">IBM</a>, 2011)</li>
+<li><a href="http://en.wikipedia.org/wiki/Siri" title="Siri">Siri</a> (<a href="http://en.wikipedia.org/wiki/Apple_Inc." title="Apple Inc.">Apple</a>, 2011)</li>
+<li><a href="http://en.wikipedia.org/wiki/Knowledge_Graph" title="Knowledge Graph">Knowledge Graph</a> (<a href="http://en.wikipedia.org/wiki/Google" title="Google">Google</a>, 2012)</li>
+<li><a href="http://en.wikipedia.org/wiki/Wikidata" title="Wikidata">Wikidata</a> (<a href="http://en.wikipedia.org/wiki/Wikimedia_Foundation" title="Wikimedia Foundation">Wikimedia</a>, 2012)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">In fiction</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/The_Engine" title="The Engine">The Engine</a> (<i><a href="http://en.wikipedia.org/wiki/Gulliver%27s_Travels" title="Gulliver's Travels">Gulliver's Travels</a></i>, 1726)</li>
+<li>Joe ("<a href="http://en.wikipedia.org/wiki/A_Logic_Named_Joe" title="A Logic Named Joe">A Logic Named Joe</a>," 1946)</li>
+<li>The Librarian (<i><a href="http://en.wikipedia.org/wiki/Snow_Crash" title="Snow Crash">Snow Crash</a></i>, 1992)</li>
+<li>Dr. Know (<i><a href="http://en.wikipedia.org/wiki/A.I._Artificial_Intelligence" title="A.I. Artificial Intelligence">A.I. Artificial Intelligence</a></i>, 2001)</li>
+<li>Waterhouse (<i><a href="http://en.wikipedia.org/wiki/The_Baroque_Cycle" title="The Baroque Cycle">The Baroque Cycle</a></i>, 2003)</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1099
+CPU time usage: 1.932 seconds
+Real time usage: 2.028 seconds
+Preprocessor visited node count: 1881/1000000
+Preprocessor generated node count: 11045/1500000
+Post‐expand include size: 65793/2048000 bytes
+Template argument size: 10967/2048000 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 11/500
+Lua time usage: 0.134/10.000 seconds
+Lua memory usage: 1.92 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:17927-0!*!0!!en!4!* and timestamp 20140328145314
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;oldid=601661244">http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;oldid=601661244</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:1972_introductions" title="Category:1972 introductions">1972 introductions</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Logic_programming" title="Category:Logic programming">Logic programming</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Programming_paradigms" title="Category:Programming paradigms">Programming paradigms</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_cleanup_from_June_2010" title="Category:Articles needing cleanup from June 2010">Articles needing cleanup from June 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_cleanup" title="Category:All articles needing cleanup">All articles needing cleanup</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Cleanup_tagged_articles_without_a_reason_field_from_June_2010" title="Category:Cleanup tagged articles without a reason field from June 2010">Cleanup tagged articles without a reason field from June 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_pages_needing_cleanup_from_June_2010" title="Category:Wikipedia pages needing cleanup from June 2010">Wikipedia pages needing cleanup from June 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_July_2013" title="Category:Articles with unsourced statements from July 2013">Articles with unsourced statements from July 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_February_2012" title="Category:Articles lacking in-text citations from February 2012">Articles lacking in-text citations from February 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_that_may_contain_original_research_from_February_2014" title="Category:Articles that may contain original research from February 2014">Articles that may contain original research from February 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Logic+programming&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Logic+programming" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Logic_programming.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Logic_programming"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Logic_programming.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Logic_programming" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Logic_programming" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;oldid=601661244" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q275603" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Logic_programming&amp;id=601661244" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Logic+programming">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Logic+programming&amp;oldid=601661244&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Logic_programming&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/برمجة_منطقية" title="برمجة منطقية – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-bn"><a href="http://bn.wikipedia.org/wiki/যুক্তিভিত্তিক_প্রোগ্রামিং" title="যুক্তিভিত্তিক প্রোগ্রামিং – Bengali" lang="bn" hreflang="bn">বাংলা</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Logičko_programiranje" title="Logičko programiranje – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Logické_programování" title="Logické programování – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Logische_Programmierung" title="Logische Programmierung – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Loogiline_programmeerimine" title="Loogiline programmeerimine – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Programación_lógica" title="Programación lógica – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/برنامه‌نویسی_منطقی" title="برنامه‌نویسی منطقی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Programmation_logique" title="Programmation logique – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ga"><a href="http://ga.wikipedia.org/wiki/Ríomhchlárú_loighce" title="Ríomhchlárú loighce – Irish" lang="ga" hreflang="ga">Gaeilge</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Programación_lóxica" title="Programación lóxica – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/논리형_프로그래밍" title="논리형 프로그래밍 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Logičko_programiranje" title="Logičko programiranje – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-io"><a href="http://io.wikipedia.org/wiki/Logika_programeso" title="Logika programeso – Ido" lang="io" hreflang="io">Ido</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Programmazione_logica" title="Programmazione logica – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/תכנות_לוגי" title="תכנות לוגי – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Pengaturcaraan_logik" title="Pengaturcaraan logik – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Logisch_programmeren" title="Logisch programmeren – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/論理プログラミング" title="論理プログラミング – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Programowanie_logiczne" title="Programowanie logiczne – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Programação_lógica" title="Programação lógica – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-rue"><a href="http://rue.wikipedia.org/wiki/Лоґічне_проґрамованя" title="Лоґічне проґрамованя – Rusyn" lang="rue" hreflang="rue">Русиньскый</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Логическое_программирование" title="Логическое программирование – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sq"><a href="http://sq.wikipedia.org/wiki/Programimi_logjik" title="Programimi logjik – Albanian" lang="sq" hreflang="sq">Shqip</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Logiikkapohjainen_ohjelmointikieli" title="Logiikkapohjainen ohjelmointikieli – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Logikprogrammering" title="Logikprogrammering – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/การเขียนโปรแกรมเชิงตรรกะ" title="การเขียนโปรแกรมเชิงตรรกะ – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Mantık_programlama" title="Mantık programlama – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Логічне_програмування" title="Логічне програмування – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/邏輯編程" title="邏輯編程 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q275603#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 March 2014 at 14:53.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Logic_programming" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1034 in 0.453 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Logic_programming by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:52 GMT -->
+</html>

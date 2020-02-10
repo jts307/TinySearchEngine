@@ -1,0 +1,434 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Shell_script.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Shell_script by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Shell script - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Shell_script" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Shell_script.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Shell_script","wgTitle":"Shell script","wgCurRevisionId":601326824,"wgRevisionId":601326824,"wgArticleId":28938,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from February 2014","All articles needing additional references","Scripting languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Shell_script","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q959549"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bash {line-height: normal;}
+.source-bash li, .source-bash pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bash
+ * CSS class: source-bash, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bash.source-bash .de1, .bash.source-bash .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.bash.source-bash  {font-family:monospace;}
+.bash.source-bash .imp {font-weight: bold; color: red;}
+.bash.source-bash li, .bash.source-bash .li1 {font-weight: normal; vertical-align:top;}
+.bash.source-bash .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bash.source-bash .li2 {font-weight: bold; vertical-align:top;}
+.bash.source-bash .kw1 {color: #000000; font-weight: bold;}
+.bash.source-bash .kw2 {color: #c20cb9; font-weight: bold;}
+.bash.source-bash .kw3 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .co0 {color: #666666; font-style: italic;}
+.bash.source-bash .co1 {color: #800000;}
+.bash.source-bash .co2 {color: #cc0000; font-style: italic;}
+.bash.source-bash .co3 {color: #000000; font-weight: bold;}
+.bash.source-bash .co4 {color: #666666;}
+.bash.source-bash .es1 {color: #000099; font-weight: bold;}
+.bash.source-bash .es2 {color: #007800;}
+.bash.source-bash .es3 {color: #007800;}
+.bash.source-bash .es4 {color: #007800;}
+.bash.source-bash .es5 {color: #780078;}
+.bash.source-bash .es_h {color: #000099; font-weight: bold;}
+.bash.source-bash .br0 {color: #7a0874; font-weight: bold;}
+.bash.source-bash .sy0 {color: #000000; font-weight: bold;}
+.bash.source-bash .st0 {color: #ff0000;}
+.bash.source-bash .st_h {color: #ff0000;}
+.bash.source-bash .nu0 {color: #000000;}
+.bash.source-bash .re0 {color: #007800;}
+.bash.source-bash .re1 {color: #007800;}
+.bash.source-bash .re2 {color: #007800;}
+.bash.source-bash .re4 {color: #007800;}
+.bash.source-bash .re5 {color: #660033;}
+.bash.source-bash .ln-xtra, .bash.source-bash li.ln-xtra, .bash.source-bash div.ln-xtra {background-color: #ffc;}
+.bash.source-bash span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Shell_script skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Shell script</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about scripting in UNIX-like systems.  For batch programming in DOS, OS/2 and Windows, see <a href="http://en.wikipedia.org/wiki/Batch_file" title="Batch file">Batch file</a>.  For batch programming in Windows PowerShell shell, see <a href="http://en.wikipedia.org/wiki/Windows_PowerShell#Scripting" title="Windows PowerShell">Windows PowerShell#Scripting</a>.</div>
+<table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2014)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:FreeBSD_10_vi_RC_Firewall.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/FreeBSD_10_vi_RC_Firewall.png/220px-FreeBSD_10_vi_RC_Firewall.png" width="220" height="130" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/FreeBSD_10_vi_RC_Firewall.png/330px-FreeBSD_10_vi_RC_Firewall.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/FreeBSD_10_vi_RC_Firewall.png/440px-FreeBSD_10_vi_RC_Firewall.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:FreeBSD_10_vi_RC_Firewall.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Editing a <a href="FreeBSD.html" title="FreeBSD">FreeBSD</a> shell script for configuring <a href="http://en.wikipedia.org/wiki/Ipfirewall" title="Ipfirewall">ipfirewall</a></div>
+</div>
+</div>
+<p>A <b>shell script</b> is a <a href="http://en.wikipedia.org/wiki/Computer_program" title="Computer program">computer program</a> designed to be run by the <a href="Unix_shell.html" title="Unix shell">Unix shell</a>, a <a href="Command_line_interpreter.html" title="Command line interpreter" class="mw-redirect">command line interpreter</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> The various dialects of shell scripts are considered to be <a href="http://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting languages</a>.</p>
+<p>Typical operations performed by shell scripts include file manipulation, program execution, and printing text.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Capabilities"><span class="tocnumber">1</span> <span class="toctext">Capabilities</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Shortcuts"><span class="tocnumber">1.1</span> <span class="toctext">Shortcuts</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Batch_jobs"><span class="tocnumber">1.2</span> <span class="toctext">Batch jobs</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Generalization"><span class="tocnumber">1.3</span> <span class="toctext">Generalization</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Verisimilitude"><span class="tocnumber">1.4</span> <span class="toctext">Verisimilitude</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Programming"><span class="tocnumber">1.5</span> <span class="toctext">Programming</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Other_scripting_languages"><span class="tocnumber">2</span> <span class="toctext">Other scripting languages</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Life_cycle"><span class="tocnumber">3</span> <span class="toctext">Life cycle</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Advantages_and_disadvantages"><span class="tocnumber">4</span> <span class="toctext">Advantages and disadvantages</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Capabilities">Capabilities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=1" title="Edit section: Capabilities">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Shortcuts">Shortcuts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=2" title="Edit section: Shortcuts">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In its most basic form, a shell script can provide a convenient variation of a system command where special environment settings, command options, or post-processing apply automatically, but in a way that allows the new script to still act as a fully normal Unix command.</p>
+<p>One example would be to create a version of <a href="Ls.html" title="Ls">ls</a>, the command to list files, giving it a shorter command name of <tt>l</tt>, which would be normally saved in a user's <tt>bin</tt> directory as <tt>/home/<i>username</i>/bin/l</tt>, and a default set of command options pre-supplied.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="co0">#!/bin/sh</span>
+<span class="re2">LC_COLLATE</span>=C <span class="kw2">ls</span> <span class="re5">-FCas</span> <span class="st0">"$@"</span>
+</pre></div>
+</div>
+<p>Here, <a href="http://en.wikipedia.org/wiki/Shebang_(Unix)" title="Shebang (Unix)">the first line (Shebang)</a> indicates which interpreter should execute the rest of the script, and the second line makes a listing with options for file format indicators, columns, all files (none omitted), and a size in blocks. The <tt>LC_COLLATE=C</tt> sets the default collation order to not fold upper and lower case together, not intermix <a href="http://en.wikipedia.org/wiki/Dotfile" title="Dotfile" class="mw-redirect">dotfiles</a> with normal filenames as a side effect of ignoring punctuation in the names (dotfiles are usually only shown if an option like <tt>-a</tt> is used), and the <tt>"$@"</tt> causes any parameters given to <tt>l</tt> to pass through as parameters to ls, so that all of the normal options and other <a href="http://en.wikipedia.org/wiki/Programming_language_syntax" title="Programming language syntax" class="mw-redirect">syntax</a> known to ls can still be used.</p>
+<p>The user could then simply use <tt>l</tt> for the most commonly used short listing.</p>
+<p>Another example of a shell script that could be used as a shortcut would be to print a list of all the files and directories within a given directory.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="co0">#!/bin/sh</span>
+ 
+<span class="kw2">clear</span>
+<span class="kw2">ls</span> <span class="re5">-al</span>
+</pre></div>
+</div>
+<p>In this case, the shell script would start with its normal starting line of <span style="font-family:courier">#!/bin/sh</span>. Following this, the script executes the command <span style="font-family:courier">clear</span> which clears the terminal of all text before going to the next line. The following line provides the main function of the script. The <span style="font-family:courier">ls -al</span> command list the files and directories that are in the directory from which the script is being run. The <span style="font-family:courier"><a href="Ls.html" title="Ls">ls</a></span> command attributes could be changed to reflect the needs of the user.</p>
+<p>Note: If an implementation does not have the <span style="font-family:courier">clear</span> command, try using the <span style="font-family:courier">clr</span> command instead.</p>
+<h3><span class="mw-headline" id="Batch_jobs">Batch jobs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=3" title="Edit section: Batch jobs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Shell scripts allow several commands that would be entered manually at a command-line interface to be executed automatically, and without having to wait for a user to trigger each stage of the sequence. For example, in a directory with three C source code files, rather than manually running the four commands required to build the final program from them, one could instead create a <a href="C_shell.html" title="C shell">C shell</a> script, here named <tt>build</tt> and kept in the directory with them, which would compile them automatically:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash">
+<pre class="de1">
+<span class="co0">#!/bin/csh</span>
+<span class="kw3">echo</span> compiling...
+<span class="kw2">cc</span> <span class="re5">-c</span> foo.c
+<span class="kw2">cc</span> <span class="re5">-c</span> bar.c
+<span class="kw2">cc</span> <span class="re5">-c</span> qux.c
+<span class="kw2">cc</span> <span class="re5">-o</span> myprog foo.o bar.o qux.o
+<span class="kw3">echo</span> done.
+</pre></div>
+</div>
+<p>The script would allow a user to save the file being edited, pause the editor, and then just run <tt>./build</tt> to create the updated program, test it, and then return to the editor. Since the 1980s or so, however, scripts of this type have been replaced with utilities like <a href="Make_(software).html" title="Make (software)">make</a> which are specialized for building programs.</p>
+<h3><span class="mw-headline" id="Generalization">Generalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=4" title="Edit section: Generalization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Simple batch jobs are not unusual for isolated tasks, but using shell loops, tests, and variables provides much more flexibility to users. A <a href="http://en.wikipedia.org/wiki/Bash_(Unix_shell)" title="Bash (Unix shell)">Bash (Unix shell)</a> script to convert JPEG images to PNG images, where the image names are provided on the command line—possibly via wildcards—instead of each being listed within the script, can be created with this file, typically saved in a file like <tt>/home/<i>username</i>/bin/jpg2png</tt></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bash source-bash"><span class="co0">#!/bin/bash</span><br />
+<span class="kw1">for</span> jpg; <span class="kw1">do</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;<span class="co0"># use $jpg in place of each filename given, in turn</span><br />
+&#160; &#160; <span class="re2">png</span>=<span class="st0">"<span class="es3">${jpg%.jpg}</span>.png"</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;<span class="co0"># find the PNG version of the filename by replacing .jpg with .png</span><br />
+&#160; &#160; <span class="kw3">echo</span> converting <span class="st0">"<span class="es2">$jpg</span>"</span> ... &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="co0"># output status info to the user running the script</span><br />
+&#160; &#160; <span class="kw1">if</span> convert <span class="st0">"<span class="es2">$jpg</span>"</span> jpg.to.png&#160;; <span class="kw1">then</span> &#160; &#160; &#160;<span class="co0"># use the convert program (common in Linux) to create the PNG in a temp file</span><br />
+&#160; &#160; &#160; &#160; <span class="kw2">mv</span> jpg.to.png <span class="st0">"<span class="es2">$png</span>"</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="co0"># if it worked, rename the temporary PNG image to the correct name</span><br />
+&#160; &#160; <span class="kw1">else</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="co0"># ...otherwise complain and exit from the script</span><br />
+&#160; &#160; &#160; &#160; <span class="kw3">echo</span> <span class="st_h">'jpg2png: error: failed output saved in "jpg.to.png".'</span> <span class="sy0">&gt;&amp;</span><span class="nu0">2</span><br />
+&#160; &#160; &#160; &#160; <span class="kw3">exit</span> <span class="nu0">1</span><br />
+&#160; &#160; <span class="kw1">fi</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="co0"># the end of the "if" test construct</span><br />
+<span class="kw1">done</span> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="co0"># the end of the "for" loop</span><br />
+<span class="kw3">echo</span> all conversions successful &#160; &#160; &#160; &#160; &#160; &#160; &#160;<span class="co0"># tell the user the good news</span><br />
+<span class="kw3">exit</span> <span class="nu0">0</span></div>
+</div>
+<p>The <tt>jpg2png</tt> command can then be run on an entire directory full of JPEG images with just <tt>/home/<i>username</i>/bin/jpg2png *.jpg</tt></p>
+<h3><span class="mw-headline" id="Verisimilitude">Verisimilitude</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=5" title="Edit section: Verisimilitude">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A key feature of shell scripts is that the invocation of their interpreters is handled as a core operating system feature. So rather than a user's shell only being able to execute scripts in that shell's language, or a script only having its <a href="http://en.wikipedia.org/wiki/Interpreter_directive" title="Interpreter directive">interpreter directive</a> handled correctly if it was run from a shell (both of which were limitations in the early Bourne shell's handling of scripts), shell scripts are set up and executed by the OS itself. A modern shell script is not just on the same footing as system commands, but rather many system commands are actually shell scripts (or more generally, scripts, since some of them are not interpreted by a shell, but instead by <a href="Perl.html" title="Perl">Perl</a>, <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>, or some other language). This extends to returning exit codes like other system utilities to indicate success or failure, and allows them to be called as components of larger programs regardless of how those larger tools are implemented.</p>
+<p>Like standard system commands, shell scripts classically omit any kind of filename extension unless intended to be read into a running shell through a special mechanism for this purpose (such as <tt>sh</tt>’s “<code><b>.</b></code> ”, or <tt>csh</tt>’s <tt>source</tt>).</p>
+<h3><span class="mw-headline" id="Programming">Programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=6" title="Edit section: Programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Many modern shells also supply various features usually found only in more sophisticated <a href="http://en.wikipedia.org/wiki/General-purpose_programming_language" title="General-purpose programming language">general-purpose programming languages</a>, such as control-flow constructs, variables, <a href="http://en.wikipedia.org/wiki/Comment_(computer_programming)" title="Comment (computer programming)">comments</a>, arrays, <a href="Subroutine.html" title="Subroutine">subroutines</a>, and so on. With these sorts of features available, it is possible to write reasonably sophisticated applications as shell scripts. However, they are still limited by the fact that most shell languages have little or no support for data typing systems, classes, threading, complex math, and other common full language features, and are also generally much slower than compiled code or interpreted languages written with speed as a performance goal.</p>
+<h2><span class="mw-headline" id="Other_scripting_languages">Other scripting languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=7" title="Edit section: Other scripting languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Scripting_language" title="Scripting language">scripting language</a></div>
+<p>Many powerful scripting languages have been introduced for tasks that are too large or complex to be comfortably handled with ordinary shell scripts, but for which the advantages of a script are desirable and the development overhead of a full-blown, compiled programming language would be disadvantageous. The specifics of what separates scripting languages from <a href="High-level_programming_language.html" title="High-level programming language">high-level programming languages</a> is a frequent source of debate. But generally speaking a scripting language is one which requires an interpreter.</p>
+<h2><span class="mw-headline" id="Life_cycle">Life cycle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=8" title="Edit section: Life cycle">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Shell scripts often serve as an initial stage in software development, and are often subject to conversion later to a different underlying implementation, most commonly being converted to <a href="Perl.html" title="Perl">Perl</a>, <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>, or <a href="C_(programming_language).html" title="C (programming language)">C</a>. The <a href="http://en.wikipedia.org/wiki/Interpreter_directive" title="Interpreter directive">interpreter directive</a> allows the implementation detail to be fully hidden inside the script, rather than being exposed as a filename extension, and provides for seamless reimplementation in different languages with no impact on end users.</p>
+<h2><span class="mw-headline" id="Advantages_and_disadvantages">Advantages and disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=9" title="Edit section: Advantages and disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Perhaps the biggest advantage of writing a shell script is that the commands and syntax are exactly the same as those directly entered at the command line. The programmer does not have to switch to a totally different syntax, as they would if the script were written in a different language, or if a compiled language was used.</p>
+<p>Often, writing a shell script is much quicker than writing the equivalent code in other programming languages. The many advantages include easy program or file selection, quick start, and interactive debugging. A shell script can be used to provide a sequencing and decision-making linkage around existing programs, and for moderately sized scripts the absence of a compilation step is an advantage. Interpretive running makes it easy to write debugging code into a script and re-run it to detect and fix bugs. Non-expert users can use scripting to tailor the behavior of programs, and shell scripting provides some limited scope for multiprocessing.</p>
+<p>On the other hand, shell scripting is prone to costly errors. Inadvertent typing errors such as <tt><a href="Rm_(Unix).html" title="Rm (Unix)">rm</a> -rf * /</tt> (instead of the intended <tt>rm -rf */</tt>) are folklore in the Unix community; a single extra space converts the command from one that deletes everything in the sub-directories to one which deletes everything—and also tries to delete everything in the <a href="http://en.wikipedia.org/wiki/Root_directory" title="Root directory">root directory</a>. Similar problems can transform <tt><a href="Cp_(Unix).html" title="Cp (Unix)">cp</a></tt> and <tt><a href="Mv.html" title="Mv">mv</a></tt> into dangerous weapons, and misuse of the <tt>&gt;</tt> redirect can delete the contents of a file. This is made more problematic by the fact that many UNIX commands differ in name by only one letter: <tt>cp</tt>, <tt><a href="Cd_(command).html" title="Cd (command)">cd</a></tt>, <tt><a href="Dd_(Unix).html" title="Dd (Unix)">dd</a></tt>, <tt><a href="Df_(Unix).html" title="Df (Unix)">df</a></tt>, etc.</p>
+<p>Another significant disadvantage is the slow execution speed and the need to launch a new process for almost every shell command executed. When a script's job can be accomplished by setting up a <a href="http://en.wikipedia.org/wiki/Pipeline_(computing)" title="Pipeline (computing)">pipeline</a> in which efficient <a href="http://en.wikipedia.org/wiki/Filter_(software)" title="Filter (software)">filter</a> commands perform most of the work, the slowdown is mitigated, but a complex script is typically several orders of magnitude slower than a conventional compiled program that performs an equivalent task.</p>
+<p>There are also compatibility problems between different platforms. <a href="http://en.wikipedia.org/wiki/Larry_Wall" title="Larry Wall">Larry Wall</a>, creator of <a href="Perl.html" title="Perl">Perl</a>, famously wrote that "It is easier to port a shell than a shell script."</p>
+<p>Similarly, more complex scripts can run into the limitations of the shell scripting language itself; the limits make it difficult to write quality code, and extensions by various shells to ameliorate problems with the original shell language can make problems worse. <sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>Many disadvantages of using some script languages are caused by design flaws within the <a href="http://en.wikipedia.org/wiki/Programming_language_syntax" title="Programming language syntax" class="mw-redirect">language syntax</a> or implementation, and are not necessarily imposed by the use of a text-based command line; there are a number of shells which use other shell programming languages or even full-fledged languages like <a href="http://en.wikipedia.org/wiki/Scsh" title="Scsh">Scsh</a> (which uses <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>).</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Glue_code" title="Glue code">Glue code</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interpreter_directive" title="Interpreter directive">Interpreter directive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Shebang_(Unix)" title="Shebang (Unix)">Shebang symbol (#!)</a></li>
+<li><a href="Unix_shell.html" title="Unix shell">Unix shells</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Script_Host" title="Windows Script Host">Windows Script Host</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span id="CITEREFKernighanPike1984" class="citation"><a href="Brian_Kernighan.html" title="Brian Kernighan">Kernighan, Brian W.</a>; <a href="Rob_Pike.html" title="Rob Pike">Pike, Rob</a> (1984), "3. Using the Shell", <i>The UNIX Programming Environment</i>, Prentice Hall, Inc., p.&#160;94, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-13-937699-2" title="Special:BookSources/0-13-937699-2">0-13-937699-2</a>, "The shell is actually a programming language: it has variables, loops, decision-making, and so on."</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShell+script&amp;rft.atitle=The+UNIX+Programming+Environment&amp;rft.aufirst=Brian+W.&amp;rft.au=Kernighan%2C+Brian+W.&amp;rft.aulast=Kernighan&amp;rft.au=Pike%2C+Rob&amp;rft.btitle=3.+Using+the+Shell&amp;rft.date=1984&amp;rft.genre=bookitem&amp;rft.isbn=0-13-937699-2&amp;rft.pages=94&amp;rft.pub=Prentice+Hall%2C+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ooblick.com/text/CshProgrammingConsideredHarmful.html">"Csh Programming Considered Harmful"</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikibooks has a book on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line" class="extiw" title="wikibooks:Ad Hoc Data Analysis From The Unix Command Line">Ad Hoc Data Analysis From The Unix Command Line</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.faqs.org/docs/air/tsshell.html"><i>An Introduction To Shell Programming</i> by Greg Goebel</a></li>
+<li><a rel="nofollow" class="external text" href="http://steve-parker.org/sh/sh.shtml"><i>UNIX / Linux shell scripting tutorial</i> by Steve Parker</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.apple.com/mac/library/documentation/OpenSource/Conceptual/ShellScripting/"><i>Shell Scripting Primer</i> (Apple)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.linux.com/articles/34658"><i>What to watch out for when writing portable shell scripts</i> by Peter Seebach</a></li>
+<li><a rel="nofollow" class="external text" href="http://freebookcentre.net/UnixCategory/Free-Unix-Shell-Programming-Books-Download.html">Free Unix Shell scripting books</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1202
+CPU time usage: 0.480 seconds
+Real time usage: 0.715 seconds
+Preprocessor visited node count: 516/1000000
+Preprocessor generated node count: 4672/1500000
+Post‐expand include size: 9452/2048000 bytes
+Template argument size: 1663/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 2/500
+Lua time usage: 0.042/10.000 seconds
+Lua memory usage: 1.35 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:28938-0!*!0!!en!4!* and timestamp 20140326092707
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;oldid=601326824">http://en.wikipedia.org/w/index.php?title=Shell_script&amp;oldid=601326824</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2014" title="Category:Articles needing additional references from February 2014">Articles needing additional references from February 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Shell+script&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Shell+script" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Shell_script.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Shell_script"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Shell_script.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Shell_script" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Shell_script" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;oldid=601326824" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q959549" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Shell_script&amp;id=601326824" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Shell+script">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Shell+script&amp;oldid=601326824&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Shell_script&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/سكربت_شل" title="سكربت شل – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Shellový_skript" title="Shellový skript – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Shell_script" title="Shell script – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="http://is.wikipedia.org/wiki/Skeljaforrit" title="Skeljaforrit – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Shellscript" title="Shellscript – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/シェルスクリプト" title="シェルスクリプト – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Shell_script" title="Shell script – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q959549#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 March 2014 at 09:27.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Shell_script" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1093 in 0.441 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Shell_script by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:59:01 GMT -->
+</html>

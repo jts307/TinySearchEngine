@@ -1,0 +1,353 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hash_consing.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hash_consing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Hash consing - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Hash_consing" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Hash_consing.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Hash_consing","wgTitle":"Hash consing","wgCurRevisionId":578756758,"wgRevisionId":578756758,"wgArticleId":21898171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from March 2009","Implementation of functional programming languages","Hashing","Software design patterns","Articles with example Scheme code","Computer science stubs","WikiProject Computer science stubs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Hash_consing","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q3366087"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-scheme {line-height: normal;}
+.source-scheme li, .source-scheme pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for scheme
+ * CSS class: source-scheme, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.scheme.source-scheme .de1, .scheme.source-scheme .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.scheme.source-scheme  {font-family:monospace;}
+.scheme.source-scheme .imp {font-weight: bold; color: red;}
+.scheme.source-scheme li, .scheme.source-scheme .li1 {font-weight: normal; vertical-align:top;}
+.scheme.source-scheme .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.scheme.source-scheme .li2 {font-weight: bold; vertical-align:top;}
+.scheme.source-scheme .kw1 {color: #b1b100;}
+.scheme.source-scheme .co1 {color: #808080; font-style: italic;}
+.scheme.source-scheme .coMULTI {color: #808080; font-style: italic;}
+.scheme.source-scheme .es0 {color: #000099; font-weight: bold;}
+.scheme.source-scheme .br0 {color: #66cc66;}
+.scheme.source-scheme .sy0 {color: #66cc66;}
+.scheme.source-scheme .st0 {color: #ff0000;}
+.scheme.source-scheme .nu0 {color: #cc66cc;}
+.scheme.source-scheme .me0 {color: #202020;}
+.scheme.source-scheme .ln-xtra, .scheme.source-scheme li.ln-xtra, .scheme.source-scheme div.ln-xtra {background-color: #ffc;}
+.scheme.source-scheme span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Hash_consing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Hash consing</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>In <a href="Computer_science.html" title="Computer science">computer science</a>, particularly in <a href="Functional_programming.html" title="Functional programming">functional programming</a>, <b>hash consing</b> is a technique used to share values that are structurally equal. The term <i>hash consing</i> originates from implementations of <a href="Lisp_(programming_language).html" title="Lisp (programming language)">Lisp</a><sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> that attempt to reuse <a href="Cons.html" title="Cons">cons</a> cells that have been constructed before, avoiding the penalty of <a href="http://en.wikipedia.org/wiki/Memory_allocation" title="Memory allocation" class="mw-redirect">memory allocation</a>. Hash consing is most commonly implemented with <a href="Hash_table.html" title="Hash table">hash tables</a> storing <a href="http://en.wikipedia.org/wiki/Weak_reference" title="Weak reference">weak references</a> that may be <a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage-collected</a> when the data stored therein contains no <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> from outside the table.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> Hash consing has been shown to give dramatic performance improvements—both space and time—for <a href="Symbolic_computation.html" title="Symbolic computation">symbolic</a> and <a href="http://en.wikipedia.org/wiki/Dynamic_programming" title="Dynamic programming">dynamic programming</a> algorithms.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2009)">citation needed</span></a></i>]</sup></p>
+<p>In other communities a similar idea is known as the <a href="http://en.wikipedia.org/wiki/Flyweight_pattern" title="Flyweight pattern">Flyweight pattern</a>. When applied to <a href="http://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a> this technique is also known as <i><a href="String_interning.html" title="String interning">string interning</a></i>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Examples"><span class="tocnumber">1</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Scheme"><span class="tocnumber">1.1</span> <span class="toctext">Scheme</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#References"><span class="tocnumber">2</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Further_reading"><span class="tocnumber">3</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit&amp;section=1" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Scheme">Scheme</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit&amp;section=2" title="Edit section: Scheme">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Simple, not very efficient, but suitable for demonstration of the concept implementation of a <a href="http://en.wikipedia.org/wiki/Memoization" title="Memoization">memoizer</a> by means of hash table and weak references in <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="scheme source-scheme">
+<pre class="de1">
+<span class="co1">;; weak hashes</span>
+<span class="co1">;;</span>
+<span class="br0">(</span>require 'hash<span class="sy0">-</span>table<span class="br0">)</span>
+ 
+<span class="br0">(</span><span class="kw1">define</span> <span class="br0">(</span>make<span class="sy0">-</span>weak<span class="sy0">-</span>table . args<span class="br0">)</span>
+  <span class="br0">(</span>apply make<span class="sy0">-</span>hash<span class="sy0">-</span>table args<span class="br0">)</span><span class="br0">)</span>
+ 
+<span class="br0">(</span><span class="kw1">define</span> <span class="br0">(</span>weak<span class="sy0">-</span>table<span class="sy0">-</span><span class="kw1">set!</span> table key data<span class="br0">)</span>
+  <span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>w <span class="br0">(</span>hash<span class="sy0">-</span>table<span class="sy0">-</span>ref table key #f<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="br0">(</span><span class="kw1">if</span> w
+	<span class="br0">(</span><span class="kw1">vector-set!</span> w <span class="nu0">0</span> data<span class="br0">)</span>
+	<span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>w <span class="br0">(</span>make<span class="sy0">-</span>weak<span class="sy0">-</span><span class="kw1">vector</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+	  <span class="br0">(</span><span class="kw1">vector-set!</span> w <span class="nu0">0</span> data<span class="br0">)</span>
+	  <span class="br0">(</span>hash<span class="sy0">-</span>table<span class="sy0">-</span><span class="kw1">set!</span> table key w<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+ 
+<span class="br0">(</span><span class="kw1">define</span> <span class="br0">(</span>weak<span class="sy0">-</span>table<span class="sy0">-</span>ref table key<span class="br0">)</span>
+  <span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>w <span class="br0">(</span>hash<span class="sy0">-</span>table<span class="sy0">-</span>ref table key #f<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="br0">(</span><span class="kw1">if</span> w
+	<span class="br0">(</span><span class="kw1">vector-ref</span> w <span class="nu0">0</span><span class="br0">)</span>
+	#f<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+ 
+<span class="co1">;; memoizer factory: for given (side-effect-free) procedure,</span>
+<span class="co1">;; return a procedure which does the same memoizing some of results</span>
+<span class="co1">;; in the sense of equal? on the whole list of args</span>
+<span class="co1">;;</span>
+<span class="br0">(</span><span class="kw1">define</span> <span class="br0">(</span>make<span class="sy0">-</span>weak<span class="sy0">-</span>memoizer proc<span class="br0">)</span>
+  <span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>cache <span class="br0">(</span>make<span class="sy0">-</span>weak<span class="sy0">-</span>table <span class="kw1">equal?</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="br0">(</span><span class="kw1">lambda</span> args
+      <span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>x <span class="br0">(</span>weak<span class="sy0">-</span>table<span class="sy0">-</span>ref cache args<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+	<span class="br0">(</span><span class="kw1">if</span> <span class="br0">(</span>bwp<span class="sy0">-</span>object? x<span class="br0">)</span>
+	  <span class="br0">(</span><span class="kw1">let</span> <span class="br0">(</span><span class="br0">(</span>r <span class="br0">(</span>apply proc args<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+	    <span class="br0">(</span>weak<span class="sy0">-</span>table<span class="sy0">-</span><span class="kw1">set!</span> cache args r<span class="br0">)</span>
+	    r<span class="br0">)</span>
+	  x<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/Eiichi_Goto" title="Eiichi Goto">Goto, Eiichi</a> (1974). <i>Monocopy and associative algorithms in extended Lisp</i>. Tokyo: <a href="http://en.wikipedia.org/wiki/University_of_Tokyo" title="University of Tokyo">University of Tokyo</a> Technical Report TR 74-03.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHash+consing&amp;rft.aufirst=Eiichi&amp;rft.au=Goto%2C+Eiichi&amp;rft.aulast=Goto&amp;rft.btitle=Monocopy+and+associative+algorithms+in+extended+Lisp&amp;rft.date=1974&amp;rft.genre=book&amp;rft.place=Tokyo&amp;rft.pub=University+of+Tokyo+Technical+Report+TR+74-03&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book">Allen, John (1978). <i>Anatomy of Lisp</i>. <a href="http://en.wikipedia.org/wiki/McGraw_Hill" title="McGraw Hill" class="mw-redirect">McGraw Hill</a>. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-07-001115-X" title="Special:BookSources/0-07-001115-X">0-07-001115-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHash+consing&amp;rft.au=Allen%2C+John&amp;rft.aulast=Allen%2C+John&amp;rft.btitle=Anatomy+of+Lisp&amp;rft.date=1978&amp;rft.genre=book&amp;rft.isbn=0-07-001115-X&amp;rft.pub=McGraw+Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation journal">Fillâtre, Jean-Christophe; Conchon, Sylvain (2006). "Type-Safe Modular Hash-Consing". <i>Workshop on ML</i>. <a href="Association_for_Computing_Machinery.html" title="Association for Computing Machinery">ACM</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHash+consing&amp;rft.atitle=Workshop+on+ML&amp;rft.au=Conchon%2C+Sylvain&amp;rft.au=Fill%C3%A2tre%2C+Jean-Christophe&amp;rft.aufirst=Jean-Christophe&amp;rft.aulast=Fill%C3%A2tre&amp;rft.btitle=Type-Safe+Modular+Hash-Consing&amp;rft.date=2006&amp;rft.genre=bookitem&amp;rft.pub=ACM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit&amp;section=4" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="citation journal">Ershov, A.P. (1958). "On programming of arithmetic operations". <i><a href="Communications_of_the_ACM.html" title="Communications of the ACM">Communications of the ACM</a></i> <b>1</b> (8): 3–6. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F368892.368907">10.1145/368892.368907</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHash+consing&amp;rft.atitle=On+programming+of+arithmetic+operations&amp;rft.au=Ershov%2C+A.P.&amp;rft.aulast=Ershov%2C+A.P.&amp;rft.date=1958&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F368892.368907&amp;rft.issue=8&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=3%26ndash%3B6&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=1" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li>Jean Goubault. Implementing Functional Languages with Fast Equality, Sets and Maps: an Exercise in Hash Consing. In <i><a href="http://en.wikipedia.org/w/index.php?title=Journ%C3%A9es_Francophones_des_Langages_Applicatifs&amp;action=edit&amp;redlink=1" class="new" title="Journées Francophones des Langages Applicatifs (page does not exist)">Journées Francophones des Langages Applicatifs</a></i> (JFLA’93), pages 222–238, Annecy, February 1993.</li>
+</ul>
+<p><br /></p>
+<table class="metadata plainlinks stub" style="background: transparent;" role="presentation">
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/File:LampFlowchart.svg" class="image"><img alt="Stub icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/22px-LampFlowchart.svg.png" width="22" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/33px-LampFlowchart.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/LampFlowchart.svg/44px-LampFlowchart.svg.png 2x" /></a></td>
+<td><i>This computer science article is a <a href="http://en.wikipedia.org/wiki/Wikipedia:Stub" title="Wikipedia:Stub">stub</a>. You can help Wikipedia by <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit">expanding it</a>.</i>
+<div class="plainlinks hlist navbar mini" style="position: absolute; right: 15px; display: none;">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Comp-sci-stub" title="Template:Comp-sci-stub"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Comp-sci-stub" title="Template talk:Comp-sci-stub"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Comp-sci-stub&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1162
+CPU time usage: 0.312 seconds
+Real time usage: 0.353 seconds
+Preprocessor visited node count: 501/1000000
+Preprocessor generated node count: 3116/1500000
+Post‐expand include size: 10588/2048000 bytes
+Template argument size: 998/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 1/500
+Lua time usage: 0.034/10.000 seconds
+Lua memory usage: 1.53 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:21898171-0!*!0!!en!4!* and timestamp 20140327004345
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;oldid=578756758">http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;oldid=578756758</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Implementation_of_functional_programming_languages" title="Category:Implementation of functional programming languages">Implementation of functional programming languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Hashing" title="Category:Hashing">Hashing</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_design_patterns" title="Category:Software design patterns">Software design patterns</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_Scheme_code" title="Category:Articles with example Scheme code">Articles with example Scheme code</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computer_science_stubs" title="Category:Computer science stubs">Computer science stubs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_March_2009" title="Category:Articles with unsourced statements from March 2009">Articles with unsourced statements from March 2009</a></li><li><a href="http://en.wikipedia.org/wiki/Category:WikiProject_Computer_science_stubs" title="Category:WikiProject Computer science stubs">WikiProject Computer science stubs</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Hash+consing&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Hash+consing" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Hash_consing.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Hash_consing"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Hash_consing.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Hash_consing" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Hash_consing" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;oldid=578756758" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q3366087" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Hash_consing&amp;id=578756758" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Hash+consing">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Hash+consing&amp;oldid=578756758&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Hash_consing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Partage_maximal" title="Partage maximal – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q3366087#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 25 October 2013 at 23:22.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Hash_consing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1048 in 0.441 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Hash_consing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:07 GMT -->
+</html>

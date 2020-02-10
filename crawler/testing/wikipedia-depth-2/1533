@@ -1,0 +1,642 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Multiprocessing.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Multiprocessing by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Multiprocessing - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Multiprocessing" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Multiprocessing.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Multiprocessing","wgTitle":"Multiprocessing","wgCurRevisionId":595613872,"wgRevisionId":595613872,"wgArticleId":64020,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages containing cite templates with deprecated parameters","Articles needing additional references from February 2014","All articles needing additional references","Duplicate articles","All articles with unsourced statements","Articles with unsourced statements from August 2008","Parallel computing","Classes of computers","Computing terminology"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Multiprocessing","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","pl","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q846651"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Multiprocessing skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Multiprocessing</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(February 2014)</i></small></span></td>
+</tr>
+</table>
+<p><b>Multiprocessing</b> is the use of two or more <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">central processing units</a> (CPUs) within a single computer system.<sup id="cite_ref-Rajagopal1999_1-0" class="reference"><a href="#cite_note-Rajagopal1999-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-EbbersKettner2012_2-0" class="reference"><a href="#cite_note-EbbersKettner2012-2"><span>[</span>2<span>]</span></a></sup> The term also refers to the ability of a system to support more than one processor and/or the ability to allocate tasks between them.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> There are many variations on this basic theme, and the definition of multiprocessing can vary with context, mostly as a function of how CPUs are defined (<a href="http://en.wikipedia.org/wiki/Multi-core_(computing)" title="Multi-core (computing)" class="mw-redirect">multiple cores</a> on one <a href="http://en.wikipedia.org/wiki/Die_(integrated_circuit)" title="Die (integrated circuit)">die</a>, multiple dies in one <a href="http://en.wikipedia.org/wiki/Chip_carrier" title="Chip carrier">package</a>, multiple packages in one <a href="http://en.wikipedia.org/wiki/System_unit" title="System unit" class="mw-redirect">system unit</a>, etc.).</p>
+<p>According to some on-line dictionaries, a <b>multiprocessor</b> is a computer system having two or more processing units (multiple processors) each sharing <a href="http://en.wikipedia.org/wiki/Main_memory" title="Main memory" class="mw-redirect">main memory</a> and peripherals, in order to simultaneously process programs.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> A 2009 textbook defined multiprocessor system similarly, but noting that the processors may share "some or all of the system’s memory and I/O facilities"; it also gave <b>tightly coupled system</b> as a synonymous term.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>At the <a href="Operating_system.html" title="Operating system">operating system</a> level, <i>multiprocessing</i> is sometimes used to refer to the execution of multiple concurrent <a href="Process_(computing).html" title="Process (computing)">processes</a> in a system as opposed to a single process at any one instant.<sup id="cite_ref-MorleyParker2012_7-0" class="reference"><a href="#cite_note-MorleyParker2012-7"><span>[</span>7<span>]</span></a></sup><sup id="cite_ref-Shibu_8-0" class="reference"><a href="#cite_note-Shibu-8"><span>[</span>8<span>]</span></a></sup> When used with this definition, multiprocessing is sometimes contrasted with <a href="http://en.wikipedia.org/wiki/Multitasking" title="Multitasking" class="mw-redirect">multitasking</a>, which may use just a single processor but switch it in time slices between tasks (i.e. a <a href="http://en.wikipedia.org/wiki/Time-sharing_system" title="Time-sharing system" class="mw-redirect">time-sharing system</a>). Multiprocessing however means true parallel execution of multiple processes using more than one processor.<sup id="cite_ref-Shibu_8-1" class="reference"><a href="#cite_note-Shibu-8"><span>[</span>8<span>]</span></a></sup> Multiprocessing doesn't necessarily mean that a single process or task uses more than one processor simultaneously; the term <a href="http://en.wikipedia.org/wiki/Parallel_processing" title="Parallel processing">parallel processing</a> is generally used to denote that scenario.<sup id="cite_ref-MorleyParker2012_7-1" class="reference"><a href="#cite_note-MorleyParker2012-7"><span>[</span>7<span>]</span></a></sup> Other authors prefer to refer to the operating system techniques as <a href="http://en.wikipedia.org/wiki/Multiprogramming" title="Multiprogramming" class="mw-redirect">multiprogramming</a> and reserve the term <i>multiprocessing</i> for the hardware aspect of having more than one processor.<sup id="cite_ref-Arora2006_9-0" class="reference"><a href="#cite_note-Arora2006-9"><span>[</span>9<span>]</span></a></sup><sup id="cite_ref-EbbersKettner2012_2-1" class="reference"><a href="#cite_note-EbbersKettner2012-2"><span>[</span>2<span>]</span></a></sup> The remainder of this article discusses multiprocessing only in this hardware sense.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a>, multiprocessors as defined above are <a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">MIMD</a> machines.<sup id="cite_ref-Giladi2008_10-0" class="reference"><a href="#cite_note-Giladi2008-10"><span>[</span>10<span>]</span></a></sup><sup id="cite_ref-Shiva2005_11-0" class="reference"><a href="#cite_note-Shiva2005-11"><span>[</span>11<span>]</span></a></sup> As they are normally construed to be tightly coupled (share memory), multiprocessors are not the entire class of MIMD machines, which also contains <a href="http://en.wikipedia.org/wiki/Message_passing" title="Message passing">message passing</a> multicomputer systems.<sup id="cite_ref-Giladi2008_10-1" class="reference"><a href="#cite_note-Giladi2008-10"><span>[</span>10<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Pre-history"><span class="tocnumber">1</span> <span class="toctext">Pre-history</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Types"><span class="tocnumber">2</span> <span class="toctext">Types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Processor_symmetry"><span class="tocnumber">2.1</span> <span class="toctext">Processor symmetry</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Instruction_and_data_streams"><span class="tocnumber">2.2</span> <span class="toctext">Instruction and data streams</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Processor_coupling"><span class="tocnumber">2.3</span> <span class="toctext">Processor coupling</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Tightly-coupled_multiprocessor_system"><span class="tocnumber">2.3.1</span> <span class="toctext">Tightly-coupled multiprocessor system</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Loosely-coupled_multiprocessor_system"><span class="tocnumber">2.3.2</span> <span class="toctext">Loosely-coupled multiprocessor system</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Flynn.27s_taxonomy"><span class="tocnumber">3</span> <span class="toctext">Flynn's taxonomy</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#SISD_multiprocessing"><span class="tocnumber">3.1</span> <span class="toctext">SISD multiprocessing</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#SIMD_multiprocessing"><span class="tocnumber">3.2</span> <span class="toctext">SIMD multiprocessing</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#MISD_multiprocessing"><span class="tocnumber">3.3</span> <span class="toctext">MISD multiprocessing</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#MIMD_multiprocessing"><span class="tocnumber">3.4</span> <span class="toctext">MIMD multiprocessing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Pre-history">Pre-history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=1" title="Edit section: Pre-history">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>According to a 1985 article in <a href="http://en.wikipedia.org/wiki/Byte_(magazine)" title="Byte (magazine)">Byte</a>, possibly the first expression of the idea of multiprocessing is found in the 1842 words of <a href="http://en.wikipedia.org/wiki/Federico_Luigi_Menabrea" title="Federico Luigi Menabrea">Federico Luigi Menabrea</a>, which said about <a href="Charles_Babbage.html" title="Charles Babbage">Charles Babbage</a>'s <a href="Analytical_Engine.html" title="Analytical Engine">Analytical Engine</a>: "The machine can be brought into play so as to give several results at the same time, which will greatly abridge the whole amount of processes."<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Types">Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=2" title="Edit section: Types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Processor_symmetry">Processor symmetry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=3" title="Edit section: Processor symmetry">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In a <b>multiprocessing</b> system, all CPUs may be equal, or some may be reserved for special purposes. A combination of hardware and <a href="Operating_system.html" title="Operating system">operating system</a> software design considerations determine the symmetry (or lack thereof) in a given system. For example, hardware or software considerations may require that only one particular CPU respond to all hardware interrupts, whereas all other work in the system may be distributed equally among CPUs; or execution of kernel-mode code may be restricted to only one particular CPU, whereas user-mode code may be executed in any combination of processors. Multiprocessing systems are often easier to design if such restrictions are imposed, but they tend to be less efficient than systems in which all CPUs are utilized.</p>
+<p>Systems that treat all CPUs equally are called <a href="http://en.wikipedia.org/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">symmetric multiprocessing</a> (SMP) systems. In systems where all CPUs are not equal, system resources may be divided in a number of ways, including <a href="http://en.wikipedia.org/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">asymmetric multiprocessing</a> (ASMP), <a href="http://en.wikipedia.org/wiki/Non-uniform_memory_access" title="Non-uniform memory access">non-uniform memory access</a> (NUMA) multiprocessing, and <a href="http://en.wikipedia.org/wiki/Computer_cluster" title="Computer cluster">clustered</a> multiprocessing.</p>
+<h3><span class="mw-headline" id="Instruction_and_data_streams">Instruction and data streams</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=4" title="Edit section: Instruction and data streams">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In multiprocessing, the processors can be used to execute a single sequence of instructions in multiple contexts (<a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">single-instruction, multiple-data</a> or SIMD, often used in <a href="http://en.wikipedia.org/wiki/Vector_processing" title="Vector processing" class="mw-redirect">vector processing</a>), multiple sequences of instructions in a single context (<a href="http://en.wikipedia.org/wiki/MISD" title="MISD">multiple-instruction, single-data</a> or MISD, used for <a href="http://en.wikipedia.org/wiki/Redundancy_(engineering)" title="Redundancy (engineering)">redundancy</a> in fail-safe systems and sometimes applied to describe <a href="http://en.wikipedia.org/wiki/Pipelining" title="Pipelining" class="mw-redirect">pipelined processors</a> or <a href="http://en.wikipedia.org/wiki/Hyper-threading" title="Hyper-threading">hyper-threading</a>), or multiple sequences of instructions in multiple contexts (<a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">multiple-instruction, multiple-data</a> or MIMD).</p>
+<h3><span class="mw-headline" id="Processor_coupling">Processor coupling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=5" title="Edit section: Processor coupling">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Tightly-coupled_multiprocessor_system">Tightly-coupled multiprocessor system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=6" title="Edit section: Tightly-coupled multiprocessor system">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Tightly-coupled multiprocessor systems contain multiple CPUs that are connected at the bus level. These CPUs may have access to a central shared memory (SMP or <a href="http://en.wikipedia.org/wiki/Uniform_Memory_Access" title="Uniform Memory Access" class="mw-redirect">UMA</a>), or may participate in a memory hierarchy with both local and shared memory (<a href="http://en.wikipedia.org/wiki/Non-Uniform_Memory_Access" title="Non-Uniform Memory Access" class="mw-redirect">NUMA</a>). The <a href="http://en.wikipedia.org/wiki/IBM_p690" title="IBM p690" class="mw-redirect">IBM p690</a> Regatta is an example of a high end SMP system. <a href="http://en.wikipedia.org/wiki/Intel" title="Intel">Intel</a> <a href="http://en.wikipedia.org/wiki/Xeon" title="Xeon">Xeon</a> processors dominated the multiprocessor market for business PCs and were the only major x86 option until the release of <a href="http://en.wikipedia.org/wiki/AMD" title="AMD" class="mw-redirect">AMD</a>'s <a href="http://en.wikipedia.org/wiki/Opteron" title="Opteron">Opteron</a> range of processors in 2004. Both ranges of processors had their own onboard cache but provided access to shared memory; the Xeon processors via a common pipe and the Opteron processors via independent pathways to the system <a href="http://en.wikipedia.org/wiki/Random-access_memory" title="Random-access memory">RAM</a>.</p>
+<p>Chip multiprocessors, also known as <a href="http://en.wikipedia.org/wiki/Multi-core_(computing)" title="Multi-core (computing)" class="mw-redirect">multi-core</a> computing, involves more than one processor placed on a single chip and can be thought of the most extreme form of tightly-coupled multiprocessing. Mainframe systems with multiple processors are often tightly-coupled.</p>
+<h4><span class="mw-headline" id="Loosely-coupled_multiprocessor_system">Loosely-coupled multiprocessor system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=7" title="Edit section: Loosely-coupled multiprocessor system">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Loosely-coupled multiprocessor systems (often referred to as <a href="http://en.wikipedia.org/wiki/Computer_cluster" title="Computer cluster">clusters</a>) are based on multiple standalone single or dual processor <a href="http://en.wikipedia.org/wiki/Commodity_computer" title="Commodity computer" class="mw-redirect">commodity computers</a> interconnected via a high speed communication system (<a href="http://en.wikipedia.org/wiki/Gigabit_Ethernet" title="Gigabit Ethernet">Gigabit Ethernet</a> is common). A Linux <a href="http://en.wikipedia.org/wiki/Beowulf_cluster" title="Beowulf cluster">Beowulf cluster</a> is an example of a <a href="http://en.wikipedia.org/wiki/Loose_coupling" title="Loose coupling">loosely-coupled</a> system.</p>
+<p>Tightly-coupled systems perform better and are physically smaller than loosely-coupled systems, but have historically required greater initial investments and may <a href="http://en.wikipedia.org/wiki/Depreciation" title="Depreciation">depreciate</a> rapidly; nodes in a loosely-coupled system are usually inexpensive commodity computers and can be recycled as independent machines upon retirement from the cluster.</p>
+<p>Power consumption is also a consideration. Tightly-coupled systems tend to be much more energy efficient than clusters. This is because considerable economy can be realized by designing components to work together from the beginning in tightly-coupled systems, whereas loosely-coupled systems use components that were not necessarily intended specifically for use in such systems.</p>
+<p>Loosely-coupled systems have the ability to run different operating systems or OS versions on different systems.</p>
+<h2><span class="mw-headline" id="Flynn.27s_taxonomy">Flynn's taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=8" title="Edit section: Flynn's taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-style" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b><a href="http://en.wikipedia.org/wiki/Wikipedia:CFORK" title="Wikipedia:CFORK" class="mw-redirect">duplicates</a>, in whole or part, the scope of other article(s) or section(s)</b>,&#160;specifically, <a href="http://en.wikipedia.org/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a>. <span class="hide-when-compact">Please <a href="http://en.wikipedia.org/wiki/Talk:Multiprocessing" title="Talk:Multiprocessing">discuss</a> this issue on the talk page and conform with <a href="http://en.wikipedia.org/wiki/Wikipedia:Summary_style" title="Wikipedia:Summary style">Wikipedia's Manual of Style</a> by replacing the section with a link and a <a href="http://en.wikipedia.org/wiki/Wikipedia:Summary_style" title="Wikipedia:Summary style">summary</a> of the repeated material, or by spinning off the repeated text into an article in its own right.</span></span></td>
+</tr>
+</table>
+<table class="wikitable" style="float: right; margin: 0 0 1em 1em; text-align: center;">
+<caption><a href="http://en.wikipedia.org/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a></caption>
+<tr>
+<th>&#160;</th>
+<th>Single instruction</th>
+<th>Multiple instruction</th>
+</tr>
+<tr>
+<th>Single data</th>
+<td><a href="http://en.wikipedia.org/wiki/SISD" title="SISD">SISD</a></td>
+<td><a href="http://en.wikipedia.org/wiki/MISD" title="MISD">MISD</a></td>
+</tr>
+<tr>
+<th>Multiple data</th>
+<td><a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">SIMD</a></td>
+<td><a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">MIMD</a></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="SISD_multiprocessing">SISD multiprocessing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=9" title="Edit section: SISD multiprocessing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/SISD" title="SISD">SISD</a></div>
+<p>In a <a href="http://en.wikipedia.org/wiki/SISD" title="SISD">single instruction stream, single data stream</a> computer one processor sequentially processes instructions, each instruction processes one data item. One example is the "von Neumann" architecture with RISC.</p>
+<h3><span class="mw-headline" id="SIMD_multiprocessing">SIMD multiprocessing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=10" title="Edit section: SIMD multiprocessing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">SIMD</a></div>
+<p>In a <a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">single instruction stream, multiple data stream</a> computer one processor handles a stream of instructions, each one of which can perform calculations in parallel on multiple data locations.</p>
+<p>SIMD multiprocessing is well suited to <a href="http://en.wikipedia.org/wiki/Parallel_processing" title="Parallel processing">parallel or vector processing</a>, in which a very large set of data can be divided into parts that are individually subjected to identical but independent operations. A single instruction stream directs the operation of multiple processing units to perform the same manipulations simultaneously on potentially large amounts of data.</p>
+<p>For certain types of computing applications, this type of architecture can produce enormous increases in performance, in terms of the elapsed time required to complete a given task. However, a drawback to this architecture is that a large part of the system falls idle when programs or system tasks are executed that cannot be divided into units that can be processed in parallel.</p>
+<p>Additionally, programs must be carefully and specially written to take maximum advantage of the architecture, and often special optimizing compilers designed to produce code specifically for this environment must be used. Some compilers in this category provide special constructs or extensions to allow programmers to directly specify operations to be performed in parallel (<i>e.g.,</i> DO FOR ALL statements in the version of <a href="FORTRAN.html" title="FORTRAN" class="mw-redirect">FORTRAN</a> used on the <a href="http://en.wikipedia.org/wiki/ILLIAC_IV" title="ILLIAC IV">ILLIAC IV</a>, which was a SIMD multiprocessing <a href="Supercomputer.html" title="Supercomputer">supercomputer</a>).</p>
+<p>SIMD multiprocessing finds wide use in certain domains such as <a href="Computer_simulation.html" title="Computer simulation">computer simulation</a>, but is of little use in general-purpose desktop and business computing environments.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (August 2008)">citation needed</span></a></i>]</sup></p>
+<h3><span class="mw-headline" id="MISD_multiprocessing">MISD multiprocessing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=11" title="Edit section: MISD multiprocessing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/MISD" title="MISD">MISD</a></div>
+<p>MISD multiprocessing offers mainly the advantage of redundancy, since multiple processing units perform the same tasks on the same data, reducing the chances of incorrect results if one of the units fails. MISD architectures may involve comparisons between processing units to detect failures. Apart from the redundant and fail-safe character of this type of multiprocessing, it has few advantages, and it is very expensive. It does not improve performance. It can be implemented in a way that is transparent to software. It is used in <a href="http://en.wikipedia.org/wiki/Array_processor" title="Array processor" class="mw-redirect">array processors</a> and is implemented in fault tolerant machines.</p>
+<p>Another example of MISD is pipelined image processing where every image pixel is piped through several hardware units performing several steps of image transformation.</p>
+<h3><span class="mw-headline" id="MIMD_multiprocessing">MIMD multiprocessing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=12" title="Edit section: MIMD multiprocessing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">MIMD</a></div>
+<p>MIMD multiprocessing architecture is suitable for a wide variety of tasks in which completely independent and parallel execution of instructions touching different sets of data can be put to productive use. For this reason, and because it is easy to implement, MIMD predominates in multiprocessing.</p>
+<p>Processing is divided into multiple <a href="Thread_(computing).html" title="Thread (computing)">threads</a>, each with its own hardware processor state, within a single software-defined process or within multiple processes. Insofar as a system has multiple threads awaiting dispatch (either system or user threads), this architecture makes good use of hardware resources.</p>
+<p>MIMD does raise issues of deadlock and resource contention, however, since threads may collide in their access to resources in an unpredictable way that is difficult to manage efficiently. MIMD requires special coding in the operating system of a computer but does not require application changes unless the programs themselves use multiple threads (MIMD is transparent to single-threaded programs under most operating systems, if the programs do not voluntarily relinquish control to the OS). Both system and user software may need to use software constructs such as <i><a href="Semaphore_(programming).html" title="Semaphore (programming)">semaphores</a></i> (also called <i>locks</i> or <i>gates</i>) to prevent one thread from interfering with another if they should happen to cross paths in referencing the same data. This gating or locking process increases code complexity, lowers performance, and greatly increases the amount of testing required, although not usually enough to negate the advantages of multiprocessing.</p>
+<p>Similar conflicts can arise at the hardware level between processors (cache contention and corruption, for example), and must usually be resolved in hardware, or with a combination of software and hardware (<i>e.g.,</i> cache-clear instructions).</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">Symmetric multiprocessing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">Asymmetric multiprocessing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multi-core_processor" title="Multi-core processor">Multi-core processor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BMDFM" title="BMDFM">BMDFM</a> - Binary Modular Dataflow Machine, a SMP MIMD Runtime Environment</li>
+<li><a href="http://en.wikipedia.org/wiki/Software_lockout" title="Software lockout">Software lockout</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenHMPP" title="OpenHMPP">OpenHMPP</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Rajagopal1999-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Rajagopal1999_1-0">^</a></b></span> <span class="reference-text"><span class="citation book">Raj Rajagopal (1999). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=kUJnHJJlnpUC&amp;pg=PA4"><i>Introduction to Microsoft Windows NT Cluster Server: Programming and Administration</i></a>. CRC Press. p.&#160;4. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-4200-7548-9" title="Special:BookSources/978-1-4200-7548-9">978-1-4200-7548-9</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.aulast=Raj+Rajagopal&amp;rft.au=Raj+Rajagopal&amp;rft.btitle=Introduction+to+Microsoft+Windows+NT+Cluster+Server%3A+Programming+and+Administration&amp;rft.date=1999&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DkUJnHJJlnpUC%26pg%3DPA4&amp;rft.isbn=978-1-4200-7548-9&amp;rft.pages=4&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-EbbersKettner2012-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-EbbersKettner2012_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-EbbersKettner2012_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Mike Ebbers; John Kettner; Wayne O'Brien; Bill Ogden, IBM Redbooks (2012). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=c-a1AgAAQBAJ&amp;pg=PA96"><i>Introduction to the New Mainframe: z/OS Basics</i></a>. IBM Redbooks. p.&#160;96. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-7384-3534-3" title="Special:BookSources/978-0-7384-3534-3">978-0-7384-3534-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.au=John+Kettner&amp;rft.aulast=Mike+Ebbers&amp;rft.au=Mike+Ebbers&amp;rft.au=Wayne+O%27Brien&amp;rft.btitle=Introduction+to+the+New+Mainframe%3A+z%2FOS+Basics&amp;rft.date=2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dc-a1AgAAQBAJ%26pg%3DPA96&amp;rft.isbn=978-0-7384-3534-3&amp;rft.pages=96&amp;rft.pub=IBM+Redbooks&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.computerworld.com/hardwaretopics/hardware/desktops/story/0,10801,54343,00.html">Chip multiprocessing</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.yourdictionary.com/multiprocessor">http://www.yourdictionary.com/multiprocessor</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.thefreedictionary.com/multiprocessor">http://www.thefreedictionary.com/multiprocessor</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation book">Irv Englander (2009). <a rel="nofollow" class="external text" href="http://www.wiley.com/college/englander"><i>The architecture of Computer Hardware and Systems Software. An Information Technology Approach.</i></a> (4th ed.). Wiley. p.&#160;265.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.au=Irv+Englander&amp;rft.aulast=Irv+Englander&amp;rft.btitle=The+architecture+of+Computer+Hardware+and+Systems+Software.+An+Information+Technology+Approach.&amp;rft.date=2009&amp;rft.edition=4th&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.wiley.com%2Fcollege%2Fenglander&amp;rft.pages=265&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-MorleyParker2012-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-MorleyParker2012_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-MorleyParker2012_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Deborah Morley; Charles Parker (13 February 2012). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=-2Ewg8QX8U4C&amp;pg=PA183"><i>Understanding Computers: Today and Tomorrow, Comprehensive</i></a>. Cengage Learning. p.&#160;183. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/1-133-19024-3" title="Special:BookSources/1-133-19024-3">1-133-19024-3</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.au=Charles+Parker&amp;rft.au=Deborah+Morley&amp;rft.aulast=Deborah+Morley&amp;rft.btitle=Understanding+Computers%3A+Today+and+Tomorrow%2C+Comprehensive&amp;rft.date=13+February+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D-2Ewg8QX8U4C%26pg%3DPA183&amp;rft.isbn=1-133-19024-3&amp;rft.pages=183&amp;rft.pub=Cengage+Learning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Shibu-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Shibu_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Shibu_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Shibu K. V. <a rel="nofollow" class="external text" href="http://books.google.com/books?id=8hfn4gwR90MC&amp;pg=PA402"><i>Introduction to Embedded Systems</i></a>. Tata McGraw-Hill Education. p.&#160;402. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-07-014589-4" title="Special:BookSources/978-0-07-014589-4">978-0-07-014589-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.aulast=Shibu+K.+V.&amp;rft.au=Shibu+K.+V.&amp;rft.btitle=Introduction+to+Embedded+Systems&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D8hfn4gwR90MC%26pg%3DPA402&amp;rft.isbn=978-0-07-014589-4&amp;rft.pages=402&amp;rft.pub=Tata+McGraw-Hill+Education&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Arora2006-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-Arora2006_9-0">^</a></b></span> <span class="reference-text"><span class="citation book">Ashok Arora (2006). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=CrcoszZBMowC&amp;pg=PA149"><i>Foundations of Computer Science</i></a>. Laxmi Publications. p.&#160;149. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-81-7008-971-1" title="Special:BookSources/978-81-7008-971-1">978-81-7008-971-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.au=Ashok+Arora&amp;rft.aulast=Ashok+Arora&amp;rft.btitle=Foundations+of+Computer+Science&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DCrcoszZBMowC%26pg%3DPA149&amp;rft.isbn=978-81-7008-971-1&amp;rft.pages=149&amp;rft.pub=Laxmi+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Giladi2008-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-Giladi2008_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Giladi2008_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book">Ran Giladi (2008). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=_7aH_4axpwAC&amp;pg=PA293"><i>Network Processors: Architecture, Programming, and Implementation</i></a>. Morgan Kaufmann. p.&#160;293. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-08-091959-1" title="Special:BookSources/978-0-08-091959-1">978-0-08-091959-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.aulast=Ran+Giladi&amp;rft.au=Ran+Giladi&amp;rft.btitle=Network+Processors%3A+Architecture%2C+Programming%2C+and+Implementation&amp;rft.date=2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D_7aH_4axpwAC%26pg%3DPA293&amp;rft.isbn=978-0-08-091959-1&amp;rft.pages=293&amp;rft.pub=Morgan+Kaufmann&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Shiva2005-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Shiva2005_11-0">^</a></b></span> <span class="reference-text"><span class="citation book">Sajjan G. Shiva (20 September 2005). <a rel="nofollow" class="external text" href="http://books.google.com/books?id=DhdCwk5AhbEC&amp;pg=PA221"><i>Advanced Computer Architectures</i></a>. CRC Press. p.&#160;221. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-8493-3758-1" title="Special:BookSources/978-0-8493-3758-1">978-0-8493-3758-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMultiprocessing&amp;rft.aulast=Sajjan+G.+Shiva&amp;rft.au=Sajjan+G.+Shiva&amp;rft.btitle=Advanced+Computer+Architectures&amp;rft.date=20+September+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DDhdCwk5AhbEC%26pg%3DPA221&amp;rft.isbn=978-0-8493-3758-1&amp;rft.pages=221&amp;rft.pub=CRC+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://archive.org/details/byte-magazine-1985-05">Multiprocessing</a>, BYTE magazine Volume 10, Number 05 (May 1985), p. 169</span></li>
+</ol>
+</div>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Parallel_computing" title="Template:Parallel computing"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Parallel_computing" title="Template talk:Parallel computing"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Parallel_computing&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Parallel_computing.html" title="Parallel computing">Parallel computing</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">General</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cloud_computing" title="Cloud computing">Cloud computing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/High-performance_computing" title="High-performance computing" class="mw-redirect">High-performance computing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Computer_cluster" title="Computer cluster">Cluster computing</a></li>
+<li><a href="Distributed_computing.html" title="Distributed computing">Distributed computing</a></li>
+<li><a href="Grid_computing.html" title="Grid computing">Grid computing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Levels</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Data_parallelism" title="Data parallelism">Data</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Task_parallelism" title="Task parallelism">Task</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal multithreading</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous multithreading</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hyper-threading" title="Hyper-threading">Hyper-threading</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Theory</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Amdahl%27s_law" title="Amdahl's law">Amdahl's law</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gustafson%27s_law" title="Gustafson's law">Gustafson's law</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cost_efficiency" title="Cost efficiency">Cost efficiency</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Karp–Flatt_metric" title="Karp–Flatt metric">Karp–Flatt metric</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_slowdown" title="Parallel slowdown">slowdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Speedup" title="Speedup">speedup</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Elements</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Process_(computing).html" title="Process (computing)">Process</a></li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fiber_(computer_science)" title="Fiber (computer science)">Fiber</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_random-access_machine" title="Parallel random-access machine">PRAM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Instruction_window" title="Instruction window">Instruction window</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Coordination</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><strong class="selflink">Multiprocessing</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_coherence" title="Memory coherence">Memory coherency</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cache_coherence" title="Cache coherence">Cache coherency</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cache_invalidation" title="Cache invalidation">Cache invalidation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Barrier_(computer_science)" title="Barrier (computer science)">Barrier</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Application_checkpointing" title="Application checkpointing">Application checkpointing</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Computer_programming.html" title="Computer programming">Programming</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_programming_model" title="Parallel programming model">Models</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Implicit_parallelism" title="Implicit parallelism">Implicit parallelism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Explicit_parallelism" title="Explicit parallelism">Explicit parallelism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Flynn%27s_taxonomy" title="Flynn's taxonomy">Flynn's taxonomy</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MIMD" title="MIMD">MIMD</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SPMD" title="SPMD">SPMD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="Thread_(computing).html" title="Thread (computing)">Thread</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Non-blocking_algorithm" title="Non-blocking algorithm">Non-blocking algorithm</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Computer_hardware.html" title="Computer hardware">Hardware</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Multiprocessor" title="Multiprocessor" class="mw-redirect">Multiprocessor</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">Symmetric</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">Asymmetric</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Semiconductor_memory" title="Semiconductor memory">Memory</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Non-uniform_memory_access" title="Non-uniform memory access">NUMA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cache-only_memory_architecture" title="Cache-only memory architecture">COMA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Distributed_memory" title="Distributed memory">distributed</a></li>
+<li><a href="Shared_memory.html" title="Shared memory">shared</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Distributed_shared_memory" title="Distributed shared memory">distributed shared</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Massively_parallel_(computing)" title="Massively parallel (computing)">MPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Superscalar" title="Superscalar">Superscalar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vector_processor" title="Vector processor">Vector processor</a></li>
+<li><a href="Supercomputer.html" title="Supercomputer">Supercomputer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Beowulf_cluster" title="Beowulf cluster">Beowulf cluster</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Application_programming_interface.html" title="Application programming interface">APIs</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ateji_PX" title="Ateji PX">Ateji PX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/POSIX_Threads" title="POSIX Threads">POSIX Threads</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenHMPP" title="OpenHMPP">OpenHMPP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="Unified_Parallel_C.html" title="Unified Parallel C">UPC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Threading_Building_Blocks" title="Threading Building Blocks">TBB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Boost_(C++_libraries)#Multithreading_.E2.80.93_Boost.Thread" title="Boost (C++ libraries)">Boost.Thread</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Global_Arrays" title="Global Arrays">Global Arrays</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Charm++" title="Charm++">Charm++</a></li>
+<li><a href="Cilk.html" title="Cilk">Cilk</a>/<a href="http://en.wikipedia.org/wiki/Cilk_Plus" title="Cilk Plus">Cilk Plus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Coarray_Fortran" title="Coarray Fortran">Coarray Fortran</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dryad_(programming)" title="Dryad (programming)">Dryad</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C++_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_LINQ" title="Parallel LINQ" class="mw-redirect">PLINQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_Extensions#Task_Parallel_Library" title="Parallel Extensions">TPL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Problems</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Embarrassingly_parallel" title="Embarrassingly parallel">Embarrassingly parallel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Software_lockout" title="Software lockout">Software lockout</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scalability" title="Scalability">Scalability</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Race_condition#Computing" title="Race condition">Race condition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deadlock" title="Deadlock">Deadlock</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deadlock#Livelock" title="Deadlock">Livelock</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Resource_starvation" title="Resource starvation">Starvation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deterministic_algorithm" title="Deterministic algorithm">Deterministic algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parallel_slowdown" title="Parallel slowdown">Parallel slowdown</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" />&#160;<a href="http://en.wikipedia.org/wiki/Category:Parallel_computing" title="Category:Parallel computing">Category: parallel computing</a></li>
+<li><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" /> Media related to <a href="http://commons.wikimedia.org/wiki/Category:parallel_computing" class="extiw" title="commons:Category:parallel computing">parallel computing</a> at Wikimedia Commons</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1167
+CPU time usage: 0.632 seconds
+Real time usage: 0.709 seconds
+Preprocessor visited node count: 1302/1000000
+Preprocessor generated node count: 6870/1500000
+Post‐expand include size: 44775/2048000 bytes
+Template argument size: 1070/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 6/500
+Lua time usage: 0.079/10.000 seconds
+Lua memory usage: 2.37 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:64020-0!*!0!!en!4!* and timestamp 20140324124534
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;oldid=595613872">http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;oldid=595613872</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Parallel_computing" title="Category:Parallel computing">Parallel computing</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Classes_of_computers" title="Category:Classes of computers">Classes of computers</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computing_terminology" title="Category:Computing terminology">Computing terminology</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_February_2014" title="Category:Articles needing additional references from February 2014">Articles needing additional references from February 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Duplicate_articles" title="Category:Duplicate articles">Duplicate articles</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_August_2008" title="Category:Articles with unsourced statements from August 2008">Articles with unsourced statements from August 2008</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Multiprocessing&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Multiprocessing" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Multiprocessing.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Multiprocessing"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Multiprocessing.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Multiprocessing" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Multiprocessing" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;oldid=595613872" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q846651" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Multiprocessing&amp;id=595613872" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Multiprocessing">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Multiprocessing&amp;oldid=595613872&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Multiprocessing&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/المعالجة_المتعددة" title="المعالجة المتعددة – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Multiprocés" title="Multiprocés – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Víceprocesorový_systém" title="Víceprocesorový systém – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Mehrprozessorsystem" title="Mehrprozessorsystem – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Multiprocesamiento" title="Multiprocesamiento – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Multiprozesaketa" title="Multiprozesaketa – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/چندپردازشی" title="چندپردازشی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Multiprocesseur" title="Multiprocesseur – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/다중_처리" title="다중 처리 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Multiprocesor" title="Multiprocesor – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Multipengolahan" title="Multipengolahan – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Multiprocessore" title="Multiprocessore – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-kk"><a href="http://kk.wikipedia.org/wiki/Көппроцессорлық_өңдеу" title="Көппроцессорлық өңдеу – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Multiprocessing" title="Multiprocessing – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/マルチプロセッシング" title="マルチプロセッシング – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Wieloprocesorowy_system_komputerowy" title="Wieloprocesorowy system komputerowy – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Multiprocessamento" title="Multiprocessamento – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Многопроцессорность" title="Многопроцессорность – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Multiprocessing" title="Multiprocessing – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Çoklu_işleme" title="Çoklu işleme – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/多元處理" title="多元處理 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q846651#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 February 2014 at 18:06.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Multiprocessing" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1173 in 0.334 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Multiprocessing by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:32 GMT -->
+</html>

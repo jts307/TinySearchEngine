@@ -1,0 +1,598 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Fibonacci_heap.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Fibonacci_heap by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Fibonacci heap - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Fibonacci_heap" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Fibonacci_heap.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Fibonacci_heap","wgTitle":"Fibonacci heap","wgCurRevisionId":597381599,"wgRevisionId":597381599,"wgArticleId":254142,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles contradicting other articles","Fibonacci numbers","Heaps (data structures)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Fibonacci_heap","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en","pl"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1410737"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Fibonacci_heap skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Fibonacci heap</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>Fibonacci heap</b> is a <a href="Heap_(data_structure).html" title="Heap (data structure)">heap data structure</a> consisting of a collection of <a href="Tree_(data_structure).html" title="Tree (data structure)">trees</a>. It has a better <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a> running time than a <a href="Binomial_heap.html" title="Binomial heap">binomial heap</a>. Fibonacci heaps were developed by <a href="http://en.wikipedia.org/wiki/Michael_Fredman" title="Michael Fredman">Michael L. Fredman</a> and <a href="http://en.wikipedia.org/wiki/Robert_Tarjan" title="Robert Tarjan">Robert E. Tarjan</a> in 1984 and first published in a scientific journal in 1987. The name of Fibonacci heap comes from <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Fibonacci number">Fibonacci numbers</a> which are used in the running time analysis.</p>
+<p>Find-minimum is <i>O</i>(1) amortized time.<sup id="cite_ref-CLRS_1-0" class="reference"><a href="#cite_note-CLRS-1"><span>[</span>1<span>]</span></a></sup> Operations insert, decrease key, and merge (union) work in constant amortized time.<sup id="cite_ref-Fredman_And_Tarjan_2-0" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup> Operations delete and delete minimum work in <a href="Big_O_notation.html" title="Big O notation"><i>O</i></a>(log <i>n</i>) amortized time.<sup id="cite_ref-Fredman_And_Tarjan_2-1" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup> This means that starting from an empty data structure, any sequence of <i>a</i> operations from the first group and <i>b</i> operations from the second group would take <i>O</i>(<i>a</i>&#160;+&#160;<i>b</i>&#160;log&#160;<i>n</i>) time. In a <a href="Binomial_heap.html" title="Binomial heap">binomial heap</a> such a sequence of operations would take <i>O</i>((<i>a</i>&#160;+&#160;<i>b</i>) log (<i>n</i>)) time. A Fibonacci heap is thus better than a binomial heap when <i>b</i> is <a href="http://en.wikipedia.org/wiki/Asymptotic_analysis" title="Asymptotic analysis">asymptotically</a> smaller than <i>a</i>.</p>
+<p>Using Fibonacci heaps for <a href="Priority_queue.html" title="Priority queue">priority queues</a> improves the asymptotic running time of important algorithms, such as <a href="http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" title="Dijkstra's algorithm">Dijkstra's algorithm</a> for computing the <a href="http://en.wikipedia.org/wiki/Shortest_path" title="Shortest path" class="mw-redirect">shortest path</a> between two nodes in a graph.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Structure"><span class="tocnumber">1</span> <span class="toctext">Structure</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Implementation_of_operations"><span class="tocnumber">2</span> <span class="toctext">Implementation of operations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Proof_of_degree_bounds"><span class="tocnumber">3</span> <span class="toctext">Proof of degree bounds</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Worst_case"><span class="tocnumber">4</span> <span class="toctext">Worst case</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Summary_of_running_times"><span class="tocnumber">5</span> <span class="toctext">Summary of running times</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Structure">Structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=1" title="Edit section: Structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Fibonacci_heap.png/250px-Fibonacci_heap.png" width="250" height="180" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Fibonacci_heap.png/375px-Fibonacci_heap.png 1.5x, //upload.wikimedia.org/wikipedia/commons/4/45/Fibonacci_heap.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Figure 1. Example of a Fibonacci heap. It has three trees of degrees 0, 1 and 3. Three vertices are marked (shown in blue). Therefore the potential of the heap is 9 (3 trees + 2 * marked-vertices).</div>
+</div>
+</div>
+<p>A Fibonacci heap is a collection of <a href="http://en.wikipedia.org/wiki/Tree_data_structure" title="Tree data structure" class="mw-redirect">trees</a> satisfying the <a href="http://en.wikipedia.org/wiki/Minimum-heap_property" title="Minimum-heap property" class="mw-redirect">minimum-heap property</a>, that is, the key of a child is always greater than or equal to the key of the parent. This implies that the minimum key is always at the root of one of the trees. Compared with binomial heaps, the structure of a Fibonacci heap is more flexible. The trees do not have a prescribed shape and in the extreme case the heap can have every element in a separate tree. This flexibility allows some operations to be executed in a "lazy" manner, postponing the work for later operations. For example merging heaps is done simply by concatenating the two lists of trees, and operation <i>decrease key</i> sometimes cuts a node from its parent and forms a new tree.</p>
+<p>However at some point some order needs to be introduced to the heap to achieve the desired running time. In particular, degrees of nodes (here degree means the number of children) are kept quite low: every node has degree at most <i>O</i>(log <i>n</i>) and the size of a subtree rooted in a node of degree <i>k</i> is at least <i>F<sub>k</sub></i><sub>&#160;+&#160;2</sub>, where <i>F<sub>k</sub></i> is the <i>k</i>th <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Fibonacci number">Fibonacci number</a>. This is achieved by the rule that we can cut at most one child of each non-root node. When a second child is cut, the node itself needs to be cut from its parent and becomes the root of a new tree (see Proof of degree bounds, below). The number of trees is decreased in the operation <i>delete minimum</i>, where trees are linked together.</p>
+<p>As a result of a relaxed structure, some operations can take a long time while others are done very quickly. For the <a href="Amortized_analysis.html" title="Amortized analysis">amortized running time</a> analysis we use the <a href="http://en.wikipedia.org/wiki/Potential_method" title="Potential method">potential method</a>, in that we pretend that very fast operations take a little bit longer than they actually do. This additional time is then later combined and subtracted from the actual running time of slow operations. The amount of time saved for later use is measured at any given moment by a potential function. The potential of a Fibonacci heap is given by</p>
+<dl>
+<dd>Potential = <i>t</i> + 2<i>m</i></dd>
+</dl>
+<p>where <i>t</i> is the number of trees in the Fibonacci heap, and <i>m</i> is the number of marked nodes. A node is marked if at least one of its children was cut since this node was made a child of another node (all roots are unmarked). The amortized time for an operation is given by the sum of the actual time and <i>c</i> times the difference in potential, where <i>c</i> is a constant (chosen to match the constant factors in the <i>O</i> notation for the actual time).</p>
+<p>Thus, the root of each tree in a heap has one unit of time stored. This unit of time can be used later to link this tree with another tree at amortized time 0. Also, each marked node has two units of time stored. One can be used to cut the node from its parent. If this happens, the node becomes a root and the second unit of time will remain stored in it as in any other root.</p>
+<h2><span class="mw-headline" id="Implementation_of_operations">Implementation of operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=2" title="Edit section: Implementation of operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>To allow fast deletion and concatenation, the roots of all trees are linked using a circular, <a href="Doubly_linked_list.html" title="Doubly linked list">doubly linked list</a>. The children of each node are also linked using such a list. For each node, we maintain its number of children and whether the node is marked. Moreover we maintain a pointer to the root containing the minimum key.</p>
+<p>Operation <b>find minimum</b> is now trivial because we keep the pointer to the node containing it. It does not change the potential of the heap, therefore both actual and amortized cost is constant. As mentioned above, <b>merge</b> is implemented simply by concatenating the lists of tree roots of the two heaps. This can be done in constant time and the potential does not change, leading again to constant amortized time.</p>
+<p>Operation <b>insert</b> works by creating a new heap with one element and doing merge. This takes constant time, and the potential increases by one, because the number of trees increases. The amortized cost is thus still constant.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:172px;"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap_extractmin1.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Fibonacci_heap_extractmin1.png/170px-Fibonacci_heap_extractmin1.png" width="170" height="113" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Fibonacci_heap_extractmin1.png/255px-Fibonacci_heap_extractmin1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/5/56/Fibonacci_heap_extractmin1.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap_extractmin1.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Fibonacci heap from Figure 1 after first phase of extract minimum. Node with key 1 (the minimum) was deleted and its children were added as separate trees.</div>
+</div>
+</div>
+<p>Operation <b>extract minimum</b> (same as <i>delete minimum</i>) operates in three phases. First we take the root containing the minimum element and remove it. Its children will become roots of new trees. If the number of children was <i>d</i>, it takes time <i>O</i>(<i>d</i>) to process all new roots and the potential increases by <i>d</i>−1. Therefore the amortized running time of this phase is <i>O</i>(<i>d</i>) = <i>O</i>(log <i>n</i>).</p>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:132px;"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap_extractmin2.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Fibonacci_heap_extractmin2.png/130px-Fibonacci_heap_extractmin2.png" width="130" height="140" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Fibonacci_heap_extractmin2.png/195px-Fibonacci_heap_extractmin2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/9/95/Fibonacci_heap_extractmin2.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap_extractmin2.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Fibonacci heap from Figure 1 after extract minimum is completed. First, nodes 3 and 6 are linked together. Then the result is linked with tree rooted at node 2. Finally, the new minimum is found.</div>
+</div>
+</div>
+<p>However to complete the extract minimum operation, we need to update the pointer to the root with minimum key. Unfortunately there may be up to <i>n</i> roots we need to check. In the second phase we therefore decrease the number of roots by successively linking together roots of the same degree. When two roots <i>u</i> and <i>v</i> have the same degree, we make one of them a child of the other so that the one with the smaller key remains the root. Its degree will increase by one. This is repeated until every root has a different degree. To find trees of the same degree efficiently we use an array of length <i>O</i>(log <i>n</i>) in which we keep a pointer to one root of each degree. When a second root is found of the same degree, the two are linked and the array is updated. The actual running time is <i>O</i>(log <i>n</i> + <i>m</i>) where <i>m</i> is the number of roots at the beginning of the second phase. At the end we will have at most <i>O</i>(log <i>n</i>) roots (because each has a different degree). Therefore the difference in the potential function from before this phase to after it is: <i>O</i>(log <i>n</i>) − <i>m</i>, and the amortized running time is then at most <i>O</i>(log <i>n</i> + <i>m</i>) + <i>c</i>(<i>O</i>(log <i>n</i>) − <i>m</i>). With a sufficiently large choice of <i>c</i>, this simplifies to <i>O</i>(log <i>n</i>).</p>
+<p>In the third phase we check each of the remaining roots and find the minimum. This takes <i>O</i>(log <i>n</i>) time and the potential does not change. The overall amortized running time of extract minimum is therefore <i>O</i>(log <i>n</i>).</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap-decreasekey.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fibonacci_heap-decreasekey.png/250px-Fibonacci_heap-decreasekey.png" width="250" height="91" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fibonacci_heap-decreasekey.png/375px-Fibonacci_heap-decreasekey.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/Fibonacci_heap-decreasekey.png/500px-Fibonacci_heap-decreasekey.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Fibonacci_heap-decreasekey.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Fibonacci heap from Figure 1 after decreasing key of node 9 to 0. This node as well as its two marked ancestors are cut from the tree rooted at 1 and placed as new roots.</div>
+</div>
+</div>
+<p>Operation <b>decrease key</b> will take the node, decrease the key and if the heap property becomes violated (the new key is smaller than the key of the parent), the node is cut from its parent. If the parent is not a root, it is marked. If it has been marked already, it is cut as well and its parent is marked. We continue upwards until we reach either the root or an unmarked node. In the process we create some number, say <i>k</i>, of new trees. Each of these new trees except possibly the first one was marked originally but as a root it will become unmarked. One node can become marked. Therefore the number of marked nodes changes by −(<i>k</i>&#160;−&#160;1)&#160;+&#160;1&#160;=&#160;−&#160;<i>k</i>&#160;+&#160;2. Combining these 2 changes, the potential changes by 2(−<i>k</i>&#160;+&#160;2)&#160;+&#160;<i>k</i>&#160;=&#160;−<i>k</i>&#160;+&#160;4. The actual time to perform the cutting was <i>O</i>(<i>k</i>), therefore (again with a sufficiently large choice of <i>c</i>) the amortized running time is constant.</p>
+<p>Finally, operation <b>delete</b> can be implemented simply by decreasing the key of the element to be deleted to minus infinity, thus turning it into the minimum of the whole heap. Then we call extract minimum to remove it. The amortized running time of this operation is <i>O</i>(log <i>n</i>).</p>
+<h2><span class="mw-headline" id="Proof_of_degree_bounds">Proof of degree bounds</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=3" title="Edit section: Proof of degree bounds">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The amortized performance of a Fibonacci heap depends on the degree (number of children) of any tree root being <i>O</i>(log <i>n</i>), where <i>n</i> is the size of the heap. Here we show that the size of the (sub)tree rooted at any node <i>x</i> of degree <i>d</i> in the heap must have size at least <i>F<sub>d</sub></i><sub>+2</sub>, where <i>F<sub>k</sub></i> is the <i>k</i>th <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Fibonacci number">Fibonacci number</a>. The degree bound follows from this and the fact (easily proved by induction) that <img class="tex" alt="F_{d+2} \ge \varphi^d" src="http://upload.wikimedia.org/math/7/c/0/7c0253c32045efd45fed686e2cc4fe27.png" /> for all integers <img class="tex" alt="d\ge 0" src="http://upload.wikimedia.org/math/f/f/3/ff374978804bbdc4c8b51a244837d249.png" />, where <img class="tex" alt="\varphi = (1+\sqrt 5)/2 \doteq 1.618" src="http://upload.wikimedia.org/math/a/3/9/a3948b1a9111f6d10ce2c464edbaca59.png" />. (We then have <img class="tex" alt="n \ge F_{d+2} \ge \varphi^d" src="http://upload.wikimedia.org/math/7/9/c/79c1c03e13cf65944be80092b099a41f.png" />, and taking the log to base <img class="tex" alt="\varphi" src="http://upload.wikimedia.org/math/3/5/3/3538eb9c84efdcbd130c4c953781cfdb.png" /> of both sides gives <img class="tex" alt="d\le \log_{\varphi} n" src="http://upload.wikimedia.org/math/0/6/2/062916965e2dba4197995982f1f166c6.png" /> as required.)</p>
+<p>Consider any node <i>x</i> somewhere in the heap (<i>x</i> need not be the root of one of the main trees). Define <b>size</b>(<i>x</i>) to be the size of the tree rooted at <i>x</i> (the number of descendants of <i>x</i>, including <i>x</i> itself). We prove by induction on the height of <i>x</i> (the length of a longest simple path from <i>x</i> to a descendant leaf), that <b>size</b>(<i>x</i>)&#160;≥&#160;<i>F<sub>d</sub></i><sub>+2</sub>, where <i>d</i> is the degree of <i>x</i>.</p>
+<p><b>Base case:</b> If <i>x</i> has height 0, then <i>d</i>&#160;=&#160;0, and <b>size</b>(<i>x</i>)&#160;=&#160;1&#160;=&#160;<i>F</i><sub>2</sub>.</p>
+<p><b>Inductive case:</b> Suppose <i>x</i> has positive height and degree <i>d</i>&gt;0. Let <i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, ..., <i>y<sub>d</sub></i> be the children of <i>x</i>, indexed in order of the times they were most recently made children of <i>x</i> (<i>y</i><sub>1</sub> being the earliest and <i>y<sub>d</sub></i> the latest), and let <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, ..., <i>c<sub>d</sub></i> be their respective degrees. We <b>claim</b> that <i>c<sub>i</sub></i>&#160;≥&#160;<i>i</i>-2 for each <i>i</i> with 2≤<i>i</i>≤<i>d</i>: Just before <i>y<sub>i</sub></i> was made a child of <i>x</i>, <i>y</i><sub>1</sub>,...,<i>y<sub>i</sub></i><sub>−1</sub> were already children of <i>x</i>, and so <i>x</i> had degree at least <i>i</i>−1 at that time. Since trees are combined only when the degrees of their roots are equal, it must have been that <i>y<sub>i</sub></i> also had degree at least <i>i</i>-1 at the time it became a child of <i>x</i>. From that time to the present, <i>y<sub>i</sub></i> can only have lost at most one child (as guaranteed by the marking process), and so its current degree <i>c<sub>i</sub></i> is at least <i>i</i>−2. This proves the <b>claim</b>.</p>
+<p>Since the heights of all the <i>y<sub>i</sub></i> are strictly less than that of <i>x</i>, we can apply the inductive hypothesis to them to get <b>size</b>(<i>y<sub>i</sub></i>)&#160;≥&#160;<i>F<sub>c<sub>i</sub></sub></i><sub>+2</sub>&#160;≥&#160;<i>F</i><sub>(<i>i</i>−2)+2</sub>&#160;=&#160;<i>F<sub>i</sub></i>. The nodes <i>x</i> and <i>y</i><sub>1</sub> each contribute at least 1 to <b>size</b>(<i>x</i>), and so we have</p>
+<p><img class="tex" alt="\textbf{size}(x) \ge 2 + \sum_{i=2}^d \textbf{size}(y_i) \ge 2 + \sum_{i=2}^d F_i = 1 + \sum_{i=0}^d F_i." src="http://upload.wikimedia.org/math/c/1/2/c12a698488da8b20206ece6a433f6029.png" /></p>
+<p>A routine induction proves that <img class="tex" alt="1 + \sum_{i=0}^d F_i = F_{d+2}" src="http://upload.wikimedia.org/math/c/4/1/c41a4119804df5750f273adbeb782ce9.png" /> for any <img class="tex" alt="d\ge 0" src="http://upload.wikimedia.org/math/f/f/3/ff374978804bbdc4c8b51a244837d249.png" />, which gives the desired lower bound on <b>size</b>(<i>x</i>).</p>
+<h2><span class="mw-headline" id="Worst_case">Worst case</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=4" title="Edit section: Worst case">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although the total running time of a sequence of operations starting with an empty structure is bounded by the bounds given above, some (very few) operations in the sequence can take very long to complete (in particular delete and delete minimum have linear running time in the worst case). For this reason Fibonacci heaps and other amortized data structures may not be appropriate for <a href="http://en.wikipedia.org/wiki/Real-time_computing" title="Real-time computing">real-time systems</a>. It is possible to create a data structure which has the same worst case performance as the Fibonacci heap has amortized performance.<sup id="cite_ref-bare_url_3-0" class="reference"><a href="#cite_note-bare_url-3"><span>[</span>3<span>]</span></a></sup> However the resulting structure (a <a href="http://en.wikipedia.org/wiki/Brodal_queue" title="Brodal queue">Brodal queue</a>) is, in the words of the creator, "quite complicated" and "[not] applicable in practice."</p>
+<h2><span class="mw-headline" id="Summary_of_running_times">Summary of running times</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=5" title="Edit section: Summary of running times">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox ambox-content" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="Accuracy dispute" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/40px-Ambox_contradict.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/60px-Ambox_contradict.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ambox_contradict.svg/80px-Ambox_contradict.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>appears to contradict the article <a href="Heap_(data_structure).html" title="Heap (data structure)">Heap (data structure)</a></b>. <span class="hide-when-compact">Please see discussion on the linked <a href="http://en.wikipedia.org/wiki/Talk:Heap_(data_structure)#Contradiction_of_running_times" title="Talk:Heap (data structure)">talk page</a>. Please do not remove this message until the contradictions are resolved.</span> <small><i>(October 2013)</i></small></span></td>
+</tr>
+</table>
+<div class="rellink relarticle mainarticle">Main article: <a href="Heap_(data_structure).html#Comparison_of_theoretic_bounds_for_variants" title="Heap (data structure)">Heap (data structure)#Comparison_of_theoretic_bounds_for_variants</a></div>
+<table class="wikitable">
+<tr>
+<th><i>Common Operations</i></th>
+<th><i>Effect</i></th>
+<th>Unsorted <a href="http://en.wikipedia.org/wiki/Linked_List" title="Linked List" class="mw-redirect">Linked List</a></th>
+<th>Sorted <a href="http://en.wikipedia.org/wiki/Linked_List" title="Linked List" class="mw-redirect">Linked List</a></th>
+<th><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">Self-balancing binary search tree</a></th>
+<th><a href="Binary_heap.html" title="Binary heap">Binary heap</a></th>
+<th><a href="Binomial_heap.html" title="Binomial heap">Binomial heap</a></th>
+<th>Fibonacci heap</th>
+<th><a href="http://en.wikipedia.org/wiki/Brodal_queue" title="Brodal queue">Brodal queue</a><sup id="cite_ref-bare_url_3-1" class="reference"><a href="#cite_note-bare_url-3"><span>[</span>3<span>]</span></a></sup></th>
+<th><a href="http://en.wikipedia.org/wiki/Pairing_heap" title="Pairing heap">Pairing heap</a></th>
+</tr>
+<tr>
+<td>insert(data,key)</td>
+<td>Adds <i>data</i> to the queue, tagged with <i>key</i></td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)<sup id="cite_ref-Fredman_And_Tarjan_2-2" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>findMin() -&gt; key,data</td>
+<td>Returns <i>key,data</i> corresponding to min-value <i>key</i></td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(log n) or O(1) (**)</td>
+<td>O(1)</td>
+<td>O(log n)<sup id="cite_ref-CLRS_generalized_4-0" class="reference"><a href="#cite_note-CLRS_generalized-4"><span>[</span>4<span>]</span></a></sup> or O(1) (**)</td>
+<td>O(1)<sup id="cite_ref-CLRS_1-1" class="reference"><a href="#cite_note-CLRS-1"><span>[</span>1<span>]</span></a></sup></td>
+<td>O(1)</td>
+<td>O(1)<sup id="cite_ref-Fredman_And_Tarjan_2-3" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>deleteMin()</td>
+<td>Deletes <i>data</i> corresponding to min-value <i>key</i></td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)*</td>
+<td>O(log n)</td>
+<td>O(log n)*<sup id="cite_ref-Fredman_And_Tarjan_2-4" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>delete(node)</td>
+<td>Deletes <i>data</i> corresponding to given <i>key</i>, given a pointer to the node being deleted</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)*</td>
+<td>O(log n)</td>
+<td>O(log n)*<sup id="cite_ref-Fredman_And_Tarjan_2-5" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>decreaseKey(node)</td>
+<td>Decreases the <i>key</i> of a node, given a pointer to the node being modified</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)*</td>
+<td>O(1)</td>
+<td>Unknown but bounded: <img class="tex" alt="\Omega(\log\log n), {O(2^{2\sqrt{\log\log n}})}" src="http://upload.wikimedia.org/math/3/4/b/34bfb017d0e73e4ddfd57266818b222b.png" />*<sup id="cite_ref-Fredman_And_Tarjan_2-6" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>merge(heap1,heap2) -&gt; heap3</td>
+<td>Merges two heaps into a third</td>
+<td>O(1)</td>
+<td>O(m + n)</td>
+<td>O(m log(n+m))</td>
+<td>O(m log(n+m))</td>
+<td>O(log (m+n))</td>
+<td>O(1)*</td>
+<td>O(1)</td>
+<td>O(1)<sup id="cite_ref-Fredman_And_Tarjan_2-7" class="reference"><a href="#cite_note-Fredman_And_Tarjan-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+</table>
+<p>(*)Amortized time<br />
+(**)With trivial modification to store an additional pointer to the minimum element</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-CLRS-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-CLRS_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-CLRS_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="Thomas_H.html" title="Thomas H. Cormen">Thomas H. Cormen</a>, <a href="Charles_E-2.html" title="Charles E. Leiserson">Charles E. Leiserson</a>, <a href="Ronald_L.html" title="Ronald L. Rivest" class="mw-redirect">Ronald L. Rivest</a>, and <a href="Clifford_Stein.html" title="Clifford Stein">Clifford Stein</a>. <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i>, Second Edition. <a href="http://en.wikipedia.org/wiki/MIT_Press" title="MIT Press">MIT Press</a> and McGraw-Hill, 2001. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0262032937" class="internal mw-magiclink-isbn">ISBN 0-262-03293-7</a>. Chapter 20: Fibonacci Heaps, pp.476–497. Third edition p518.</span></li>
+<li id="cite_note-Fredman_And_Tarjan-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Fredman_And_Tarjan_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Fredman_And_Tarjan_2-7"><sup><i><b>h</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFFredmanTarjan1987" class="citation journal"><a href="http://en.wikipedia.org/wiki/Michael_Fredman" title="Michael Fredman">Fredman, Michael Lawrence</a>; <a href="http://en.wikipedia.org/wiki/Robert_Tarjan" title="Robert Tarjan">Tarjan, Robert E.</a> (1987). <a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/~sos22/supervise/dsaa/fib_heaps.pdf">"Fibonacci heaps and their uses in improved network optimization algorithms"</a> (PDF). <i><a href="http://en.wikipedia.org/wiki/Journal_of_the_Association_for_Computing_Machinery" title="Journal of the Association for Computing Machinery" class="mw-redirect">Journal of the Association for Computing Machinery</a></i> <b>34</b> (3): 596–615. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F28869.28874">10.1145/28869.28874</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFibonacci+heap&amp;rft.atitle=Fibonacci+heaps+and+their+uses+in+improved+network+optimization+algorithms&amp;rft.aufirst=Michael+Lawrence&amp;rft.au=Fredman%2C+Michael+Lawrence&amp;rft.aulast=Fredman&amp;rft.au=Tarjan%2C+Robert+E.&amp;rft.date=1987&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.cl.cam.ac.uk%2F~sos22%2Fsupervise%2Fdsaa%2Ffib_heaps.pdf&amp;rft_id=info%3Adoi%2F10.1145%2F28869.28874&amp;rft.issue=3&amp;rft.jtitle=Journal+of+the+Association+for+Computing+Machinery&amp;rft.pages=596%26ndash%3B615&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=34" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-bare_url-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-bare_url_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bare_url_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFGerth_St.C3.B8lting_Brodal1996" class="citation">Gerth Stølting Brodal (1996), "Worst-Case Efficient Priority Queues", <i>Proc. 7th ACM-SIAM Symposium on Discrete Algorithms</i> (<a href="http://en.wikipedia.org/wiki/Society_for_Industrial_and_Applied_Mathematics" title="Society for Industrial and Applied Mathematics">Society for Industrial and Applied Mathematics</a>): 52–58, <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F313852.313883">10.1145/313852.313883</a>, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-89871-366-8" title="Special:BookSources/0-89871-366-8">0-89871-366-8</a>, <a href="CiteSeerX.html" title="CiteSeerX" class="mw-redirect">CiteSeerX</a>: <span class="url"><a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.43.8133">10.1.1.43.8133</a></span></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFibonacci+heap&amp;rft.atitle=Worst-Case+Efficient+Priority+Queues&amp;rft.au=Gerth+St%C3%B8lting+Brodal&amp;rft.aulast=Gerth+St%C3%B8lting+Brodal&amp;rft.date=1996&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F313852.313883&amp;rft.isbn=0-89871-366-8&amp;rft.jtitle=Proc.+7th+ACM-SIAM+Symposium+on+Discrete+Algorithms&amp;rft.pages=52%E2%80%9358&amp;rft.pub=Society+for+Industrial+and+Applied+Mathematics&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CLRS_generalized-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-CLRS_generalized_4-0">^</a></b></span> <span class="reference-text"><span class="citation book"><a href="Thomas_H.html" title="Thomas H. Cormen">Cormen, Thomas H.</a>; <a href="Charles_E-2.html" title="Charles E. Leiserson">Leiserson, Charles E.</a>, <a href="http://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Rivest, Ronald L.</a> (1990). <i><a href="Introduction_to_Algorithms.html" title="Introduction to Algorithms">Introduction to Algorithms</a></i> (1st ed.). MIT Press and McGraw-Hill. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-262-03141-8" title="Special:BookSources/0-262-03141-8">0-262-03141-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFibonacci+heap&amp;rft.au=Cormen%2C+Thomas+H.&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.au=Leiserson%2C+Charles+E.%2C+Rivest%2C+Ronald+L.&amp;rft.btitle=Introduction+to+Algorithms&amp;rft.date=1990&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-262-03141-8&amp;rft.pub=MIT+Press+and+McGraw-Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation journal">Pettie, Seth (2005). <a rel="nofollow" class="external text" href="http://web.eecs.umich.edu/~pettie/papers/focs05.pdf">"Towards a Final Analysis of Pairing Heaps"</a>. <i>Max Planck Institut für Informatik</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFibonacci+heap&amp;rft.atitle=Towards+a+Final+Analysis+of+Pairing+Heaps&amp;rft.aufirst=Seth&amp;rft.aulast=Pettie&amp;rft.au=Pettie%2C+Seth&amp;rft.date=2005&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fweb.eecs.umich.edu%2F~pettie%2Fpapers%2Ffocs05.pdf&amp;rft.jtitle=Max+Planck+Institut+f%26uuml%3Br+Informatik&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.cs.yorku.ca/~aaw/Jason/FibonacciHeapAnimation.html">Java applet simulation of a Fibonacci heap</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mathworks.com/matlabcentral/fileexchange/30072-fibonacci-heap">MATLAB implementation of Fibonacci heap</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.labri.fr/perso/pelegrin/code/#fibonacci">De-recursived and memory efficient C implementation of Fibonacci heap</a> (free/libre software, <a rel="nofollow" class="external text" href="http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html">CeCILL-B license</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://ideone.com/9jYnv">C++ template Fibonacci heap, with demonstration</a></li>
+<li><a rel="nofollow" class="external text" href="http://github.com/evansenter/f_heap">Ruby implementation of the Fibonacci heap (with tests)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.princeton.edu/~wayne/cs423/fibonacci/FibonacciHeapAlgorithm.html">Pseudocode of the Fibonacci heap algorithm</a></li>
+<li><a rel="nofollow" class="external text" href="http://stackoverflow.com/q/504823/194609">Efficient C++ Fibonacci heap</a></li>
+<li><a rel="nofollow" class="external text" href="http://stackoverflow.com/q/6273833/194609">Various Java Implementations for Fibonacci heap</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><strong class="selflink">Fibonacci</strong></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1015
+CPU time usage: 0.996 seconds
+Real time usage: 1.585 seconds
+Preprocessor visited node count: 787/1000000
+Preprocessor generated node count: 4748/1500000
+Post‐expand include size: 25777/2048000 bytes
+Template argument size: 624/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 3/500
+Lua time usage: 0.081/10.000 seconds
+Lua memory usage: 1.82 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:254142-0!*!0!!en!4!*!math=0 and timestamp 20140328084822
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;oldid=597381599">http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;oldid=597381599</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Fibonacci_numbers" title="Category:Fibonacci numbers">Fibonacci numbers</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Heaps_(data_structures)" title="Category:Heaps (data structures)">Heaps (data structures)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_contradicting_other_articles" title="Category:Articles contradicting other articles">Articles contradicting other articles</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Fibonacci+heap&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Fibonacci+heap" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Fibonacci_heap.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Fibonacci_heap"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Fibonacci_heap.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Fibonacci_heap" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Fibonacci_heap" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;oldid=597381599" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1410737" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Fibonacci_heap&amp;id=597381599" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Fibonacci+heap">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Fibonacci+heap&amp;oldid=597381599&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Fibonacci_heap&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Fibonacciho_halda" title="Fibonacciho halda – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Fibonacci-Heap" title="Fibonacci-Heap – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Montículo_de_Fibonacci" title="Montículo de Fibonacci – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/هیپ_فیبوناتچی" title="هیپ فیبوناتچی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Tas_de_Fibonacci" title="Tas de Fibonacci – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/フィボナッチヒープ" title="フィボナッチヒープ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Фибоначчиева_куча" title="Фибоначчиева куча – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Fibonacci_heap" title="Fibonacci heap – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/ฮีปฟีโบนัชชี" title="ฮีปฟีโบนัชชี – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Купа_Фібоначчі" title="Купа Фібоначчі – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/斐波那契堆" title="斐波那契堆 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1410737#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 27 February 2014 at 15:25.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Fibonacci_heap" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1108 in 0.393 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Fibonacci_heap by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:12 GMT -->
+</html>

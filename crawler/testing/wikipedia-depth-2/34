@@ -1,0 +1,717 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Container_(abstract_data_type).html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Container_(abstract_data_type) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Container (abstract data type) - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Container_(abstract_data_type)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Container_(abstract_data_type).html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Container_(abstract_data_type)","wgTitle":"Container (abstract data type)","wgCurRevisionId":584140063,"wgRevisionId":584140063,"wgArticleId":5170615,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing cleanup from March 2012","All articles needing cleanup","Cleanup tagged articles with a reason field from March 2012","Wikipedia pages needing cleanup from March 2012","Articles to be expanded from May 2007","All articles to be expanded","Use dmy dates from March 2012","Abstract data types","Object-oriented programming","Data structures"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Container_(abstract_data_type)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1643805"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Container_abstract_data_type skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Container (abstract data type)</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">For the abstract notion of containers in <a href="Type_theory.html" title="Type theory">type theory</a>, see <a href="http://en.wikipedia.org/wiki/Container_(type_theory)" title="Container (type theory)">Container (type theory)</a>.</div>
+<table class="metadata plainlinks ambox ambox-style ambox-Cleanup" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>may require <a href="http://en.wikipedia.org/wiki/Wikipedia:Cleanup" title="Wikipedia:Cleanup">cleanup</a> to meet Wikipedia's <a href="http://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style" title="Wikipedia:Manual of Style">quality standards</a></b>. The specific problem is: <b>text is clunky</b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit">improve this article</a> if you can.</span> <small><i>(March 2012)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>container</b> is a <a href="http://en.wikipedia.org/wiki/Class_(computer_science)" title="Class (computer science)" class="mw-redirect">class</a>, a <a href="Data_structure.html" title="Data structure">data structure</a>,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> or an <a href="Abstract_data_type.html" title="Abstract data type">abstract data type</a> (ADT) whose instances are collections of other objects. In other words; they are used for storing objects in an organized way following specific access rules. The size of the container depends on the number of the objects (elements) it contains.The underlying implementation of various types of containers may vary in space and time complexity allowing for flexibility in choosing the right implementation for a given scenario.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Types"><span class="tocnumber">2</span> <span class="toctext">Types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Value_based_containers"><span class="tocnumber">2.1</span> <span class="toctext">Value based containers</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Reference_based_containers"><span class="tocnumber">2.2</span> <span class="toctext">Reference based containers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Single_or_associative"><span class="tocnumber">3</span> <span class="toctext">Single or associative</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Single_value_containers"><span class="tocnumber">3.1</span> <span class="toctext">Single value containers</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Associative_containers"><span class="tocnumber">3.2</span> <span class="toctext">Associative containers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Examples_of_containers"><span class="tocnumber">4</span> <span class="toctext">Examples of containers</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Graphic_containers"><span class="tocnumber">5</span> <span class="toctext">Graphic containers</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Implementations"><span class="tocnumber">6</span> <span class="toctext">Implementations</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Containers can be studied under three points of views.</p>
+<ol>
+<li><i>Access</i>&#160;: It means accessing the container elements. In the case of arrays, accessing is done with the array index. For stacks, access of elements is done using <a href="http://en.wikipedia.org/wiki/LIFO_(computing)" title="LIFO (computing)">LIFO</a> (Last In First Out) <sup id="cite_ref-investopedia_3-0" class="reference"><a href="#cite_note-investopedia-3"><span>[</span>3<span>]</span></a></sup> (alternative name <b>FILO</b> (First In Last Out) and in queues it is done using <a href="FIFO_(computing).html" title="FIFO (computing)" class="mw-redirect">FIFO</a> (First In First Out).<sup id="cite_ref-investopedia_3-1" class="reference"><a href="#cite_note-investopedia-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-businessdictionary_4-0" class="reference"><a href="#cite_note-businessdictionary-4"><span>[</span>4<span>]</span></a></sup></li>
+<li><i>Storage</i>&#160;: It includes storing of items of containers. Some containers are finite containers and some are infinite containers.</li>
+<li><i>Traversal</i>&#160;: It includes how the item can be traversed.</li>
+</ol>
+<p>Container classes are expected to implement methods to do the following:</p>
+<ul>
+<li>create a new empty container (constructor),</li>
+<li>report the number of objects it stores (size),</li>
+<li>delete all the objects in the container (clear),</li>
+<li>insert new objects into the container,</li>
+<li>remove objects from it,</li>
+<li>provide access to the stored objects.</li>
+</ul>
+<p>Containers are sometimes implemented in conjunction with <a href="http://en.wikipedia.org/wiki/Iterator" title="Iterator">iterators</a>.</p>
+<h2><span class="mw-headline" id="Types">Types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=2" title="Edit section: Types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Containers can be divided into two groups:</p>
+<ol>
+<li><i>Value based containers</i></li>
+<li><i>Reference based containers</i></li>
+</ol>
+<h3><span class="mw-headline" id="Value_based_containers">Value based containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=3" title="Edit section: Value based containers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Store copies of objects. If we access an object, the object returns a copy of it. If an external object is changed after it has been inserted in the container it will not affect the content of the container.</p>
+<h3><span class="mw-headline" id="Reference_based_containers">Reference based containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=4" title="Edit section: Reference based containers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Store <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a> or <a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> to the object. If we access an object, the object returns a reference to it. If an external object is changed after it has been inserted in the container, it affects the content of the container.</p>
+<h2><span class="mw-headline" id="Single_or_associative">Single or associative</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=5" title="Edit section: Single or associative">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A container may be:</p>
+<ol>
+<li><i>Single value</i></li>
+<li><i><a href="Associative_array.html" title="Associative array">Associative</a></i></li>
+</ol>
+<h3><span class="mw-headline" id="Single_value_containers">Single value containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=6" title="Edit section: Single value containers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Each object is stored independently in the container and it is accessed directly or with an <a href="http://en.wikipedia.org/wiki/Iterator" title="Iterator">iterator</a>.</p>
+<h3><span class="mw-headline" id="Associative_containers">Associative containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=7" title="Edit section: Associative containers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="Associative_array.html" title="Associative array">Associative array</a>, map, or dictionary is a container composed of (key,value) pairs, such that each key appears at most once in the container. The key is used to find the value, the object, if it is stored in the container.</p>
+<h2><span class="mw-headline" id="Examples_of_containers">Examples of containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=8" title="Edit section: Examples of containers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Containers are divided in the <a href="http://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> into <a href="http://en.wikipedia.org/wiki/Associative_container" title="Associative container" class="mw-redirect">associative containers</a> and standard <a href="http://en.wikipedia.org/wiki/Sequence_container" title="Sequence container" class="mw-redirect">sequence containers</a>. Besides this two types, so-called <a href="http://en.wikipedia.org/wiki/Standard_Template_Library#Containers" title="Standard Template Library">container adaptors</a> exist. Data structures that are implemented by containers include <a href="Array_data_structure.html" title="Array data structure">arrays</a>, <a href="http://en.wikipedia.org/wiki/List_(computing)" title="List (computing)" class="mw-redirect">lists</a>, <a href="Associative_array.html" title="Associative array">maps</a>, <a href="Queue_(data_structure).html" title="Queue (data structure)" class="mw-redirect">queues</a>, <a href="http://en.wikipedia.org/wiki/Set_(computer_science)" title="Set (computer science)" class="mw-redirect">sets</a>, <a href="Stack_(data_structure).html" title="Stack (data structure)" class="mw-redirect">stacks</a>, <a href="http://en.wikipedia.org/wiki/Table_(information)" title="Table (information)">tables</a>, <a href="Tree_(data_structure).html" title="Tree (data structure)">trees</a>, and <a href="http://en.wikipedia.org/wiki/Vector_(C++)" title="Vector (C++)" class="mw-redirect">vectors</a>.</p>
+<h2><span class="mw-headline" id="Graphic_containers">Graphic containers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=9" title="Edit section: Graphic containers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/Widget_toolkit" title="Widget toolkit">Widget toolkits</a> use special <a href="http://en.wikipedia.org/wiki/Widget_(computing)" title="Widget (computing)" class="mw-redirect">widgets</a> also called <i>Containers</i> to group the other widgets together (<a href="http://en.wikipedia.org/wiki/Window_(computing)" title="Window (computing)">windows</a>, <a href="http://en.wikipedia.org/wiki/Panel_(computer_software)" title="Panel (computer software)">panels</a>, ...). Apart from their graphical properties, they have the same type of behavior as <b>container classes</b>, as they keep a list of their child <a href="http://en.wikipedia.org/wiki/Widget_(computing)" title="Widget (computing)" class="mw-redirect">widgets</a>, and allow to add, remove, or retrieve <a href="http://en.wikipedia.org/wiki/Widget_(computing)" title="Widget (computing)" class="mw-redirect">widgets</a> amongst their children.</p>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=10" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata plainlinks ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><a href="http://en.wikipedia.org/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" /></a></td>
+<td class="mbox-text"><span class="mbox-text-span">This section requires <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit">expansion</a>. <small><i>(May 2007)</i></small></span></td>
+</tr>
+</table>
+<ul>
+<li>.NET: <a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/system.collections.aspx">System.Collections (MSDN)</a></li>
+<li>ActionScript3: <a rel="nofollow" class="external text" href="http://sibirjak.com/osflash/projects/as3commons-collections/">AS3Commons Collections Framework</a></li>
+<li>C++: <a href="http://en.wikipedia.org/wiki/C++_Standard_Library" title="C++ Standard Library">C++ Standard Library</a> (SC++L) or the obsolete <a href="http://en.wikipedia.org/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL)</li>
+<li>Java: <a href="http://en.wikipedia.org/wiki/Java_collections_framework" title="Java collections framework">Java collections framework</a> (JCF)</li>
+<li><a href="Objective-C.html" title="Objective-C">Objective-C</a>: part of the <a href="http://en.wikipedia.org/wiki/Foundation_Kit" title="Foundation Kit">Foundation Kit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a> Collections<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a> Mutable and Immutable Collections in the packages <code>scala.collection.mutable</code> and <code>scala.collection.immutable</code></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Standard_Template_Library#Containers" title="Standard Template Library">Standard Template Library#Containers</a></li>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection (abstract data type)</a></li>
+<li><a href="Stack_(data_structure).html" title="Stack (data structure)" class="mw-redirect">Stack data structure</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Paul E. Black (ed.), entry for <i>data structure</i> in <i><a href="Dictionary_of_Algorithms_and_Data_Structures.html" title="Dictionary of Algorithms and Data Structures">Dictionary of Algorithms and Data Structures</a>. US <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" title="National Institute of Standards and Technology">National Institute of Standards and Technology</a>.15 December 2004. Accessed on Oct 04, 2011.</i></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Entry <i>data structure</i> in the <a href="Encyclop%c3%a6dia_Britannica.html" title="Encyclopædia Britannica">Encyclopædia Britannica</a> (2009) <a rel="nofollow" class="external text" href="http://www.britannica.com/EBchecked/topic/152190/data-structure">Online entry</a> Accessed on Oct 04, 2011.</span></li>
+<li id="cite_note-investopedia-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-investopedia_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-investopedia_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.investopedia.com/terms/l/lifo.asp#axzz1ZoGPLx59">LIFO(investopedia.com)</a></span></li>
+<li id="cite_note-businessdictionary-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-businessdictionary_4-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.businessdictionary.com/definition/first-in-first-out-FIFO.html">FIFO(businessdictionary.com)</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/cd/E11882_01/appdev.112/e25519/composites.htm#CIHIEBJC">"PL/SQL Collections and Records"</a><span class="reference-accessdate">. Retrieved 2013-04-20</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AContainer+%28abstract+data+type%29&amp;rft.btitle=PL%2FSQL+Collections+and+Records&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fcd%2FE11882_01%2Fappdev.112%2Fe25519%2Fcomposites.htm%23CIHIEBJC&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://help.sap.com/saphelp_40b/helpdata/en/c5/e4b14a453d11d189430000e829fbbd/content.htm">Container Data Structure Declaration and Initialization</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.acornarcade.com/articles/Building_the_Dream_1_-_Container_data_structures/index1162.html">Container data structures</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><strong class="selflink">Container</strong></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_types" title="Template:Data types"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_types" title="Template talk:Data types"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_types&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_type.html" title="Data type">Data types</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Uninterpreted</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit.html" title="Bit">Bit</a></li>
+<li><a href="Byte.html" title="Byte">Byte</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_numeral_system" title="Ternary numeral system">Trit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_numeral_system#Tryte" title="Ternary numeral system">Tryte</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Numeric</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Bignum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Complex_data_type" title="Complex data type">Complex</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Decimal_data_type" title="Decimal data type">Decimal</a></li>
+<li><a href="Fixed-point_arithmetic.html" title="Fixed-point arithmetic">Fixed-point</a></li>
+<li><a href="Floating_point.html" title="Floating point">Floating-point</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Integer_(computer_science)" title="Integer (computer science)">Integer</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Signedness" title="Signedness">signedness</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Interval_arithmetic" title="Interval arithmetic">Interval</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rational_data_type" title="Rational data type">Rational</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Plain_text.html" title="Plain text">Text</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Character_(computing).html" title="Character (computing)">Character</a></li>
+<li><a href="http://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">String</a>
+<ul>
+<li><a href="Null-terminated_string.html" title="Null-terminated string">null-terminated</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">Pointer</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Memory_address" title="Memory address">Address</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Physical_address" title="Physical address">physical</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_address_space" title="Virtual address space">virtual</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Reference_(computer_science)" title="Reference (computer science)">Reference</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Composite_data_type" title="Composite data type">Composite</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Algebraic_data_type" title="Algebraic data type">Algebraic data type</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Generalized_algebraic_data_type" title="Generalized algebraic data type">generalized</a></li>
+</ul>
+</li>
+<li><a href="Array_data_type.html" title="Array data type">Array</a></li>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Class_(computer_programming)" title="Class (computer programming)">Class</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dependent_type" title="Dependent type">Dependent</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intuitionistic_type_theory#Equality_type" title="Intuitionistic type theory">Equality</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Inductive_type" title="Inductive type">Inductive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Object_(computer_science)" title="Object (computer science)">Object</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Metaobject" title="Metaobject">metaobject</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Option_type" title="Option type">Option type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Product_type" title="Product type">Product</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Record_(computer_science)" title="Record (computer science)">Record</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Union_type" title="Union type">Union</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Tagged_union" title="Tagged union">tagged</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boolean_data_type" title="Boolean data type">Boolean</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bottom_type" title="Bottom type">Bottom type</a></li>
+<li><strong class="selflink">Collection</strong></li>
+<li><a href="Enumerated_type.html" title="Enumerated type">Enumerated type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exception_handling" title="Exception handling">Exception</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Function_type" title="Function type">Function type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Opaque_data_type" title="Opaque data type">Opaque data type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Recursive_data_type" title="Recursive data type">Recursive data type</a></li>
+<li><a href="Semaphore_(programming).html" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stream_(computing)" title="Stream (computing)">Stream</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Top_type" title="Top type">Top type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Type_class" title="Type class">Type class</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unit_type" title="Unit type">Unit type</a></li>
+<li><a href="Void_type.html" title="Void type">Void</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Related topics</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Abstract_data_type.html" title="Abstract data type">Abstract data type</a></li>
+<li><a href="Data_structure.html" title="Data structure">Data structure</a></li>
+<li><a href="Generic_programming.html" title="Generic programming">Generic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kind_(type_theory)" title="Kind (type theory)">Kind</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Metaclass" title="Metaclass">metaclass</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Parametric_polymorphism" title="Parametric polymorphism">Parametric polymorphism</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Primitive_data_type" title="Primitive data type">Primitive data type</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">Protocol</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Interface_(computing)#Software_interfaces_in_object-oriented_languages" title="Interface (computing)">interface</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Subtyping" title="Subtyping">Subtyping</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Type_constructor" title="Type constructor">Type constructor</a></li>
+<li><a href="Type_conversion.html" title="Type conversion">Type conversion</a></li>
+<li><a href="Type_system.html" title="Type system">Type system</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1111
+CPU time usage: 0.496 seconds
+Real time usage: 0.566 seconds
+Preprocessor visited node count: 834/1000000
+Preprocessor generated node count: 4017/1500000
+Post‐expand include size: 39389/2048000 bytes
+Template argument size: 1669/2048000 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 13/500
+Lua time usage: 0.069/10.000 seconds
+Lua memory usage: 1.55 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:5170615-0!*!0!!en!4!* and timestamp 20140325072529
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;oldid=584140063">http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;oldid=584140063</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Abstract_data_types" title="Category:Abstract data types">Abstract data types</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Object-oriented_programming" title="Category:Object-oriented programming">Object-oriented programming</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Data_structures" title="Category:Data structures">Data structures</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_cleanup_from_March_2012" title="Category:Articles needing cleanup from March 2012">Articles needing cleanup from March 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_cleanup" title="Category:All articles needing cleanup">All articles needing cleanup</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Cleanup_tagged_articles_with_a_reason_field_from_March_2012" title="Category:Cleanup tagged articles with a reason field from March 2012">Cleanup tagged articles with a reason field from March 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_pages_needing_cleanup_from_March_2012" title="Category:Wikipedia pages needing cleanup from March 2012">Wikipedia pages needing cleanup from March 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_to_be_expanded_from_May_2007" title="Category:Articles to be expanded from May 2007">Articles to be expanded from May 2007</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_March_2012" title="Category:Use dmy dates from March 2012">Use dmy dates from March 2012</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Container+%28abstract+data+type%29&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Container+%28abstract+data+type%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Container_(abstract_data_type).html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Container_(abstract_data_type)"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Container_(abstract_data_type).html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Container_(abstract_data_type)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Container_(abstract_data_type)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;oldid=584140063" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1643805" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Container_%28abstract_data_type%29&amp;id=584140063" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Container+%28abstract+data+type%29">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Container+%28abstract+data+type%29&amp;oldid=584140063&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Contenidor_(estructura_de_dades)" title="Contenidor (estructura de dades) – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Container_(Informatik)" title="Container (Informatik) – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Ujo" title="Ujo – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/ظرف_(نوع_داده_انتزاعی)" title="ظرف (نوع داده انتزاعی) – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Conteneur_(informatique)" title="Conteneur (informatique) – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Oggetto_container" title="Oggetto container – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Container_(informatica)" title="Container (informatica) – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/コンテナ_(データ型)" title="コンテナ (データ型) – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Kontener_(programowanie)" title="Kontener (programowanie) – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Container_(programação)" title="Container (programação) – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-qu"><a href="http://qu.wikipedia.org/wiki/Wisina" title="Wisina – Quechua" lang="qu" hreflang="qu">Runa Simi</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Коллекция_(программирование)" title="Коллекция (программирование) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/คอลเลคชั่น" title="คอลเลคชั่น – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/集合_(计算机科学)" title="集合 (计算机科学) – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1643805#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 2 December 2013 at 00:49.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Container_(abstract_data_type)" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1031 in 0.398 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Container_(abstract_data_type) by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:10 GMT -->
+</html>

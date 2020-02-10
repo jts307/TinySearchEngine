@@ -1,0 +1,719 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Standard_output.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Standard_output by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Standard streams - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Standard_streams" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Standard_streams" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Standard_streams","wgTitle":"Standard streams","wgCurRevisionId":598163413,"wgRevisionId":598163413,"wgArticleId":220067,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from March 2010","All articles lacking in-text citations","All articles with unsourced statements","Articles with unsourced statements from December 2013","All accuracy disputes","Articles with disputed statements from February 2012","Articles with unsourced statements from February 2012","Unix"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Standard_streams","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Standard_output","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en-gb","en","*"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1070408"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-fortran {line-height: normal;}
+.source-fortran li, .source-fortran pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for fortran
+ * CSS class: source-fortran, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.fortran.source-fortran .de1, .fortran.source-fortran .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.fortran.source-fortran  {font-family:monospace;}
+.fortran.source-fortran .imp {font-weight: bold; color: red;}
+.fortran.source-fortran li, .fortran.source-fortran .li1 {font-weight: normal; vertical-align:top;}
+.fortran.source-fortran .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.fortran.source-fortran .li2 {font-weight: bold; vertical-align:top;}
+.fortran.source-fortran .kw1 {color: #b1b100;}
+.fortran.source-fortran .kw2 {color: #000000; font-weight: bold;}
+.fortran.source-fortran .kw3 {color: #000066;}
+.fortran.source-fortran .kw4 {color: #993333;}
+.fortran.source-fortran .co1 {color: #666666; font-style: italic;}
+.fortran.source-fortran .co2 {color: #339933;}
+.fortran.source-fortran .coMULTI {color: #808080; font-style: italic;}
+.fortran.source-fortran .es0 {color: #000099; font-weight: bold;}
+.fortran.source-fortran .br0 {color: #009900;}
+.fortran.source-fortran .sy0 {color: #339933;}
+.fortran.source-fortran .st0 {color: #ff0000;}
+.fortran.source-fortran .nu0 {color: #cc66cc;}
+.fortran.source-fortran .me1 {color: #202020;}
+.fortran.source-fortran .me2 {color: #202020;}
+.fortran.source-fortran .ln-xtra, .fortran.source-fortran li.ln-xtra, .fortran.source-fortran div.ln-xtra {background-color: #ffc;}
+.fortran.source-fortran span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-algol68 {line-height: normal;}
+.source-algol68 li, .source-algol68 pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for algol68
+ * CSS class: source-algol68, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.algol68.source-algol68 .de1, .algol68.source-algol68 .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.algol68.source-algol68  {font-family:monospace;}
+.algol68.source-algol68 .imp {font-weight: bold; color: red;}
+.algol68.source-algol68 li, .algol68.source-algol68 .li1 {font-weight: normal; vertical-align:top;}
+.algol68.source-algol68 .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.algol68.source-algol68 .li2 {font-weight: bold; vertical-align:top;}
+.algol68.source-algol68 .kw1 {color: #FF0000; font-weight: bold;}
+.algol68.source-algol68 .kw2 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw3 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw4 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw5 {color: #FF0000; font-weight: bold;}
+.algol68.source-algol68 .kw6 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw7 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw8 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw10 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw11 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw12 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw14 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw15 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw16 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw17 {color: #b1b100; font-weight: bold;}
+.algol68.source-algol68 .kw18 {color: #FF0000; font-weight: bold;}
+.algol68.source-algol68 .kw19 {color: #FF0000; font-weight: bold;}
+.algol68.source-algol68 .kw20 {color: #b1b100;}
+.algol68.source-algol68 .kw21 {color: #b1b100;}
+.algol68.source-algol68 .kw22 {color: #b1b100;}
+.algol68.source-algol68 .kw23 {color: #b1b100;}
+.algol68.source-algol68 .kw24 {color: #b1b100;}
+.algol68.source-algol68 .kw25 {color: #b1b100;}
+.algol68.source-algol68 .kw26 {color: #b1b100;}
+.algol68.source-algol68 .kw27 {color: #b1b100;}
+.algol68.source-algol68 .kw28 {color: #b1b100;}
+.algol68.source-algol68 .kw29 {color: #b1b100;}
+.algol68.source-algol68 .co1 {color: #666666; font-style: italic;}
+.algol68.source-algol68 .co2 {color: #666666; font-style: italic;}
+.algol68.source-algol68 .co3 {color: #666666; font-style: italic;}
+.algol68.source-algol68 .coMULTI {color: #666666; font-style: italic;}
+.algol68.source-algol68 .es0 {color: #000099; font-weight: bold;}
+.algol68.source-algol68 .br0 {color: #009900;}
+.algol68.source-algol68 .sy0 {color: #339933;}
+.algol68.source-algol68 .sy1 {color: #339933;}
+.algol68.source-algol68 .st0 {color: #0000ff;}
+.algol68.source-algol68 .nu0 {color: #cc66cc;}
+.algol68.source-algol68 .me0 {color: #004000;}
+.algol68.source-algol68 .me1 {color: #004000;}
+.algol68.source-algol68 .re0 {color: #cc66cc;}
+.algol68.source-algol68 .re1 {color: #cc66cc;}
+.algol68.source-algol68 .ln-xtra, .algol68.source-algol68 li.ln-xtra, .algol68.source-algol68 div.ln-xtra {background-color: #ffc;}
+.algol68.source-algol68 span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-java {line-height: normal;}
+.source-java li, .source-java pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for java
+ * CSS class: source-java, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.java.source-java .de1, .java.source-java .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.java.source-java  {font-family:monospace;}
+.java.source-java .imp {font-weight: bold; color: red;}
+.java.source-java li, .java.source-java .li1 {font-weight: normal; vertical-align:top;}
+.java.source-java .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.java.source-java .li2 {font-weight: bold; vertical-align:top;}
+.java.source-java .kw1 {color: #000000; font-weight: bold;}
+.java.source-java .kw2 {color: #000066; font-weight: bold;}
+.java.source-java .kw3 {color: #003399;}
+.java.source-java .kw4 {color: #000066; font-weight: bold;}
+.java.source-java .co1 {color: #666666; font-style: italic;}
+.java.source-java .co2 {color: #006699;}
+.java.source-java .co3 {color: #008000; font-style: italic; font-weight: bold;}
+.java.source-java .coMULTI {color: #666666; font-style: italic;}
+.java.source-java .es0 {color: #000099; font-weight: bold;}
+.java.source-java .br0 {color: #009900;}
+.java.source-java .sy0 {color: #339933;}
+.java.source-java .st0 {color: #0000ff;}
+.java.source-java .nu0 {color: #cc66cc;}
+.java.source-java .me1 {color: #006633;}
+.java.source-java .me2 {color: #006633;}
+.java.source-java .ln-xtra, .java.source-java li.ln-xtra, .java.source-java div.ln-xtra {background-color: #ffc;}
+.java.source-java span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-csharp {line-height: normal;}
+.source-csharp li, .source-csharp pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for csharp
+ * CSS class: source-csharp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.csharp.source-csharp .de1, .csharp.source-csharp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.csharp.source-csharp  {font-family:monospace;}
+.csharp.source-csharp .imp {font-weight: bold; color: red;}
+.csharp.source-csharp li, .csharp.source-csharp .li1 {font-weight: normal; vertical-align:top;}
+.csharp.source-csharp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.csharp.source-csharp .li2 {font-weight: bold; vertical-align:top;}
+.csharp.source-csharp .kw1 {color: #0600FF; font-weight: bold;}
+.csharp.source-csharp .kw2 {color: #FF8000; font-weight: bold;}
+.csharp.source-csharp .kw3 {color: #008000;}
+.csharp.source-csharp .kw4 {color: #6666cc; font-weight: bold;}
+.csharp.source-csharp .kw5 {color: #000000;}
+.csharp.source-csharp .co1 {color: #008080; font-style: italic;}
+.csharp.source-csharp .co2 {color: #008080;}
+.csharp.source-csharp .co3 {color: #008080;}
+.csharp.source-csharp .coMULTI {color: #008080; font-style: italic;}
+.csharp.source-csharp .es0 {color: #008080; font-weight: bold;}
+.csharp.source-csharp .es_h {color: #008080; font-weight: bold;}
+.csharp.source-csharp .br0 {color: #008000;}
+.csharp.source-csharp .sy0 {color: #008000;}
+.csharp.source-csharp .st0 {color: #666666;}
+.csharp.source-csharp .st_h {color: #666666;}
+.csharp.source-csharp .nu0 {color: #FF0000;}
+.csharp.source-csharp .me1 {color: #0000FF;}
+.csharp.source-csharp .me2 {color: #0000FF;}
+.csharp.source-csharp .ln-xtra, .csharp.source-csharp li.ln-xtra, .csharp.source-csharp div.ln-xtra {background-color: #ffc;}
+.csharp.source-csharp span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-vbnet {line-height: normal;}
+.source-vbnet li, .source-vbnet pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for vbnet
+ * CSS class: source-vbnet, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.vbnet.source-vbnet .de1, .vbnet.source-vbnet .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.vbnet.source-vbnet  {font-family:monospace;}
+.vbnet.source-vbnet .imp {font-weight: bold; color: red;}
+.vbnet.source-vbnet li, .vbnet.source-vbnet .li1 {font-weight: normal; vertical-align:top;}
+.vbnet.source-vbnet .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.vbnet.source-vbnet .li2 {font-weight: bold; vertical-align:top;}
+.vbnet.source-vbnet .kw1 {color: #0000FF; font-weight: bold;}
+.vbnet.source-vbnet .kw2 {color: #6a5acd;}
+.vbnet.source-vbnet .kw3 {color: #6a5acd; font-weight: bold;}
+.vbnet.source-vbnet .kw4 {color: #cd6a5a;}
+.vbnet.source-vbnet .kw5 {color: #cd6a5a; font-weight: bold;}
+.vbnet.source-vbnet .kw7 {color: #000066;}
+.vbnet.source-vbnet .co1 {color: #008000; font-style: italic;}
+.vbnet.source-vbnet .coMULTI {color: #008000; font-style: italic;}
+.vbnet.source-vbnet .es0 {color: #008080; font-weight: bold;}
+.vbnet.source-vbnet .br0 {color: #000000;}
+.vbnet.source-vbnet .sy0 {color: #000000;}
+.vbnet.source-vbnet .st0 {color: #a52a2a; back-color: #fffacd;}
+.vbnet.source-vbnet .nu0 {color: #a52a2a; back-color: #fffacd;}
+.vbnet.source-vbnet .me1 {color: #000000;}
+.vbnet.source-vbnet .ln-xtra, .vbnet.source-vbnet li.ln-xtra, .vbnet.source-vbnet div.ln-xtra {background-color: #ffc;}
+.vbnet.source-vbnet span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Standard_streams skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Standard streams</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Standard_output&amp;redirect=no" title="Standard output">Standard output</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about standard I/O file descriptors.  For System V streams, see <a href="http://en.wikipedia.org/wiki/STREAMS" title="STREAMS">STREAMS</a>.</div>
+<table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="http://en.wikipedia.org/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(March 2010)</i></small></span></td>
+</tr>
+</table>
+<p>In <a href="Computer_programming.html" title="Computer programming">computer programming</a>, <b>standard streams</b> are preconnected input and output channels between a computer program and its environment (typically a <a href="http://en.wikipedia.org/wiki/Text_terminal" title="Text terminal" class="mw-redirect">text terminal</a>) when it begins execution. The three <a href="Input/output.html" title="Input/output">I/O</a> connections are called <b>standard input</b> (<b>stdin</b>), <b>standard output</b> (<b>stdout</b>) and <b>standard error</b> (<b>stderr</b>).</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Application"><span class="tocnumber">1</span> <span class="toctext">Application</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Background"><span class="tocnumber">2</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Standard_input_.28stdin.29"><span class="tocnumber">3</span> <span class="toctext">Standard input (stdin)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Standard_output_.28stdout.29"><span class="tocnumber">4</span> <span class="toctext">Standard output (stdout)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Standard_error_.28stderr.29"><span class="tocnumber">5</span> <span class="toctext">Standard error (stderr)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Timeline"><span class="tocnumber">6</span> <span class="toctext">Timeline</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#1950s:_Fortran"><span class="tocnumber">6.1</span> <span class="toctext">1950s: Fortran</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#1960:_ALGOL_60"><span class="tocnumber">6.2</span> <span class="toctext">1960: ALGOL 60</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#1968:_ALGOL_68"><span class="tocnumber">6.3</span> <span class="toctext">1968: ALGOL 68</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#1970s:_C_and_Unix"><span class="tocnumber">6.4</span> <span class="toctext">1970s: C and Unix</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#1995:_Java"><span class="tocnumber">6.5</span> <span class="toctext">1995: Java</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#2000s:_.NET"><span class="tocnumber">6.6</span> <span class="toctext">2000s: .NET</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#GUIs"><span class="tocnumber">6.7</span> <span class="toctext">GUIs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Application">Application</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=1" title="Edit section: Application">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Stdstreams-notitle.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stdstreams-notitle.svg/220px-Stdstreams-notitle.svg.png" width="220" height="135" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stdstreams-notitle.svg/330px-Stdstreams-notitle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stdstreams-notitle.svg/440px-Stdstreams-notitle.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Stdstreams-notitle.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The standard streams for input, output, and error</div>
+</div>
+</div>
+<p>Users generally know these streams as mediums by which text incoming from an input device and text outgoing to display are handled. As they are used for input and output devices, they generally contain text, a sequence of characters in a predetermined encoding, such as <a href="http://en.wikipedia.org/wiki/ISO/IEC_8859-1" title="ISO/IEC 8859-1">Latin-1</a> or <a href="http://en.wikipedia.org/wiki/UTF-8" title="UTF-8">UTF-8</a>.</p>
+<p>These streams can also be chained; the output of a program can then be the input of another one. A well-known example is the use of a pager such as <a href="More_(command).html" title="More (command)">more</a>, which gives the user a way to control which part of the output stream appears on the display.</p>
+<p>Although the dominant usage is for the standard streams to contain text, it is possible to use them to transfer arbitrary <a href="http://en.wikipedia.org/wiki/Binary_file" title="Binary file">binary data</a>.</p>
+<h2><span class="mw-headline" id="Background">Background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=2" title="Edit section: Background">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In most operating systems predating <a href="Unix.html" title="Unix">Unix</a>, programs had to explicitly connect to the appropriate input and output devices. OS-specific intricacies caused this to be an intimidating programming challenge. On many systems it was necessary to obtain control of environment settings, access a local file table, determine the intended data set, and handle hardware correctly in the case of <a href="http://en.wikipedia.org/wiki/Punch_card_reader" title="Punch card reader" class="mw-redirect">punch card reader</a>, <a href="http://en.wikipedia.org/wiki/Magnetic_tape_drive" title="Magnetic tape drive" class="mw-redirect">magnetic tape drive</a>, <a href="Disk_drive.html" title="Disk drive" class="mw-redirect">disk drive</a>, <a href="http://en.wikipedia.org/wiki/Line_printer" title="Line printer">line printer</a>, card punch, or interactive terminal.</p>
+<p>One of Unix's several groundbreaking advances was <i>abstract devices</i>, which removed the need for a program to know or care what kind of devices it was communicating with.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2013)">citation needed</span></a></i>]</sup> Older operating systems forced upon the programmer a record structure and frequently <a href="http://en.wikipedia.org/wiki/Orthogonal#Computer_science" title="Orthogonal" class="mw-redirect">non-orthogonal</a> data semantics and device control. Unix eliminated this complexity with the concept of a data stream: an ordered sequence of data bytes which can be read until the <a href="http://en.wikipedia.org/wiki/End-of-file" title="End-of-file">end of file</a>. A program may also write bytes as desired and need not (and can't easily) declare how many there will be, or how they will be grouped.</p>
+<p>Another Unix breakthrough was to automatically associate input and output by default<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2013)">citation needed</span></a></i>]</sup> — the program (and programmer) did absolutely nothing to establish input and output for a typical input-process-output program (unless it chose a different paradigm). In contrast, previous operating systems usually required some—often complex—<a href="Job_Control_Language.html" title="Job Control Language">job control language</a> to establish connections, or the equivalent burden had to be orchestrated by the program.</p>
+<p>Since Unix provided standard streams, the Unix <a href="C_(programming_language).html" title="C (programming language)">C</a> runtime environment was obliged to support it as well. As a result, most C runtime environments (and <a href="C_(programming_language).html#Related_languages" title="C (programming language)">C's descendants</a>), regardless of the operating system, provide equivalent functionality.</p>
+<h2><span class="mw-headline" id="Standard_input_.28stdin.29">Standard input (stdin)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=3" title="Edit section: Standard input (stdin)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Standard input is data (often text) going into a program. The program requests data transfers by use of the <i>read</i> operation. Not all programs require input. For example, the <i><a href="http://en.wikipedia.org/wiki/Dir_(command)" title="Dir (command)">dir</a></i> and <i><a href="Ls.html" title="Ls">ls</a></i> programs (which display file names contained in a directory) perform their operations without any stream data input.</p>
+<p>Unless <a href="http://en.wikipedia.org/wiki/Redirection_(computing)" title="Redirection (computing)">redirected</a>, input is expected from the <a href="http://en.wikipedia.org/wiki/Keyboard_(computing)" title="Keyboard (computing)" class="mw-redirect">keyboard</a> which started the program.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptor</a> for standard input is 0 (zero); the <a href="POSIX.html" title="POSIX">POSIX</a> <i>&lt;unistd.h&gt;</i> definition is <tt>STDIN_FILENO</tt>; the corresponding <i>&lt;stdio.h&gt;</i> variable is <tt>FILE* stdin</tt>; similarly, the <i>&lt;iostream&gt;</i> variable is <tt>std::cin</tt>.</p>
+<h2><span class="mw-headline" id="Standard_output_.28stdout.29">Standard output (stdout)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=4" title="Edit section: Standard output (stdout)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Standard output is the stream where a program writes its output data. The program requests data transfer with the <i>write</i> operation. Not all programs generate output. For example the <i><a href="http://en.wikipedia.org/wiki/Rename_(computing)" title="Rename (computing)">file rename</a></i> command (variously called <i><a href="Mv.html" title="Mv">mv</a></i>, <i><a href="http://en.wikipedia.org/wiki/Move_(command)" title="Move (command)">move</a></i>, or <i>ren</i>) is silent on success.</p>
+<p>Unless <a href="http://en.wikipedia.org/wiki/Redirection_(Unix)" title="Redirection (Unix)" class="mw-redirect">redirected</a>, standard output is the <a href="http://en.wikipedia.org/wiki/Text_terminal" title="Text terminal" class="mw-redirect">text terminal</a> which initiated the program.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptor</a> for standard output is 1 (one); the <a href="POSIX.html" title="POSIX">POSIX</a> <i>&lt;unistd.h&gt;</i> definition is <tt>STDOUT_FILENO</tt>; the corresponding <i>&lt;stdio.h&gt;</i> variable is <tt>FILE* stdout</tt>; similarly, the <i>&lt;iostream&gt;</i> variable is <tt>std::cout</tt>.</p>
+<h2><span class="mw-headline" id="Standard_error_.28stderr.29">Standard error (stderr)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=5" title="Edit section: Standard error (stderr)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Standard error is another output stream typically used by programs to output <a href="http://en.wikipedia.org/wiki/Error_message" title="Error message">error messages</a> or diagnostics. It is a stream independent of standard output and can be redirected separately. The usual destination is the <a href="http://en.wikipedia.org/wiki/Text_terminal" title="Text terminal" class="mw-redirect">text terminal</a> which started the program to provide the best chance of being seen even if <i>standard output</i> is redirected (so not readily observed). For example, output of a program in a <a href="Pipeline_(Unix).html" title="Pipeline (Unix)">pipeline</a> is redirected to input of the next program, but errors from each program still go directly to the text terminal.</p>
+<p>It is acceptable—and normal—for <i>standard output</i> and <i>standard error</i> to be directed to the same destination, such as the text terminal. Messages appear in the same order as the program writes them, unless buffering is involved. (For example, a common situation is when the standard error stream is unbuffered but the standard output stream is line-buffered; in this case, text written to standard error later may appear on the terminal earlier, if the standard output stream's buffer is not yet full.)</p>
+<p>The <a href="http://en.wikipedia.org/wiki/File_descriptor" title="File descriptor">file descriptor</a> for standard error is 2; the <a href="POSIX.html" title="POSIX">POSIX</a> <i>&lt;unistd.h&gt;</i> definition is <tt>STDERR_FILENO</tt>; the corresponding <i>&lt;stdio.h&gt;</i> variable is <tt>FILE* stderr</tt>. The C++ <i>&lt;iostream&gt;</i> standard header provides two variables associated with this stream: <tt>std::cerr</tt> and <tt>std::clog</tt>, the former being unbuffered and the latter using the same buffering mechanism as all other C++ streams.</p>
+<p>Most <a href="http://en.wikipedia.org/wiki/Shell_(computing)" title="Shell (computing)">shells</a><sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2013)">citation needed</span></a></i>]</sup> allow both <i>standard output</i> and <i>standard error</i> to be redirected to the same file using</p>
+<pre>
+ &amp;&gt; filename
+</pre>
+<p>Bourne-style shells allow <i>standard error</i> to be redirected to the same destination that standard output is directed to using</p>
+<pre>
+ 2&gt;&amp;1
+</pre>
+<p>csh-style shells allow <i>standard error</i> to be redirected to the same destination that standard output is directed to using</p>
+<pre>
+ &gt;&amp;
+</pre>
+<h2><span class="mw-headline" id="Timeline">Timeline</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=6" title="Edit section: Timeline">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="1950s:_Fortran">1950s: Fortran</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=7" title="Edit section: 1950s: Fortran">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Fortran has the equivalent of Unix file descriptors: <code>UNIT=5</code> for stdin, <code>UNIT=6</code> for stdout and <code>UNIT=0</code> for stderr<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Disputed_statement" title="Wikipedia:Disputed statement" class="mw-redirect"><span title="The material near this tag is possibly inaccurate or nonfactual. (February 2012)">dubious</span></a> <span class="metadata">– <a href="http://en.wikipedia.org/wiki/Talk:Standard_streams#Dubious" title="Talk:Standard streams">discuss</a></span></i>]</sup><sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2012)">citation needed</span></a></i>]</sup>.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="fortran source-fortran">
+<pre class="de1">
+<span class="co1">! FORTRAN 77 example</span>
+      <span class="kw1">PROGRAM</span> MAIN
+      READ<span class="br0">(</span><span class="kw1">UNIT</span><span class="sy0">=</span><span class="nu0">5</span>,<span class="sy0">*</span><span class="br0">)</span><span class="kw1">NUMBER</span>
+      WRITE<span class="br0">(</span><span class="kw1">UNIT</span><span class="sy0">=</span><span class="nu0">6</span>,<span class="st0">'(F5.3)'</span><span class="br0">)</span><span class="st0">' NUMBER IS: '</span>,<span class="kw1">NUMBER</span>
+      <span class="kw1">END</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="1960:_ALGOL_60">1960: ALGOL 60</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=8" title="Edit section: 1960: ALGOL 60">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/ALGOL_60" title="ALGOL 60">ALGOL 60</a> was criticized for having no standard file access.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2012)">citation needed</span></a></i>]</sup></p>
+<h3><span class="mw-headline" id="1968:_ALGOL_68">1968: ALGOL 68</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=9" title="Edit section: 1968: ALGOL 68">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="ALGOL_68.html" title="ALGOL 68">ALGOL 68</a>'s input and output facilities were collectively referred to as the transput.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2012)">citation needed</span></a></i>]</sup> <a href="http://en.wikipedia.org/wiki/Cornelis_H._A._Koster" title="Cornelis H. A. Koster">Koster</a> coordinated the definition of the <i>transput</i> standard. The model included three standard channels: <code>stand in</code>, <code>stand out</code>, and <code>stand back</code>.</p>
+<table>
+<caption><b>Example</b></caption>
+<tr>
+<td colspan="2">
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="algol68 source-algol68">
+<pre class="de1">
+<span class="coMULTI"># ALGOL 68 example #</span>
+main<span class="sy1">:</span><span class="br0">(</span>
+  <span class="kw3">REAL</span> number<span class="sy1">;</span>
+  <span class="kw22">getf</span><span class="br0">(</span>stand in<span class="sy1">,</span><span class="br0">(</span>$g$<span class="sy1">,</span>number<span class="br0">)</span><span class="br0">)</span><span class="sy1">;</span>
+  <span class="kw22">printf</span><span class="br0">(</span><span class="br0">(</span>$<span class="st0">"Number is: "</span>g<span class="br0">(</span>6<span class="sy1">,</span>4<span class="br0">)</span><span class="st0">"OR "</span>$<span class="sy1">,</span>number<span class="br0">)</span><span class="br0">)</span><span class="sy1">;</span> <span class="coMULTI"># OR #</span>
+  <span class="kw22">putf</span><span class="br0">(</span>stand out<span class="sy1">,</span><span class="br0">(</span>$<span class="st0">" Number is: "</span>g<span class="br0">(</span>6<span class="sy1">,</span>4<span class="br0">)</span><span class="st0">"!"</span>$<span class="sy1">,</span>number<span class="br0">)</span><span class="br0">)</span><span class="sy1">;</span>
+  <span class="kw22">newline</span><span class="br0">(</span>stand out<span class="br0">)</span>
+<span class="br0">)</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr>
+<th align="left">Input:</th>
+<th align="left">Output:</th>
+</tr>
+<tr>
+<td>
+<pre>
+3.14159
+</pre></td>
+<td>
+<pre>
+Number is: +3.142 OR Number is: +3.142!
+</pre></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="1970s:_C_and_Unix">1970s: C and Unix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=10" title="Edit section: 1970s: C and Unix">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the <b><a href="C_(programming_language).html" title="C (programming language)">C programming language</a></b>, the standard input, output, and error streams are attached to the existing Unix file descriptors 0, 1 and 2 respectively.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> In a <a href="POSIX.html" title="POSIX">POSIX</a> environment the <i>&lt;<a href="http://en.wikipedia.org/wiki/Unistd.h" title="Unistd.h">unistd.h</a>&gt;</i> definitions <i>STDIN_FILENO</i>, <i>STDOUT_FILENO</i> or <i>STDERR_FILENO</i> should be used instead rather than <a href="http://en.wikipedia.org/wiki/Magic_number_(programming)" title="Magic number (programming)">magic numbers</a>. File pointers <i>stdin</i>, <i>stdout</i>, and <i>stderr</i> are also provided.</p>
+<h3><span class="mw-headline" id="1995:_Java">1995: Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=11" title="Edit section: 1995: Java">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, the standard streams are referred to by <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#in">System.in</a></code> (for stdin), <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#out">System.out</a></code> (for stdout), and <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#err">System.err</a></code> (for stderr).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+<span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">(</span><span class="kw3">String</span> args<span class="br0">[</span><span class="br0">]</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">try</span> <span class="br0">{</span>
+        <span class="kw3">BufferedReader</span> br <span class="sy0">=</span> 
+          <span class="kw1">new</span> <span class="kw3">BufferedReader</span><span class="br0">(</span><span class="kw1">new</span> <span class="kw3">InputStreamReader</span><span class="br0">(</span><span class="kw3">System</span>.<span class="me1">in</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw3">String</span> s <span class="sy0">=</span> br.<span class="me1">readLine</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw4">double</span> number <span class="sy0">=</span> <span class="kw3">Double</span>.<span class="me1">parseDouble</span><span class="br0">(</span>s<span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Number is:"</span> <span class="sy0">+</span> number<span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span> <span class="kw1">catch</span> <span class="br0">(</span><span class="kw3">Exception</span> e<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw3">System</span>.<span class="me1">err</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Error:"</span> <span class="sy0">+</span> e.<span class="me1">getMessage</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<p>Or you can use the <code><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html">Scanner</a></code> class of package java.util.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="java source-java">
+<pre class="de1">
+    <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">(</span><span class="kw3">String</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span> <span class="br0">{</span>
+        Scanner sc <span class="sy0">=</span> <span class="kw1">new</span> Scanner<span class="br0">(</span><span class="kw3">System</span>.<span class="me1">in</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw1">while</span><span class="br0">(</span>sc.<span class="me1">hasNextLine</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+            <span class="kw3">String</span> line <span class="sy0">=</span> sc.<span class="me1">nextLine</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+            <span class="kw4">double</span> number <span class="sy0">=</span> <span class="kw3">Double</span>.<span class="me1">parseDouble</span><span class="br0">(</span>line<span class="br0">)</span><span class="sy0">;</span>
+            <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Number is: "</span> <span class="sy0">+</span> number<span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+    <span class="br0">}</span>
+</pre></div>
+</div>
+<h3><span class="mw-headline" id="2000s:_.NET">2000s: .NET</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=12" title="Edit section: 2000s: .NET">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="C_Sharp_(programming_language).html" title="C Sharp (programming language)">C#</a> and other <a href=".html" title=".NET Framework">.NET</a> languages, the standard streams are referred to by <code>System.Console.In</code> (for stdin), <code>System.Console.Out</code> (for stdout) and <code>System.Console.Error</code> (for stderr).<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2012)">citation needed</span></a></i>]</sup> Basic read and write capabilities for the stdin and stdout streams are also accessible directly through the class <code>System.Console</code> (e.g. <code>System.Console.WriteLine()</code> can be used instead of <code>System.Console.Out.WriteLine()</code>).</p>
+<p><code>System.Console.In</code>, <code>System.Console.Out</code> and <code>System.Console.Error</code> are <code>System.IO.TextReader</code> (stdin) and <code>System.IO.TextWriter</code> (stdout, stderr) objects, which only allow access to the underlying standard streams on a text basis. Full binary access to the standard streams must be performed through the <code>System.IO.Stream</code> objects returned by <code>System.Console.OpenStandardInput()</code>, <code>System.Console.OpenStandardOutput()</code> and <code>System.Console.OpenStandardError()</code> respectively.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="csharp source-csharp">
+<pre class="de1">
+<span class="co1">// C# example</span>
+<span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">int</span> Main<span class="br0">(</span><span class="kw4">string</span><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">try</span> <span class="br0">{</span>
+        <span class="kw4">string</span> s <span class="sy0">=</span> <span class="kw5">System</span><span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="kw1">In</span><span class="sy0">.</span><span class="me1">ReadLine</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw4">double</span> number <span class="sy0">=</span> <span class="kw4">double</span><span class="sy0">.</span><span class="me1">Parse</span><span class="br0">(</span>s<span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw5">System</span><span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="kw1">Out</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"Number is: {0:F3}"</span>, number<span class="br0">)</span><span class="sy0">;</span>
+        <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+ 
+    <span class="co1">// If Parse() threw an exception</span>
+    <span class="br0">}</span> <span class="kw1">catch</span> <span class="br0">(</span><span class="kw5">System</span><span class="sy0">.</span><span class="me1">ArgumentNullException</span><span class="br0">)</span> <span class="br0">{</span> 
+        <span class="kw5">System</span><span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="me1">Error</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"No number was entered!"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span> <span class="kw1">catch</span> <span class="br0">(</span><span class="kw5">System</span><span class="sy0">.</span><span class="me1">FormatException</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw5">System</span><span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="me1">Error</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"The specified value is not a valid number!"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span> <span class="kw1">catch</span> <span class="br0">(</span><span class="kw5">System</span><span class="sy0">.</span><span class="me1">OverflowException</span><span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw5">System</span><span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="me1">Error</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"The specified number is too big!"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+ 
+    <span class="kw1">return</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="vbnet source-vbnet">
+<pre class="de1">
+<span class="co1">' Visual Basic .NET example</span>
+ 
+<span class="kw1">Public</span> <span class="kw1">Function</span> Main<span class="br0">(</span><span class="br0">)</span> <span class="kw1">As</span> <span class="kw2">Integer</span>
+    <span class="kw1">Try</span>
+	<span class="kw1">Dim</span> s <span class="kw1">As</span> <span class="kw2">String</span> <span class="sy0">=</span> System<span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="br0">[</span><span class="kw1">In</span><span class="br0">]</span><span class="sy0">.</span><span class="me1">ReadLine</span><span class="br0">(</span><span class="br0">)</span>
+	<span class="kw1">Dim</span> number <span class="kw1">As</span> <span class="kw2">Double</span> <span class="sy0">=</span> <span class="kw2">Double</span><span class="sy0">.</span><span class="me1">Parse</span><span class="br0">(</span>s<span class="br0">)</span>
+	System<span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="kw1">Out</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"Number is: {0:F3}"</span>, number<span class="br0">)</span>
+	<span class="kw1">Return</span> <span class="nu0">0</span>
+ 
+    <span class="co1">' If Parse() threw an exception</span>
+    <span class="kw1">Catch</span> ex <span class="kw1">As</span> System<span class="sy0">.</span><span class="me1">ArgumentNullException</span>
+	System<span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="br0">[</span><span class="kw1">Error</span><span class="br0">]</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"No number was entered!"</span><span class="br0">)</span>
+    <span class="kw1">Catch</span> ex2 <span class="kw1">As</span> System<span class="sy0">.</span><span class="me1">FormatException</span>
+	System<span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="br0">[</span><span class="kw1">Error</span><span class="br0">]</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"The specified value is not a valid number!"</span><span class="br0">)</span>
+    <span class="kw1">Catch</span> ex3 <span class="kw1">As</span> System<span class="sy0">.</span><span class="me1">OverflowException</span>
+	System<span class="sy0">.</span><span class="me1">Console</span><span class="sy0">.</span><span class="br0">[</span><span class="kw1">Error</span><span class="br0">]</span><span class="sy0">.</span><span class="me1">WriteLine</span><span class="br0">(</span><span class="st0">"The specified number is too big!"</span><span class="br0">)</span>
+    <span class="kw1">End</span> <span class="kw1">Try</span>
+ 
+    <span class="kw1">Return</span> <span class="sy0">-</span><span class="nu0">1</span>
+<span class="kw1">End</span> <span class="kw1">Function</span>
+</pre></div>
+</div>
+<p>When applying the <code>System.Diagnostics.Process</code> <a href="http://en.wikipedia.org/wiki/Class_(computer_science)" title="Class (computer science)" class="mw-redirect">class</a> one can use the instance <a href="http://en.wikipedia.org/wiki/Property_(programming)" title="Property (programming)">properties</a> <code>StandardInput</code>, <code>StandardOutput</code>, and <code>StandardError</code> of that class to access the standard streams of the process.</p>
+<h3><span class="mw-headline" id="GUIs">GUIs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=13" title="Edit section: GUIs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="Graphical_user_interface.html" title="Graphical user interface">Graphical user interfaces</a> (GUIs) rarely make use of the standard streams.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2012)">citation needed</span></a></i>]</sup> Consequently, redirecting GUI programs or constructing a GUI pipeline is neither practical nor useful. The nearest analogy is probably <i>cutting</i> (or <i>copying</i>) from one application and <i>pasting</i> into another. Since manual user operations are required, moving large numbers of <i>pastes</i> is not especially efficient. One notable exception is the <a href="http://en.wikipedia.org/wiki/Dwm" title="Dwm">dwm</a> <a href="http://en.wikipedia.org/wiki/Tiling_window_manager" title="Tiling window manager">tiling window manager</a>, which displays data directed through stdin on a status bar.</p>
+<p>Some GUI programs, primarily on Unix, still write debug information to standard error. Others may take files to operate from standard in (for example many Unix media players do so). Popular Windows programs that open a separate console window in addition to their GUI windows are the emulators <a href="http://en.wikipedia.org/w/index.php?title=PSX_(emulator)&amp;action=edit&amp;redlink=1" class="new" title="PSX (emulator) (page does not exist)">pSX</a> and <a href="http://en.wikipedia.org/wiki/DOSBox" title="DOSBox">DOSBox</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/GTK-server" title="GTK-server">GTK-server</a> can use stdin as communication interface with an interpreted program to realize a GUI.</p>
+<p>The <a href="http://en.wikipedia.org/wiki/CLIM" title="CLIM" class="mw-redirect">Common Lisp Interface Manager</a> paradigm "presents" GUI elements sent to an extended output stream.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=14" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Redirection_(computing)" title="Redirection (computing)">Redirection (computing)</a></li>
+<li><a href="Pipeline_(Unix).html" title="Pipeline (Unix)">Pipeline (Unix)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stream_(computing)" title="Stream (computing)">Stream (computing)</a></li>
+<li><a href="Input/output.html" title="Input/output">Input/output</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_file_input/output" title="C file input/output">C file input/output</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SYSIN" title="SYSIN" class="mw-redirect">SYSIN</a> and <a href="http://en.wikipedia.org/wiki/SYSOUT" title="SYSOUT" class="mw-redirect">SYSOUT</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=15" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><i>KRONOS 2.1 Reference Manual</i>, Control Data Corporation, Part Number 60407000, 1974</li>
+<li><i>NOS Version 1 Applications Programmer's Instant</i>, Control Data Corporation, Part Number 60436000, 1978</li>
+<li><a rel="nofollow" class="external text" href="http://www.bitsavers.org/pdf/honeywell/multics/AG90-03_PgmgIntro_Dec81.pdf">Level 68 Introduction to Programming on MULTICS</a>, Honeywell Corporation, 1981</li>
+<li><a rel="nofollow" class="external text" href="http://www.research.ibm.com/journal/rd/255/auslander.pdf">Evolution of the MVS Operating System</a>, IBM Corporation, 1981</li>
+<li><i>Lions' Commentary on UNIX Sixth Edition</i>, John Lions, <a href="http://en.wikipedia.org/wiki/Special:BookSources/1573980137" class="internal mw-magiclink-isbn">ISBN 1-57398-013-7</a>, 1977</li>
+<li><a rel="nofollow" class="external text" href="http://msdn2.microsoft.com/en-us/library/system.console.aspx">Console Class, .NET Framework Class Library</a>, Microsoft Corporation, 2008</li>
+</ul>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.linuxmanpages.com/man3/stdin.3.php">http://www.linuxmanpages.com/man3/stdin.3.php</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html">"System (Java Platform SE 7)"</a><span class="reference-accessdate">. Retrieved 20 July 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStandard+streams&amp;rft.btitle=System+%28Java+Platform+SE+7%29&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2F7%2Fdocs%2Fapi%2Fjava%2Flang%2FSystem.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit&amp;section=16" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/standard_input.html">Standard Input Definition</a> - by The Linux Information Project</li>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/standard_output.html">Standard Output Definition</a> - by The Linux Information Project</li>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/standard_error.html">Standard Error Definition</a> - by The Linux Information Project</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1012
+CPU time usage: 1.372 seconds
+Real time usage: 1.458 seconds
+Preprocessor visited node count: 1687/1000000
+Preprocessor generated node count: 3679/1500000
+Post‐expand include size: 23381/2048000 bytes
+Template argument size: 5435/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 5/500
+Lua time usage: 0.124/10.000 seconds
+Lua memory usage: 1.81 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:220067-0!*!0!!en!4!* and timestamp 20140327230952
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;oldid=598163413">http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;oldid=598163413</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Unix" title="Category:Unix">Unix</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_March_2010" title="Category:Articles lacking in-text citations from March 2010">Articles lacking in-text citations from March 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2013" title="Category:Articles with unsourced statements from December 2013">Articles with unsourced statements from December 2013</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_accuracy_disputes" title="Category:All accuracy disputes">All accuracy disputes</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_disputed_statements_from_February_2012" title="Category:Articles with disputed statements from February 2012">Articles with disputed statements from February 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_February_2012" title="Category:Articles with unsourced statements from February 2012">Articles with unsourced statements from February 2012</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Standard+streams&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Standard+streams" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Standard_streams"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Standard_streams"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Standard_streams" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Standard_streams" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Standard_streams" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;oldid=598163413" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1070408" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Standard_streams&amp;id=598163413" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Standard+streams">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Standard+streams&amp;oldid=598163413&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Standard_streams&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Standardní_proudy" title="Standardní proudy – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Standard-Datenströme" title="Standard-Datenströme – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Entrada_estándar" title="Entrada estándar – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Flux_standard" title="Flux standard – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Entrada_estándar" title="Entrada estándar – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/표준_스트림" title="표준 스트림 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Canali_standard" title="Canali standard – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Standaard_stromen" title="Standaard stromen – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/標準ストリーム" title="標準ストリーム – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Standardowe_strumienie" title="Standardowe strumienie – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Fluxos_padrão" title="Fluxos padrão – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Стандартные_потоки" title="Стандартные потоки – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Стандартні_потоки" title="Стандартні потоки – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/標準串流" title="標準串流 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1070408#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 March 2014 at 21:24.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Standard_streams" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1066 in 0.331 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Standard_output by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:41 GMT -->
+</html>

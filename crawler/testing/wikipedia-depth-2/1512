@@ -1,0 +1,1195 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Turing_machine.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Turing_machine by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Turing machine - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf18" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Turing_machine" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Turing_machine.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Turing_machine","wgTitle":"Turing machine","wgCurRevisionId":601071808,"wgRevisionId":601071808,"wgArticleId":30403,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages containing cite templates with deprecated parameters","CS1 errors: dates","Pages with ISBN errors","Commons category with local link same as on Wikidata","Articles with Open Directory Project links","1937 in computer science","Turing machine","Educational abstract machines","Theoretical computer science","Alan Turing","Models of computation","Formal methods","Computability theory","English inventions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Turing_machine","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q163310"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":
+false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:0378eace27e3aee431624f77f4809281 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf18/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Turing_machine skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Turing machine</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">This article is about the machine.  For the test of artificial intelligence, see <a href="http://en.wikipedia.org/wiki/Turing_test" title="Turing test">Turing test</a>.  For the instrumental rock band, see <a href="http://en.wikipedia.org/wiki/Turing_Machine_(band)" title="Turing Machine (band)">Turing Machine (band)</a>.</div>
+<table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><strong class="selflink">Turing machines</strong></th>
+</tr>
+<tr>
+<th class="navbox-abovebelow" style="padding:0.1em;;;">Machine</th>
+</tr>
+<tr>
+<td class="plainlist" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Universal_Turing_machine" title="Universal Turing machine">Universal Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Alternating_Turing_machine" title="Alternating Turing machine">Alternating Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Quantum_Turing_machine" title="Quantum Turing machine">Quantum Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Non-deterministic_Turing_machine" title="Non-deterministic Turing machine">Non-deterministic Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Read-only_Turing_machine" title="Read-only Turing machine">Read-only Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Read-only_right_moving_Turing_machines" title="Read-only right moving Turing machines">Read-only right moving Turing machines</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Probabilistic_Turing_machine" title="Probabilistic Turing machine">Probabilistic Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multi-track_Turing_machine" title="Multi-track Turing machine">Multi-track Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_machine_equivalents" title="Turing machine equivalents">Turing machine equivalents</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_machine_examples" title="Turing machine examples">Turing machine examples</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="navbox-abovebelow" style="padding:0.1em;;;">Science</th>
+</tr>
+<tr>
+<td class="plainlist" style="padding:0 0.1em 0.4em;;">
+<ul>
+<li><a href="Alan_Turing.html" title="Alan Turing">Alan Turing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Category:Turing_machine" title="Category:Turing machine">Category:Turing machine</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Turing" title="Template:Turing"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/w/index.php?title=Template_talk:Turing&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Turing (page does not exist)"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Turing&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Maquina.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Maquina.png/220px-Maquina.png" width="220" height="122" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Maquina.png/330px-Maquina.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Maquina.png/440px-Maquina.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Maquina.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An artistic representation of a Turing machine (Rules table not represented)</div>
+</div>
+</div>
+<p>A <b>Turing machine</b> is a hypothetical device that manipulates symbols on a strip of tape according to a table of rules. Despite its simplicity, a Turing machine can be adapted to simulate the logic of any <a href="Computer.html" title="Computer">computer</a> <a href="Algorithm.html" title="Algorithm">algorithm</a>, and is particularly useful in explaining the functions of a <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">CPU</a> inside a computer.</p>
+<p>The "Turing" machine was invented in 1936 by <a href="Alan_Turing.html" title="Alan Turing">Alan Turing</a><sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> who called it an "a-machine" (automatic machine). The Turing machine is not intended as practical computing technology, but rather as a hypothetical device representing a computing machine. Turing machines help computer scientists understand the limits of mechanical computation.</p>
+<p>Turing gave a succinct definition of the experiment in his 1948 essay, "Intelligent Machinery". Referring to his 1936 publication, Turing wrote that the Turing machine, here called a Logical Computing Machine, consisted of:</p>
+<blockquote>
+<p>...an unlimited memory capacity obtained in the form of an infinite tape marked out into squares, on each of which a symbol could be printed. At any moment there is one symbol in the machine; it is called the scanned symbol. The machine can alter the scanned symbol and its behavior is in part determined by that symbol, but the symbols on the tape elsewhere do not affect the behavior of the machine. However, the tape can be moved back and forth through the machine, this being one of the elementary operations of the machine. Any symbol on the tape may therefore eventually have an innings.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> (Turing 1948, p. 3)</p>
+</blockquote>
+<p>A Turing machine that is able to simulate any other Turing machine is called a <a href="http://en.wikipedia.org/wiki/Universal_Turing_machine" title="Universal Turing machine">universal Turing machine</a> (<b>UTM</b>, or simply a <b>universal machine</b>). A more mathematically-oriented definition with a similar "universal" nature was introduced by <a href="http://en.wikipedia.org/wiki/Alonzo_Church" title="Alonzo Church">Alonzo Church</a>, whose work on <a href="http://en.wikipedia.org/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a> intertwined with Turing's in a formal theory of <a href="Computation.html" title="Computation">computation</a> known as the <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">Church–Turing thesis</a>. The thesis states that Turing machines indeed capture the informal notion of effective method in <a href="Logic.html" title="Logic">logic</a> and <a href="http://en.wikipedia.org/wiki/Mathematics" title="Mathematics">mathematics</a>, and provide a precise definition of an <a href="Algorithm.html" title="Algorithm">algorithm</a> or "mechanical procedure". Studying their <a href="http://en.wikipedia.org/wiki/Abstract_machine" title="Abstract machine">abstract properties</a> yields many insights into <a href="Computer_science.html" title="Computer science">computer science</a> and <a href="Computational_complexity_theory.html" title="Computational complexity theory">complexity theory</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Informal_description"><span class="tocnumber">1</span> <span class="toctext">Informal description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Formal_definition"><span class="tocnumber">2</span> <span class="toctext">Formal definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Additional_details_required_to_visualize_or_implement_Turing_machines"><span class="tocnumber">3</span> <span class="toctext">Additional details required to visualize or implement Turing machines</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Alternative_definitions"><span class="tocnumber">3.1</span> <span class="toctext">Alternative definitions</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_.22state.22"><span class="tocnumber">3.2</span> <span class="toctext">The "state"</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Turing_machine_.22state.22_diagrams"><span class="tocnumber">3.3</span> <span class="toctext">Turing machine "state" diagrams</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Models_equivalent_to_the_Turing_machine_model"><span class="tocnumber">4</span> <span class="toctext">Models equivalent to the Turing machine model</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Choice_c-machines.2C_Oracle_o-machines"><span class="tocnumber">5</span> <span class="toctext">Choice c-machines, Oracle o-machines</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Universal_Turing_machines"><span class="tocnumber">6</span> <span class="toctext">Universal Turing machines</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Comparison_with_real_machines"><span class="tocnumber">7</span> <span class="toctext">Comparison with real machines</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Limitations_of_Turing_machines"><span class="tocnumber">7.1</span> <span class="toctext">Limitations of Turing machines</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Computational_complexity_theory"><span class="tocnumber">7.1.1</span> <span class="toctext">Computational complexity theory</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Concurrency"><span class="tocnumber">7.1.2</span> <span class="toctext">Concurrency</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#History"><span class="tocnumber">8</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Historical_background:_computational_machinery"><span class="tocnumber">8.1</span> <span class="toctext">Historical background: computational machinery</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#The_Entscheidungsproblem_.28the_.22decision_problem.22.29:_Hilbert.27s_tenth_question_of_1900"><span class="tocnumber">8.2</span> <span class="toctext">The Entscheidungsproblem (the "decision problem"): Hilbert's tenth question of 1900</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Alan_Turing.27s_a-_.28automatic-.29machine"><span class="tocnumber">8.3</span> <span class="toctext">Alan Turing's a- (automatic-)machine</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#1937.E2.80.931970:_The_.22digital_computer.22.2C_the_birth_of_.22computer_science.22"><span class="tocnumber">8.4</span> <span class="toctext">1937–1970: The "digital computer", the birth of "computer science"</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#1970.E2.80.93present:_the_Turing_machine_as_a_model_of_computation"><span class="tocnumber">8.5</span> <span class="toctext">1970–present: the Turing machine as a model of computation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Notes"><span class="tocnumber">10</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#References"><span class="tocnumber">11</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Primary_literature.2C_reprints.2C_and_compilations"><span class="tocnumber">11.1</span> <span class="toctext">Primary literature, reprints, and compilations</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Computability_theory"><span class="tocnumber">11.2</span> <span class="toctext">Computability theory</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Church.27s_thesis"><span class="tocnumber">11.3</span> <span class="toctext">Church's thesis</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Small_Turing_machines"><span class="tocnumber">11.4</span> <span class="toctext">Small Turing machines</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Other"><span class="tocnumber">11.5</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#External_links"><span class="tocnumber">12</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Informal_description">Informal description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=1" title="Edit section: Informal description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="dablink">For visualizations of Turing machines, see <a href="http://en.wikipedia.org/wiki/Turing_machine_gallery" title="Turing machine gallery">Turing machine gallery</a>.</div>
+<p>The Turing machine mathematically models a machine that mechanically operates on a tape. On this tape are symbols, which the machine can read and write, one at a time, using a tape head. Operation is fully determined by a finite set of elementary instructions such as "in state 42, if the symbol seen is 0, write a 1; if the symbol seen is 1, change into state 17; in state 17, if the symbol seen is 0, write a 1 and change to state 6;" etc. In the original article ("On computable numbers, with an application to the <a href="http://en.wikipedia.org/wiki/Entscheidungsproblem" title="Entscheidungsproblem">Entscheidungsproblem</a>", see also <a href="#The_Entscheidungsproblem_.28the_.22decision_problem.22.29:_Hilbert.27s_tenth_question_of_1900">references below</a>), Turing imagines not a mechanism, but a person whom he calls the "computer", who executes these deterministic mechanical rules slavishly (or as Turing puts it, "in a desultory manner").</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Turing_machine_2a.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/0/09/Turing_machine_2a.svg/300px-Turing_machine_2a.svg.png" width="300" height="55" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/09/Turing_machine_2a.svg/450px-Turing_machine_2a.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/09/Turing_machine_2a.svg/600px-Turing_machine_2a.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Turing_machine_2a.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The head is always over a particular square of the tape; only a finite stretch of squares is shown. The instruction to be performed (q<sub>4</sub>) is shown over the scanned square. (Drawing after Kleene (1952) p.375.)</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:Turing_machine_2b.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Turing_machine_2b.svg/300px-Turing_machine_2b.svg.png" width="300" height="71" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Turing_machine_2b.svg/450px-Turing_machine_2b.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Turing_machine_2b.svg/600px-Turing_machine_2b.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Turing_machine_2b.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Here, the internal state (q<sub>1</sub>) is shown inside the head, and the illustration describes the tape as being infinite and pre-filled with "0", the symbol serving as blank. The system's full state (its <i>complete configuration</i>) consists of the internal state, any non-blank symbols on the tape (in this illustration "11B"), and the position of the head relative to those symbols including blanks, i.e. "011B". (Drawing after Minsky (1967) p. 121).</div>
+</div>
+</div>
+<p>More precisely, a Turing machine consists of:</p>
+<div>
+<ol>
+<li>A <b>tape</b> divided into cells, one next to the other. Each cell contains a symbol from some finite alphabet. The alphabet contains a special <i>blank</i> symbol (here written as '0') and one or more other symbols. The tape is assumed to be arbitrarily extendable to the left and to the right, i.e., the Turing machine is always supplied with as much tape as it needs for its computation. Cells that have not been written before are assumed to be filled with the blank symbol. In some models the tape has a left end marked with a special symbol; the tape extends or is indefinitely extensible to the right.</li>
+<li>A <b>head</b> that can read and write symbols on the tape and move the tape left and right one (and only one) cell at a time. In some models the head moves and the tape is stationary.</li>
+<li>A <b>state register</b> that stores the state of the Turing machine, one of finitely many. Among these is the special <i>start state</i> with which the state register is initialized. These states, writes Turing, replace the "state of mind" a person performing computations would ordinarily be in.</li>
+<li>A finite <b>table</b> (occasionally called an <b>action table</b> or <b>transition function</b>) of instructions (usually quintuples [5-tuples]&#160;: q<sub>i</sub>a<sub>j</sub>→q<sub>i1</sub>a<sub>j1</sub>d<sub>k</sub>, but sometimes quadruples [4-tuples]) that, given the <i>state</i>(q<sub>i</sub>) the machine is currently in <i>and</i> the <i>symbol</i>(a<sub>j</sub>) it is reading on the tape (symbol currently under the head) tells the machine to do the following in sequence (for the 5-tuple models):
+<ul>
+<li>Either erase or write a symbol (replacing a<sub>j</sub> with a<sub>j1</sub>), <i>and then</i></li>
+<li>Move the head (which is described by d<sub>k</sub> and can have values: 'L' for one step left <i>or</i> 'R' for one step right <i>or</i> 'N' for staying in the same place), <i>and then</i></li>
+<li>Assume the same or a <i>new state</i> as prescribed (go to state q<sub>i1</sub>).</li>
+</ul>
+In the 4-tuple models, erasing or writing a symbol (a<sub>j1</sub>) and moving the head left or right (d<sub>k</sub>) are specified as separate instructions. Specifically, the table tells the machine to (ia) erase or write a symbol <i>or</i> (ib) move the head left or right, <i>and then</i> (ii) assume the same or a new state as prescribed, but not both actions (ia) and (ib) in the same instruction. In some models, if there is no entry in the table for the current combination of symbol and state then the machine will halt; other models require all entries to be filled.</li>
+</ol>
+</div>
+<p>Note that every part of the machine (i.e. its state and symbol-collections) and its actions (such as printing, erasing and tape motion) is <i>finite</i>, <i>discrete</i> and <i>distinguishable</i>; it is the potentially unlimited amount of tape that gives it an unbounded amount of <a href="Computer_storage.html" title="Computer storage" class="mw-redirect">storage space</a>.</p>
+<h2><span class="mw-headline" id="Formal_definition">Formal definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=2" title="Edit section: Formal definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hopcroft and Ullman (1979, p.&#160;148) formally defined a (one-tape) Turing machine as a 7-<a href="http://en.wikipedia.org/wiki/Tuple" title="Tuple">tuple</a> <img class="tex" alt="M= \langle Q, \Gamma, b, \Sigma, \delta, q_0, F \rangle" src="http://upload.wikimedia.org/math/4/1/6/4162f55252213c9c8549b771fe5f9aa4.png" /> where</p>
+<ul>
+<li><img class="tex" alt="Q" src="http://upload.wikimedia.org/math/f/0/9/f09564c9ca56850d4cd6b3319e541aee.png" /> is a finite, non-empty set of <i>states</i></li>
+<li><img class="tex" alt="\Gamma" src="http://upload.wikimedia.org/math/1/6/2/162d4c413f99ae2763b1ced17ed1a14b.png" /> is a finite, non-empty set of the <i>tape alphabet/symbols</i></li>
+<li><img class="tex" alt="b \in \Gamma" src="http://upload.wikimedia.org/math/a/e/e/aee1e6755ef0919d2408c5409e9ddd2e.png" /> is the <i>blank symbol</i> (the only symbol allowed to occur on the tape infinitely often at any step during the computation)</li>
+<li><img class="tex" alt="\Sigma\subseteq\Gamma\setminus\{b\}" src="http://upload.wikimedia.org/math/0/2/d/02d00dcbd6e20d0c296f96f4621372bf.png" /> is the set of <i>input symbols</i></li>
+<li><img class="tex" alt="q_0 \in Q" src="http://upload.wikimedia.org/math/9/8/5/985a2a128ebf9e30b78e9273a1ada4d5.png" /> is the <i>initial state</i></li>
+<li><img class="tex" alt="F \subseteq Q" src="http://upload.wikimedia.org/math/2/e/f/2ef3b9c9ae290bb1868e0a3e1ab6dfdd.png" /> is the set of <i>final</i> or <i>accepting states</i>.</li>
+<li><img class="tex" alt="\delta: Q \setminus F \times \Gamma \rightarrow Q \times \Gamma \times \{L,R\}" src="http://upload.wikimedia.org/math/1/8/f/18f2786ab321eb7cd85528515a4b1ff8.png" /> is a <a href="http://en.wikipedia.org/wiki/Partial_function" title="Partial function">partial function</a> called the <i><a href="http://en.wikipedia.org/wiki/State_transition_system" title="State transition system">transition function</a></i>, where L is left shift, R is right shift. (A relatively uncommon variant allows "no shift", say N, as a third element of the latter set.)</li>
+</ul>
+<p>Anything that operates according to these specifications is a Turing machine.</p>
+<p>The 7-tuple for the 3-state <a href="http://en.wikipedia.org/wiki/Busy_beaver" title="Busy beaver">busy beaver</a> looks like this (see more about this busy beaver at <a href="http://en.wikipedia.org/wiki/Turing_machine_examples" title="Turing machine examples">Turing machine examples</a>):</p>
+<ul>
+<li><img class="tex" alt="Q = \{ \mbox{A}, \mbox{B}, \mbox{C}, \mbox{HALT} \}" src="http://upload.wikimedia.org/math/8/c/9/8c9ccc2b9eec7723ec82a63548888e01.png" /></li>
+<li><img class="tex" alt="\Gamma = \{ 0, 1 \}" src="http://upload.wikimedia.org/math/4/c/7/4c768aaeff22acb345e16f9cc2020d73.png" /></li>
+<li><img class="tex" alt="b = 0" src="http://upload.wikimedia.org/math/f/6/d/f6d5eef5ee5e51fc839bb54201c62e3b.png" /> ("blank")</li>
+<li><img class="tex" alt="\Sigma = \{ 1 \}" src="http://upload.wikimedia.org/math/9/8/1/98140327d88ca4ee48e4d3c89c67df67.png" /></li>
+<li><img class="tex" alt="q_0 = \mbox{A}" src="http://upload.wikimedia.org/math/3/c/6/3c656f176d9c18800c1703283d72e87b.png" /> (the initial state)</li>
+<li><img class="tex" alt="F = \{ \mbox{HALT} \}" src="http://upload.wikimedia.org/math/2/e/a/2eaba7cf1c262289ad79af2c4db3461b.png" /></li>
+<li><img class="tex" alt="\delta = " src="http://upload.wikimedia.org/math/c/5/7/c57a72cbff4bba1f7b357d29ecca17e6.png" /> see state-table below</li>
+</ul>
+<p>Initially all tape cells are marked with 0.</p>
+<table class="wikitable" style="text-align:center">
+<caption>State table for 3 state, 2 symbol busy beaver</caption>
+<tr>
+<th rowspan="2">Tape symbol</th>
+<th colspan="3">Current state A</th>
+<th colspan="3">Current state B</th>
+<th colspan="3">Current state C</th>
+</tr>
+<tr style="font-size:9pt">
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>1</td>
+<td>L</td>
+<td><b>A</b></td>
+<td>1</td>
+<td>L</td>
+<td><b>B</b></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>L</td>
+<td><b>C</b></td>
+<td>1</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>1</td>
+<td>R</td>
+<td><b>HALT</b></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Additional_details_required_to_visualize_or_implement_Turing_machines">Additional details required to visualize or implement Turing machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=3" title="Edit section: Additional details required to visualize or implement Turing machines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the words of van Emde Boas (1990), p.&#160;6: "The set-theoretical object [his formal seven-tuple description similar to the above] provides only partial information on how the machine will behave and what its computations will look like."</p>
+<p>For instance,</p>
+<ul>
+<li>There will need to be many decisions on what the symbols actually look like, and a failproof way of reading and writing symbols indefinitely.</li>
+<li>The shift left and shift right operations may shift the tape head across the tape, but when actually building a Turing machine it is more practical to make the tape slide back and forth under the head instead.</li>
+<li>The tape can be finite, and automatically extended with blanks as needed (which is closest to the mathematical definition), but it is more common to think of it as stretching infinitely at both ends and being pre-filled with blanks except on the explicitly given finite fragment the tape head is on. (This is, of course, not implementable in practice.) The tape <i>cannot</i> be fixed in length, since that would not correspond to the given definition and would seriously limit the range of computations the machine can perform to those of a <a href="http://en.wikipedia.org/wiki/Linear_bounded_automaton" title="Linear bounded automaton">linear bounded automaton</a>.</li>
+</ul>
+<h3><span class="mw-headline" id="Alternative_definitions">Alternative definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=4" title="Edit section: Alternative definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Definitions in literature sometimes differ slightly, to make arguments or proofs easier or clearer, but this is always done in such a way that the resulting machine has the same computational power. For example, changing the set <img class="tex" alt="\{L,R\}" src="http://upload.wikimedia.org/math/f/2/5/f251c223246e30ce25880246c0d12bb7.png" /> to <img class="tex" alt="\{L,R,N\}" src="http://upload.wikimedia.org/math/c/4/b/c4bcb8ee3f28d0fe745e258e8f0beec5.png" />, where <i>N</i> ("None" or "No-operation") would allow the machine to stay on the same tape cell instead of moving left or right, does not increase the machine's computational power.</p>
+<p>The most common convention represents each "Turing instruction" in a "Turing table" by one of nine 5-tuples, per the convention of Turing/Davis (Turing (1936) in <i>Undecidable</i>, p.&#160;126-127 and Davis (2000) p.&#160;152):</p>
+<dl>
+<dd>(definition 1): <b>(q<sub>i</sub>, S<sub>j</sub>, S<sub>k</sub>/E/N, L/R/N, q<sub>m</sub>)</b>
+<dl>
+<dd><b>(</b> current state <b>q<sub>i</sub></b> <b>,</b> symbol scanned <b>S<sub>j</sub></b> <b>,</b> print symbol <b>S<sub>k</sub></b>/erase <b>E</b>/none <b>N</b> <b>,</b> move_tape_one_square left <b>L</b>/right <b>R</b>/none <b>N</b> <b>,</b> new state <b>q<sub>m</sub></b> <b>)</b></dd>
+</dl>
+</dd>
+</dl>
+<p>Other authors (Minsky (1967) p.&#160;119, Hopcroft and Ullman (1979) p.&#160;158, Stone (1972) p.&#160;9) adopt a different convention, with new state <b>q<sub>m</sub></b> listed immediately after the scanned symbol S<sub>j</sub>:</p>
+<dl>
+<dd>(definition 2): <b>(q<sub>i</sub>, S<sub>j</sub>, q<sub>m</sub>, S<sub>k</sub>/E/N, L/R/N)</b>
+<dl>
+<dd><b>(</b> current state <b>q<sub>i</sub></b> <b>,</b> symbol scanned <b>S<sub>j</sub></b> <b>,</b> new state <b>q<sub>m</sub></b> <b>,</b> print symbol <b>S<sub>k</sub></b>/erase <b>E</b>/none <b>N</b> <b>,</b> move_tape_one_square left <b>L</b>/right <b>R</b>/none <b>N</b> <b>)</b></dd>
+</dl>
+</dd>
+</dl>
+<p>For the remainder of this article "definition 1" (the Turing/Davis convention) will be used.</p>
+<table class="wikitable" style="text-align: center">
+<caption>Example: state table for the 3-state 2-symbol busy beaver reduced to 5-tuples</caption>
+<tr>
+<th>Current state</th>
+<th>Scanned symbol</th>
+<th></th>
+<th>Print symbol</th>
+<th>Move tape</th>
+<th>Final (i.e. next) state</th>
+<th>5-tuples</th>
+</tr>
+<tr>
+<td><b>A</b></td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>(<b>A</b>, 0, 1, R, <b>B</b>)</td>
+</tr>
+<tr>
+<td><b>A</b></td>
+<td>1</td>
+<td></td>
+<td>1</td>
+<td>L</td>
+<td><b>C</b></td>
+<td>(<b>A</b>, 1, 1, L, <b>C</b>)</td>
+</tr>
+<tr>
+<td><b>B</b></td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>L</td>
+<td><b>A</b></td>
+<td>(<b>B</b>, 0, 1, L, <b>A</b>)</td>
+</tr>
+<tr>
+<td><b>B</b></td>
+<td>1</td>
+<td></td>
+<td>1</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>(<b>B</b>, 1, 1, R, <b>B</b>)</td>
+</tr>
+<tr>
+<td><b>C</b></td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>L</td>
+<td><b>B</b></td>
+<td>(<b>C</b>, 0, 1, L, <b>B</b>)</td>
+</tr>
+<tr>
+<td><b>C</b></td>
+<td>1</td>
+<td></td>
+<td>1</td>
+<td>N</td>
+<td><b>H</b></td>
+<td>(<b>C</b>, 1, 1, N, <b>H</b>)</td>
+</tr>
+</table>
+<p>In the following table, Turing's original model allowed only the first three lines that he called N1, N2, N3 (cf Turing in <i>Undecidable</i>, p.&#160;126). He allowed for erasure of the "scanned square" by naming a 0th symbol S<sub>0</sub> = "erase" or "blank", etc. However, he did not allow for non-printing, so every instruction-line includes "print symbol S<sub>k</sub>" or "erase" (cf footnote 12 in Post (1947), <i>Undecidable</i> p.&#160;300). The abbreviations are Turing's (<i>Undecidable</i> p.&#160;119). Subsequent to Turing's original paper in 1936–1937, machine-models have allowed all nine possible types of five-tuples:</p>
+<table class="wikitable" style="text-align: center">
+<tr>
+<th></th>
+<th style="width:15%">Current m-configuration (Turing state)</th>
+<th>Tape symbol</th>
+<th>Print-operation</th>
+<th>Tape-motion</th>
+<th style="width:15%">Final m-configuration (Turing state)</th>
+<th>5-tuple</th>
+<th>5-tuple comments</th>
+<th>4-tuple</th>
+</tr>
+<tr>
+<td>N1</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Print(S<sub>k</sub>)</td>
+<td>Left L</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, S<sub>k</sub>, L, q<sub>m</sub>)</td>
+<td>"blank" = S<sub>0</sub>, 1=S<sub>1</sub>, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td>N2</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Print(S<sub>k</sub>)</td>
+<td>Right R</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, S<sub>k</sub>, R, q<sub>m</sub>)</td>
+<td>"blank" = S<sub>0</sub>, 1=S<sub>1</sub>, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td>N3</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Print(S<sub>k</sub>)</td>
+<td>None N</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, S<sub>k</sub>, N, q<sub>m</sub>)</td>
+<td>"blank" = S<sub>0</sub>, 1=S<sub>1</sub>, etc.</td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, S<sub>k</sub>, q<sub>m</sub>)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>None N</td>
+<td>Left L</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, N, L, q<sub>m</sub>)</td>
+<td></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, L, q<sub>m</sub>)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>None N</td>
+<td>Right R</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, N, R, q<sub>m</sub>)</td>
+<td></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, R, q<sub>m</sub>)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>None N</td>
+<td>None N</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, N, N, q<sub>m</sub>)</td>
+<td>Direct "jump"</td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, N, q<sub>m</sub>)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Erase</td>
+<td>Left L</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, E, L, q<sub>m</sub>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Erase</td>
+<td>Right R</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, E, R, q<sub>m</sub>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>q<sub>i</sub></td>
+<td>S<sub>j</sub></td>
+<td>Erase</td>
+<td>None N</td>
+<td>q<sub>m</sub></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, E, N, q<sub>m</sub>)</td>
+<td></td>
+<td>(q<sub>i</sub>, S<sub>j</sub>, E, q<sub>m</sub>)</td>
+</tr>
+</table>
+<p>Any Turing table (list of instructions) can be constructed from the above nine 5-tuples. For technical reasons, the three non-printing or "N" instructions (4, 5, 6) can usually be dispensed with. For examples see <a href="http://en.wikipedia.org/wiki/Turing_machine_examples" title="Turing machine examples">Turing machine examples</a>.</p>
+<p>Less frequently the use of 4-tuples are encountered: these represent a further atomization of the Turing instructions (cf Post (1947), Boolos &amp; Jeffrey (1974, 1999), Davis-Sigal-Weyuker (1994)); also see more at <a href="http://en.wikipedia.org/wiki/Post–Turing_machine" title="Post–Turing machine">Post–Turing machine</a>.</p>
+<h3><span class="mw-headline" id="The_.22state.22">The "state"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=5" title="Edit section: The &quot;state&quot;">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The word "state" used in context of Turing machines can be a source of confusion, as it can mean two things. Most commentators after Turing have used "state" to mean the name/designator of the current instruction to be performed—i.e. the contents of the state register. But Turing (1936) made a strong distinction between a record of what he called the machine's "m-configuration", (its internal state) and the machine's (or person's) "state of progress" through the computation - the current state of the total system. What Turing called "the state formula" includes both the current instruction and <i>all</i> the symbols on the tape:</p>
+<blockquote class="templatequote">
+<p>Thus the state of progress of the computation at any stage is completely determined by the note of instructions and the symbols on the tape. That is, the <b>state of the system</b> may be described by a single expression (sequence of symbols) consisting of the symbols on the tape followed by Δ (which we suppose not to appear elsewhere) and then by the note of instructions. This expression is called the 'state formula'.</p>
+<div class="templatequotecite">—<i>Undecidable</i>, p.139–140, emphasis added</div>
+</blockquote>
+<p>Earlier in his paper Turing carried this even further: he gives an example where he placed a symbol of the current "m-configuration"—the instruction's label—beneath the scanned square, together with all the symbols on the tape (<i>Undecidable</i>, p.&#160;121); this he calls "the <i>complete configuration</i>" (<i>Undecidable</i>, p.&#160;118). To print the "complete configuration" on one line, he places the state-label/m-configuration to the <i>left</i> of the scanned symbol.</p>
+<p>A variant of this is seen in Kleene (1952) where <a href="http://en.wikipedia.org/wiki/Stephen_Cole_Kleene" title="Stephen Cole Kleene">Kleene</a> shows how to write the <a href="http://en.wikipedia.org/wiki/Gödel_number" title="Gödel number" class="mw-redirect">Gödel number</a> of a machine's "situation": he places the "m-configuration" symbol q<sub>4</sub> over the scanned square in roughly the center of the 6 non-blank squares on the tape (see the Turing-tape figure in this article) and puts it to the <i>right</i> of the scanned square. But Kleene refers to "q<sub>4</sub>" itself as "the machine state" (Kleene, p.&#160;374-375). Hopcroft and Ullman call this composite the "instantaneous description" and follow the Turing convention of putting the "current state" (instruction-label, m-configuration) to the <i>left</i> of the scanned symbol (p.&#160;149).</p>
+<p><b>Example: total state of 3-state 2-symbol busy beaver after 3 "moves"</b> (taken from example "run" in the figure below):</p>
+<dl>
+<dd>
+<dl>
+<dd>1<b>A</b>1</dd>
+</dl>
+</dd>
+</dl>
+<p>This means: after three moves the tape has ... 000110000 ... on it, the head is scanning the right-most 1, and the state is <b>A</b>. Blanks (in this case represented by "0"s) can be part of the total state as shown here: <b>B</b>01; the tape has a single 1 on it, but the head is scanning the 0 ("blank") to its left and the state is <b>B</b>.</p>
+<p>"State" in the context of Turing machines should be clarified as to which is being described: (<i>i</i>) the current instruction, or (<i>ii</i>) the list of symbols on the tape together with the current instruction, or (<i>iii</i>) the list of symbols on the tape together with the current instruction placed to the left of the scanned symbol or to the right of the scanned symbol.</p>
+<p>Turing's biographer Andrew Hodges (1983: 107) has noted and discussed this confusion.</p>
+<h3><span class="mw-headline" id="Turing_machine_.22state.22_diagrams">Turing machine "state" diagrams</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=6" title="Edit section: Turing machine &quot;state&quot; diagrams">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<caption>The table for the 3-state busy beaver ("P" = print/write a "1")</caption>
+<tr>
+<th>Tape symbol</th>
+<th colspan="3">Current state A</th>
+<th colspan="3">Current state B</th>
+<th colspan="3">Current state C</th>
+</tr>
+<tr>
+<td></td>
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+<td>Write symbol</td>
+<td>Move tape</td>
+<td>Next state</td>
+</tr>
+<tr>
+<td><b>0</b></td>
+<td>P</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>P</td>
+<td>L</td>
+<td><b>A</b></td>
+<td>P</td>
+<td>L</td>
+<td><b>B</b></td>
+</tr>
+<tr>
+<td><b>1</b></td>
+<td>P</td>
+<td>L</td>
+<td><b>C</b></td>
+<td>P</td>
+<td>R</td>
+<td><b>B</b></td>
+<td>P</td>
+<td>R</td>
+<td><b>HALT</b></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:502px;"><a href="http://en.wikipedia.org/wiki/File:State_diagram_3_state_busy_beaver_2B.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/State_diagram_3_state_busy_beaver_2B.svg/500px-State_diagram_3_state_busy_beaver_2B.svg.png" width="500" height="214" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/State_diagram_3_state_busy_beaver_2B.svg/750px-State_diagram_3_state_busy_beaver_2B.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/State_diagram_3_state_busy_beaver_2B.svg/1000px-State_diagram_3_state_busy_beaver_2B.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:State_diagram_3_state_busy_beaver_2B.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The "3-state busy beaver" Turing machine in a <a href="http://en.wikipedia.org/wiki/Finite_State_Machine" title="Finite State Machine" class="mw-redirect">finite state representation</a>. Each circle represents a "state" of the TABLE—an "m-configuration" or "instruction". "Direction" of a state <i>transition</i> is shown by an arrow. The label (e.g.. <b>0/P,R</b>) near the outgoing state (at the "tail" of the arrow) specifies the scanned symbol that causes a particular transition (e.g. <b>0</b>) followed by a slash <b>/</b>, followed by the subsequent "behaviors" of the machine, e.g. "<b>P</b> <b>P</b>rint" then move tape "<b>R</b> <b>R</b>ight". No general accepted format exists. The convention shown is after McClusky (1965), Booth (1967), Hill, and Peterson (1974).</div>
+</div>
+</div>
+<p>To the right: the above TABLE as expressed as a "state transition" diagram.</p>
+<p>Usually large TABLES are better left as tables (Booth, p.&#160;74). They are more readily simulated by computer in tabular form (Booth, p.&#160;74). However, certain concepts—e.g. machines with "reset" states and machines with repeating patterns (cf Hill and Peterson p.&#160;244ff)—can be more readily seen when viewed as a drawing.</p>
+<p>Whether a drawing represents an improvement on its TABLE must be decided by the reader for the particular context. See <a href="http://en.wikipedia.org/wiki/Finite_state_machine" title="Finite state machine" class="mw-redirect">Finite state machine</a> for more.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:502px;"><a href="http://en.wikipedia.org/wiki/File:State_diagram_3_state_busy_beaver_4_.JPG" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f9/State_diagram_3_state_busy_beaver_4_.JPG/500px-State_diagram_3_state_busy_beaver_4_.JPG" width="500" height="306" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f9/State_diagram_3_state_busy_beaver_4_.JPG/750px-State_diagram_3_state_busy_beaver_4_.JPG 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f9/State_diagram_3_state_busy_beaver_4_.JPG/1000px-State_diagram_3_state_busy_beaver_4_.JPG 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:State_diagram_3_state_busy_beaver_4_.JPG" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The evolution of the busy-beaver's computation starts at the top and proceeds to the bottom.</div>
+</div>
+</div>
+<p>The reader should again be cautioned that such diagrams represent a snapshot of their TABLE frozen in time, <i>not</i> the course ("trajectory") of a computation <i>through</i> time and/or space. While every time the busy beaver machine "runs" it will always follow the same state-trajectory, this is not true for the "copy" machine that can be provided with variable input "parameters".</p>
+<p>The diagram "Progress of the computation" shows the 3-state busy beaver's "state" (instruction) progress through its computation from start to finish. On the far right is the Turing "complete configuration" (Kleene "situation", Hopcroft–Ullman "instantaneous description") at each step. If the machine were to be stopped and cleared to blank both the "state register" and entire tape, these "configurations" could be used to rekindle a computation anywhere in its progress (cf Turing (1936) <i>Undecidable</i> pp.&#160;139–140).</p>
+<h2><span class="mw-headline" id="Models_equivalent_to_the_Turing_machine_model">Models equivalent to the Turing machine model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=7" title="Edit section: Models equivalent to the Turing machine model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink boilerplate seealso">See also: <a href="http://en.wikipedia.org/wiki/Turing_machine_equivalents" title="Turing machine equivalents">Turing machine equivalents</a>, <a href="http://en.wikipedia.org/wiki/Register_machine" title="Register machine">Register machine</a>,&#160;and <a href="http://en.wikipedia.org/wiki/Post–Turing_machine" title="Post–Turing machine">Post–Turing machine</a></div>
+<p>Many machines that might be thought to have more computational capability than a simple universal Turing machine can be shown to have no more power (Hopcroft and Ullman p.&#160;159, cf Minsky (1967)). They might compute faster, perhaps, or use less memory, or their instruction set might be smaller, but they cannot compute more powerfully (i.e. more mathematical functions). (Recall that the <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">Church–Turing thesis</a> <i>hypothesizes</i> this to be true for any kind of machine: that anything that can be "computed" can be computed by some Turing machine.)</p>
+<p>A Turing machine is equivalent to a <a href="http://en.wikipedia.org/wiki/Pushdown_automaton" title="Pushdown automaton">pushdown automaton</a> that has been made more flexible and concise by relaxing the <a href="http://en.wikipedia.org/wiki/LIFO_(computing)" title="LIFO (computing)">last-in-first-out</a> requirement of its stack.</p>
+<p>At the other extreme, some very simple models turn out to be <a href="http://en.wikipedia.org/wiki/Turing_completeness" title="Turing completeness">Turing-equivalent</a>, i.e. to have the same computational power as the Turing machine model.</p>
+<p>Common equivalent models are the <a href="http://en.wikipedia.org/wiki/Multi-tape_Turing_machine" title="Multi-tape Turing machine" class="mw-redirect">multi-tape Turing machine</a>, <a href="http://en.wikipedia.org/wiki/Multi-track_Turing_machine" title="Multi-track Turing machine">multi-track Turing machine</a>, machines with input and output, and the <a href="http://en.wikipedia.org/wiki/Non-deterministic_Turing_machine" title="Non-deterministic Turing machine"><i>non-deterministic</i> Turing machine</a> (NDTM) as opposed to the <i>deterministic</i> Turing machine (DTM) for which the action table has at most one entry for each combination of symbol and state.</p>
+<p><a href="http://en.wikipedia.org/wiki/Read-only_right_moving_Turing_machines" title="Read-only right moving Turing machines">Read-only, right-moving Turing machines</a> are equivalent to <a href="http://en.wikipedia.org/wiki/Nondeterministic_finite_automaton" title="Nondeterministic finite automaton">NDFAs</a> (as well as <a href="http://en.wikipedia.org/wiki/Deterministic_finite_automaton" title="Deterministic finite automaton">DFAs</a> by conversion using the <a href="http://en.wikipedia.org/wiki/NDFA_to_DFA_conversion_algorithm" title="NDFA to DFA conversion algorithm" class="mw-redirect">NDFA to DFA conversion algorithm</a>).</p>
+<p>For practical and didactical intentions the equivalent <a href="http://en.wikipedia.org/wiki/Register_machine" title="Register machine">register machine</a> can be used as a usual <a href="Assembly_language.html" title="Assembly language">assembly</a> <a href="Programming_language.html" title="Programming language">programming language</a>.</p>
+<h2><span class="mw-headline" id="Choice_c-machines.2C_Oracle_o-machines">Choice c-machines, Oracle o-machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=8" title="Edit section: Choice c-machines, Oracle o-machines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Early in his paper (1936) Turing makes a distinction between an "automatic machine"—its "motion ... completely determined by the configuration" and a "choice machine":</p>
+<blockquote class="templatequote">
+<p>...whose motion is only partially determined by the configuration ... When such a machine reaches one of these ambiguous configurations, it cannot go on until some arbitrary choice has been made by an external operator. This would be the case if we were using machines to deal with axiomatic systems.</p>
+<div class="templatequotecite">—<i>Undecidable</i>, p. 118</div>
+</blockquote>
+<p>Turing (1936) does not elaborate further except in a footnote in which he describes how to use an a-machine to "find all the provable formulae of the [Hilbert] calculus" rather than use a choice machine. He "suppose[s] that the choices are always between two possibilities 0 and 1. Each proof will then be determined by a sequence of choices i<sub>1</sub>, i<sub>2</sub>, ..., i<sub>n</sub> (i<sub>1</sub> = 0 or 1, i<sub>2</sub> = 0 or 1, ..., i<sub>n</sub> = 0 or 1), and hence the number 2<sup>n</sup> + i<sub>1</sub>2<sup>n-1</sup> + i<sub>2</sub>2<sup>n-2</sup> + ... +i<sub>n</sub> completely determines the proof. The automatic machine carries out successively proof 1, proof 2, proof 3, ..." (Footnote ‡, <i>Undecidable</i>, p.&#160;138)</p>
+<p>This is indeed the technique by which a deterministic (i.e. a-) Turing machine can be used to mimic the action of a <a href="http://en.wikipedia.org/wiki/Nondeterministic_Turing_machine" title="Nondeterministic Turing machine" class="mw-redirect">nondeterministic Turing machine</a>; Turing solved the matter in a footnote and appears to dismiss it from further consideration.</p>
+<p>An <a href="http://en.wikipedia.org/wiki/Oracle_machine" title="Oracle machine">oracle machine</a> or o-machine is a Turing a-machine that pauses its computation at state "<b>o</b>" while, to complete its calculation, it "awaits the decision" of "the oracle"—an unspecified entity "apart from saying that it cannot be a machine" (Turing (1939), Undecidable p.&#160;166–168). The concept is now actively used by mathematicians.</p>
+<h2><span class="mw-headline" id="Universal_Turing_machines">Universal Turing machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=9" title="Edit section: Universal Turing machines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="http://en.wikipedia.org/wiki/Universal_Turing_machine" title="Universal Turing machine">Universal Turing machine</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Model_of_a_Turing_machine.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Model_of_a_Turing_machine.jpg/220px-Model_of_a_Turing_machine.jpg" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Model_of_a_Turing_machine.jpg/330px-Model_of_a_Turing_machine.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Model_of_a_Turing_machine.jpg/440px-Model_of_a_Turing_machine.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Model_of_a_Turing_machine.jpg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An implementation of a Turing machine</div>
+</div>
+</div>
+<p>As Turing wrote in <i>Undecidable</i>, p.&#160;128 (italics added):</p>
+<blockquote class="templatequote">
+<p>It is possible to invent a <i>single machine</i> which can be used to compute <i>any</i> computable sequence. If this machine <b>U</b> is supplied with the tape on the beginning of which is written the string of quintuples separated by semicolons of some computing machine <b>M</b>, then <b>U</b> will compute the same sequence as <b>M</b>.</p>
+</blockquote>
+<p>This finding is now taken for granted, but at the time (1936) it was considered astonishing. The model of computation that Turing called his "universal machine"—"<b>U</b>" for short—is considered by some (cf Davis (2000)) to have been the fundamental theoretical breakthrough that led to the notion of the <a href="http://en.wikipedia.org/wiki/Stored-program_computer" title="Stored-program computer">stored-program computer</a>.</p>
+<blockquote class="templatequote">
+<p>Turing's paper ... contains, in essence, the invention of the modern computer and some of the programming techniques that accompanied it.</p>
+<div class="templatequotecite">—Minsky (1967), p. 104</div>
+</blockquote>
+<p>In terms of <a href="http://en.wikipedia.org/wiki/Computational_complexity" title="Computational complexity" class="mw-redirect">computational complexity</a>, a multi-tape universal Turing machine need only be slower by <a href="http://en.wikipedia.org/wiki/Logarithm" title="Logarithm">logarithmic</a> factor compared to the machines it simulates. This result was obtained in 1966 by F. C. Hennie and <a href="http://en.wikipedia.org/wiki/R._E._Stearns" title="R. E. Stearns" class="mw-redirect">R. E. Stearns</a>. (Arora and Barak, 2009, theorem 1.9)</p>
+<h2><span class="mw-headline" id="Comparison_with_real_machines">Comparison with real machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=10" title="Edit section: Comparison with real machines">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Lego_Turing_Machine.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lego_Turing_Machine.jpg/220px-Lego_Turing_Machine.jpg" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lego_Turing_Machine.jpg/330px-Lego_Turing_Machine.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lego_Turing_Machine.jpg/440px-Lego_Turing_Machine.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Lego_Turing_Machine.jpg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+A Turing machine realisation in LEGO</div>
+</div>
+</div>
+<p>It is often said that Turing machines, unlike simpler automata, are as powerful as real machines, and are able to execute any operation that a real program can. What is neglected in this statement is that, because a real machine can only have a finite number of <i>configurations</i>, this "real machine" is really nothing but a <a href="http://en.wikipedia.org/wiki/Linear_bounded_automaton" title="Linear bounded automaton">linear bounded automaton</a>. On the other hand, Turing machines are equivalent to machines that have an unlimited amount of storage space for their computations. As a matter of fact, Turing machines are not intended to model computers, but rather they are intended to model computation itself. Historically, computers, which compute only on their (fixed) internal storage, were developed only later.</p>
+<p>There are a number of ways to explain why Turing machines are useful models of real computers:</p>
+<ol>
+<li>Anything a real computer can compute, a Turing machine can also compute. For example: "A Turing machine can simulate any type of subroutine found in programming languages, including recursive procedures and any of the known parameter-passing mechanisms" (Hopcroft and Ullman p.&#160;157). A large enough FSA can also model any real computer, disregarding IO. Thus, a statement about the limitations of Turing machines will also apply to real computers.</li>
+<li>The difference lies only with the ability of a Turing machine to manipulate an unbounded amount of data. However, given a finite amount of time, a Turing machine (like a real machine) can only manipulate a finite amount of data.</li>
+<li>Like a Turing machine, a real machine can have its storage space enlarged as needed, by acquiring more disks or other storage media. If the supply of these runs short, the Turing machine may become less useful as a model. But the fact is that neither Turing machines nor real machines need astronomical amounts of storage space in order to perform useful computation. The processing time required is usually much more of a problem.</li>
+<li>Descriptions of real machine programs using simpler abstract models are often much more complex than descriptions using Turing machines. For example, a Turing machine describing an algorithm may have a few hundred states, while the equivalent deterministic finite automaton (DFA) on a given real machine has quadrillions. This makes the DFA representation infeasible to analyze.</li>
+<li>Turing machines describe algorithms independent of how much memory they use. There is a limit to the memory possessed by any current machine, but this limit can rise arbitrarily in time. Turing machines allow us to make statements about algorithms which will (theoretically) hold forever, regardless of advances in <i>conventional</i> computing machine architecture.</li>
+<li>Turing machines simplify the statement of algorithms. Algorithms running on Turing-equivalent abstract machines are usually more general than their counterparts running on real machines, because they have arbitrary-precision data types available and never have to deal with unexpected conditions (including, but not limited to, running <a href="http://en.wikipedia.org/wiki/Out_of_memory" title="Out of memory">out of memory</a>).</li>
+</ol>
+<p>One way in which Turing machines are a poor model for programs is that many real programs, such as <a href="Operating_system.html" title="Operating system">operating systems</a> and <a href="http://en.wikipedia.org/wiki/Word_processor" title="Word processor">word processors</a>, are written to receive unbounded input over time, and therefore do not halt. Turing machines do not model such ongoing computation well (but can still model portions of it, such as individual procedures).</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="http://en.wikipedia.org/wiki/File:Turingmachine.jpg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Turingmachine.jpg/220px-Turingmachine.jpg" width="220" height="103" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Turingmachine.jpg/330px-Turingmachine.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Turingmachine.jpg/440px-Turingmachine.jpg 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Turingmachine.jpg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An experimental prototype to achieve Turing machine</div>
+</div>
+</div>
+<p>An experimental prototype to achieve Turing machines (electro-mechanics: performed with the technologies of the time Turing), with a (so unlimited) circular tape and easily programmable. Designed in two parts transportable, it can be used for presentations and courses. See the site&#160;: <a rel="nofollow" class="external text" href="http://www.machinedeturing.com/">Turing machine</a></p>
+<p><br /></p>
+<h3><span class="mw-headline" id="Limitations_of_Turing_machines">Limitations of Turing machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=11" title="Edit section: Limitations of Turing machines">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Computational_complexity_theory">Computational complexity theory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=12" title="Edit section: Computational complexity theory">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink boilerplate further">Further information: <a href="Computational_complexity_theory.html" title="Computational complexity theory">Computational complexity theory</a></div>
+<p>A limitation of Turing machines is that they do not model the strengths of a particular arrangement well. For instance, modern stored-program computers are actually instances of a more specific form of <a href="http://en.wikipedia.org/wiki/Abstract_machine" title="Abstract machine">abstract machine</a> known as the <a href="http://en.wikipedia.org/wiki/Random_access_stored_program_machine" title="Random access stored program machine" class="mw-redirect">random access stored program machine</a> or RASP machine model. Like the <a href="http://en.wikipedia.org/wiki/Universal_Turing_machine" title="Universal Turing machine">Universal Turing machine</a> the RASP stores its "program" in "memory" external to its finite-state machine's "instructions". Unlike the universal Turing machine, the RASP has an infinite number of distinguishable, numbered but unbounded "registers"—memory "cells" that can contain any integer (cf. Elgot and Robinson (1964), Hartmanis (1971), and in particular Cook-Rechow (1973); references at <a href="http://en.wikipedia.org/wiki/Random_access_machine" title="Random access machine" class="mw-redirect">random access machine</a>). The RASP's finite-state machine is equipped with the capability for indirect addressing (e.g. the contents of one register can be used as an address to specify another register); thus the RASP's "program" can address any register in the register-sequence. The upshot of this distinction is that there are computational optimizations that can be performed based on the memory indices, which are not possible in a general Turing machine; thus when Turing machines are used as the basis for bounding running times, a 'false lower bound' can be proven on certain algorithms' running times (due to the false simplifying assumption of a Turing machine). An example of this is <a href="http://en.wikipedia.org/wiki/Binary_search" title="Binary search" class="mw-redirect">binary search</a>, an algorithm that can be shown to perform more quickly when using the RASP model of computation rather than the Turing machine model.</p>
+<h4><span class="mw-headline" id="Concurrency">Concurrency</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=13" title="Edit section: Concurrency">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Another limitation of Turing machines is that they do not model concurrency well. For example, there is a bound on the size of integer that can be computed by an always-halting nondeterministic Turing machine starting on a blank tape. (See article on <a href="http://en.wikipedia.org/wiki/Unbounded_nondeterminism" title="Unbounded nondeterminism">unbounded nondeterminism</a>.) By contrast, there are always-halting concurrent systems with no inputs that can compute an integer of unbounded size. (A process can be created with local storage that is initialized with a count of 0 that concurrently sends itself both a stop and a go message. When it receives a go message, it increments its count by 1 and sends itself a go message. When it receives a stop message, it stops with an unbounded number in its local storage.)</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=14" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink boilerplate seealso">See also: <a href="Algorithm.html" title="Algorithm">Algorithm</a>&#160;and <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">Church–Turing thesis</a></div>
+<p>They were described in 1936 by <a href="Alan_Turing.html" title="Alan Turing">Alan Turing</a>.</p>
+<h3><span class="mw-headline" id="Historical_background:_computational_machinery">Historical background: computational machinery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=15" title="Edit section: Historical background: computational machinery">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/Robin_Gandy" title="Robin Gandy">Robin Gandy</a> (1919–1995)—a student of <a href="Alan_Turing.html" title="Alan Turing">Alan Turing</a> (1912–1954) and his lifelong friend—traces the lineage of the notion of "calculating machine" back to <a href="http://en.wikipedia.org/wiki/Babbage" title="Babbage" class="mw-redirect">Babbage</a> (circa 1834) and actually proposes "Babbage's Thesis":</p>
+<blockquote class="templatequote">
+<p><i>That the whole of development and operations of analysis are now capable of being executed by machinery</i>.</p>
+<div class="templatequotecite">—(italics in Babbage as cited by Gandy, p. 54)</div>
+</blockquote>
+<p>Gandy's analysis of Babbage's <a href="Analytical_Engine.html" title="Analytical Engine">Analytical Engine</a> describes the following five operations (cf p.&#160;52–53):</p>
+<ol>
+<li>The arithmetic functions +, −, × where − indicates "proper" subtraction x&#160;−&#160;y&#160;=&#160;0 if y&#160;≥&#160;x</li>
+<li>Any sequence of operations is an operation</li>
+<li>Iteration of an operation (repeating n times an operation P)</li>
+<li>Conditional iteration (repeating n times an operation P conditional on the "success" of test T)</li>
+<li>Conditional transfer (i.e. conditional "<a href="Goto.html" title="Goto">goto</a>").</li>
+</ol>
+<p>Gandy states that "the functions which can be calculated by (1), (2), and (4) are precisely those which are <a href="http://en.wikipedia.org/wiki/Turing_computable" title="Turing computable" class="mw-redirect">Turing computable</a>." (p.&#160;53). He cites other proposals for "universal calculating machines" included those of <a href="http://en.wikipedia.org/wiki/Percy_Ludgate" title="Percy Ludgate">Percy Ludgate</a> (1909), <a href="http://en.wikipedia.org/wiki/Leonardo_Torres_y_Quevedo" title="Leonardo Torres y Quevedo">Leonardo Torres y Quevedo</a> (1914), <a href="http://en.wikipedia.org/w/index.php?title=Maurice_d%27Ocagne&amp;action=edit&amp;redlink=1" class="new" title="Maurice d'Ocagne (page does not exist)">Maurice d'Ocagne</a> (1922), <a href="http://en.wikipedia.org/wiki/Louis_Couffignal" title="Louis Couffignal">Louis Couffignal</a> (1933), <a href="http://en.wikipedia.org/wiki/Vannevar_Bush" title="Vannevar Bush">Vannevar Bush</a> (1936), <a href="Howard_Aiken.html" title="Howard Aiken" class="mw-redirect">Howard Aiken</a> (1937). However:</p>
+<blockquote class="templatequote">
+<p>...&#160;the emphasis is on programming a fixed iterable sequence of arithmetical operations. The fundamental importance of conditional iteration and conditional transfer for a general theory of calculating machines is not recognized ...</p>
+<div class="templatequotecite">—Gandy p. 55</div>
+</blockquote>
+<h3><span class="mw-headline" id="The_Entscheidungsproblem_.28the_.22decision_problem.22.29:_Hilbert.27s_tenth_question_of_1900">The Entscheidungsproblem (the "decision problem"): Hilbert's tenth question of 1900</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=16" title="Edit section: The Entscheidungsproblem (the &quot;decision problem&quot;): Hilbert's tenth question of 1900">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>With regards to <a href="http://en.wikipedia.org/wiki/Hilbert%27s_problems" title="Hilbert's problems">Hilbert's problems</a> posed by the famous mathematician <a href="http://en.wikipedia.org/wiki/David_Hilbert" title="David Hilbert">David Hilbert</a> in 1900, an aspect of problem #10 had been floating about for almost 30 years before it was framed precisely. Hilbert's original expression for #10 is as follows:</p>
+<blockquote class="templatequote">
+<p><b>10. Determination of the solvability of a Diophantine equation</b>. Given a <a href="http://en.wikipedia.org/wiki/Diophantine_equation" title="Diophantine equation">Diophantine equation</a> with any number of unknown quantities and with rational integral coefficients: To devise a process according to which it can be determined in a finite number of operations whether the equation is solvable in rational integers. The Entscheidungsproblem [decision problem for <a href="http://en.wikipedia.org/wiki/First-order_logic" title="First-order logic">first-order logic</a>] is solved when we know a procedure that allows for any given logical expression to decide by finitely many operations its validity or satisfiability ... The Entscheidungsproblem must be considered the main problem of mathematical logic.</p>
+<div class="templatequotecite">—quoted, with this translation and the original German, in Dershowitz and Gurevich, 2008</div>
+</blockquote>
+<p>By 1922, this notion of "<a href="http://en.wikipedia.org/wiki/Entscheidungsproblem" title="Entscheidungsproblem">Entscheidungsproblem</a>" had developed a bit, and <a href="http://en.wikipedia.org/wiki/Heinrich_Behmann" title="Heinrich Behmann">H. Behmann</a> stated that</p>
+<blockquote class="templatequote">
+<p>...&#160;most general form of the Entscheidungsproblem [is] as follows:</p>
+<dl>
+<dd>A quite definite generally applicable prescription is required which will allow one to decide in a finite number of steps the truth or falsity of a given purely logical assertion ...
+<div class="templatequotecite">—Gandy p. 57, quoting Behmann</div>
+</dd>
+</dl>
+</blockquote>
+<blockquote class="templatequote">
+<p>Behmann remarks that ... the general problem is equivalent to the problem of deciding which mathematical propositions are true.</p>
+<div class="templatequotecite">—<i>ibid.</i></div>
+</blockquote>
+<blockquote class="templatequote">
+<p>If one were able to solve the Entscheidungsproblem then one would have a "procedure for solving many (or even all) mathematical problems".</p>
+<div class="templatequotecite">—<i>ibid.</i>, p. 92</div>
+</blockquote>
+<p>By the 1928 international congress of mathematicians, Hilbert "made his questions quite precise. First, was mathematics <i><a href="http://en.wikipedia.org/wiki/Completeness#Mathematical_completeness" title="Completeness">complete</a></i> ... Second, was mathematics <i><a href="http://en.wikipedia.org/wiki/Consistency_proof" title="Consistency proof" class="mw-redirect">consistent</a></i> ... And thirdly, was mathematics <i><a href="http://en.wikipedia.org/wiki/Decidability_(logic)" title="Decidability (logic)">decidable</a></i>?" (Hodges p.&#160;91, Hawking p.&#160;1121). The first two questions were answered in 1930 by <a href="Kurt_G%c3%b6del.html" title="Kurt Gödel">Kurt Gödel</a> at the very same meeting where Hilbert delivered his retirement speech (much to the chagrin of Hilbert); the third—the Entscheidungsproblem—had to wait until the mid-1930s.</p>
+<p>The problem was that an answer first required a precise definition of "<i>definite general applicable prescription</i>", which Princeton professor <a href="http://en.wikipedia.org/wiki/Alonzo_Church" title="Alonzo Church">Alonzo Church</a> would come to call "<a href="http://en.wikipedia.org/wiki/Effective_calculability" title="Effective calculability" class="mw-redirect">effective calculability</a>", and in 1928 no such definition existed. But over the next 6–7 years <a href="http://en.wikipedia.org/wiki/Emil_Post" title="Emil Post" class="mw-redirect">Emil Post</a> developed his definition of a worker moving from room to room writing and erasing marks per a list of instructions (Post 1936), as did Church and his two students <a href="http://en.wikipedia.org/wiki/Stephen_Kleene" title="Stephen Kleene" class="mw-redirect">Stephen Kleene</a> and <a href="http://en.wikipedia.org/wiki/J._B._Rosser" title="J. B. Rosser" class="mw-redirect">J. B. Rosser</a> by use of Church's <a href="http://en.wikipedia.org/wiki/Lambda-calculus" title="Lambda-calculus" class="mw-redirect">lambda-calculus</a> and Gödel's <a href="http://en.wikipedia.org/wiki/Recursion_theory" title="Recursion theory" class="mw-redirect">recursion theory</a> (1934). Church's paper (published 15 April 1936) showed that the Entscheidungsproblem was indeed "undecidable" and beat Turing to the punch by almost a year (Turing's paper submitted 28 May 1936, published January 1937). In the meantime, Emil Post submitted a brief paper in the fall of 1936, so Turing at least had priority over Post. While Church refereed Turing's paper, Turing had time to study Church's paper and add an Appendix where he sketched a proof that Church's lambda-calculus and his machines would compute the same functions.</p>
+<blockquote class="templatequote">
+<p>But what Church had done was something rather different, and in a certain sense weaker. ... the Turing construction was more direct, and provided an argument from first principles, closing the gap in Church's demonstration.</p>
+<div class="templatequotecite">—Hodges p. 112</div>
+</blockquote>
+<p>And Post had only proposed a definition of <a href="http://en.wikipedia.org/wiki/Church–Turing_thesis" title="Church–Turing thesis">calculability</a> and criticized Church's "definition", but had proved nothing.</p>
+<h3><span class="mw-headline" id="Alan_Turing.27s_a-_.28automatic-.29machine">Alan Turing's a- (automatic-)machine</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=17" title="Edit section: Alan Turing's a- (automatic-)machine">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the spring of 1935, Turing as a young Master's student at <a href="http://en.wikipedia.org/wiki/King%27s_College_Cambridge" title="King's College Cambridge" class="mw-redirect">King's College Cambridge</a>, <a href="http://en.wikipedia.org/wiki/UK" title="UK" class="mw-redirect">UK</a>, took on the challenge; he had been stimulated by the lectures of the logician <a href="http://en.wikipedia.org/wiki/M._H._A._Newman" title="M. H. A. Newman" class="mw-redirect">M. H. A. Newman</a> "and learned from them of Gödel's work and the Entscheidungsproblem ... Newman used the word 'mechanical' ... In his obituary of Turing 1955 Newman writes:</p>
+<blockquote class="templatequote">
+<p>To the question 'what is a "mechanical" process?' Turing returned the characteristic answer 'Something that can be done by a machine' and he embarked on the highly congenial task of analysing the general notion of a computing machine.</p>
+<div class="templatequotecite">—Gandy, p. 74</div>
+</blockquote>
+<p>Gandy states that:</p>
+<blockquote class="templatequote">
+<p>I suppose, but do not know, that Turing, right from the start of his work, had as his goal a proof of the undecidability of the Entscheidungsproblem. He told me that the 'main idea' of the paper came to him when he was lying in Grantchester meadows in the summer of 1935. The 'main idea' might have either been his analysis of computation or his realization that there was a universal machine, and so a <a href="http://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument" title="Cantor's diagonal argument">diagonal argument</a> to prove unsolvability.</p>
+<div class="templatequotecite">—<i>ibid.</i>, p. 76</div>
+</blockquote>
+<p>While Gandy believed that Newman's statement above is "misleading", this opinion is not shared by all. Turing had a lifelong interest in machines: "Alan had dreamt of inventing typewriters as a boy; [his mother] Mrs. Turing had a typewriter; and he could well have begun by asking himself what was meant by calling a typewriter 'mechanical'" (Hodges p.&#160;96). While at Princeton pursuing his PhD, Turing built a Boolean-logic multiplier (see below). His PhD thesis, titled "Systems of Logic Based on Ordinals", contains the following definition of "a computable function":</p>
+<blockquote class="templatequote">
+<p>It was stated above that 'a function is effectively calculable if its values can be found by some purely mechanical process'. We may take this statement literally, understanding by a purely mechanical process one which could be carried out by a machine. It is possible to give a mathematical description, in a certain normal form, of the structures of these machines. The development of these ideas leads to the author's definition of a computable function, and to an identification of computability with effective calculability. It is not difficult, though somewhat laborious, to prove that these three definitions [the 3rd is the λ-calculus] are equivalent.</p>
+<div class="templatequotecite">—Turing (1939) in <i>The Undecidable</i>, p. 160</div>
+</blockquote>
+<p>When Turing returned to the UK he ultimately became jointly responsible for breaking the German secret codes created by encryption machines called "The Enigma"; he also became involved in the design of the ACE (<a href="http://en.wikipedia.org/wiki/Automatic_Computing_Engine" title="Automatic Computing Engine">Automatic Computing Engine</a>), "[Turing's] ACE proposal was effectively self-contained, and its roots lay not in the <a href="http://en.wikipedia.org/wiki/EDVAC" title="EDVAC">EDVAC</a> [the USA's initiative], but in his own universal machine" (Hodges p.&#160;318). Arguments still continue concerning the origin and nature of what has been named by Kleene (1952) <a href="http://en.wikipedia.org/wiki/Turing%27s_Thesis" title="Turing's Thesis" class="mw-redirect">Turing's Thesis</a>. But what Turing <i>did prove</i> with his computational-machine model appears in his paper <i>On Computable Numbers, With an Application to the Entscheidungsproblem</i> (1937):</p>
+<blockquote class="templatequote">
+<p>[that] the Hilbert Entscheidungsproblem can have no solution ... I propose, therefore to show that there can be no general process for determining whether a given formula U of the functional calculus K is provable, i.e. that there can be no machine which, supplied with any one U of these formulae, will eventually say whether U is provable.</p>
+<div class="templatequotecite">—from Turing's paper as reprinted in <i>The Undecidable</i>, p. 145</div>
+</blockquote>
+<p>Turing's example (his second proof): If one is to ask for a general procedure to tell us: "Does this machine ever print 0", the question is "undecidable".</p>
+<h3><span class="mw-headline" id="1937.E2.80.931970:_The_.22digital_computer.22.2C_the_birth_of_.22computer_science.22">1937–1970: The "digital computer", the birth of "computer science"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=18" title="Edit section: 1937–1970: The &quot;digital computer&quot;, the birth of &quot;computer science&quot;">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In 1937, while at Princeton working on his PhD thesis, Turing built a digital (Boolean-logic) multiplier from scratch, making his own electromechanical relays (Hodges p.&#160;138). "Alan's task was to embody the logical design of a Turing machine in a network of relay-operated switches ..." (Hodges p.&#160;138). While Turing might have been just initially curious and experimenting, quite-earnest work in the same direction was going in Germany (<a href="http://en.wikipedia.org/wiki/Konrad_Zuse" title="Konrad Zuse">Konrad Zuse</a> (1938)), and in the United States (<a href="Howard_Aiken.html" title="Howard Aiken" class="mw-redirect">Howard Aiken</a>) and <a href="http://en.wikipedia.org/wiki/George_Stibitz" title="George Stibitz">George Stibitz</a> (1937); the fruits of their labors were used by the Axis and Allied military in <a href="World_War_II.html" title="World War II">World War II</a> (cf Hodges p.&#160;298–299). In the early to mid-1950s <a href="http://en.wikipedia.org/wiki/Hao_Wang_(academic)" title="Hao Wang (academic)">Hao Wang</a> and <a href="http://en.wikipedia.org/wiki/Marvin_Minsky" title="Marvin Minsky">Marvin Minsky</a> reduced the Turing machine to a simpler form (a precursor to the <a href="http://en.wikipedia.org/wiki/Post-Turing_machine" title="Post-Turing machine" class="mw-redirect">Post-Turing machine</a> of <a href="http://en.wikipedia.org/wiki/Martin_Davis" title="Martin Davis">Martin Davis</a>); simultaneously European researchers were reducing the new-fangled <a href="http://en.wikipedia.org/wiki/Electronic_computer" title="Electronic computer" class="mw-redirect">electronic computer</a> to a computer-like theoretical object equivalent to what was now being called a "Turing machine". In the late 1950s and early 1960s, the coincidentally parallel developments of Melzak and Lambek (1961), Minsky (1961), and Shepherdson and Sturgis (1961) carried the European work further and reduced the Turing machine to a more friendly, computer-like abstract model called the <a href="http://en.wikipedia.org/wiki/Counter_machine" title="Counter machine">counter machine</a>; Elgot and Robinson (1964), Hartmanis (1971), Cook and Reckhow (1973) carried this work even further with the <a href="http://en.wikipedia.org/wiki/Register_machine" title="Register machine">register machine</a> and <a href="http://en.wikipedia.org/wiki/Random_access_machine" title="Random access machine" class="mw-redirect">random access machine</a> models—but basically all are just multi-tape Turing machines with an arithmetic-like instruction set.</p>
+<h3><span class="mw-headline" id="1970.E2.80.93present:_the_Turing_machine_as_a_model_of_computation">1970–present: the Turing machine as a model of computation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=19" title="Edit section: 1970–present: the Turing machine as a model of computation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Today, the counter, register and random-access machines and their sire the Turing machine continue to be the models of choice for theorists investigating questions in the <a href="Theory_of_computation.html" title="Theory of computation">theory of computation</a>. In particular, <a href="Computational_complexity_theory.html" title="Computational complexity theory">computational complexity theory</a> makes use of the Turing machine:</p>
+<blockquote class="templatequote">
+<p>Depending on the objects one likes to manipulate in the computations (numbers like nonnegative integers or alphanumeric strings), two models have obtained a dominant position in machine-based complexity theory:</p>
+<dl>
+<dd><i>the off-line multitape Turing machine</i>..., which represents the standard model for string-oriented computation, and</dd>
+<dd>the <i>random access machine (RAM)</i> as introduced by Cook and Reckhow ..., which models the idealized Von Neumann style computer.
+<div class="templatequotecite">—van Emde Boas 1990:4</div>
+</dd>
+</dl>
+</blockquote>
+<blockquote class="templatequote">
+<p>Only in the related area of analysis of algorithms this role is taken over by the RAM model.</p>
+<div class="templatequotecite">—van Emde Boas 1990:16</div>
+</blockquote>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=20" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:100%;">
+<tr>
+<td align="left" valign="top">
+<ul>
+<li><a href="Algorithm.html" title="Algorithm">Algorithm</a>, for a brief history of some of the inventions and the mathematics leading to Turing's definition of what he called his "a-machine"</li>
+<li><a href="http://en.wikipedia.org/wiki/Arithmetical_hierarchy" title="Arithmetical hierarchy">Arithmetical hierarchy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bekenstein_bound" title="Bekenstein bound">Bekenstein bound</a>, showing the impossibility of infinite-tape Turing machines of finite size and bounded energy</li>
+<li><a href="http://en.wikipedia.org/wiki/BlooP_and_FlooP" title="BlooP and FlooP">BlooP and FlooP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Busy_beaver" title="Busy beaver">Busy beaver</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chaitin_constant" title="Chaitin constant" class="mw-redirect">Chaitin constant</a> or <a href="http://en.wikipedia.org/wiki/Omega_(computer_science)" title="Omega (computer science)" class="mw-redirect">Omega (computer science)</a> for information relating to the halting problem</li>
+<li><a href="http://en.wikipedia.org/wiki/Church-Turing_thesis" title="Church-Turing thesis" class="mw-redirect">Church-Turing thesis</a>, which says Turing machines can perform any computation that can be performed</li>
+<li><a href="Claude_Shannon.html" title="Claude Shannon">Claude Shannon</a>, another leading thinker in information theory</li>
+<li><a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" title="Conway's Game of Life">Conway's Game of Life</a>, a Turing-complete cellular automaton</li>
+<li><a href="http://en.wikipedia.org/wiki/Digital_infinity" title="Digital infinity">Digital infinity</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Genetix" title="Genetix">Genetix</a> a virtual machine created by Bernard Hodson containing only 34 executable instructions</li>
+<li><i><a href="http://en.wikipedia.org/wiki/Gödel,_Escher,_Bach:_An_Eternal_Golden_Braid" title="Gödel, Escher, Bach: An Eternal Golden Braid" class="mw-redirect">Gödel, Escher, Bach: An Eternal Golden Braid</a></i>, an influential book largely about the Church–Turing thesis</li>
+</ul>
+</td>
+<td align="left" valign="top">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Halting_problem" title="Halting problem">Halting problem</a>, for more references</li>
+<li><a href="http://en.wikipedia.org/wiki/Harvard_architecture" title="Harvard architecture">Harvard architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Langton%27s_ant" title="Langton's ant">Langton's ant</a> and <a href="http://en.wikipedia.org/wiki/Turmite" title="Turmite">Turmites</a>, simple two-dimensional analogues of the Turing machine</li>
+<li><a href="http://en.wikipedia.org/wiki/Modified_Harvard_architecture" title="Modified Harvard architecture">Modified Harvard architecture</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Probabilistic_Turing_machine" title="Probabilistic Turing machine">Probabilistic Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Quantum_Turing_machine" title="Quantum Turing machine">Quantum Turing machine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_completeness" title="Turing completeness">Turing completeness</a>, an attribute used in <a href="http://en.wikipedia.org/wiki/Computability_theory_(computation)" title="Computability theory (computation)" class="mw-redirect">computability theory</a> to describe computing systems with power equivalent to a universal Turing machine</li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_machine_examples" title="Turing machine examples">Turing machine examples</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_switch" title="Turing switch">Turing switch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Turing_tarpit" title="Turing tarpit">Turing tarpit</a>, any computing system or language which, despite being Turing complete, is generally considered useless for practical computing</li>
+<li><a href="http://en.wikipedia.org/wiki/Von_Neumann_architecture" title="Von Neumann architecture">Von Neumann architecture</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=21" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">The idea came to him in mid-1935 (perhaps, see more in the History section) after a question posed by <a href="http://en.wikipedia.org/wiki/M._H._A._Newman" title="M. H. A. Newman" class="mw-redirect">M. H. A. Newman</a> in his lectures: "Was there a definite method, or as Newman put it, a <i>mechanical process</i> which could be applied to a mathematical statement, and which would come up with the answer as to whether it was provable" (Hodges 1983:93). Turing submitted his paper on 31 May 1936 to the London Mathematical Society for its <i>Proceedings</i> (cf Hodges 1983:112), but it was <i>published</i> in early 1937 and offprints were available in February 1937 (cf Hodges 1983:129).</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">See the definition of "<a href="http://en.wiktionary.org/wiki/innings" class="extiw" title="wikt:innings">innings</a>" on <a href="http://en.wikipedia.org/wiki/Wiktionary" title="Wiktionary">Wiktionary</a></span></li>
+</ol>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=22" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Primary_literature.2C_reprints.2C_and_compilations">Primary literature, reprints, and compilations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=23" title="Edit section: Primary literature, reprints, and compilations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>B. <a href="http://en.wikipedia.org/wiki/Jack_Copeland" title="Jack Copeland">Jack Copeland</a> ed. (2004), <i>The Essential Turing: Seminal Writings in Computing, Logic, Philosophy, Artificial Intelligence, and Artificial Life plus The Secrets of Enigma,</i> Clarendon Press (Oxford University Press), Oxford UK, <a href="http://en.wikipedia.org/wiki/Special:BookSources/0198250797" class="internal mw-magiclink-isbn">ISBN 0-19-825079-7</a>. Contains the Turing papers plus a draft letter to <a href="http://en.wikipedia.org/wiki/Emil_Post" title="Emil Post" class="mw-redirect">Emil Post</a> re his criticism of "Turing's convention", and Donald W. Davies' <i>Corrections to Turing's Universal Computing Machine</i></li>
+<li><a href="http://en.wikipedia.org/wiki/Martin_Davis" title="Martin Davis">Martin Davis</a> (ed.) (1965), <i>The Undecidable</i>, Raven Press, Hewlett, NY.</li>
+<li>Emil Post (1936), "Finite Combinatory Processes—Formulation 1", <i>Journal of Symbolic Logic</i>, 1, 103–105, 1936. Reprinted in <i>The Undecidable</i> pp.&#160;289ff.</li>
+<li>Emil Post (1947), "Recursive Unsolvability of a Problem of Thue", <i>Journal of Symbolic Logic</i>, vol. 12, pp.&#160;1–11. Reprinted in <i>The Undecidable</i> pp.&#160;293ff. In the Appendix of this paper Post comments on and gives corrections to Turing's paper of 1936–1937. In particular see the footnotes 11 with corrections to the universal computing machine coding and footnote 14 with comments on <a href="http://en.wikipedia.org/wiki/Turing%27s_proof" title="Turing's proof">Turing's first and second proofs</a>.</li>
+<li><span class="citation journal">Turing, A.M. (1936). "On Computable Numbers, with an Application to the Entscheidungs problem". <i>Proceedings of the London Mathematical Society</i>. 2 (1937) <b>42</b>: 230–265. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1112%2Fplms%2Fs2-42.1.230">10.1112/plms/s2-42.1.230</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.atitle=On+Computable+Numbers%2C+with+an+Application+to+the+Entscheidungs+problem&amp;rft.aufirst=A.M.&amp;rft.aulast=Turing&amp;rft.au=Turing%2C+A.M.&amp;rft.date=1936&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1112%2Fplms%2Fs2-42.1.230&amp;rft.jtitle=Proceedings+of+the+London+Mathematical+Society&amp;rft.pages=230%E2%80%93265&amp;rft.series=2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=42" class="Z3988"><span style="display:none;">&#160;</span></span> (and <span class="citation journal">Turing, A.M. (1938). "On Computable Numbers, with an Application to the Entscheidungsproblem: A correction". <i>Proceedings of the London Mathematical Society</i>. 2 (1937) <b>43</b> (6): 544–6. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1112%2Fplms%2Fs2-43.6.544">10.1112/plms/s2-43.6.544</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.atitle=On+Computable+Numbers%2C+with+an+Application+to+the+Entscheidungsproblem%3A+A+correction&amp;rft.aufirst=A.M.&amp;rft.aulast=Turing&amp;rft.au=Turing%2C+A.M.&amp;rft.date=1938&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1112%2Fplms%2Fs2-43.6.544&amp;rft.issue=6&amp;rft.jtitle=Proceedings+of+the+London+Mathematical+Society&amp;rft.pages=544%E2%80%936&amp;rft.series=2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=43" class="Z3988"><span style="display:none;">&#160;</span></span>). Reprinted in many collections, e.g. in <i>The Undecidable</i> pp.&#160;115–154; available on the web in many places, e.g. <a rel="nofollow" class="external text" href="http://www.scribd.com/doc/2937039/Alan-M-Turing-On-Computable-Numbers">at Scribd</a>.</li>
+<li>Alan Turing, 1948, "Intelligent Machinery." Reprinted in "Cybernetics: Key Papers." Ed. C.R. Evans and A.D.J. Robertson. Baltimore: University Park Press, 1968. p.&#160;31.</li>
+<li>F. C. Hennie and <a href="http://en.wikipedia.org/wiki/R._E._Stearns" title="R. E. Stearns" class="mw-redirect">R. E. Stearns</a>. <i>Two-tape simulation of multitape Turing machines</i>. <a href="http://en.wikipedia.org/wiki/JACM" title="JACM" class="mw-redirect">JACM</a>, 13(4):533–546, 1966.</li>
+</ul>
+<h3><span class="mw-headline" id="Computability_theory">Computability theory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=24" title="Edit section: Computability theory">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><span class="citation book">Boolos, George; Richard Jeffrey (1989, 1999). <i>Computability and Logic</i> (3rd ed.). Cambridge UK: Cambridge University Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-20402-X" title="Special:BookSources/0-521-20402-X">0-521-20402-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=Boolos%2C+George&amp;rft.aufirst=George&amp;rft.aulast=Boolos&amp;rft.btitle=Computability+and+Logic&amp;rft.date=1989%2C+1999&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft.isbn=0-521-20402-X&amp;rft.place=Cambridge+UK&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>);</span> <span style="display:none;font-size:100%" class="error citation-comment">Check date values in: <code>|date=</code> (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_date" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation book">Boolos, George; John Burgess, Richard Jeffrey, (2002). <i>Computability and Logic</i> (4th ed.). Cambridge UK: Cambridge University Press. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-00758-5_(pb.)" title="Special:BookSources/0-521-00758-5 (pb.)">0-521-00758-5 (pb.)</a> <span style="font-size:100%" class="error citation-comment">Check <code>|isbn=</code> value (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_isbn" title="Help:CS1 errors">help</a>)</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=Boolos%2C+George&amp;rft.aufirst=George&amp;rft.aulast=Boolos&amp;rft.btitle=Computability+and+Logic&amp;rft.date=2002&amp;rft.edition=4th&amp;rft.genre=book&amp;rft.isbn=0-521-00758-5&amp;rft.place=Cambridge+UK&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span> Some parts have been significantly rewritten by Burgess. Presentation of Turing machines in context of Lambek "abacus machines" (cf <a href="http://en.wikipedia.org/wiki/Register_machine" title="Register machine">Register machine</a>) and <a href="http://en.wikipedia.org/wiki/Computable_function" title="Computable function">recursive functions</a>, showing their equivalence.</li>
+<li><a href="http://en.wikipedia.org/wiki/Taylor_L._Booth" title="Taylor L. Booth" class="mw-redirect">Taylor L. Booth</a> (1967), <i>Sequential Machines and Automata Theory</i>, John Wiley and Sons, Inc., New York. Graduate level engineering text; ranges over a wide variety of topics, Chapter IX <i>Turing Machines</i> includes some recursion theory.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Martin_Davis" title="Martin Davis">Martin Davis</a> (1958). <i>Computability and Unsolvability</i>. McGraw-Hill Book Company, Inc, New York.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Martin+Davis&amp;rft.au=Martin+Davis&amp;rft.btitle=Computability+and+Unsolvability&amp;rft.date=1958&amp;rft.genre=book&amp;rft.pub=McGraw-Hill+Book+Company%2C+Inc%2C+New+York&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>. On pages 12–20 he gives examples of 5-tuple tables for Addition, The Successor Function, Subtraction (x ≥ y), Proper Subtraction (0 if x &lt; y), The Identity Function and various identity functions, and Multiplication.</li>
+<li><span class="citation book">Davis, Martin; Ron Sigal, Elaine J. Weyuker (1994). <i>Computability, Complexity, and Languages and Logic: Fundamentals of Theoretical Computer Science</i> (2nd ed.). San Diego: Academic Press, Harcourt, Brace &amp; Company. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-12-206382-1" title="Special:BookSources/0-12-206382-1">0-12-206382-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=Davis%2C+Martin&amp;rft.aufirst=Martin&amp;rft.aulast=Davis&amp;rft.btitle=Computability%2C+Complexity%2C+and+Languages+and+Logic%3A+Fundamentals+of+Theoretical+Computer+Science&amp;rft.date=1994&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=0-12-206382-1&amp;rft.place=San+Diego&amp;rft.pub=Academic+Press%2C+Harcourt%2C+Brace+%26+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation book">Hennie, Fredrick (1977). <i>Introduction to Computability</i>. Addison–Wesley, Reading, Mass. QA248.5H4 1977.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aufirst=Fredrick&amp;rft.au=Hennie%2C+Fredrick&amp;rft.aulast=Hennie&amp;rft.btitle=Introduction+to+Computability&amp;rft.date=1977&amp;rft.genre=book&amp;rft.pub=Addison%E2%80%93Wesley%2C+Reading%2C+Mass&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>. On pages 90–103 Hennie discusses the UTM with examples and flow-charts, but no actual 'code'.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/John_Hopcroft" title="John Hopcroft">John Hopcroft</a> and <a href="http://en.wikipedia.org/wiki/Jeffrey_Ullman" title="Jeffrey Ullman">Jeffrey Ullman</a>, (1979). <i><a href="http://en.wikipedia.org/wiki/Introduction_to_Automata_Theory,_Languages,_and_Computation" title="Introduction to Automata Theory, Languages, and Computation">Introduction to Automata Theory, Languages, and Computation</a></i> (1st ed.). Addison–Wesley, Reading Mass. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-02988-X" title="Special:BookSources/0-201-02988-X">0-201-02988-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=John+Hopcroft+and+Jeffrey+Ullman%2C&amp;rft.aulast=John+Hopcroft+and+Jeffrey+Ullman%2C&amp;rft.btitle=Introduction+to+Automata+Theory%2C+Languages%2C+and+Computation&amp;rft.date=1979&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-201-02988-X&amp;rft.pub=Addison%E2%80%93Wesley%2C+Reading+Mass&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> A difficult book. Centered around the issues of machine-interpretation of "languages", NP-completeness, etc.</li>
+<li><span class="citation book">Hopcroft, John E.; Rajeev Motwani, Jeffrey D. Ullman (2001). <i>Introduction to Automata Theory, Languages, and Computation</i> (2nd ed.). Reading Mass: Addison–Wesley. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-44124-1" title="Special:BookSources/0-201-44124-1">0-201-44124-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aufirst=John+E.&amp;rft.au=Hopcroft%2C+John+E.&amp;rft.aulast=Hopcroft&amp;rft.btitle=Introduction+to+Automata+Theory%2C+Languages%2C+and+Computation&amp;rft.date=2001&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=0-201-44124-1&amp;rft.place=Reading+Mass&amp;rft.pub=Addison%E2%80%93Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span> Distinctly different and less intimidating than the first edition.</li>
+<li><a href="http://en.wikipedia.org/wiki/Stephen_Kleene" title="Stephen Kleene" class="mw-redirect">Stephen Kleene</a> (1952), <i>Introduction to Metamathematics</i>, North–Holland Publishing Company, Amsterdam Netherlands, 10th impression (with corrections of 6th reprint 1971). Graduate level text; most of Chapter XIII <i>Computable functions</i> is on Turing machine proofs of computability of recursive functions, etc.</li>
+<li><span class="citation book"><a href="Donald_Knuth.html" title="Donald Knuth">Knuth, Donald E.</a> (1973). <i>Volume 1/Fundamental Algorithms: The Art of computer Programming</i> (2nd ed.). Reading, Mass.: Addison–Wesley Publishing Company.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aufirst=Donald+E.&amp;rft.au=Knuth%2C+Donald+E.&amp;rft.aulast=Knuth&amp;rft.btitle=Volume+1%2FFundamental+Algorithms%3A+The+Art+of+computer+Programming&amp;rft.date=1973&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.place=Reading%2C+Mass.&amp;rft.pub=Addison%E2%80%93Wesley+Publishing+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>. With reference to the role of Turing machines in the development of computation (both hardware and software) see 1.4.5 <i>History and Bibliography</i> pp.&#160;225ff and 2.6 <i>History and Bibliography</i>pp.&#160;456ff.</li>
+<li><a href="http://en.wikipedia.org/wiki/Zohar_Manna" title="Zohar Manna">Zohar Manna</a>, 1974, <i><a href="http://en.wikipedia.org/w/index.php?title=Mathematical_Theory_of_Computation&amp;action=edit&amp;redlink=1" class="new" title="Mathematical Theory of Computation (page does not exist)">Mathematical Theory of Computation</a></i>. Reprinted, Dover, 2003. <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780486432380" class="internal mw-magiclink-isbn">ISBN 978-0-486-43238-0</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Marvin_Minsky" title="Marvin Minsky">Marvin Minsky</a>, <i>Computation: Finite and Infinite Machines</i>, Prentice–Hall, Inc., N.J., 1967. See Chapter 8, Section 8.2 "Unsolvability of the Halting Problem." Excellent, i.e. relatively readable, sometimes funny.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Christos_Papadimitriou" title="Christos Papadimitriou">Christos Papadimitriou</a> (1993). <i>Computational Complexity</i> (1st ed.). Addison Wesley. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-201-53082-1" title="Special:BookSources/0-201-53082-1">0-201-53082-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=Christos+Papadimitriou&amp;rft.aulast=Christos+Papadimitriou&amp;rft.btitle=Computational+Complexity&amp;rft.date=1993&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-201-53082-1&amp;rft.pub=Addison+Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> Chapter 2: Turing machines, pp.&#160;19–56.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Michael_Sipser" title="Michael Sipser">Michael Sipser</a> (1997). <i>Introduction to the Theory of Computation</i>. PWS Publishing. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-534-94728-X" title="Special:BookSources/0-534-94728-X">0-534-94728-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Michael+Sipser&amp;rft.au=Michael+Sipser&amp;rft.btitle=Introduction+to+the+Theory+of+Computation&amp;rft.date=1997&amp;rft.genre=book&amp;rft.isbn=0-534-94728-X&amp;rft.pub=PWS+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> Chapter 3: The Church–Turing Thesis, pp.&#160;125–149.</li>
+<li><span class="citation book">Stone, Harold S. (1972). <i>Introduction to Computer Organization and Data Structures</i> (1st ed.). New York: McGraw–Hill Book Company. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-07-061726-0" title="Special:BookSources/0-07-061726-0">0-07-061726-0</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aufirst=Harold+S.&amp;rft.aulast=Stone&amp;rft.au=Stone%2C+Harold+S.&amp;rft.btitle=Introduction+to+Computer+Organization+and+Data+Structures&amp;rft.date=1972&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-07-061726-0&amp;rft.place=New+York&amp;rft.pub=McGraw%E2%80%93Hill+Book+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Peter_van_Emde_Boas&amp;action=edit&amp;redlink=1" class="new" title="Peter van Emde Boas (page does not exist)">Peter van Emde Boas</a> 1990, <i>Machine Models and Simulations</i>, pp.&#160;3–66, in <a href="Jan_van_Leeuwen.html" title="Jan van Leeuwen">Jan van Leeuwen</a>, ed., <i>Handbook of Theoretical Computer Science, Volume A: Algorithms and Complexity</i>, The MIT Press/Elsevier, [place?], <a href="http://en.wikipedia.org/wiki/Special:BookSources/0444880712" class="internal mw-magiclink-isbn">ISBN 0-444-88071-2</a> (Volume A). QA76.H279 1990. Valuable survey, with 141 references.</li>
+</ul>
+<h3><span class="mw-headline" id="Church.27s_thesis">Church's thesis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=25" title="Edit section: Church's thesis">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><span class="citation journal">Nachum Dershowitz; Yuri Gurevich (September 2008). <a rel="nofollow" class="external text" href="http://research.microsoft.com/en-us/um/people/gurevich/Opera/188.pdf">"A natural axiomatization of computability and proof of Church's Thesis"</a>. <i>Bulletin of Symbolic Logic</i> <b>14</b> (3)<span class="reference-accessdate">. Retrieved 2008-10-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.atitle=A+natural+axiomatization+of+computability+and+proof+of+Church%27s+Thesis&amp;rft.aulast=Nachum+Dershowitz&amp;rft.au=Nachum+Dershowitz&amp;rft.date=September+2008&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fgurevich%2FOpera%2F188.pdf&amp;rft.issue=3&amp;rft.jtitle=Bulletin+of+Symbolic+Logic&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=14" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Cite uses deprecated parameters (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params" title="Help:CS1 errors">help</a>)</span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Roger_Penrose" title="Roger Penrose">Roger Penrose</a> (1989, 1990). <i>The Emperor's New Mind</i> (2nd ed.). Oxford University Press, New York. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-19-851973-7" title="Special:BookSources/0-19-851973-7">0-19-851973-7</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Roger+Penrose&amp;rft.au=Roger+Penrose&amp;rft.btitle=The+Emperor%27s+New+Mind&amp;rft.date=1989%2C+1990&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=0-19-851973-7&amp;rft.pub=Oxford+University+Press%2C+New+York&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">Check date values in: <code>|date=</code> (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_date" title="Help:CS1 errors">help</a>)</span></li>
+</ul>
+<h3><span class="mw-headline" id="Small_Turing_machines">Small Turing machines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=26" title="Edit section: Small Turing machines">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Rogozhin, Yurii, 1998, "<a rel="nofollow" class="external text" href="http://web.archive.org/web/20050308141040/http://www.imt.ro/Romjist/Volum1/Vol1_3/turing.htm">A Universal Turing Machine with 22 States and 2 Symbols</a>", <i>Romanian Journal Of Information Science and Technology</i>, 1(3), 259–265, 1998. (surveys known results about small universal Turing machines)</li>
+<li><a href="http://en.wikipedia.org/wiki/Stephen_Wolfram" title="Stephen Wolfram">Stephen Wolfram</a>, 2002, <a rel="nofollow" class="external text" href="http://www.wolframscience.com/nksonline/page-707"><i>A New Kind of Science</i></a>, Wolfram Media, <a href="http://en.wikipedia.org/wiki/Special:BookSources/1579550088" class="internal mw-magiclink-isbn">ISBN 1-57955-008-8</a></li>
+<li>Brunfiel, Geoff, <a rel="nofollow" class="external text" href="http://www.nature.com/news/2007/071024/full/news.2007.190.html">Student snags maths prize</a>, <i>Nature</i>, October 24. 2007.</li>
+<li>Jim Giles (2007), <a rel="nofollow" class="external text" href="http://technology.newscientist.com/article/dn12826-simplest-universal-computer-wins-student-25000.html">Simplest 'universal computer' wins student $25,000</a>, New Scientist, October 24, 2007.</li>
+<li>Alex Smith, <a rel="nofollow" class="external text" href="http://www.wolframscience.com/prizes/tm23/TM23Proof.pdf">Universality of Wolfram’s 2, 3 Turing Machine</a>, Submission for the Wolfram 2, 3 Turing Machine Research Prize.</li>
+<li>Vaughan Pratt, 2007, "<a rel="nofollow" class="external text" href="http://cs.nyu.edu/pipermail/fom/2007-October/012156.html">Simple Turing machines, Universality, Encodings, etc.</a>", FOM email list. October 29, 2007.</li>
+<li>Martin Davis, 2007, "<a rel="nofollow" class="external text" href="http://cs.nyu.edu/pipermail/fom/2007-October/012132.html">Smallest universal machine</a>", and <a rel="nofollow" class="external text" href="http://cs.nyu.edu/pipermail/fom/2007-October/012145.html">Definition of universal Turing machine</a> FOM email list. October 26–27, 2007.</li>
+</ul>
+<ul>
+<li>Alasdair Urquhart, 2007 "<a rel="nofollow" class="external text" href="http://cs.nyu.edu/pipermail/fom/2007-October/012140.html">Smallest universal machine</a>", FOM email list. October 26, 2007.</li>
+<li>Hector Zenil (Wolfram Research), 2007 "<a rel="nofollow" class="external text" href="http://cs.nyu.edu/pipermail/fom/2007-October/012163.html">smallest universal machine</a>", FOM email list. October 29, 2007.</li>
+<li>Todd Rowland, 2007, "<a rel="nofollow" class="external text" href="http://forum.wolframscience.com/showthread.php?s=&amp;threadid=1472">Confusion on FOM</a>", Wolfram Science message board, October 30, 2007.</li>
+<li>Olivier and Marc RAYNAUD, 2014, <a rel="nofollow" class="external text" href="http://www.machinedeturing.com/">A programmable eletro-mechanical Turing machine with a large number of diagrams</a>" LIMOS Laboratory of Blaise Pascal University (Clermont-Ferrand in France).</li>
+</ul>
+<h3><span class="mw-headline" id="Other">Other</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=27" title="Edit section: Other">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Martin_Davis" title="Martin Davis">Martin Davis</a> (2000). <i>Engines of Logic: Mathematicians and the origin of the Computer</i> (1st ed.). W. W. Norton &amp; Company, New York. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-393-32229-7_pbk." title="Special:BookSources/0-393-32229-7 pbk.">0-393-32229-7 pbk.</a> <span style="font-size:100%" class="error citation-comment">Check <code>|isbn=</code> value (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_isbn" title="Help:CS1 errors">help</a>)</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Martin+Davis&amp;rft.au=Martin+Davis&amp;rft.btitle=Engines+of+Logic%3A+Mathematicians+and+the+origin+of+the+Computer&amp;rft.date=2000&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-393-32229-7&amp;rft.pub=W.+W.+Norton+%26+Company%2C+New+York&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a href="http://en.wikipedia.org/wiki/Robin_Gandy" title="Robin Gandy">Robin Gandy</a>, "The Confluence of Ideas in 1936", pp.&#160;51–102 in <a href="http://en.wikipedia.org/w/index.php?title=Rolf_Herken&amp;action=edit&amp;redlink=1" class="new" title="Rolf Herken (page does not exist)">Rolf Herken</a>, see below.</li>
+<li><a href="http://en.wikipedia.org/wiki/Stephen_Hawking" title="Stephen Hawking">Stephen Hawking</a> (editor), 2005, <i>God Created the Integers: The Mathematical Breakthroughs that Changed History</i>, Running Press, Philadelphia, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780762419227" class="internal mw-magiclink-isbn">ISBN 978-0-7624-1922-7</a>. Includes Turing's 1936–1937 paper, with brief commentary and biography of Turing as written by Hawking.</li>
+<li><span class="citation book">Rolf Herken (1995). <i>The Universal Turing Machine—A Half-Century Survey</i>. Springer Verlag. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/3-211-82637-8" title="Special:BookSources/3-211-82637-8">3-211-82637-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Rolf+Herken&amp;rft.au=Rolf+Herken&amp;rft.btitle=The+Universal+Turing+Machine%E2%80%94A+Half-Century+Survey&amp;rft.date=1995&amp;rft.genre=book&amp;rft.isbn=3-211-82637-8&amp;rft.pub=Springer+Verlag&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a href="http://en.wikipedia.org/wiki/Andrew_Hodges" title="Andrew Hodges">Andrew Hodges</a>, <i>Alan Turing: The Enigma</i>, Simon and Schuster, New York. Cf Chapter "The Spirit of Truth" for a history leading to, and a discussion of, his proof.</li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Ivars_Peterson" title="Ivars Peterson">Ivars Peterson</a> (1988). <i>The Mathematical Tourist: Snapshots of Modern Mathematics</i> (1st ed.). W. H. Freeman and Company, New York. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-7167-2064-7_(pbk.)" title="Special:BookSources/0-7167-2064-7 (pbk.)">0-7167-2064-7 (pbk.)</a> <span style="font-size:100%" class="error citation-comment">Check <code>|isbn=</code> value (<a href="http://en.wikipedia.org/wiki/Help:CS1_errors#bad_isbn" title="Help:CS1 errors">help</a>)</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.au=Ivars+Peterson&amp;rft.aulast=Ivars+Peterson&amp;rft.btitle=The+Mathematical+Tourist%3A+Snapshots+of+Modern+Mathematics&amp;rft.date=1988&amp;rft.edition=1st&amp;rft.genre=book&amp;rft.isbn=0-7167-2064-7&amp;rft.pub=W.+H.+Freeman+and+Company%2C+New+York&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book"><a href="http://en.wikipedia.org/wiki/Paul_Strathern" title="Paul Strathern">Paul Strathern</a> (1997). <i>Turing and the Computer—The Big Idea</i>. Anchor Books/Doubleday. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-385-49243-X" title="Special:BookSources/0-385-49243-X">0-385-49243-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.aulast=Paul+Strathern&amp;rft.au=Paul+Strathern&amp;rft.btitle=Turing+and+the+Computer%E2%80%94The+Big+Idea&amp;rft.date=1997&amp;rft.genre=book&amp;rft.isbn=0-385-49243-X&amp;rft.pub=Anchor+Books%2FDoubleday&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a href="http://en.wikipedia.org/wiki/Hao_Wang_(academic)" title="Hao Wang (academic)">Hao Wang</a>, "A variant to Turing's theory of computing machines", <i>Journal of the Association for Computing Machinery</i> (JACM) 4, 63–92 (1957).</li>
+<li><a href="http://en.wikipedia.org/wiki/Charles_Petzold" title="Charles Petzold">Charles Petzold</a>, <a rel="nofollow" class="external text" href="http://www.theannotatedturing.com/">Petzold, Charles, <i>The Annotated Turing</i></a>, John Wiley &amp; Sons, Inc., <a href="http://en.wikipedia.org/wiki/Special:BookSources/0470229055" class="internal mw-magiclink-isbn">ISBN 0-470-22905-5</a></li>
+<li>Arora, Sanjeev; Barak, Boaz, <a rel="nofollow" class="external text" href="http://www.cs.princeton.edu/theory/complexity/">"Complexity Theory: A Modern Approach"</a>, Cambridge University Press, 2009, <a href="http://en.wikipedia.org/wiki/Special:BookSources/9780521424264" class="internal mw-magiclink-isbn">ISBN 978-0-521-42426-4</a>, section 1.4, "Machines as strings and the universal Turing machine" and 1.7, "Proof of theorem 1.9"</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=A_Note_On_Turing_Machine_Computability_Of_Rule_Driven_Systems&amp;action=edit&amp;redlink=1" class="new" title="A Note On Turing Machine Computability Of Rule Driven Systems (page does not exist)">A Note On Turing Machine Computability Of Rule Driven Systems</a>, SIGACT News December 2005</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit&amp;section=28" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:Turing_machines" class="extiw" title="commons:Category:Turing machines">Turing machines</a></b></i>.</td>
+</tr>
+</table>
+<ul>
+<li><span id="CITEREFHazewinkel2001" class="citation">Hazewinkel, Michiel, ed. (2001), <a rel="nofollow" class="external text" href="http://www.encyclopediaofmath.org/index.php?title=p/t094460">"Turing machine"</a>, <i><a href="http://en.wikipedia.org/wiki/Encyclopedia_of_Mathematics" title="Encyclopedia of Mathematics">Encyclopedia of Mathematics</a></i>, <a href="http://en.wikipedia.org/wiki/Springer_Science+Business_Media" title="Springer Science+Business Media">Springer</a>, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-1-55608-010-4" title="Special:BookSources/978-1-55608-010-4">978-1-55608-010-4</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATuring+machine&amp;rft.atitle=Encyclopedia+of+Mathematics&amp;rft.btitle=Turing+machine&amp;rft.date=2001&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.encyclopediaofmath.org%2Findex.php%3Ftitle%3Dp%2Ft094460&amp;rft.isbn=978-1-55608-010-4&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a rel="nofollow" class="external text" href="http://plato.stanford.edu/entries/turing-machine/">Turing Machine on Stanford Encyclopedia of Philosophy</a></li>
+<li><a rel="nofollow" class="external text" href="http://plato.stanford.edu/entries/church-turing/">Detailed info on the Church–Turing Hypothesis</a> (Stanford Encyclopedia of Philosophy)</li>
+<li><a rel="nofollow" class="external text" href="http://www.weizmann.ac.il/mathusers/lbn/new_pages/Research_Turing.html">Turing Machine-Like Models</a> in Molecular Biology, to understand life mechanisms with a DNA-tape processor.</li>
+<li><a rel="nofollow" class="external text" href="http://www.saschaseidel.de/html/programmierung/download_The_Turing_machine.php">The Turing machine</a>—Summary about the Turing machine, its functionality and historical facts</li>
+<li><a rel="nofollow" class="external text" href="http://www.wolframscience.com/prizes/tm23/">The Wolfram 2,3 Turing Machine Research Prize</a>—Stephen Wolfram's $25,000 prize for the proof or disproof of the universality of the potentially smallest universal Turing Machine. The contest has ended, with the proof affirming the machine's universality.</li>
+<li>"<a rel="nofollow" class="external text" href="http://demonstrations.wolfram.com/TuringMachineCausalNetworks/">Turing Machine Causal Networks</a>" by Enrique Zeleny, <a href="http://en.wikipedia.org/wiki/Wolfram_Demonstrations_Project" title="Wolfram Demonstrations Project">Wolfram Demonstrations Project</a>.</li>
+<li><a rel="nofollow" class="external text" href="http://www.dmoz.org/Computers/Computer_Science/Theoretical/Automata_Theory/Turing_Machines">Turing Machines</a> on the <a href="Open_Directory_Project.html" title="Open Directory Project">Open Directory Project</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.turing2012.fr/?p=530&amp;lang=en">Purely mechanical Turing Machine</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Formal_languages_and_grammars" title="Template:Formal languages and grammars"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Formal_languages_and_grammars" title="Template talk:Formal languages and grammars"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Formal_languages_and_grammars&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Automata_theory.html" title="Automata theory">Automata theory</a>: <a href="Formal_language.html" title="Formal language">formal languages</a> and <a href="Formal_grammar.html" title="Formal grammar">formal grammars</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd plainlist" style="width:100%;padding:0px;background:transparent;color:inherit;;">
+<div style="padding:0px;;">
+<table cellspacing="0" class="navbox-columns-table" style="text-align:left;width:100%;">
+<tr>
+<td class="navbox-abovebelow" colspan="1" style="font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Chomsky_hierarchy" title="Chomsky hierarchy">Chomsky hierarchy</a></td>
+<td class="navbox-abovebelow" colspan="1" style="border-left:2px solid #fdfdfd;font-weight:bold;"><a href="Formal_grammar.html" title="Formal grammar">Grammars</a></td>
+<td class="navbox-abovebelow" colspan="1" style="border-left:2px solid #fdfdfd;font-weight:bold;"><a href="Formal_language.html" title="Formal language">Languages</a></td>
+<td class="navbox-abovebelow" colspan="1" style="border-left:2px solid #fdfdfd;font-weight:bold;">Minimal <a href="http://en.wikipedia.org/wiki/Finite-state_machine" title="Finite-state machine">automaton</a></td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr style="vertical-align:top;">
+<td style="padding:0px;;;text-align: center;;width:10em;">
+<div>
+<ul>
+<li>Type-0</li>
+<li>—</li>
+<li>Type-1</li>
+<li>—</li>
+<li>—</li>
+<li>—</li>
+<li>Type-2</li>
+<li>—</li>
+<li>—</li>
+<li>Type-3</li>
+<li>—</li>
+<li>—</li>
+</ul>
+</div>
+</td>
+<td style="border-left:2px solid #fdfdfd;padding:0px;;;;width:10em;">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Unrestricted_grammar" title="Unrestricted grammar">Unrestricted</a></li>
+<li>(no common name)</li>
+<li><a href="http://en.wikipedia.org/wiki/Context-sensitive_grammar" title="Context-sensitive grammar">Context-sensitive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Indexed_grammar" title="Indexed grammar">Indexed</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linear_context-free_rewriting_system" title="Linear context-free rewriting system" class="mw-redirect">Linear context-free rewriting systems</a><sup>*</sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Tree-adjoining_grammar" title="Tree-adjoining grammar">Tree-adjoining</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Context-free_grammar" title="Context-free grammar">Context-free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deterministic_context-free_grammar" title="Deterministic context-free grammar">Deterministic context-free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nested_word" title="Nested word">Visibly pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Regular_grammar" title="Regular grammar">Regular</a></li>
+<li>—</li>
+<li><a href="http://en.wikipedia.org/wiki/Non-recursive_grammar" title="Non-recursive grammar" class="mw-redirect">Non-recursive</a></li>
+</ul>
+</div>
+</td>
+<td style="border-left:2px solid #fdfdfd;padding:0px;;;;width:10em;">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Recursively_enumerable_language" title="Recursively enumerable language">Recursively enumerable</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Recursive_language" title="Recursive language">Decidable</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Context-sensitive_language" title="Context-sensitive language">Context-sensitive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Indexed_language" title="Indexed language">Indexed</a></li>
+<li>(no common name)<sup>*</sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Tree-adjoining_grammar" title="Tree-adjoining grammar">Tree-adjoining</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Context-free_language" title="Context-free language">Context-free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deterministic_context-free_language" title="Deterministic context-free language">Deterministic context-free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nested_word" title="Nested word">Visibly pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Regular_language" title="Regular language">Regular</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Star-free_language" title="Star-free language">Star-free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finite_language" title="Finite language" class="mw-redirect">Finite</a></li>
+</ul>
+</div>
+</td>
+<td style="border-left:2px solid #fdfdfd;padding:0px;;;;width:10em;">
+<div>
+<ul>
+<li><strong class="selflink">Turing machine</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Machine_that_always_halts" title="Machine that always halts">Decider</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linear_bounded_automaton" title="Linear bounded automaton">Linear-bounded</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nested_stack_automaton" title="Nested stack automaton">Nested stack</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Thread_automaton" title="Thread automaton">Thread automaton</a><sup>*</sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Embedded_pushdown_automaton" title="Embedded pushdown automaton">Embedded pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pushdown_automaton" title="Pushdown automaton">Nondeterministic pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deterministic_pushdown_automaton" title="Deterministic pushdown automaton">Deterministic pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nested_word" title="Nested word">Visibly pushdown</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finite-state_machine" title="Finite-state machine">Finite</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aperiodic_finite_state_automaton" title="Aperiodic finite state automaton">Counter-free (with aperiodic finite monoid)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton" title="Deterministic acyclic finite state automaton">Acyclic finite</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div><span style="white-space:nowrap;">Each category of languages, except those marked by a <sup>*</sup>, is a <a href="http://en.wikipedia.org/wiki/Subset" title="Subset">proper subset</a> of the category directly above it.</span> <span style="white-space:nowrap;">Any language in each category is generated by a grammar and by an automaton in the category in the same line.</span></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1212
+CPU time usage: 1.004 seconds
+Real time usage: 1.304 seconds
+Preprocessor visited node count: 2524/1000000
+Preprocessor generated node count: 19802/1500000
+Post‐expand include size: 79111/2048000 bytes
+Template argument size: 13135/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Lua time usage: 0.091/10.000 seconds
+Lua memory usage: 2.68 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:30403-0!*!0!!en!4!*!math=0 and timestamp 20140327164807
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;oldid=601071808">http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;oldid=601071808</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:1937_in_computer_science" title="Category:1937 in computer science">1937 in computer science</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Turing_machine" title="Category:Turing machine">Turing machine</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Educational_abstract_machines" title="Category:Educational abstract machines">Educational abstract machines</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Theoretical_computer_science" title="Category:Theoretical computer science">Theoretical computer science</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Alan_Turing" title="Category:Alan Turing">Alan Turing</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Models_of_computation" title="Category:Models of computation">Models of computation</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Formal_methods" title="Category:Formal methods">Formal methods</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Computability_theory" title="Category:Computability theory">Computability theory</a></li><li><a href="http://en.wikipedia.org/wiki/Category:English_inventions" title="Category:English inventions">English inventions</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Pages_containing_cite_templates_with_deprecated_parameters" title="Category:Pages containing cite templates with deprecated parameters">Pages containing cite templates with deprecated parameters</a></li><li><a href="http://en.wikipedia.org/wiki/Category:CS1_errors:_dates" title="Category:CS1 errors: dates">CS1 errors: dates</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Pages_with_ISBN_errors" title="Category:Pages with ISBN errors">Pages with ISBN errors</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_same_as_on_Wikidata" title="Category:Commons category with local link same as on Wikidata">Commons category with local link same as on Wikidata</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_Open_Directory_Project_links" title="Category:Articles with Open Directory Project links">Articles with Open Directory Project links</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Turing+machine&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Turing+machine" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Turing_machine.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Turing_machine"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Turing_machine.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Turing_machine" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Turing_machine" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;oldid=601071808" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q163310" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Turing_machine&amp;id=601071808" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Turing+machine">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Turing+machine&amp;oldid=601071808&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Turing_machine&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-als"><a href="http://als.wikipedia.org/wiki/Turing-Maschine" title="Turing-Maschine – Alemannisch" lang="als" hreflang="als">Alemannisch</a></li>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/آلة_تورنج" title="آلة تورنج – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-be"><a href="http://be.wikipedia.org/wiki/Машына_Т%27юрынга" title="Машына Т'юрынга – Belarusian" lang="be" hreflang="be">Беларуская</a></li>
+			<li class="interlanguage-link interwiki-be-x-old"><a href="http://be-x-old.wikipedia.org/wiki/Машына_Т’юрынга" title="Машына Т’юрынга – беларуская (тарашкевіца)‎" lang="be-x-old" hreflang="be-x-old">Беларуская (тарашкевіца)‎</a></li>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Машина_на_Тюринг" title="Машина на Тюринг – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-bs"><a href="http://bs.wikipedia.org/wiki/Turingova_mašina" title="Turingova mašina – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Màquina_de_Turing" title="Màquina de Turing – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Turingův_stroj" title="Turingův stroj – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Turingmaskine" title="Turingmaskine – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Turingmaschine" title="Turingmaschine – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-et"><a href="http://et.wikipedia.org/wiki/Turingi_masin" title="Turingi masin – Estonian" lang="et" hreflang="et">Eesti</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Μηχανή_Τούρινγκ" title="Μηχανή Τούρινγκ – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Máquina_de_Turing" title="Máquina de Turing – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Maŝino_de_Turing" title="Maŝino de Turing – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Turingen_makina" title="Turingen makina – Basque" lang="eu" hreflang="eu">Euskara</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/ماشین_تورینگ" title="ماشین تورینگ – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Machine_de_Turing" title="Machine de Turing – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-fur"><a href="http://fur.wikipedia.org/wiki/Machine_di_Turing" title="Machine di Turing – Friulian" lang="fur" hreflang="fur">Furlan</a></li>
+			<li class="interlanguage-link interwiki-ki"><a href="http://ki.wikipedia.org/wiki/Macini_ya_Turing" title="Macini ya Turing – Kikuyu" lang="ki" hreflang="ki">Gĩkũyũ</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/튜링_기계" title="튜링 기계 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Turingov_stroj" title="Turingov stroj – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Mesin_Turing" title="Mesin Turing – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Macchina_di_Turing" title="Macchina di Turing – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/מכונת_טיורינג" title="מכונת טיורינג – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-la"><a href="http://la.wikipedia.org/wiki/Machina_Turing" title="Machina Turing – Latin" lang="la" hreflang="la">Latina</a></li>
+			<li class="interlanguage-link interwiki-lv"><a href="http://lv.wikipedia.org/wiki/Tjūringa_mašīna" title="Tjūringa mašīna – Latvian" lang="lv" hreflang="lv">Latviešu</a></li>
+			<li class="interlanguage-link interwiki-lb"><a href="http://lb.wikipedia.org/wiki/Turingmaschinn" title="Turingmaschinn – Luxembourgish" lang="lb" hreflang="lb">Lëtzebuergesch</a></li>
+			<li class="interlanguage-link interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Tiuringo_mašina" title="Tiuringo mašina – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Turing-gép" title="Turing-gép – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-mk"><a href="http://mk.wikipedia.org/wiki/Тјурингова_машина" title="Тјурингова машина – Macedonian" lang="mk" hreflang="mk">Македонски</a></li>
+			<li class="interlanguage-link interwiki-ml"><a href="http://ml.wikipedia.org/wiki/ടൂറിങ്_മെഷീൻ" title="ടൂറിങ് മെഷീൻ – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li>
+			<li class="interlanguage-link interwiki-mwl"><a href="http://mwl.wikipedia.org/wiki/Máquina_de_Turing" title="Máquina de Turing – Mirandese" lang="mwl" hreflang="mwl">Mirandés</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Turingmachine" title="Turingmachine – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/チューリングマシン" title="チューリングマシン – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Turingmaskin" title="Turingmaskin – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Maszyna_Turinga" title="Maszyna Turinga – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Máquina_de_Turing" title="Máquina de Turing – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Mașină_Turing" title="Mașină Turing – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Машина_Тьюринга" title="Машина Тьюринга – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sq"><a href="http://sq.wikipedia.org/wiki/Makina_Turing" title="Makina Turing – Albanian" lang="sq" hreflang="sq">Shqip</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Turing_machine" title="Turing machine – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Turingov_stroj" title="Turingov stroj – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Turingov_stroj" title="Turingov stroj – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Тјурингова_машина" title="Тјурингова машина – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sh"><a href="http://sh.wikipedia.org/wiki/Turingov_stroj" title="Turingov stroj – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Turingin_kone" title="Turingin kone – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Turingmaskin" title="Turingmaskin – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/เครื่องจักรทัวริง" title="เครื่องจักรทัวริง – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Turing_makinesi" title="Turing makinesi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Машина_Тюрінга" title="Машина Тюрінга – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Máy_Turing" title="Máy Turing – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/图灵机" title="图灵机 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q163310#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 March 2014 at 18:47.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Turing_machine" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.wikimediaShopLink.core","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1212 in 1.608 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Turing_machine by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:55:39 GMT -->
+</html>

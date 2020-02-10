@@ -1,0 +1,736 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Binary_heap.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Binary_heap by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Binary heap - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Binary_heap" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Binary_heap.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Binary_heap","wgTitle":"Binary heap","wgCurRevisionId":596106647,"wgRevisionId":596106647,"wgArticleId":69890,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Heaps (data structures)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Binary_heap","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["es-es","es"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q803847"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Binary_heap skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Binary heap</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="infobox" style="width: 22em">
+<tr>
+<th colspan="3" style="font-size: 125%; text-align: center;">Binary Heap</th>
+</tr>
+<tr>
+<th><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">Type</a></th>
+<td colspan="2"><a href="Tree_(data_structure).html" title="Tree (data structure)">Tree</a></td>
+</tr>
+<tr>
+<th colspan="3" class="navbox-abovebelow"><a href="Time_complexity.html" title="Time complexity">Time complexity</a><br />
+in <a href="Big_O_notation.html" title="Big O notation">big O notation</a></th>
+</tr>
+<tr>
+<td></td>
+<td>Average</td>
+<td>Worst case</td>
+</tr>
+<tr>
+<th>Space</th>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<th>Search</th>
+<td>Not supported</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<th>Insert</th>
+<td>O(1)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<th>Delete</th>
+<td>O(log n)</td>
+<td>O(log n)</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:242px;"><a href="http://en.wikipedia.org/wiki/File:Max-Heap.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/240px-Max-Heap.svg.png" width="240" height="178" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/360px-Max-Heap.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/480px-Max-Heap.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Max-Heap.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Example of a complete binary max heap</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:242px;"><a href="http://en.wikipedia.org/wiki/File:Min-heap.png" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Min-heap.png/240px-Min-heap.png" width="240" height="155" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Min-heap.png/360px-Min-heap.png 1.5x, //upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Min-heap.png" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Example of a complete binary min heap</div>
+</div>
+</div>
+<p>A <b>binary heap</b> is a <a href="Heap_(data_structure).html" title="Heap (data structure)">heap</a> <a href="Data_structure.html" title="Data structure">data structure</a> created using a <a href="Binary_tree.html" title="Binary tree">binary tree</a>. It can be seen as a binary tree with two additional constraints:</p>
+<dl>
+<dt>Shape property</dt>
+<dd>The tree is a <i><a href="http://en.wikipedia.org/wiki/Complete_Binary_Tree" title="Complete Binary Tree" class="mw-redirect">complete binary tree</a></i>; that is, all levels of the tree, except possibly the last one (deepest) are fully filled, and, if the last level of the tree is not complete, the nodes of that level are filled from left to right.</dd>
+<dt>Heap property</dt>
+<dd>All nodes are <i>either</i> [greater than or equal to] <i>or</i> [less than or equal to] each of its children, according to a comparison <a href="http://en.wikipedia.org/wiki/Predicate_(mathematical_logic)" title="Predicate (mathematical logic)">predicate</a> defined for the heap.</dd>
+</dl>
+<p>Heaps with a mathematical "greater than or equal to" (≥) comparison predicate are called <i>max-heaps</i>; those with a mathematical "less than or equal to" (≤) comparison predicate are called <i>min-heaps</i>. Min-heaps are often used to implement <a href="Priority_queue.html" title="Priority queue">priority queues</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>Since the ordering of siblings in a heap is not specified by the heap property, a single node's two children can be freely interchanged unless doing so violates the shape property (compare with <a href="http://en.wikipedia.org/wiki/Treap" title="Treap">treap</a>).</p>
+<p>The binary heap is a special case of the <a href="http://en.wikipedia.org/wiki/D-ary_heap" title="D-ary heap">d-ary heap</a> in which d = 2.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Heap_operations"><span class="tocnumber">1</span> <span class="toctext">Heap operations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Insert"><span class="tocnumber">1.1</span> <span class="toctext">Insert</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Delete"><span class="tocnumber">1.2</span> <span class="toctext">Delete</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Building_a_heap"><span class="tocnumber">2</span> <span class="toctext">Building a heap</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Heap_implementation"><span class="tocnumber">3</span> <span class="toctext">Heap implementation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Derivation_of_index_equations"><span class="tocnumber">4</span> <span class="toctext">Derivation of index equations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Child_nodes"><span class="tocnumber">4.1</span> <span class="toctext">Child nodes</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Parent_node"><span class="tocnumber">4.2</span> <span class="toctext">Parent node</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Heap_operations">Heap operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=1" title="Edit section: Heap operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Both the insert and remove operations modify the heap to conform to the shape property first, by adding or removing from the end of the heap. Then the heap property is restored by traversing up or down the heap. Both operations take O(log <i>n</i>) time.</p>
+<h3><span class="mw-headline" id="Insert">Insert</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=2" title="Edit section: Insert">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>To add an element to a heap we must perform an <i>up-heap</i> operation (also known as <i>bubble-up</i>, <i>percolate-up</i>, <i>sift-up</i>, <i>trickle up</i>, <i>heapify-up</i>, or <i>cascade-up</i>), by following this algorithm:</p>
+<ol>
+<li>Add the element to the bottom level of the heap.</li>
+<li>Compare the added element with its parent; if they are in the correct order, stop.</li>
+<li>If not, swap the element with its parent and return to the previous step.</li>
+</ol>
+<p>The number of operations required is dependent on the number of levels the new element must rise to satisfy the heap property, thus the insertion operation has a time complexity of O(log <i>n</i>). However, in 1974, Thomas Porter and Istvan Simon proved that the function for the average number of levels an inserted node moves up is upper bounded by the constant 1.6067.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> The average number of operations required for an insertion into a binary heap is 2.6067 since one additional comparison is made that does not result in the inserted node moving up a level. Thus, on average, binary heap insertion has a constant, O(1), time complexity. Intuitively, this makes sense since approximately 50% of the elements are leaves and approximately 75% of the elements are in the bottom two levels, it is likely that the new element to be inserted will only move a few levels upwards to maintain the heap.</p>
+<p>As an example of binary heap insertion, say we have a max-heap</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_add_step1.svg" class="image"><img alt="Heap add step1.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Heap_add_step1.svg/150px-Heap_add_step1.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Heap_add_step1.svg/225px-Heap_add_step1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Heap_add_step1.svg/300px-Heap_add_step1.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>and we want to add the number 15 to the heap. We first place the 15 in the position marked by the X. However, the heap property is violated since 15 is greater than 8, so we need to swap the 15 and the 8. So, we have the heap looking as follows after the first swap:</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_add_step2.svg" class="image"><img alt="Heap add step2.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Heap_add_step2.svg/150px-Heap_add_step2.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Heap_add_step2.svg/225px-Heap_add_step2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/16/Heap_add_step2.svg/300px-Heap_add_step2.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>However the heap property is still violated since 15 is greater than 11, so we need to swap again:</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_add_step3.svg" class="image"><img alt="Heap add step3.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Heap_add_step3.svg/150px-Heap_add_step3.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Heap_add_step3.svg/225px-Heap_add_step3.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Heap_add_step3.svg/300px-Heap_add_step3.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>which is a valid max-heap. There is no need to check the children after this. Before we placed 15 on X, the heap was valid, meaning 11 is greater than 5. If 15 is greater than 11, and 11 is greater than 5, then 15 must be greater than 5, because of the <a href="http://en.wikipedia.org/wiki/Transitive_relation" title="Transitive relation">transitive relation</a>.</p>
+<h3><span class="mw-headline" id="Delete">Delete</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=3" title="Edit section: Delete">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called <i>down-heap</i> (also known as <i>bubble-down</i>, <i>percolate-down</i>, <i>sift-down</i>, <i>trickle down</i>, <i>heapify-down</i>, <i>cascade-down</i> and <i>extract-min/max</i>).</p>
+<ol>
+<li>Replace the root of the heap with the last element on the last level.</li>
+<li>Compare the new root with its children; if they are in the correct order, stop.</li>
+<li>If not, swap the element with one of its children and return to the previous step. (Swap with its smaller child in a min-heap and its larger child in a max-heap.)</li>
+</ol>
+<p>So, if we have the same max-heap as before</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_delete_step0.svg" class="image"><img alt="Heap delete step0.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Heap_delete_step0.svg/150px-Heap_delete_step0.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Heap_delete_step0.svg/225px-Heap_delete_step0.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Heap_delete_step0.svg/300px-Heap_delete_step0.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>We remove the 11 and replace it with the 4.</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_remove_step1.svg" class="image"><img alt="Heap remove step1.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Heap_remove_step1.svg/150px-Heap_remove_step1.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Heap_remove_step1.svg/225px-Heap_remove_step1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Heap_remove_step1.svg/300px-Heap_remove_step1.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>Now the heap property is violated since 8 is greater than 4. In this case, swapping the two elements, 4 and 8, is enough to restore the heap property and we need not swap elements further:</p>
+<dl>
+<dd>
+<dl>
+<dd><a href="http://en.wikipedia.org/wiki/File:Heap_remove_step2.svg" class="image"><img alt="Heap remove step2.svg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heap_remove_step2.svg/150px-Heap_remove_step2.svg.png" width="150" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heap_remove_step2.svg/225px-Heap_remove_step2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heap_remove_step2.svg/300px-Heap_remove_step2.svg.png 2x" /></a></dd>
+</dl>
+</dd>
+</dl>
+<p>The downward-moving node is swapped with the <i>larger</i> of its children in a max-heap (in a min-heap it would be swapped with its smaller child), until it satisfies the heap property in its new position. This functionality is achieved by the <b>Max-Heapify</b> function as defined below in <a href="Pseudocode.html" title="Pseudocode">pseudocode</a> for an <a href="Array_data_structure.html" title="Array data structure">array</a>-backed heap <i>A</i> of length <i>heap_length</i>[<i>A</i>]. Note that "A" is indexed starting at 1, not 0 as is common in many real programming languages.</p>
+<p><b>Max-Heapify</b><sup id="cite_ref-CLRS_4-0" class="reference"><a href="#cite_note-CLRS-4"><span>[</span>4<span>]</span></a></sup> (<i>A</i>, <i>i</i>):<br />
+<span style="padding-left: 2em;">&#160;</span><i>left</i> ← 2<i>i</i><br />
+<span style="padding-left: 2em;">&#160;</span><i>right</i> ← 2<i>i</i> + 1<br />
+<span style="padding-left: 2em;">&#160;</span><i>largest</i> ← <i>i</i><br />
+<span style="padding-left: 2em;">&#160;</span><b>if</b> <i>left</i> ≤ <i>heap_length</i>[<i>A</i>] <b>and</b> <i>A</i>[<i>left</i>] &gt; A[<i>largest</i>] <b>then</b>:<br />
+<span style="padding-left: 4em;">&#160;</span><i>largest</i> ← <i>left</i><br />
+<span style="padding-left: 2em;">&#160;</span><b>if</b> <i>right</i> ≤ <i>heap_length</i>[<i>A</i>] <b>and</b> <i>A</i>[<i>right</i>] &gt; <i>A</i>[<i>largest</i>] <b>then</b>:<br />
+<span style="padding-left: 4em;">&#160;</span><i>largest</i> ← <i>right</i><br />
+<span style="padding-left: 2em;">&#160;</span><b>if</b> <i>largest</i> ≠ <i>i</i> <b>then</b>:<br />
+<span style="padding-left: 4em;">&#160;</span><b>swap</b> <i>A[</i>i<i>] ↔</i> A<i>[</i>largest<i>]<br /></i> <span style="padding-left: 4em;">&#160;</span>Max-Heapify(<i>A</i>, <i>largest</i>)</p>
+<p>For the above algorithm to correctly re-heapify the array, the node at index <i>i</i> and its two direct children must violate the heap property. If they do not, the algorithm will fall through with no change to the array. The down-heap operation (without the preceding swap) can also be used to modify the value of the root, even when an element is not being deleted.</p>
+<p>In the worst case, the new root has to be swapped with its child on each level until it reaches the bottom level of the heap, meaning that the delete operation has a time complexity relative to the height of the tree, or O(log <i>n</i>).</p>
+<h2><span class="mw-headline" id="Building_a_heap">Building a heap</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=4" title="Edit section: Building a heap">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A heap could be built by successive insertions. This approach requires <img class="tex" alt="O(n \log n)" src="http://upload.wikimedia.org/math/f/4/9/f49341ab621f12e8cb93d0146ea51d34.png" /> time because each insertion takes <img class="tex" alt="O(\log n)" src="http://upload.wikimedia.org/math/0/c/a/0ca47d9a481af371d1210a620c1945db.png" /> time and there are <img class="tex" alt="n" src="http://upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> elements. However this is not the optimal method. The optimal method starts by arbitrarily putting the elements on a binary tree, respecting the shape property (the tree could be represented by an array, see below). Then starting from the lowest level and moving upwards, shift the root of each subtree downward as in the deletion algorithm until the heap property is restored. More specifically if all the subtrees starting at some height <img class="tex" alt="h" src="http://upload.wikimedia.org/math/2/5/1/2510c39011c5be704182423e3a695e91.png" /> (measured from the bottom) have already been "heapified", the trees at height <img class="tex" alt="h+1" src="http://upload.wikimedia.org/math/f/9/0/f903d33b9ff801b886bf719b3c694d4d.png" /> can be heapified by sending their root down along the path of maximum valued children when building a max-heap, or minimum valued children when building a min-heap. This process takes <img class="tex" alt="O(h)" src="http://upload.wikimedia.org/math/0/b/a/0ba11ebdc4068356183c1d861d1c0bd8.png" /> operations (swaps) per node. In this method most of the heapification takes place in the lower levels. Since the height of the heap is <img class="tex" alt=" \left\lfloor \lg (n) \right\rfloor" src="http://upload.wikimedia.org/math/2/8/e/28e8a4ae0af159d2b6df31b28d8c727e.png" />, the number of nodes at height <img class="tex" alt="h" src="http://upload.wikimedia.org/math/2/5/1/2510c39011c5be704182423e3a695e91.png" /> is <img class="tex" alt="\le \left\lceil 2^{\left(\lg n - h\right) - 1} \right\rceil = \left\lceil \frac{2^{\lg n}}{2^{h+1}}\right\rceil = \left\lceil\frac{n}{2^{h+1}}\right\rceil" src="http://upload.wikimedia.org/math/9/e/0/9e0b35471a7c35952352abe0977062ec.png" />. Therefore, the cost of heapifying all subtrees is:</p>
+<dl>
+<dd><img class="tex" alt="
+\begin{align}
+\sum_{h=0}^{\lceil \lg n \rceil} \frac{n}{2^{h+1}}O(h) &amp; =
+O\left(n\sum_{h=0}^{\lceil \lg n \rceil} \frac{h}{2^{h + 1}}\right) \\
+&amp; \le O\left(n\sum_{h=0}^{\infty} \frac{h}{2^h}\right) \\
+&amp; = O(n)
+
+\end{align}
+" src="http://upload.wikimedia.org/math/7/f/3/7f31d56bc5a782424d75f1ec2c4e6c17.png" /></dd>
+</dl>
+<p>This uses the fact that the given infinite <a href="http://en.wikipedia.org/wiki/Series_(mathematics)" title="Series (mathematics)">series</a> <i>h</i> / 2<sup><i>h</i></sup> <a href="http://en.wikipedia.org/wiki/Convergent_series" title="Convergent series">converges</a> to 2.</p>
+<p>The exact value of the above (the worst-case number of comparisons during the heap construction) is known to be equal to:</p>
+<dl>
+<dd><img class="tex" alt=" 2 n - 2 s_2 (n) - e_2 (n) " src="http://upload.wikimedia.org/math/c/6/4/c641d1e239657caede8f6ecf3baaa278.png" />,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></dd>
+</dl>
+<p>where s<sub>2</sub>(n) is the sum of all digits of the binary representation of n and e<sub>2</sub>(n) is the exponent of 2 in the prime factorization of n.</p>
+<p>The <b>Build-Max-Heap</b> function that follows, converts an array <i>A</i> which stores a complete binary tree with n nodes to a max-heap by repeatedly using <b>Max-Heapify</b> in a bottom up manner. It is based on the observation that the array elements indexed by <i><a href="http://en.wikipedia.org/wiki/Floor_function" title="Floor function" class="mw-redirect">floor</a></i>(n/2) + 1, <i>floor</i>(n/2) + 2, ..., n are all leaves for the tree, thus each is a one-element heap. <b>Build-Max-Heap</b> runs <b>Max-Heapify</b> on each of the remaining tree nodes.</p>
+<p><b>Build-Max-Heap</b><sup id="cite_ref-CLRS_4-1" class="reference"><a href="#cite_note-CLRS-4"><span>[</span>4<span>]</span></a></sup> (<i>A</i>):<br />
+<span style="padding-left: 2em;">&#160;</span><i>heap_length</i>[<i>A</i>] ← <i>length</i>[<i>A</i>]<br />
+<span style="padding-left: 2em;">&#160;</span><b>for</b> <i>i</i> ← <i>floor</i>(<i>length</i>[<i>A</i>]/2) <b>downto</b> 1 <b>do</b><br />
+<span style="padding-left: 4em;">&#160;</span><b>Max-Heapify</b>(<i>A</i>, <i>i</i>)</p>
+<h2><span class="mw-headline" id="Heap_implementation">Heap implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=5" title="Edit section: Heap implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:372px;"><a href="http://en.wikipedia.org/wiki/File:Binary_tree_in_array.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Binary_tree_in_array.svg/370px-Binary_tree_in_array.svg.png" width="370" height="93" class="thumbimage" /></a>
+<div class="thumbcaption">A small complete binary tree stored in an array</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:Binary_Heap_with_Array_Implementation.JPG" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Binary_Heap_with_Array_Implementation.JPG/400px-Binary_Heap_with_Array_Implementation.JPG" width="400" height="103" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Binary_Heap_with_Array_Implementation.JPG/600px-Binary_Heap_with_Array_Implementation.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Binary_Heap_with_Array_Implementation.JPG/800px-Binary_Heap_with_Array_Implementation.JPG 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Binary_Heap_with_Array_Implementation.JPG" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf17/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Comparison between a binary heap and an array implementation.</div>
+</div>
+</div>
+<p>Heaps are commonly implemented with an <a href="Array_data_structure.html" title="Array data structure">array</a>. Any binary tree can be stored in an array, but because a heap is always an almost complete binary tree, it can be stored compactly. No space is required for <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointers</a>; instead, the parent and children of each node can be found by arithmetic on array indices. These properties make this heap implementation a simple example of an <a href="http://en.wikipedia.org/wiki/Implicit_data_structure" title="Implicit data structure">implicit data structure</a> or <a href="Binary_tree.html#Ahnentafel_list" title="Binary tree">Ahnentafel list</a>. Details depend on the root position, which in turn may depend on constraints of a <a href="Programming_language.html" title="Programming language">programming language</a> used for implementation, or programmer preference. Specifically, sometimes the root is placed at index 1, sacrificing space in order to simplify arithmetic. The <i><a href="http://en.wikipedia.org/wiki/Peek_(data_type_operation)" title="Peek (data type operation)">peek</a></i> operation (<i>find-min</i> or <i>find-max</i>) simply returns the value of the root, and is thus O(1).</p>
+<p>Let <i>n</i> be the number of elements in the heap and <i>i</i> be an arbitrary valid index of the array storing the heap. If the tree root is at index 0, with valid indices 0 through <i>n −</i> 1, then each element <i>a</i> at index <i>i</i> has</p>
+<ul>
+<li>children at indices 2<i>i</i> + 1 and 2<i>i</i> + 2</li>
+<li>its parent ⌊(<i>i</i> − 1) ∕ 2⌋ where ⌊…⌋ is the <a href="http://en.wikipedia.org/wiki/Floor_function" title="Floor function" class="mw-redirect">floor function</a>.</li>
+</ul>
+<p>Alternatively, if the tree root is at index 1, with valid indices 1 through <i>n</i>, then each element <i>a</i> at index <i>i</i> has</p>
+<ul>
+<li>children at indices 2<i>i</i> and 2<i>i</i> +1</li>
+<li>its parent at index ⌊<i>i ∕</i> 2⌋.</li>
+</ul>
+<p>This implementation is used in the <a href="Heapsort.html" title="Heapsort">heapsort</a> algorithm, where it allows the space in the input array to be reused to store the heap (i.e. the algorithm is done <a href="http://en.wikipedia.org/wiki/In-place_algorithm" title="In-place algorithm">in-place</a>). The implementation is also useful for use as a <a href="Priority_queue.html" title="Priority queue">Priority queue</a> where use of a <a href="Dynamic_array.html" title="Dynamic array">dynamic array</a> allows insertion of an unbounded number of items.</p>
+<p>The upheap/downheap operations can then be stated in terms of an array as follows: suppose that the heap property holds for the indices <i>b</i>, <i>b</i>+1, ..., <i>e</i>. The sift-down function extends the heap property to <i>b</i>−1, <i>b</i>, <i>b</i>+1, ..., <i>e</i>. Only index <i>i</i> = <i>b</i>−1 can violate the heap property. Let <i>j</i> be the index of the largest child of <i>a</i>[<i>i</i>] (for a max-heap, or the smallest child for a min-heap) within the range <i>b</i>, ..., <i>e</i>. (If no such index exists because 2<i>i</i> &gt; <i>e</i> then the heap property holds for the newly extended range and nothing needs to be done.) By swapping the values <i>a</i>[<i>i</i>] and <i>a</i>[<i>j</i>] the heap property for position <i>i</i> is established. At this point, the only problem is that the heap property might not hold for index <i>j</i>. The sift-down function is applied <a href="http://en.wikipedia.org/wiki/Tail_recursion" title="Tail recursion" class="mw-redirect">tail-recursively</a> to index <i>j</i> until the heap property is established for all elements.</p>
+<p>The sift-down function is fast. In each step it only needs two comparisons and one swap. The index value where it is working doubles in each iteration, so that at most log<sub>2</sub> <i>e</i> steps are required.</p>
+<p>For big heaps and using <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a>, storing elements in an array according to the above scheme is inefficient: (almost) every level is in a different <a href="http://en.wikipedia.org/wiki/Page_(computer_memory)" title="Page (computer memory)">page</a>. <a href="http://en.wikipedia.org/wiki/B-heap" title="B-heap">B-heaps</a> are binary heaps that keep subtrees in a single page, reducing the number of pages accessed by up to a factor of ten.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>The operation of merging two binary heaps takes Θ(<i>n</i>) for equal-sized heaps. The best you can do is (in case of array implementation) simply concatenating the two heap arrays and build a heap of the result.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> A heap on <i>n</i> elements can be merged with a heap on <i>k</i> elements using O(log <i>n</i> log <i>k</i>) key comparisons, or, in case of a pointer-based implementation, in O(log <i>n</i> log <i>k</i>) time.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> An algorithm for splitting a heap on <i>n</i> elements into two heaps on <i>k</i> and <i>n-k</i> elements, respectively, based on a new view of heaps as an ordered collections of subheaps was presented in.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> The algorithm requires O(log <i>n</i> * log <i>n</i>) comparisons. The view also presents a new and conceptually simple algorithm for merging heaps. When merging is a common task, a different heap implementation is recommended, such as <a href="Binomial_heap.html" title="Binomial heap">binomial heaps</a>, which can be merged in O(log <i>n</i>).</p>
+<p>Additionally, a binary heap can be implemented with a traditional binary tree data structure, but there is an issue with finding the adjacent element on the last level on the binary heap when adding an element. This element can be determined algorithmically or by adding extra data to the nodes, called "threading" the tree—instead of merely storing references to the children, we store the <a href="http://en.wikipedia.org/wiki/Inorder" title="Inorder" class="mw-redirect">inorder</a> successor of the node as well.</p>
+<p>It is possible to modify the heap structure to allow extraction of both the smallest and largest element in <a href="Big_O_notation.html" title="Big O notation"><img class="tex" alt="O" src="http://upload.wikimedia.org/math/f/1/8/f186217753c37b9b9f958d906208506e.png" /></a><img class="tex" alt="(\log n)" src="http://upload.wikimedia.org/math/d/3/5/d358618227e99a5720f7d5d6c13e4792.png" /> time.<sup id="cite_ref-sym_10-0" class="reference"><a href="#cite_note-sym-10"><span>[</span>10<span>]</span></a></sup> To do this, the rows alternate between min heap and max heap. The algorithms are roughly the same, but, in each step, one must consider the alternating rows with alternating comparisons. The performance is roughly the same as a normal single direction heap. This idea can be generalised to a min-max-median heap.</p>
+<h2><span class="mw-headline" id="Derivation_of_index_equations">Derivation of index equations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=6" title="Edit section: Derivation of index equations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In an array-based heap, the children and parent of a node can be located via simple arithmetic on the node's index. This section derives the relevant equations for heaps with their root at index 0, with additional notes on heaps with their root at index 1.</p>
+<p>To avoid confusion, we'll define the <b>level</b> of a node as its distance from the root, such that the root itself occupies level 0.</p>
+<h3><span class="mw-headline" id="Child_nodes">Child nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=7" title="Edit section: Child nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For a general node located at index <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> (beginning from 0), we will first derive the index of its right child, <img class="tex" alt="\text{right} = 2i + 2" src="http://upload.wikimedia.org/math/7/4/2/742922dcc9255fa13322798777f84ea7.png" />.</p>
+<p>Let node <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> be located in level <img class="tex" alt="L" src="http://upload.wikimedia.org/math/d/2/0/d20caec3b48a1eef164cb4ca81ba2587.png" />, and note that any level <img class="tex" alt="l" src="http://upload.wikimedia.org/math/2/d/b/2db95e8e1a9267b7a1188556b2013b33.png" /> contains exactly <img class="tex" alt="2^l" src="http://upload.wikimedia.org/math/c/0/9/c095463c78ef0972e0ccf653efd26dce.png" /> nodes. Furthermore, there are exactly <img class="tex" alt="2^{l + 1} - 1" src="http://upload.wikimedia.org/math/0/b/7/0b766121dd3bb954ccbccea8f1984f3c.png" /> nodes contained in the layers up to and including layer <img class="tex" alt="l" src="http://upload.wikimedia.org/math/2/d/b/2db95e8e1a9267b7a1188556b2013b33.png" /> (think of binary arithmetic; 0111...111 = 1000...000 - 1). Because the root is stored at 0, the <img class="tex" alt="k" src="http://upload.wikimedia.org/math/8/c/e/8ce4b16b22b58894aa86c421e8759df3.png" />th node will be stored at index <img class="tex" alt="(k - 1)" src="http://upload.wikimedia.org/math/2/2/1/221825347b108bed93476c58a740404c.png" />. Putting these observations together yields the following expression for the <b>index of the last node in layer l</b>.</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\text{last}(l) = (2^{l + 1} - 1) - 1 = 2^{l + 1} - 2" src="http://upload.wikimedia.org/math/e/7/c/e7c18d5d2a5e31bb5ddf144e3adc3adb.png" /></dd>
+</dl>
+</dd>
+</dl>
+<p>Let there be <img class="tex" alt="j" src="http://upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" /> nodes after node <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> in layer L, such that</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\begin{alignat}{2}
+i = &amp; \quad \text{last}(L) - j\\
+  = &amp; \quad (2^{L + 1} -2) - j\\
+\end{alignat}
+" src="http://upload.wikimedia.org/math/c/2/1/c213d8d67fa21b6e8f3c7b747a7c5a28.png" /></dd>
+</dl>
+</dd>
+</dl>
+<p>Each of these <img class="tex" alt="j" src="http://upload.wikimedia.org/math/3/6/3/363b122c528f54df4a0446b6bab05515.png" /> nodes must have exactly 2 children, so there must be <img class="tex" alt="2j" src="http://upload.wikimedia.org/math/5/6/3/56386229d290d4d1eab8236d0cfbf1b1.png" /> nodes separating <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" />'s right child from the end of its layer (<img class="tex" alt="L + 1" src="http://upload.wikimedia.org/math/a/9/e/a9e609c5a34a52fad64ef3b719bcae58.png" />).</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\begin{alignat}{2}
+\text{right} = &amp; \quad \text{last(L + 1)} -2j\\
+             = &amp; \quad (2^{L + 2} -2) -2j\\
+             = &amp; \quad 2(2^{L + 1} -2 -j) + 2\\
+             = &amp; \quad 2i + 2
+\end{alignat}
+" src="http://upload.wikimedia.org/math/e/e/1/ee1df66c2cf6b1aa9d6546c437e26b19.png" /></dd>
+</dl>
+</dd>
+</dl>
+<p>As required.</p>
+<p>Noting that the left child of any node is always 1 place before its right child, we get <img class="tex" alt="\text{left} = 2i + 1" src="http://upload.wikimedia.org/math/a/9/1/a917b85b73b3ba29e8a2fd871a28a443.png" />.</p>
+<p>If the root is located at index 1 instead of 0, the last node in each level is instead at index <img class="tex" alt="2^{l + 1} - 1" src="http://upload.wikimedia.org/math/0/b/7/0b766121dd3bb954ccbccea8f1984f3c.png" />. Using this throughout yields <img class="tex" alt="\text{left} = 2i" src="http://upload.wikimedia.org/math/9/5/e/95e37f2d548b508bf16b83ad16135e5b.png" /> and <img class="tex" alt="\text{right} = 2i + 1" src="http://upload.wikimedia.org/math/1/c/e/1ce9fb3e83d0c586dd710fa6e0bbbcc9.png" /> for heaps with their root at 1.</p>
+<h3><span class="mw-headline" id="Parent_node">Parent node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=8" title="Edit section: Parent node">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Every node is either the left or right child of its parent, so we know that either of the following is true.</p>
+<ol>
+<li><img class="tex" alt="i = 2 \times (\text{parent}) + 1" src="http://upload.wikimedia.org/math/d/4/2/d42e3d680e9abb5d3f15cc461c3612c0.png" /></li>
+<li><img class="tex" alt="i = 2 \times (\text{parent}) + 2" src="http://upload.wikimedia.org/math/c/d/b/cdb875d5d458cecb2032f94a8b638161.png" /></li>
+</ol>
+<p>Hence,</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\text{parent} = \frac{i - 1}{2} \textbf{ or } \frac{i - 2}{2}" src="http://upload.wikimedia.org/math/5/c/0/5c0ffcbe18e9203a31e74cf3e843bd59.png" /></dd>
+</dl>
+</dd>
+</dl>
+<p>Now consider the expression <img class="tex" alt="\left\lfloor \dfrac{i - 1}{2} \right\rfloor" src="http://upload.wikimedia.org/math/e/c/9/ec95f1eb1a661a7393682eb56991350d.png" />.</p>
+<p>If node <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> is a left child, this gives the result immediately, however, it also gives the correct result if node <img class="tex" alt="i" src="http://upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" /> is a right child. In this case, <img class="tex" alt="(i - 2)" src="http://upload.wikimedia.org/math/5/4/b/54b465d61b8f906ecff540bcff770851.png" /> must be even, and hence <img class="tex" alt="(i - 1)" src="http://upload.wikimedia.org/math/5/b/3/5b3e54e819d62009c3d146a7a12b0d5c.png" /> must be odd.</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\begin{alignat}{2}
+\left\lfloor \dfrac{i - 1}{2} \right\rfloor = &amp; \quad \left\lfloor \dfrac{i - 2}{2} + \dfrac{1}{2} \right\rfloor\\
+= &amp; \quad \frac{i - 2}{2}\\
+= &amp; \quad \text{parent}
+\end{alignat}
+" src="http://upload.wikimedia.org/math/0/6/2/062da5716c1306bd35188eb527f19e4e.png" /></dd>
+</dl>
+</dd>
+</dl>
+<p>Therefore, irrespective of whether a node is a left or right child, its parent can be found by the expression:</p>
+<dl>
+<dd>
+<dl>
+<dd><img class="tex" alt="\text{parent} = \left\lfloor \dfrac{i - 1}{2} \right\rfloor" src="http://upload.wikimedia.org/math/1/2/8/12858014335c2cadfef5c6eed88b4db4.png" /></dd>
+</dl>
+</dd>
+</dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a></li>
+<li><a href="Heapsort.html" title="Heapsort">Heapsort</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=10" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;"></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://docs.python.org/library/heapq.html">"heapq – Heap queue algorithm"</a>. <i>Python Standard Library</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.atitle=heapq+%E2%80%93+Heap+queue+algorithm&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdocs.python.org%2Flibrary%2Fheapq.html&amp;rft.jtitle=Python+Standard+Library&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://download.oracle.com/javase/6/docs/api/java/util/PriorityQueue.html">"Class PriorityQueue"</a>. <i>Java™ Platform Standard Ed. 6</i>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.atitle=Class+PriorityQueue&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F6%2Fdocs%2Fapi%2Fjava%2Futil%2FPriorityQueue.html&amp;rft.jtitle=Java%E2%84%A2+Platform+Standard+Ed.+6&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web">Thomas Porter; Istvan Simon (1974). <a rel="nofollow" class="external text" href="ftp://reports.stanford.edu/pub/cstr/reports/cs/tr/74/460/CS-TR-74-460.pdf">"Random Insertion into a Priority Queue Structure"</a>. <i>Stanford University Reports</i>. Stanford University. p.&#160;13<span class="reference-accessdate">. Retrieved 31 January 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.atitle=Random+Insertion+into+a+Priority+Queue+Structure&amp;rft.au=Istvan+Simon&amp;rft.aulast=Thomas+Porter&amp;rft.au=Thomas+Porter&amp;rft.date=1974&amp;rft.genre=article&amp;rft_id=ftp%3A%2F%2Freports.stanford.edu%2Fpub%2Fcstr%2Freports%2Fcs%2Ftr%2F74%2F460%2FCS-TR-74-460.pdf&amp;rft.jtitle=Stanford+University+Reports&amp;rft.pages=13&amp;rft.pub=Stanford+University&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CLRS-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-CLRS_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-CLRS_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREFCormenal.2001" class="citation">Cormen, T. H. &amp; al. (2001), <i>Introduction to Algorithms</i> (2nd ed.), Cambridge, Massachusetts: The MIT Press, <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-07-013151-1" title="Special:BookSources/0-07-013151-1">0-07-013151-1</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.au=al.&amp;rft.au=Cormen%2C+T.+H.&amp;rft.aufirst=T.+H.&amp;rft.aulast=Cormen&amp;rft.btitle=Introduction+to+Algorithms&amp;rft.date=2001&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=0-07-013151-1&amp;rft.place=Cambridge%2C+Massachusetts&amp;rft.pub=The+MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span id="CITEREFSuchenek2012" class="citation">Suchenek, Marek A. (2012), <a rel="nofollow" class="external text" href="http://www.deepdyve.com/lp/ios-press/elementary-yet-precise-worst-case-analysis-of-floyd-s-heap-50NW30HMxU">"Elementary Yet Precise Worst-Case Analysis of Floyd's Heap-Construction Program"</a>, <i>Fundamenta Informaticae</i> (IOS Press) <b>120</b> (1): 75–92, <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.3233%2FFI-2012-751">10.3233/FI-2012-751</a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.atitle=Elementary+Yet+Precise+Worst-Case+Analysis+of+Floyd%27s+Heap-Construction+Program&amp;rft.aufirst=Marek+A.&amp;rft.aulast=Suchenek&amp;rft.au=Suchenek%2C+Marek+A.&amp;rft.date=2012&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.deepdyve.com%2Flp%2Fios-press%2Felementary-yet-precise-worst-case-analysis-of-floyd-s-heap-50NW30HMxU&amp;rft_id=info%3Adoi%2F10.3233%2FFI-2012-751&amp;rft.issue=1&amp;rft.jtitle=Fundamenta+Informaticae&amp;rft.pages=75%E2%80%9392&amp;rft.pub=IOS+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=120" class="Z3988"><span style="display:none;">&#160;</span></span>.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Poul-Henning Kamp. <a rel="nofollow" class="external text" href="http://queue.acm.org/detail.cfm?id=1814327">"You're Doing It Wrong"</a>. ACM Queue. June 11, 2010.</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Chris L. Kuszmaul. <a rel="nofollow" class="external text" href="http://nist.gov/dads/HTML/binaryheap.html">"binary heap"</a>. Dictionary of Algorithms and Data Structures, Paul E. Black, ed., U.S. National Institute of Standards and Technology. 16 November 2009.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">J.-R. Sack and T. Strothotte <a rel="nofollow" class="external text" href="http://www.springerlink.com/content/k24440h5076w013q/">"An Algorithm for Merging Heaps"</a>, Acta Informatica 22, 171-186 (1985).</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">. J.-R. Sack and T. Strothotte <a rel="nofollow" class="external text" href="http://www.sciencedirect.com/science/article/pii/089054019090026E">"A characterization of heaps and its applications"</a> Information and Computation Volume 86, Issue 1, May 1990, Pages 69–86.</span></li>
+<li id="cite_note-sym-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-sym_10-0">^</a></b></span> <span class="reference-text"><span class="citation web">Atkinson, M.D., <a href="http://en.wikipedia.org/wiki/Jörg-Rüdiger_Sack" title="Jörg-Rüdiger Sack">J.-R. Sack</a>, N. Santoro, and T. Strothotte (1 October 1986). <a rel="nofollow" class="external text" href="http://cg.scs.carleton.ca/~morin/teaching/5408/refs/minmax.pdf">"Min-max heaps and generalized priority queues."</a>. Programming techniques and Data structures. Comm. ACM, 29(10): 996–1000.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABinary+heap&amp;rft.au=Atkinson%2C+M.D.%2C+J.-R.+Sack%2C+N.+Santoro%2C+and+T.+Strothotte&amp;rft.aulast=Atkinson%2C+M.D.%2C+J.-R.+Sack%2C+N.+Santoro%2C+and+T.+Strothotte&amp;rft.btitle=Min-max+heaps+and+generalized+priority+queues.&amp;rft.date=1+October+1986&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcg.scs.carleton.ca%2F~morin%2Fteaching%2F5408%2Frefs%2Fminmax.pdf&amp;rft.pub=Programming+techniques+and+Data+structures.+Comm.+ACM%2C+29%2810%29%3A+996%E2%80%931000&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://people.ksp.sk/~kuko/bak/index.html">Binary Heap Applet</a> by Kubo Kovac</li>
+<li><a rel="nofollow" class="external text" href="http://www.policyalmanac.org/games/binaryHeaps.htm">Using Binary Heaps in A* Pathfinding</a></li>
+<li><a rel="nofollow" class="external text" href="http://opendatastructures.org/versions/edition-0.1e/ods-java/10_1_BinaryHeap_Implicit_Bi.html">Open Data Structures - Section 10.1 - BinaryHeap: An Implicit Binary Tree</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><a href="Self-balancing_binary_search_tree.html" title="Self-balancing binary search tree">self-balancing</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><strong class="selflink">binary</strong></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1081
+CPU time usage: 0.688 seconds
+Real time usage: 1.432 seconds
+Preprocessor visited node count: 1182/1000000
+Preprocessor generated node count: 4772/1500000
+Post‐expand include size: 24956/2048000 bytes
+Template argument size: 149/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 2/500
+Lua time usage: 0.046/10.000 seconds
+Lua memory usage: 1.52 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:69890-0!*!0!!en!4!*!math=0 and timestamp 20140315082822
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;oldid=596106647">http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;oldid=596106647</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Heaps_(data_structures)" title="Category:Heaps (data structures)">Heaps (data structures)</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Binary+heap&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Binary+heap" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Binary_heap.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Binary_heap"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Binary_heap.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Binary_heap" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Binary_heap" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;oldid=596106647" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q803847" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Binary_heap&amp;id=596106647" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Binary+heap">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Binary+heap&amp;oldid=596106647&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Binary_heap&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Monticle_binari" title="Monticle binari – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Binární_halda" title="Binární halda – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Binärer_Heap" title="Binärer Heap – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Montículo_binario" title="Montículo binario – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/هرم_دودویی" title="هرم دودویی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Tas_binaire" title="Tas binaire – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Bináris_kupac" title="Bináris kupac – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/二分ヒープ" title="二分ヒープ – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Kopiec_binarny" title="Kopiec binarny – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Двоичная_куча" title="Двоичная куча – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Binárna_halda" title="Binárna halda – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Бінарна_купа" title="Бінарна купа – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Đống_nhị_phân" title="Đống nhị phân – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/二叉堆" title="二叉堆 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q803847#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 February 2014 at 23:58.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Binary_heap" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1047 in 0.258 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Binary_heap by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:12 GMT -->
+</html>

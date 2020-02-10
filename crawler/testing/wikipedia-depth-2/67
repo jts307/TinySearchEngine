@@ -1,0 +1,554 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pseudocode.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pseudocode by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Pseudocode - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Pseudocode" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Pseudocode.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Pseudocode","wgTitle":"Pseudocode","wgCurRevisionId":598740206,"wgRevisionId":598740206,"wgArticleId":24185,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking sources from October 2012","All articles lacking sources","Articles with example pseudocode","Source code","Algorithm description languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Pseudocode","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q189224"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-fortran {line-height: normal;}
+.source-fortran li, .source-fortran pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for fortran
+ * CSS class: source-fortran, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.fortran.source-fortran .de1, .fortran.source-fortran .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.fortran.source-fortran  {font-family:monospace;}
+.fortran.source-fortran .imp {font-weight: bold; color: red;}
+.fortran.source-fortran li, .fortran.source-fortran .li1 {font-weight: normal; vertical-align:top;}
+.fortran.source-fortran .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.fortran.source-fortran .li2 {font-weight: bold; vertical-align:top;}
+.fortran.source-fortran .kw1 {color: #b1b100;}
+.fortran.source-fortran .kw2 {color: #000000; font-weight: bold;}
+.fortran.source-fortran .kw3 {color: #000066;}
+.fortran.source-fortran .kw4 {color: #993333;}
+.fortran.source-fortran .co1 {color: #666666; font-style: italic;}
+.fortran.source-fortran .co2 {color: #339933;}
+.fortran.source-fortran .coMULTI {color: #808080; font-style: italic;}
+.fortran.source-fortran .es0 {color: #000099; font-weight: bold;}
+.fortran.source-fortran .br0 {color: #009900;}
+.fortran.source-fortran .sy0 {color: #339933;}
+.fortran.source-fortran .st0 {color: #ff0000;}
+.fortran.source-fortran .nu0 {color: #cc66cc;}
+.fortran.source-fortran .me1 {color: #202020;}
+.fortran.source-fortran .me2 {color: #202020;}
+.fortran.source-fortran .ln-xtra, .fortran.source-fortran li.ln-xtra, .fortran.source-fortran div.ln-xtra {background-color: #ffc;}
+.fortran.source-fortran span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-pascal {line-height: normal;}
+.source-pascal li, .source-pascal pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for pascal
+ * CSS class: source-pascal, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.pascal.source-pascal .de1, .pascal.source-pascal .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.pascal.source-pascal  {font-family:monospace;}
+.pascal.source-pascal .imp {font-weight: bold; color: red;}
+.pascal.source-pascal li, .pascal.source-pascal .li1 {font-weight: normal; vertical-align:top;}
+.pascal.source-pascal .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.pascal.source-pascal .li2 {font-weight: bold; vertical-align:top;}
+.pascal.source-pascal .kw1 {color: #000000; font-weight: bold;}
+.pascal.source-pascal .kw2 {color: #000000; font-weight: bold;}
+.pascal.source-pascal .kw3 {color: #000066;}
+.pascal.source-pascal .kw4 {color: #000066; font-weight: bold;}
+.pascal.source-pascal .co1 {color: #808080; font-style: italic;}
+.pascal.source-pascal .co2 {color: #008000; font-style: italic;}
+.pascal.source-pascal .coMULTI {color: #808080; font-style: italic;}
+.pascal.source-pascal .es0 {color: #ff0000; font-weight: bold;}
+.pascal.source-pascal .br0 {color: #009900;}
+.pascal.source-pascal .sy0 {color: #000066;}
+.pascal.source-pascal .sy1 {color: #000066;}
+.pascal.source-pascal .sy2 {color: #000066;}
+.pascal.source-pascal .sy3 {color: #000066;}
+.pascal.source-pascal .st0 {color: #ff0000;}
+.pascal.source-pascal .nu0 {color: #cc66cc;}
+.pascal.source-pascal .me1 {color: #006600;}
+.pascal.source-pascal .re0 {color: #0000cc;}
+.pascal.source-pascal .re1 {color: #ff0000;}
+.pascal.source-pascal .ln-xtra, .pascal.source-pascal li.ln-xtra, .pascal.source-pascal div.ln-xtra {background-color: #ffc;}
+.pascal.source-pascal span.xtra { display:block; }
+
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Pseudocode skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Pseudocode</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Unreferenced" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>does not <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">cite</a> any <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references or sources</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence" title="Wikipedia:Verifiability">removed</a>.</span> <small><i>(October 2012)</i></small></span></td>
+</tr>
+</table>
+<p><b>Pseudocode</b> is an informal <a href="High-level_programming_language.html" title="High-level programming language">high-level</a> description of the operating principle of a <a href="http://en.wikipedia.org/wiki/Computer_program" title="Computer program">computer program</a> or other <a href="Algorithm.html" title="Algorithm">algorithm</a>.</p>
+<p>It uses the structural conventions of a <a href="Programming_language.html" title="Programming language">programming language</a>, but is intended for human reading rather than machine reading. Pseudocode typically omits details that are not essential for human understanding of the algorithm, such as <a href="http://en.wikipedia.org/wiki/Variable_declaration" title="Variable declaration" class="mw-redirect">variable declarations</a>, system-specific code and some <a href="Subroutines.html" title="Subroutines" class="mw-redirect">subroutines</a>. The programming language is augmented with <a href="Natural_language.html" title="Natural language">natural language</a> description details, where convenient, or with compact mathematical notation. The purpose of using pseudocode is that it is easier for people to understand than conventional programming language code, and that it is an efficient and environment-independent description of the key principles of an algorithm. It is commonly used in textbooks and scientific publications that are documenting various algorithms, and also in planning of computer program development, for sketching out the structure of the program before the actual coding takes place.</p>
+<p>No standard for pseudocode syntax exists, as a program in pseudocode is not an executable program. Pseudocode resembles, but should not be confused with <a href="http://en.wikipedia.org/wiki/Skeleton_(computer_programming)" title="Skeleton (computer programming)">skeleton programs</a>, including <a href="http://en.wikipedia.org/wiki/Dummy_code" title="Dummy code" class="mw-redirect">dummy code</a>, which can be <a href="Compiler.html" title="Compiler">compiled</a> without errors. <a href="http://en.wikipedia.org/wiki/Flowchart" title="Flowchart">Flowcharts</a> and <a href="http://en.wikipedia.org/wiki/Unified_Modeling_Language" title="Unified Modeling Language">Unified Modeling Language</a> (UML) charts can be thought of as a graphical alternative to pseudocode, but are more spacious on paper.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Application"><span class="tocnumber">1</span> <span class="toctext">Application</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Syntax"><span class="tocnumber">2</span> <span class="toctext">Syntax</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Mathematical_style_pseudocode"><span class="tocnumber">3</span> <span class="toctext">Mathematical style pseudocode</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Machine_compilation_of_pseudocode_style_languages"><span class="tocnumber">4</span> <span class="toctext">Machine compilation of pseudocode style languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Natural_language_grammar_in_programming_languages"><span class="tocnumber">4.1</span> <span class="toctext">Natural language grammar in programming languages</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Mathematical_programming_languages"><span class="tocnumber">4.2</span> <span class="toctext">Mathematical programming languages</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Alternative_forms_of_pseudocode"><span class="tocnumber">4.2.1</span> <span class="toctext">Alternative forms of pseudocode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Application">Application</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=1" title="Edit section: Application">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Textbooks and <a href="http://en.wikipedia.org/wiki/Scientific_publication" title="Scientific publication" class="mw-redirect">scientific publications</a> related to <a href="Computer_science.html" title="Computer science">computer science</a> and <a href="http://en.wikipedia.org/wiki/Numerical_computation" title="Numerical computation" class="mw-redirect">numerical computation</a> often use pseudocode in description of algorithms, so that all programmers can understand them, even if they do not all know the same programming languages. In textbooks, there is usually an accompanying introduction explaining the particular conventions in use. The level of detail of the pseudo-code may in some cases approach that of formalized general-purpose languages.</p>
+<p>A <a href="http://en.wikipedia.org/wiki/Programmer" title="Programmer">programmer</a> who needs to implement a specific algorithm, especially an unfamiliar one, will often start with a pseudocode description, and then "translate" that description into the target programming language and modify it to interact correctly with the rest of the program. Programmers may also start a project by sketching out the code in pseudocode on paper before writing it in its actual language, as a <a href="http://en.wikipedia.org/wiki/Top-down_and_bottom-up_design" title="Top-down and bottom-up design">top-down</a> structuring approach, with a stepwise refinement.</p>
+<h2><span class="mw-headline" id="Syntax">Syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=2" title="Edit section: Syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As the name suggests, pseudocode generally does not actually obey the <a href="http://en.wikipedia.org/wiki/Syntax" title="Syntax">syntax</a> rules of any particular language; there is no systematic standard form, although any particular writer will generally borrow style and syntax; for example, control structures from some conventional programming language. Popular syntax sources include <a href="http://en.wikipedia.org/wiki/Pascal_programming_language" title="Pascal programming language" class="mw-redirect">Pascal</a>, <a href="BASIC.html" title="BASIC">BASIC</a>, <a href="C_(programming_language).html" title="C (programming language)">C</a>, <a href="C%2b%2b.html" title="C++">C++</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>, <a href="Lisp_programming_language.html" title="Lisp programming language" class="mw-redirect">Lisp</a>, and <a href="ALGOL.html" title="ALGOL">ALGOL</a>. Variable declarations are typically omitted. Function calls and blocks of code, such as code contained within a loop, are often replaced by a one-line natural language sentence.</p>
+<p>Depending on the writer, pseudocode may therefore vary widely in style, from a near-exact imitation of a real programming language at one extreme, to a description approaching formatted prose at the other.</p>
+<p>This is an example of pseudocode (for the <a href="http://en.wikipedia.org/wiki/Mathematical_game" title="Mathematical game">mathematical game</a> <a href="http://en.wikipedia.org/wiki/Fizz_buzz" title="Fizz buzz">fizz buzz</a>):</p>
+<table class="wikitable">
+<tr>
+<td>
+<p>Fortran style pseudo code</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="fortran source-fortran">
+<pre class="de1">
+<span class="kw1">program</span> fizzbuzz
+<span class="kw1">Do</span> i <span class="sy0">=</span> <span class="nu0">1</span> <span class="kw1">to</span> <span class="nu0">100</span> 
+    set print_number <span class="kw1">to</span> true
+    <span class="kw1">If</span> i is divisible by <span class="nu0">3</span>
+        print <span class="st0">"Fizz"</span>
+        set print_number <span class="kw1">to</span> false
+    <span class="kw1">If</span> i is divisible by <span class="nu0">5</span>
+        print <span class="st0">"Buzz"</span> 
+        set print_number <span class="kw1">to</span> false
+    <span class="kw1">If</span> print_number, print i
+    print a newline
+<span class="kw1">end</span> <span class="kw1">do</span>
+</pre></div>
+</div>
+</td>
+<td>
+<p>Pascal style pseudo code</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="pascal source-pascal">
+<pre class="de1">
+<span class="kw1">procedure</span> fizzbuzz
+<span class="kw1">For</span> i <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">1</span> <span class="kw1">to</span> <span class="nu0">100</span> <span class="kw1">do</span>
+    <span class="kw4">set</span> print_number <span class="kw1">to</span> <span class="kw2">true</span><span class="sy1">;</span>
+    <span class="kw1">If</span> i is divisible by <span class="nu0">3</span> <span class="kw1">then</span>
+        print "Fizz"<span class="sy1">;</span>
+        <span class="kw4">set</span> print_number <span class="kw1">to</span> <span class="kw2">false</span><span class="sy1">;</span>
+    <span class="kw1">If</span> i is divisible by <span class="nu0">5</span> <span class="kw1">then</span>
+        print "Buzz"<span class="sy1">;</span>
+        <span class="kw4">set</span> print_number <span class="kw1">to</span> <span class="kw2">false</span><span class="sy1">;</span>
+    <span class="kw1">If</span> print_number<span class="sy1">,</span> print i<span class="sy1">;</span>
+    print a newline<span class="sy1">;</span>
+<span class="kw1">end</span>
+</pre></div>
+</div>
+</td>
+<td>
+<p>C style pseudo code:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">void</span> <span class="kw2">function</span> fizzbuzz
+For <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i<span class="sy0">&lt;=</span><span class="nu0">100</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+    set print_number to <span class="kw2">true</span><span class="sy0">;</span>
+    If i is divisible by <span class="nu0">3</span>
+        print <span class="st0">"Fizz"</span><span class="sy0">;</span>
+        set print_number to <span class="kw2">false</span><span class="sy0">;</span>
+    If i is divisible by <span class="nu0">5</span>
+        print <span class="st0">"Buzz"</span><span class="sy0">;</span>
+        set print_number to <span class="kw2">false</span><span class="sy0">;</span>
+    If print_number<span class="sy0">,</span> print i<span class="sy0">;</span>
+    print a newline<span class="sy0">;</span>
+<span class="br0">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</table>
+<div class="rellink">See also category: <a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></div>
+<h2><span class="mw-headline" id="Mathematical_style_pseudocode">Mathematical style pseudocode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=3" title="Edit section: Mathematical style pseudocode">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="http://en.wikipedia.org/wiki/Numerical_computation" title="Numerical computation" class="mw-redirect">numerical computation</a>, pseudocode often consists of <a href="http://en.wikipedia.org/wiki/Mathematical_notation" title="Mathematical notation">mathematical notation</a>, typically from <a href="Set_theory.html" title="Set theory">set</a> and <a href="http://en.wikipedia.org/wiki/Matrix_(mathematics)" title="Matrix (mathematics)">matrix</a> theory, mixed with the control structures of a conventional programming language, and perhaps also <a href="Natural_language.html" title="Natural language">natural language</a> descriptions. This is a compact and often informal notation that can be understood by a wide range of mathematically trained people, and is frequently used as a way to describe mathematical <a href="Algorithm.html" title="Algorithm">algorithms</a>. For example, the sum operator (<a href="http://en.wikipedia.org/wiki/Capital-sigma_notation" title="Capital-sigma notation" class="mw-redirect">capital-sigma notation</a>) or the product operator (<a href="http://en.wikipedia.org/wiki/Capital-pi_notation" title="Capital-pi notation" class="mw-redirect">capital-pi notation</a>) may represent a for loop and perhaps a selection structure in one expression:</p>
+<pre>
+<code>Return</code> <img class="tex" alt="\sum_{k\in S} x_k" src="http://upload.wikimedia.org/math/1/b/8/1b85542e01e63555cf0fd2b22d34af8d.png" />
+</pre>
+<p>Normally non-<a href="ASCII.html" title="ASCII">ASCII</a> <a href="http://en.wikipedia.org/wiki/Typesetting" title="Typesetting">typesetting</a> is used for the mathematical equations, for example by means of <a href="TeX.html" title="TeX">TeX</a> or <a href="http://en.wikipedia.org/wiki/MathML" title="MathML">MathML</a> markup, or proprietary <a href="http://en.wikipedia.org/wiki/Formula_editor" title="Formula editor">formula editors</a>.</p>
+<p>Mathematical style pseudocode is sometimes referred to as <a href="http://en.wikipedia.org/wiki/Pidgin_code" title="Pidgin code">pidgin code</a>, for example <i>pidgin <a href="ALGOL.html" title="ALGOL">ALGOL</a></i> (the origin of the concept), <i>pidgin <a href="Fortran-2.html" title="Fortran">Fortran</a></i>, <i>pidgin <a href="BASIC.html" title="BASIC">BASIC</a></i>, <i>pidgin <a href="Pascal_(programming_language).html" title="Pascal (programming language)">Pascal</a></i>, <i>pidgin <a href="C_(programming_language).html" title="C (programming language)">C</a></i>, and <i>pidgin <a href="Lisp_(programming_language).html" title="Lisp (programming language)">Lisp</a></i>.</p>
+<h2><span class="mw-headline" id="Machine_compilation_of_pseudocode_style_languages">Machine compilation of pseudocode style languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=4" title="Edit section: Machine compilation of pseudocode style languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Natural_language_grammar_in_programming_languages">Natural language grammar in programming languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=5" title="Edit section: Natural language grammar in programming languages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Various attempts to bring elements of natural language grammar into computer programming have produced programming languages such as <a href="http://en.wikipedia.org/wiki/HyperTalk" title="HyperTalk">HyperTalk</a>, <a href="http://en.wikipedia.org/wiki/Lingo_(programming_language)" title="Lingo (programming language)">Lingo</a>, <a href="http://en.wikipedia.org/wiki/AppleScript" title="AppleScript">AppleScript</a>, <a href="SQL.html" title="SQL">SQL</a>, <a href="http://en.wikipedia.org/wiki/Inform" title="Inform">Inform</a> and to some extent <a href="Python_(programming_language).html" title="Python (programming language)">Python</a>. In these languages, parentheses and other special characters are replaced by prepositions, resulting in quite talkative code. These languages are typically <a href="http://en.wikipedia.org/wiki/Dynamic_typing" title="Dynamic typing" class="mw-redirect">dynamically typed</a>, meaning that variable declarations and other <a href="http://en.wikipedia.org/wiki/Boilerplate_code" title="Boilerplate code">boilerplate code</a> can be omitted. Such languages may make it easier for a person without knowledge about the language to understand the code and perhaps also to learn the language. However, the similarity to natural language is usually more cosmetic than genuine. The syntax rules may be just as strict and formal as in conventional programming, and do not necessarily make development of the programs easier.</p>
+<h3><span class="mw-headline" id="Mathematical_programming_languages">Mathematical programming languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=6" title="Edit section: Mathematical programming languages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An alternative to using mathematical pseudocode (involving set theory notation or matrix operations) for documentation of algorithms is to use a formal mathematical programming language that is a mix of non-ASCII mathematical notation and program control structures. Then the code can be parsed and interpreted by a machine.</p>
+<p>Several formal <a href="http://en.wikipedia.org/wiki/Specification_language" title="Specification language">specification languages</a> include set theory notation using special characters. Examples are:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Z_notation" title="Z notation">Z notation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vienna_Development_Method" title="Vienna Development Method">Vienna Development Method</a> Specification Language (VDM-SL).</li>
+</ul>
+<p>Some <a href="http://en.wikipedia.org/wiki/Array_programming_languages" title="Array programming languages" class="mw-redirect">array programming languages</a> include vectorized expressions and matrix operations as non-ASCII formulas, mixed with conventional control structures. Examples are:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/APL_(programming_language)" title="APL (programming language)">A programming language</a> (APL), and its dialects <a href="http://en.wikipedia.org/wiki/APLX" title="APLX">APLX</a> and <a href="http://en.wikipedia.org/wiki/A+_(programming_language)" title="A+ (programming language)">A+</a>.</li>
+<li><a href="http://en.wikipedia.org/wiki/MathCAD" title="MathCAD" class="mw-redirect">MathCAD</a>.</li>
+</ul>
+<h4><span class="mw-headline" id="Alternative_forms_of_pseudocode">Alternative forms of pseudocode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=7" title="Edit section: Alternative forms of pseudocode">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Since the usual aim of pseudocode is to present a simple form of some algorithm, using a language syntax closer to the problem domain<sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:AUDIENCE" title="Wikipedia:AUDIENCE" class="mw-redirect"><span title="Wikipedia:AUDIENCE">example needed</span></a></i>]</sup> would make the expression of ideas in the pseudocode simpler to convey in those domains.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Concept_programming" title="Concept programming">Concept programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DRAKON" title="DRAKON">Drakon-chart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flowchart" title="Flowchart">Flowchart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Literate_programming" title="Literate programming">Literate programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Program_Design_Language" title="Program Design Language">Program Design Language</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Short_Code" title="Short Code" class="mw-redirect">Short Code</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Structured_English" title="Structured English">Structured English</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Justin Zobel (2004). "Algorithms" in <i>Writing for Computer Science</i> (second edition). Springer. <a href="http://en.wikipedia.org/wiki/Special:BookSources/1852338024" class="internal mw-magiclink-isbn">ISBN 1-85233-802-4</a>.</li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/37px-Wiktionary-logo-en.svg.png" width="37" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/55px-Wiktionary-logo-en.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/73px-Wiktionary-logo-en.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Look up <i><b><a href="http://en.wiktionary.org/wiki/Special:Search/pseudocode" class="extiw" title="wiktionary:Special:Search/pseudocode">pseudocode</a></b></i> in Wiktionary, the free dictionary.</td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html">A pseudocode standard</a></li>
+<li><a rel="nofollow" class="external text" href="http://calgo.acm.org/">Collected Algorithms of the</a> <a href="Association_for_Computing_Machinery.html" title="Association for Computing Machinery">ACM</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.cornell.edu/Courses/cs482/2003su/handouts/pseudocode.pdf">Pseudocode Guidelines</a>, PDF file.</li>
+<li><a rel="nofollow" class="external text" href="http://www.coderookie.com/2006/tutorial/the-pseudocode-programming-process/">Pseudocode Programming Process</a> base on data from Code Complete book</li>
+<li><a rel="nofollow" class="external text" href="http://www.gnstudio.com/open-source/apdt/">Pseudocode generation tool</a> from a model tree learn how to generate pseudocode in a second</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1023
+CPU time usage: 0.500 seconds
+Real time usage: 0.552 seconds
+Preprocessor visited node count: 423/1000000
+Preprocessor generated node count: 4494/1500000
+Post‐expand include size: 5763/2048000 bytes
+Template argument size: 534/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 2/500
+Lua time usage: 0.043/10.000 seconds
+Lua memory usage: 855 KB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:24185-0!*!0!!en!4!*!math=0 and timestamp 20140324122331
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;oldid=598740206">http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;oldid=598740206</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Source_code" title="Category:Source code">Source code</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Algorithm_description_languages" title="Category:Algorithm description languages">Algorithm description languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_sources_from_October_2012" title="Category:Articles lacking sources from October 2012">Articles lacking sources from October 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_sources" title="Category:All articles lacking sources">All articles lacking sources</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pseudocode&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Pseudocode" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Pseudocode.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Pseudocode"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Pseudocode.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Pseudocode" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Pseudocode" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;oldid=598740206" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q189224" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Pseudocode&amp;id=598740206" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Pseudocode">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Pseudocode&amp;oldid=598740206&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Pseudocode&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Псевдокод" title="Псевдокод – Bulgarian" lang="bg" hreflang="bg">Български</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Pseudocodi" title="Pseudocodi – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Pseudokód" title="Pseudokód – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Pseudocode" title="Pseudocode – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Ψευδοκώδικας" title="Ψευδοκώδικας – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Pseudocódigo" title="Pseudocódigo – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Pseŭdokodo" title="Pseŭdokodo – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/شبه‌کد" title="شبه‌کد – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Pseudo-code" title="Pseudo-code – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Pseudocódigo" title="Pseudocódigo – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/의사코드" title="의사코드 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/Kode_palsu" title="Kode palsu – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li>
+			<li class="interlanguage-link interwiki-ia"><a href="http://ia.wikipedia.org/wiki/Pseudocodice" title="Pseudocodice – Interlingua" lang="ia" hreflang="ia">Interlingua</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Pseudocodice" title="Pseudocodice – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/פסאודו_קוד" title="פסאודו קוד – Hebrew" lang="he" hreflang="he">עברית</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Pszeudokód" title="Pszeudokód – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Pseudocode" title="Pseudocode – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/擬似コード" title="擬似コード – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Pseudokode" title="Pseudokode – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Pseudokod" title="Pseudokod – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Pseudocódigo" title="Pseudocódigo – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Limbaj_pseudocod" title="Limbaj pseudocod – Romanian" lang="ro" hreflang="ro">Română</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Псевдокод_(язык_описания_алгоритмов)" title="Псевдокод (язык описания алгоритмов) – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Pseudocode" title="Pseudocode – Simple English" lang="simple" hreflang="simple">Simple English</a></li>
+			<li class="interlanguage-link interwiki-sl"><a href="http://sl.wikipedia.org/wiki/Psevdokoda" title="Psevdokoda – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Псеудокод" title="Псеудокод – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Pseudokoodi" title="Pseudokoodi – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Pseudokod" title="Pseudokod – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/รหัสเทียม" title="รหัสเทียม – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Sözde_kod" title="Sözde kod – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Псевдокод" title="Псевдокод – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Mã_giả" title="Mã giả – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/伪代码" title="伪代码 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q189224#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 8 March 2014 at 20:20.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Pseudocode" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1173 in 0.347 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Pseudocode by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:16 GMT -->
+</html>

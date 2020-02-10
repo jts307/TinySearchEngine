@@ -1,0 +1,677 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Self-balancing_binary_search_tree.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Self-balancing_binary_search_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Self-balancing binary search tree - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Self-balancing_binary_search_tree" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Self-balancing_binary_search_tree.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Self-balancing_binary_search_tree","wgTitle":"Self-balancing binary search tree","wgCurRevisionId":599064713,"wgRevisionId":599064713,"wgArticleId":378310,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from November 2010","All articles needing additional references","All articles with unsourced statements","Articles with unsourced statements from August 2009","Commons category with local link same as on Wikidata","Binary trees","Soviet inventions","Trees (data structures)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Self-balancing_binary_search_tree","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q245955"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Self-balancing_binary_search_tree skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Self-balancing binary search tree</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>needs additional citations for <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>. <span class="hide-when-compact">Please help <a class="external text" href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit">improve this article</a> by <a href="http://en.wikipedia.org/wiki/Help:Introduction_to_referencing/1" title="Help:Introduction to referencing/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.</span> <small><i>(November 2010)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:253px;"><a href="http://en.wikipedia.org/wiki/File:Unbalanced_binary_tree.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Unbalanced_binary_tree.svg/251px-Unbalanced_binary_tree.svg.png" width="251" height="251" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Unbalanced_binary_tree.svg/377px-Unbalanced_binary_tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Unbalanced_binary_tree.svg/502px-Unbalanced_binary_tree.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Unbalanced_binary_tree.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+An example of an <b>unbalanced</b> tree; following the path from the root to a node takes an average of 3.27 node accesses</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:253px;"><a href="http://en.wikipedia.org/wiki/File:AVLtreef.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AVLtreef.svg/251px-AVLtreef.svg.png" width="251" height="112" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/06/AVLtreef.svg/377px-AVLtreef.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/AVLtreef.svg/502px-AVLtreef.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:AVLtreef.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+The same tree after being height-balanced; the average path effort decreased to 3.00 node accesses</div>
+</div>
+</div>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, a <b>self-balancing</b> (or <b>height-balanced</b>) <b>binary search tree</b> is any <a href="http://en.wikipedia.org/wiki/Node_(computer_science)" title="Node (computer science)">node</a>-based <a href="Binary_search_tree.html" title="Binary search tree">binary search tree</a> that automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions.<sup id="cite_ref-knuth_1-0" class="reference"><a href="#cite_note-knuth-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>These structures provide efficient implementations for mutable ordered <a href="http://en.wikipedia.org/wiki/List_(computing)" title="List (computing)" class="mw-redirect">lists</a>, and can be used for other <a href="http://en.wikipedia.org/wiki/Abstract_data_structure" title="Abstract data structure" class="mw-redirect">abstract data structures</a> such as <a href="http://en.wikipedia.org/wiki/Associative_arrays" title="Associative arrays" class="mw-redirect">associative arrays</a>, <a href="Priority_queue.html" title="Priority queue">priority queues</a> and <a href="http://en.wikipedia.org/wiki/Set_(computer_science)" title="Set (computer science)" class="mw-redirect">sets</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Implementations"><span class="tocnumber">2</span> <span class="toctext">Implementations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="http://en.wikipedia.org/wiki/File:BinaryTreeRotations.svg" class="image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/300px-BinaryTreeRotations.svg.png" width="300" height="166" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/450px-BinaryTreeRotations.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/BinaryTreeRotations.svg/600px-BinaryTreeRotations.svg.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:BinaryTreeRotations.svg" class="internal" title="Enlarge"><img src="http://bits.wikimedia.org/static-1.23wmf18/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Tree rotations are very common internal operations on self-balancing binary trees to keep perfect or near-to-perfect balance.</div>
+</div>
+</div>
+<p>Most operations on a binary search tree (BST) take time directly proportional to the height of the tree, so it is desirable to keep the height small. A binary tree with height <i>h</i> can contain at most <a href="http://en.wikipedia.org/wiki/Geometric_series#Formula" title="Geometric series">2<sup>0</sup>+2<sup>1</sup>+···+2<sup><i>h</i></sup>&#160;=&#160;2<sup><i>h</i>+1</sup>−1</a> nodes. It follows that for a tree with <i>n</i> nodes and height <i>h</i>:</p>
+<p><img class="tex" alt="n\le2^{h+1}-1" src="http://upload.wikimedia.org/math/0/1/c/01c62052072c993d65f4700e78eab492.png" /></p>
+<p>And that implies:</p>
+<p><img class="tex" alt="h\ge\lceil\log_2(n+1)-1\rceil\ge \lfloor\log_2 n\rfloor" src="http://upload.wikimedia.org/math/3/3/a/33a0e01355cd757fb90b3002c061f516.png" />.</p>
+<p>In other words, the minimum height of a tree with <i>n</i> nodes is <a href="http://en.wikipedia.org/wiki/Logarithm" title="Logarithm">log</a><sub>2</sub>(<i>n</i>), <a href="http://en.wikipedia.org/wiki/Floor_and_ceiling_functions" title="Floor and ceiling functions">rounded down</a>; that is, <img class="tex" alt=" \lfloor \log_2 n\rfloor" src="http://upload.wikimedia.org/math/5/0/9/5096155f8cc9f6ee9aa628d0ead19a03.png" />:.<sup id="cite_ref-knuth_1-1" class="reference"><a href="#cite_note-knuth-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>However, the simplest algorithms for BST item insertion may yield a tree with height <i>n</i> in rather common situations. For example, when the items are inserted in sorted <a href="http://en.wikipedia.org/wiki/Key_(database)" title="Key (database)" class="mw-redirect">key</a> order, the tree degenerates into a <a href="Linked_list.html" title="Linked list">linked list</a> with <i>n</i> nodes. The difference in performance between the two situations may be enormous: for <i>n</i>&#160;=&#160;1,000,000, for example, the minimum height is <img class="tex" alt=" \lfloor \log_2(1,000,000) \rfloor = 19 " src="http://upload.wikimedia.org/math/5/c/4/5c44b034646466431283d4b95c6aedc9.png" />.</p>
+<p>If the data items are known ahead of time, the height can be kept small, in the average sense, by adding values in a random order, resulting in a <a href="http://en.wikipedia.org/wiki/Random_binary_search_tree" title="Random binary search tree" class="mw-redirect">random binary search tree</a>. However, there are many situations (such as <a href="http://en.wikipedia.org/wiki/Online_algorithm" title="Online algorithm">online algorithms</a>) where this <a href="http://en.wikipedia.org/wiki/Randomized_algorithm" title="Randomized algorithm">randomization</a> is not viable.</p>
+<p>Self-balancing binary trees solve this problem by performing transformations on the tree (such as <a href="http://en.wikipedia.org/wiki/Tree_rotation" title="Tree rotation">tree rotations</a>) at key times, in order to keep the height proportional to log<sub>2</sub>(<i>n</i>). Although a certain <a href="http://en.wikipedia.org/wiki/Computational_overhead" title="Computational overhead" class="mw-redirect">overhead</a> is involved, it may be justified in the long run by ensuring fast execution of later operations.</p>
+<p>Maintaining the height always at its minimum value <img class="tex" alt="\lfloor \log_2(n) \rfloor" src="http://upload.wikimedia.org/math/2/b/7/2b7b99a3adb3b660a2376d54aa5ee99f.png" /> is not always viable; it can be proven that any insertion algorithm which did so would have an excessive overhead.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (August 2009)">citation needed</span></a></i>]</sup> Therefore, most self-balanced BST algorithms keep the height within a constant factor of this lower bound.</p>
+<p>In the asymptotic ("<a href="Big_O_notation.html" title="Big O notation">Big-O</a>") sense, a self-balancing BST structure containing <i>n</i> items allows the lookup, insertion, and removal of an item in O(log <i>n</i>) worst-case time, and <a href="http://en.wikipedia.org/wiki/In-order_iteration" title="In-order iteration" class="mw-redirect">ordered enumeration</a> of all items in O(<i>n</i>) time. For some implementations these are per-operation time bounds, while for others they are <a href="Amortized_analysis.html" title="Amortized analysis">amortized</a> bounds over a sequence of operations. These times are asymptotically optimal among all data structures that manipulate the key only through comparisons.</p>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=2" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Popular data structures implementing this type of tree include:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/2-3_tree" title="2-3 tree" class="mw-redirect">2-3 tree</a></li>
+<li><a href="AA_tree.html" title="AA tree">AA tree</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL tree</a></li>
+<li><a href="Red-black_tree.html" title="Red-black tree" class="mw-redirect">Red-black tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat tree</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">Splay tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a></li>
+</ul>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=3" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Self-balancing binary search trees can be used in a natural way to construct and maintain ordered lists, such as <a href="Priority_queue.html" title="Priority queue">priority queues</a>. They can also be used for <a href="Associative_array.html" title="Associative array">associative arrays</a>; key-value pairs are simply inserted with an ordering based on the key alone. In this capacity, self-balancing BSTs have <a href="Associative_array.html#Efficient_representations" title="Associative array">a number of advantages and disadvantages</a> over their main competitor, <a href="Hash_table.html" title="Hash table">hash tables</a>. One advantage of self-balancing BSTs is that they allow fast (indeed, asymptotically optimal) enumeration of the items <i>in key order</i>, which hash tables do not provide. One disadvantage is that their lookup algorithms get more complicated when there may be multiple items with the same key. Self-balancing BSTs have better worst-case lookup performance than hash tables (O(log n) compared to O(n)), but have worse average-case performance (O(log n) compared to O(1)).</p>
+<p>Self-balancing BSTs can be used to implement any algorithm that requires mutable ordered lists, to achieve optimal worst-case asymptotic performance. For example, if <a href="http://en.wikipedia.org/wiki/Binary_tree_sort" title="Binary tree sort" class="mw-redirect">binary tree sort</a> is implemented with a self-balanced BST, we have a very simple-to-describe yet <a href="http://en.wikipedia.org/wiki/Asymptotically_optimal" title="Asymptotically optimal" class="mw-redirect">asymptotically optimal</a> O(<i>n</i> log <i>n</i>) sorting algorithm. Similarly, many algorithms in <a href="Computational_geometry.html" title="Computational geometry">computational geometry</a> exploit variations on self-balancing BSTs to solve problems such as the <a href="http://en.wikipedia.org/wiki/Line_segment_intersection" title="Line segment intersection">line segment intersection</a> problem and the <a href="http://en.wikipedia.org/wiki/Point_location" title="Point location">point location</a> problem efficiently. (For average-case performance, however, self-balanced BSTs may be less efficient than other solutions. Binary tree sort, in particular, is likely to be slower than <a href="http://en.wikipedia.org/wiki/Merge_sort" title="Merge sort">merge sort</a>, <a href="http://en.wikipedia.org/wiki/Quicksort" title="Quicksort">quicksort</a>, or <a href="Heapsort.html" title="Heapsort">heapsort</a>, because of the tree-balancing overhead as well as <a href="Cache_(computing).html" title="Cache (computing)">cache</a> access patterns.)</p>
+<p>Self-balancing BSTs are flexible data structures, in that it's easy to extend them to efficiently record additional information or perform new operations. For example, one can record the number of nodes in each subtree having a certain property, allowing one to count the number of nodes in a certain key range with that property in O(log <i>n</i>) time. These extensions can be used, for example, to optimize database queries or other list-processing algorithms.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Day–Stout–Warren_algorithm" title="Day–Stout–Warren algorithm">Day–Stout–Warren algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fusion_tree" title="Fusion tree">Fusion tree</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sorting" title="Sorting">Sorting</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-knuth-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-knuth_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-knuth_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="Donald_Knuth.html" title="Donald Knuth">Donald Knuth</a>. <i>The Art of Computer Programming</i>, Volume 3: <i>Sorting and Searching</i>, Second Edition. Addison-Wesley, 1998. <a href="http://en.wikipedia.org/wiki/Special:BookSources/0201896850" class="internal mw-magiclink-isbn">ISBN 0-201-89685-0</a>. Section 6.2.3: Balanced Trees, pp.458–481.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:Balanced_Trees" class="extiw" title="commons:Category:Balanced Trees">Balanced Trees</a></b></i>.</td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.nist.gov/dads/HTML/heightBalancedTree.html">Dictionary of Algorithms and Data Structures: Height-balanced binary search tree</a></li>
+<li><a rel="nofollow" class="external text" href="http://adtinfo.org/">GNU libavl</a>, a LGPL-licensed library of binary tree implementations in C, with documentation</li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:CS_trees" title="Template:CS trees"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:CS_trees" title="Template talk:CS trees"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:CS_trees&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Tree_(data_structure).html" title="Tree (data structure)">Tree data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Binary_tree.html" title="Binary tree">Binary trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree (BST)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cartesian_tree" title="Cartesian tree">Cartesian tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MVP_tree" title="MVP tree">MVP tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Top_tree" title="Top tree">Top tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/T-tree" title="T-tree">T-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-child_right-sibling_binary_tree" title="Left-child right-sibling binary tree">Left-child right-sibling binary tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><strong class="selflink">Self-balancing binary search trees</strong></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA tree</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Left-leaning_red–black_tree" title="Left-leaning red–black tree">LLRB tree</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">Red–black tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat tree</a></li>
+<li><a href="Splay_tree.html" title="Splay tree">Splay tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Treap" title="Treap">Treap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="B-tree.html" title="B-tree">B-trees</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/B+_tree" title="B+ tree">B+ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/B*-tree" title="B*-tree" class="mw-redirect">B*-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bx-tree" title="Bx-tree">B<small><sup>x</sup></small>-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UB-tree" title="UB-tree">UB-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3_tree" title="2–3 tree">2–3 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/2–3–4_tree" title="2–3–4 tree">2–3–4 tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/(a,b)-tree" title="(a,b)-tree">(a,b)-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dancing_tree" title="Dancing tree">Dancing tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/HTree" title="HTree">HTree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Trie.html" title="Trie">Tries</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Suffix_tree" title="Suffix tree">Suffix tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Radix_tree" title="Radix tree">Radix tree</a></li>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ternary_search_tree" title="Ternary search tree">Ternary search tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-fast_trie" title="X-fast trie">X-fast trie</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Y-fast_trie" title="Y-fast trie">Y-fast trie</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Binary_space_partitioning" title="Binary space partitioning">Binary space partitioning (BSP)</a> trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Quadtree" title="Quadtree">Quadtree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Octree" title="Octree">Octree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/K-d_tree" title="K-d tree"><i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Implicit_k-d_tree" title="Implicit k-d tree">Implicit <i>k</i>-d tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vantage-point_tree" title="Vantage-point tree">VP tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Non-binary trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Exponential_tree" title="Exponential tree">Exponential tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fusion_tree" title="Fusion tree">Fusion tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interval_tree" title="Interval tree">Interval tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PQ_tree" title="PQ tree">PQ tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Range_tree" title="Range tree">Range tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SPQR_tree" title="SPQR tree">SPQR tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Van_Emde_Boas_tree" title="Van Emde Boas tree">Van Emde Boas tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Spatial_index" title="Spatial index" class="mw-redirect">Spatial</a> data partitioning trees</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="R-tree.html" title="R-tree">R-tree</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+ tree</a></li>
+<li><a href="R__tree.html" title="R* tree">R* tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X-tree" title="X-tree">X-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/M-tree" title="M-tree">M-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Segment_tree" title="Segment tree">Segment tree</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert R-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Priority_R-tree" title="Priority R-tree">Priority R-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other trees</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hash_calendar" title="Hash calendar">Hash calendar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Merkle_tree" title="Merkle tree">Merkle tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finger_tree" title="Finger tree">Finger tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Order_statistic_tree" title="Order statistic tree">Order statistic tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metric_tree" title="Metric tree">Metric tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cover_tree" title="Cover tree">Cover tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BK-tree" title="BK-tree">BK-tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Doubly_chained_tree" title="Doubly chained tree">Doubly chained tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IDistance" title="IDistance">iDistance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Link/cut_tree" title="Link/cut tree">Link/cut tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fenwick_tree" title="Fenwick tree">Fenwick tree</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Log-structured_merge-tree" title="Log-structured merge-tree">Log-structured merge-tree</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Data_structures" title="Template:Data structures"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Data_structures" title="Template talk:Data structures"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Data_structures&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Data_structure.html" title="Data structure">Data structures</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Types</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Collection_(abstract_data_type).html" title="Collection (abstract data type)">Collection</a></li>
+<li><a href="Container_(abstract_data_type).html" title="Container (abstract data type)">Container</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Abstract_data_type.html" title="Abstract data type">Abstract</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Associative_array.html" title="Associative array">Associative array</a></li>
+<li><a href="Double-ended_priority_queue.html" title="Double-ended priority queue">Double-ended priority queue</a></li>
+<li><a href="Double-ended_queue.html" title="Double-ended queue">Double-ended queue</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="Multimap.html" title="Multimap">Multimap</a></li>
+<li><a href="Priority_queue.html" title="Priority queue">Priority queue</a></li>
+<li><a href="Queue_(abstract_data_type).html" title="Queue (abstract data type)">Queue</a></li>
+<li><a href="Set_(abstract_data_type).html" title="Set (abstract data type)">Set</a>
+<ul>
+<li><a href="Set_(abstract_data_type).html#Multiset" title="Set (abstract data type)">multiset</a></li>
+</ul>
+</li>
+<li><a href="Disjoint-set_data_structure.html" title="Disjoint-set data structure">Disjoint Sets</a></li>
+<li><a href="Stack_(abstract_data_type).html" title="Stack (abstract data type)">Stack</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Array_data_structure.html" title="Array data structure">Arrays</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Bit_array.html" title="Bit array">Bit array</a></li>
+<li><a href="Circular_buffer.html" title="Circular buffer">Circular buffer</a></li>
+<li><a href="Dynamic_array.html" title="Dynamic array">Dynamic array</a></li>
+<li><a href="Hash_table.html" title="Hash table">Hash table</a></li>
+<li><a href="Hashed_array_tree.html" title="Hashed array tree">Hashed array tree</a></li>
+<li><a href="Sparse_array.html" title="Sparse array">Sparse array</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linked_data_structure.html" title="Linked data structure">Linked</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Association_list.html" title="Association list">Association list</a></li>
+<li><a href="Linked_list.html" title="Linked list">Linked list</a></li>
+<li><a href="Skip_list.html" title="Skip list">Skip list</a></li>
+<li><a href="Unrolled_linked_list.html" title="Unrolled linked list">Unrolled linked list</a></li>
+<li><a href="XOR_linked_list.html" title="XOR linked list">XOR linked list</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Tree_(data_structure).html" title="Tree (data structure)">Trees</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="B-tree.html" title="B-tree">B-tree</a></li>
+<li><a href="Binary_search_tree.html" title="Binary search tree">Binary search tree</a>
+<ul>
+<li><a href="AA_tree.html" title="AA tree">AA</a></li>
+<li><a href="AVL_tree.html" title="AVL tree">AVL</a></li>
+<li><a href="Red%e2%80%93black_tree.html" title="Red–black tree">red-black</a></li>
+<li><strong class="selflink">self-balancing</strong></li>
+<li><a href="Splay_tree.html" title="Splay tree">splay</a></li>
+</ul>
+</li>
+<li><a href="Heap_(data_structure).html" title="Heap (data structure)">Heap</a>
+<ul>
+<li><a href="Binary_heap.html" title="Binary heap">binary</a></li>
+<li><a href="Binomial_heap.html" title="Binomial heap">binomial</a></li>
+<li><a href="Fibonacci_heap.html" title="Fibonacci heap">Fibonacci</a></li>
+</ul>
+</li>
+<li><a href="R-tree.html" title="R-tree">R-tree</a>
+<ul>
+<li><a href="R__tree.html" title="R* tree">R*</a></li>
+<li><a href="R%2b_tree.html" title="R+ tree">R+</a></li>
+<li><a href="Hilbert_R-tree.html" title="Hilbert R-tree">Hilbert</a></li>
+</ul>
+</li>
+<li><a href="Trie.html" title="Trie">Trie</a>
+<ul>
+<li><a href="Hash_tree_(persistent_data_structure).html" title="Hash tree (persistent data structure)">Hash tree</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Graph_(abstract_data_type).html" title="Graph (abstract data type)">Graphs</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Binary_decision_diagram.html" title="Binary decision diagram">Binary decision diagram</a></li>
+<li><a href="Directed_acyclic_word_graph.html" title="Directed acyclic word graph">Directed acyclic word graph</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_data_structures" title="List of data structures">List of data structures</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1095
+CPU time usage: 0.748 seconds
+Real time usage: 1.107 seconds
+Preprocessor visited node count: 637/1000000
+Preprocessor generated node count: 3309/1500000
+Post‐expand include size: 33764/2048000 bytes
+Template argument size: 956/2048000 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 7/500
+Lua time usage: 0.084/10.000 seconds
+Lua memory usage: 1.34 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:378310-0!*!0!!en!4!*!math=0 and timestamp 20140324180003
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;oldid=599064713">http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;oldid=599064713</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Binary_trees" title="Category:Binary trees">Binary trees</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Soviet_inventions" title="Category:Soviet inventions">Soviet inventions</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Trees_(data_structures)" title="Category:Trees (data structures)">Trees (data structures)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_November_2010" title="Category:Articles needing additional references from November 2010">Articles needing additional references from November 2010</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_August_2009" title="Category:Articles with unsourced statements from August 2009">Articles with unsourced statements from August 2009</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_same_as_on_Wikidata" title="Category:Commons category with local link same as on Wikidata">Commons category with local link same as on Wikidata</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Self-balancing+binary+search+tree&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Self-balancing+binary+search+tree" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Self-balancing_binary_search_tree.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Self-balancing_binary_search_tree"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Self-balancing_binary_search_tree.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Self-balancing_binary_search_tree" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Self-balancing_binary_search_tree" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;oldid=599064713" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q245955" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Self-balancing_binary_search_tree&amp;id=599064713" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Self-balancing+binary+search+tree">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Self-balancing+binary+search+tree&amp;oldid=599064713&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Self-balancing_binary_search_tree&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Balancierter_Baum" title="Balancierter Baum – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Árbol_binario_de_búsqueda_auto-balanceable" title="Árbol binario de búsqueda auto-balanceable – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/درخت_جستجوی_دودویی_خود-متوازن" title="درخت جستجوی دودویی خود-متوازن – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Arbre_équilibré" title="Arbre équilibré – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/자가_균형_이진_탐색_트리" title="자가 균형 이진 탐색 트리 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Albero_binario_di_ricerca_bilanciato" title="Albero binario di ricerca bilanciato – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/平衡2分探索木" title="平衡2分探索木 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Самобалансирајуће_бинарно_стабло_претраге" title="Самобалансирајуће бинарно стабло претраге – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/ต้นไม้ค้นหาแบบทวิภาคที่มีโครงสร้างปรับสมดุลเองได้" title="ต้นไม้ค้นหาแบบทวิภาคที่มีโครงสร้างปรับสมดุลเองได้ – Thai" lang="th" hreflang="th">ไทย</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Збалансоване_дерево" title="Збалансоване дерево – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/平衡树" title="平衡树 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q245955#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 11 March 2014 at 00:34.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Self-balancing_binary_search_tree" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1058 in 0.474 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Self-balancing_binary_search_tree by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 30 Mar 2014 00:02:04 GMT -->
+</html>

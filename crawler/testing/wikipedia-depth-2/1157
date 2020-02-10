@@ -1,0 +1,687 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Malloc.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Malloc by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>C dynamic memory allocation - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/C_dynamic_memory_allocation" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"C_dynamic_memory_allocation","wgTitle":"C dynamic memory allocation","wgCurRevisionId":599389552,"wgRevisionId":599389552,"wgArticleId":384289,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from January 2011","Use dmy dates from January 2012","Memory management","Memory management software","C standard library","Articles with example C code","C++"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"C_dynamic_memory_allocation","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Malloc","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1050390"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-C_dynamic_memory_allocation skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">C dynamic memory allocation</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Malloc&amp;redirect=no" title="Malloc">Malloc</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="C_standard_library.html" title="C standard library">C standard library</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;text-align: left;">
+<ul>
+<li><a href="C_data_types.html" title="C data types">Data types</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_character_classification" title="C character classification">Character classification</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_string_handling" title="C string handling">Strings</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_mathematical_functions" title="C mathematical functions">Mathematics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_file_input/output" title="C file input/output">File input/output</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_date_and_time_functions" title="C date and time functions">Date/time</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_localization_functions" title="C localization functions">Localization</a></li>
+<li><strong class="selflink">Memory allocation</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/C_process_control" title="C process control">Process control</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_signal_handling" title="C signal handling">Signals</a></li>
+<li><a href="http://en.wikipedia.org/wiki/C_alternative_tokens" title="C alternative tokens">Alternative tokens</a></li>
+</ul>
+<dl>
+<dd><b>Miscellaneous headers</b>:</dd>
+</dl>
+<ul>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Assert.h" title="Assert.h">assert.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Errno.h" title="Errno.h">errno.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Setjmp.h" title="Setjmp.h">setjmp.h</a>&gt;</code></li>
+<li><code>&lt;<a href="http://en.wikipedia.org/wiki/Stdarg.h" title="Stdarg.h">stdarg.h</a>&gt;</code></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:C_Standard_Library" title="Template:C Standard Library"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:C_Standard_Library" title="Template talk:C Standard Library"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:C_Standard_Library&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p><b>C dynamic memory allocation</b> refers to performing <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">dynamic memory allocation</a> in the <a href="C_(programming_language).html" title="C (programming language)">C programming language</a> via a group of functions in the <a href="C_standard_library.html" title="C standard library">C standard library</a>, namely <code>malloc</code>, <code>realloc</code>, <code>calloc</code> and <code>free</code>.<sup id="cite_ref-c99_1-0" class="reference"><a href="#cite_note-c99-1"><span>[</span>1<span>]</span></a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>The <a href="C%2b%2b.html" title="C++">C++</a> programming language includes these functions for backwards compatibility; its use in C++ has been largely superseded by <a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)">operators <code>new</code> and <code>new[]</code></a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>Many different implementations of the actual memory allocation mechanism, used by <code>malloc</code>, are available. Their performance varies in both execution time and required memory.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Rationale"><span class="tocnumber">1</span> <span class="toctext">Rationale</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Overview_of_functions"><span class="tocnumber">2</span> <span class="toctext">Overview of functions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Differences_between_malloc.28.29_and_calloc.28.29"><span class="tocnumber">2.1</span> <span class="toctext">Differences between malloc() and calloc()</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Usage_example"><span class="tocnumber">3</span> <span class="toctext">Usage example</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Type_safety"><span class="tocnumber">4</span> <span class="toctext">Type safety</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Advantages_to_casting"><span class="tocnumber">4.1</span> <span class="toctext">Advantages to casting</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Disadvantages_to_casting"><span class="tocnumber">4.2</span> <span class="toctext">Disadvantages to casting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Common_errors"><span class="tocnumber">5</span> <span class="toctext">Common errors</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Implementations"><span class="tocnumber">6</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Heap-based"><span class="tocnumber">6.1</span> <span class="toctext">Heap-based</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#dlmalloc"><span class="tocnumber">6.2</span> <span class="toctext">dlmalloc</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#FreeBSD.27s_and_NetBSD.27s_jemalloc"><span class="tocnumber">6.3</span> <span class="toctext">FreeBSD's and NetBSD's jemalloc</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#OpenBSD.27s_malloc"><span class="tocnumber">6.4</span> <span class="toctext">OpenBSD's malloc</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Hoard.27s_malloc"><span class="tocnumber">6.5</span> <span class="toctext">Hoard's malloc</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Thread-caching_malloc_.28tcmalloc.29"><span class="tocnumber">6.6</span> <span class="toctext">Thread-caching malloc (tcmalloc)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#In-kernel"><span class="tocnumber">6.7</span> <span class="toctext">In-kernel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Allocation_size_limits"><span class="tocnumber">7</span> <span class="toctext">Allocation size limits</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Rationale">Rationale</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=1" title="Edit section: Rationale">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="http://en.wikipedia.org/wiki/C_programming_language" title="C programming language" class="mw-redirect">C programming language</a> manages memory <a href="Static_memory_allocation.html" title="Static memory allocation">statically</a>, <a href="Automatic_memory_allocation.html" title="Automatic memory allocation" class="mw-redirect">automatically</a>, or <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">dynamically</a>. Static-duration variables are allocated in main memory, usually along with the executable code of the program, and persist for the lifetime of the program; automatic-duration variables are allocated on the <a href="Call_stack.html" title="Call stack">stack</a> and come and go as functions are called and return. For static-duration and automatic-duration variables, the size of the allocation is required to be <a href="http://en.wikipedia.org/wiki/Compile-time" title="Compile-time" class="mw-redirect">compile-time</a> constant (before <a href="C99.html" title="C99">C99</a>, which allows variable-length automatic arrays<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup>). If the required size is not known until <a href="Run_time_(program_lifecycle_phase).html" title="Run time (program lifecycle phase)">run-time</a> (for example, if data of arbitrary size is being read from the user or from a disk file), then using fixed-size data objects is inadequate.</p>
+<p>The lifetime of allocated memory is also a concern. Neither static- nor automatic-duration memory is adequate for all situations. Automatic-allocated data cannot persist across multiple function calls, while static data persists for the life of the program whether it is needed or not. In many situations the programmer requires greater flexibility in managing the lifetime of allocated memory.</p>
+<p>These limitations are avoided by using <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">dynamic memory allocation</a> in which memory is more explicitly (but more flexibly) managed, typically, by allocating it from the <i>free store</i> (informally called the "heap"), an area of memory structured for this purpose. In C, the library function <code>malloc</code> is used to allocate a block of memory on the heap. The program accesses this block of memory via a <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointer</a> that <code>malloc</code> returns. When the memory is no longer needed, the pointer is passed to <code>free</code> which deallocates the memory so that it can be used for other purposes.</p>
+<p>Some platforms provide library calls which allow run-time dynamic allocation from the C stack rather than the heap (e.g. Unix <code>alloca()</code>,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> <a href="Microsoft_Windows.html" title="Microsoft Windows">Microsoft Windows</a> CRTL's <code>malloca()</code><sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup>). This memory is automatically freed when the calling function ends. The need for this is lessened by changes in the <a href="C99.html" title="C99">C99</a> standard, which added support for <a href="Variable-length_array.html" title="Variable-length array">variable-length arrays</a> of block scope having sizes determined at runtime.</p>
+<h2><span class="mw-headline" id="Overview_of_functions">Overview of functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=2" title="Edit section: Overview of functions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The C dynamic memory allocation functions are defined in <code>stdlib.h</code> header (<code>cstdlib</code> header in C++).<sup id="cite_ref-c99_1-1" class="reference"><a href="#cite_note-c99-1"><span>[</span>1<span>]</span></a></sup></p>
+<table class="wikitable" style="font-size:0.85em">
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><span id="malloc"></span><code>malloc</code></td>
+<td>allocates the specified number of bytes</td>
+</tr>
+<tr>
+<td><span id="realloc"></span><code>realloc</code></td>
+<td>increases or decreases the size of the specified block of memory. Reallocates it if needed</td>
+</tr>
+<tr>
+<td><span id="calloc"></span><code>calloc</code></td>
+<td>allocates the specified number of bytes and initializes them to zero</td>
+</tr>
+<tr>
+<td><span id="free"></span><code>free</code></td>
+<td>releases the specified block of memory back to the system</td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="Differences_between_malloc.28.29_and_calloc.28.29">Differences between <code>malloc()</code> and <code>calloc()</code></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=3" title="Edit section: Differences between malloc() and calloc()">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are two differences between these functions. First, <code>malloc()</code> takes a single argument (the amount of memory to allocate in bytes), while <code>calloc()</code> needs two arguments (the number of variables to allocate in memory, and the size in bytes of a single variable). Secondly, <code>malloc()</code> does not initialize the memory allocated, while <code>calloc()</code> initializes all bytes of the allocated memory block to zero.</p>
+<h2><span class="mw-headline" id="Usage_example">Usage example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=4" title="Edit section: Usage example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Creating an <a href="Array_data_structure.html" title="Array data structure">array</a> of ten integers with automatic scope is straightforward in C:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> array<span class="br0">[</span><span class="nu0">10</span><span class="br0">]</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>However, the size of the array is fixed at compile time. If one wishes to allocate a similar array dynamically, the following code can be used:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> <span class="sy0">*</span> array <span class="sy0">=</span> <span class="kw3">malloc</span><span class="br0">(</span><span class="nu0">10</span> <span class="sy0">*</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This computes the number of bytes that ten integers occupy in memory, then requests that many bytes from <code>malloc</code> and assigns the result to a <a href="Pointer_(computer_programming).html" title="Pointer (computer programming)">pointer</a> named <code>array</code> (due to C syntax, pointers and arrays can be used interchangeably in some situations).</p>
+<p>Because <code>malloc</code> might not be able to service the request, it might return a <a href="Null_pointer.html" title="Null pointer" class="mw-redirect">null pointer</a> and it is good programming practice to check for this. When the program no longer needs the dynamic array, it should call <code>free(array);</code> to return the memory it occupies to the free store.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> <span class="sy0">*</span>ptr <span class="sy0">=</span> <span class="kw3">calloc</span><span class="br0">(</span><span class="nu0">10</span><span class="sy0">,</span><span class="kw4">sizeof</span> <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>allocates a region of memory large enough to hold 10 elements of size bytes each.</p>
+<p><br />
+The allocated region is initialized to zero</p>
+<h2><span class="mw-headline" id="Type_safety">Type safety</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=5" title="Edit section: Type safety">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><code>malloc</code> returns a <a href="http://en.wikipedia.org/wiki/Void_pointer" title="Void pointer" class="mw-redirect">void pointer</a> (<code>void *</code>), which indicates that it is a pointer to a region of unknown data type. The use of casting is required in C++ due to the strong type system, whereas this is not the case in C. The lack of a specific pointer type returned from <code>malloc</code> is type-unsafe behaviour according to some programmers: <code>malloc</code> allocates based on byte count but not on type. This is different from the <a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)">C++ new operator</a> that returns a pointer whose type relies on the operand. (See <a href="http://en.wikipedia.org/wiki/Type_safety#C" title="Type safety">C Type Safety</a>.)</p>
+<p>One may "cast" (see <a href="Type_conversion.html" title="Type conversion">type conversion</a>) this pointer to a specific type:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+<span class="kw4">int</span> <span class="sy0">*</span>ptr<span class="sy0">;</span>
+ptr <span class="sy0">=</span> <span class="kw3">malloc</span><span class="br0">(</span><span class="nu0">10</span> <span class="sy0">*</span> <span class="kw4">sizeof</span> <span class="br0">(</span><span class="sy0">*</span>ptr<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>		<span class="coMULTI">/* without a cast */</span>
+ptr <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">int</span> <span class="sy0">*</span><span class="br0">)</span><span class="kw3">malloc</span><span class="br0">(</span><span class="nu0">10</span> <span class="sy0">*</span> <span class="kw4">sizeof</span> <span class="br0">(</span><span class="sy0">*</span>ptr<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>	<span class="coMULTI">/* with a cast */</span>
+ptr <span class="sy0">=</span> reinterpret_cast<span class="sy0">&lt;</span><span class="kw4">int</span> <span class="sy0">*&gt;</span><span class="br0">(</span><span class="kw3">malloc</span><span class="br0">(</span><span class="nu0">10</span> <span class="sy0">*</span> <span class="kw4">sizeof</span> <span class="br0">(</span><span class="sy0">*</span>ptr<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> <span class="coMULTI">/* with a cast, for C++ */</span>
+</pre></div>
+</div>
+<p>There are advantages and disadvantages to performing such a cast.</p>
+<h3><span class="mw-headline" id="Advantages_to_casting">Advantages to casting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=6" title="Edit section: Advantages to casting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Including the cast allows a program or function to compile as C++.</li>
+<li>The cast allows for <a href="ANSI_C.html" title="ANSI C">pre-1989 versions</a> of <code>malloc</code> that originally returned a <code>char *</code>.<sup id="cite_ref-Cprog_malloc_8-0" class="reference"><a href="#cite_note-Cprog_malloc-8"><span>[</span>8<span>]</span></a></sup></li>
+<li>Casting can help the developer identify inconsistencies in type sizing should the destination pointer type change, particularly if the pointer is declared far from the <code>malloc()</code> call.</li>
+</ul>
+<h3><span class="mw-headline" id="Disadvantages_to_casting">Disadvantages to casting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=7" title="Edit section: Disadvantages to casting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Under the ANSI C standard, the cast is redundant.</li>
+<li>Adding the cast may mask failure to include the header <code>stdlib.h</code>, in which the prototype for <code>malloc</code> is found.<sup id="cite_ref-Cprog_malloc_8-1" class="reference"><a href="#cite_note-Cprog_malloc-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> In the absence of a prototype for <code>malloc</code>, the standard requires that the C compiler assume <code>malloc</code> returns an <code>int</code>. If there is no cast, a warning is issued when this integer is assigned to the pointer; however, with the cast, this warning is not produced, hiding a bug. On certain architectures and data models (such as LP64 on 64-bit systems, where <code>long</code> and pointers are 64-bit and <code>int</code> is 32-bit), this error can actually result in undefined behaviour, as the implicitly declared <code>malloc</code> returns a 32-bit value whereas the actually defined function returns a 64-bit value. Depending on calling conventions and memory layout, this may result in stack smashing. This issue is less likely to go unnoticed in modern compilers, as they uniformly produce warnings that an undeclared function has been used, so a warning will still appear. For example, GCC's default behaviour is to show a warning that reads "incompatible implicit declaration of built-in function" regardless of whether the cast is present or not.</li>
+<li>If the type of the pointer is changed, one must fix all code lines where <code>malloc</code> was called and cast (unless it was cast to a <code>typedef</code>).</li>
+</ul>
+<h2><span class="mw-headline" id="Common_errors">Common errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=8" title="Edit section: Common errors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The improper use of dynamic memory allocation can frequently be a source of bugs. These can include security bugs or program crashes, most often due to <a href="Segmentation_fault.html" title="Segmentation fault">segmentation faults</a>.</p>
+<p>Most common errors are as follows:</p>
+<ul>
+<li><b>Not checking for allocation failures</b>. Memory allocation is not guaranteed to succeed, and may instead return a null pointer. If there's no check for successful allocation implemented, this usually leads to a crash of the program, due to the resulting segmentation fault on the null pointer dereference.</li>
+<li><b>Memory leaks</b>. Failure to deallocate memory using <code>free</code> leads to build up of non-reusable memory, which is no longer used by the program. This wastes memory resources and can lead to allocation failures when these resources are exhausted.</li>
+<li><b>Logical errors</b>. All allocations must follow the same pattern: allocation using <code>malloc</code>, usage to store data, deallocation using <code>free</code>. Failures to adhere to this pattern, such as memory usage after a call to <code>free</code> (<a href="Dangling_pointer.html" title="Dangling pointer">dangling pointer</a>) or before a call to <code>malloc</code> (<a href="Wild_pointer.html" title="Wild pointer" class="mw-redirect">wild pointer</a>), calling <code>free</code> twice ("double free"), etc., usually causes a segmentation fault and results in a crash of the program. These errors can be transient and hard to debug – for example, freed memory is usually not immediately reclaimed by the OS, and thus dangling pointers may persist for a while and appear to work.</li>
+</ul>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=9" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The implementation of memory management depends greatly upon operating system and architecture. Some operating systems supply an allocator for malloc, while others supply functions to control certain regions of data. The same dynamic memory allocator is often used to implement both <code>malloc</code> and the operator <code>new</code> in <a href="C%2b%2b.html" title="C++">C++</a> .<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2011)">citation needed</span></a></i>]</sup> Hence, it is referred to below as the <i>allocator</i> rather than <code>malloc</code>.</p>
+<h3><span class="mw-headline" id="Heap-based">Heap-based</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=10" title="Edit section: Heap-based">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Implementation of the allocator on <a href="http://en.wikipedia.org/wiki/IA-32" title="IA-32">IA-32</a> architectures is commonly done using the <a href="http://en.wikipedia.org/wiki/Heap_memory" title="Heap memory" class="mw-redirect">heap</a>, or <a href="http://en.wikipedia.org/wiki/Data_segment" title="Data segment">data segment</a>. The allocator will usually expand and contract the heap to fulfill allocation requests.</p>
+<p>The heap method suffers from a few inherent flaws, stemming entirely from <a href="Fragmentation_(computer).html" title="Fragmentation (computer)" class="mw-redirect">fragmentation</a>. Like any method of memory allocation, the heap will become fragmented; that is, there will be sections of used and unused memory in the allocated space on the heap. A good allocator will attempt to find an unused area of already allocated memory to use before resorting to expanding the heap. The major problem with this method is that the heap has only two significant attributes: base, or the beginning of the heap in virtual memory space; and length, or its size. The heap requires enough system memory to fill its entire length, and its base can never change. Thus, any large areas of unused memory are wasted. The heap can get "stuck" in this position if a small used segment exists at the end of the heap, which could waste any magnitude of address space, from a few megabytes to a few hundred.</p>
+<h3><span class="mw-headline" id="dlmalloc">dlmalloc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=11" title="Edit section: dlmalloc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="http://en.wikipedia.org/wiki/Doug_Lea" title="Doug Lea">Doug Lea</a> has developed <a rel="nofollow" class="external text" href="ftp://g.oswego.edu/pub/misc/">dlmalloc</a> ("Doug Lea's Malloc") as a general-purpose allocator, starting in 1987. The <a href="http://en.wikipedia.org/wiki/GNU_C_library" title="GNU C library" class="mw-redirect">GNU C library</a> (glibc) uses ptmalloc,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> an allocator based on dlmalloc.<sup id="cite_ref-phrack-57-8_11-0" class="reference"><a href="#cite_note-phrack-57-8-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>Memory on the <a href="http://en.wikipedia.org/wiki/Heap_memory" title="Heap memory" class="mw-redirect">heap</a> is allocated as "chunks", an 8-byte <a href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="Data structure alignment">aligned</a> <a href="Data_structure.html" title="Data structure">data structure</a> which contains a header and usable memory. Allocated memory contains an 8 or 16 byte overhead for the size of the chunk and usage flags. Unallocated chunks also store pointers to other free chunks in the usable space area, making the minimum chunk size 24 bytes.<sup id="cite_ref-phrack-57-8_11-1" class="reference"><a href="#cite_note-phrack-57-8-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>Unallocated memory is grouped into "<a href="http://en.wikipedia.org/wiki/Bin_(computational_geometry)" title="Bin (computational geometry)">bins</a>" of similar sizes, implemented by using a double-linked list of chunks (with pointers stored in the unallocated space inside the chunk).<sup id="cite_ref-phrack-57-8_11-2" class="reference"><a href="#cite_note-phrack-57-8-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>For requests below 256 bytes (a "smallbin" request), a simple two power best fit allocator is used. If there are no free blocks in that bin, a block from the next highest bin is split in two.</p>
+<p>For requests of 256 bytes or above but below the mmap threshold, recent versions of dlmalloc use <a href="Trie.html#Bitwise_tries" title="Trie">an in-place <i>bitwise trie</i> algorithm</a>. If there is no free space left to satisfy the request, dlmalloc tries to increase the size of the heap, usually via the <a href="http://en.wikipedia.org/wiki/Brk" title="Brk" class="mw-redirect">brk</a> system call.</p>
+<p>For requests above the mmap threshold (a "largebin" request), the memory is always allocated using the <a href="http://en.wikipedia.org/wiki/Mmap" title="Mmap">mmap</a> system call. The threshold is usually 256 KB.<sup id="cite_ref-glibc-env_12-0" class="reference"><a href="#cite_note-glibc-env-12"><span>[</span>12<span>]</span></a></sup> The mmap method averts problems with huge buffers trapping a small allocation at the end after their expiration, but always allocates an entire <a href="http://en.wikipedia.org/wiki/Page_(computing)" title="Page (computing)" class="mw-redirect">page</a> of memory, which on many architectures is 4096 bytes in size.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="FreeBSD.27s_and_NetBSD.27s_jemalloc">FreeBSD's and NetBSD's jemalloc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=12" title="Edit section: FreeBSD's and NetBSD's jemalloc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since <a href="FreeBSD.html" title="FreeBSD">FreeBSD</a> 7.0 and <a href="NetBSD.html" title="NetBSD">NetBSD</a> 5.0, the old <code>malloc</code> implementation (phkmalloc) was replaced by <a rel="nofollow" class="external text" href="http://www.canonware.com/jemalloc/">jemalloc</a>, written by Jason Evans. The main reason for this was a lack of scalability of phkmalloc in terms of multithreading. In order to avoid lock contention, jemalloc uses separate "arenas" for each <a href="http://en.wikipedia.org/wiki/CPU" title="CPU" class="mw-redirect">CPU</a>. Experiments measuring number of allocations per second in multithreading application have shown that this makes it scale linearly with the number of threads, while for both phkmalloc and dlmalloc performance was inversely proportional to the number of threads.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="OpenBSD.27s_malloc">OpenBSD's malloc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=13" title="Edit section: OpenBSD's malloc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="OpenBSD.html" title="OpenBSD">OpenBSD</a>'s implementation of the <code>malloc</code> function makes use of <code>mmap</code>. For requests greater in size than one page, the entire allocation is retrieved using <code>mmap</code>; smaller sizes are assigned from memory pools maintained by <code>malloc</code> within a number of "bucket pages," also allocated with <code>mmap</code>. On a call to <code>free</code>, memory is released and unmapped from the process <a href="http://en.wikipedia.org/wiki/Address_space" title="Address space">address space</a> using <code>munmap</code>. This system is designed to improve security by taking advantage of the <a href="http://en.wikipedia.org/wiki/Address_space_layout_randomization" title="Address space layout randomization">address space layout randomization</a> and gap page features implemented as part of OpenBSD's <code>mmap</code> <a href="System_call.html" title="System call">system call</a>, and to detect use-after-free bugs—as a large memory allocation is completely unmapped after it is freed, further use causes a <a href="Segmentation_fault.html" title="Segmentation fault">segmentation fault</a> and termination of the program.</p>
+<h3><span class="mw-headline" id="Hoard.27s_malloc">Hoard's malloc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=14" title="Edit section: Hoard's malloc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="http://en.wikipedia.org/wiki/Hoard_memory_allocator" title="Hoard memory allocator">Hoard memory allocator</a> is an allocator whose goal is scalable memory allocation performance. Like OpenBSD's allocator, Hoard uses <code>mmap</code> exclusively, but manages memory in chunks of 64 kilobytes called superblocks. Hoard's heap is logically divided into a single global heap and a number of per-processor heaps. In addition, there is a thread-local cache that can hold a limited number of superblocks. By allocating only from superblocks on the local per-thread or per-processor heap, and moving mostly-empty superblocks to the global heap so they can be reused by other processors, Hoard keeps fragmentation low while achieving near linear scalability with the number of threads.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Thread-caching_malloc_.28tcmalloc.29">Thread-caching malloc (tcmalloc)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=15" title="Edit section: Thread-caching malloc (tcmalloc)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Every thread has local storage for small allocations. For large allocations mmap or <a href="http://en.wikipedia.org/wiki/Sbrk" title="Sbrk">sbrk</a> can be used. <a rel="nofollow" class="external text" href="http://code.google.com/p/gperftools/">TCMalloc</a>, a <i>malloc</i> developed by Google,<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> has garbage-collection for local storage of dead threads. The TCMalloc is considered to be more than twice as fast as glibc's ptmalloc for multithreaded programs.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="In-kernel">In-kernel</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=16" title="Edit section: In-kernel">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Operating system <a href="http://en.wikipedia.org/wiki/Kernel_(computer_science)" title="Kernel (computer science)" class="mw-redirect">kernels</a> need to allocate memory just as application programs do. The implementation of <code>malloc</code> within a kernel often differs significantly from the implementations used by C libraries, however. For example, memory buffers might need to conform to special restrictions imposed by <a href="http://en.wikipedia.org/wiki/Direct_memory_access" title="Direct memory access">DMA</a>, or the memory allocation function might be called from interrupt context.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup> This necessitates a <code>malloc</code> implementation tightly integrated with the <a href="Virtual_memory.html" title="Virtual memory">virtual memory</a> subsystem of the operating system kernel.</p>
+<h2><span class="mw-headline" id="Allocation_size_limits">Allocation size limits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=17" title="Edit section: Allocation size limits">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The largest possible memory block <code>malloc</code> can allocate depends on the host system, particularly the size of physical memory and the operating system implementation. Theoretically, the largest number should be the maximum value that can be held in a <code><a href="http://en.wikipedia.org/wiki/Size_t" title="Size t" class="mw-redirect">size_t</a></code> type, which is an implementation-dependent unsigned integer representing the size of an area of memory. The maximum value is <span class="texhtml">2<sup>CHAR_BIT × sizeof(size_t)</sup> − 1</span>, or the constant <code>SIZE_MAX</code> in the C99 standard.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=18" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="Buffer_overflow.html" title="Buffer overflow">Buffer overflow</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_debugger" title="Memory debugger">Memory debugger</a></li>
+<li><code><a href="http://en.wikipedia.org/wiki/Mprotect" title="Mprotect" class="mw-redirect">mprotect</a></code></li>
+<li><a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)"><code>new</code> (C++)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_size" title="Page size" class="mw-redirect">Page size</a></li>
+<li><a href="Variable-length_array.html" title="Variable-length array">Variable-length array</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=19" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-c99-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-c99_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-c99_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation book"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf"><i>ISO/IEC 9899:1999 specification</i></a>. p. 313, § 7.20.3 "Memory management functions".</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=ISO%2FIEC+9899%3A1999+specification&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rft.pages=p.+313%2C+%C2%A7+7.20.3+%22Memory+management+functions%22&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation book">Godse, Atul P.; Godse, Deepali A. (2008). <i>Advanced C Programming</i>. p. 6-28: Technical Publications. p.&#160;400. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-81-8431-496-0" title="Special:BookSources/978-81-8431-496-0">978-81-8431-496-0</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.aufirst=Atul+P.&amp;rft.au=Godse%2C+Atul+P.&amp;rft.au=Godse%2C+Deepali+A.&amp;rft.aulast=Godse&amp;rft.btitle=Advanced+C+Programming&amp;rft.date=2008&amp;rft.genre=book&amp;rft.isbn=978-81-8431-496-0&amp;rft.pages=400&amp;rft.place=p.+6-28&amp;rft.pub=Technical+Publications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation web">Summit, Steve. <a rel="nofollow" class="external text" href="http://c-faq.com/~scs/cclass/notes/sx11.html">"C Programming Notes - Chapter 11: Memory Allocation"</a><span class="reference-accessdate">. Retrieved 30 October 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.aufirst=Steve&amp;rft.aulast=Summit&amp;rft.au=Summit%2C+Steve&amp;rft.btitle=C+Programming+Notes+-+Chapter+11%3A+Memory+Allocation&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fc-faq.com%2F~scs%2Fcclass%2Fnotes%2Fsx11.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation book">Stroustrup, Bjarne (2008). <i>Programming: Principles and Practice Using C++</i>. 1009, §27.4 <i>Free store</i>: Addison Wesley. p.&#160;1236. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/978-0-321-54372-1" title="Special:BookSources/978-0-321-54372-1">978-0-321-54372-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.aufirst=Bjarne&amp;rft.aulast=Stroustrup&amp;rft.au=Stroustrup%2C+Bjarne&amp;rft.btitle=Programming%3A+Principles+and+Practice+Using+C%2B%2B&amp;rft.date=2008&amp;rft.genre=book&amp;rft.isbn=978-0-321-54372-1&amp;rft.pages=1236&amp;rft.place=1009%2C+%C2%A727.4+%27%27Free+store%27%27&amp;rft.pub=Addison+Wesley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://gcc.gnu.org/onlinedocs/gcc/Variable-Length.html">"gcc manual"</a>. gnu.org<span class="reference-accessdate">. Retrieved 14 December 2008</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=gcc+manual&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc%2FVariable-Length.html&amp;rft.pub=gnu.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://man.freebsd.org/alloca">"alloca"</a>. <i>Man.freebsd.org</i>. 5 September 2006<span class="reference-accessdate">. Retrieved 18 September 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.atitle=alloca&amp;rft.date=5+September+2006&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fman.freebsd.org%2Falloca&amp;rft.jtitle=Man.freebsd.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/5471dc8s.aspx">"<code>malloca()</code>"</a>. <a href="http://en.wikipedia.org/wiki/MSDN" title="MSDN" class="mw-redirect">MSDN</a> Visual C++ Developer Center<span class="reference-accessdate">. Retrieved 12 March 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=%3Ccode%3Emalloca%28%29%3C%2Fcode%3E&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2F5471dc8s.aspx&amp;rft.pub=MSDN+Visual+C%2B%2B+Developer+Center&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Cprog_malloc-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Cprog_malloc_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Cprog_malloc_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://faq.cprogramming.com/cgi-bin/smartfaq.cgi?id=1043284351&amp;answer=1047673478">"Casting malloc"</a>. Cprogramming.com<span class="reference-accessdate">. Retrieved 9 March 2007</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=Casting+malloc&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ffaq.cprogramming.com%2Fcgi-bin%2Fsmartfaq.cgi%3Fid%3D1043284351%26answer%3D1047673478&amp;rft.pub=Cprogramming.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.c-faq.com/malloc/mallocnocast.html">comp.lang.c "FAQ list · Question 7.7b"</a>. C-FAQ<span class="reference-accessdate">. Retrieved 9 March 2007</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=FAQ+list+%C2%B7+Question+7.7b&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.c-faq.com%2Fmalloc%2Fmallocnocast.html+comp.lang.c&amp;rft.pub=C-FAQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://malloc.de/en/">Wolfram Gloger's malloc homepage</a></span></li>
+<li id="cite_note-phrack-57-8-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-phrack-57-8_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-phrack-57-8_11-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-phrack-57-8_11-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><span class="citation journal">Kaempf, Michel (2001). <a rel="nofollow" class="external text" href="http://phrack.org/issues.html?issue=57&amp;id=8&amp;mode=txt">"Vudo malloc tricks"</a>. <i><a href="http://en.wikipedia.org/wiki/Phrack" title="Phrack">Phrack</a></i> (57): 8<span class="reference-accessdate">. Retrieved 29 April 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.atitle=Vudo+malloc+tricks&amp;rft.aufirst=Michel&amp;rft.au=Kaempf%2C+Michel&amp;rft.aulast=Kaempf&amp;rft.date=2001&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fphrack.org%2Fissues.html%3Fissue%3D57%26id%3D8%26mode%3Dtxt&amp;rft.issue=57&amp;rft.jtitle=Phrack&amp;rft.pages=8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-glibc-env-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-glibc-env_12-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.gnu.org/software/libc/manual/html_node/Malloc-Tunable-Parameters.html">"Malloc Tunable Parameters"</a>. <a href="GNU.html" title="GNU">GNU</a><span class="reference-accessdate">. Retrieved 2 May 2009</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.btitle=Malloc+Tunable+Parameters&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.gnu.org%2Fsoftware%2Flibc%2Fmanual%2Fhtml_node%2FMalloc-Tunable-Parameters.html&amp;rft.pub=GNU&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web">Sanderson, Bruce (12 December 2004). <a rel="nofollow" class="external text" href="http://support.microsoft.com/kb/555223">"RAM, Virtual Memory, Pagefile and all that stuff"</a>. Microsoft Help and Support.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.aufirst=Bruce&amp;rft.aulast=Sanderson&amp;rft.au=Sanderson%2C+Bruce&amp;rft.btitle=RAM%2C+Virtual+Memory%2C+Pagefile+and+all+that+stuff&amp;rft.date=12+December+2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2Fkb%2F555223&amp;rft.pub=Microsoft+Help+and+Support&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web">Evans, Jason (16 April 2006). <a rel="nofollow" class="external text" href="http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf">"A Scalable Concurrent malloc(3) Implementation for FreeBSD"</a><span class="reference-accessdate">. Retrieved 18 March 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.au=Evans%2C+Jason&amp;rft.aufirst=Jason&amp;rft.aulast=Evans&amp;rft.btitle=A+Scalable+Concurrent+malloc%283%29+Implementation+for+FreeBSD&amp;rft.date=16+April+2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fpeople.freebsd.org%2F~jasone%2Fjemalloc%2Fbsdcan2006%2Fjemalloc.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><span class="citation web">Berger, Emery D.; McKinley, Kathryn S.; Blumofe, Robert D.; Wilson, Paul R. (2000). <a rel="nofollow" class="external text" href="http://www.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf">"Hoard: A Scalable Memory Allocator for Multithreaded Applications"</a><span class="reference-accessdate">. Retrieved 18 March 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.au=Berger%2C+Emery+D.&amp;rft.au=Blumofe%2C+Robert+D.&amp;rft.aufirst=Emery+D.&amp;rft.aulast=Berger&amp;rft.au=McKinley%2C+Kathryn+S.&amp;rft.au=Wilson%2C+Paul+R.&amp;rft.btitle=Hoard%3A+A+Scalable+Memory+Allocator+for+Multithreaded+Applications&amp;rft.date=2000&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cs.umass.edu%2F~emery%2Fpubs%2Fberger-asplos2000.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://code.google.com/p/gperftools/">TCMalloc homepage</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">Ghemawat, Sanjay; Menage, Paul; <a rel="nofollow" class="external text" href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html"><i>TCMalloc&#160;: Thread-Caching Malloc</i></a></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><span class="citation web">Callaghan, Mark (18 January 2009). <a rel="nofollow" class="external text" href="http://mysqlha.blogspot.com/2009/01/double-sysbench-throughput-with_18.html">"High Availability MySQL: Double sysbench throughput with TCMalloc"</a>. <i>Mysqlha.blogspot.com</i><span class="reference-accessdate">. Retrieved 18 September 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.atitle=High+Availability+MySQL%3A+Double+sysbench+throughput+with+TCMalloc&amp;rft.au=Callaghan%2C+Mark&amp;rft.aufirst=Mark&amp;rft.aulast=Callaghan&amp;rft.date=18+January+2009&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fmysqlha.blogspot.com%2F2009%2F01%2Fdouble-sysbench-throughput-with_18.html&amp;rft.jtitle=Mysqlha.blogspot.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://people.netfilter.org/~rusty/unreliable-guides/kernel-hacking/routines-kmalloc.html">"kmalloc()/kfree() include/linux/slab.h"</a>. <i>People.netfilter.org</i><span class="reference-accessdate">. Retrieved 18 September 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+dynamic+memory+allocation&amp;rft.atitle=kmalloc%28%29%2Fkfree%28%29+include%2Flinux%2Fslab.h&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fpeople.netfilter.org%2F~rusty%2Funreliable-guides%2Fkernel-hacking%2Froutines-kmalloc.html&amp;rft.jtitle=People.netfilter.org&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="http://en.wikibooks.org/wiki/C_Programming" class="extiw" title="wikibooks:C Programming">C Programming</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/C_Programming/C_dynamic_memory_management" class="extiw" title="wikibooks:C Programming/C dynamic memory management">C Programming/C Reference</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.opengroup.org/onlinepubs/9699919799/functions/malloc.html">Definition of malloc in IEEE Std 1003.1 standard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Doug_Lea" title="Doug Lea">Lea, Doug</a>; <a rel="nofollow" class="external text" href="http://gee.cs.oswego.edu/dl/html/malloc.html"><i>The design of the basis of the glibc allocator</i></a></li>
+<li>Gloger, Wolfram; <a rel="nofollow" class="external text" href="http://www.malloc.de/en/index.html"><i>The ptmalloc homepage</i></a></li>
+<li>Berger, Emery; <a rel="nofollow" class="external text" href="http://www.hoard.org/"><i>The Hoard homepage</i></a></li>
+<li>Douglas, Niall; <a rel="nofollow" class="external text" href="http://www.nedprod.com/programs/portable/nedmalloc/"><i>The nedmalloc homepage</i></a></li>
+<li>Evans, Jason; <a rel="nofollow" class="external text" href="http://www.canonware.com/jemalloc/"><i>The jemalloc homepage</i></a></li>
+<li><a rel="nofollow" class="external text" href="http://www.osdcom.info/content/view/31/39/"><i>Simple Memory Allocation Algorithms</i></a> on OSDEV Community</li>
+<li>Berger, Emery; <a rel="nofollow" class="external text" href="http://www.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf"><i>Hoard: A Scalable Memory Allocator for Multithreaded Applications</i></a></li>
+<li>Michael, Maged M.; <a rel="nofollow" class="external text" href="http://www.research.ibm.com/people/m/michael/pldi-2004.pdf"><i>Scalable Lock-Free Dynamic Memory Allocation</i></a></li>
+<li>Bartlett, Jonathan; <a rel="nofollow" class="external text" href="http://www-106.ibm.com/developerworks/linux/library/l-memory/"><i>Inside memory management</i> - The choices, tradeoffs, and implementations of dynamic allocation</a></li>
+<li><a rel="nofollow" class="external text" href="http://live.gnome.org/MemoryReduction">Memory Reduction (GNOME)</a> wiki page with lots of information about fixing malloc</li>
+<li><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">C99 standard draft, including TC1/TC2/TC3</a></li>
+<li><a rel="nofollow" class="external text" href="http://paste.tclers.tk/1596">Some useful references about C</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/standards">ISO/IEC 9899 – Programming languages – C</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Memory_management_navbox" title="Template:Memory management navbox"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Memory_management_navbox" title="Template talk:Memory management navbox"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Memory_management_navbox&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="Memory_management.html" title="Memory management">Memory management</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Manual_memory_management" title="Manual memory management">Manual memory management</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Static_memory_allocation.html" title="Static memory allocation">Static memory allocation</a></li>
+<li><strong class="selflink">C dynamic memory allocation</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/New_(C++)" title="New (C++)">new (C++)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Delete_(C++)" title="Delete (C++)">delete (C++)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Virtual_memory.html" title="Virtual memory">Virtual memory</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Demand_paging" title="Demand paging">Demand paging</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Page_table" title="Page table">Page table</a></li>
+<li><a href="Paging.html" title="Paging">Paging</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Hardware</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a></li>
+<li><a href="Translation_lookaside_buffer.html" title="Translation lookaside buffer">Translation lookaside buffer</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">Garbage collection</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Boehm_garbage_collector" title="Boehm garbage collector">Boehm garbage collector</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Finalizer" title="Finalizer">Finalizer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garbage_(computer_science)" title="Garbage (computer science)">Garbage</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mark-compact_algorithm" title="Mark-compact algorithm">Mark-compact algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reference_counting" title="Reference counting">Reference counting</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Strong_reference" title="Strong reference">Strong reference</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Weak_reference" title="Weak reference">Weak reference</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_segmentation" title="Memory segmentation">Memory segmentation</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Protected_mode" title="Protected mode">Protected mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Real_mode" title="Real mode">Real mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Virtual_8086_mode" title="Virtual 8086 mode">Virtual 8086 mode</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X86_memory_segmentation" title="X86 memory segmentation">x86 memory segmentation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Memory_safety" title="Memory safety">Memory safety</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Buffer_overflow.html" title="Buffer overflow">Buffer overflow</a></li>
+<li><a href="Dangling_pointer.html" title="Dangling pointer">Dangling pointer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stack_overflow" title="Stack overflow">Stack overflow</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Issues</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Fragmentation_(computing)" title="Fragmentation (computing)">Fragmentation</a></li>
+<li><a href="Memory_leak.html" title="Memory leak">Memory leak</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unreachable_memory" title="Unreachable memory">Unreachable memory</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Automatic_variable" title="Automatic variable">Automatic variable</a></li>
+<li><a href="http://en.wikipedia.org/wiki/International_Symposium_on_Memory_Management" title="International Symposium on Memory Management">International Symposium on Memory Management</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Region-based_memory_management" title="Region-based memory management">Region-based memory management</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1006
+CPU time usage: 1.212 seconds
+Real time usage: 1.299 seconds
+Preprocessor visited node count: 1785/1000000
+Preprocessor generated node count: 12030/1500000
+Post‐expand include size: 45240/2048000 bytes
+Template argument size: 3049/2048000 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 4/500
+Lua time usage: 0.086/10.000 seconds
+Lua memory usage: 2.72 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:384289-0!*!0!!en!4!* and timestamp 20140329202931
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;oldid=599389552">http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;oldid=599389552</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Memory_management" title="Category:Memory management">Memory management</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Memory_management_software" title="Category:Memory management software">Memory management software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:C_standard_library" title="Category:C standard library">C standard library</a></li><li><a href="http://en.wikipedia.org/wiki/Category:C++" title="Category:C++">C++</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_January_2011" title="Category:Articles with unsourced statements from January 2011">Articles with unsourced statements from January 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Use_dmy_dates_from_January_2012" title="Category:Use dmy dates from January 2012">Use dmy dates from January 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C+dynamic+memory+allocation&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=C+dynamic+memory+allocation" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:C_dynamic_memory_allocation"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/C_dynamic_memory_allocation" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/C_dynamic_memory_allocation" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/C_dynamic_memory_allocation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;oldid=599389552" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1050390" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=C_dynamic_memory_allocation&amp;id=599389552" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=C+dynamic+memory+allocation">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=C+dynamic+memory+allocation&amp;oldid=599389552&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=C_dynamic_memory_allocation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Malloc" title="Malloc – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/اختصاص_حافظه_پویا_در_سی" title="اختصاص حافظه پویا در سی – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Malloc" title="Malloc – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Malloc" title="Malloc – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Malloc" title="Malloc – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Malloc" title="Malloc – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Динамическое_распределение_памяти#.D0.AF.D0.B7.D1.8B.D0.BA_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D1.8F_C_.28.D0.A1.D0.B8.29" title="Динамическое распределение памяти – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Malloc" title="Malloc – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1050390#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 March 2014 at 04:32.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/C_dynamic_memory_allocation" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1090 in 0.416 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Malloc by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:50 GMT -->
+</html>

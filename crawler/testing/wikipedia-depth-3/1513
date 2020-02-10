@@ -1,0 +1,463 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Backus-Naur_form.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Backus-Naur_form by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Backus–Naur Form - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Backus–Naur_Form" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Backus–Naur_Form" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Backus–Naur_Form","wgTitle":"Backus–Naur Form","wgCurRevisionId":600743680,"wgRevisionId":600743680,"wgArticleId":62247,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with inconsistent citation formats","Formal languages","Compiler construction"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Backus–Naur_Form","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Backus-Naur_form","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["pl-pl","pl","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q211577"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-bnf {line-height: normal;}
+.source-bnf li, .source-bnf pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for bnf
+ * CSS class: source-bnf, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.bnf.source-bnf .de1, .bnf.source-bnf .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.bnf.source-bnf  {font-family:monospace;}
+.bnf.source-bnf .imp {font-weight: bold; color: red;}
+.bnf.source-bnf li, .bnf.source-bnf .li1 {font-weight: normal; vertical-align:top;}
+.bnf.source-bnf .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.bnf.source-bnf .li2 {font-weight: bold; vertical-align:top;}
+.bnf.source-bnf .co0 {color: #666666; font-style: italic;}
+.bnf.source-bnf .sy0 {color: #000066; font-weight: bold;}
+.bnf.source-bnf .sy1 {color: #000066; font-weight: bold;}
+.bnf.source-bnf .sy2 {color: #000066; font-weight: bold;}
+.bnf.source-bnf .sy3 {color: #000066; font-weight: bold;}
+.bnf.source-bnf .sy4 {color: #006600; font-weight: bold;}
+.bnf.source-bnf .st0 {color: #a00;}
+.bnf.source-bnf .st1 {color: #a00;}
+.bnf.source-bnf .re0 {color: #007;}
+.bnf.source-bnf .ln-xtra, .bnf.source-bnf li.ln-xtra, .bnf.source-bnf div.ln-xtra {background-color: #ffc;}
+.bnf.source-bnf span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Backus–Naur_Form skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Backus–Naur Form</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">  (Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Backus-Naur_form&amp;redirect=no" title="Backus-Naur form">Backus-Naur form</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">Not to be confused with <a href="http://en.wikipedia.org/wiki/BCNF" title="BCNF" class="mw-redirect">BCNF</a>&#160;or <a href="http://en.wikipedia.org/wiki/Boyce–Codd_normal_form" title="Boyce–Codd normal form">Boyce–Codd normal form</a>.</div>
+<p>In <a href="Computer_science.html" title="Computer science">computer science</a>, <b>BNF</b> (<b>Backus Normal Form</b> or <b>Backus–Naur Form</b>) is one of the two<sup id="cite_ref-Grune1999_1-0" class="reference"><a href="#cite_note-Grune1999-1"><span>[</span>1<span>]</span></a></sup> main <a href="http://en.wikipedia.org/wiki/Metasyntax" title="Metasyntax">notation techniques</a> for <a href="http://en.wikipedia.org/wiki/Context-free_grammar" title="Context-free grammar">context-free grammars</a>, often used to describe the <a href="http://en.wikipedia.org/wiki/Syntax" title="Syntax">syntax</a> of <a href="Formal_language.html#Programming_languages" title="Formal language">languages</a> used in computing, such as computer <a href="Programming_language.html" title="Programming language">programming languages</a>, <a href="http://en.wikipedia.org/wiki/Document_format" title="Document format" class="mw-redirect">document formats</a>, <a href="http://en.wikipedia.org/wiki/Instruction_set" title="Instruction set">instruction sets</a> and <a href="http://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol" class="mw-redirect">communication protocols</a>; the other main technique for writing context-free grammars is the <a href="http://en.wikipedia.org/wiki/Van_Wijngaarden_grammar" title="Van Wijngaarden grammar">van Wijngaarden form</a>. They are applied wherever exact descriptions of languages are needed: for instance, in official language specifications, in manuals, and in textbooks on programming language theory.</p>
+<p>Many extensions and variants of the original Backus–Naur notation are used; some are exactly defined, including <i><a href="http://en.wikipedia.org/wiki/Extended_Backus–Naur_Form" title="Extended Backus–Naur Form">Extended Backus–Naur Form</a></i> (EBNF) and <i><a href="http://en.wikipedia.org/wiki/Augmented_Backus–Naur_Form" title="Augmented Backus–Naur Form">Augmented Backus–Naur Form</a></i> (ABNF).</p>
+<p>Though the Backus Normal Form was discovered independently by John Backus, <a href="http://en.wikipedia.org/wiki/Pāṇini" title="Pāṇini">Pāṇini</a> the grammarian from India who lived sometime between 4th and 7th century BCE presented a notation which is equivalent in its power to that of Backus and has many similar properties. <sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Example"><span class="tocnumber">3</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Further_examples"><span class="tocnumber">4</span> <span class="toctext">Further examples</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Variants"><span class="tocnumber">5</span> <span class="toctext">Variants</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Software_using_BNF"><span class="tocnumber">6.1</span> <span class="toctext">Software using BNF</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Language_grammars"><span class="tocnumber">8.1</span> <span class="toctext">Language grammars</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The idea of describing the structure of language with rewriting rules can be traced back to at least the work of <a href="http://en.wikipedia.org/wiki/Pāṇini" title="Pāṇini">Pāṇini</a> (about the 4th century BC), who used it in his description of <a href="http://en.wikipedia.org/wiki/Sanskrit" title="Sanskrit">Sanskrit</a> word structure. American <a href="Linguistics.html" title="Linguistics">linguists</a> such as <a href="http://en.wikipedia.org/wiki/Leonard_Bloomfield" title="Leonard Bloomfield">Leonard Bloomfield</a> and <a href="http://en.wikipedia.org/wiki/Zellig_Harris" title="Zellig Harris">Zellig Harris</a> took this idea a step further by attempting to formalize language and its study in terms of formal definitions and procedures (around 1920–60).</p>
+<p>Meanwhile, string rewriting rules as <a href="http://en.wikipedia.org/wiki/Mathematical_formalism" title="Mathematical formalism" class="mw-redirect">formal, abstract systems</a> were introduced and studied by mathematicians such as <a href="http://en.wikipedia.org/wiki/Semi-Thue_system" title="Semi-Thue system">Axel Thue</a> (in 1914), <a href="http://en.wikipedia.org/wiki/Emil_Post" title="Emil Post" class="mw-redirect">Emil Post</a> (1920s–40s) and <a href="Turing_machine.html" title="Turing machine">Alan Turing</a> (1936). <a href="http://en.wikipedia.org/wiki/Noam_Chomsky" title="Noam Chomsky">Noam Chomsky</a>, teaching linguistics to students of <a href="Information_theory.html" title="Information theory">information theory</a> at <a href="http://en.wikipedia.org/wiki/MIT" title="MIT" class="mw-redirect">MIT</a>, combined linguistics and mathematics, by taking what is essentially Thue's formalism as the basis for the description of the syntax of <a href="Natural_language.html" title="Natural language">natural language</a>; he also introduced a clear distinction between generative rules (those of <a href="http://en.wikipedia.org/wiki/Context-free_grammar" title="Context-free grammar">context-free grammars</a>) and transformation rules (1956).<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-Chomsky1957_4-0" class="reference"><a href="#cite_note-Chomsky1957-4"><span>[</span>4<span>]</span></a></sup></p>
+<p><a href="http://en.wikipedia.org/wiki/John_W._Backus" title="John W. Backus" class="mw-redirect">John Backus</a>, a programming language designer at <a href="IBM.html" title="IBM">IBM</a>, proposed "metalinguistic formulas"<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> to describe the syntax of the new programming language IAL, known today as <a href="http://en.wikipedia.org/wiki/ALGOL_58" title="ALGOL 58">ALGOL 58</a> (1959), using the BNF notation.</p>
+<p>Further development of ALGOL led to <a href="http://en.wikipedia.org/wiki/ALGOL_60" title="ALGOL 60">ALGOL 60</a>; in its report (1963), <a href="Peter_Naur.html" title="Peter Naur">Peter Naur</a> named Backus's notation <b>Backus Normal Form</b>, and simplified it to minimize the character set used. However, <a href="Donald_Knuth.html" title="Donald Knuth">Donald Knuth</a> argued that BNF should rather be read as <b>Backus–<a href="Peter_Naur.html" title="Peter Naur">Naur</a> Form</b>, as it is "not a <a href="http://en.wikipedia.org/wiki/Normal_form_(term_rewriting)" title="Normal form (term rewriting)" class="mw-redirect">normal form</a> in the conventional sense",<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> unlike, for instance, <a href="http://en.wikipedia.org/wiki/Chomsky_Normal_Form" title="Chomsky Normal Form" class="mw-redirect">Chomsky Normal Form</a>. The name <b>Pāṇini Backus form</b> has also been suggested in view of the facts that the expansion <b>Backus Normal Form</b> may not be accurate, and that <a href="http://en.wikipedia.org/wiki/Pāṇini" title="Pāṇini">Pāṇini</a> had independently discovered a similar notation earlier. <sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=2" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A BNF specification is a set of derivation rules, written as</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bnf source-bnf">
+<pre class="de1">
+ <span class="sy1">&lt;</span><span class="re0">symbol</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> __expression__
+</pre></div>
+</div>
+<p>where &lt;<a href="http://en.wikipedia.org/wiki/Symbol" title="Symbol">symbol</a>&gt; is a <i><a href="http://en.wikipedia.org/wiki/Nonterminal" title="Nonterminal" class="mw-redirect">nonterminal</a></i>, and the <a href="http://en.wikipedia.org/wiki/Expression_(mathematics)" title="Expression (mathematics)">__expression__</a> consists of one or more sequences of symbols; more sequences are separated by the <a href="http://en.wikipedia.org/wiki/Vertical_bar" title="Vertical bar">vertical bar</a>, '|', indicating a <a href="http://en.wikipedia.org/wiki/Alternation_(formal_language_theory)" title="Alternation (formal language theory)">choice</a>, the whole being a possible substitution for the symbol on the left. Symbols that never appear on a left side are <i><a href="http://en.wikipedia.org/wiki/Terminal_symbol" title="Terminal symbol" class="mw-redirect">terminals</a></i>. On the other hand, symbols that appear on a left side are <i><a href="http://en.wikipedia.org/wiki/Nonterminal_symbol" title="Nonterminal symbol" class="mw-redirect">non-terminals</a></i> and are always enclosed between the pair &lt;&gt;.</p>
+<p>The '::=' means that the symbol on the left must be replaced with the expression on the right.</p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=3" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As an example, consider this possible BNF for a <a href="United_States.html" title="United States">U.S.</a> <a href="http://en.wikipedia.org/wiki/Address_(geography)" title="Address (geography)">postal address</a>:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bnf source-bnf">
+<pre class="de1">
+ <span class="sy1">&lt;</span><span class="re0">postal-address</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">name-part</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">street-address</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">zip-part</span><span class="sy1">&gt;</span>
+ 
+      <span class="sy1">&lt;</span><span class="re0">name-part</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">personal-part</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">last-name</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">opt-suffix-part</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">EOL</span><span class="sy1">&gt;</span> 
+                    <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">personal-part</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">name-part</span><span class="sy1">&gt;</span>
+ 
+  <span class="sy1">&lt;</span><span class="re0">personal-part</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">first-name</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">initial</span><span class="sy1">&gt;</span> <span class="st0">"."</span> 
+ 
+ <span class="sy1">&lt;</span><span class="re0">street-address</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">house-num</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">street-name</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">opt-apt-num</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">EOL</span><span class="sy1">&gt;</span>
+ 
+       <span class="sy1">&lt;</span><span class="re0">zip-part</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">town-name</span><span class="sy1">&gt;</span> <span class="st0">","</span> <span class="sy1">&lt;</span><span class="re0">state-code</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">ZIP-code</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">EOL</span><span class="sy1">&gt;</span>
+ 
+<span class="sy1">&lt;</span><span class="re0">opt-suffix-part</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="st0">"Sr."</span> <span class="sy4">|</span> <span class="st0">"Jr."</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">roman-numeral</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="st0">""</span>
+   <span class="sy1">&lt;</span><span class="re0">opt-apt-num</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">apt-num</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="st0">""</span>
+</pre></div>
+</div>
+<p>This translates into English as:</p>
+<ul>
+<li>A postal address consists of a name-part, followed by a <a href="http://en.wikipedia.org/wiki/Street_name" title="Street name" class="mw-redirect">street-address</a> part, followed by a <a href="http://en.wikipedia.org/wiki/ZIP_Code" title="ZIP Code" class="mw-redirect">zip-code</a> part.</li>
+<li>A name-part consists of either: a personal-part followed by a <a href="http://en.wikipedia.org/wiki/Last_name" title="Last name" class="mw-redirect">last name</a> followed by an optional <a href="http://en.wikipedia.org/wiki/Suffix_(name)" title="Suffix (name)">suffix</a> (Jr., Sr., or dynastic number) and <a href="http://en.wikipedia.org/wiki/End-of-line" title="End-of-line" class="mw-redirect">end-of-line</a>, or a personal part followed by a name part (this rule illustrates the use of <a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)" title="Recursion (computer science)">recursion</a> in BNFs, covering the case of people who use multiple first and middle names and/or initials).</li>
+<li>A personal-part consists of either a <a href="http://en.wikipedia.org/wiki/First_name" title="First name" class="mw-redirect">first name</a> or an <a href="http://en.wikipedia.org/wiki/Initial" title="Initial">initial</a> followed by a dot.</li>
+<li>A street address consists of a house number, followed by a street name, followed by an optional <a href="http://en.wikipedia.org/wiki/Apartment" title="Apartment">apartment</a> specifier, followed by an end-of-line.</li>
+<li>A zip-part consists of a <a href="http://en.wikipedia.org/wiki/Town" title="Town">town</a>-name, followed by a comma, followed by a <a href="http://en.wikipedia.org/wiki/U.S._postal_abbreviations" title="U.S. postal abbreviations" class="mw-redirect">state code</a>, followed by a ZIP-code followed by an end-of-line.</li>
+<li>A opt-suffix-part consists of a suffix, such as "Sr.", "Jr." or a <a href="http://en.wikipedia.org/wiki/Roman_numerals" title="Roman numerals">roman-numeral</a>, or an empty string (i.e. nothing).</li>
+<li>A opt-apt-num consists of an apartment number or an empty string (i.e. nothing).</li>
+</ul>
+<p>Note that many things (such as the format of a first-name, apartment specifier, ZIP-code, and Roman numeral) are left unspecified here. If necessary, they may be described using additional BNF rules.</p>
+<h2><span class="mw-headline" id="Further_examples">Further examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=4" title="Edit section: Further examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>BNF's syntax itself may be represented with a BNF like the following:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="bnf source-bnf">
+<pre class="de1">
+ <span class="sy1">&lt;</span><span class="re0">syntax</span><span class="sy1">&gt;</span>         <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">rule</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">rule</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">syntax</span><span class="sy1">&gt;</span>
+ <span class="sy1">&lt;</span><span class="re0">rule</span><span class="sy1">&gt;</span>           <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="st0">"&lt;"</span> <span class="sy1">&lt;</span><span class="re0">rule-name</span><span class="sy1">&gt;</span> <span class="st0">"&gt;"</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="st0">"::="</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">expression</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">line-end</span><span class="sy1">&gt;</span>
+ <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="sy4">::=</span> <span class="st0">" "</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="st0">""</span>
+ <span class="sy1">&lt;</span><span class="re0">expression</span><span class="sy1">&gt;</span>     <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">list</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">list</span><span class="sy1">&gt;</span> <span class="st0">"|"</span> <span class="sy1">&lt;</span><span class="re0">expression</span><span class="sy1">&gt;</span>
+ <span class="sy1">&lt;</span><span class="re0">line-end</span><span class="sy1">&gt;</span>       <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">EOL</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">line-end</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">line-end</span><span class="sy1">&gt;</span>
+ <span class="sy1">&lt;</span><span class="re0">list</span><span class="sy1">&gt;</span>           <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">term</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="sy1">&lt;</span><span class="re0">term</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">opt-whitespace</span><span class="sy1">&gt;</span> <span class="sy1">&lt;</span><span class="re0">list</span><span class="sy1">&gt;</span>
+ <span class="sy1">&lt;</span><span class="re0">term</span><span class="sy1">&gt;</span>           <span class="sy4">::=</span> <span class="sy1">&lt;</span><span class="re0">literal</span><span class="sy1">&gt;</span> <span class="sy4">|</span> <span class="st0">"&lt;"</span> <span class="sy1">&lt;</span><span class="re0">rule-name</span><span class="sy1">&gt;</span> <span class="st0">"&gt;"</span>
+ <span class="sy1">&lt;</span><span class="re0">literal</span><span class="sy1">&gt;</span>        <span class="sy4">::=</span> <span class="st0">'"'</span> <span class="sy1">&lt;</span><span class="re0">text</span><span class="sy1">&gt;</span> <span class="st0">'"'</span> <span class="sy4">|</span> <span class="st0">"'"</span> <span class="sy1">&lt;</span><span class="re0">text</span><span class="sy1">&gt;</span> <span class="st0">"'"</span>
+</pre></div>
+</div>
+<p>Note that "" is empty string, i.e. no whitespace.</p>
+<p>The original BNF did not use quotes as shown in &lt;literal&gt; rule.</p>
+<p>This assumes that no <a href="http://en.wikipedia.org/wiki/Whitespace_(computer_science)" title="Whitespace (computer science)" class="mw-redirect">whitespace</a> is necessary for proper interpretation of the rule. &lt;EOL&gt; represents the appropriate <a href="Newline.html" title="Newline">line-end</a> specifier (in <a href="ASCII.html" title="ASCII">ASCII</a>, carriage-return and/or line-feed, depending on the <a href="Operating_system.html" title="Operating system">operating system</a>). &lt;rule-name&gt; and &lt;text&gt; are to be substituted with a declared rule's name/label or literal text, respectively.</p>
+<p>In the U.S. postal address example above, the entire block-quote is a syntax. Each line or unbroken grouping of lines is a rule; for example one rule begins with "&lt;name-part&gt;&#160;::=". The other part of that rule (aside from a line-end) is an expression, which consists of two lists separated by a pipe "|". These two lists consists of some terms (three terms and two terms, respectively). Each term in this particular rule is a rule-name.</p>
+<h2><span class="mw-headline" id="Variants">Variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=5" title="Edit section: Variants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are many variants and extensions of BNF, generally either for the sake of simplicity and succinctness, or to adapt it to a specific application. One common feature of many variants is the use of <a href="http://en.wikipedia.org/wiki/Regular_expression" title="Regular expression">regular expression</a> repetition operators such as <code>*</code> and <code>+</code>. The <a href="http://en.wikipedia.org/wiki/Extended_Backus–Naur_Form" title="Extended Backus–Naur Form">Extended Backus–Naur Form</a> (EBNF) is a common one. In fact the example above is not the pure form invented for the ALGOL 60 report. The bracket notation "[ ]" was introduced a few years later in <a href="http://en.wikipedia.org/wiki/International_Business_Machines" title="International Business Machines" class="mw-redirect">IBM</a>'s <a href="PL/I.html" title="PL/I">PL/I</a> definition but is now universally recognised. <a href="http://en.wikipedia.org/wiki/Augmented_Backus–Naur_Form" title="Augmented Backus–Naur Form">ABNF</a> and <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc5511">RBNF</a> are other extensions commonly used to describe <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force (IETF)</a> <a href="http://en.wikipedia.org/wiki/Protocol_(computing)" title="Protocol (computing)" class="mw-redirect">protocols</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/Parsing_expression_grammar" title="Parsing expression grammar">Parsing expression grammars</a> build on the BNF and <a href="http://en.wikipedia.org/wiki/Regular_expression" title="Regular expression">regular expression</a> notations to form an alternative class of <a href="Formal_grammar.html" title="Formal grammar">formal grammar</a>, which is essentially <a href="http://en.wikipedia.org/wiki/Analytic_grammar" title="Analytic grammar" class="mw-redirect">analytic</a> rather than <a href="http://en.wikipedia.org/wiki/Generative_grammar" title="Generative grammar">generative</a> in character.</p>
+<p>Many BNF specifications found online today are intended to be human readable and are non-formal. These often include many of the following syntax rules and extensions:</p>
+<ul>
+<li>Optional items enclosed in square brackets: [&lt;item-x&gt;].</li>
+<li>Items repeating 0 or more times are enclosed in curly brackets or suffixed with an asterisk ('*'), such as "&lt;word&gt;&#160;::= &lt;letter&gt; {&lt;letter&gt;}" or "&lt;word&gt;&#160;::= &lt;letter&gt; &lt;letter&gt;*", respectively.</li>
+<li>Items repeating 1 or more times are suffixed with an addition (plus) symbol ('+').</li>
+<li>Terminals may appear in bold rather than italics, and nonterminals in plain text rather than angle brackets.</li>
+<li>Alternative choices in a production are separated by the ‘|’ symbol: &lt;alternative-A&gt; | &lt;alternative-B&gt;.</li>
+<li>Where items are grouped, they are enclosed in simple parentheses.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Extended_Backus–Naur_Form" title="Extended Backus–Naur Form">Extended Backus–Naur Form</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Augmented_Backus–Naur_Form" title="Augmented Backus–Naur Form">Augmented Backus–Naur Form</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TBNF" title="TBNF">Translational Backus-Naur Form</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Syntax_diagram" title="Syntax diagram">Syntax diagram</a> (railroad diagram)</li>
+<li><a href="http://en.wikipedia.org/wiki/Definite_clause_grammar" title="Definite clause grammar">Definite clause grammar</a>, a more expressive alternative to BNF used in <a href="http://en.wikipedia.org/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wirth_syntax_notation" title="Wirth syntax notation">Wirth syntax notation</a>, an alternative to BNF from 1977</li>
+<li><a href="Pseudocode.html" title="Pseudocode">Pseudocode</a>, a similar concept</li>
+<li><a href="http://en.wikipedia.org/wiki/Metalanguage" title="Metalanguage">Metalanguage</a></li>
+</ul>
+<h3><span class="mw-headline" id="Software_using_BNF">Software using BNF</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=7" title="Edit section: Software using BNF">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ANTLR" title="ANTLR">ANTLR</a>, another parser generator written in <a href="Java_(programming_language).html" title="Java (programming language)">Java</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=BNF_Converter&amp;action=edit&amp;redlink=1" class="new" title="BNF Converter (page does not exist)">BNF Converter</a> (BNFC<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Coco/R" title="Coco/R">Coco/R</a>, compiler generator accepting an attributed grammar in <a href="http://en.wikipedia.org/wiki/EBNF" title="EBNF" class="mw-redirect">EBNF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DMS_Software_Reengineering_Toolkit" title="DMS Software Reengineering Toolkit">DMS Software Reengineering Toolkit</a>, program analysis and transformation system for arbitrary languages</li>
+<li><a href="http://en.wikipedia.org/wiki/GOLD_(parser)" title="GOLD (parser)">GOLD</a> BNF parser</li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_bison" title="GNU bison">GNU bison</a>, GNU version of yacc</li>
+<li>RPA BNF parser.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> Online (PHP) demo parsing: JavaScript, XML</li>
+<li>XACT X4MR System,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> a rule-based expert system for programming language translation</li>
+<li><a href="http://en.wikipedia.org/wiki/Yacc" title="Yacc">Yacc</a> parser generator (used with Lex pre-processor)</li>
+<li>bnfparser<sup>2</sup>,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup> a universal syntax verification utility</li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/bnf2xml/">bnf2xml</a> Markup input with XML tags using advanced BNF matching.</li>
+<li><a rel="nofollow" class="external text" href="https://javacc.java.net/">JavaCC</a> Java Compiler Compiler tm (JavaCC tm) - The Java Parser Generator</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="citation foldoc">This article is based on material taken from the <a href="http://en.wikipedia.org/wiki/Free_On-line_Dictionary_of_Computing" title="Free On-line Dictionary of Computing">Free On-line Dictionary of Computing</a> prior to 1 November 2008 and incorporated under the "relicensing" terms of the <a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GFDL</a>, version 1.3 or later.</span></p>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Grune1999-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Grune1999_1-0">^</a></b></span> <span class="reference-text"><span class="citation book">Grune, Dick (1999). <i><a href="http://en.wikipedia.org/w/index.php?title=Parsing_Techniques:_A_Practical_Guide&amp;action=edit&amp;redlink=1" class="new" title="Parsing Techniques: A Practical Guide (page does not exist)">Parsing Techniques: A Practical Guide</a></i>. US: Springer.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.aufirst=Dick&amp;rft.au=Grune%2C+Dick&amp;rft.aulast=Grune&amp;rft.btitle=Parsing+Techniques%3A+A+Practical+Guide&amp;rft.date=1999&amp;rft.genre=book&amp;rft.place=US&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www-gap.dcs.st-and.ac.uk/~history/Biographies/Panini.html">"Panini biography"</a>. School of Mathematics and Statistics, University of St Andrews, Scotland<span class="reference-accessdate">. Retrieved 2014-03-22</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.btitle=Panini+biography&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww-gap.dcs.st-and.ac.uk%2F~history%2FBiographies%2FPanini.html&amp;rft.pub=School+of+Mathematics+and+Statistics%2C+University+of+St+Andrews%2C+Scotland&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation journal">Chomsky, Noam (1956). <a rel="nofollow" class="external text" href="http://www.chomsky.info/articles/195609--.pdf">"Three models for the description of language"</a> (PDF). <i>IRE Transactions on Information Theory</i> <b>2</b> (2): 113–24. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1109%2FTIT.1956.1056813">10.1109/TIT.1956.1056813</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Three+models+for+the+description+of+language&amp;rft.au=Chomsky%2C+Noam&amp;rft.aufirst=Noam&amp;rft.aulast=Chomsky&amp;rft.date=1956&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.chomsky.info%2Farticles%2F195609--.pdf&amp;rft_id=info%3Adoi%2F10.1109%2FTIT.1956.1056813&amp;rft.issue=2&amp;rft.jtitle=IRE+Transactions+on+Information+Theory&amp;rft.pages=113%E2%80%9324&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=2" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Chomsky1957-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Chomsky1957_4-0">^</a></b></span> <span class="reference-text"><span class="citation book">Chomsky, Noam (1957). <i><a href="http://en.wikipedia.org/wiki/Syntactic_Structures" title="Syntactic Structures">Syntactic Structures</a></i>. The Hague: Mouton.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.au=Chomsky%2C+Noam&amp;rft.aufirst=Noam&amp;rft.aulast=Chomsky&amp;rft.btitle=Syntactic+Structures&amp;rft.date=1957&amp;rft.genre=book&amp;rft.place=The+Hague&amp;rft.pub=Mouton&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="http://en.wikipedia.org/wiki/John_W._Backus" title="John W. Backus" class="mw-redirect">Backus, J.W.</a> (1959). <a rel="nofollow" class="external text" href="http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf/view">"The syntax and semantics of the proposed international algebraic language of the Zurich ACM-GAMM Conference"</a>. <i>Proceedings of the International Conference on Information Processing</i>. UNESCO. pp.&#160;125–132</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Proceedings+of+the+International+Conference+on+Information+Processing&amp;rft.au=Backus%2C+J.W.&amp;rft.aufirst=J.W.&amp;rft.aulast=Backus&amp;rft.btitle=The+syntax+and+semantics+of+the+proposed+international+algebraic+language+of+the+Zurich+ACM-GAMM+Conference&amp;rft.date=1959&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.softwarepreservation.org%2Fprojects%2FALGOL%2Fpaper%2FBackus-Syntax_and_Semantics_of_Proposed_IAL.pdf%2Fview&amp;rft.pages=125%E2%80%93132&amp;rft.pub=UNESCO&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><span class="citation web">Farrell, James A. (August 1995). <a rel="nofollow" class="external text" href="http://www.cs.man.ac.uk/~pjj/farrell/comp2.html#EBNF">"Compiler Basics"</a>. <i>Extended Backus Naur Form</i>. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20110605061825/http://www.cs.man.ac.uk/~pjj/farrell/comp2.html">Archived</a> from the original on 5 June 2011<span class="reference-accessdate">. Retrieved May 11, 2011</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Extended+Backus+Naur+Form&amp;rft.au=Farrell%2C+James+A.&amp;rft.aufirst=James+A.&amp;rft.aulast=Farrell&amp;rft.btitle=Compiler+Basics&amp;rft.date=August+1995&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.cs.man.ac.uk%2F~pjj%2Ffarrell%2Fcomp2.html%23EBNF&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><span class="citation journal"><a href="Donald_Knuth.html" title="Donald Knuth">Knuth, Donald E.</a> (1964). "Backus Normal Form vs. Backus Naur Form". <i>Communications of the ACM</i> <b>7</b> (12): 735–736. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F355588.365140">10.1145/355588.365140</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Backus+Normal+Form+vs.+Backus+Naur+Form&amp;rft.aufirst=Donald+E.&amp;rft.au=Knuth%2C+Donald+E.&amp;rft.aulast=Knuth&amp;rft.date=1964&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F355588.365140&amp;rft.issue=12&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=735%E2%80%93736&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=7" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><span class="citation journal">Ingerman, P. Z. (1967). "<span style="padding-left:0.2em;">"</span>Pāṇini Backus Form" suggested". <i>Communications of the ACM</i> <b>10</b> (3): 137. <a href="Digital_object_identifier.html" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1145%2F363162.363165">10.1145/363162.363165</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=%22P%C4%81%E1%B9%87ini+Backus+Form%22+suggested&amp;rft.aufirst=P.+Z.&amp;rft.au=Ingerman%2C+P.+Z.&amp;rft.aulast=Ingerman&amp;rft.date=1967&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F363162.363165&amp;rft.issue=3&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.pages=137&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=10" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://www.cs.chalmers.se/Cs/Research/Language-technology/BNFC/">"BNFC"</a>, <i>Language technology</i>, <a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden">SE</a>: Chalmers</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Language+technology&amp;rft.btitle=BNFC&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.cs.chalmers.se%2FCs%2FResearch%2FLanguage-technology%2FBNFC%2F&amp;rft.place=SE&amp;rft.pub=Chalmers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://www.rpatk.net/web/en/onlinedemo.php">"Online demo"</a>, <i>RPatk</i></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=RPatk&amp;rft.btitle=Online+demo&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.rpatk.net%2Fweb%2Fen%2Fonlinedemo.php&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://web.archive.org/web/20060129221105/http://www.actworld.com/tools/">"Tools"</a>, <i>Act world</i>, archived from <a rel="nofollow" class="external text" href="http://www.actworld.com/tools/">the original</a> on 2006-01-02</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Act+world&amp;rft.btitle=Tools&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.actworld.com%2Ftools%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://bnfparser2.sourceforge.net/">"BNF parser²"</a>, <i>Source forge</i> (project)</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Source+forge&amp;rft.btitle=BNF+parser%C2%B2&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fbnfparser2.sourceforge.net%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://compilers.iecc.com/comparch/article/93-07-017">"Backus Normal Form vs. Backus-Naur Form"</a>, <i>Compilers</i>, IECC</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Compilers&amp;rft.btitle=Backus+Normal+Form+vs.+Backus-Naur+Form&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fcompilers.iecc.com%2Fcomparch%2Farticle%2F93-07-017&amp;rft.pub=IECC&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> explains some of the history of the two names.</li>
+<li><span id="CITEREFGarshol" class="citation">Garshol, Lars Marius, <a rel="nofollow" class="external text" href="http://www.garshol.priv.no/download/text/bnf.html"><i>BNF and EBNF: What are they and how do they work?</i></a>, <a href="http://en.wikipedia.org/wiki/Norway" title="Norway">NO</a>: Priv</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.aufirst=Lars+Marius&amp;rft.au=Garshol%2C+Lars+Marius&amp;rft.aulast=Garshol&amp;rft.btitle=BNF+and+EBNF%3A+What+are+they+and+how+do+they+work%3F&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.garshol.priv.no%2Fdownload%2Ftext%2Fbnf.html&amp;rft.place=NO&amp;rft.pub=Priv&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</li>
+<li><span id="CITEREF" class="citation"><i><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc4234">RFC 4234</a> — Augmented BNF for Syntax Specifications: ABNF</i></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.btitle=RFC+4234+%26mdash%3B+Augmented+BNF+for+Syntax+Specifications%3A+ABNF&amp;rft.genre=book&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</li>
+<li><span id="CITEREF" class="citation"><i><a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc5511">RFC 5511</a> — Routing BNF: A Syntax Used in Various Protocol Specifications</i></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.btitle=RFC+5511+%26mdash%3B+Routing+BNF%3A+A+Syntax+Used+in+Various+Protocol+Specifications&amp;rft.genre=book&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>.</li>
+<li>ISO/IEC 14977:1996(E) <i>Information technology – Syntactic metalanguage – Extended BNF</i>, available from <span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://standards.iso.org/ittf/PubliclyAvailableStandards/">"Publicly available"</a>, <i>Standards</i>, ISO</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Standards&amp;rft.btitle=Publicly+available&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fstandards.iso.org%2Fittf%2FPubliclyAvailableStandards%2F&amp;rft.pub=ISO&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> or from <span id="CITEREFKuhn" class="citation">Kuhn, Marcus, <a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/~mgk25/iso-14977.pdf"><i>Iso 14977</i></a> (PDF), <a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom">UK</a>: CAM</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.aufirst=Marcus&amp;rft.au=Kuhn%2C+Marcus&amp;rft.aulast=Kuhn&amp;rft.btitle=Iso+14977&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.cl.cam.ac.uk%2F~mgk25%2Fiso-14977.pdf&amp;rft.place=UK&amp;rft.pub=CAM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <small>(the latter is missing the cover page, but is otherwise much cleaner)</small></li>
+</ul>
+<h3><span class="mw-headline" id="Language_grammars">Language grammars</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit&amp;section=10" title="Edit section: Language grammars">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><span id="CITEREFBernhard" class="citation">Bernhard, <a rel="nofollow" class="external text" href="http://www.lrz-muenchen.de/~bernhard/Algol-BNF.html"><i>Algol-60 BNF</i></a>, <a href="http://en.wikipedia.org/wiki/Germany" title="Germany">DE</a>: LRZ München</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.au=Bernhard&amp;rft.aulast=Bernhard&amp;rft.btitle=Algol-60+BNF&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.lrz-muenchen.de%2F~bernhard%2FAlgol-BNF.html&amp;rft.place=DE&amp;rft.pub=LRZ+M%C3%BCnchen&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>, the original BNF.</li>
+<li><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://savage.net.au/SQL/">"BNF grammars for SQL-92, SQL-99 and SQL-2003"</a>, <i>Savage</i>, <a href="http://en.wikipedia.org/wiki/Australia" title="Australia">AU</a>: Net</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Savage&amp;rft.btitle=BNF+grammars+for+SQL-92%2C+SQL-99+and+SQL-2003&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fsavage.net.au%2FSQL%2F&amp;rft.place=AU&amp;rft.pub=Net&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>, freely available BNF grammars for <a href="SQL.html" title="SQL">SQL</a>.</li>
+<li><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://cui.unige.ch/db-research/Enseignement/analyseinfo/BNFweb.html">"BNF Web Club"</a>, <i>DB research</i>, <a href="http://en.wikipedia.org/wiki/Switzerland" title="Switzerland">CH</a>: Unige</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=DB+research&amp;rft.btitle=BNF+Web+Club&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fcui.unige.ch%2Fdb-research%2FEnseignement%2Fanalyseinfo%2FBNFweb.html&amp;rft.place=CH&amp;rft.pub=Unige&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>, freely available BNF grammars for SQL, <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>, <a href="Java_(programming_language).html" title="Java (programming language)">Java</a>.</li>
+<li><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://www.thefreecountry.com/sourcecode/grammars.shtml">"Free Programming Language Grammars for Compiler Construction"</a>, <i>Source code</i>, The free country</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Source+code&amp;rft.btitle=Free+Programming+Language+Grammars+for+Compiler+Construction&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fwww.thefreecountry.com%2Fsourcecode%2Fgrammars.shtml&amp;rft.pub=The+free+country&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>, freely available BNF/<a href="http://en.wikipedia.org/wiki/Extended_Backus–Naur_Form" title="Extended Backus–Naur Form">EBNF</a> grammars for C/C++, <a href="Pascal_(programming_language).html" title="Pascal (programming language)">Pascal</a>, <a href="COBOL.html" title="COBOL">COBOL</a>, <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada 95</a>, <a href="PL/I.html" title="PL/I">PL/I</a>.</li>
+<li><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://exp-engine.svn.sourceforge.net/viewvc/exp-engine/engine/trunk/docs/">"BNF files related to the STEP standard"</a>, <i>Exp engine</i> (<a href="http://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a>), Source forge</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABackus%E2%80%93Naur+Form&amp;rft.atitle=Exp+engine&amp;rft.btitle=BNF+files+related+to+the+STEP+standard&amp;rft.genre=bookitem&amp;rft_id=http%3A%2F%2Fexp-engine.svn.sourceforge.net%2Fviewvc%2Fexp-engine%2Fengine%2Ftrunk%2Fdocs%2F&amp;rft.pub=Source+forge&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>. Includes <a href="http://en.wikipedia.org/wiki/List_of_STEP_(ISO_10303)_parts" title="List of STEP (ISO 10303) parts">parts 11, 14, and 21</a> of the <a href="http://en.wikipedia.org/wiki/ISO_10303" title="ISO 10303">ISO 10303</a> (STEP) standard.</li>
+</ul>
+<p><span id="interwiki-de-ga"></span></p>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1187
+CPU time usage: 0.420 seconds
+Real time usage: 0.454 seconds
+Preprocessor visited node count: 1256/1000000
+Preprocessor generated node count: 4705/1500000
+Post‐expand include size: 36830/2048000 bytes
+Template argument size: 126/2048000 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/500
+Lua time usage: 0.073/10.000 seconds
+Lua memory usage: 2.15 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:62247-0!*!0!!en!*!* and timestamp 20140322153609
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Backus%e2%80%93Naur_Form&amp;oldid=600743680">http://en.wikipedia.org/w/index.php?title=Backus–Naur_Form&amp;oldid=600743680</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Formal_languages" title="Category:Formal languages">Formal languages</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Compiler_construction" title="Category:Compiler construction">Compiler construction</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_inconsistent_citation_formats" title="Category:Articles with inconsistent citation formats">Articles with inconsistent citation formats</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Backus%E2%80%93Naur+Form&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Backus%E2%80%93Naur+Form" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/Backus–Naur_Form"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Backus–Naur_Form"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/Backus–Naur_Form" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Backus–Naur_Form" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Backus–Naur_Form" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;oldid=600743680" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q211577" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Backus%E2%80%93Naur_Form&amp;id=600743680" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Backus%E2%80%93Naur+Form">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Backus%E2%80%93Naur+Form&amp;oldid=600743680&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Backus%E2%80%93Naur_Form&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/صيغة_باكوس_نور" title="صيغة باكوس نور – Arabic" lang="ar" hreflang="ar">العربية</a></li>
+			<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Forma_de_Backus_i_Naur" title="Forma de Backus i Naur – Catalan" lang="ca" hreflang="ca">Català</a></li>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Backusova-Naurova_forma" title="Backusova-Naurova forma – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Backus-Naur_form" title="Backus-Naur form – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Backus-Naur-Form" title="Backus-Naur-Form – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/Μορφή_Μπάκους-Νάουρ" title="Μορφή Μπάκους-Νάουρ – Greek" lang="el" hreflang="el">Ελληνικά</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Notación_de_Backus-Naur" title="Notación de Backus-Naur – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/فرم_بکوس-نائور" title="فرم بکوس-نائور – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Forme_de_Backus-Naur" title="Forme de Backus-Naur – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Backus-Naur_Form" title="Backus-Naur Form – Galician" lang="gl" hreflang="gl">Galego</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/배커스-나우르_표기법" title="배커스-나우르 표기법 – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-hi"><a href="http://hi.wikipedia.org/wiki/बाक्कस-नार_प्रारूप" title="बाक्कस-नार प्रारूप – Hindi" lang="hi" hreflang="hi">हिन्दी</a></li>
+			<li class="interlanguage-link interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Backus-Naurov_oblik" title="Backus-Naurov oblik – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li>
+			<li class="interlanguage-link interwiki-is"><a href="http://is.wikipedia.org/wiki/BNF" title="BNF – Icelandic" lang="is" hreflang="is">Íslenska</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Backus-Naur_Form" title="Backus-Naur Form – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-ka"><a href="http://ka.wikipedia.org/wiki/ბეკუს-ნაურის_ფორმალიზმი" title="ბეკუს-ნაურის ფორმალიზმი – Georgian" lang="ka" hreflang="ka">ქართული</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Backus–Naur_forma" title="Backus–Naur forma – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ms"><a href="http://ms.wikipedia.org/wiki/Bentuk_Backus–Naur" title="Bentuk Backus–Naur – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li>
+			<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Backus-Naur-vorm" title="Backus-Naur-vorm – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/バッカス・ナウア記法" title="バッカス・ナウア記法 – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/Backus-Naur_form" title="Backus-Naur form – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Notacja_BNF" title="Notacja BNF – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Formalismo_de_Backus-Naur" title="Formalismo de Backus-Naur – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Форма_Бэкуса_—_Наура" title="Форма Бэкуса — Наура – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Бакус–Наурова_форма" title="Бакус–Наурова форма – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li>
+			<li class="interlanguage-link interwiki-sh"><a href="http://sh.wikipedia.org/wiki/Backus-Naurov_oblik" title="Backus-Naurov oblik – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li>
+			<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Backus–Naur-muoto" title="Backus–Naur-muoto – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+			<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Backus-Naur-form" title="Backus-Naur-form – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+			<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/பேக்கசு-நார்_முறை" title="பேக்கசு-நார் முறை – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+			<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Backus-Naur_form" title="Backus-Naur form – Turkish" lang="tr" hreflang="tr">Türkçe</a></li>
+			<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Нотація_Бекуса-Наура" title="Нотація Бекуса-Наура – Ukrainian" lang="uk" hreflang="uk">Українська</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/巴科斯范式" title="巴科斯范式 – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q211577#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 22 March 2014 at 15:36.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Backus–Naur_Form" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1102 in 0.417 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Backus-Naur_form by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:58:07 GMT -->
+</html>

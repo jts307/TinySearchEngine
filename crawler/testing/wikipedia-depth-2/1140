@@ -1,0 +1,1134 @@
+http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Valgrind.html
+2
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+
+<!-- Mirrored from en.wikipedia.org/wiki/Valgrind by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<title>Valgrind - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23wmf19" />
+<link rel="alternate" href="http://en.wikipedia.org/wiki/android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Valgrind" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="Valgrind.html" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Valgrind","wgTitle":"Valgrind","wgCurRevisionId":599415643,"wgRevisionId":599415643,"wgArticleId":428412,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking reliable references from September 2011","All articles lacking reliable references","All articles with unsourced statements","Articles with unsourced statements from December 2012","Articles using fixed number of columns in reflist","Free memory management software","Free software testing tools","Software testing tools","Debuggers","Profilers"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Valgrind","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf19/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgFlowTermsOfUseEdit":"By saving changes, you agree to our \u003Ca class=\"external text\" href=\"//wikimediafoundation.org/wiki/Terms_of_use\"\u003ETerms of Use\u003C/a\u003E and agree to irrevocably release your text under the \u003Ca rel=\"nofollow\" class=\"external text\" href=\"//creativecommons.org/licenses/by-sa/3.0\"\u003ECC BY-SA 3.0 License\u003C/a\u003E and \u003Ca class=\"external text\" href=\"//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License\"\u003EGFDL\u003C/a\u003E","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q924041"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,
+"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,
+"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:868e43d07ede2616d2d1dc3507cd8145 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","skins.vector.compactPersonalBar.defaultTracking","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;font-family: monospace, monospace;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style><link rel="dns-prefetch" href="http://meta.wikimedia.org/" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf19/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Valgrind skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Valgrind</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">For other uses, see <a href="http://en.wikipedia.org/wiki/Valgrind_(disambiguation)" title="Valgrind (disambiguation)">Valgrind (disambiguation)</a>.</div>
+<table class="metadata plainlinks ambox ambox-content ambox-Primary_sources" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px;"><a href="http://en.wikipedia.org/wiki/File:Question_book-new.svg" class="image"><img alt="Question book-new.svg" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" /></a></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article <b>relies on <a href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">references</a> to <a href="http://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">primary sources</a></b>. <span class="hide-when-compact">Please add references to <a href="http://en.wikipedia.org/wiki/Wikipedia:No_original_research#Primary.2C_secondary_and_tertiary_sources" title="Wikipedia:No original research">secondary or tertiary sources</a>.</span> <small><i>(September 2011)</i></small></span></td>
+</tr>
+</table>
+<table class="infobox vevent" cellspacing="3" style="border-spacing:3px;width:22em;">
+<caption class="summary">Valgrind</caption>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Valgrind_logo.png" class="image"><img alt="Valgrind logo.png" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Valgrind_logo.png/200px-Valgrind_logo.png" width="200" height="131" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f9/Valgrind_logo.png/300px-Valgrind_logo.png 1.5x, //upload.wikimedia.org/wikipedia/en/f/f9/Valgrind_logo.png 2x" /></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_developer.html" title="Software developer">Developer(s)</a></th>
+<td><a rel="nofollow" class="external text" href="http://valgrind.org/info/developers.html">The Valgrind Developers</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_release_life_cycle.html" title="Software release life cycle">Stable release</a></th>
+<td>3.9.0 <small>(October&#160;31, 2013<span class="noprint">; 4 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2013-10-31</span>)</span>)</small> <small class="plainlinks"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/Valgrind&amp;action=edit">[±]</a></small><sup id="cite_ref-Valgrind_News_1-0" class="reference"><a href="#cite_note-Valgrind_News-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Operating_system.html" title="Operating system">Operating system</a></th>
+<td><a href="Linux.html" title="Linux">Linux</a><br />
+<span class="nowrap"><a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a></span><br />
+<a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/List_of_software_categories" title="List of software categories">Type</a></th>
+<td><a href="http://en.wikipedia.org/wiki/Profiler_(computer_science)" title="Profiler (computer science)" class="mw-redirect">Profiler</a>, <a href="http://en.wikipedia.org/wiki/Memory_debugger" title="Memory debugger">Memory debugger</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="Software_license.html" title="Software license">License</a></th>
+<td><a href="GNU_General_Public_License.html" title="GNU General Public License">GNU General Public License</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://www.valgrind.org/">www.valgrind.org</a></span></td>
+</tr>
+</table>
+<p><b>Valgrind</b> <span class="nowrap"><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ˈ/ primary stress follows" style="border-bottom:1px dotted">ˈ</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'v' in 'vie'" style="border-bottom:1px dotted">v</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/æ/ short 'a' in 'bad'" style="border-bottom:1px dotted">æ</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'l' in 'lie'" style="border-bottom:1px dotted">l</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'g' in 'guy'" style="border-bottom:1px dotted">ɡ</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'r' in 'rye'" style="border-bottom:1px dotted">r</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="/ɪ/ short 'i' in 'bid'" style="border-bottom:1px dotted">ɪ</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'n' in 'nigh'" style="border-bottom:1px dotted">n</span></a></span><span class="IPA nopopups"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English#Key" title="Help:IPA for English"><span title="'d' in 'dye'" style="border-bottom:1px dotted">d</span></a></span><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="http://en.wikipedia.org/wiki/Help:IPA_for_English" title="Help:IPA for English">/</a></span></span> is a <a href="GNU_General_Public_License.html" title="GNU General Public License">GPL</a> licensed <a href="Programming_tool.html" title="Programming tool">programming tool</a> for <a href="http://en.wikipedia.org/wiki/Memory_debugger" title="Memory debugger">memory debugging</a>, <a href="Memory_leak.html" title="Memory leak">memory leak</a> detection, and <a href="http://en.wikipedia.org/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">profiling</a>. It is named after the main entrance to <a href="http://en.wikipedia.org/wiki/Valhalla" title="Valhalla">Valhalla</a> in <a href="http://en.wikipedia.org/wiki/Norse_mythology" title="Norse mythology">Norse mythology</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Valgrind was originally designed to be a free <a href="http://en.wikipedia.org/wiki/Memory_debugging" title="Memory debugging" class="mw-redirect">memory debugging</a> tool for <a href="Linux.html" title="Linux">Linux</a> on <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a>, but has since evolved to become a generic framework for creating dynamic analysis tools such as checkers and profilers. It is used by a number of Linux-based projects.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> Since version 3.5, Valgrind also works on <span class="nowrap"><a href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">Mac OS X</a></span>.</p>
+<p>The original author of Valgrind is <a href="http://en.wikipedia.org/wiki/Julian_Seward" title="Julian Seward">Julian Seward</a>, who in 2006 won a <a href="http://en.wikipedia.org/wiki/Google-O%27Reilly_Open_Source_Award" title="Google-O'Reilly Open Source Award" class="mw-redirect">Google-O'Reilly Open Source Award</a> for his work on Valgrind.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> Several others have also made significant contributions, including Cerion Armour-Brown, Jeremy Fitzhardinge, Tom Hughes, Nicholas Nethercote, Paul Mackerras, Dirk Mueller, Bart Van Assche, Josef Weidendorfer and Robert Walsh.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Tools"><span class="tocnumber">2</span> <span class="toctext">Tools</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Memcheck"><span class="tocnumber">2.1</span> <span class="toctext">Memcheck</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Other_tools"><span class="tocnumber">2.2</span> <span class="toctext">Other tools</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Platforms_supported"><span class="tocnumber">3</span> <span class="toctext">Platforms supported</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Limitations_of_Memcheck"><span class="tocnumber">4</span> <span class="toctext">Limitations of Memcheck</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Valgrind is in essence a <a href="http://en.wikipedia.org/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> using <a href="http://en.wikipedia.org/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time</a> (JIT) compilation techniques, including <a href="http://en.wikipedia.org/wiki/Dynamic_recompilation" title="Dynamic recompilation">dynamic recompilation</a>. Nothing from the original program ever gets run directly on the host <a href="http://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">processor</a>. Instead, Valgrind first translates the program into a temporary, simpler form called Intermediate Representation (IR), which is a processor-neutral, <a href="http://en.wikipedia.org/wiki/Static_single_assignment_form" title="Static single assignment form">SSA</a>-based form. After the conversion, a <i>tool</i> (see below) is free to do whatever transformations it would like on the IR, before Valgrind translates the IR back into machine code and lets the host processor run it. Even though it could use <a href="http://en.wikipedia.org/wiki/Dynamic_translation" title="Dynamic translation" class="mw-redirect">dynamic translation</a> (that is, the host and target processors are from different architectures), it doesn't. Valgrind recompiles <a href="http://en.wikipedia.org/wiki/Binary_code" title="Binary code">binary code</a> to run on host and target (or simulated) CPUs of the same architecture.</p>
+<p>A considerable amount of performance is lost in these transformations (and usually, the code the tool inserts); usually, code run with Valgrind and the "none" tool (which does nothing to the IR) runs at 1/4 to 1/5 of the speed of the normal program.<sup class="Template-Fact" style="white-space:nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2012)">citation needed</span></a></i>]</sup></p>
+<h2><span class="mw-headline" id="Tools">Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=2" title="Edit section: Tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink boilerplate seealso">See also: <a href="http://en.wikipedia.org/wiki/Memory_debugger" title="Memory debugger">Memory debugger</a>&#160;and <a href="http://en.wikipedia.org/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">Profiling (computer programming)</a></div>
+<h3><span class="mw-headline" id="Memcheck">Memcheck</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=3" title="Edit section: Memcheck">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are multiple tools included with Valgrind (and several external ones). The default (and most used) tool is <i>Memcheck</i>. Memcheck inserts extra <a href="http://en.wikipedia.org/wiki/Instrumentation_(computer_programming)" title="Instrumentation (computer programming)">instrumentation</a> code around almost all instructions, which keeps track of the <i>validity</i> (all unallocated memory starts as invalid or "undefined", until it is initialized into a deterministic state, possibly from other memory) and <i>addressability</i> (whether the memory address in question points to an allocated, non-freed memory block), stored in the so-called <i>V bits</i> and <i>A bits</i>, respectively. As data is moved around or manipulated, the instrumentation code keeps track of the A and V bits so they are always correct on a single-bit level.</p>
+<p>In addition, Memcheck replaces the standard C <a href="Malloc.html" title="Malloc" class="mw-redirect">memory allocator</a> with its own implementation, which also includes <i>memory guards</i> around all allocated blocks (with the A bits set to "invalid"). This feature enables Memcheck to detect <a href="http://en.wikipedia.org/wiki/Off-by-one_error" title="Off-by-one error">off-by-one errors</a> where a program reads or writes outside an allocated block by a small amount. The problems Memcheck can detect and warn about include the following:</p>
+<ul>
+<li>Use of uninitialized memory</li>
+<li>Reading/writing memory after it has been <code><a href="http://en.wikipedia.org/wiki/Free_(programming)" title="Free (programming)" class="mw-redirect">free</a></code>'d</li>
+<li>Reading/writing off the end of <code><a href="Malloc.html" title="Malloc" class="mw-redirect">malloc</a></code>'d blocks</li>
+<li><a href="Memory_leak.html" title="Memory leak">Memory leaks</a></li>
+</ul>
+<p>The price of this is lost performance. Programs running under Memcheck usually run from twenty to thirty times slower<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> than running outside Valgrind and use more memory (there is a memory penalty per-allocation). Thus, few developers run their code under Memcheck (or any other Valgrind tool) all the time. They most commonly use such tools either to trace down some specific bug, or to verify there are no latent bugs (of the kind Memcheck can detect) in the code.</p>
+<h3><span class="mw-headline" id="Other_tools">Other tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=4" title="Edit section: Other tools">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In addition to Memcheck, Valgrind has several other tools:<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup></p>
+<ul>
+<li><i>None</i>, runs the code in the virtual machine without performing any analysis and thus has the smallest possible CPU and memory overhead of all tools. Since valgrind itself provides a trace back from a <a href="Segmentation_fault.html" title="Segmentation fault">segmentation fault</a>, the <i>none</i> tool provides this traceback at minimal overhead.</li>
+<li><i>Addrcheck</i>, similar to Memcheck but with much smaller CPU and memory overhead, thus catching fewer types of bugs. Addrcheck has been removed as of version 3.2.0.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></li>
+<li><i>Massif</i>, a <a href="Dynamic_memory_allocation.html" title="Dynamic memory allocation" class="mw-redirect">heap</a> <a href="http://en.wikipedia.org/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">profiler</a>. The separate <a href="GUI.html" title="GUI" class="mw-redirect">GUI</a> massif-visualizer visualizes output from Massif.</li>
+<li><i>Helgrind</i> and <i>DRD</i>, detect <a href="http://en.wikipedia.org/wiki/Race_condition" title="Race condition">race conditions</a> in <a href="http://en.wikipedia.org/wiki/Thread_(computer_science)" title="Thread (computer science)" class="mw-redirect">multithreaded code</a></li>
+<li><i>Cachegrind</i>, a <a href="CPU_cache.html" title="CPU cache">cache</a> profiler. The separate GUI KCacheGrind visualizes output from Cachegrind.</li>
+<li><i>Callgrind</i>, a <a href="http://en.wikipedia.org/wiki/Callgraph" title="Callgraph" class="mw-redirect">callgraph</a> analyzer created by Josef Weidendorfer was added to Valgrind as of version 3.2.0. KCacheGrind can visualize output from Callgrind as well as Cachegrind.</li>
+<li><i>exp-sgcheck</i> (named <i>exp-ptrcheck</i> prior to version 3.7), an experimental tool to find stack and global array overrun errors which Memcheck cannot find.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> Some code results in false positives from this tool.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></li>
+<li><i>exp-dhat</i>, dynamic heap analysis tool which analyzes how much memory is allocated and for how long as well as patterns of memory usage.</li>
+<li><i>exp-bbv</i>, a performance simulator that extrapolates performance from a small sample set.</li>
+</ul>
+<p>There are also several externally developed tools available. One such tool is ThreadSanitizer, another detector of <a href="http://en.wikipedia.org/wiki/Race_condition" title="Race condition">race conditions</a>.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Platforms_supported">Platforms supported</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=5" title="Edit section: Platforms supported">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As of version 3.4.0, Valgrind supports <a href="Linux.html" title="Linux">Linux</a> on <a href="http://en.wikipedia.org/wiki/X86" title="X86">x86</a>, <a href="http://en.wikipedia.org/wiki/X86-64" title="X86-64">x86-64</a> and <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a>. Support for <span class="nowrap">Mac OS X</span> was added in version 3.5.0.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup> Support for Linux on <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARMv7</a> (used for example in certain <a href="http://en.wikipedia.org/wiki/Smartphones" title="Smartphones" class="mw-redirect">smartphones</a>) was added in version 3.6.0.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> There are unofficial ports to other UNIX-like platforms (like <a href="FreeBSD.html" title="FreeBSD">FreeBSD</a><sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> and <a href="NetBSD.html" title="NetBSD">NetBSD</a><sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup>). From version 3.7.0 the <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM</a>/<a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> platform support was added.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup></p>
+<p>Since version 3.9.0 there is support for Linux on <a href="http://en.wikipedia.org/wiki/MIPS_architecture#MIPS64" title="MIPS architecture">MIPS64</a> small and big endian, for MIPS DSP ASE on MIPS32, for <a href="http://en.wikipedia.org/wiki/S390x" title="S390x" class="mw-redirect">s390x</a> Decimal Floating Point instructions, for <a href="http://en.wikipedia.org/wiki/POWER8" title="POWER8">POWER8</a> (<a href="http://en.wikipedia.org/wiki/Power_Architecture" title="Power Architecture">Power ISA 2.07</a>) instructions, for Intel <a href="http://en.wikipedia.org/wiki/Advanced_Vector_Extensions" title="Advanced Vector Extensions">AVX2</a> instructions, for Intel Transactional Synchronization Extensions, both RTM and HLE and initial support for Hardware Transactional Memory on POWER.<sup id="cite_ref-Valgrind_News_1-1" class="reference"><a href="#cite_note-Valgrind_News-1"><span>[</span>1<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Limitations_of_Memcheck">Limitations of Memcheck</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=6" title="Edit section: Limitations of Memcheck">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In addition to the performance penalty, an important limitation of Memcheck is its inability to detect all cases of bounds errors in the use of static or stack-allocated data.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup> The following code will pass the <i>Memcheck</i> tool in Valgrind without incident, despite containing the errors described in the comments:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+  <span class="kw4">int</span> Static<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+ 
+  <span class="kw4">int</span> func<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+  <span class="br0">{</span>
+    <span class="kw4">int</span> Stack<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+ 
+    Static<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>  <span class="coMULTI">/* Error - Static[0] to Static[4] exist, Static[5] is out of bounds */</span>
+    Stack <span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>  <span class="coMULTI">/* Error - Stack[0] to  Stack[4] exist,  Stack[5] is out of bounds */</span>
+ 
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+</pre></div>
+</div>
+<p>The experimental valgrind tool exp-sgcheck has been written to address this limitation in Memcheck. It will detect array overrun errors, provided the first access to an array is within the array bounds. Note that exp-sgcheck will not detect the array overrun in the code above, since the first access to an array is out of bounds, but it will detect the array overrun error in the following code.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="c source-c">
+<pre class="de1">
+  <span class="kw4">void</span> func<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+  <span class="br0">{</span>
+    <span class="kw4">int</span> i<span class="sy0">,</span> Stack<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span><span class="sy0">;</span>
+ 
+    <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> <span class="nu0">5</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span>
+        Stack <span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>        <span class="coMULTI">/* Within bounds for i=0..4, out of bounds error when i=5 */</span>
+  <span class="br0">}</span>
+</pre></div>
+</div>
+<p>The inability to detect all errors involving the access of stack allocated data is especially noteworthy since <a href="Buffer_overflow.html" title="Buffer overflow">certain types of stack errors</a> make software <a href="http://en.wikipedia.org/wiki/Vulnerability_(computing)" title="Vulnerability (computing)">vulnerable</a> to the classic <a href="http://en.wikipedia.org/wiki/Stack_buffer_overflow" title="Stack buffer overflow">stack smashing exploit</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Free_and_open-source_software_logo_(2009).svg" class="image"><img alt="Portal icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_(2009).svg/28px-Free_and_open-source_software_logo_(2009).svg.png" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" /></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Free_software" title="Portal:Free software">Free software portal</a></td>
+</tr>
+</table>
+</div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_program_analysis" title="Dynamic program analysis">Dynamic program analysis</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pin_(computer_program)" title="Pin (computer program)">Pin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DynamoRIO" title="DynamoRIO">DynamoRIO</a></li>
+<li><a href="http://en.wikipedia.org/wiki/VOGL" title="VOGL">VOGL</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=8" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Valgrind_News-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Valgrind_News_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Valgrind_News_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span id="CITEREF" class="citation"><a rel="nofollow" class="external text" href="http://www.valgrind.org/docs/manual/dist.news.html"><i>Valgrind News</i></a></span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AValgrind&amp;rft.btitle=Valgrind+News&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.valgrind.org%2Fdocs%2Fmanual%2Fdist.news.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/docs/manual/dist.news.html">Valgrind release notes</a></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.valgrind.org/docs/manual/faq.html#faq.whence">Valgrind FAQ</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/gallery/users.html">valgrind.org's list of users</a></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/gallery/awards.html">valgrind.org's list of awards</a></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://code.google.com/events/osa-hall-of-fame.html">Google-O'Reilly Open Source Awards - Hall of Fame</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/info/developers.html">The Valgrind Developers</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://valgrind.org/docs/manual/quick-start.html#quick-start.mcrun">http://valgrind.org/docs/manual/quick-start.html#quick-start.mcrun</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/info/tools.html">Valgrind main tool list</a></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external autonumber" href="http://valgrind.org/docs/manual/dist.news.old.html">[1]</a></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/docs/manual/sg-manual.html">section on exp-sgcheck in the Valgrind user manual</a></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external autonumber" href="https://bugs.kde.org/show_bug.cgi?id=243234">[2]</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://valgrind.org/downloads/variants.html">http://valgrind.org/downloads/variants.html</a></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">K Serebryany, T Iskhodzhanov, <i><a rel="nofollow" class="external text" href="http://data-race-test.googlecode.com/files/ThreadSanitizer.pdf">ThreadSanitizer–data race detection in practice</a></i>, Proceedings of the Workshop on Binary Instrumentation and Applications WBIA'09</span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blog.mozilla.com/nnethercote/2009/05/28/mac-os-x-now-supported-on-the-valgrind-trunk/">Mac OS X port</a></span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://talk.maemo.org/showthread.php?t=65335">ARM/Linux port</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.freshports.org/devel/valgrind/">Valgrind FreeBSD port</a></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://vg4nbsd.berlios.de/">Valgrind NetBSD port</a></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://valgrind.org/docs/manual/dist.news.html">Valgrind release notes</a></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.valgrind.org/docs/manual/faq.html#faq.overruns">Valgrind FAQ</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><span class="citation web">Nicholas Nethercote and Julian Seward. <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=1250734.1250746&amp;coll=GUIDE&amp;dl=GUIDE&amp;CFID=8869850&amp;CFTOKEN=10168503">"Valgrind: A Framework for Heavyweight Dynamic Binary Instrumentation"</a>. <i>Proceedings of ACM SIGPLAN 2007 Conference on Programming Language Design and Implementation (PLDI 2007)</i>. ACM.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AValgrind&amp;rft.atitle=Valgrind%3A+A+Framework+for+Heavyweight+Dynamic+Binary+Instrumentation&amp;rft.aulast=Nicholas+Nethercote+and+Julian+Seward&amp;rft.au=Nicholas+Nethercote+and+Julian+Seward&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D1250734.1250746%26coll%3DGUIDE%26dl%3DGUIDE%26CFID%3D8869850%26CFTOKEN%3D10168503&amp;rft.jtitle=Proceedings+of+ACM+SIGPLAN+2007+Conference+on+Programming+Language+Design+and+Implementation+%28PLDI+2007%29&amp;rft.pub=ACM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation web">Julian Seward and Nicholas Nethercote. <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=1247362&amp;dl=GUIDE&amp;coll=GUIDE&amp;CFID=8869850&amp;CFTOKEN=10168503">"Using Valgrind to detect undefined value errors with bit-precision"</a>. <i>Proceedings of the USENIX Annual Technical Conference 2005</i>. USENIX Association.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AValgrind&amp;rft.atitle=Using+Valgrind+to+detect+undefined+value+errors+with+bit-precision&amp;rft.au=Julian+Seward+and+Nicholas+Nethercote&amp;rft.aulast=Julian+Seward+and+Nicholas+Nethercote&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D1247362%26dl%3DGUIDE%26coll%3DGUIDE%26CFID%3D8869850%26CFTOKEN%3D10168503&amp;rft.jtitle=Proceedings+of+the+USENIX+Annual+Technical+Conference+2005&amp;rft.pub=USENIX+Association&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><span class="citation book">J. Seward, N. Nethercote, J. Weidendorfer and the Valgrind Development Team (March 2008). <a rel="nofollow" class="external text" href="http://www.network-theory.co.uk/valgrind/manual/"><i>Valgrind 3.3 — Advanced Debugging and Profiling for GNU/Linux applications</i></a>. Network Theory Ltd. pp.&#160;164 pages. <a href="International_Standard_Book_Number.html" title="International Standard Book Number">ISBN</a>&#160;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-9546120-5-1" title="Special:BookSources/0-9546120-5-1">0-9546120-5-1</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AValgrind&amp;rft.au=J.+Seward%2C+N.+Nethercote%2C+J.+Weidendorfer+and+the+Valgrind+Development+Team&amp;rft.aulast=J.+Seward%2C+N.+Nethercote%2C+J.+Weidendorfer+and+the+Valgrind+Development+Team&amp;rft.btitle=Valgrind+3.3+%E2%80%94+Advanced+Debugging+and+Profiling+for+GNU%2FLinux+applications&amp;rft.date=March+2008&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.network-theory.co.uk%2Fvalgrind%2Fmanual%2F&amp;rft.isbn=0-9546120-5-1&amp;rft.pages=164+pages&amp;rft.pub=Network+Theory+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tr>
+<td class="mbox-image"><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" /></td>
+<td class="mbox-text plainlist" style="">Wikibooks has a book on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Valgrind" class="extiw" title="wikibooks:Valgrind">Valgrind</a></b></i></td>
+</tr>
+</table>
+<ul>
+<li><span class="official website"><span class="url"><a rel="nofollow" class="external text" href="http://www.valgrind.org/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.valgrind.org/info/about.html">Overview of the Valgrind system</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.valgrind.org/docs">Complete manual of Valgrind</a></li>
+<li><a rel="nofollow" class="external text" href="http://valgrind.org/gallery/users.html">Projects using Valgrind</a></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Linux" title="Template:Linux"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Linux" title="Template talk:Linux"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Linux&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;">The <a href="Linux.html" title="Linux">Linux</a> operating system family</div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/History_of_Linux" title="History of Linux">History</a></li>
+<li><a href="Linux_kernel.html" title="Linux kernel">Kernel</a>
+<ul>
+<li><small style="font-size:85%;"><a href="http://en.wikipedia.org/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">kernel names</a></small></li>
+<li><small style="font-size:85%;"><a href="http://en.wikipedia.org/wiki/List_of_Linux_supported_architectures" title="List of Linux supported architectures">supported architectures</a></small></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a>
+<ul>
+<li><small style="font-size:85%;"><a href="http://en.wikipedia.org/wiki/Criticism_of_desktop_Linux" title="Criticism of desktop Linux">of desktop Linux</a></small></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Organization</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group">Linux kernel</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linus%27s_Law" title="Linus's Law">Linus's Law</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tanenbaum–Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tux" title="Tux">Tux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SCO–Linux_controversies" title="SCO–Linux controversies">SCO and Linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">GNU</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Free_Software_Foundation.html" title="Free Software Foundation">Free Software Foundation</a></li>
+<li><a href="GNU.html" title="GNU">GNU</a></li>
+<li><a href="GNU_General_Public_License.html" title="GNU General Public License">GNU GPL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU/Linux_naming_controversy" title="GNU/Linux naming controversy">GNU/Linux naming controversy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_GNU_packages" title="List of GNU packages">GNU packages</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Project" title="GNU Project">GNU Project</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Distribution</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Linux_distribution" title="Linux distribution">Linux<br />
+distribution</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_Linux_distributions" title="Comparison of Linux distributions">General comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_Linux_distributions" title="List of Linux distributions">Distributions list</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_netbook-oriented_Linux_distributions" title="Comparison of netbook-oriented Linux distributions">Netbook-specific comparison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_Linux_distributions_that_run_from_RAM" title="List of Linux distributions that run from RAM">Distributions that run from RAM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lightweight_Linux_distribution" title="Lightweight Linux distribution">Lightweight Linux distribution</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Package_management_system" title="Package management system">Package management system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Package_format" title="Package format">Package formats</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Live_CD.html" title="Live CD">Live CD</a>
+<ul>
+<li><small style="font-size:85%;"><a href="http://en.wikipedia.org/wiki/List_of_live_CDs#Linux-based" title="List of live CDs">List</a></small></li>
+</ul>
+</li>
+<li><a href="Live_USB.html" title="Live USB">Live USB</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Support</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li>Documentation
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Documentation_Project" title="Linux Documentation Project">Linux Documentation Project</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Software_Package_Data_Exchange" title="Software Package Data Exchange">Software Package Data Exchange</a></li>
+</ul>
+</li>
+<li>Developers
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_conference" title="Linux conference" class="mw-redirect">Linux conferences</a></li>
+</ul>
+</li>
+<li>Users
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Technical</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group">Standards</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group">Interfaces</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_kernel_API" title="Linux kernel API">Linux kernel API</a>
+<ul>
+<li><a href="POSIX.html" title="POSIX">POSIX</a>/<a href="Single_UNIX_Specification.html" title="Single UNIX Specification">Single UNIX Specification</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a>
+<ul>
+<li><a href="Filesystem_Hierarchy_Standard.html" title="Filesystem Hierarchy Standard">Filesystem Hierarchy Standard</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Flavours</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Operation</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_startup_process" title="Linux startup process">Linux startup process</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Package_management_system" title="Package management system">Package management system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Package_format" title="Package format">Linux package formats</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">OS components</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="C_standard_library.html" title="C standard library">C standard library</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="GNU_C_Library.html" title="GNU C Library">glibc</a></li>
+<li><a href="UClibc.html" title="UClibc">uClibc</a></li>
+<li><a href="Bionic_(software).html" title="Bionic (software)">Bionic</a>
+<ul>
+<li><a href="Hybris_(software).html" title="Hybris (software)">libhybris</a></li>
+</ul>
+</li>
+<li><a href="Dietlibc.html" title="Dietlibc">dietlibc</a></li>
+<li><a href="Embedded_GLIBC.html" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="Klibc.html" title="Klibc">klibc</a></li>
+<li><a href="Musl.html" title="Musl">musl</a></li>
+<li><a href="Newlib.html" title="Newlib">Newlib</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">System daemons</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Systemd" title="Systemd">systemd</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Upstart" title="Upstart">upstart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Init" title="Init">SysV init</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PulseAudio" title="PulseAudio">PulseAudio</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kmscon" title="Kmscon">Kmscon</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">System utils</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Util-linux" title="Util-linux">util-linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Core_Utilities" title="GNU Core Utilities">GNU Core Utilities</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Find_Utilities" title="GNU Find Utilities">GNU Find Utilities</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Binutils" title="GNU Binutils">GNU Binutils</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Busybox" title="Busybox" class="mw-redirect">Busybox</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a><br />
+components</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="Loadable_kernel_module.html" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LIO" title="LIO" class="mw-redirect">LIO</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux)">LVM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KMS_(Linux_kernel)" title="KMS (Linux kernel)" class="mw-redirect">KMS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zswap" title="Zswap">zswap</a></li>
+</ul>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/I/O_scheduler" title="I/O scheduler" class="mw-redirect">I/O schedulers</a>: <a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li>
+</ul>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="http://en.wikipedia.org/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Grsecurity" title="Grsecurity">grsecurity</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/PaX" title="PaX">PaX</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Smack_(Linux_security_module)" title="Smack (Linux security module)">Smack</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TOMOYO_Linux" title="TOMOYO Linux">TOMOYO Linux</a></li>
+</ul>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">Device drivers: 802.11</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">Device drivers: graphics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/New_API" title="New API">New API</a></li>
+</ul>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Initramfs" title="Initramfs">initramfs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Variants</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li>Main line
+<ul>
+<li><a href="Linux_kernel.html" title="Linux kernel">Linux kernel</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/High-performance_computing" title="High-performance computing" class="mw-redirect">High-performance computing</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Simple_Linux_Utility_for_Resource_Management" title="Simple Linux Utility for Resource Management">SLURM</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ΜClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DSLinux" title="DSLinux">DSLinux</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Virtualization" title="Virtualization">Virtualization</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xen" title="Xen">Xen</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Operating_system-level_virtualization" title="Operating system-level virtualization" class="mw-redirect">OS-level virtualization</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li>
+</ul>
+</li>
+<li>Other
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="User_interface.html" title="User interface">User interfaces</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cinnamon_(user_interface)" title="Cinnamon (user interface)" class="mw-redirect">Cinnamon</a></li>
+<li><a href="Command-line_interface.html" title="Command-line interface">CLI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNOME_Shell" title="GNOME Shell">GNOME Shell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KDE_Plasma_Workspaces" title="KDE Plasma Workspaces">KDE Plasma Workspaces</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Unity_(user_interface)" title="Unity (user interface)">Unity</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Display_server" title="Display server">Graphical UI</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="X_Window_System.html" title="X Window System">X Window System</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wayland_(display_server_protocol)" title="Wayland (display server protocol)">Wayland</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mir_(software)" title="Mir (software)">Mir</a></li>
+</ul>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/X_window_manager" title="X window manager">X Window Manager</a></li>
+<li><a href="http://en.wikipedia.org/wiki/AfterStep" title="AfterStep">AfterStep</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Blackbox" title="Blackbox">Blackbox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CTWM" title="CTWM">CTWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Enlightenment_(window_manager)" title="Enlightenment (window manager)" class="mw-redirect">Enlightenment</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FVWM" title="FVWM">FVWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hackedbox" title="Hackedbox">Hackedbox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IceWM" title="IceWM">IceWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Metisse" title="Metisse">Metisse</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Olvwm" title="Olvwm" class="mw-redirect">OLVWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PLWM" title="PLWM">PLWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PWM_(window_manager)" title="PWM (window manager)">PWM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sawfish_(window_manager)" title="Sawfish (window manager)">Sawfish</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vtwm" title="Vtwm">vtwm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wm2" title="Wm2">wm2</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wmx#wmx" title="Wmx" class="mw-redirect">wmx</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xmonad" title="Xmonad">Xmonad</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Compiz" title="Compiz">Compiz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KWin" title="KWin">KWin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xfwm" title="Xfwm" class="mw-redirect">Xfwm</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Linux_adoption" title="Linux adoption">Linux adoption</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Linux_range_of_use" title="Linux range of use">Linux range of use</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_desktop_environments" title="Linux desktop environments" class="mw-redirect">Desktop</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_for_embedded_systems" title="Linux for embedded systems" class="mw-redirect">Embedded</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Thinstation" title="Thinstation">Thinstation</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=PC_TSC&amp;action=edit&amp;redlink=1" class="new" title="PC TSC (page does not exist)">PC TSC</a></li>
+</ul>
+</li>
+<li>Server:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME/LYCE</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Mobile</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Access_Linux_Platform" title="Access Linux Platform">Access Linux Platform</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ångström_distribution" title="Ångström distribution">Ångström</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bada" title="Bada">Bada</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Firefox_OS" title="Firefox OS">Firefox OS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LiMo_Foundation" title="LiMo Foundation">LiMo Foundation</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LiMo_Platform" title="LiMo Platform">LiMo Platform</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Phone_Standards_Forum" title="Linux Phone Standards Forum">Linux Phone Standards Forum</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IPodLinux" title="IPodLinux">iPodLinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mer_(software_distribution)" title="Mer (software distribution)">mer</a>
+<ul>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Nemo_Mobile&amp;action=edit&amp;redlink=1" class="new" title="Nemo Mobile (page does not exist)">Nemo Mobile</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sailfish_OS" title="Sailfish OS">Sailfish OS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MeeGo" title="MeeGo">MeeGo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Maemo" title="Maemo">Maemo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Moblin" title="Moblin">Moblin</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Mobilinux" title="Mobilinux">Mobilinux</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Handset_Alliance" title="Open Handset Alliance">Open Handset Alliance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Openmoko_Linux" title="Openmoko Linux">Openmoko</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Replicant_(operating_system)" title="Replicant (operating system)">Replicant</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OPhone" title="OPhone">OPhone</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sailfish_OS" title="Sailfish OS">Sailfish</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SHR_(operating_system)" title="SHR (operating system)">SHR</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tizen" title="Tizen">Tizen</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ubuntu_Mobile" title="Ubuntu Mobile">Ubuntu Mobile</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ubuntu_Touch" title="Ubuntu Touch">Ubuntu Touch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WebOS" title="WebOS">webOS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Adopters</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Media</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Free_Software_Magazine" title="Free Software Magazine">Free Software Magazine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux.com" title="Linux.com">Linux.com</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Format" title="Linux Format">Linux Format</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Open_Source_For_You" title="Open Source For You">Open Source For You</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Gazette" title="Linux Gazette">Linux Gazette</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Journal" title="Linux Journal">Linux Journal</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Magazine" title="Linux Magazine">Linux Magazine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Linux_Outlaws" title="Linux Outlaws">Linux Outlaws</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LugRadio" title="LugRadio">LugRadio</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LWN.net" title="LWN.net">LWN.net</a></li>
+<li><a href="http://en.wikipedia.org/wiki/O3_Magazine" title="O3 Magazine">O3 Magazine</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Phoronix" title="Phoronix">Phoronix</a></li>
+<li><i><a href="http://en.wikipedia.org/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li>
+<li><i><a href="http://en.wikipedia.org/wiki/The_Code_(2001_film)" title="The Code (2001 film)">The Code (2001 film)</a></i></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Jono_Bacon" title="Jono Bacon">Jono Bacon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Alan_Cox" title="Alan Cox">Alan Cox</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Ulrich_Drepper&amp;action=edit&amp;redlink=1" class="new" title="Ulrich Drepper (page does not exist)">Ulrich Drepper</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jon_Hall_(programmer)" title="Jon Hall (programmer)">Jon "maddog" Hall</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Benjamin_Mako_Hill" title="Benjamin Mako Hill">Benjamin Mako Hill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Greg_Kroah-Hartman" title="Greg Kroah-Hartman">Greg Kroah-Hartman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/David_S._Miller" title="David S. Miller">David S. Miller</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Andrew_Morton_(computer_programmer)" title="Andrew Morton (computer programmer)">Andrew Morton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ian_Murdock" title="Ian Murdock">Ian Murdock</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bruce_Perens" title="Bruce Perens">Bruce Perens</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Daniel_Robbins_(computer_programmer)" title="Daniel Robbins (computer programmer)">Daniel Robbins</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mark_Shuttleworth" title="Mark Shuttleworth">Mark Shuttleworth</a></li>
+<li><a href="Richard_Stallman.html" title="Richard Stallman">Richard Stallman</a></li>
+<li><a href="Linus_Torvalds.html" title="Linus Torvalds">Linus Torvalds</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Theodore_Ts%27o" title="Theodore Ts'o">Theodore Ts'o</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Patrick_Volkerding" title="Patrick Volkerding">Patrick Volkerding</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Matt_Zimmerman_(technologist)" title="Matt Zimmerman (technologist)">Matt Zimmerman</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Project page" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/16px-Symbol_information_vote.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/24px-Symbol_information_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/32px-Symbol_information_vote.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Desktop_Linux" title="Wikipedia:WikiProject Desktop Linux">Project</a></b></li>
+<li><img alt="Category" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Category:Linux" title="Category:Linux">Category</a></b></li>
+<li><img alt="Commons page" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" /> <b><a href="http://commons.wikimedia.org/wiki/Linux" class="extiw" title="commons:Linux">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/24px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/32px-Symbol_book_class2.svg.png 2x" /> <b><a href="http://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" /> <b><a href="http://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" /> <b><a href="http://en.wikipedia.org/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1009
+CPU time usage: 1.820 seconds
+Real time usage: 1.945 seconds
+Preprocessor visited node count: 3767/1000000
+Preprocessor generated node count: 18509/1500000
+Post‐expand include size: 114946/2048000 bytes
+Template argument size: 4207/2048000 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 7/500
+Lua time usage: 0.159/10.000 seconds
+Lua memory usage: 2.65 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:428412-0!*!0!!en!4!* and timestamp 20140327010234
+ -->
+<noscript><img src="http://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;oldid=599415643">http://en.wikipedia.org/w/index.php?title=Valgrind&amp;oldid=599415643</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Free_memory_management_software" title="Category:Free memory management software">Free memory management software</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Free_software_testing_tools" title="Category:Free software testing tools">Free software testing tools</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_testing_tools" title="Category:Software testing tools">Software testing tools</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Debuggers" title="Category:Debuggers">Debuggers</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Profilers" title="Category:Profilers">Profilers</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Articles_lacking_reliable_references_from_September_2011" title="Category:Articles lacking reliable references from September 2011">Articles lacking reliable references from September 2011</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_lacking_reliable_references" title="Category:All articles lacking reliable references">All articles lacking reliable references</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2012" title="Category:Articles with unsourced statements from December 2012">Articles with unsourced statements from December 2012</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Articles_using_fixed_number_of_columns_in_reflist" title="Category:Articles using fixed number of columns in reflist">Articles using fixed number of columns in reflist</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Valgrind&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Valgrind" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Valgrind.html"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Valgrind"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Valgrind.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+			<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Valgrind" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Valgrind" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;oldid=599415643" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q924041" title="Link to connected data repository item [g]" accesskey="g">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Valgrind&amp;id=599415643" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Valgrind">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Valgrind&amp;oldid=599415643&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Valgrind&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Valgrind" title="Valgrind – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+			<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/Valgrind" title="Valgrind – Danish" lang="da" hreflang="da">Dansk</a></li>
+			<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/Valgrind" title="Valgrind – German" lang="de" hreflang="de">Deutsch</a></li>
+			<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/Valgrind" title="Valgrind – Spanish" lang="es" hreflang="es">Español</a></li>
+			<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Valgrind" title="Valgrind – French" lang="fr" hreflang="fr">Français</a></li>
+			<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/Valgrind" title="Valgrind – Korean" lang="ko" hreflang="ko">한국어</a></li>
+			<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/Valgrind" title="Valgrind – Italian" lang="it" hreflang="it">Italiano</a></li>
+			<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Valgrind" title="Valgrind – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+			<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/Valgrind" title="Valgrind – Japanese" lang="ja" hreflang="ja">日本語</a></li>
+			<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Valgrind" title="Valgrind – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Valgrind" title="Valgrind – Portuguese" lang="pt" hreflang="pt">Português</a></li>
+			<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/Valgrind" title="Valgrind – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/Valgrind" title="Valgrind – Chinese" lang="zh" hreflang="zh">中文</a></li>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q924041#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 March 2014 at 10:34.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/Valgrind" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/static-1.23wmf19/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1178 in 0.259 secs. -->
+	</body>
+
+<!-- Mirrored from en.wikipedia.org/wiki/Valgrind by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 29 Mar 2014 23:57:57 GMT -->
+</html>
