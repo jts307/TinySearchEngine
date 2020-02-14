@@ -3,7 +3,7 @@
 # Jacob Werzinsky, Winter 2020 CS50 
 
 # object files, archive files, and the target library
-OBJS = pagedir.o
+OBJS = pagedir.o word.o
 ARCS = libcs50.a
 LIB = common.a
 FLAGS = 
@@ -17,7 +17,8 @@ $(LIB): $(OBJS) $(ARVS)
 
 # Dependencies: 
 pagedir.o: pagedir.h ../libcs50/memory.h ../libcs50/webpage.h
- 
+word.o: word.h
+
 .PHONY: clean test 
 
 # clean up

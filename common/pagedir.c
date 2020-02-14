@@ -13,6 +13,7 @@
 #include <math.h>
 #include "webpage.h"
 #include "memory.h"
+#include "file.h"
 
 /**************** file-local global variables ****************/
 static int id = 1;  // id of file that will be created in the page Directory. 
@@ -58,7 +59,7 @@ bool isValidDirectory(const char *pageDir)
     return true;
   }
 }
-/**************** webpageToPageFile() ****************/
+/**************** pageSaver() ****************/
 int pageSaver(const char *pageDir, webpage_t *wp)
 {
   // exit status
@@ -162,6 +163,53 @@ int pageSaver(const char *pageDir, webpage_t *wp)
   return status;
 }
 
+/**************** webpageLoad() ****************/
+webpage_t *webpageLoad(const char *pageDir, int id)
+{
+  FILE *fp=NULL;	// file pointer for numbered file
+  webpage_t *wp=NULL;	// webpage created out of numbered file
+  char *url=NULL;	// url from numbered file
+  char *depth=NULL;	// depth from numbered file
+  char *html=NULL;	// html from numbered file
+  int idepth=-1;	// depth converted to int type
+  char *filePath=NULL;	// path file is at
+  int numDigits;	// number of digits id has
+  char *stringId=NULL;  // conversion of id to a char* type
+
+  // converting fileId to a string
+  numDigits = ceil(log10(id));
+  stringId = (char*)count_malloc((numDigits+2)*sizeof(char)); 
+  assertp(stringId, "Failure to allocate space for stringId pointer");
+  sprintf(stringId, "%d", id);
+  
+  if ((filePath = getFilePath(pageDir, stringId)) != NULL) {
+
+    if ((fp = fopen(filePath, "r")) != NULL) {
+      // parsing contents of file into strings
+      url = freadlinep(fp);
+      depth = freadlinep(fp);
+      html = freaduntil(fp, NULL);
+
+      if (depth != NULL) {
+        // converting depth to int	    
+        idepth = strtod(depth, NULL);
+        count_free(depth);
+      }  
+    
+      if (url != NULL && html != NULL && idepth != -1) {
+        // creating webpage for numbered file
+        wp = webpage_new(url, idepth, html);
+      }
+      fclose(fp); 
+    }
+    count_free(filePath);
+  }
+  count_free(stringId);
+ 
+  // wp is NULL on error
+  return wp;
+}
+
 /**************** getFilePath() ****************/
 /* Used to get create a file path inside a directory.
  * Parameters:
@@ -189,3 +237,4 @@ static char* getFilePath(const char *pageDir, const char *fileName)
   strcat(filePath, fileName);
   return filePath;  
 }
+
