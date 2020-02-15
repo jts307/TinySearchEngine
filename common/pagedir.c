@@ -171,41 +171,60 @@ webpage_t *webpageLoad(const char *pageDir, int id)
   char *url=NULL;	// url from numbered file
   char *depth=NULL;	// depth from numbered file
   char *html=NULL;	// html from numbered file
-  int idepth=-1;	// depth converted to int type
+  int idepth=0;	// depth converted to int type
   char *filePath=NULL;	// path file is at
   int numDigits;	// number of digits id has
   char *stringId=NULL;  // conversion of id to a char* type
 
-  // converting fileId to a string
-  numDigits = ceil(log10(id));
-  stringId = (char*)count_malloc((numDigits+2)*sizeof(char)); 
-  assertp(stringId, "Failure to allocate space for stringId pointer");
-  sprintf(stringId, "%d", id);
-  
-  if ((filePath = getFilePath(pageDir, stringId)) != NULL) {
-
-    if ((fp = fopen(filePath, "r")) != NULL) {
-      // parsing contents of file into strings
-      url = freadlinep(fp);
-      depth = freadlinep(fp);
-      html = freaduntil(fp, NULL);
-
-      if (depth != NULL) {
-        // converting depth to int	    
-        idepth = strtod(depth, NULL);
-        count_free(depth);
-      }  
+  if (id > 0 && pageDir != NULL) { 
+    // converting fileId to a string
+    numDigits = ceil(log10(id));
+    stringId = (char*)count_malloc((numDigits+2)*sizeof(char)); 
+    assertp(stringId, "Failure to allocate space for stringId pointer\n");
+    sprintf(stringId, "%d", id);
     
-      if (url != NULL && html != NULL && idepth != -1) {
-        // creating webpage for numbered file
-        wp = webpage_new(url, idepth, html);
+    if ((filePath = getFilePath(pageDir, stringId)) != NULL) {
+  
+      if ((fp = fopen(filePath, "r")) != NULL) {
+        // parsing contents of file into strings
+        url = freadlinep(fp);
+        depth = freadlinep(fp);
+        html = freaduntil(fp, NULL);
+  
+        if (depth != NULL) {
+          // converting depth to int	    
+          idepth = strtod(depth, NULL);
+          count_free(depth);
+        }  
+      
+        if (url != NULL && html != NULL && idepth != 0) {
+          // creating webpage for numbered file
+          wp = webpage_new(url, idepth, html);
+	  if (wp == NULL) {
+	    fprintf(stderr, "There was an error allocating memory for webpage struct\n");
+	  }
+        } else {
+	  fprintf(stderr, "Error reading from file using webpageLoad\n");
+	}
+	// freeing memory if any failures
+        if (wp == NULL && url != NULL) {
+	  count_free(url);
+	}
+	if (wp == NULL && html != NULL) {
+	  count_free(html);
+	}
+        fclose(fp); 
+      } else {
+        fprintf(stderr, "Error: File does not exist or an error occurred opening file\n");
       }
-      fclose(fp); 
+      count_free(filePath);
+    } else {
+      fprintf(stderr, "Error: Could not create file path using getFilePath\n");
     }
-    count_free(filePath);
+    count_free(stringId);
+  } else {
+    fprintf(stderr, "webpageLoad gets NULL argument\n");
   }
-  count_free(stringId);
- 
   // wp is NULL on error
   return wp;
 }

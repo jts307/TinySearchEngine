@@ -53,4 +53,15 @@ int isValidDirectory(const char *pageDir);
  */
 int pageSaver(const char *pageDir, webpage_t *wp);
 
+/* Takes the nonnegative id of a file within the page directory and returns 
+ * a webpage type that contains information obtained from the file, i.e. 
+ * a url, html and depth.
+ * parameters:
+ * 	pageDir - pointer to a string of the path of a directory
+ * 	id - the number name of a file within the pageDir
+ * returns:
+ * 	pointer to the webpage type on success and NULL on any error.
+ * */
+webpage_t *webpageLoad(const char *pageDir, int id);
+
 #endif // __PAGEDIR_H
