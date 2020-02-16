@@ -1,249 +1,215 @@
 /* 
- * index.c - 'index' module
- *
- * see index.h for more information
- *
- *
- * Jacob Werzinsky, CS50, February 2020
+ * crawler.c - Crawls webpages starting from a seed URL. It explores the seed URL which is 
+ * marked with a depth of 0 and stores its depth, url and html in a file with a unique id. 
+ * Then all urls on the webpage of the seed URL are explored as well marked with a depth of 
+ * 1 while also storing their information as well into files. This continues, adding 1 to depth
+ * each time, until all urls are exhausted or maxDepth is reached.
+ * usage: crawler [seedURL] [pageDirectory] [maxDepth]
+ * input: 
+ *   seedURL - url the crawling process begins at. Must contain html and be internal to 
+ *   'http://old-www.cs.dartmouth.edu/'.
+ *   pageDirectory - the directory where webpage information in the form of files are stored.
+ *   maxDepth - maximum depth before crawl process is ended.
+ * output:
+ *   A series files, each that contain the url of a webpage on the first line, depth on the second,
+ *   and a webpage's html from the third line onward. Each file has a unique number id.
+ * Exit statuses:
+ *   0 - success
+ *   1 - Usage error
+ *   2 - non-numerical max Depth
+ *   3 - not a valid and/or internal URL
+ *   4 - not a valid or writable pageDirectory
+ *   5 - negative maxDepth
+ *   6 - error creating bag type of webpages
+ *   7 - error creating hashtable type of urls
+ *   8 - error creating a webpage type for seed URL
+ *   9 - error inserting seed URL into hashtable
+ *  10 - error fetching html for a url
+ *  11 - error writing webpage to a file
+ *  12 - error creating webpage type for a URL other than seed URL
+ *          
+ * Created by Jacob Werzinsky, CS50, 21 January 2020
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "word.h"
-#include "hashtable.h"
-#include "counters.h"
-#include "file.h"
+#include <stdbool.h>
+#include <ctype.h>
+#include <string.h>
 #include "memory.h"
+#include "webpage.h"
+#include "bag.h"
+#include "hashtable.h"
+#include "pagedir.h"
 
-/**************** file-local global variables ****************/
-/* none */
+int indexer(const char *pageDirectory, const char *indexFilename);
 
-/**************** local types ****************/
-/* none */
+int main(const int argc, const char *argv[]){
 
-/**************** global types ****************/
-typedef struct index {
-  hashtable_t *ht;
-} index_t;
+  int status=0;		// exit status    	
+  int reqNumArgs=3; 	// required number of arguments
 
-/**************** global functions ****************/
-/* that is, visible outside this file */
-/* see set.h for comments about exported functions */
-
-/**************** local functions ****************/
-void index_line_print(void *fp, const char *word, void *ctrs);
-void counts_print(void *fp, const int docId, const int count);
-void pair_print(FILE *fp, const char *word, void *ctrs);
-
-/**************** index_new() ****************/
-hashtable_t *index_new(const int num_slots)
-{
-  index_t *index = count_malloc(sizeof(index_t));
-  
-  // checking if memory was allocated properly
-  assertp(index,"Error allocating memory for index\n");
-  
-  // allocating memory for and initializing index's hashtable
-  index->ht = hashtable_new(num_slots);
-  assertp(index->ht, "Error allocating memory for index's hashtable\n");
-  return index; 
-}
-
-/**************** index_insert() ****************/
-int index_insert(index_t *index, const char *word, const int *docId, const int wordCount)
-{
-  counters_t *wordCounters=NULL;	// the docId counts of a particular word
-  int status=0;				// exit status
-
-  // checking arguments
-  if (index != NULL && word != NULL && docId > 0) { 
-    // making sure word has 3 or more characters
-    if (strlen(word) < 3) {
-      fprintf(stderr, "'%s' is less than three characters\n", word);
+  // checking numbers of arguments passed
+  if (argc != reqNumArgs) {
+      // if wrong number of arguments then return an error 
+      fprintf(stderr, "Usage: indexer [pageDirectory] [indexFilename]\n");
       status++;
-      return status;
-    }
-
-    // changing word to all lowercase
-    if (normalizeWord(word) == 1) {
-      // if error log and return
-      fprintf(stderr, "Trouble normalizing '%s'\n");
-      status+=2;
-      return status;
-    }
-
-    // attempting to find word in index
-    if ((wordCounters = hashtable_find(index->ht, word)) == NULL) {
-      // if it is not in index then create a counters for it
-      wordCounters = counters_new();
-    
-      // add docId to the counters
-      counters_set(wordCounters, docId, wordCount);
-    
-      // attempt to add (word, counters) pair to index
-      if (!hashtable_insert(index->ht, word, wordCounts)) {
-        // if it was not added then an error must have occurred
-        fprintf(stderr, "There was an issue inserting (word=%s,docId=%d) to the index.\n",
-			word, docId);
-        status+=3;
-	return status;
-      }
-      return status;
-    // if it is in index then add docId to existing counters object for word
-    } else {
-      counters_set(wordCounters, docId, wordCount);
-      return status;
-    }
-  }
-  fprintf(stderr, "index_insert gets NULL argument.\n");
-  return count;
-#ifdef MEMTEST
-  count_report(stdout, "After index_insert");
-#endif
-}
-
-/**************** index_find() ****************/
-int *index_find(index_t *index, const char *word, const int docId)
-{
-  if (index != NULL && key != NULL && index->ht != NULL) {
-    // searching index for word count
-    return counters_get(hashtable_find(index->ht, word), docId);
-  }
-  fprintf(stderr, "index_find gets NULL index or NULL key\n");
-  return NULL;
-}
-
-/**************** index_print() ****************/
-void *index_print(index_t *index, FILE *fp)
-{
-  if (index != NULL && fp != NULL && index->ht != NULL) {
-    hashtable_print(index->ht, fp, pair_print);
-  }
-}
-
-/**************** index_delete() ****************/
-void index_delete(index_t *index)
-{
-  if (index != NULL) {
-    hashtable_delete(index->ht, counters_delete);
-  }
-#ifdef MEMTEST
-  count_report(stdout, "End of index_delete");
-#endif
-}
-
-/**************** index_save() ****************/
-void *index_save(index_t *index, FILE *fp)
-{
-  // going through index and printing each word and counters pair
-  if (index != NULL && fp != NULL) { 
-    hashtable_iterate(index->ht, fp, index_line_print);
   } else {
-    fprintf(stderr, "index_save gets NULL index or NULL fp\n");
+      // checking if seedURL is internal and valid (i.e. can be parsed and contains html) 
+      } else if (!IsInternalURL((char*)argv[1])) {
+          // if not then return error
+          fprintf(stderr, "seedURL is not internal and/or valid.\n");
+          status+=3;
+
+      // checking if pageDirectory is a valid and writable directory 
+      } else if (!isValidDirectory(argv[2])) {
+          // if not then return error
+          fprintf(stderr, "pageDirectory is not a valid and writable directory.\n");
+          status+=4;
+      // checking if max Depth is nonnegative	  
+      } else if (maxDepth < 0) {
+	  // if not then return error
+	  fprintf(stderr, "maxDepth must be nonnegative.\n");
+	  status+=5;
+      } else {
+          // start a crawl from seedURL
+          status = crawler(argv[1], argv[2], maxDepth);
+      }
   }
+  return status;
 }
 
-/**************** index_load() ****************/
-int *index_load(index_t *index, FILE *fp)
-{
-  const char word=NULL;		// a word to be added to the index
-  const int docId=0;		// docId to be added to the index
-  const int wordCount=0;	// the count of times word appears in docId
-  int status=0;			// exit status
+/* Crawls webpages that are internal and valid. Internal meaning they start with 
+ * 'http://old-www.cs.dartmouth.edu/' and valid meaning they are accessible and 
+ * have html code. 
+ *
+ * Parameters:
+ *   seedURL: url crawler starts out at and branches out from.
+ *   pageDirectory: directory were information about the webpages will be stored.
+ *   maxDepth: maximum depth before crawl process is ended. 
+ * returns:
+ *   status - zero indicates success, non-zero is failure.
+ */
+int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth) {
+  
+  int status=0; 	           // exit status
+  bag_t *toBeVisited=NULL; 	   // webpages that have not been crawled
+  hashtable_t *visitedURLs=NULL;   // urls that have already been crawled
+  webpage_t *seedWp=NULL;	   // webpage for seed URL
+  webpage_t *currWp=NULL;	   // current webpage being crawled
+  webpage_t *newWp=NULL;           // one of the next webpages to be crawled
+  char *nextURL=NULL;		   // potential next URL to crawl
+  char *cpySeedURL=NULL;           // copy of seed URL passed to webpage type
+  int pos=0;			   // marker used in webpage_getNextURL()
 
-  if (fp != NULL && index != NULL && index->ht != NULL) {
-    // reading first word of each line
-    while ((word = freadwordp(fp)) != NULL) {
+  // allocating space for string copy
+  cpySeedURL = count_malloc(strlen(seedURL)*sizeof(char)+1);
+  assertp(cpySeedURL, "Error allocating memory for cpySeedURL.");
+
+  // create copy of seed URL
+  strcpy(cpySeedURL, seedURL);
+   
+  // initialize bag of webpages
+  if ((toBeVisited = bag_new()) ==  NULL) {
+      // if error then increment status, log error
+      fprintf(stderr, "Error creating bag of webpages.\n");	  
+      status+=6;
+  // initialize hashtable of urls
+  } else if ((visitedURLs = hashtable_new(200)) == NULL) {
+      // if error then increment status, log error
+      fprintf(stderr, "Error creating hashtable of URLs\n");
+      status+=7;
+  // making a webpage for seedURL marked with depth of 0 and NULL html.
+  } else if ((seedWp = webpage_new((char*)cpySeedURL, 0, NULL)) == NULL) {
+      // if error then increment status, log error
+      fprintf(stderr, "Error creating a webpage type for the seed URL.\n");
+      status+=8;
+  // inserting seedURL into visited URLS
+  } else if (!(hashtable_insert(visitedURLs,seedURL, ""))) {
+      // if error then increment status, log error
+      fprintf(stderr, "Error inserting seedURL into visitedURLs hashtable.\n");
+      status +=9;
+  } else {
+      // add seedURL to bag and hashtable to start
+      bag_insert(toBeVisited,seedWp);
     
-      // reading each subsequent docId and word count
-      while (fscanf(fp, "%d %d ", &docId, &wordCount) == 2) {
-        
-	// on error log it and continue
-        if (index_insert(index->ht, word, docId, wordCount) != 0) {
-          fprintf(stderr, "Problem inserting word: %s and docId: %d into the index", word, docId);
-          status+=1;	
+      // continuing to loop if there are pages to crawl
+      while ((currWp = bag_extract(toBeVisited)) != NULL) {
+	    
+	// progress indicators for testing purposes
+	// printf("\n");
+        // hashtable_print(visitedURLs, stdout, urlprint);
+	// printf("\n");
+	// bag_print(toBeVisited, stdout, webprint);
+
+	// fetch HTML for current webpage
+        if(!webpage_fetch(currWp)) {
+          // if error, increment status and log it
+	  fprintf(stderr, "There was an error fetching webpage html for %s\n", webpage_getURL(currWp));
+	  status=10;    
+        }
+    
+	// writing an output file for current webpage
+        if (pageSaver(pageDirectory,currWp) != 0) {
+          // increment status (error already logged within pageSaver)
+	  status=11;
 	}
-      }    
-    }
-  // log error and increment status
-  } else {
-      fprintf(stderr, "index_load gets NULL arguments");
-      status++;
-  }
-}
-
-/**************** pairPrint() ****************/
-/* Prints a word and counters struct pair to a file stream
- * in a human friendly syntax. 
- * can/should be passed to hashtable_print
- * Parameters:
- *   word - string word to be printed
- *   ctrs - counters struct to be printed
- *   fp - file stream that will have pair printed to 
- * Returns:
- *   nothing
- * if fp is NULL nothing is printed, if word is NULL it is not printed
- * if ctrs is NULL it is not printed
- */
-void pair_print(FILE *fp, const char *word, void *ctrs)
-{
-  if (fp != NULL) {	
-    fputs("(word=",fp);
-    if (word != NULL) {
-      fprintf(fp, "%s", word);
-    } 
-    fputs(",counters=");
-    counters_print(ctrs, fp);
-    fputs(")",fp);
-  }
-}
-
-/**************** counts_print() ****************/
-/* Prints a docId and word occurance count from counters struct to a file stream, 
- * can/should be passed to counters_iterate
- * Parameters:
- *   fp - pointer to file stream to be written to
- *   docId - key from counters struct
- *   count - count for the key from counters struct
- * Returns:
- *   nothing
- * if fp is null nothing is printed
- */
-void counts_print(void *fp, const int docId, const int count)
-{
-  if (fp != NULL) {
-    if (fprintf(fp, " %d %d ", docId, count) < 0) {
-      fprintf(stderr, "There was an issue printing docId: %d\n", docId);
-    }
-  }
-}
-
-/**************** index_line_print() ****************/
-/* Prints a word and each docId counter associated with that word in 
- * a single line of a file stream, can/should be passed to hashtable_iterate
- * Parameters:
- *   word - string word to be printed
- *   ctrs - docId counters to be printed
- *   fp - file stream that will have line printed to 
- * Returns:
- *   nothing
- * if fp is null nothing is printed, if word is NULL it is not printed,
- * if ctrs is null it is not printed
- */
-void index_line_print(void *fp, const char *word, void *ctrs)
-{
-  if (fp != NULL) {	
-    // printing word to file
-    if (word != NULL) {
-      if (fprintf(fp, "%s", word) < 0) {
-        fprintf(stderr, "There was an issue printing word: %s\n", word);
+	// explore links on webpage if it is within the maxDepth
+	if (webpage_getDepth(currWp) < maxDepth) {
+              
+	// looping through links on webpage
+       	pos=0;
+        while ((nextURL = webpage_getNextURL(currWp, &pos)) != NULL) {
+	// normalize URL and check if it is internal
+	if (IsInternalURL(nextURL)) {
+	         
+	  // check if URL has been visited
+	  if (hashtable_insert(visitedURLs,nextURL, "")) {
+	        
+            // copy of nextURL for use in webpage type
+            char *cpyNextURL = count_malloc(strlen(nextURL)*sizeof(char)+1);
+            assertp(cpyNextURL, "Error allocating memory for cpyNextURL");
+            strcpy(cpyNextURL, nextURL);
+	    // create webpage for URL
+	    if ((newWp=webpage_new(cpyNextURL, webpage_getDepth(currWp) + 1,NULL)) == NULL) {
+	       // if error increment status, log it, free memory and continue
+               fprintf(stderr, "Error creating webpage type for %s\n", nextURL);
+	       status=12;
+	       count_free(cpyNextURL);
+	    // queue webpage for crawling 
+            } else {
+	        bag_insert(toBeVisited,newWp);
+	    }			
+	  }  
+	}
+        free(nextURL);
       }
     }
-    // iterating through counters to print each docId counter
-    counters_iterate(ctrs, fp, counts_print);
-    if (fprintf(fp, "\n") < 0) {
-      fprintf(stderr, "There was an issue printing to passed file.\n");
-    }
-  }
+    // progress indicators for testing purposes
+    // printf("\n");
+    // hashtable_print(visitedURLs, stdout, urlprint);
+    // printf("\n");
+    // bag_print(toBeVisited, stdout, webprint);
+    webpage_delete(currWp);	
+  } 
+ }
+ // freeing up memory
+ bag_delete(toBeVisited, webpage_delete);
+ hashtable_delete(visitedURLs, NULL); 
+
+  return status;
 }
 
+/*
+ * Used for testing, prints out the information in a webpage type
+ */
+void webprint(FILE *fp, void *wp) {
+  fprintf(fp, "url: %s", webpage_getURL(wp));
+  fprintf(fp, " depth: %d", webpage_getDepth(wp));
+}
+/*
+ * Used for testing, prints out a url in a hashtable
+ */
+void urlprint(FILE *fp, const char *url, void *placeholder) {
+  fprintf(fp, "url: %s", url);
+}	

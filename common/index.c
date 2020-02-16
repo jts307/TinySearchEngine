@@ -90,7 +90,7 @@ bool index_insert(index_t *index, char *word, const int docId, const int wordCou
     // if it is in index then add docId to existing counters object for word
     } else {
       if (!counters_set(wordCounters, docId, wordCount)) {
-        fprintf(stderr, "There was an error incrementing the counters struct for %s", word);
+        fprintf(stderr, "There was an error incrementing the counters struct for %s\n", word);
 	return false;
       }
     }
@@ -161,7 +161,7 @@ int index_load(index_t *index, FILE *fp)
         
 	// on error log it and continue
         if (index_insert(index, word, docId, wordCount) != 0) {
-          fprintf(stderr, "Problem inserting word: %s and docId: %d into the index", word, docId);
+          fprintf(stderr, "Problem inserting word: %s and docId: %d into the index\n", word, docId);
           status=2;	
 	}
       }
@@ -169,7 +169,7 @@ int index_load(index_t *index, FILE *fp)
     }
   // log error and increment status
   } else {
-      fprintf(stderr, "index_load gets NULL arguments");
+      fprintf(stderr, "index_load gets NULL arguments\n");
       status++;
   }
   return status;

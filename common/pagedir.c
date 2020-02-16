@@ -59,6 +59,33 @@ bool isValidDirectory(const char *pageDir)
     return true;
   }
 }
+
+/**************** isCrawlerDirectory() ****************/
+bool isCrawlerDirectory(const char *pageDir)
+{
+  // checking if pageDir is NULL, exiting if it is
+  assertp((char*)pageDir, "isCrawlerDirectory gets NULL pageDir");
+
+  // dummy file name that should be in directory	
+  const char *fileName = ".crawler"; 
+  
+  // creating path for dummy file  
+  const char *filePath = getFilePath(pageDir, fileName);
+  assertp((char*)filePath, "Error creating filePath string for isCrawlerDirectory.");
+
+  // if dummy file is not in the directory then it is invalid
+  FILE *fp=NULL;
+  if ((fp = fopen(filePath, "r")) == NULL) {
+    count_free((char*)filePath);
+    return false;
+  // else the directory is valid
+  } else {
+    fclose(fp);
+    count_free((char*)filePath);
+    return true;
+  }
+}
+
 /**************** pageSaver() ****************/
 int pageSaver(const char *pageDir, webpage_t *wp)
 {

@@ -25,11 +25,22 @@
  * parameters:
  *   pageDir - pointer to the path of directory to be tested
  * returns:
- *   int with value of 0 if directory exists and is writable, 1 otherwise.
+ *   true if directory exists and is writable, false otherwise.
  * When pageDir is NULL or failed memory allocation, 
  * then an error is written to stderr and it exits with positive status.
  */
-int isValidDirectory(const char *pageDir);
+bool isValidDirectory(const char *pageDir);
+
+/* Checks if a directory exists, is readable and is crawler produced by 
+ * attempting to read '.crawler' dummy file from directory. 
+ * parameters:
+ *   pageDir - pointer to the path of directory to be tested
+ * returns:
+ *   true if directory is valid, false otherwise.
+ * When pageDir is NULL or failed memory allocation, 
+ * then an error is written to stderr and it exits with positive status.
+ */
+bool isCrawlerDirectory(const char *pageDir);
 
 /* Takes a webpage type and writes its information into a page file with the
  * following format:
