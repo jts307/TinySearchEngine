@@ -1,4 +1,4 @@
-# CS50 Lab 4
+# CS50 Lab 4, Lab 5
 ## Jacob Werzinsky, CS50 Winter 2020
 
 # CS50 Tiny Search Engine (TSE) common library
@@ -199,6 +199,9 @@ int index_load(index_t *index, FILE *fp);
 ## Compilation
 
 To compile common archive, do: `make common.a`.
+
 To compile pagedir module, do: `make pagedir.o`.
+
 To compile word module, do: `make word.o`.
+
 To compile index module, do: `make index.o`
