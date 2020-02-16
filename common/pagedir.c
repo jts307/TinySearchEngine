@@ -198,7 +198,7 @@ webpage_t *webpageLoad(const char *pageDir, int id)
   char *url=NULL;	// url from numbered file
   char *depth=NULL;	// depth from numbered file
   char *html=NULL;	// html from numbered file
-  int idepth=0;	// depth converted to int type
+  int idepth=-1;	// depth converted to int type
   char *filePath=NULL;	// path file is at
   int numDigits;	// number of digits id has
   char *stringId=NULL;  // conversion of id to a char* type
@@ -223,8 +223,8 @@ webpage_t *webpageLoad(const char *pageDir, int id)
           idepth = strtod(depth, NULL);
           count_free(depth);
         }  
-      
-        if (url != NULL && html != NULL && idepth != 0) {
+
+        if (url != NULL && html != NULL && idepth != -1) {
           // creating webpage for numbered file
           wp = webpage_new(url, idepth, html);
 	  if (wp == NULL) {
@@ -241,8 +241,6 @@ webpage_t *webpageLoad(const char *pageDir, int id)
 	  count_free(html);
 	}
         fclose(fp); 
-      } else {
-        fprintf(stderr, "Error: File does not exist or an error occurred opening file\n");
       }
       count_free(filePath);
     } else {

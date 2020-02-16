@@ -89,7 +89,7 @@ bool index_insert(index_t *index, char *word, const int docId, const int wordCou
     // if it is in index then add docId to existing counters object for word
     } else {
       if (!counters_set(wordCounters, docId, wordCount)) {
-        fprintf(stderr, "There was an error incrementing the counters struct for %s\n", word);
+        fprintf(stderr, "There was an error incrementing the counters struct for (%s,doc=%d,count=%d)\n", word,docId, wordCount);
 	return false;
       }
     }
@@ -126,6 +126,7 @@ void index_delete(index_t *index)
 {
   if (index != NULL) {
     hashtable_delete(index->ht, counters_delete_2);
+    count_free(index);
   }
 #ifdef MEMTEST
   count_report(stdout, "End of index_delete");
@@ -158,10 +159,15 @@ int index_load(index_t *index, FILE *fp)
       // reading each subsequent docId and word count
       while (fscanf(fp, "%d %d ", &docId, &wordCount) == 2) {
         
+	// used for testing
+	printf("Attempting to insert (%s, %d, %d)",word,docId,wordCount);
+
 	// on error log it and continue
         if (index_insert(index, word, docId, wordCount) != 0) {
           fprintf(stderr, "Problem inserting word: %s and docId: %d into the index\n", word, docId);
           status=2;	
+	} else {
+	  printf("Success");
 	}
       }
       count_free(word);    
@@ -213,6 +219,9 @@ void pair_print(FILE *fp, const char *word, void *ctrs)
  */
 void counts_print(void *fp, const int docId, const int count)
 {
+  // used for testing
+  printf(",(docId=%d,count=%d)", docId, count);
+
   if (fp != NULL) {
     if (fprintf(fp, " %d %d ", docId, count) < 0) {
       fprintf(stderr, "There was an issue printing docId: %d\n", docId);
@@ -234,6 +243,9 @@ void counts_print(void *fp, const int docId, const int count)
  */
 void index_line_print(void *fp, const char *word, void *ctrs)
 {
+  // used for testing
+  printf("Saving %s", word);  
+
   if (fp != NULL) {	
     // printing word to file
     if (word != NULL) {
@@ -247,6 +259,9 @@ void index_line_print(void *fp, const char *word, void *ctrs)
       fprintf(stderr, "There was an issue printing to passed file.\n");
     }
   }
+
+  //used for testing
+  printf("\n");
 }
 
 /**************** counters_delete_2() ****************/

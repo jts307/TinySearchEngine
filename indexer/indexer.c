@@ -95,23 +95,24 @@ int index_build(index_t *index, const char *pageDirectory) {
 
   // looping and creating a webpage struct for each file in pageDirectory
   while ((wp = webpageLoad(pageDirectory, docId)) != NULL) {
-  
+    
+    pos=0;
     // looping through the words in the html for each webpage struct
     while ((word = webpage_getNextWord(wp, &pos)) != NULL) {
       
       // used for testing purposes	    
-      printf("Currently inserting (%s, %d) into index.", word, docId);
+      printf("Attempting to insert (%s, %d) into index.\n", word, docId);
 
       // Incrementing word and document id pair's count by 1 in index 
       if (!index_insert(index, word, docId, index_find(index, word, docId) + 1)) {
 	// on error log it and continue
-        fprintf(stderr, "Trouble inserting (%s, %d) into index", word, docId);
+        fprintf(stderr, "Trouble inserting (%s, %d) into index\n", word, docId);
         status=5;
       }
       count_free(word);
     }
     // used for testing purposes
-    printf("Index after scanning %s/%d", pageDirectory, docId);
+    printf("Index after scanning %s/%d\n", pageDirectory, docId);
     index_print(index, stdout);
 
     // go to next file
@@ -119,4 +120,4 @@ int index_build(index_t *index, const char *pageDirectory) {
     webpage_delete(wp);
   }
   return status;
-} 
+}
