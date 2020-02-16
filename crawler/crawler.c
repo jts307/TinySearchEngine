@@ -51,7 +51,7 @@ int main(const int argc, const char *argv[]){
 
   int status=0;		// exit status    	
   int reqNumArgs=4; 	// required number of arguments
-
+  
   // checking numbers of arguments passed
   if (argc != reqNumArgs) {
       // if wrong number of arguments then return an error 

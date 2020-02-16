@@ -18,9 +18,7 @@
 #include "hashtable.h"
 
 /**************** global types ****************/
-typedef struct index {
-  hashtable_t *ht;
-} index_t;
+typedef struct index index_t;
 
 /**************** functions ****************/
 

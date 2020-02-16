@@ -36,7 +36,7 @@ static char* getFilePath(const char *pageDir, const char *fileName);
 
 /**************** isValidDirectory() ****************/
 bool isValidDirectory(const char *pageDir)
-{
+{	
   // checking if pageDir is NULL, exiting if it is
   assertp((char*)pageDir, "isValidDirectory gets NULL pageDir");
 
@@ -256,7 +256,6 @@ webpage_t *webpageLoad(const char *pageDir, int id)
   return wp;
 }
 
-/**************** getFilePath() ****************/
 /* Used to get create a file path inside a directory.
  * Parameters:
  *   pageDir - directory path 
@@ -264,6 +263,7 @@ webpage_t *webpageLoad(const char *pageDir, int id)
  * Returns:
  *   A path to the passed file inside the passed directory
  */
+/**************** getFilePath() ****************/
 static char* getFilePath(const char *pageDir, const char *fileName)
 {       	
   // return NULL if directory name is NULL.
@@ -283,4 +283,3 @@ static char* getFilePath(const char *pageDir, const char *fileName)
   strcat(filePath, fileName);
   return filePath;  
 }
-

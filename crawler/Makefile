@@ -13,7 +13,7 @@ $(PROG): $(OBJS)
 	$(CC) $(CFLAGS) $^ $(LIBS) -o $@
 
 # Dependencies: 
-crawler.o: ../libcs50/bag.h ../libcs50/hashtable.h ../libcs50/webpage.h ../libcs50/memory.h ../common/pagedir.h
+crawler.o: ../libcs50/bag.h ../libcs50/hashtable.h ../libcs50/webpage.h ../libcs50/memory.h ../common/pagedir.h ../common/index.h
 
 .PHONY: test clean
 

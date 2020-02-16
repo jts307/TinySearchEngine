@@ -1,53 +1,45 @@
 /* 
- * crawler.c - Crawls webpages starting from a seed URL. It explores the seed URL which is 
- * marked with a depth of 0 and stores its depth, url and html in a file with a unique id. 
- * Then all urls on the webpage of the seed URL are explored as well marked with a depth of 
- * 1 while also storing their information as well into files. This continues, adding 1 to depth
- * each time, until all urls are exhausted or maxDepth is reached.
- * usage: crawler [seedURL] [pageDirectory] [maxDepth]
- * input: 
- *   seedURL - url the crawling process begins at. Must contain html and be internal to 
- *   'http://old-www.cs.dartmouth.edu/'.
- *   pageDirectory - the directory where webpage information in the form of files are stored.
- *   maxDepth - maximum depth before crawl process is ended.
+ * indexer.c - reads the document files previously produced by the TSE crawler, builds
+ * an index struct out of what is read, and writes this index to a file. The index maps 
+ * each word in the files to (documentId, count) pairs, where a documentId is the name of
+ * a file and the count is how many times a word appears in that file.
+ * usage: indexer [pageDirectory] [indexFilename]
+ * input:
+ *    - pageDirectory: a directory previously crawled by crawler that contains
+ *      the files to be read.
+ *    - indexFilename: the file to write the index to
  * output:
- *   A series files, each that contain the url of a webpage on the first line, depth on the second,
- *   and a webpage's html from the third line onward. Each file has a unique number id.
+ *   Produces a file with the words, documentIds, and counts in the following format:
+ *     - one word per line, one line per word
+ *     - where each line has the format:
+ *     	   word documentId1 count1 documentId2 count2... 
  * Exit statuses:
  *   0 - success
  *   1 - Usage error
- *   2 - non-numerical max Depth
- *   3 - not a valid and/or internal URL
- *   4 - not a valid or writable pageDirectory
- *   5 - negative maxDepth
- *   6 - error creating bag type of webpages
- *   7 - error creating hashtable type of urls
- *   8 - error creating a webpage type for seed URL
- *   9 - error inserting seed URL into hashtable
- *  10 - error fetching html for a url
- *  11 - error writing webpage to a file
- *  12 - error creating webpage type for a URL other than seed URL
- *          
+ *   2 - not a valid pageDirectory
+ *   3 - indexFilename is not writable
+ *   4 - Failure to initialize index struct
+ *   5 - Error inserting into index      
  * Created by Jacob Werzinsky, CS50, 21 January 2020
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <ctype.h>
-#include <string.h>
 #include "memory.h"
 #include "webpage.h"
-#include "bag.h"
-#include "hashtable.h"
 #include "pagedir.h"
+#include "index.h"
 
-int indexer(const char *pageDirectory, const char *indexFilename);
+int index_build(index_t *index, const char *pageDirectory);
 
 int main(const int argc, const char *argv[]){
 
   int status=0;		// exit status    	
   int reqNumArgs=3; 	// required number of arguments
+  FILE *indexFile=NULL;	// index list will be written here
+  index_t *index=NULL;	// medium to store gathered info from crawler files
+  			// until it is written to a file
 
   // checking numbers of arguments passed
   if (argc != reqNumArgs) {
@@ -55,161 +47,76 @@ int main(const int argc, const char *argv[]){
       fprintf(stderr, "Usage: indexer [pageDirectory] [indexFilename]\n");
       status++;
   } else {
-      // checking if seedURL is internal and valid (i.e. can be parsed and contains html) 
-      } else if (!IsInternalURL((char*)argv[1])) {
+      // checking if pageDirectory is a valid and readable directory 
+      if (!isCrawlerDirectory(argv[1])) {
           // if not then return error
-          fprintf(stderr, "seedURL is not internal and/or valid.\n");
-          status+=3;
-
-      // checking if pageDirectory is a valid and writable directory 
-      } else if (!isValidDirectory(argv[2])) {
-          // if not then return error
-          fprintf(stderr, "pageDirectory is not a valid and writable directory.\n");
-          status+=4;
-      // checking if max Depth is nonnegative	  
-      } else if (maxDepth < 0) {
+          fprintf(stderr, "pageDirectory is not a valid readable Crawler directory.\n");
+          status+=2;
+      // checking if indexFilename is writable if it exists	  
+      } else if ((indexFile=fopen(argv[2], "w")) == NULL) {
 	  // if not then return error
-	  fprintf(stderr, "maxDepth must be nonnegative.\n");
-	  status+=5;
+	  fprintf(stderr, "indexFilename must be writable.\n");
+	  status+=3;
+      // initialize index structure
+      } else if ((index = index_new(900)) == NULL) {
+          // on error return
+	  fprintf(stderr, "Could not initialize index struct\n");
+	  status+=4;
       } else {
-          // start a crawl from seedURL
-          status = crawler(argv[1], argv[2], maxDepth);
+	  // create index from contents of pageDirectory
+          status = index_build(index, argv[1]);
+
+	  // save the created index to a file
+	  index_save(index, indexFile);
+
+	  // clean up, free memory
+	  fclose(indexFile);
+	  index_delete(index);
       }
   }
   return status;
 }
 
-/* Crawls webpages that are internal and valid. Internal meaning they start with 
- * 'http://old-www.cs.dartmouth.edu/' and valid meaning they are accessible and 
- * have html code. 
- *
+/* It seaches through the files within the pageDirectory and keeps a count of how
+ * many times every word within those files appears in each file. These counts
+ * are stored within the index structure.
  * Parameters:
- *   seedURL: url crawler starts out at and branches out from.
- *   pageDirectory: directory were information about the webpages will be stored.
- *   maxDepth: maximum depth before crawl process is ended. 
+ *   index: an ideally empty index to store the info obtained from the pageDirectory
+ *   pageDirectory: directory previously crawled by crawler
  * returns:
- *   status - zero indicates success, non-zero is failure.
+ *   status - zero indicates success, non-zero is any failure.
  */
-int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth) {
+int index_build(index_t *index, const char *pageDirectory) {
+  webpage_t *wp=NULL;	// a webpage created out of a file's contents
+  char *word=NULL;      // current word being read from a pageDirectory file
+  int docId=1;		// current document name being read
+  int pos=0;		// tracks place in html for webpage_getNextWord
+  int status=0;		// exit status
+
+  // looping and creating a webpage struct for each file in pageDirectory
+  while ((wp = webpageLoad(pageDirectory, docId)) != NULL) {
   
-  int status=0; 	           // exit status
-  bag_t *toBeVisited=NULL; 	   // webpages that have not been crawled
-  hashtable_t *visitedURLs=NULL;   // urls that have already been crawled
-  webpage_t *seedWp=NULL;	   // webpage for seed URL
-  webpage_t *currWp=NULL;	   // current webpage being crawled
-  webpage_t *newWp=NULL;           // one of the next webpages to be crawled
-  char *nextURL=NULL;		   // potential next URL to crawl
-  char *cpySeedURL=NULL;           // copy of seed URL passed to webpage type
-  int pos=0;			   // marker used in webpage_getNextURL()
+    // looping through the words in the html for each webpage struct
+    while ((word = webpage_getNextWord(wp, &pos)) != NULL) {
+      
+      // used for testing purposes	    
+      printf("Currently inserting (%s, %d) into index.", word, docId);
 
-  // allocating space for string copy
-  cpySeedURL = count_malloc(strlen(seedURL)*sizeof(char)+1);
-  assertp(cpySeedURL, "Error allocating memory for cpySeedURL.");
-
-  // create copy of seed URL
-  strcpy(cpySeedURL, seedURL);
-   
-  // initialize bag of webpages
-  if ((toBeVisited = bag_new()) ==  NULL) {
-      // if error then increment status, log error
-      fprintf(stderr, "Error creating bag of webpages.\n");	  
-      status+=6;
-  // initialize hashtable of urls
-  } else if ((visitedURLs = hashtable_new(200)) == NULL) {
-      // if error then increment status, log error
-      fprintf(stderr, "Error creating hashtable of URLs\n");
-      status+=7;
-  // making a webpage for seedURL marked with depth of 0 and NULL html.
-  } else if ((seedWp = webpage_new((char*)cpySeedURL, 0, NULL)) == NULL) {
-      // if error then increment status, log error
-      fprintf(stderr, "Error creating a webpage type for the seed URL.\n");
-      status+=8;
-  // inserting seedURL into visited URLS
-  } else if (!(hashtable_insert(visitedURLs,seedURL, ""))) {
-      // if error then increment status, log error
-      fprintf(stderr, "Error inserting seedURL into visitedURLs hashtable.\n");
-      status +=9;
-  } else {
-      // add seedURL to bag and hashtable to start
-      bag_insert(toBeVisited,seedWp);
-    
-      // continuing to loop if there are pages to crawl
-      while ((currWp = bag_extract(toBeVisited)) != NULL) {
-	    
-	// progress indicators for testing purposes
-	// printf("\n");
-        // hashtable_print(visitedURLs, stdout, urlprint);
-	// printf("\n");
-	// bag_print(toBeVisited, stdout, webprint);
-
-	// fetch HTML for current webpage
-        if(!webpage_fetch(currWp)) {
-          // if error, increment status and log it
-	  fprintf(stderr, "There was an error fetching webpage html for %s\n", webpage_getURL(currWp));
-	  status=10;    
-        }
-    
-	// writing an output file for current webpage
-        if (pageSaver(pageDirectory,currWp) != 0) {
-          // increment status (error already logged within pageSaver)
-	  status=11;
-	}
-	// explore links on webpage if it is within the maxDepth
-	if (webpage_getDepth(currWp) < maxDepth) {
-              
-	// looping through links on webpage
-       	pos=0;
-        while ((nextURL = webpage_getNextURL(currWp, &pos)) != NULL) {
-	// normalize URL and check if it is internal
-	if (IsInternalURL(nextURL)) {
-	         
-	  // check if URL has been visited
-	  if (hashtable_insert(visitedURLs,nextURL, "")) {
-	        
-            // copy of nextURL for use in webpage type
-            char *cpyNextURL = count_malloc(strlen(nextURL)*sizeof(char)+1);
-            assertp(cpyNextURL, "Error allocating memory for cpyNextURL");
-            strcpy(cpyNextURL, nextURL);
-	    // create webpage for URL
-	    if ((newWp=webpage_new(cpyNextURL, webpage_getDepth(currWp) + 1,NULL)) == NULL) {
-	       // if error increment status, log it, free memory and continue
-               fprintf(stderr, "Error creating webpage type for %s\n", nextURL);
-	       status=12;
-	       count_free(cpyNextURL);
-	    // queue webpage for crawling 
-            } else {
-	        bag_insert(toBeVisited,newWp);
-	    }			
-	  }  
-	}
-        free(nextURL);
+      // Incrementing word and document id pair's count by 1 in index 
+      if (!index_insert(index, word, docId, index_find(index, word, docId) + 1)) {
+	// on error log it and continue
+        fprintf(stderr, "Trouble inserting (%s, %d) into index", word, docId);
+        status=5;
       }
+      count_free(word);
     }
-    // progress indicators for testing purposes
-    // printf("\n");
-    // hashtable_print(visitedURLs, stdout, urlprint);
-    // printf("\n");
-    // bag_print(toBeVisited, stdout, webprint);
-    webpage_delete(currWp);	
-  } 
- }
- // freeing up memory
- bag_delete(toBeVisited, webpage_delete);
- hashtable_delete(visitedURLs, NULL); 
+    // used for testing purposes
+    printf("Index after scanning %s/%d", pageDirectory, docId);
+    index_print(index, stdout);
 
+    // go to next file
+    docId++;	  
+    webpage_delete(wp);
+  }
   return status;
-}
-
-/*
- * Used for testing, prints out the information in a webpage type
- */
-void webprint(FILE *fp, void *wp) {
-  fprintf(fp, "url: %s", webpage_getURL(wp));
-  fprintf(fp, " depth: %d", webpage_getDepth(wp));
-}
-/*
- * Used for testing, prints out a url in a hashtable
- */
-void urlprint(FILE *fp, const char *url, void *placeholder) {
-  fprintf(fp, "url: %s", url);
-}	
+} 

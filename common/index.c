@@ -2,8 +2,7 @@
  * index.c - 'index' module
  *
  * see index.h for more information
- *
- *
+ *  
  * Jacob Werzinsky, CS50, February 2020
  */
 
