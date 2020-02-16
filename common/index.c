@@ -9,6 +9,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
 #include "word.h"
 #include "hashtable.h"
 #include "counters.h"
@@ -34,9 +36,10 @@ typedef struct index {
 void index_line_print(void *fp, const char *word, void *ctrs);
 void counts_print(void *fp, const int docId, const int count);
 void pair_print(FILE *fp, const char *word, void *ctrs);
+void counters_delete_2(void *ctrs);
 
 /**************** index_new() ****************/
-hashtable_t *index_new(const int num_slots)
+index_t *index_new(const int num_slots)
 {
   index_t *index = count_malloc(sizeof(index_t));
   
@@ -50,26 +53,23 @@ hashtable_t *index_new(const int num_slots)
 }
 
 /**************** index_insert() ****************/
-int index_insert(index_t *index, const char *word, const int *docId, const int wordCount)
+bool index_insert(index_t *index, char *word, const int docId, const int wordCount)
 {
   counters_t *wordCounters=NULL;	// the docId counts of a particular word
-  int status=0;				// exit status
-
+  
   // checking arguments
-  if (index != NULL && word != NULL && docId > 0) { 
+  if ((index != NULL) && (index->ht != NULL) && (word != NULL) && (docId > 0)) { 
     // making sure word has 3 or more characters
     if (strlen(word) < 3) {
       fprintf(stderr, "'%s' is less than three characters\n", word);
-      status++;
-      return status;
+      return false;
     }
 
     // changing word to all lowercase
     if (normalizeWord(word) == 1) {
       // if error log and return
-      fprintf(stderr, "Trouble normalizing '%s'\n");
-      status+=2;
-      return status;
+      fprintf(stderr, "Trouble normalizing '%s'\n", word);
+      return false;
     }
 
     // attempting to find word in index
@@ -81,42 +81,43 @@ int index_insert(index_t *index, const char *word, const int *docId, const int w
       counters_set(wordCounters, docId, wordCount);
     
       // attempt to add (word, counters) pair to index
-      if (!hashtable_insert(index->ht, word, wordCounts)) {
+      if (!hashtable_insert(index->ht, word, wordCounters)) {
         // if it was not added then an error must have occurred
         fprintf(stderr, "There was an issue inserting (word=%s,docId=%d) to the index.\n",
 			word, docId);
-        status+=3;
-	return status;
+	return false;
       }
-      return status;
     // if it is in index then add docId to existing counters object for word
     } else {
-      counters_set(wordCounters, docId, wordCount);
-      return status;
+      if (!counters_set(wordCounters, docId, wordCount)) {
+        fprintf(stderr, "There was an error incrementing the counters struct for %s", word);
+	return false;
+      }
     }
+    return true;
   }
   fprintf(stderr, "index_insert gets NULL argument.\n");
-  return count;
+  return false;
 #ifdef MEMTEST
   count_report(stdout, "After index_insert");
 #endif
 }
 
 /**************** index_find() ****************/
-int *index_find(index_t *index, const char *word, const int docId)
+int index_find(index_t *index, const char *word, const int docId)
 {
-  if (index != NULL && key != NULL && index->ht != NULL) {
+  if ((index != NULL) && (word != NULL) && (index->ht != NULL)) {
     // searching index for word count
     return counters_get(hashtable_find(index->ht, word), docId);
   }
-  fprintf(stderr, "index_find gets NULL index or NULL key\n");
-  return NULL;
+  fprintf(stderr, "index_find gets NULL argument\n");
+  return 0;
 }
 
 /**************** index_print() ****************/
-void *index_print(index_t *index, FILE *fp)
+void index_print(index_t *index, FILE *fp)
 {
-  if (index != NULL && fp != NULL && index->ht != NULL) {
+  if ((index != NULL) && (fp != NULL) && (index->ht != NULL)) {
     hashtable_print(index->ht, fp, pair_print);
   }
 }
@@ -125,7 +126,7 @@ void *index_print(index_t *index, FILE *fp)
 void index_delete(index_t *index)
 {
   if (index != NULL) {
-    hashtable_delete(index->ht, counters_delete);
+    hashtable_delete(index->ht, counters_delete_2);
   }
 #ifdef MEMTEST
   count_report(stdout, "End of index_delete");
@@ -133,25 +134,25 @@ void index_delete(index_t *index)
 }
 
 /**************** index_save() ****************/
-void *index_save(index_t *index, FILE *fp)
+void index_save(index_t *index, FILE *fp)
 {
   // going through index and printing each word and counters pair
-  if (index != NULL && fp != NULL) { 
+  if ((index != NULL) && (fp != NULL && index->ht != NULL)) { 
     hashtable_iterate(index->ht, fp, index_line_print);
   } else {
-    fprintf(stderr, "index_save gets NULL index or NULL fp\n");
+    fprintf(stderr, "index_save gets NULL argument\n");
   }
 }
 
 /**************** index_load() ****************/
-int *index_load(index_t *index, FILE *fp)
+int index_load(index_t *index, FILE *fp)
 {
-  const char word=NULL;		// a word to be added to the index
-  const int docId=0;		// docId to be added to the index
-  const int wordCount=0;	// the count of times word appears in docId
-  int status=0;			// exit status
+  char *word=NULL;	// a word to be added to the index
+  int docId=0;		// docId to be added to the index
+  int wordCount=0;	// the count of times word appears in docId
+  int status=0;		// exit status
 
-  if (fp != NULL && index != NULL && index->ht != NULL) {
+  if ((fp != NULL) && (index != NULL) && (index->ht != NULL)) {
     // reading first word of each line
     while ((word = freadwordp(fp)) != NULL) {
     
@@ -159,17 +160,19 @@ int *index_load(index_t *index, FILE *fp)
       while (fscanf(fp, "%d %d ", &docId, &wordCount) == 2) {
         
 	// on error log it and continue
-        if (index_insert(index->ht, word, docId, wordCount) != 0) {
+        if (index_insert(index, word, docId, wordCount) != 0) {
           fprintf(stderr, "Problem inserting word: %s and docId: %d into the index", word, docId);
-          status+=1;	
+          status=2;	
 	}
-      }    
+      }
+      count_free(word);    
     }
   // log error and increment status
   } else {
       fprintf(stderr, "index_load gets NULL arguments");
       status++;
   }
+  return status;
 }
 
 /**************** pairPrint() ****************/
@@ -192,7 +195,7 @@ void pair_print(FILE *fp, const char *word, void *ctrs)
     if (word != NULL) {
       fprintf(fp, "%s", word);
     } 
-    fputs(",counters=");
+    fputs(",counters=", fp);
     counters_print(ctrs, fp);
     fputs(")",fp);
   }
@@ -247,3 +250,15 @@ void index_line_print(void *fp, const char *word, void *ctrs)
   }
 }
 
+/**************** counters_delete_2() ****************/
+/* Frees memory occupied by a counters struct. 
+ * can/should be passed to hashtable_delete
+ * Parameters:
+ *   ctrs - counters struct to be freed
+ * Returns:
+ *   nothing
+ */
+void counters_delete_2(void *ctrs)
+{
+  counters_delete(ctrs);
+}

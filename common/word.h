@@ -7,8 +7,8 @@
  * Jacob Werzinsky, Winter 2020
  */
 
-#ifndef __PAGEDIR_H
-#define __PAGEDIR_H
+#ifndef __WORD_H
+#define __WORD_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,4 +26,6 @@
  *   1 - on failure caused by null word
  */
 int normalizeWord(char *word);
+
+#endif // __WORD_H
 
