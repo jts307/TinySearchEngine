@@ -1,5 +1,7 @@
 # Implementation for indexer
 
+Note - There are several progress indication printf statements throughout the code for indexer and the index module methods. These are commented out by default.
+
 ## Pseudo code
 
 The pseudo code for the indexer goes as follows: 

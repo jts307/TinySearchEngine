@@ -157,14 +157,14 @@ int index_load(index_t *index, FILE *fp)
       while (fscanf(fp, "%d %d ", &docId, &wordCount) == 2) {
         
 	// used for testing
-	printf("Attempting to insert (%s, %d, %d)\n",word,docId,wordCount);
+	// printf("Attempting to insert (%s, %d, %d)\n",word,docId,wordCount);
 
 	// on error log it and continue
         if (!index_insert(index, word, docId, wordCount)) {
           fprintf(stderr, "Problem inserting word=%s and docId=%d into the index\n", word, docId);
           status=2;	
 	} else {
-	  printf("Success\n");
+	  // printf("Success\n");
 	}
       }
       count_free(word);    
@@ -217,7 +217,7 @@ void pair_print(FILE *fp, const char *word, void *ctrs)
 void counts_print(void *fp, const int docId, const int count)
 {
   // used for testing
-  printf(",(docId=%d,count=%d)", docId, count);
+  // printf(",(docId=%d,count=%d)", docId, count);
 
   if (fp != NULL) {
     if (fprintf(fp, " %d %d ", docId, count) < 0) {
@@ -241,7 +241,7 @@ void counts_print(void *fp, const int docId, const int count)
 void index_line_print(void *fp, const char *word, void *ctrs)
 {
   // used for testing
-  printf("Saving %s", word);  
+  // printf("Saving %s", word);  
 
   if (fp != NULL) {	
     // printing word to file
@@ -257,8 +257,8 @@ void index_line_print(void *fp, const char *word, void *ctrs)
     }
   }
 
-  //used for testing
-  printf("\n");
+  // used for testing
+  // printf("\n");
 }
 
 /**************** counters_delete_2() ****************/

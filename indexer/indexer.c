@@ -101,7 +101,7 @@ int index_build(index_t *index, const char *pageDirectory) {
     while ((word = webpage_getNextWord(wp, &pos)) != NULL) {
       
       // used for testing purposes	    
-      printf("Attempting to insert (%s, %d) into index.\n", word, docId);
+      // printf("Attempting to insert (%s, %d) into index.\n", word, docId);
 
       // Incrementing word and document id pair's count by 1 in index 
       if (!index_insert(index, word, docId, index_find(index, word, docId) + 1)) {
@@ -109,7 +109,7 @@ int index_build(index_t *index, const char *pageDirectory) {
         fprintf(stderr, "Trouble inserting (%s, %d) into index\n", word, docId);
         status=5;
       } else {
-          printf("Success\n");
+          // printf("Success\n");
       }
       count_free(word);
     }

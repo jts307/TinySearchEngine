@@ -39,3 +39,4 @@ clean:
 	rm -f $(PROG2)
 	rm -f stocks
 	rm -fdr testing
+	rm testing.out
