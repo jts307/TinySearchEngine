@@ -12,8 +12,8 @@ indexer pageDirectory IndexFilename
 
 For example,
 
-```shell session
-./indexer directory file
+```shell 
+$ ./indexer directory file
 ```
 
 
