@@ -50,6 +50,7 @@ Helper modules providing data structures:
 
 1. *hashtable*, used to store (word, counters_t) pairs as a part of the index structure
 2. *counters*, used to store (docId, count) pairs as a part of the index structure
+3. *set*, used by hashtable.
 
 ### Pseudo code for logic/algorithmic flow
 
@@ -59,7 +60,7 @@ Helper modules providing data structures:
 	1. Read the next file and get its html
 	2. while there are still unread words in the html,
 		1. Read the next word
-		2. Normalize the word
+		2. Normalize the word (make lowercase)
 		3. if has three or more characters, insert it with the docID into the index structure
 	        	1. If the pair already has a count in the index, increment its count
 			2. If its not, then add them with a count of 1
@@ -68,6 +69,31 @@ Helper modules providing data structures:
 	2. while there are still (docId, count) pairs associated with that word
 		1. write that (docId, count) pair on the same line as the word
 5. Free memory for index structure and any other structures used, close indexFilename
+
+### Dataflow through modules
+
+1. *main* parses/validates parameters, calls functions from *index* module
+2. Functions from *index* module initialize a new index and returns back to *main*
+3. *main* passes parameters to *index_build*
+4. *index_build* reads webpages by calling *webpageLoad*
+5. *webpageLoad* reads files from *pageDirectory* and returns their information to *index_build*
+6. *index_build* loads this information into the index and returns to *main*
+7. *main* passes parameters to *index_save*
+8. *index_save* writes the information in index to *indexFilename*
+
+### Major data structures
+
+The *index* module provides the index structure...
+
+1. index, mapping of words and (docId, count) pairs
+
+The *index* module uses a few helper modules which provide the following data structures:
+
+2. hashtable of words and counters (indirectly used by index)
+
+3. set of words and counters (indirectly used by index)
+
+4. counters which keep a count of a docId
 
 ### Testing Plan
 
