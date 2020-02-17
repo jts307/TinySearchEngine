@@ -28,7 +28,7 @@ The returned word is then normalized using `int normalizeWord(char *word)` which
 
 ##### if has three or more characters, insert it with the docID into the index structure 
 
-The length of the word is checked with `strlen()` to see if it has three or more chars. If it does then the word, the current `int` documentId is passed to `bool index_insert(index_t *index, const char *word, const int docId, const int wordCount)`. 
+The length of the word is checked with `strlen()` to see if it has three or more chars. If it does then the word and the current `int` documentId is passed to `bool index_insert(index_t *index, const char *word, const int docId, const int wordCount)`. 
 
 ###### If the pair already has a count in the index, increment its count 
 ###### If its not, then add them with a count of 1
@@ -36,17 +36,23 @@ The length of the word is checked with `strlen()` to see if it has three or more
 
 ### while there are still words in the index
 
-Control is then returned to main which then calls 
+Control is then returned to `main` which then calls `void index_save(index_t *index, FILE *fp)`. Within `index_save`, `void hashtable_iterate(hashtable_t *ht, void *arg, void (*itemfunc)(void *arg, const char *key, void *item) )` is called on the `index struct`'s `hashtable struct`. The function goes through each (word, (documentId, wordCount)) pair similar to a while loop.
 
 #### Write a word to the indexFilename
 
+ A local function in place of `itemfunc` and `indexFilename`(as a file stream) in place of `void *arg` are passed to `hashtable_iterate`. The local function writes each word to `indexFilename` using a `fprintf` statement.
+
 #### while there are still (docId, count) pairs associated with that word
+
+This function then calls `void counters_iterate(counters_t *ctrs, void *arg, void (*itemfunc)(void *arg, const int key, const int count))` which goes through each (documentId, wordCount) pair contained in `counters` associated with each word within the `index struct`, again similar to a while loop, and `IndexFilename` and a different local function are passed to `counters_iterate` as well.
 
 ##### write that (docId, count) pair on the same line as the word
 
+Each (documentId, wordCount) pair is then written to `IndexFilename` through this other local function passed to `counters_iterate`, using a `fprintf` statement.
+
 ### Free memory for index structure and any other structures used, close indexFilename
 
-Lastly, `indexFilename` is closed using `fclose` and the `index struct` is then freed from memory using `void index_delete(index_t *index)`.
+Lastly, control is returned to `main` and `indexFilename` is closed using `fclose` and the `index struct` is then freed from memory using `void index_delete(index_t *index)`.
 
 ## Functions:
 
@@ -176,6 +182,8 @@ void *hashtable_find(hashtable_t *ht, const char *key);
 void hashtable_print(hashtable_t *ht, FILE *fp, void (*itemprint)(FILE *fp, const char *key, void *item));
 // frees memory taken up by the hashtable
 void hashtable_delete(hashtable_t *ht, void (*itemdelete)(void *item) );
+// iterates through each key and item pair in the hashtable executing the passed function on them
+void hashtable_iterate(hashtable_t *ht, void *arg, void (*itemfunc)(void *arg, const char *key, void *item) );
 ```
 
 The `hashtable struct` was used to store the word and counters pairs in the index structure.
