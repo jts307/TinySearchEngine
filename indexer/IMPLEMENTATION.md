@@ -1,8 +1,8 @@
-# Implementation for crawler
+# Implementation for indexer
 
 ## Pseudo code
 
-The pseudo code for the crawler goes as follows: 
+The pseudo code for the indexer goes as follows: 
 
 
 ### Execute from a command line as shown in the User Interface:
@@ -76,19 +76,7 @@ Then this new webpage is passed to `bag_insert` to be inserted into the bag of w
 
 ## Functions:
 
-### Crawler.c
 
-```c
-int main(const int argc, const char *argv[])
-```
-The main function takes the arguments from the command and makes sure that there is three of them. It also 
-checks whether or not they are valid. For depth, it checks that the depth is nonnegative and numerical (a number must be the first thing that appears in the argument else it will not be recognized as such). For the directory, it checks it using pagedir module's `isValidDirectory`. For the seedURL, it uses webpage module's `IsInternalURL`. It then passes these arguments off to the crawler function.
-
-```c
-int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)
-```
-
-The crawler runs the algorithm as described above, starting from make a new webpage for the seedURL. It goes to each webpage starting at the specificed seedURL. 
 
 ### pagedir.c
 
