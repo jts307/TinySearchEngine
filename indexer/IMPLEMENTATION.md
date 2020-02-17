@@ -76,17 +76,15 @@ Then this new webpage is passed to `bag_insert` to be inserted into the bag of w
 
 ## Functions:
 
-
-
 ### pagedir.c
 
 ```c
-bool isValidDirectory(const char *pageDir)
+bool isCrawlerValidDirectory(const char *pageDir)
 ```
 The isValidDirectory function takes a passed directory and checks whether it is an existing and writable directory by attempting to write a .crawler file to it using `fopen`. If it succeeds then the .crawler file is left there. 
 
 ```c
-int pageSaver(const char *pageDir, webpage_t *wp)
+int webpageLoad(const char *pageDir, webpage_t *wp)
 ```
 The pageSaver function takes a directory and a webpage type, and then uses the webpage type's getter functions like `int webpage_getDepth(const webpage_t *page)` to obtain information about a webpage and then uses `fprintf`and `fopen` to write that information to numbered output files. The numbering of the output files starts at the first availible number counting from zero. If a number is taken by another file in the directory then the numbering of the file increments until an availible number is found.
 
@@ -177,24 +175,20 @@ void hashtable_delete(hashtable_t *ht, void (*itemdelete)(void *item) );
 The `hashtable struct` was used to store the urls of webpages that have already been visited by the crawler. 
 
 ## Security and privacy properties:
-
-The `webpage_fetch` method implements a 1-second delay after every fetch attempt to ensure that it 
-would not trigger any secrity concerns with the websites visited. Also the crawler only crawls 
-webpages within http://old-www.cs.dartmouth.edu/ which is ensured through the `IsInternalURL`
-function within the *webpage* module. 
+The indexer does not interface with any outside websites or other sources, so there is nothing particular to note in this category.
 
 ## Error handling and recovery:
-Crawler handles most of its errors by simply writing them to standard error through the use of fprintf statements, for example:
+Indexer handles most of its errors by simply writing them to standard error through the use of fprintf statements, for example:
 
 ```c
-fprintf(stderr, "pageDirectory is not a valid and writable directory.\n");
-status+=4;
+fprintf(stderr, "pageDirectory is not a valid readable Crawler directory.\n");
+status+=2;
  ```
-The program will log the error and continue operating for most errors unless it is an error that interfers with the program entirely like a missing pageDirectory, in which it exits. Also it exits if there is an issue with memory allocation making use of the [memory module's](../libcs50/memory.h) `assertp` function.
+The program will log the error and continue operating for most errors unless it is an error that interfers with the program entirely like a missing pageDirectory, in which case it exits. Also it exits if there is an issue with memory allocation making use of the [memory module's](../libcs50/memory.h) `assertp` function.
 
 ## Resource management:
 Crawler utilizes heap memory by calling `malloc` and `free` through the [memory module's](../libcs50/memory.h) `count_malloc` and `count_free` which add an extra functionality of keeping a count of how many mallocs and frees took place within a program. 
 
 ## Persistant storage:
-Crawler creates a .crawler file in the directory passed by the caller. This was used to test whether or not a directory exists and is writable. The program also creates numbered files each with a unique numbered id within the passed directory, each file contains the url, html and depth of a webpage. 
+The program creates a file that contains the index mapping as described in the [README](README.md).
 
