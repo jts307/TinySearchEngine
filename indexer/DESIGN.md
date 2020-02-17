@@ -25,7 +25,9 @@ Inputs: A directory previously crawled by the crawler and a valid file to write 
 	-and the first line of the file is the URL,
 	-and the second line of the file is the depth,
 	-and the rest of the file is the page content (the HTML, unchanged).
+	
 Outputs: The index is outputted to the file supplied on the command line. It contains the word and (docId, count) pairs in the following format, where docId is short for documentId:
+
 	-one line per word, one word per line
 	-each line provides the word and one or more (docID, count) pairs, in the format:
 		-word docID count [docID count]…
@@ -33,7 +35,8 @@ Outputs: The index is outputted to the file supplied on the command line. It con
 		-where docID is a positive non-zero integer,
 		-where count is a positive non-zero integer,
 		-where the word and integers are separated by spaces.
-Functional decompostion into modules:
+		
+### Functional decompostion into modules:
 We anticipate the following modules or functions:
 
 1. *main*, which parses arguments and initializes other modules
