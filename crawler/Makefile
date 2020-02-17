@@ -15,6 +15,12 @@ $(PROG): $(OBJS)
 # Dependencies: 
 crawler.o: ../libcs50/bag.h ../libcs50/hashtable.h ../libcs50/webpage.h ../libcs50/memory.h ../common/pagedir.h ../common/index.h
 
+../libcs50/libcs50.a:
+	cd ../libcs50; make
+
+../common/common.a:
+	cd ../common; make
+
 .PHONY: test clean
 
 test: $(PROG) testing.sh
