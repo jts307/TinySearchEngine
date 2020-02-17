@@ -4,85 +4,49 @@
 
 The pseudo code for the indexer goes as follows: 
 
+### Execute from the command line as shown in the User Interface.
 
-### Execute from a command line as shown in the User Interface:
+### Parse the command line, validate parameters, initialize index structure, and open indexFilename
 
-Parameters are passed to `int main(const int argc, const char *argv[])` which then checks that there are exactly 4 arguments passed from the command line which are `const char *seedURL`, `const char *pageDirectory` and `const char maxDepth`.
+### while there are still unread files within the pageDirectory,
 
-### Parse the command line, validate parameters, initialize other modules
+#### Read the next file and get its html
 
-The main function then validates its parameters by making calls to `IsValidDirectory` within the *pagedir* module on `const char *pageDirectory` to check if the directory is valid, `IsInternalURL` to check if the `const char *seedURL` is valid and internal, and checks directly that `const char maxDepth` is both numerical and nonnegative transforming it into `int maxDepth` in the process.
+#### while there are still unread words in the html,
 
-### make a webpage for the seedURL, marked with depth=0
+##### Read the next word
 
-The main function then passes the three arguments (`int maxDepth` not the `const char maxDepth`) to `int crawler(const char *seedURL, const char *pageDirectory, const int maxDepth)`. The crawler function then makes a `webpage struct` for the `const char seedURL` and passes it a NULL html and a depth of 0 using `webpage_new`.
+##### Normalize the word (make lowercase)
 
-### add that page to the bag of webpages to crawl
+##### if has three or more characters, insert it with the docID into the index structure 
 
-A pointer to the `webpage struct` created for the seedURL is then added to a `bag struct` of webpage pointers to crawl. 
+###### If the pair already has a count in the index, increment its count 
 
-### add that URL to the hashtable of URLs seen
+###### If its not, then add them with a count of 1
 
-The `const char seedURL` is then copied and that copy is placed within a `hashtable struct` of `const char ` urls which are the keys and empty strings which act as a placeholder for an item.
+### while there are still words in the index
 
-### while there are more webpages to crawl,
-### extract a webpage (URL,depth) item from the bag of webpages to be crawled,
+#### Write a word to the indexFilename
 
-Then while there are still webpages availible to extract from the bag of webpages using `bag_extract`, a webpage is extracted. This is done with a while statement with `bag_extract` as the conditional.
+#### while there are still (docId, count) pairs associated with that word
 
-### pause for at least one second,
-### use pagefetcher to retrieve a webpage for that URL,
+##### write that (docId, count) pair on the same line as the word
 
-The extracted webpage is then passed to `webpage_fetcher` which gets the html for a webpage and replaces in place of the webpage's NULL html.
-
-### use pageSaver to write the webpage to the pageDirectory with a unique document ID
-
-The extracted webpage is then passed to `pageSaver` within the *pagedir* module which then writes the webpage's html, url and depth to a file with a numbered id as the file's name.
-
-### if the webpage depth is < maxDepth, explore the webpage to find links:
-
-After `pageSaver` returns then the webpage's depth is checked with `webpage_getDepth` and if it is below `int maxDepth`. 
-
-### use pagescanner to parse the webpage to extract all its embedded URLs;
-
-If it is below it then the function goes it a while loop where as long there are more URLs on the html of the webpage then then loop continues. This is done through `webpage_getNextURL`.
-
-### for each extracted URL,
-
-#### ‘normalize’ the URL
-#### if that URL is not ‘internal’, ignore it;
-
-The extracted url is then normalized and checked if it is internal at the same time through the funciton `IsInternalURL`.
-
-#### try to insert that URL into the hashtable of URLs seen
-
-Then it is an attempt to insert the URL into the hashtable is made through `hashtable_insert`.
-
-#### if it was already in the table, do nothing;
-
-If `hashtable_insert` returns true then nothing happens.
-
-#### if it was added to the table,
-
-If it returns false then the following happens.
-
-#### make a new webpage for that URL, at depth+1
-
-The extracted url is first copied to `cpyNextURL`. Then this copied url is passed to `webpage_new` along with the depth of the webpage that was extracted from the bag plus 1 using the `webpage_getDepth` method. It is also given NULL html. This creates a new webpage.
-
-#### add the new webpage to the bag of webpages to be crawled
-
-Then this new webpage is passed to `bag_insert` to be inserted into the bag of webpages to be visited. The loop continues until all webpages within `int maxDepth` are reached.
+### Free memory for index structure and any other structures used, close indexFilename
 
 ## Functions:
 
 ### indexer.c
 
+```c
+main
+```
+The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for writing using `fopen` to test if it is a writable file if the file already exists.
 
-
-
-
-
+```c
+index_build
+```
+Creates the entire index, i.e. inserts into the index based on data from the pageDirectory recieved through webpageLoad, number 4 of the pseudo encapsulates much of what this function does.
 
 ### word.c
 
