@@ -39,12 +39,12 @@ The pseudo code for the indexer goes as follows:
 ### indexer.c
 
 ```c
-main
+int main(const int argc, const char *argv[]);
 ```
 The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for writing using `fopen` to test if it is a writable file if the file already exists.
 
 ```c
-index_build
+int index_build(index_t *index, const char *pageDirectory);
 ```
 Creates the entire index, i.e. inserts into the index based on data from the pageDirectory recieved through webpageLoad, number 4 of the pseudo encapsulates much of what this function does.
 
