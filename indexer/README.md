@@ -34,7 +34,9 @@ None beyond those stated in the lab assignment.
 
 ### Compilation
 To compile indexer, do: `make indexer.o`.
+
 To compile indextest, do: `make indextest.o`.
+
 To make both, do: `make` or `make all`.
 
 See [TESTING](TESTING.md) for details of testing and an example test run.
