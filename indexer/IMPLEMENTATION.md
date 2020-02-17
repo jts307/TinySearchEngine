@@ -1,5 +1,7 @@
 # Implementation for indexer
 
+-Note: There are several printf progress statements throughout the code that are commented out by default.
+
 ## Pseudo code
 
 The pseudo code for the indexer goes as follows: 
