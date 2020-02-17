@@ -3,10 +3,9 @@
 
 ### indexer
 
-The indexer takes the output files produced by the [crawler](../README.md) and produces a mapping from each unique word 
-within them to (documentId, count) pairs, where documentId is the name of a file and count is how many times a word a
-appears in that file. It then takes this mapping, made using the [index module](../common/index.h), and stores it into a 
-file.
+The indexer takes the output files produced by the [crawler](../crawler/README.md) and produces a mapping from each 
+unique word within them to (documentId, count) pairs, where documentId is the name of a file and count is how many times 
+the matching word appears in that file. It then takes this mapping, made using the [index module](../common/index.h), and stores it into a file.
 
 #### Usage
 
