@@ -78,20 +78,30 @@ Then this new webpage is passed to `bag_insert` to be inserted into the bag of w
 
 ### indexer.c
 
+
+
+
+
+
+
 ### word.c
 
+```c
+int normalizeWord(char *word);
+```
+Normalizes a word by lowercasing all its alphabetic characters. Used in *index* module.
 
 ### pagedir.c
 
 ```c
-bool isCrawlerValidDirectory(const char *pageDir)
+bool isCrawlerDirectory(const char *pageDir);
 ```
-The isValidDirectory function takes a passed directory and checks whether it is an existing and writable directory by attempting to write a .crawler file to it using `fopen`. If it succeeds then the .crawler file is left there. 
+The isCrawlerDirectory function takes a passed directory and checks whether it is an existing, readable and crawler visited directory by attempting to read a .crawler file in it left behind by `crawler.c`.
 
 ```c
-int webpageLoad(const char *pageDir, webpage_t *wp)
+webpage_t *webpageLoad(const char *pageDir, int id);
 ```
-The pageSaver function takes a directory and a webpage type, and then uses the webpage type's getter functions like `int webpage_getDepth(const webpage_t *page)` to obtain information about a webpage and then uses `fprintf`and `fopen` to write that information to numbered output files. The numbering of the output files starts at the first availible number counting from zero. If a number is taken by another file in the directory then the numbering of the file increments until an availible number is found.
+Creates a `webpage struct` containing the html, url and depth of a file idenitified by id and returns it to the caller. Used to fetch data from the pageDirectory.
 
 ## Data Structures:
 
