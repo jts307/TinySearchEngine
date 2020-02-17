@@ -6,25 +6,37 @@ The pseudo code for the indexer goes as follows:
 
 ### Execute from the command line as shown in the User Interface.
 
+Parameters are passed to `int main(const int argc, const char *argv[])` which then checks that there are exactly 3 arguments passed from the command line which include `const char *pageDirectory` and `const char *indexFilename`.
+
 ### Parse the command line, validate parameters, initialize index structure, and open indexFilename
 
-### while there are still unread files within the pageDirectory,
+The main function then validates its parameters by making calls to `IsCrawlerDirectory` within the *pagedir* module on `const char *pageDirectory` to check if the directory is a valid crawler directory, and `fopen` with "w" option on `const char *indexFilename` to check if `indexFilename` is a writable file if it exists. It then calls `index_t *index_new(const int num_slots)` to initialize/allocate memory for an index structure.
 
+### while there are still unread files within the pageDirectory,
 #### Read the next file and get its html
 
-#### while there are still unread words in the html,
+Main then calls index_build, which then goes in a while loop with `webpage_t *webpageLoad(const char *pageDir, int id)` passing the `pageDirectory` each loop and an `int` starting at 1. This `int` increments every loop and `webpageLoad` returns a `webpage_t` that has the html, url and depth of the file with documentId `int` in `pageDirectory`. This loop continues until there is no file with the `int` documentId, in which case the `webpageLoad` returns NULL and the loop terminates.
 
+#### while there are still unread words in the html,
 ##### Read the next word
+
+`char *webpage_getNextWord(webpage_t *page, int *pos)` is called in a while loop passing the `webpage_t` from the previous step and an `int` counter that is used by the the function to keep track of which word it is on. The function then returns the next `char *` word if there is one, in the case where there is not it returns NULL and the loop terminates.
 
 ##### Normalize the word (make lowercase)
 
+The returned word is then normalized using `int normalizeWord(char *word)` which takes the word and lowercases any alphabetic characters within it.
+
 ##### if has three or more characters, insert it with the docID into the index structure 
 
-###### If the pair already has a count in the index, increment its count 
+The length of the word is checked with `strlen()` to see if it has three or more chars. If it does then the word, the current `int` documentId is passed to `bool index_insert(index_t *index, const char *word, const int docId, const int wordCount)`. 
 
+###### If the pair already has a count in the index, increment its count 
 ###### If its not, then add them with a count of 1
+`const int wordCount` is calculated by taking the current wordCount of the (word, documentId) pair in the `index struct` using the function `int index_find(index_t *index, const char *word, const int docId)` and then adding 1. This is then passed to `index_insert` which then sets the (word, documentId, wordCount) trio in the `index struct`.
 
 ### while there are still words in the index
+
+Control is then returned to main which then calls 
 
 #### Write a word to the indexFilename
 
@@ -33,6 +45,8 @@ The pseudo code for the indexer goes as follows:
 ##### write that (docId, count) pair on the same line as the word
 
 ### Free memory for index structure and any other structures used, close indexFilename
+
+Lastly, `indexFilename` is closed using `fclose` and the `index struct` is then freed from memory using `void index_delete(index_t *index)`.
 
 ## Functions:
 
@@ -123,7 +137,7 @@ webpage_t *webpage_new(char *url, const int depth, char *html);
 // frees any memory used by the passed webpage struct
 void webpage_delete(void *data);
 // returns a word from a webpage's html
-char *webpage_getNextURL(webpage_t *page, int *pos);
+char *webpage_getNextWord(webpage_t *page, int *pos);
 ```
 
 The `webpage struct` was used to parse information from the files within the pageDirectory and cycle through the html of a file word by word. More information on how these functions work can be found in [webpage.h](../libcs50/webpage.h).
