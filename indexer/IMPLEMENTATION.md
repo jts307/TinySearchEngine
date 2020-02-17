@@ -1,6 +1,6 @@
 # Implementation for indexer
 
--Note: There are several printf progress statements throughout the code that are commented out by default.
+-Note: There are several `printf` progress statements throughout the code that are commented out by default.
 
 ## Pseudo code
 
