@@ -1,33 +1,41 @@
 # CS50 Lab 4
 ## Jacob Werzinsky, CS50 Winter 2020
 
-### crawler
+### indexer
 
-Crawler gathers information which includes the html and url of webpages starting from a given url. The crawler
-starts at this url and follows all links within the url's webpage to other sites and stores their information as well. 
-It then searches for urls from those sites and continues this process until all links are exhausted or a max depth, defined
-by the amount of links a page is away from the starting webpage, is reached. This implementation will only search webpages
-within http://old-www.cs.dartmouth.edu. Saves results in the form of numbered files with the url,html and depth to a specified directory. 
+The indexer takes the output files produced by the [crawler](../README.md) and produces a mapping from each unique word 
+within them to (documentId, count) pairs, where documentId is the name of a file and count is how many times a word a
+appears in that file. It then takes this mapping, made using the [index module](../common/index.h), and stores it into a 
+file.
 
-### Usage
+#### Usage
 
-crawler [seedURL] [pageDirectory] [maxDepth]
+indexer [pageDirectory] [IndexFilename]
 
 *Example*:
 
-crawler http://old-www.cs.dartmouth.edu directory 5 
+./indexer directory file
+
+### indextest
+
+The indextest program tests the index structure by first loading data from an already made index file into the structure
+and then resaving the data from the index to a new file.
+
+#### Usage
+
+indextest [oldIndexFilename] [newIndexFilename]
+
+*Example*:
+
+./indextest file1 file2
 
 ### Assumptions
 
-The design spec did not specify how we should handle the case where there are already numbered files within
-the directory passed by the caller. For example, the case where someone wants to use the same directory for
-different calls of crawler with various seed URLs. So I assumed that a user would prefer to keep any numbered
-files within the passed directory. This mainly pertains to the pageSaver() function.
-
-I assumed that the crawling area was not going to be too big, about the size of the testing examples, so the 
-hashtable used in the program contains only 200 sets which on larger scales will run increasingly slower.
+None beyond those stated in the lab assignment.
 
 ### Compilation
-To comple crawler, do: `make crawler.o`.
+To compile indexer, do: `make indexer.o`.
+To compile indextest, do: `make indextest.o`.
+To make both, do: `make` or `make all`.
 
 See [TESTING](TESTING.md) for details of testing and an example test run.
