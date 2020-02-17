@@ -108,6 +108,8 @@ int index_build(index_t *index, const char *pageDirectory) {
 	// on error log it and continue
         fprintf(stderr, "Trouble inserting (%s, %d) into index\n", word, docId);
         status=5;
+      } else {
+          printf("Success\n");
       }
       count_free(word);
     }

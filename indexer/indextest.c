@@ -44,12 +44,12 @@ int main(const int argc, const char *argv[]){
       status++;
   } else {
       // checking if oldIndexFilename is readable
-      if ((oldIndexFile=fopen(argv[2], "r")) == NULL) {
+      if ((oldIndexFile=fopen(argv[1], "r")) == NULL) {
           // if not then return error
           fprintf(stderr, "oldIndexFilename must be a readable existing file.\n");
           status+=2;
       // checking if newIndexFilename is writable if it exists	  
-      } else if ((newIndexFile=fopen(argv[3], "w")) == NULL) {
+      } else if ((newIndexFile=fopen(argv[2], "w")) == NULL) {
 	  // if not then return error
 	  fprintf(stderr, "newIndexFilename must be writable.\n");
 	  status+=3;

@@ -87,11 +87,8 @@ bool index_insert(index_t *index, char *word, const int docId, const int wordCou
 	return false;
       }
     // if it is in index then add docId to existing counters object for word
-    } else {
-      if (!counters_set(wordCounters, docId, wordCount)) {
-        fprintf(stderr, "There was an error incrementing the counters struct for (%s,doc=%d,count=%d)\n", word,docId, wordCount);
-	return false;
-      }
+    } else {	  
+        counters_set(wordCounters, docId, wordCount);
     }
     return true;
   }
@@ -160,14 +157,14 @@ int index_load(index_t *index, FILE *fp)
       while (fscanf(fp, "%d %d ", &docId, &wordCount) == 2) {
         
 	// used for testing
-	printf("Attempting to insert (%s, %d, %d)",word,docId,wordCount);
+	printf("Attempting to insert (%s, %d, %d)\n",word,docId,wordCount);
 
 	// on error log it and continue
-        if (index_insert(index, word, docId, wordCount) != 0) {
-          fprintf(stderr, "Problem inserting word: %s and docId: %d into the index\n", word, docId);
+        if (!index_insert(index, word, docId, wordCount)) {
+          fprintf(stderr, "Problem inserting word=%s and docId=%d into the index\n", word, docId);
           status=2;	
 	} else {
-	  printf("Success");
+	  printf("Success\n");
 	}
       }
       count_free(word);    
