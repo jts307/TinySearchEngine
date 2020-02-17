@@ -114,8 +114,8 @@ int index_build(index_t *index, const char *pageDirectory) {
       count_free(word);
     }
     // used for testing purposes
-    printf("Index after scanning %s/%d\n", pageDirectory, docId);
-    index_print(index, stdout);
+    // printf("Index after scanning %s/%d\n", pageDirectory, docId);
+    // index_print(index, stdout);
 
     // go to next file
     docId++;	  
