@@ -19,6 +19,7 @@ $ ./indexer directory file
 ### Inputs and outputs
 
 Inputs: A directory previously crawled by the crawler and a valid file to write an index to supplied on the command-line as shown in the User Interface above. The files in the crawler directory must have the following format as specified in the requirements spec:
+
 	-the document id starts at 1 and increments by 1 for each new page,
 	-and the filename is of form pageDirectory/id,
 	-and the first line of the file is the URL,
