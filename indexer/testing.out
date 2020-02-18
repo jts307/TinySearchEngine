@@ -1,0 +1,1192 @@
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50    -c -o indexer.o indexer.c
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indexer.o ../common/common.a ../libcs50/libcs50.a -o indexer
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50    -c -o indextest.o indextest.c
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indextest.o ../common/common.a ../libcs50/libcs50.a -o indextest
+bash -v testing.sh
+switchml () {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /usr/share/Modules/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}
+module () {  _module_raw "$@" 2>&1
+}
+_module_raw () {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}
+#!/bin/bash
+#
+# Testing script for indexer.c and indextest.c
+# Author: Jacob Werzinsky
+# Date: Feb 8, 2020
+#
+# usage: bash -v testing.sh
+# 
+# Created by Jacob Werzinsky, CS50, Winter 2020
+
+cd ../crawler
+make
+make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
+make[1]: 'crawler' is up to date.
+make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
+cd ../indexer
+
+# making testing directories, program exits without testing if it cannot create a directory
+# or if it does not already exist
+############################################################################################
+mkdir "testing"
+if [ ! -d "testing" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-0"
+if [ ! -d "testing/letters-depth-0" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-1"
+if [ ! -d "testing/letters-depth-1" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-2"
+if [ ! -d "testing/letters-depth-2" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-3"
+if [ ! -d "testing/letters-depth-3" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-4"
+if [ ! -d "testing/letters-depth-4" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-5"
+if [ ! -d "testing/letters-depth-5" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/wikipedia-depth-0"
+if [ ! -d "testing/wikipedia-depth-0" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/wikipedia-depth-1"
+if [ ! -d "testing/wikipedia-depth-1" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/wikipedia-depth-2"
+if [ ! -d "testing/wikipedia-depth-2" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/indexerResults"
+if [ ! -d "testing/indexerResults" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/indextestResults"
+if [ ! -d "testing/indextestResults" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+touch "testing/dummyIndexFile"
+chmod -w testing/dummyIndexFilew
+chmod: cannot access 'testing/dummyIndexFilew': No such file or directory
+touch "testing/dummyIndexFile2"
+chmod -r testing/dummyIndexFiler
+chmod: cannot access 'testing/dummyIndexFiler': No such file or directory
+
+# Creating crawler files at various depths (0-5) in the cs letters page
+#######################################################################
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-0 0
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-1 1
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-2 2
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-3 3
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-4 4
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-5 5
+
+# Creating crawler files with the wikipedia page at depths 0, 1 and 2
+#####################################################################
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-0 0
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-1 1
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pearson%27s_chi-squared_test.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Yale_Bulldogs_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Yale_Bulldogs_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/RPI_Engineers_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/RPI_Engineers_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Quinnipiac_Bobcats_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Quinnipiac_Bobcats_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Princeton_Tigers_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Princeton_Tigers_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Harvard_Crimson_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Harvard_Crimson_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Cornell_Big_Red_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Cornell_Big_Red_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Colgate_Raiders_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Colgate_Raiders_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Clarkson_Golden_Knights_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Clarkson_Golden_Knights_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Brown_Bears_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Brown_Bears_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/St._John%27s_College_(Annapolis/Santa_Fe).html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_men%27s_lacrosse.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/National_Lampoon%27s_Animal_House.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Mister_Rogers%27_Neighborhood.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Grey%27s_Anatomy.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dinesh_D%27Souza.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Moor%27s_Charity_School.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/O%27Reilly_Media.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pascal%27s_calculator.html
+pageSaver gets NULL wp->html
+
+# Testing programs with various forms of incorrect parameters
+############################################################
+
+# Indexer
+##########
+# Testing with non-existent directory
+./indexer hello IndexFile
+pageDirectory is not a valid readable Crawler directory.
+echo "Exit status of non-existent directory: $?"
+Exit status of non-existent directory: 2
+
+# Testing with non-crawler directory
+./indexer testing IndexFile
+pageDirectory is not a valid readable Crawler directory.
+echo "Exit status of non-crawler directory: $?"
+Exit status of non-crawler directory: 2
+
+# Testing with non-readable directory
+chmod -r testing/letters-depth-0
+./indexer testing/letters-depth-0 IndexFile
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+echo "Exit status of non-readable directory: $?"
+Exit status of non-readable directory: 5
+chmod +r testing/letters-depth-0
+
+# Testing with non-writable file
+./indexer testing/letters-depth-0 testing/dummyIndexFilew
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+echo "Exit status of non-writable file: $?"
+Exit status of non-writable file: 5
+
+# Testing with non-valid file path
+./indexer testing/letters-depth-0 testing5/indexfile
+indexFilename must be writable.
+echo "Exit status of non-valid file path: $?"
+Exit status of non-valid file path: 3
+
+# Testing with empty crawler directory
+touch testing/letters-depth-0/.crawler
+./indexer testing/letters-depth-0 testing/indexerResults/indexEmpty
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+echo "Exit status of empty crawler directory: $?"
+Exit status of empty crawler directory: 5
+
+# IndexTest
+###########
+# Testing with non-readable old index file
+./indextest testing/dummyIndexFiler indexFile
+oldIndexFilename must be a readable existing file.
+echo "Exit status of non-readable old index file: $?"
+Exit status of non-readable old index file: 2
+
+# Testing with non-valid old index file path
+./indextest testing5/indexfile indexFile
+oldIndexFilename must be a readable existing file.
+echo "Exit status of non-valid old index file path: $?"
+Exit status of non-valid old index file path: 2
+
+chmod +r testing/dummyIndexFiler
+chmod: cannot access 'testing/dummyIndexFiler': No such file or directory
+
+# Testing with non-writable new index file
+./indextest testing/dummyIndexFiler testing/dummyIndexFilew
+oldIndexFilename must be a readable existing file.
+echo "Exit status of non-writable new index file: $?"
+Exit status of non-writable new index file: 2
+
+# Testing with non-valid new index file path
+./indextest testing/dummyIndexFiler testing5/index
+oldIndexFilename must be a readable existing file.
+echo "Exit status of non-valid new index file path: $?"
+Exit status of non-valid new index file path: 2
+
+# Testing on empty old Index file
+./indextest testing/indexerResults/indexEmpty testing/indextestResults/indexEmpty
+echo "Exit status of empty old index file: $?"
+Exit status of empty old index file: 0
+
+# Testing indexer on relatively small amount of crawler files using the letters directories
+# They also contain words that repeat, have mixed capitalization, non-alphabetic characters,
+# and have words that have less than 3 characters.
+###########################################################################################
+./indexer testing/letters-depth-0 testing/indexerResults/lettersIndex-0
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+echo "Exit status of index of letters-depth-0: $?"
+Exit status of index of letters-depth-0: 5
+./indexer testing/letters-depth-1 testing/indexerResults/lettersIndex-1
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+echo "Exit status of index of letters-depth-1: $?"
+Exit status of index of letters-depth-1: 5
+./indexer testing/letters-depth-2 testing/indexerResults/lettersIndex-2
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'is' is less than three characters
+Trouble inserting (is, 3) into index
+'C' is less than three characters
+Trouble inserting (C, 3) into index
+'D' is less than three characters
+Trouble inserting (D, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 3) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+Attempting to insert (B, 3) into index.
+Attempting to insert (B, 3) into index.
+Attempting to insert (is, 3) into index.
+Attempting to insert (for, 3) into index.
+Success
+Attempting to insert (Breadth, 3) into index.
+Success
+Attempting to insert (first, 3) into index.
+Success
+Attempting to insert (search, 3) into index.
+Success
+Attempting to insert (C, 3) into index.
+Attempting to insert (D, 3) into index.
+Attempting to insert (E, 3) into index.
+Attempting to insert (home, 3) into index.
+Success
+echo "Exit status of index of letters-depth-2: $?"
+Exit status of index of letters-depth-2: 5
+./indexer testing/letters-depth-3 testing/indexerResults/lettersIndex-3
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'is' is less than three characters
+Trouble inserting (is, 3) into index
+'C' is less than three characters
+Trouble inserting (C, 3) into index
+'D' is less than three characters
+Trouble inserting (D, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'is' is less than three characters
+Trouble inserting (is, 4) into index
+'F' is less than three characters
+Trouble inserting (F, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 4) into index
+'A' is less than three characters
+Trouble inserting (A, 4) into index
+'D' is less than three characters
+Trouble inserting (D, 5) into index
+'D' is less than three characters
+Trouble inserting (D, 5) into index
+'is' is less than three characters
+Trouble inserting (is, 5) into index
+'C' is less than three characters
+Trouble inserting (C, 6) into index
+'C' is less than three characters
+Trouble inserting (C, 6) into index
+'is' is less than three characters
+Trouble inserting (is, 6) into index
+'D' is less than three characters
+Trouble inserting (D, 6) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+Attempting to insert (B, 3) into index.
+Attempting to insert (B, 3) into index.
+Attempting to insert (is, 3) into index.
+Attempting to insert (for, 3) into index.
+Success
+Attempting to insert (Breadth, 3) into index.
+Success
+Attempting to insert (first, 3) into index.
+Success
+Attempting to insert (search, 3) into index.
+Success
+Attempting to insert (C, 3) into index.
+Attempting to insert (D, 3) into index.
+Attempting to insert (E, 3) into index.
+Attempting to insert (home, 3) into index.
+Success
+Attempting to insert (E, 4) into index.
+Attempting to insert (E, 4) into index.
+Attempting to insert (is, 4) into index.
+Attempting to insert (for, 4) into index.
+Success
+Attempting to insert (ENIAC, 4) into index.
+Success
+Attempting to insert (F, 4) into index.
+Attempting to insert (G, 4) into index.
+Attempting to insert (A, 4) into index.
+Attempting to insert (home, 4) into index.
+Success
+Attempting to insert (D, 5) into index.
+Attempting to insert (D, 5) into index.
+Attempting to insert (is, 5) into index.
+Attempting to insert (for, 5) into index.
+Success
+Attempting to insert (Depth, 5) into index.
+Success
+Attempting to insert (first, 5) into index.
+Success
+Attempting to insert (search, 5) into index.
+Success
+Attempting to insert (home, 5) into index.
+Success
+Attempting to insert (C, 6) into index.
+Attempting to insert (C, 6) into index.
+Attempting to insert (is, 6) into index.
+Attempting to insert (for, 6) into index.
+Success
+Attempting to insert (Computational, 6) into index.
+Success
+Attempting to insert (biology, 6) into index.
+Success
+Attempting to insert (D, 6) into index.
+Attempting to insert (home, 6) into index.
+Success
+echo "Exit status of index of letters-depth-3: $?"
+Exit status of index of letters-depth-3: 5
+./indexer testing/letters-depth-4 testing/indexerResults/lettersIndex-4
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'is' is less than three characters
+Trouble inserting (is, 3) into index
+'C' is less than three characters
+Trouble inserting (C, 3) into index
+'D' is less than three characters
+Trouble inserting (D, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'is' is less than three characters
+Trouble inserting (is, 4) into index
+'F' is less than three characters
+Trouble inserting (F, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 4) into index
+'A' is less than three characters
+Trouble inserting (A, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'is' is less than three characters
+Trouble inserting (is, 5) into index
+'H' is less than three characters
+Trouble inserting (H, 5) into index
+'F' is less than three characters
+Trouble inserting (F, 6) into index
+'F' is less than three characters
+Trouble inserting (F, 6) into index
+'is' is less than three characters
+Trouble inserting (is, 6) into index
+'H' is less than three characters
+Trouble inserting (H, 6) into index
+'D' is less than three characters
+Trouble inserting (D, 7) into index
+'D' is less than three characters
+Trouble inserting (D, 7) into index
+'is' is less than three characters
+Trouble inserting (is, 7) into index
+'C' is less than three characters
+Trouble inserting (C, 8) into index
+'C' is less than three characters
+Trouble inserting (C, 8) into index
+'is' is less than three characters
+Trouble inserting (is, 8) into index
+'D' is less than three characters
+Trouble inserting (D, 8) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+Attempting to insert (B, 3) into index.
+Attempting to insert (B, 3) into index.
+Attempting to insert (is, 3) into index.
+Attempting to insert (for, 3) into index.
+Success
+Attempting to insert (Breadth, 3) into index.
+Success
+Attempting to insert (first, 3) into index.
+Success
+Attempting to insert (search, 3) into index.
+Success
+Attempting to insert (C, 3) into index.
+Attempting to insert (D, 3) into index.
+Attempting to insert (E, 3) into index.
+Attempting to insert (home, 3) into index.
+Success
+Attempting to insert (E, 4) into index.
+Attempting to insert (E, 4) into index.
+Attempting to insert (is, 4) into index.
+Attempting to insert (for, 4) into index.
+Success
+Attempting to insert (ENIAC, 4) into index.
+Success
+Attempting to insert (F, 4) into index.
+Attempting to insert (G, 4) into index.
+Attempting to insert (A, 4) into index.
+Attempting to insert (home, 4) into index.
+Success
+Attempting to insert (G, 5) into index.
+Attempting to insert (G, 5) into index.
+Attempting to insert (is, 5) into index.
+Attempting to insert (for, 5) into index.
+Success
+Attempting to insert (Graph, 5) into index.
+Success
+Attempting to insert (traversal, 5) into index.
+Success
+Attempting to insert (H, 5) into index.
+Attempting to insert (home, 5) into index.
+Success
+Attempting to insert (F, 6) into index.
+Attempting to insert (F, 6) into index.
+Attempting to insert (is, 6) into index.
+Attempting to insert (for, 6) into index.
+Success
+Attempting to insert (Fast, 6) into index.
+Success
+Attempting to insert (Fourier, 6) into index.
+Success
+Attempting to insert (transform, 6) into index.
+Success
+Attempting to insert (H, 6) into index.
+Attempting to insert (home, 6) into index.
+Success
+Attempting to insert (D, 7) into index.
+Attempting to insert (D, 7) into index.
+Attempting to insert (is, 7) into index.
+Attempting to insert (for, 7) into index.
+Success
+Attempting to insert (Depth, 7) into index.
+Success
+Attempting to insert (first, 7) into index.
+Success
+Attempting to insert (search, 7) into index.
+Success
+Attempting to insert (home, 7) into index.
+Success
+Attempting to insert (C, 8) into index.
+Attempting to insert (C, 8) into index.
+Attempting to insert (is, 8) into index.
+Attempting to insert (for, 8) into index.
+Success
+Attempting to insert (Computational, 8) into index.
+Success
+Attempting to insert (biology, 8) into index.
+Success
+Attempting to insert (D, 8) into index.
+Attempting to insert (home, 8) into index.
+Success
+echo "Exit status of index of letters-depth-4: $?"
+Exit status of index of letters-depth-4: 5
+./indexer testing/letters-depth-5 testing/indexerResults/lettersIndex-5
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'is' is less than three characters
+Trouble inserting (is, 3) into index
+'C' is less than three characters
+Trouble inserting (C, 3) into index
+'D' is less than three characters
+Trouble inserting (D, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'is' is less than three characters
+Trouble inserting (is, 4) into index
+'F' is less than three characters
+Trouble inserting (F, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 4) into index
+'A' is less than three characters
+Trouble inserting (A, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'is' is less than three characters
+Trouble inserting (is, 5) into index
+'H' is less than three characters
+Trouble inserting (H, 5) into index
+'H' is less than three characters
+Trouble inserting (H, 6) into index
+'H' is less than three characters
+Trouble inserting (H, 6) into index
+'is' is less than three characters
+Trouble inserting (is, 6) into index
+'B' is less than three characters
+Trouble inserting (B, 6) into index
+'F' is less than three characters
+Trouble inserting (F, 7) into index
+'F' is less than three characters
+Trouble inserting (F, 7) into index
+'is' is less than three characters
+Trouble inserting (is, 7) into index
+'H' is less than three characters
+Trouble inserting (H, 7) into index
+'D' is less than three characters
+Trouble inserting (D, 8) into index
+'D' is less than three characters
+Trouble inserting (D, 8) into index
+'is' is less than three characters
+Trouble inserting (is, 8) into index
+'C' is less than three characters
+Trouble inserting (C, 9) into index
+'C' is less than three characters
+Trouble inserting (C, 9) into index
+'is' is less than three characters
+Trouble inserting (is, 9) into index
+'D' is less than three characters
+Trouble inserting (D, 9) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+Attempting to insert (B, 3) into index.
+Attempting to insert (B, 3) into index.
+Attempting to insert (is, 3) into index.
+Attempting to insert (for, 3) into index.
+Success
+Attempting to insert (Breadth, 3) into index.
+Success
+Attempting to insert (first, 3) into index.
+Success
+Attempting to insert (search, 3) into index.
+Success
+Attempting to insert (C, 3) into index.
+Attempting to insert (D, 3) into index.
+Attempting to insert (E, 3) into index.
+Attempting to insert (home, 3) into index.
+Success
+Attempting to insert (E, 4) into index.
+Attempting to insert (E, 4) into index.
+Attempting to insert (is, 4) into index.
+Attempting to insert (for, 4) into index.
+Success
+Attempting to insert (ENIAC, 4) into index.
+Success
+Attempting to insert (F, 4) into index.
+Attempting to insert (G, 4) into index.
+Attempting to insert (A, 4) into index.
+Attempting to insert (home, 4) into index.
+Success
+Attempting to insert (G, 5) into index.
+Attempting to insert (G, 5) into index.
+Attempting to insert (is, 5) into index.
+Attempting to insert (for, 5) into index.
+Success
+Attempting to insert (Graph, 5) into index.
+Success
+Attempting to insert (traversal, 5) into index.
+Success
+Attempting to insert (H, 5) into index.
+Attempting to insert (home, 5) into index.
+Success
+Attempting to insert (H, 6) into index.
+Attempting to insert (H, 6) into index.
+Attempting to insert (is, 6) into index.
+Attempting to insert (for, 6) into index.
+Success
+Attempting to insert (Huffman, 6) into index.
+Success
+Attempting to insert (coding, 6) into index.
+Success
+Attempting to insert (B, 6) into index.
+Attempting to insert (home, 6) into index.
+Success
+Attempting to insert (F, 7) into index.
+Attempting to insert (F, 7) into index.
+Attempting to insert (is, 7) into index.
+Attempting to insert (for, 7) into index.
+Success
+Attempting to insert (Fast, 7) into index.
+Success
+Attempting to insert (Fourier, 7) into index.
+Success
+Attempting to insert (transform, 7) into index.
+Success
+Attempting to insert (H, 7) into index.
+Attempting to insert (home, 7) into index.
+Success
+Attempting to insert (D, 8) into index.
+Attempting to insert (D, 8) into index.
+Attempting to insert (is, 8) into index.
+Attempting to insert (for, 8) into index.
+Success
+Attempting to insert (Depth, 8) into index.
+Success
+Attempting to insert (first, 8) into index.
+Success
+Attempting to insert (search, 8) into index.
+Success
+Attempting to insert (home, 8) into index.
+Success
+Attempting to insert (C, 9) into index.
+Attempting to insert (C, 9) into index.
+Attempting to insert (is, 9) into index.
+Attempting to insert (for, 9) into index.
+Success
+Attempting to insert (Computational, 9) into index.
+Success
+Attempting to insert (biology, 9) into index.
+Success
+Attempting to insert (D, 9) into index.
+Attempting to insert (home, 9) into index.
+Success
+echo "Exit status of index of letters-depth-5: $?"
+Exit status of index of letters-depth-5: 5
+
+# Testing indexer on relatively large amount of crawler files using the wikipedia directories
+##############################################################################################
+./indexer testing/wikipedia-depth-0 testing/indexerResults/wikipediaIndex-0 &> /dev/null
+echo "Exit status of index of wikipedia-depth-0: $?"
+Exit status of index of wikipedia-depth-0: 5
+./indexer testing/wikipedia-depth-1 testing/indexerResults/wikipediaIndex-1 &> /dev/null
+echo "Exit status of index of wikipedia-depth-1: $?"
+Exit status of index of wikipedia-depth-1: 5
+./indexer testing/wikipedia-depth-2 testing/indexerResults/wikipediaIndex-2 &> /dev/null
+echo "Exit status of index of wikipedia-depth-2: $?"
+Exit status of index of wikipedia-depth-2: 5
+
+# Testing indextest on results of indexer
+#########################################
+./indextest testing/indexerResults/lettersIndex-0 testing/indextestResults/lettersIndex-0
+echo "Exit status of copying letters-depth-0: $?"
+Exit status of copying letters-depth-0: 0
+./indextest testing/indexerResults/lettersIndex-1 testing/indextestResults/lettersIndex-1
+echo "Exit status of copying letters-depth-1: $?"
+Exit status of copying letters-depth-1: 0
+./indextest testing/indexerResults/lettersIndex-2 testing/indextestResults/lettersIndex-2
+echo "Exit status of copying letters-depth-2: $?"
+Exit status of copying letters-depth-2: 0
+./indextest testing/indexerResults/lettersIndex-3 testing/indextestResults/lettersIndex-3
+echo "Exit status of copying letters-depth-3: $?"
+Exit status of copying letters-depth-3: 0
+./indextest testing/indexerResults/lettersIndex-4 testing/indextestResults/lettersIndex-4
+echo "Exit status of copying letters-depth-4: $?"
+Exit status of copying letters-depth-4: 0
+./indextest testing/indexerResults/lettersIndex-5 testing/indextestResults/lettersIndex-5
+echo "Exit status of copying letters-depth-5: $?"
+Exit status of copying letters-depth-5: 0
+./indextest testing/indexerResults/wikipediaIndex-0 testing/indextestResults/wikipediaIndex-0 
+echo "Exit status of copying wikipedia-depth-0: $?"
+Exit status of copying wikipedia-depth-0: 0
+./indextest testing/indexerResults/wikipediaIndex-1 testing/indextestResults/wikipediaIndex-1 
+echo "Exit status of copying wikipedia-depth-1: $?"
+Exit status of copying wikipedia-depth-1: 0
+./indextest testing/indexerResults/wikipediaIndex-2 testing/indextestResults/wikipediaIndex-2
+echo "Exit status of copying wikipedia-depth-2: $?"
+Exit status of copying wikipedia-depth-2: 0
+
+
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-0 | sort > testing/indextestResults/lettersIndex-0.sorted
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-1 | sort > testing/indextestResults/lettersIndex-1.sorted
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-2 | sort > testing/indextestResults/lettersIndex-2.sorted
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-3 | sort > testing/indextestResults/lettersIndex-3.sorted
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-4 | sort > testing/indextestResults/lettersIndex-4.sorted
+gawk -f indexsort.awk testing/indextestResults/lettersIndex-5 | sort > testing/indextestResults/lettersIndex-5.sorted
+gawk -f indexsort.awk testing/indextestResults/wikipediaIndex-0 | sort > testing/indextestResults/wikipediaIndex-0.sorted
+gawk -f indexsort.awk testing/indextestResults/wikipediaIndex-1 | sort > testing/indextestResults/wikipediaIndex-1.sorted
+gawk -f indexsort.awk testing/indextestResults/wikipediaIndex-2 | sort > testing/indextestResults/wikipediaIndex-2.sorted
+
+
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-0 | sort > testing/indexerResults/lettersIndex-0.sorted
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-1 | sort > testing/indexerResults/lettersIndex-1.sorted
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-2 | sort > testing/indexerResults/lettersIndex-2.sorted
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-3 | sort > testing/indexerResults/lettersIndex-3.sorted
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-4 | sort > testing/indexerResults/lettersIndex-4.sorted
+gawk -f indexsort.awk testing/indexerResults/lettersIndex-5 | sort > testing/indexerResults/lettersIndex-5.sorted
+gawk -f indexsort.awk testing/indexerResults/wikipediaIndex-0 | sort > testing/indexerResults/wikipediaIndex-0.sorted
+gawk -f indexsort.awk testing/indexerResults/wikipediaIndex-1 | sort > testing/indexerResults/wikipediaIndex-1.sorted
+gawk -f indexsort.awk testing/indexerResults/wikipediaIndex-2 | sort > testing/indexerResults/wikipediaIndex-2.sorted
+
+
+echo "Differences between indexes if any:"
+Differences between indexes if any:
+
+diff testing/indextestResults/lettersIndex-0.sorted testing/indexerResults/lettersIndex-0.sorted
+diff testing/indextestResults/lettersIndex-1.sorted testing/indexerResults/lettersIndex-1.sorted
+diff testing/indextestResults/lettersIndex-2.sorted testing/indexerResults/lettersIndex-2.sorted
+diff testing/indextestResults/lettersIndex-3.sorted testing/indexerResults/lettersIndex-3.sorted
+diff testing/indextestResults/lettersIndex-4.sorted testing/indexerResults/lettersIndex-4.sorted
+diff testing/indextestResults/lettersIndex-5.sorted testing/indexerResults/lettersIndex-5.sorted
+diff testing/indextestResults/wikipediaIndex-0.sorted testing/indexerResults/wikipediaIndex-0.sorted 
+diff testing/indextestResults/wikipediaIndex-1.sorted testing/indexerResults/wikipediaIndex-1.sorted
+diff testing/indextestResults/wikipediaIndex-2.sorted testing/indexerResults/wikipediaIndex-2.sorted
+
+
+
+
+exit 0

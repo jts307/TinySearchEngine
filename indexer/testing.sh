@@ -111,7 +111,7 @@ chmod -r testing/dummyIndexFiler
 #####################################################################
 ../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-0 0
 ../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-1 1
-../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2
+#../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2
 
 # Testing programs with various forms of incorrect parameters
 ############################################################
@@ -188,11 +188,11 @@ echo "Exit status of index of letters-depth-5: $?"
 
 # Testing indexer on relatively large amount of crawler files using the wikipedia directories
 ##############################################################################################
-./indexer testing/wikipedia-depth-0 testing/indexerResults/wikipediaIndex-0
+./indexer testing/wikipedia-depth-0 testing/indexerResults/wikipediaIndex-0 &> /dev/null
 echo "Exit status of index of wikipedia-depth-0: $?"
-./indexer testing/wikipedia-depth-1 testing/indexerResults/wikipediaIndex-1
+./indexer testing/wikipedia-depth-1 testing/indexerResults/wikipediaIndex-1 &> /dev/null
 echo "Exit status of index of wikipedia-depth-1: $?"
-./indexer testing/wikipedia-depth-2 testing/indexerResults/wikipediaIndex-2
+./indexer testing/wikipedia-depth-2 testing/indexerResults/wikipediaIndex-2 &> /dev/null
 echo "Exit status of index of wikipedia-depth-2: $?"
 
 # Testing indextest on results of indexer
@@ -209,9 +209,9 @@ echo "Exit status of copying letters-depth-3: $?"
 echo "Exit status of copying letters-depth-4: $?"
 ./indextest testing/indexerResults/lettersIndex-5 testing/indextestResults/lettersIndex-5
 echo "Exit status of copying letters-depth-5: $?"
-./indextest testing/indexerResults/wikipediaIndex-0 testing/indextestResults/wikipediaIndex-0
+./indextest testing/indexerResults/wikipediaIndex-0 testing/indextestResults/wikipediaIndex-0 
 echo "Exit status of copying wikipedia-depth-0: $?"
-./indextest testing/indexerResults/wikipediaIndex-1 testing/indextestResults/wikipediaIndex-1
+./indextest testing/indexerResults/wikipediaIndex-1 testing/indextestResults/wikipediaIndex-1 
 echo "Exit status of copying wikipedia-depth-1: $?"
 ./indextest testing/indexerResults/wikipediaIndex-2 testing/indextestResults/wikipediaIndex-2
 echo "Exit status of copying wikipedia-depth-2: $?"
