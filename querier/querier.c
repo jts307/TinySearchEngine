@@ -27,10 +27,12 @@
 #include "index.h"
 #include "file.h"
 #include "word.h"
+#include "counters.h"
 
 int fileno(FILE *stream);
 static void prompt(void);
 char **clean_input(char *input); 
+counters_t *calculate_score(index_t *index, char **words, int start, int end);
 
 int main(const int argc, const char *argv[])
 {
@@ -62,35 +64,50 @@ int main(const int argc, const char *argv[])
       } else if ((index = index_new(lines_in_file(indexFile)*1.34)) == NULL) {
           // on error return
 	  fprintf(stderr, "Could not initialize index struct\n");
+	  fclose(indexFile);
 	  status+=4;
+      // create index from contents of indexFilename
+      } else if (index_load(index, indexFile) != 0) {
+          fprintf(stderr, "Error loading index from file\n");
+          fclose(indexFile);
+          index_delete(index);
+	  status+=5;
       } else {
-	  // create index from contents of indexFilename
-          if (index_load(index, indexFile) != 0) {
-            fprintf(stderr, "Error loading index from file\n");
-            status+=5;
-          }
 	  fclose(indexFile);
 
 	  // read input from stdin until EOF
 	  while (!feof(stdin)) {
- 
 	    // if interactive user print prompt
 	    prompt();
+
+	    // getting query input
 	    if ((input=readlinep()) != NULL) {
 	      // clean and parse query input into proper syntax
 	      if ((cleanedInput=clean_input(input)) != NULL) {
-		  
-		  for (int j = 0; j < 5; j++) {
-    		    printf("%s\n", cleanedInput[j]);
-  		  }
+		printf("Query: ");
 
-	          count_free(cleanedInput);
+		// printing cleaned query input
+		for (int i = 0; strcmp(cleanedInput[i],"\0") != 0; i++) {
+		  printf("%s ", cleanedInput[i]);
+		}
+		printf("\n");
+
+		  
+
+
+
+
+
+
+
+
+		  
+	        count_free(cleanedInput);
 	      }
-              free(input);
-            // on error, log it and continue		    
+              free(input);		    
 	    }  
 	  }
-	  // free memory
+	  // free memory occupied by index
 	  index_delete(index);
       }
   }
@@ -103,7 +120,7 @@ int main(const int argc, const char *argv[])
  * Parameters:
  * 	-input: string to be parsed
  * returns:
- * 	-words: array of words string will be parsed into
+ * 	-words: array of words string will be parsed into, where "\0" is the last element of the array 
  * 	-NULL, if there is any improper syntax or any error (other than a memory allocation 
  * 	 error, in which case the query program exits).
  */
@@ -114,8 +131,9 @@ char **clean_input(char *input)
   char *rest=input;	  // getting a pointer to start of string
   bool pervWasOp=false;   // was the pervious word parsed 'and' or 'or'
 
-  // max # of pointers is the max # of words
-  words = count_calloc(strlen(input)/2+1, sizeof(char*));
+  // max # of pointers is the max # of words, 
+  // add one more for terminating character 
+  words = count_calloc(strlen(input)/2+2, sizeof(char*));
   assertp(words, "Problem allocating memory for words array.\n");
 
   // splitting into words 
@@ -189,8 +207,29 @@ char **clean_input(char *input)
       count_free(words);
       return NULL;
   } else {
+      words[count] = "\0";
       return words;
   }
+}
+
+counters_t *calculate_score(index_t *index, char **words, int start, int end) 
+{
+  // either of these being null would be unexpected behavior
+  // but if this does happen then exit with non-zero status
+  assertp(index, "calculate_score gets NULL index");
+  assertp(words, "calculate_score gets NULL words");
+
+  // checking if words is empty
+  if (strcmp(words[start],"\0") != 0) {
+    return NULL;
+
+
+
+
+
+  }
+  // if empty, return NULL
+  return NULL;
 }
 
 /* Prints out a prompt if recieving input from an interactive user.
@@ -203,3 +242,4 @@ static void prompt(void)
     printf("Query? ");
   }
 }
+
