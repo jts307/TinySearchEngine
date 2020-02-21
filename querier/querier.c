@@ -220,9 +220,7 @@ counters_t *calculate_score(index_t *index, char **words, int start, int end)
   assertp(words, "calculate_score gets NULL words");
 
   // checking if words is empty
-  if (strcmp(words[start],"\0") != 0) {
-    return NULL;
-
+  if (strcmp(words[0],"\0") != 0) {
 
 
 
