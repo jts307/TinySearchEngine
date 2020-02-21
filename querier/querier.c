@@ -21,24 +21,26 @@
 #include <stdbool.h>
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 #include "memory.h"
 #include "pagedir.h"
 #include "index.h"
 #include "file.h"
-#include "readlinep.h"
+#include "word.h"
 
 int fileno(FILE *stream);
 static void prompt(void);
-char **words sep_input(char *input); 
+char **clean_input(char *input); 
 
-int main(const int argc, const char *argv[]){
+int main(const int argc, const char *argv[])
+{
 
   int status=0;			// exit status    	
   int reqNumArgs=3; 		// required number of arguments
   FILE *indexFile=NULL;		// index file to be read
   index_t *index=NULL;		// index will be loaded here for reading
   char *input=NULL;		// query to be searched
-  char **parsedInput=NULL;	// cleaned query to be searched
+  char **cleanedInput=NULL;	// cleaned query to be searched
 
   // checking numbers of arguments passed
   if (argc != reqNumArgs) {
@@ -64,7 +66,7 @@ int main(const int argc, const char *argv[]){
       } else {
 	  // create index from contents of indexFilename
           if (index_load(index, indexFile) != 0) {
-            fprintf(stderr, "Error loading index from file");
+            fprintf(stderr, "Error loading index from file\n");
             status+=5;
           }
 	  fclose(indexFile);
@@ -74,22 +76,19 @@ int main(const int argc, const char *argv[]){
  
 	    // if interactive user print prompt
 	    prompt();
-	    if ((input=readlinep(stdin)) != NULL) {
-	      
+	    if ((input=readlinep()) != NULL) {
 	      // clean and parse query input into proper syntax
-	      if ((parsedInput=clean_input()) != NULL) {
-	      
-	      // on error, log it and continue
-	      } else {
-	          fprintf(stderr, "Error: There was an issue parsing input.");
-		  status=7; 
+	      if ((cleanedInput=clean_input(input)) != NULL) {
+		  
+		  for (int j = 0; j < 5; j++) {
+    		    printf("%s\n", cleanedInput[j]);
+  		  }
+
+	          count_free(cleanedInput);
 	      }
               free(input);
             // on error, log it and continue		    
-	    } else {
-	      fprintf(stderr, "Error: There was an issue reading standard input.");
-	      status=6;
-	    }	  
+	    }  
 	  }
 	  // free memory
 	  index_delete(index);
@@ -98,27 +97,28 @@ int main(const int argc, const char *argv[]){
   return status;
 }
 
-/* 
+/* 'Cleans' a string, i.e. it seperates a string (char *) into a series of words (char **)
+ * based on a space delimiter and makes sure the string follows proper query syntax as 
+ * described in the documentation.
  * Parameters:
  * 	-input: string to be parsed
  * returns:
- * 	-words: array of words string was parsed into
+ * 	-words: array of words string will be parsed into
+ * 	-NULL, if there is any improper syntax or any error (other than a memory allocation 
+ * 	 error, in which case the query program exits).
  */
-char **words clean_input(char *input) 
+char **clean_input(char *input) 
 {
-  char** words;		// array of words to be created
-  int count=0;		// place in array a word will be placed
-  char *rest=input;	// getting a pointer to start of string
-  char *last=NULL;	// keeping track of the last word turned
-  			// into its own char*
+  char** words;		  // array of words to be created
+  int count=0;		  // place in array a word will be placed
+  char *rest=input;	  // getting a pointer to start of string
+  bool pervWasOp=false;   // was the pervious word parsed 'and' or 'or'
 
   // max # of pointers is the max # of words
   words = count_calloc(strlen(input)/2+1, sizeof(char*));
-  assertp(words, "Problem allocating memory for words array.");
+  assertp(words, "Problem allocating memory for words array.\n");
 
   // splitting into words 
-  int count = 0;
-  char *rest = input;
   while (*rest != '\0') {
 
     // starting address of a word
@@ -129,49 +129,67 @@ char **words clean_input(char *input)
      
       // if non-alphabetic and non-space input is detected then
       // return error
-      if (!isalpha(*start) && !isspace(*start)) {
-        fprintf(stderr, "Error: Input must contain only spaces and alphabetic characters.");
+      if ((!isalpha(*start)) && (!isspace(*start))) {
+        fprintf(stderr, "Error: Input must contain only spaces and alphabetic characters.\n");
+	count_free(words);
 	return NULL;
       }
     }
     // seek the end of the word
-    for (rest = start; isalpha(*rest) && *rest != '\0'; rest++) {
-      
-      // if non-alphabetic and non-space input is detected then
-      // return error
-      if (!isalpha(*start) && !isspace(*start)) {
-        fprintf(stderr, "Error: Input must contain only spaces and alphabetic characters.");
-	return NULL;
-      } 
+    for (rest = start; isalpha(*rest) && *rest != '\0'; rest++) {  
     }
+
     // insert null character at end of a word 
     if (*rest != '\0') {
+      // if non-alphabetic and non-space input is detected then
+      // return error
+      if (!isspace(*rest)) {
+        fprintf(stderr, "Error: Input must contain only spaces and alphabetic characters.\n");
+	count_free(words);
+	return NULL;
+      }  
       *rest++ = '\0';
     }
-    
     if (*start != '\0') {
       // lowercase word 
       if (normalizeWord(start)) {
         // on error, return NULL
-	fprintf(stderr, "Error: Could not normalize word within passed input.");
+	fprintf(stderr, "Error: Could not normalize word within passed input.\n");
+	count_free(words);
 	return NULL;
       }
-
       // if `and` or `or` operators are encountered then checking for 
       // potential syntax errors
-      if (strcmp(start, "and") || strcmp(start, "or")) {
-        // if first word then syntax error
-        if (count = 0) {
- 	  fprintf(stderr, "Error: ");
-	}
-      
+      if ((strcmp(start, "and") == 0) || (strcmp(start, "or") == 0)) {
+          // if first word then syntax error
+          if (count == 0) {
+ 	    fprintf(stderr, "Error: '%s' operator cannot be first\n", start);
+	    count_free(words);
+	    return NULL;
+	  }
+	  // if this comes after another operator then
+	  // its a syntax error
+	  if (pervWasOp) {
+	    fprintf(stderr, "Error: 'and' and 'or' operators cannot follow each other.\n");
+	    count_free(words);
+	    return NULL;
+	  }	
+	  pervWasOp=true;
+      } else {
+      	  pervWasOp=false;
       }
       // insert word into words array 
       words[count++] = start;
-
-      // updating last word
-      last = start;
     }
+  }
+  // syntax error if last word is an operator
+  char *last=words[count-1];
+  if ((strcmp(last, "and") == 0) || (strcmp(last, "or") == 0)) {
+      fprintf(stderr, "Error: '%s' operator cannot be last\n", last);
+      count_free(words);
+      return NULL;
+  } else {
+      return words;
   }
 }
 
