@@ -75,4 +75,14 @@ int pageSaver(const char *pageDir, webpage_t *wp);
  * */
 webpage_t *webpageLoad(const char *pageDir, int id);
 
+/* Takes a document id and a pageDirectory and returns the url of the document
+ * specified by the document id.
+ * parameters:
+ * 	pageDir- pointer to a string of the path of a directory
+ * 	id - the number name of a file within the pageDir
+ * returns:
+ * 	A string containing the url within the specified document.
+*/
+const char *getPageURL(const char *pageDir, int id);
+
 #endif // __PAGEDIR_H

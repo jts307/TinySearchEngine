@@ -15,6 +15,7 @@
 #include "memory.h"
 #include "file.h"
 
+
 /**************** file-local global variables ****************/
 static int id = 1;  // id of file that will be created in the page Directory. 
 
@@ -252,6 +253,45 @@ webpage_t *webpageLoad(const char *pageDir, int id)
   }
   // wp is NULL on error
   return wp;
+}
+
+/**************** getPageURL() ****************/
+const char *getPageURL(const char *pageDir, int id)
+{
+  FILE *fp=NULL;	// document that contains url
+  char *filePath=NULL;  // path to document 
+  int numDigits;        // number of digits id has
+  char *stringId=NULL;  // conversion of id to a char* type
+  const char *url=NULL;	// url to be returned
+
+  // turning int id into char* 
+  numDigits = ceil(log10(id));
+  stringId = (char*)count_malloc((numDigits+2)*sizeof(char));
+  assertp(stringId, "Failure to allocate space for stringId pointer\n");
+  sprintf(stringId, "%d", id);
+  
+  // getting the file path for document
+  if ((filePath = getFilePath(pageDir, stringId)) != NULL) {
+    // opening the file for reading
+    if ((fp = fopen(filePath, "r")) != NULL) {
+      count_free(stringId);
+
+      // reading first line of file for url
+      url=freadlinep(fp);
+
+      fclose(fp);
+      return url;
+
+    // on error log it 
+    } else {
+      fprintf(stderr, "%s is not a readable or existing file", filePath);
+    }
+  // on error log it
+  } else {
+    fprintf(stderr, "Trouble creating file path for document %s in %s\n", stringId, pageDir);
+  }
+  count_free(stringId);
+  return NULL;
 }
 
 /* Used to get create a file path inside a directory.

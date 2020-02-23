@@ -16,6 +16,7 @@
 #include "file.h"
 #include "memory.h"
 
+
 /**************** file-local global variables ****************/
 /* none */
 
@@ -108,6 +109,17 @@ int index_find(index_t *index, const char *word, const int docId)
   }
   fprintf(stderr, "index_find gets NULL argument\n");
   return 0;
+}
+
+/**************** index_find_ctrs() ****************/
+counters_t *index_find_ctrs(index_t *index, const char *word)
+{
+  if ((index != NULL) && (word != NULL) && (index->ht != NULL)) {
+    // searching index's hashtable using word
+    return hashtable_find(index->ht, word);
+  }
+  fprintf(stderr, "index_find_ctrs gets NULL argument\n");
+  return NULL;
 }
 
 /**************** index_print() ****************/

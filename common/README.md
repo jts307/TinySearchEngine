@@ -13,7 +13,7 @@ To clean up, run `make clean`.
 
 ## Overview
 
- * `pagedir` - functhat that involve writing files to the pageDirectory
+ * `pagedir` - functions that that involve writing files to the pageDirectory
  * `word` - functions that involve modifying char* types.
  * `index` - the **index** data structure
 
@@ -82,6 +82,16 @@ int pageSaver(const char *pageDir, webpage_t *wp);
  *      pointer to the webpage type on success and NULL on any error.
  * */
 webpage_t *webpageLoad(const char *pageDir, int id);
+
+/* Takes a document id and a pageDirectory and returns the url of the document
+ * specified by the document id.
+ * parameters:
+ *      pageDir- pointer to a string of the path of a directory
+ *      id - the number name of a file within the pageDir
+ * returns:
+ *      A string containing the url within the specified document.
+*/
+const char *getPageURL(const char *pageDir, int id);
 ```
 
 ### Assumptions
@@ -153,7 +163,7 @@ index_t *index_new(const int num_slots);
 bool index_insert(index_t *index, const char *word, const int docId, const int wordCount);
 
 /**************** index_find() ****************/
-/* Return the item associated with the given key.
+/* Return the word count associated with the given (word,docId) pair.
  *
  * Caller provides:
  *   valid pointer to index, valid string for word, valid int for docID
@@ -164,6 +174,20 @@ bool index_insert(index_t *index, const char *word, const int docId, const int w
  *   the index is unchanged by this operation.
  */
 int index_find(index_t *index, const char *word, const int docId);
+
+/**************** index_find_ctrs() ****************/
+/* Return the counters struct associated with the given word.
+ *
+ * Caller provides:
+ *   valid pointer to index, valid string for word
+ * We return:
+ *   counters struct associated with a word, if found;
+ *   NULL if any error or word and docID pair not found.
+ * Notes:
+ *   the index is unchanged by this operation.
+ */
+counters_t *index_find_ctrs(index_t *index, const char *word);
+
 /**************** index_print() ****************/
 /* Print the whole index; provide the output file.
  * Caller provides:

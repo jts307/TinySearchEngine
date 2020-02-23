@@ -1,4 +1,4 @@
-# Makefile for 'crawler' module
+# Makefile for 'indexer' module
 #
 # Jacob Werzinsky 
 

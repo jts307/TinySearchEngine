@@ -18,7 +18,7 @@ $(LIB): $(OBJS) $(ARVS)
 # Dependencies: 
 pagedir.o: pagedir.h 
 word.o: word.h
-index.o: index.h 
+index.o: index.h ../libcs50/counters.h 
 
 .PHONY: clean 
 

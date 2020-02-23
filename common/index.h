@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "hashtable.h"
+#include "counters.h"
 
 /**************** global types ****************/
 typedef struct index index_t;
@@ -53,7 +54,7 @@ index_t *index_new(const int num_slots);
 bool index_insert(index_t *index, const char *word, const int docId, const int wordCount);
 
 /**************** index_find() ****************/
-/* Return the item associated with the given key.
+/* Return the word count associated with the given (word,docId) pair.
  *
  * Caller provides:
  *   valid pointer to index, valid string for word, valid int for docID
@@ -64,6 +65,19 @@ bool index_insert(index_t *index, const char *word, const int docId, const int w
  *   the index is unchanged by this operation.
  */
 int index_find(index_t *index, const char *word, const int docId);
+
+/**************** index_find_ctrs() ****************/
+/* Return the counters struct associated with the given word.
+ *
+ * Caller provides:
+ *   valid pointer to index, valid string for word
+ * We return:
+ *   counters struct associated with a word, if found;
+ *   NULL if any error or word and docID pair not found.
+ * Notes:
+ *   the index is unchanged by this operation.
+ */
+counters_t *index_find_ctrs(index_t *index, const char *word);
 
 /**************** index_print() ****************/
 /* Print the whole index; provide the output file.

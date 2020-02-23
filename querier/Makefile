@@ -1,11 +1,11 @@
-# Makefile for 'crawler' module
+# Makefile for 'querier' module
 #
 # Jacob Werzinsky 
 
 PROG = querier 
 OBJS = querier.o 
 LIBS = ../common/common.a ../libcs50/libcs50.a
-CFLAGS = -Wall -pedantic -std=c11 -ggdb -lm $(TESTING) -I../common -I../libcs50 
+CFLAGS = -Wall -pedantic -std=gnu11 -ggdb -lm $(TESTING) -I../common -I../libcs50 
 CC = gcc
 MAKE = make
 
@@ -13,7 +13,7 @@ $(PROG): $(OBJS) $(LIBS)
 	$(CC) $(CFLAGS) $^ -o $@
 
 # Dependencies: 
-querier.o: ../libcs50/memory.h ../libcs50/file.h ../common/pagedir.h ../common/index.h ../common/word.h
+querier.o: ../libcs50/memory.h ../libcs50/file.h ../libcs50/counters.h ../common/pagedir.h ../common/index.h ../common/word.h
 
 ../common/common.a:
 	cd ../common;make
