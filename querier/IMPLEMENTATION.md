@@ -1,58 +1,10 @@
-# Implementation for indexer
+# Implementation for querier
 
 ## Pseudo code
 
-The pseudo code for the indexer goes as follows: 
+The pseudo code for the querier goes as follows: 
 
-### Execute from the command line as shown in the User Interface.
 
-Parameters are passed to `int main(const int argc, const char *argv[])` which then checks that there are exactly 3 arguments passed from the command line which include `const char *pageDirectory` and `const char *indexFilename`.
-
-### Parse the command line, validate parameters, initialize index structure, and open indexFilename
-
-The main function then validates its parameters by making calls to `IsCrawlerDirectory` within the *pagedir* module on `const char *pageDirectory` to check if the directory is a valid crawler directory, and `fopen` with "w" option on `const char *indexFilename` to check if `indexFilename` is a writable file if it exists. It then calls `index_t *index_new(const int num_slots)` to initialize/allocate memory for an index structure.
-
-### while there are still unread files within the pageDirectory,
-#### Read the next file and get its html
-
-Main then calls index_build, which then goes in a while loop with `webpage_t *webpageLoad(const char *pageDir, int id)` passing the `pageDirectory` each loop and an `int` starting at 1. This `int` increments every loop and `webpageLoad` returns a `webpage_t` that has the html, url and depth of the file with documentId `int` in `pageDirectory`. This loop continues until there is no file with the `int` documentId, in which case the `webpageLoad` returns NULL and the loop terminates.
-
-#### while there are still unread words in the html,
-##### Read the next word
-
-`char *webpage_getNextWord(webpage_t *page, int *pos)` is called in a while loop passing the `webpage_t` from the previous step and an `int` counter that is used by the the function to keep track of which word it is on. The function then returns the next `char *` word if there is one, in the case where there is not it returns NULL and the loop terminates.
-
-##### Normalize the word (make lowercase)
-
-The returned word is then normalized using `int normalizeWord(char *word)` which takes the word and lowercases any alphabetic characters within it.
-
-##### if has three or more characters, insert it with the docID into the index structure 
-
-The length of the word is checked with `strlen()` to see if it has three or more chars. If it does then the word and the current `int` documentId is passed to `bool index_insert(index_t *index, const char *word, const int docId, const int wordCount)`. 
-
-###### If the pair already has a count in the index, increment its count 
-###### If its not, then add them with a count of 1
-`const int wordCount` is calculated by taking the current wordCount of the (word, documentId) pair in the `index struct` using the function `int index_find(index_t *index, const char *word, const int docId)` and then adding 1. This is then passed to `index_insert` which then sets the (word, documentId, wordCount) trio in the `index struct`.
-
-### while there are still words in the index
-
-Control is then returned to `main` which then calls `void index_save(index_t *index, FILE *fp)`. Within `index_save`, `void hashtable_iterate(hashtable_t *ht, void *arg, void (*itemfunc)(void *arg, const char *key, void *item) )` is called on the `index struct`'s `hashtable struct`. The function goes through each (word, (documentId, wordCount)) pair similar to a while loop.
-
-#### Write a word to the indexFilename
-
- A local function in place of `itemfunc` and `indexFilename`(as a file stream) in place of `void *arg` are passed to `hashtable_iterate`. The local function writes each word to `indexFilename` using a `fprintf` statement.
-
-#### while there are still (docId, count) pairs associated with that word
-
-This function then calls `void counters_iterate(counters_t *ctrs, void *arg, void (*itemfunc)(void *arg, const int key, const int count))` which goes through each (documentId, wordCount) pair contained in `counters` associated with each word within the `index struct`, again similar to a while loop, and `IndexFilename` and a different local function are passed to `counters_iterate` as well.
-
-##### write that (docId, count) pair on the same line as the word
-
-Each (documentId, wordCount) pair is then written to `IndexFilename` through this other local function passed to `counters_iterate`, using a `fprintf` statement.
-
-### Free memory for index structure and any other structures used, close indexFilename
-
-Lastly, control is returned to `main` and `indexFilename` is closed using `fclose` and the `index struct` is then freed from memory using `void index_delete(index_t *index)`.
 
 ## Functions:
 
@@ -61,45 +13,54 @@ Lastly, control is returned to `main` and `indexFilename` is closed using `fclos
 ```c
 int main(const int argc, const char *argv[]);
 ```
-The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for reading using `fopen` to test if it is a readable file. Then, it allocates space for and initializes the index structure by calling `index_new()`, and fills this index with information from IndexFilename by calling `index_load()`. After this, it reads from the standard input using the `readlinep()` function from file.h. It 
+The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for reading using `fopen` to test if it is a readable file. Then, it allocates space for and initializes the index structure by calling `index_new()`, and fills this index with information from IndexFilename by calling `index_load()`. After this, it reads a line from the standard input using the `readlinep()` function from [file.h](../libcs50/file.h) and passes this to several other functions for interpretation. It then prints using `printf` to the standard output the scores calculated from these interpretations. Lastly, it frees memory for any data structures used, including `counters struct`s used and the `index struct` used.  
 
 ```c
 char **clean_input(char *input);
 ```
+The function 'cleans' a `char*` by seperating it into an array of `char*` based on space delimiters (space delimiters including tabs, multiple spaces, etc.). It also makes sure that the `char*` follows proper query syntax: there are only spaces and alphabetic characters, 'and' and 'or' operators cannot appear next to one another and cannot appear at the beginning or end of a query. It adds a '\0' character
+at the end of the array to mark the end of the array, this makes looping over the array easier.
 
 ```c
 counters_t *calculate_scores(index_t *index, char **words, int start, int end); 
 ```
+This function recursively computes the scores for a query that was 'cleaned' by `clean_input`. The scores are stored in a `counters struct` in (documentId, score) pairs. The scores are obtained first directly from the index previously initialized, then through the 'or's and 'and's of these scores. To do 'or' and 'and' operations on two `counters structs` this function calls `or_counters` and `and_counters`
 
 ```c
 counters_t *or_counters(counters_t *ctrs1, counters_t *ctrs2); 
 ```
+The function takes two `counters struct`s and copies one to a third `counters struct`, call this *sum*, by passing `copy_counters` and *sum* to `counters_iterate` which iterates over one of the two `counters struct`. It then iterates over the other of the two `counters struct`s with *sum* and `sum_counters` as parameters, which adds all the counters in `counter struct` being iterated over to *sum*. *sum* is then returned to the caller.
 
 ```c
 void sum_counters(void *ctrs, const int docId, const int count); 
 ```
+This function is used as a parameter for `counters_iterate`. As it is iterating over a `counters struct` it adds the `count` for a `docId` to the count of the same `docId` in `ctrs`, a different `counters struct`. This sum is then set in `ctrs` for the `docId` being iterated over. 
 
 ```c
 void copy_counters(void *ctrs, const int docId, const int count);
 ```
+This function is used as a parameter for `counters_iterate`. As it is iterating over a `counters struct`, it copies each of its `docId`s and `count`s to another `counters struct`, i.e. `ctrs`.
 
 ```c
 counters_t *and_counters(counters_t *ctrs1, counters_t *ctrs2);
 ```
+This function takes two `counters struct`s and combines them into a single `counters struct`, called `minCtrs`, that contains the minimum counts for each document id contained within both, except for the cases where 0 is the minimum value then the document id is excluded all together. It does this by bundling `minCtrs` and one of the two `counters struct`s into a `multi_counters struct`. The multi-counters is then passed to `counters_iterate` with the function `minimum_counters` which calculates the minimum of the two `counters struct`s and stores that in `minCtrs`.
 
 ```c
 void minimum_counters(void *arg, const int docId, const int count);
 ```
+This function is used as a parameter for `counters_iterate`. As it is iterating over a `counters struct`, it gets the count for `docId` within the other `counters struct` stored within `multi_counters`(which is passed as `void *arg`). It then determines if `count` or the count gotten from the other `counters struct` is smaller, which ever one is is set within `minCtrs` using `counters_set()`.
 
 ```c
 void num_counters(void *arg, const int docId, const int count);
 ```
+This function is used as a parameter for `counters_iterate`. The `void *arg` is a `int *` which will store the number of documentId's with non-zero counts. As it is iterating over a `counters struct`, it increments the `int` pointed to by `int*`
+by 1 if a `docId` with a `count` greater than 0 is encountered.
 
 ```c
 void sort_counters(void *arg, const int docId, const int count);
 ```
-
-
+This function is used as a parameter for `counters_iterate`. The `void *arg` is a `document_t **`. The function takes each (`docId`, `count`) pair being iterated over, creates a `document struct` for each pair, and stores a `document *` to each `document struct` within the array of `document *`. The `document *`s are sorted in decreasing order using the insertion sort algorithm as they are inserted into the array.
 
 ### word.c
 
