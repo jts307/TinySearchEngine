@@ -51,8 +51,8 @@ fi
 
 # Creating crawler files and index with the wikipedia page at depth 2
 #####################################################################
-../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2 > /dev/null 2>&1
-../indexer/indexer testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index > /dev/null 2>&1
+#../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2 > /dev/null 2>&1
+#../indexer/indexer testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index > /dev/null 2>&1
 
 # Testing programs with various forms of incorrect parameters
 ############################################################
@@ -110,7 +110,7 @@ echo "Exit status of letters-index-5: $?"
 
 # Testing the querier with a series of queries for wikipedia-depth-2
 # To test the speed of queries on larger indexes
-./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
-echo "Exit status of wikipedia-index-2: $?"
+#./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
+#echo "Exit status of wikipedia-index-2: $?"
 
 exit 0
