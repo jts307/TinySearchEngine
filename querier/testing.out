@@ -1,0 +1,518 @@
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50    -c -o querier.o querier.c
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  querier.o ../common/common.a ../libcs50/libcs50.a -o querier
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50    -c -o fuzzquery.o fuzzquery.c
+gcc -Wall -pedantic -std=gnu11 -ggdb -lm  -I../common -I../libcs50 fuzzquery.o ../common/common.a ../libcs50/libcs50.a -o fuzzquery
+bash -v testing.sh
+switchml () {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /usr/share/Modules/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}
+module () {  _module_raw "$@" 2>&1
+}
+_module_raw () {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}
+#!/bin/bash
+#
+# Testing script for indexer.c and indextest.c
+# Author: Jacob Werzinsky
+# Date: Feb 8, 2020
+#
+# usage: bash -v testing.sh
+# 
+# Created by Jacob Werzinsky, CS50, Winter 2020
+
+cd ../crawler
+make
+make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
+make[1]: 'crawler' is up to date.
+make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
+cd ../indexer
+make
+make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
+cd ../querier
+
+# making testing directories, program exits without testing if it cannot create a directory
+# or if it does not already exist
+############################################################################################
+mkdir "testing"
+if [ ! -d "testing" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+mkdir "testing/letters-depth-5"
+if [ ! -d "testing/letters-depth-5" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/wikipedia-depth-2"
+if [ ! -d "testing/wikipedia-depth-2" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+mkdir "testing/indexerResults"
+if [ ! -d "testing/indexerResults" ]
+then 
+	echo 1>&2 "Error creating directory for testing results"
+	exit 1
+fi
+
+# Creating crawler files and index at depth 5 in the cs letters page
+#######################################################################
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-5 5
+../indexer/indexer testing/letters-depth-5 testing/indexerResults/letters5Index
+'is' is less than three characters
+Trouble inserting (is, 1) into index
+'a' is less than three characters
+Trouble inserting (a, 1) into index
+'CS' is less than three characters
+Trouble inserting (CS, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 1) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'A' is less than three characters
+Trouble inserting (A, 2) into index
+'is' is less than three characters
+Trouble inserting (is, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 2) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'B' is less than three characters
+Trouble inserting (B, 3) into index
+'is' is less than three characters
+Trouble inserting (is, 3) into index
+'C' is less than three characters
+Trouble inserting (C, 3) into index
+'D' is less than three characters
+Trouble inserting (D, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 3) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'E' is less than three characters
+Trouble inserting (E, 4) into index
+'is' is less than three characters
+Trouble inserting (is, 4) into index
+'F' is less than three characters
+Trouble inserting (F, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 4) into index
+'A' is less than three characters
+Trouble inserting (A, 4) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'G' is less than three characters
+Trouble inserting (G, 5) into index
+'is' is less than three characters
+Trouble inserting (is, 5) into index
+'H' is less than three characters
+Trouble inserting (H, 5) into index
+'H' is less than three characters
+Trouble inserting (H, 6) into index
+'H' is less than three characters
+Trouble inserting (H, 6) into index
+'is' is less than three characters
+Trouble inserting (is, 6) into index
+'B' is less than three characters
+Trouble inserting (B, 6) into index
+'F' is less than three characters
+Trouble inserting (F, 7) into index
+'F' is less than three characters
+Trouble inserting (F, 7) into index
+'is' is less than three characters
+Trouble inserting (is, 7) into index
+'H' is less than three characters
+Trouble inserting (H, 7) into index
+'D' is less than three characters
+Trouble inserting (D, 8) into index
+'D' is less than three characters
+Trouble inserting (D, 8) into index
+'is' is less than three characters
+Trouble inserting (is, 8) into index
+'C' is less than three characters
+Trouble inserting (C, 9) into index
+'C' is less than three characters
+Trouble inserting (C, 9) into index
+'is' is less than three characters
+Trouble inserting (is, 9) into index
+'D' is less than three characters
+Trouble inserting (D, 9) into index
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (This, 1) into index.
+Success
+Attempting to insert (is, 1) into index.
+Attempting to insert (the, 1) into index.
+Success
+Attempting to insert (home, 1) into index.
+Success
+Attempting to insert (page, 1) into index.
+Success
+Attempting to insert (for, 1) into index.
+Success
+Attempting to insert (a, 1) into index.
+Attempting to insert (CS, 1) into index.
+Attempting to insert (TSE, 1) into index.
+Success
+Attempting to insert (playground, 1) into index.
+Success
+Attempting to insert (A, 1) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (A, 2) into index.
+Attempting to insert (is, 2) into index.
+Attempting to insert (for, 2) into index.
+Success
+Attempting to insert (Algorithm, 2) into index.
+Success
+Attempting to insert (B, 2) into index.
+Attempting to insert (home, 2) into index.
+Success
+Attempting to insert (B, 3) into index.
+Attempting to insert (B, 3) into index.
+Attempting to insert (is, 3) into index.
+Attempting to insert (for, 3) into index.
+Success
+Attempting to insert (Breadth, 3) into index.
+Success
+Attempting to insert (first, 3) into index.
+Success
+Attempting to insert (search, 3) into index.
+Success
+Attempting to insert (C, 3) into index.
+Attempting to insert (D, 3) into index.
+Attempting to insert (E, 3) into index.
+Attempting to insert (home, 3) into index.
+Success
+Attempting to insert (E, 4) into index.
+Attempting to insert (E, 4) into index.
+Attempting to insert (is, 4) into index.
+Attempting to insert (for, 4) into index.
+Success
+Attempting to insert (ENIAC, 4) into index.
+Success
+Attempting to insert (F, 4) into index.
+Attempting to insert (G, 4) into index.
+Attempting to insert (A, 4) into index.
+Attempting to insert (home, 4) into index.
+Success
+Attempting to insert (G, 5) into index.
+Attempting to insert (G, 5) into index.
+Attempting to insert (is, 5) into index.
+Attempting to insert (for, 5) into index.
+Success
+Attempting to insert (Graph, 5) into index.
+Success
+Attempting to insert (traversal, 5) into index.
+Success
+Attempting to insert (H, 5) into index.
+Attempting to insert (home, 5) into index.
+Success
+Attempting to insert (H, 6) into index.
+Attempting to insert (H, 6) into index.
+Attempting to insert (is, 6) into index.
+Attempting to insert (for, 6) into index.
+Success
+Attempting to insert (Huffman, 6) into index.
+Success
+Attempting to insert (coding, 6) into index.
+Success
+Attempting to insert (B, 6) into index.
+Attempting to insert (home, 6) into index.
+Success
+Attempting to insert (F, 7) into index.
+Attempting to insert (F, 7) into index.
+Attempting to insert (is, 7) into index.
+Attempting to insert (for, 7) into index.
+Success
+Attempting to insert (Fast, 7) into index.
+Success
+Attempting to insert (Fourier, 7) into index.
+Success
+Attempting to insert (transform, 7) into index.
+Success
+Attempting to insert (H, 7) into index.
+Attempting to insert (home, 7) into index.
+Success
+Attempting to insert (D, 8) into index.
+Attempting to insert (D, 8) into index.
+Attempting to insert (is, 8) into index.
+Attempting to insert (for, 8) into index.
+Success
+Attempting to insert (Depth, 8) into index.
+Success
+Attempting to insert (first, 8) into index.
+Success
+Attempting to insert (search, 8) into index.
+Success
+Attempting to insert (home, 8) into index.
+Success
+Attempting to insert (C, 9) into index.
+Attempting to insert (C, 9) into index.
+Attempting to insert (is, 9) into index.
+Attempting to insert (for, 9) into index.
+Success
+Attempting to insert (Computational, 9) into index.
+Success
+Attempting to insert (biology, 9) into index.
+Success
+Attempting to insert (D, 9) into index.
+Attempting to insert (home, 9) into index.
+Success
+
+# Creating crawler files and index with the wikipedia page at depth 2
+#####################################################################
+../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pearson%27s_chi-squared_test.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Yale_Bulldogs_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Yale_Bulldogs_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/RPI_Engineers_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/RPI_Engineers_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Quinnipiac_Bobcats_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Quinnipiac_Bobcats_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Princeton_Tigers_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Princeton_Tigers_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Harvard_Crimson_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Harvard_Crimson_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Cornell_Big_Red_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Cornell_Big_Red_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Colgate_Raiders_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Colgate_Raiders_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Clarkson_Golden_Knights_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Clarkson_Golden_Knights_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Brown_Bears_women%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Brown_Bears_men%27s_ice_hockey.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/St._John%27s_College_(Annapolis/Santa_Fe).html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dartmouth_Big_Green_men%27s_lacrosse.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/National_Lampoon%27s_Animal_House.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Mister_Rogers%27_Neighborhood.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Grey%27s_Anatomy.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dinesh_D%27Souza.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Moor%27s_Charity_School.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/O%27Reilly_Media.html
+pageSaver gets NULL wp->html
+There was an error fetching webpage html for http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pascal%27s_calculator.html
+pageSaver gets NULL wp->html
+../indexer testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
+testing.sh: line 55: ../indexer: Is a directory
+
+# Testing programs with various forms of incorrect parameters
+############################################################
+
+# not three arguments
+./querier testing
+Usage: querier [pageDirectory] [indexFilename]
+echo "Exit status of not three arguments: $?"
+Exit status of not three arguments: 1
+
+# Testing with non-existent directory
+./querier hello testing/indexerResults/letters5Index
+pageDirectory is not a valid readable Crawler directory.
+echo "Exit status of non-existent directory: $?"
+Exit status of non-existent directory: 2
+
+# Testing with non-crawler directory
+./querier testing testing/indexerResults/letters5Index
+pageDirectory is not a valid readable Crawler directory.
+echo "Exit status of non-crawler directory: $?"
+Exit status of non-crawler directory: 2
+
+# Testing with non-readable directory
+chmod -r testing/ 
+./querier testing/ testing/indexerResults/letters5Index 
+pageDirectory is not a valid readable Crawler directory.
+echo "Exit status of non-readable directory: $?"
+Exit status of non-readable directory: 2
+chmod +r testing/
+
+# Testing with non-readable file
+chmod -r testing/indexerResults/letters5Index
+./querier testing/letters-depth-5 testing/indexerResults/letters5Index
+indexFilename must be readable.
+echo "Exit status of non-readable file: $?"
+Exit status of non-readable file: 3
+chmod +r testing/indexerResults/letters5Index
+
+# Testing with non-valid file path
+./querier testing/letters-depth-5 testing5/indexfile
+indexFilename must be readable.
+echo "Exit status of non-valid file path: $?"
+Exit status of non-valid file path: 3
+
+# Testing with empty crawler directory
+touch testing/.crawler
+./fuzzquery testing/indexerResults/letters5Index 3 1 | ./querier testing/ testing/indexerResults/letters5Index
+./fuzzquery: generating 3 queries from 22 words
+testing//1 is not a readable or existing file
+testing//9 is not a readable or existing file
+testing//8 is not a readable or existing file
+testing//7 is not a readable or existing file
+testing//6 is not a readable or existing file
+testing//5 is not a readable or existing file
+testing//4 is not a readable or existing file
+testing//3 is not a readable or existing file
+testing//2 is not a readable or existing file
+testing//1 is not a readable or existing file
+Query: search and fourier 
+No documents match.
+Query: home or playground playground or breadth tse 
+Matches 9 documents (ranked):
+score    3 doc    1: (null)
+score    1 doc    9: (null)
+score    1 doc    8: (null)
+score    1 doc    7: (null)
+score    1 doc    6: (null)
+score    1 doc    5: (null)
+score    1 doc    4: (null)
+score    1 doc    3: (null)
+score    1 doc    2: (null)
+-----------------------------------------------
+Query: biology depth or tse 
+Matches 1 documents (ranked):
+score    1 doc    1: (null)
+-----------------------------------------------
+echo "Exit status of empty crawler directory: $?"
+Exit status of empty crawler directory: 0
+rm -f testing/.crawler
+
+# Testing various forms of query imputs:
+#	- invalid characters, i.e. non-alphabetic and non-space.
+#	- operators at the beginning and end of queries
+#	- operators adjacent to each other in a query
+#	- empty query
+#	- capitalized characters
+#	- extra spaces between words
+# 	- a query where no documents satisfy the query
+# These tests are all contained in the testquery file
+./querier testing/letters-depth-5 testing/indexerResults/letters5Index < testquery
+testing.sh: line 103: testquery: No such file or directory
+echo "Exit status of test with testquery file: $?"
+Exit status of test with testquery file: 1
+
+# Testing the querier with a series of queries for letter-depth-5
+# to test its functionality
+./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-index testing/indexerResults/letters5Index
+pageDirectory is not a valid readable Crawler directory.
+./fuzzquery: generating 20 queries from 22 words
+echo "Exit status of letters-index-5: $?"
+Exit status of letters-index-5: 2
+
+# Testing the querier with a series of queries for wikipedia-depth-2
+# To test the speed of queries on larger indexes
+./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/ testing/indexerResults/letters5Index
+pageDirectory is not a valid readable Crawler directory.
+./fuzzquery: cannot open index file 'testing/indexerResults/wikipedia2Index'
+./fuzzquery cannot load words from dictionary 'testing/indexerResults/wikipedia2Index'
+echo "Exit status of wikipedia-index-2: $?"
+Exit status of wikipedia-index-2: 2
+
+exit 0

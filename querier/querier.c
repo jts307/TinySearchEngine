@@ -120,29 +120,32 @@ int main(const int argc, const char *argv[])
                 	
 		if ((scores=calculate_scores(index, cleanedInput, 0, -1)) != NULL) {
 		    
-		    total=0;	
-		    counters_iterate(scores, &total, num_counters); 
+		  total=0;	
+		  counters_iterate(scores, &total, num_counters); 
 		    
-		    sortedScores=count_calloc(total, sizeof(document_t));
-		    assertp(sortedScores, "Error allocating memory for array of document_t.\n");
+		  if (total==0) {
+		      printf("No documents match.\n");
+		  } else {
+		      sortedScores=count_calloc(total, sizeof(document_t));
+		      assertp(sortedScores, "Error allocating memory for array of document_t.\n");
 
-		    counters_iterate(scores, sortedScores, sort_counters);
+		      counters_iterate(scores, sortedScores, sort_counters);
 
-		    printf("Matches %d documents (ranked):\n", total);
-		    for (int i=0; i<total; i++) {
+		      printf("Matches %d documents (ranked):\n", total);
+		      for (int i=0; i<total; i++) {
       		      
-		      int id=sortedScores[i]->id;   
-		      printf("score %4d doc %4d: %s\n", sortedScores[i]->score, id, 
-		      		      getPageURL(argv[1],id));
-		      count_free(sortedScores[i]);
-		    }
-		    printf("-----------------------------------------------\n");
+		        int id=sortedScores[i]->id;   
+		        printf("score %4d doc %4d: %s\n", sortedScores[i]->score, id, 
+		      	          getPageURL(argv[1],id));
+		        count_free(sortedScores[i]);
+		      }
+		      printf("-----------------------------------------------\n");
 
-		    count_free(sortedScores);
-		    
-		    if ((counters_get(scores, 0) == 1)) {
-          	      counters_delete(scores); 
-		    }
+		      count_free(sortedScores);
+		  }
+		  if ((counters_get(scores, 0) == 1)) {
+          	          counters_delete(scores); 
+		  }
 		} 
 	        count_free(cleanedInput);
 	      }

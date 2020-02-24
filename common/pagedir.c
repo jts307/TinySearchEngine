@@ -284,7 +284,7 @@ const char *getPageURL(const char *pageDir, int id)
 
     // on error log it 
     } else {
-      fprintf(stderr, "%s is not a readable or existing file", filePath);
+      fprintf(stderr, "%s is not a readable or existing file\n", filePath);
     }
   // on error log it
   } else {
