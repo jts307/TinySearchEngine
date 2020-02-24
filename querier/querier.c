@@ -544,10 +544,12 @@ void num_counters(void *arg, const int docId, const int count)
   }
 }
 
-/* Used to find the number of documents Ids(keys) within a counters struct, ignores key 0. 
+/* Stores the (docId, count) pairs into document structs, then sorts these document structs
+ * by count from highest to lowest within an array using the insertion sort algorithm. 
  * Used as a parameter to counters_iterate.
  * Parameters:
- * 	-arg: a pointer to the int that the total will be saved to.
+ * 	-arg: an array of document structs, initialized with enough space to hold all (docId, count)
+ *.           pairs within the counters struct being iterated over. 
  * 	-docId: current docId being iterated over.
  *	-count: count of the current docId.
  * returns:
@@ -555,8 +557,11 @@ void num_counters(void *arg, const int docId, const int count)
  */
 void sort_counters(void *arg, const int docId, const int count) 
 {
+  // do not add the 0 docId counter, only used as marker
+  // for memory allocation
   if (docId > 0) {
   
+    // casting void* to document_t**
     document_t **result=arg;
     int i;
  
@@ -566,13 +571,17 @@ void sort_counters(void *arg, const int docId, const int count)
     // create document for docId and count
     document_t *doc=count_malloc(sizeof(document_t));
     assertp(doc, "Error allocating memory for a document_t\n");
-
+	  
+    // set the docId and count in document struct
     doc->id=docId;
     doc->score=count;
 
+    // store document in empty slot
     result[i]=doc;
 
+    // loop backwards through the array
     while ((i > 0) && (result[i-1]->score < result[i]->score)) {
+      // if two values are out of place, swap them
       doc=result[i];
       result[i]=result[i-1];
       result[i-1]=doc;
