@@ -61,7 +61,7 @@ Lastly, control is returned to `main` and `indexFilename` is closed using `fclos
 ```c
 int main(const int argc, const char *argv[]);
 ```
-The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for writing using `fopen` to test if it is a writable file if the file already exists.
+The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for reading using `fopen` to test if it is a readable file. Then, it allocates space for and initializes the index structure by calling `index_new()`, and fills this index with information from IndexFilename by calling `index_load()`. After this, it reads from the standard input using the `readlinep()` function from file.h. It 
 
 ```c
 char **clean_input(char *input);
