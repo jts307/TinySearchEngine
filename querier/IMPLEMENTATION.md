@@ -4,7 +4,35 @@
 
 The pseudo code for the querier goes as follows: 
 
-
+### Execute from the command line as shown in the User Interface.
+### Parse the command line, validate parameters, initialize index structure, and open indexFilename
+### while there are still lines a file
+#### read the first word of each line
+#### while there are still docIds and word counts that comes after that word
+##### read a docId and word count pair 
+##### insert the (word, docId, word count) into the index structure
+##### close indexFilename
+### while there is still input to be read from stdin 
+#### read a line from the stdin, a query
+#### Make sure the query follows proper query syntax
+#### lower case all letters within the query and replace all series of spaces with one space
+#### Print this version of the query to standard output
+#### Call a function calculate_scores on the query
+##### search for the first occurance of an 'or' in the query, if any.
+###### call calculate_scores on the parts of the query seperated this 'or'.
+###### perform an 'or' operation on the scores returned for parts of the query. 
+##### if there is more than one word in the sequence
+###### call calculate_scores on the first word, other than 'and', encountered.
+###### call calculate_scores on the rest of the words in the query.
+###### perform an 'and' operation on the scores returned from 1 and 2.
+##### if there is only one word in the query then find its scores by searching the index, getting the (docId, score) pairs associated with the word, where score=count (Base Case).
+#### Iterate through each (docId, score) pair obtained from calculate_scores and count how many there are.
+#### Use the insertion sort algorithm to sort the scores obtained from calculate_scores.
+#### while there are still (docId, score) pairs
+##### open the document in the pageDirectory identified by a docId.
+##### read the first line of this document, this is the url of this document.
+#### Print the number of matches for the query, i.e. the number of (docId, score) pairs. Print the document Ids and their scores ranked from highest to lowest. Along with the document Ids print the url obtained from step 9.
+### Free memory for the index structure and any other structures used
 
 ## Functions:
 
