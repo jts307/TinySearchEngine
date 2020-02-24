@@ -94,13 +94,12 @@ _module_raw () {  unset _mlshdbg;
 cd ../crawler
 make
 make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
-gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50 crawler.o ../libcs50/libcs50.a ../common/common.a  -o crawler
+make[1]: 'crawler' is up to date.
 make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
 cd ../indexer
 make
 make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
-gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indexer.o ../common/common.a ../libcs50/libcs50.a -o indexer
-gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indextest.o ../common/common.a ../libcs50/libcs50.a -o indextest
+make[1]: Nothing to be done for 'all'.
 make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
 cd ../querier
 
