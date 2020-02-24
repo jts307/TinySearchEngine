@@ -71,15 +71,14 @@ We anticipate the following modules or functions:
 1. *main*, which parses arguments, initializes other modules, reads standard input, prints to
    the standard output.
 2. *index*, which defines the index structure and its methods.
-3. *index_load*, which inserts data into an index file into an index structure.
-4. *prompt*, prints a prompt if stdin is an interactive user, like the command prompt.
-5. *clean_input*, which takes a query, makes sure a query follows proper syntax and puts into
+3. *prompt*, prints a prompt if stdin is an interactive user, like the command prompt.
+4. *clean_input*, which takes a query, makes sure a query follows proper syntax and puts into
    a standardized form that makes interpretation by other functions easier. 
-6. *calculate_scores*, finds and calculates the score for all documents that satisfy the query. 
-7. *getPageURL*, which returns the url contained in a numbered file within the page directory.
-8. *or_counters*, which performs an 'or' operation on two sets of scores.
-9.*and_counters*, which performs an 'and' operation on two sets of scores.
-10.*sort_counters*, which ranks the documents from highest score to lowest.
+5. *calculate_scores*, finds and calculates the score for all documents that satisfy the query. 
+6. *getPageURL*, which returns the url contained in a numbered file within the page directory.
+7. *or_counters*, which performs an 'or' operation on two sets of scores.
+8. *and_counters*, which performs an 'and' operation on two sets of scores.
+9. *sort_counters*, which ranks the documents from highest score to lowest.
 
 Helper modules providing data structures:
 
@@ -92,12 +91,7 @@ Helper modules providing data structures:
 
 1. Execute from the command line as shown in the User Interface.
 2. Parse the command line, validate parameters, initialize index structure, and open indexFilename
-3. while there are still lines a file
-	1. read the first word of each line
-	2. while there are still docIds and word counts that comes after that word
-		1. read a docId and word count pair 
-		2. insert the (word, docId, word count) into the index structure
-	3. close indexFilename
+3. Load the index from the indexFilename into an index structure and close the indexFilename
 4. while there is still input to be read from stdin 
 	1. read a line from the stdin, a query
 	2. Make sure the query follows proper query syntax
@@ -127,7 +121,7 @@ Helper modules providing data structures:
 
 1. *main* parses/validates parameters, calls functions from *index* module
 2. Functions from *index* module initialize a new index and returns back to *main*
-3. *main* passes parameters to *index_load*
+3. *main* passes parameters to *index_load* from the *index* module
 4. *index_load* loads information from indexFilename into the index. It returns control to *main*
 5. *main* starts reading standard input, it calls *prompt* every time it reads a line of stdin
 6. *prompt* prints a prompt to stdin if it is an interactive user. Then returns control to *main*
