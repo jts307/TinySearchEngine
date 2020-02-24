@@ -1,11 +1,5 @@
 # Implementation for indexer
 
-<<<<<<< HEAD
-Note - There are several progress indication printf statements throughout the code for indexer and the index module methods. These are commented out by default.
-=======
-Note - There are several progress indication printf statements throughout the code for indexer and the index module methods. These are commented out by default.
->>>>>>> 3c8ea41ed5d596a91fc4c6d770fb24e0973b3473
-
 ## Pseudo code
 
 The pseudo code for the indexer goes as follows: 
@@ -62,7 +56,7 @@ Lastly, control is returned to `main` and `indexFilename` is closed using `fclos
 
 ## Functions:
 
-### indexer.c
+### querier.c
 
 ```c
 int main(const int argc, const char *argv[]);
@@ -88,18 +82,18 @@ bool isCrawlerDirectory(const char *pageDir);
 ```
 The isCrawlerDirectory function takes a passed directory and checks whether it is an existing, readable and crawler visited directory by attempting to read a .crawler file in it left behind by `crawler.c`.
 
-```c
-webpage_t *webpageLoad(const char *pageDir, int id);
-```
-Creates a `webpage struct` containing the html, url and depth of a file idenitified by id and returns it to the caller. Used to fetch data from the pageDirectory.
+
 
 ## Data Structures:
 
-The program makes use of five data structures, three of which were created in the cs50 lab 3 assignment: `counters struct`, `set struct` and `hashtable struct`. The fourth one is the `webpage struct` provided in the lab4 assignment and the fifth was created in the lab5 assignment, `index struct`.
+The program makes use of six data structures, three of which were created in the cs50 lab 3 assignment: 
+`counters struct`, `set struct` and `hashtable struct`. The fourth one was created in the lab5 assignment, 
+`index struct`. The last two `multiCounters struct` and `document struct` were created in the `querier.c` 
+program, local to it.
 
 ### Index
 
-The `index struct` implements a mapping from words to (documentId, count) pairs, where a documentId is the name of a file in the page directory and the count is the number of times a word appears in documentId. It does not store words less then 3 characters and lowercases all words before insertion. The index is implemented through [index.c](../common/index.h) and more information on index functions can be found in [index.h](../common/index.h). The following functions involving the `index struct` are used in the indexer implementation:
+The `index struct` implements a mapping from words to (documentId, count) pairs, where a documentId is the name of a file in the page directory and the count is the number of times a word appears in documentId. It does not store words less then 3 characters and lowercases all words before insertion. The index is implemented through [index.c](../common/index.h) and more information on index functions can be found in [index.h](../common/index.h). The following functions involving the `index struct` are used in the querier implementation:
 
 ```c
 // allocating memory for index structure
@@ -117,11 +111,11 @@ void index_save(index_t *index, FILE *fp);
 // takes the data from an index file and loads it into an index
 int index_load(index_t *index, FILE *fp);
 ```
-The `index struct` was used to hold the word to (documentId, count) pairs so that they can be collected to create an index and later written to an output file.
+The `index struct` was used to hold the word to (documentId, count) pairs so that they can be collected to create an index.
 
 ### Counters
 
-The `counters struct` implements a set of counters, each disinguised by an integer key. Each key can only occur once in the set and a counter keeps track of how many of the key there are. It starts empty and each time a key is inserted a count is increment by 1. The current counter for a key can be retrieved by calling the apppropriate function. Counters is implemented through [counters.c](../libcs50/counters.h). The following functions involving the `counters struct` are used in the indexer implementation:
+The `counters struct` implements a set of counters, each disinguised by an integer key. Each key can only occur once in the set and a counter keeps track of how many of the key there are. It starts empty and each time a key is inserted a count is increment by 1. The current counter for a key can be retrieved by calling the apppropriate function. Counters is implemented through [counters.c](../libcs50/counters.h). The following functions involving the `counters struct` are used in the querier implementation:
 
 ```c
 // allocates memory for a new counters struct
@@ -137,26 +131,12 @@ void counters_iterate(counters_t *ctrs, void *arg, void (*itemfunc)(void *arg, c
 // frees memory taken up by counters struct
 void counters_delete(counters_t *ctrs);
 ```
-The `counters struct` was used to hold documentId and count pairs within the `index struct`.
-
-### Webpage
-
-The `webpage struct` holds the url, html and depth of a webpage. The url and html are stored as `char*` while the depth is an `int`. The following functions involving the `webpage struct` are used in the indexer implementation:
-
-```c
-// allocates memory for a new webpage struct
-webpage_t *webpage_new(char *url, const int depth, char *html);
-// frees any memory used by the passed webpage struct
-void webpage_delete(void *data);
-// returns a word from a webpage's html
-char *webpage_getNextWord(webpage_t *page, int *pos);
-```
-
-The `webpage struct` was used to parse information from the files within the pageDirectory and cycle through the html of a file word by word. More information on how these functions work can be found in [webpage.h](../libcs50/webpage.h).
+The `counters struct` was used to hold documentId and count pairs within the `index struct`. They were also used throughout
+the querier program to store (documentId, score) pairs.
 
 ### Set
 
-The `set struct` implements a unordered collection of (key,item) pairs, where each key only occurs once in the set. A set starts empty and grows as more pairs are added to it but pairs cannot be removed or updated. The set implements a set of `void*` which are identified by their `char*` keys . The following functions are used in the indexer program:
+The `set struct` implements a unordered collection of (key,item) pairs, where each key only occurs once in the set. A set starts empty and grows as more pairs are added to it but pairs cannot be removed or updated. The set implements a set of `void*` which are identified by their `char*` keys . The following functions are used in the querier program:
 
 ```c
 // allocated memory for a new set struct
@@ -175,7 +155,7 @@ The `set struct` was utilized by the `hashtable struct` to hold word and counter
 
 ### Hashtable
 
-The `hashtable struct` is just like a `set struct` but is more efficient in storing large collection of items. It uses an array of `set structs` to store items which allows it to retrieve items quicker. The following functions are used in the indexer program:
+The `hashtable struct` is just like a `set struct` but is more efficient in storing large collection of items. It uses an array of `set structs` to store items which allows it to retrieve items quicker. The following functions are used in the querier program:
 
 ```c
 // allocates memory for a hashtable struct
@@ -194,21 +174,35 @@ void hashtable_iterate(hashtable_t *ht, void *arg, void (*itemfunc)(void *arg, c
 
 The `hashtable struct` was used to store the word and counters pairs in the index structure.
 
+### multiCounters
+
+The `multiCounters struct` is two `counters struct`. This struct has no methods. It was used to iterate over
+a `counters struct` with three `counters struct`s within scope. This made the process of creating a `minCtrs`
+for `and_counters()` easier. 
+
+### document
+
+The `document struct` holds two `int`s, one for a document's id and another for its score for a given query.
+This struct has no methods. It was used to act as a medium to store document ids and scores so that they can 
+be sorted since `counters struct`s do not support sorting.
+
 ## Security and privacy properties:
-The indexer does not interface with any outside websites or other sources, so there is nothing particular to note in this category.
+The querier does not interface with any outside websites or other sources, so there is nothing particular to note in this category.
 
 ## Error handling and recovery:
-Indexer handles most of its errors by simply writing them to standard error through the use of fprintf statements, for example:
+Querier handles most of its errors by simply writing them to standard error through the use of fprintf statements, for example:
 
 ```c
-fprintf(stderr, "pageDirectory is not a valid readable Crawler directory.\n");
-status+=2;
+ fprintf(stderr, "indexFilename must be readable.\n");
+	status+=3;
  ```
 The program will log the error and continue operating for most errors unless it is an error that interfers with the program entirely like a missing pageDirectory, in which case it exits. Also it exits if there is an issue with memory allocation making use of the [memory module's](../libcs50/memory.h) `assertp` function.
 
 ## Resource management:
-The indexer utilizes heap memory by calling `malloc` and `free` through the [memory module's](../libcs50/memory.h) `count_malloc` and `count_free` which add an extra functionality of keeping a count of how many mallocs and frees took place within a program. 
+The querier utilizes heap memory by calling `malloc` and `free` through the [memory module's](../libcs50/memory.h)  
+`count_malloc` and `count_free` which add an extra functionality of keeping a count of how many mallocs and frees took 
+place within a program. 
 
 ## Persistant storage:
-The program creates a file that contains the index mapping as described in the [README](README.md).
+The program creates no persistant files by default.
 
