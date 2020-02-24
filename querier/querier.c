@@ -49,8 +49,6 @@ typedef struct document {
   int score;
 } document_t;
 
-
-
 int fileno(FILE *stream);
 static void prompt(void);
 char **clean_input(char *input); 
@@ -148,20 +146,25 @@ int main(const int argc, const char *argv[])
 			  
 		      // looping through the sorted documents
 		      for (int i=0; i<total; i++) {
-      		      
-		        int id=sortedScores[i]->id;   
+    				
+			// getting document id
+		        int id=sortedScores[i]->id;  
+			      
+			// getting url for a document     
 			const char *url=getPageURL(argv[1],id);
+			      
 		        printf("score %4d doc %4d: %s\n", sortedScores[i]->score, id, url);
 		        
+			// freeing memory used
 			if (url != NULL) {
 			  count_free((char*)url);
 			}
 			count_free(sortedScores[i]);
 		      }
 		      printf("-----------------------------------------------\n");
-
 		      count_free(sortedScores);
 		  }
+	          // freeing counters if marked
 		  if ((counters_get(scores, 0) == 1)) {
           	          counters_delete(scores); 
 		  }
@@ -243,7 +246,7 @@ char **clean_input(char *input)
       // if `and` or `or` operators are encountered then checking for 
       // potential syntax errors
       if ((strcmp(start, "and") == 0) || (strcmp(start, "or") == 0)) {
-          // if first word then syntax error
+          // if first word then its a syntax error
           if (count == 0) {
  	    fprintf(stderr, "Error: '%s' operator cannot be first\n", start);
 	    count_free(words);
@@ -255,7 +258,7 @@ char **clean_input(char *input)
 	    fprintf(stderr, "Error: 'and' and 'or' operators cannot follow each other.\n");
 	    count_free(words);
 	    return NULL;
-	  }	
+	  }
 	  pervWasOp=true;
       } else {
       	  pervWasOp=false;
@@ -271,14 +274,27 @@ char **clean_input(char *input)
       count_free(words);
       return NULL;
   } else {
+      // add marker to denote end of array
       words[count] = "\0";
+	  
       return words;
   }
 }
 
-/*
- *
- *
+/* Recursively computes the scores of a query. Scores refering to the documents that satisfy a query
+ * and their respective scores. Each (document, score) pair is stored within the returned counters struct.
+ * Parameters:
+ * 	-index: the index that is being looked through
+ *	-words: the query that is being searched, seperated to an array of words by clean_input. words must
+ *               have a '\0' character to indicate an end to the array.
+ *	-start: the start of the range of the query currently being searched
+ *	-end: the end of the range of the query currently being searched (indicate a -1 to continue until end of
+ *	      words array)
+ * returns:
+ * 	-scores: a counters struct that contains (documentId, score) pairs where a documentId is the name
+ *	         of a document that satifies the given query and score is the score that document recieves.
+ *	-NULL: if the words list is empty
+ * -On any memory allocation errors or null arguments it exits with non-zero status
  */
 counters_t *calculate_scores(index_t *index, char **words, int start, int end) 
 {
@@ -298,9 +314,13 @@ counters_t *calculate_scores(index_t *index, char **words, int start, int end)
   if (strcmp(words[0],"\0") != 0) {
     // base case, if one word then find counters struct for that word
     if ((start==end) || (strcmp(words[start+1], "\0") == 0)) {
+      // if a word does not have a counters struct in the index
+      // make an empty one for it
       if ((ctrs1=index_find_ctrs(index, words[start])) == NULL) {
         ctrs1=counters_new();
 	assertp(ctrs1, "Error allocating memory for ctrs1\n");
+	
+	// mark it so that it can be freed later
 	counters_set(ctrs1, 0, 1);
       }
       return ctrs1;
@@ -318,13 +338,14 @@ counters_t *calculate_scores(index_t *index, char **words, int start, int end)
 	// performing 'or' operation
 	result = or_counters(ctrs1,ctrs2);
 
-	// freeing used counters if not part of index
+	// freeing marked counters if needed
 	if ((counters_get(ctrs1, 0) == 1) && (ctrs1 != NULL)) {
 	  counters_delete(ctrs1);
 	}
 	if ((counters_get(ctrs2,0) == 1) && (ctrs2 != NULL)) {
 	  counters_delete(ctrs2);
 	}
+	   
         return result;
       }
       i++;
@@ -337,30 +358,34 @@ counters_t *calculate_scores(index_t *index, char **words, int start, int end)
       if (strcmp(words[i], "and") != 0) {
 	// 'and' operands are the first word encountered and rest of
 	// words since there are just 'and' operations left to do 
-        ctrs1 = calculate_scores(index, words, i, i);
+        
+	// get scores for first not 'and' word encountered
+	ctrs1 = calculate_scores(index, words, i, i);
 
+	// incrementing over 'and' operator in words array
 	if (strcmp(words[i+1], "and") == 0) {
 	  i++;
 	}
-
+	// calculating scores for rest of words
 	ctrs2 = calculate_scores(index, words, i+1, end);
 	
 	// performing 'and' operation
 	result = and_counters(ctrs1, ctrs2);
         
-        // freeing used counters if not part of index
+        // freeing marked counters if needed
         if ((counters_get(ctrs1, 0) == 1) && (ctrs1 != NULL)) {
           counters_delete(ctrs1);
         }
         if ((counters_get(ctrs2,0) == 1) && (ctrs2 != NULL)) {
           counters_delete(ctrs2);
         }
+	      
 	return result;
       }
       i++;
     }
   }
-  // if empty, return NULL
+  // if empty array, return NULL
   return NULL;
 }
 
