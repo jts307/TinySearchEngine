@@ -389,10 +389,15 @@ counters_t *calculate_scores(index_t *index, char **words, int start, int end)
   return NULL;
 }
 
-
-/*
- *
- *
+/* Performs an 'or' operation on two counters struct. The 'or' operation sums up all the counters of both
+ * counters struct into one counters struct. This does not edit the two counters struct involved in the 
+ * operation.
+ * Parameters:
+ * 	-ctrs1: first counters struct to be combined
+ *	-ctrs2: second counters struct to be combined
+ * returns:
+ * 	-sumCtrs: a combination of ctrs1 and ctrs2 that sums all their counters.
+ * -On null arguments it exits with non-zero status
  */
 counters_t *or_counters(counters_t *ctrs1, counters_t *ctrs2) 
 {
@@ -400,13 +405,17 @@ counters_t *or_counters(counters_t *ctrs1, counters_t *ctrs2)
   assertp(ctrs1, "or_counters recieves NULL ctrs1\n");
   assertp(ctrs2, "or_counters recieves NULL ctrs2\n");
 
+  // combined counters struct
   counters_t *sumCtrs=NULL;
 
   if ((sumCtrs=counters_new()) != NULL) {
-  
+    // copying the counters of ctrs1 into sumCtrs
     counters_iterate(ctrs1, sumCtrs, copy_counters);
+	 
+    // adding the counters of ctrs2 to sumCtrs
     counters_iterate(ctrs2, sumCtrs, sum_counters);
  
+    // marking sumCtrs for later deletion
     counters_set(sumCtrs, 0, 1);
     
     return sumCtrs;
@@ -414,17 +423,46 @@ counters_t *or_counters(counters_t *ctrs1, counters_t *ctrs2)
   return NULL;
 }
 
+/* Used to combine two counters structs. Used as a parameter to counters_iterate.
+ * Parameters:
+ * 	-ctrs: counters struct that will be added to the counters_struct 
+ *             currently being iterated over. The results of the summation
+ *	       will be saved here.
+ * 	-docId: current docId being iterated over and added to ctrs.
+ *	-count: count of the current docId, added to ctrs.
+ * returns:
+ * 	-nothing
+ */
 void sum_counters(void *ctrs, const int docId, const int count) 
 {
-  // adding up the two counts for a docId and set it in ctrs
+  // adding up the two counts for a docId and setting it in ctrs(sumCtrs)
   counters_set(ctrs, docId, counters_get(ctrs, docId)+count);
 }
 
+/* Used to copy one counters struct to another. Used as a parameter to counters_iterate.
+ * Parameters:
+ * 	-ctrs: counters struct that will have information copied to it.
+ * 	-docId: current docId being iterated over and copied to ctrs.
+ *	-count: count of the current docId, copied to ctrs.
+ * returns:
+ * 	-nothing
+ */
 void copy_counters(void *ctrs, const int docId, const int count)
 {
+  // copying the iterated counters struct values to ctrs
   counters_set(ctrs, docId, count);
 }
 
+/* Performs an 'and' operation on two counters struct. The 'and' operation finds the minimum count of each 
+ * documentId within both structs and sets that as the count for the documentId in a third counters struct. 
+ * This does not edit the two counters passed as arguments.
+ * Parameters:
+ * 	-ctrs1: first counters struct to be minimized
+ *	-ctrs2: second counters struct to be minimized
+ * returns:
+ * 	-minCtrs: the minimization of ctrs1 and ctrs2.
+ * -On null arguments and errors involving memory allocatoin it exits with non-zero status
+ */
 counters_t *and_counters(counters_t *ctrs1, counters_t *ctrs2)
 {
   // exits if NULL parameters are recieved
@@ -432,28 +470,51 @@ counters_t *and_counters(counters_t *ctrs1, counters_t *ctrs2)
   assertp(ctrs2, "and_counters recieves NULL ctrs2\n");
 
   counters_t *minCtrs=NULL;
-
+	
+  // initializing multi_counters struct to store two counters
   multi_counters_t *twoCtrs=count_malloc(sizeof(multi_counters_t));
   assertp(twoCtrs, "Error allocating memory for twoCtrs\n");
-
+  
+  // allocating memory for minCtrs
   minCtrs=counters_new();
   assertp(minCtrs, "Error allocating memory for minCtrs\n");
 
+  // bundling minCtrs and ctrs2 into one struct
   twoCtrs->ctrs1=minCtrs;
   twoCtrs->ctrs2=ctrs2; 
+	
+  // iterating over ctrs1 with the new struct to get
+  // the minimum of ctrs1 and ctrs2
   counters_iterate(ctrs1, twoCtrs, minimum_counters);
+	
   count_free(twoCtrs);
+	
+  // marking minCtrs for deletion later on 
   counters_set(minCtrs, 0, 1);
     
   return minCtrs;
 }
 
+/* Used to find the minimum of two counters structs. Used as a parameter to counters_iterate.
+ * Parameters:
+ * 	-arg: multi_counters struct that contains the counters struct that the minimums
+ 	      will be saved to in ctrs1 and one of the counters struct to be minimized in ctrs2.
+ * 	-docId: current docId being iterated over.
+ *	-count: count of the current docId.
+ * returns:
+ * 	-nothing
+ */
 void minimum_counters(void *arg, const int docId, const int count)
 {
+  // casting void* to multi_counters_t*
   multi_counters_t *twoCtrs=arg;
+
+  // getting the current docId's count within the other counters struct
   int count2 = counters_get(twoCtrs->ctrs2, docId);
 
+  // do not set docId in minCtrs if its count is 0
   if ((count != 0) && (count2 != 0)) {
+    // set docId in minCtrs with the lower of the two counts
     if (count2 > count) {
       counters_set(twoCtrs->ctrs1, docId, count); 
     } else {
@@ -462,15 +523,36 @@ void minimum_counters(void *arg, const int docId, const int count)
   }
 }
 
+/* Used to find the number of documents Ids(keys) within a counters struct, ignores key 0. 
+ * Used as a parameter to counters_iterate.
+ * Parameters:
+ * 	-arg: a pointer to the int that the total will be saved to.
+ * 	-docId: current docId being iterated over.
+ *	-count: count of the current docId.
+ * returns:
+ * 	-nothing
+ */
 void num_counters(void *arg, const int docId, const int count)
 {
+  // casting void* to int*
   int *total = arg;
 
+  // this is to avoid the 0 docId set on 
+  // counters that need to be freed
   if (docId > 0) {
     (*total)++;
   }
 }
 
+/* Used to find the number of documents Ids(keys) within a counters struct, ignores key 0. 
+ * Used as a parameter to counters_iterate.
+ * Parameters:
+ * 	-arg: a pointer to the int that the total will be saved to.
+ * 	-docId: current docId being iterated over.
+ *	-count: count of the current docId.
+ * returns:
+ * 	-nothing
+ */
 void sort_counters(void *arg, const int docId, const int count) 
 {
   if (docId > 0) {
@@ -509,4 +591,3 @@ static void prompt(void)
     printf("Query? ");
   }
 }
-
