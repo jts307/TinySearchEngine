@@ -64,9 +64,42 @@ int main(const int argc, const char *argv[]);
 The main function takes the arguments from the command line and makes sure that there is two of them. It also checks whether or not they are valid. For pageDirectory, it passes it to `bool isCrawlerDirectory(char* pageDirectory)` to check if it is a readable crawled directory. For IndexFilename, it attempts to open a file stream for writing using `fopen` to test if it is a writable file if the file already exists.
 
 ```c
-int index_build(index_t *index, const char *pageDirectory);
+char **clean_input(char *input);
 ```
-Creates the entire index, i.e. inserts into the index based on data from the pageDirectory recieved through webpageLoad, number 4 of the pseudo encapsulates much of what this function does.
+
+```c
+counters_t *calculate_scores(index_t *index, char **words, int start, int end); 
+```
+
+```c
+counters_t *or_counters(counters_t *ctrs1, counters_t *ctrs2); 
+```
+
+```c
+void sum_counters(void *ctrs, const int docId, const int count); 
+```
+
+```c
+void copy_counters(void *ctrs, const int docId, const int count);
+```
+
+```c
+counters_t *and_counters(counters_t *ctrs1, counters_t *ctrs2);
+```
+
+```c
+void minimum_counters(void *arg, const int docId, const int count);
+```
+
+```c
+void num_counters(void *arg, const int docId, const int count);
+```
+
+```c
+void sort_counters(void *arg, const int docId, const int count);
+```
+
+
 
 ### word.c
 
@@ -82,7 +115,11 @@ bool isCrawlerDirectory(const char *pageDir);
 ```
 The isCrawlerDirectory function takes a passed directory and checks whether it is an existing, readable and crawler visited directory by attempting to read a .crawler file in it left behind by `crawler.c`.
 
-
+```c
+const char *getPageURL(const char *pageDir, int id);
+```
+The getPageURL function takes a passed directory and document id, opens the file within the passed directory with the name document id, reads the first line of the document using `freadlinep`
+from the *file.h* module, and returns this to the caller, this is the url of the document.
 
 ## Data Structures:
 
