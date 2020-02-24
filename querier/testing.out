@@ -94,12 +94,13 @@ _module_raw () {  unset _mlshdbg;
 cd ../crawler
 make
 make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
-make[1]: 'crawler' is up to date.
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50 crawler.o ../libcs50/libcs50.a ../common/common.a  -o crawler
 make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/crawler'
 cd ../indexer
 make
 make[1]: Entering directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
-make[1]: Nothing to be done for 'all'.
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indexer.o ../common/common.a ../libcs50/libcs50.a -o indexer
+gcc -Wall -pedantic -std=c11 -ggdb -lm  -I../common -I../libcs50  indextest.o ../common/common.a ../libcs50/libcs50.a -o indextest
 make[1]: Leaving directory '/net/ifs-users/jts/cs50/labs/tiny-search-engine-jts307/indexer'
 cd ../querier
 
@@ -231,25 +232,245 @@ rm -f testing/.crawler
 #	- extra spaces between words
 # 	- a query where no documents satisfy the query
 # These tests are all contained in the testquery file
-./querier testing/letters-depth-5 testing/indexerResults/letters5Index < testquery
-testing.sh: line 103: testquery: No such file or directory
+./querier testing/letters-depth-5 testing/indexerResults/letters5Index < queryTest
+Error: Input must contain only spaces and alphabetic characters.
+Error: Input must contain only spaces and alphabetic characters.
+Error: Input must contain only spaces and alphabetic characters.
+Error: 'and' and 'or' operators cannot follow each other.
+Error: 'and' and 'or' operators cannot follow each other.
+Error: 'and' and 'or' operators cannot follow each other.
+Error: 'and' and 'or' operators cannot follow each other.
+Error: 'and' and 'or' operators cannot follow each other.
+Error: 'and' operator cannot be first
+Error: 'or' operator cannot be first
+Error: 'or' operator cannot be last
+Error: 'and' operator cannot be last
+Query: for and this 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: for and this 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: for and this 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: welcome and hello 
+No documents match.
 echo "Exit status of test with testquery file: $?"
-Exit status of test with testquery file: 1
+Exit status of test with testquery file: 0
 
 # Testing the querier with a series of queries for letter-depth-5
 # to test its functionality
-./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-index testing/indexerResults/letters5Index
-pageDirectory is not a valid readable Crawler directory.
+./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-depth-5 testing/indexerResults/letters5Index
 ./fuzzquery: generating 20 queries from 22 words
+Error: Input must contain only spaces and alphabetic characters.
+Query: ingold 
+No documents match.
+Query: the for or traversal or home or tse coding 
+Matches 9 documents (ranked):
+score    3 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+score    2 doc    5: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/G.html
+score    1 doc    9: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/C.html
+score    1 doc    8: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/D.html
+score    1 doc    7: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/F.html
+score    1 doc    6: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/H.html
+score    1 doc    4: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/E.html
+score    1 doc    3: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/B.html
+score    1 doc    2: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/A.html
+-----------------------------------------------
+Query: fourier algorithm or biology 
+Matches 1 documents (ranked):
+score    1 doc    9: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/C.html
+-----------------------------------------------
+Query: transform and transform biology playground 
+No documents match.
+Query: huffman huffman or eniac search or traversal tse 
+Matches 1 documents (ranked):
+score    1 doc    6: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/H.html
+-----------------------------------------------
+Query: syringotome and this 
+No documents match.
+Query: thegnly and traversal first or vindications or the 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: first fourier and for computational fourier uroscopic 
+No documents match.
+Query: expressionful playground and this or walston page 
+No documents match.
+Query: fast this 
+No documents match.
+Query: dovens breadth or the 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: the depth and breadth 
+No documents match.
+Query: search or search or bedrel and traversal 
+Matches 2 documents (ranked):
+score    2 doc    8: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/D.html
+score    2 doc    3: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/B.html
+-----------------------------------------------
+Query: emplastration graph computational 
+No documents match.
+Query: this transform or this first or for and playground 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
+Query: search or graph and schematics 
+Matches 2 documents (ranked):
+score    1 doc    8: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/D.html
+score    1 doc    3: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/B.html
+-----------------------------------------------
+Query: thalenite or fast or breadth traversal 
+Matches 1 documents (ranked):
+score    1 doc    7: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/F.html
+-----------------------------------------------
+Query: first and afterbody 
+No documents match.
+Query: the or cerebrasthenia and biology page and first 
+Matches 1 documents (ranked):
+score    1 doc    1: http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html
+-----------------------------------------------
 echo "Exit status of letters-index-5: $?"
-Exit status of letters-index-5: 2
+Exit status of letters-index-5: 0
 
 # Testing the querier with a series of queries for wikipedia-depth-2
 # To test the speed of queries on larger indexes
-./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/ testing/indexerResults/letters5Index
-pageDirectory is not a valid readable Crawler directory.
+./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
 ./fuzzquery: generating 20 queries from 101588 words
+Error: Input must contain only spaces and alphabetic characters.
+Query: mcclean and breger 
+No documents match.
+Query: bisqwit or were ztpf or shimomura two 
+Matches 3 documents (ranked):
+score    1 doc  627: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Transaction_Processing_Facility.html
+score    1 doc 1194: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Bitwise_operation.html
+score    1 doc 1193: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Bit_shift.html
+-----------------------------------------------
+Query: mem india or fernald 
+Matches 2 documents (ranked):
+score    1 doc  609: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/New_Hampshire.html
+score    1 doc 1393: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Mechanical_engineering.html
+-----------------------------------------------
+Query: aiga or redefine landa egyptologist and potok or decay 
+Matches 13 documents (ranked):
+score    2 doc 1431: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Sustainable_engineering.html
+score    2 doc 1424: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Industrial_gas.html
+score    1 doc  309: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Encyclop%c3%a6dia_Britannica.html
+score    1 doc  520: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pine.html
+score    1 doc  778: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Top_(software).html
+score    1 doc 1433: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Renewable_energy.html
+score    1 doc 1454: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Nanomedicine.html
+score    1 doc 1626: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Computer_graphics.html
+score    1 doc 1437: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Ecological_design.html
+score    1 doc 1432: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Sustainable_design.html
+score    1 doc  464: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/William_Addison_Dwiggins.html
+score    1 doc  460: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Rudolph_Ruzicka.html
+score    1 doc  187: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Graceful_degradation.html
+-----------------------------------------------
+Query: uidated valley grammarian russert or exokernels 
+Matches 8 documents (ranked):
+score    4 doc  673: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Exokernel.html
+score    1 doc 1144: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Embedded_systems.html
+score    1 doc 1139: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Embedded_system.html
+score    1 doc 1040: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Kernel_(computing).html
+score    1 doc  991: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Microkernel.html
+score    1 doc  937: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/System_call.html
+score    1 doc  877: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/NetBSD.html
+score    1 doc  672: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Hybrid_kernel.html
+-----------------------------------------------
+Query: patience 
+Matches 9 documents (ranked):
+score    1 doc   90: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Heapsort.html
+score    1 doc  190: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Constant_time.html
+score    1 doc  209: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Time_complexity.html
+score    1 doc  363: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Fred_Rogers.html
+score    1 doc  379: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/NBC.html
+score    1 doc  564: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/College_admissions_in_the_United_States.html
+score    1 doc  617: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Voice_user_interface.html
+score    1 doc 1527: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Video_games.html
+score    1 doc 1619: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Video_game.html
+-----------------------------------------------
+Query: grabowski firebrand or gbenga 
+Matches 1 documents (ranked):
+score    1 doc  355: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/24_(TV_series).html
+-----------------------------------------------
+Query: interject 
+Matches 1 documents (ranked):
+score    1 doc 1286: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Curly_braces.html
+-----------------------------------------------
+Query: schiefer or xuhui or mountbatten and whelan and ackelsberg 
+Matches 6 documents (ranked):
+score    1 doc 1634: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Folding%40home.html
+score    1 doc 1552: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Type_systems.html
+score    1 doc 1354: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Type_system.html
+score    1 doc 1310: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Static_type_system.html
+score    1 doc 1277: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Static_typing.html
+score    1 doc 1254: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Type_checking.html
+-----------------------------------------------
+Query: utilities populist arrive 
+No documents match.
+Query: neuhauser and haghighat bohannon or nexn dizzy 
+No documents match.
+Query: delegates and permaculture shakey and osage prevalently or vdelta 
+Matches 1 documents (ranked):
+score    1 doc 1570: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Data_compression.html
+-----------------------------------------------
+Query: carvestrene or moctezuma superscript darkman zloof or compacted 
+Matches 1 documents (ranked):
+score    2 doc 1395: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Geotechnical_engineering.html
+-----------------------------------------------
+Query: geocriticism or mocking podcast or mannheim or loblolly 
+Matches 7 documents (ranked):
+score    1 doc  524: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dwight_D.html
+score    1 doc 1662: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Gottfried_Leibniz.html
+score    1 doc 1515: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Leibniz.html
+score    1 doc 1489: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Graph_theory.html
+score    1 doc  526: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Academic_term.html
+score    1 doc 1547: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Philosophy_of_mind.html
+score    1 doc 1432: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Sustainable_design.html
+-----------------------------------------------
+Query: archvillain 
+Matches 1 documents (ranked):
+score    1 doc  364: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Despicable_Me.html
+-----------------------------------------------
+Query: cscvt or indianness 
+Matches 2 documents (ranked):
+score    1 doc  588: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Native_Americans_in_the_United_States.html
+score    1 doc 1241: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Character_encoding.html
+-----------------------------------------------
+Query: evotec or nutr and climatography 
+Matches 1 documents (ranked):
+score    1 doc  929: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Plan_9_from_Bell_Labs.html
+-----------------------------------------------
+Query: stdin or overinstruct or clickable and cinchonism or cogno bestval 
+Matches 18 documents (ranked):
+score    9 doc 1181: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Standard_output.html
+score    5 doc 1179: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Stdio.html
+score    5 doc  717: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Inetd.html
+score    4 doc 1331: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_shell.html
+score    4 doc 1126: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/C_Shell-2.html
+score    4 doc 1002: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pipeline_(Unix).html
+score    3 doc  820: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Cat_(Unix).html
+score    2 doc  802: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Pax_(Unix).html
+score    2 doc  698: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dc_(computer_program).html
+score    1 doc 1276: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Declaration_(computer_programming).html
+score    1 doc 1224: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/String_literal.html
+score    1 doc 1146: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Compiler_flag.html
+score    1 doc 1116: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Command_line_arguments.html
+score    1 doc 1037: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Command-line_interface.html
+score    1 doc 1003: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Command_line_interpreter.html
+score    1 doc  812: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Dd_(Unix).html
+score    1 doc  746: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/Iconv.html
+score    1 doc  709: http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/OpenSSH.html
+-----------------------------------------------
+Query: unidiff yahiya endangers horology spongin 
+No documents match.
 echo "Exit status of wikipedia-index-2: $?"
-Exit status of wikipedia-index-2: 2
+Exit status of wikipedia-index-2: 0
 
 exit 0

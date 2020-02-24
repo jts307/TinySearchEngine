@@ -135,9 +135,13 @@ int main(const int argc, const char *argv[])
 		      for (int i=0; i<total; i++) {
       		      
 		        int id=sortedScores[i]->id;   
-		        printf("score %4d doc %4d: %s\n", sortedScores[i]->score, id, 
-		      	          getPageURL(argv[1],id));
-		        count_free(sortedScores[i]);
+			const char *url=getPageURL(argv[1],id);
+		        printf("score %4d doc %4d: %s\n", sortedScores[i]->score, id, url);
+		        
+			if (url != NULL) {
+			  count_free((char*)url);
+			}
+			count_free(sortedScores[i]);
 		      }
 		      printf("-----------------------------------------------\n");
 

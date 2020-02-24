@@ -100,17 +100,17 @@ rm -f testing/.crawler
 #	- extra spaces between words
 # 	- a query where no documents satisfy the query
 # These tests are all contained in the testquery file
-./querier testing/letters-depth-5 testing/indexerResults/letters5Index < testquery
+./querier testing/letters-depth-5 testing/indexerResults/letters5Index < queryTest
 echo "Exit status of test with testquery file: $?"
 
 # Testing the querier with a series of queries for letter-depth-5
 # to test its functionality
-./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-index testing/indexerResults/letters5Index
+./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-depth-5 testing/indexerResults/letters5Index
 echo "Exit status of letters-index-5: $?"
 
 # Testing the querier with a series of queries for wikipedia-depth-2
 # To test the speed of queries on larger indexes
-./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/ testing/indexerResults/letters5Index
+./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
 echo "Exit status of wikipedia-index-2: $?"
 
 exit 0

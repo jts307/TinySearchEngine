@@ -274,24 +274,21 @@ const char *getPageURL(const char *pageDir, int id)
   if ((filePath = getFilePath(pageDir, stringId)) != NULL) {
     // opening the file for reading
     if ((fp = fopen(filePath, "r")) != NULL) {
-      count_free(stringId);
-
       // reading first line of file for url
       url=freadlinep(fp);
-
       fclose(fp);
-      return url;
 
     // on error log it 
     } else {
       fprintf(stderr, "%s is not a readable or existing file\n", filePath);
     }
+    count_free(filePath);
   // on error log it
   } else {
     fprintf(stderr, "Trouble creating file path for document %s in %s\n", stringId, pageDir);
   }
   count_free(stringId);
-  return NULL;
+  return url;
 }
 
 /* Used to get create a file path inside a directory.
