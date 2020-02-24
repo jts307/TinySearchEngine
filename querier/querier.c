@@ -1,20 +1,24 @@
 /* 
  * querier.c - Answers queries from stdin based on the passed crawler directory and index file.
- *	       Queries must have the syntax described in the DESIGN.md for this program. 
+ *	       It prints to stdout all documents, if any, that match a given query.
  * usage: querier [pageDirectory] [indexFilename]
  * input:
- * 	- pageDirectory: pathname of a directory produced by the Crawler
- * 	- indexFilename: pathname of a file produced by the Indexer
- *	- Queries to standard input
+ * 	- pageDirectory: pathname of a directory produced by the Crawler, must have
+ *	  crawler files in proper crawler syntax.
+ * 	- indexFilename: pathname of a file produced by the Indexer, must be in 
+ *	  index file format.
+ *	- Queries to standard input, must have the syntax described 
+ *	  in the DESIGN.md for this program. 
  * output:
- * 	- answers to queries
+ * 	- Answers to queries. Each answer will print to stdout all documents that match a query
+ *        ranked from highest to lowest by score. 
  * Exit statuses:
  *   0 - success
  *   1 - Usage Error
- *   2 - 
- *   3 - 
- *   4 - 
- *   5 - 
+ *   2 - Invalid pageDirectory
+ *   3 - non-readable IndexFilename
+ *   4 - Failure to initialize index struct
+ *   5 - Failure to load index file information into index struct
  * Created by Jacob Werzinsky, CS50, 21 February 2020
  */
 
@@ -38,7 +42,7 @@ typedef struct multiCounters {
   counters_t *ctrs2;
 } multi_counters_t;
 
-// used to store document and their
+// used to store documents and their
 // respective scores, local to this program
 typedef struct document {
   int id;
@@ -119,21 +123,30 @@ int main(const int argc, const char *argv[])
 		  printf("%s ", cleanedInput[i]);
 		}
 		printf("\n");
-                	
+                
+		// finding all documents that match the query and each of their scores
 		if ((scores=calculate_scores(index, cleanedInput, 0, -1)) != NULL) {
 		    
+		  // reseting total to 0
 		  total=0;	
+			
+		  // counting the number of documents that matched the query
 		  counters_iterate(scores, &total, num_counters); 
 		    
 		  if (total==0) {
 		      printf("No documents match.\n");
 		  } else {
+		      // array of sorted documents
 		      sortedScores=count_calloc(total, sizeof(document_t));
 		      assertp(sortedScores, "Error allocating memory for array of document_t.\n");
 
+		      // filling array with sorted (document, score) pairs each 
+		      // pair within a document struct, sorted by score
 		      counters_iterate(scores, sortedScores, sort_counters);
 
 		      printf("Matches %d documents (ranked):\n", total);
+			  
+		      // looping through the sorted documents
 		      for (int i=0; i<total; i++) {
       		      
 		        int id=sortedScores[i]->id;   
