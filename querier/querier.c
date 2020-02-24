@@ -1,11 +1,13 @@
 /* 
- * querier.c - 
+ * querier.c - Answers queries from stdin based on the passed crawler directory and index file.
+ *	       Queries must have the syntax described in the DESIGN.md for this program. 
  * usage: querier [pageDirectory] [indexFilename]
  * input:
  * 	- pageDirectory: pathname of a directory produced by the Crawler
  * 	- indexFilename: pathname of a file produced by the Indexer
+ *	- Queries to standard input
  * output:
- * 	
+ * 	- answers to queries
  * Exit statuses:
  *   0 - success
  *   1 - Usage Error
