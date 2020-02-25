@@ -21,9 +21,7 @@ querier [pageDirectory] [IndexFilename]
 
 ### Assumptions
 
-- When printing the documents ids and their scores to standard output, I assumed a maximum of four digits for each field. Any   
-  more will not be printed. This can be easily changed by increasing the digit padding the printf statement for the documents    
-  and their scores uses.
+- When printing the documents ids and their scores to standard output, I assumed a maximum of four digits for each field. Anymore will not be printed. This can be easily changed by increasing the digit padding the printf statement for the documents    and their scores uses.
 
 ### Compilation
 To compile querier, do: `make querier.o`.
