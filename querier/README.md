@@ -26,7 +26,7 @@ querier [pageDirectory] [IndexFilename]
 ### Compilation
 To compile querier, do: `make querier.o`.
 
-To compile fuzzquerier, do: `make fuzzquerier.o`.
+To compile fuzzquerier, do: `make fuzzquery.o`.
 
 To compile both, do: `make` or `make all`.
 
