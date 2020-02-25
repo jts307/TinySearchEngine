@@ -53,15 +53,17 @@ If there are no 'or' operators, then the query is looped over again from `start`
 `and_counters` then performs an 'and' operation on the two `counters struct`s returned by the calls from `calculate_scores`. This returns a combined minimum `counters_struct`, which `calculate_scores` then returns back to its caller.
 
 #### Iterate through each (docId, score) pair obtained from calculate_scores and count how many there are.
-
+*main* calls `counters_iterate` with a pointer to `int total` and `num_counters` as parameters, iterating over the `counters struct` returned from the first call to `calculate_scores`. `num_counters` counts all the occurences of docId's with non-zero counts within the `counters struct` being iterated over. This number is recorded in `int total`.
 
 #### Use the insertion sort algorithm to sort the scores obtained from calculate_scores.
-#### while there are still (docId, score) pairs
+*main* initializes a `document_t**` with enough memory to hold `total` `document struct`s. *main* then calls `counters_iterate` with `document_t**` and `sort_counters` as parameters, iterating over the `counters struct` returned by `calculate_scores`. `sort_counters` creates a `document struct` for each (docId, count) pair and stores them in decreasing order in `document_t**` using the insertion sort algorithm.
 
+#### while there are still (docId, score) pairs
+loop over the array of `document_t*`s.
 
 ##### open the document in the pageDirectory identified by a docId.
 ##### read the first line of this document, this is the url of this document.
-*main* calls the `getPageURL` function within the *page* module which reads the first line of the file referenced by a docId. This first line is the `url` within that file. 
+*main* calls the `getPageURL` function, within the *page* module, passing a `document struct`'s id and the `pageDirectory`. The function reads the first line of the file referenced by the `docId` within the `pageDirectory`. This first line is the `url` for the aforementioned `docId`.
 
 #### Print the number of matches for the query, i.e. the number of (docId, score) pairs. Print the document Ids and their scores ranked from highest to lowest. Along with the document Ids print the url obtained from step 9.
 Using the gathered `url`, array of `document_t*`, and `total`, this information is then printed to stdout through a series of `printf` statements called by *main*.
@@ -117,8 +119,7 @@ This function is used as a parameter for `counters_iterate`. As it is iterating 
 ```c
 void num_counters(void *arg, const int docId, const int count);
 ```
-This function is used as a parameter for `counters_iterate`. The `void *arg` is a `int *` which will store the number of documentId's with non-zero counts. As it is iterating over a `counters struct`, it increments the `int` pointed to by `int*`
-by 1 if a `docId` with a `count` greater than 0 is encountered.
+This function is used as a parameter for `counters_iterate`. The `void *arg` is a `int *` which will store the number of documentId's with non-zero counts. As it is iterating over a `counters struct`, it increments the `int` pointed to by `int*` by 1 if a `docId` with a `count` greater than 0 is encountered.
 
 ```c
 void sort_counters(void *arg, const int docId, const int count);
