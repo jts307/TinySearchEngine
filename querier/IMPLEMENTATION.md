@@ -5,34 +5,69 @@
 The pseudo code for the querier goes as follows: 
 
 ### Execute from the command line as shown in the User Interface.
+Parameters are passed to int main(const int argc, const char *argv[]) which then checks that there are exactly 3 arguments passed from the command line which include const char *pageDirectory and const char *indexFilename.
+
 ### Parse the command line, validate parameters, initialize index structure, and open indexFilename
-### while there are still lines a file
-#### read the first word of each line
-#### while there are still docIds and word counts that comes after that word
-##### read a docId and word count pair 
-##### insert the (word, docId, word count) into the index structure
-##### close indexFilename
+The main function then validates its parameters by making calls to `IsCrawlerDirectory` within the *pagedir* module on `const char *pageDirectory` to check if the directory is a valid crawler directory, and `fopen` with "r" option on `const char *indexFilename` to check if indexFilename is a writable file if it exists. It then calls `index_t *index_new(const int num_slots)` to initialize/allocate memory for an index structure.
+
+### Load the index from the indexFilename into an index structure and close the indexFilename
+The indexFilename file is loaded into an `index struct` defined in the *index* module. This is done 
+by `main` calling the `index_load()` method within the *index* module. Control is then returned to `main` which closes the indexFilename with `fclose`.
+
 ### while there is still input to be read from stdin 
+*main* uses `feof(stdin)` to check if an EOF is reached and continue to loop as long as one is not reached.
+
 #### read a line from the stdin, a query
+*main* calls the `readlinep` method within *file* module to read a line (`char*`) from stardard input. This line will be a query imputted by a user.
+
 #### Make sure the query follows proper query syntax
 #### lower case all letters within the query and replace all series of spaces with one space
+*main* then calls the `clean_input` function which takes the `char*` and splits it into an array of `char*` based on space delimiters. Just before a `char*` is inserted into the `char**` it is lowercased with the `normalizeWord` function from the *word* module. A null character is inserted in the last slot of the array. `clean_input` also checks whether the `char*` follows proper query syntax by examining its characters, character by character. If the proper syntax is followed a `char**` is returned, if not NULL is returned.  
+
 #### Print this version of the query to standard output
+If a `char**` is returned then this is printed using `printf` to stdout by *main*. If it is NULL then nothing is printed.
+
 #### Call a function calculate_scores on the query
+*main* then calls `calculate_scores` passing the returned `char**` and the index to it, with a start of 0 and an end of -1 to indicate to calculate scores for the whole query. `calculate_scores` returns a `counter struct` containing the (docId, score) pairs for a query.
+
+##### if there is only one word in the query then find its scores by searching the index, getting the (docId, score) pairs associated with the word, where score=count (Base Case).
+If `start` equals `end` or a null character is in the second slot of an array, then there is only one word in the query. In this case, search the `index struct` using `index_find_ctrs` to find the `counters struct` for this word. If none is found, then create a new for this word with `counters_new()` that is empty. `calculate_scores` then returns this `counters struct`.
+
 ##### search for the first occurance of an 'or' in the query, if any.
+If not, the query is then looped over starting at the `start`th element until the `end`th element (-1 indicates to continue looping until end of query). The loop continues until a `char*` with a value of 'or' is found.
+
 ###### call calculate_scores on the parts of the query seperated this 'or'.
+if an 'or' is found: `calculate_scores` is then called on twice, both times the same query `char**` and index are passed. The first call to `calculate_scores` will have a start equal to the current start and an end equal to 'or''s place in the array of `word*` - 1. The second call will have a start equal to 'or''s place + 1 and an end equal to the current end.
+
 ###### perform an 'or' operation on the scores returned for parts of the query. 
+`or_counters` then performs an 'or' operation on the two `counters struct`s returned by the calls from `calculate_scores`. This returns a combined `counters_struct`, which `calculate_scores` then returns back to its caller.
+
 ##### if there is more than one word in the sequence
 ###### call calculate_scores on the first word, other than 'and', encountered.
+If there are no 'or' operators, then the query is looped over again from `start` to `end`. The first word in the query that is found that is not 'and' has the `calculate_score` function called on it, so start=end=the first word's index in the query.
+
 ###### call calculate_scores on the rest of the words in the query.
+`calculate_score` function is called with a start of the first word's index + 1 if the next word is not 'and' or the first word's index + 2 if the next word is 'and', and an end equal to the current end.
+
 ###### perform an 'and' operation on the scores returned from 1 and 2.
-##### if there is only one word in the query then find its scores by searching the index, getting the (docId, score) pairs associated with the word, where score=count (Base Case).
+`and_counters` then performs an 'and' operation on the two `counters struct`s returned by the calls from `calculate_scores`. This returns a combined minimum `counters_struct`, which `calculate_scores` then returns back to its caller.
+
 #### Iterate through each (docId, score) pair obtained from calculate_scores and count how many there are.
+
+
 #### Use the insertion sort algorithm to sort the scores obtained from calculate_scores.
 #### while there are still (docId, score) pairs
+
+
 ##### open the document in the pageDirectory identified by a docId.
 ##### read the first line of this document, this is the url of this document.
+*main* calls the `getPageURL` function within the *page* module which reads the first line of the file referenced by a docId. This first line is the `url` within that file. 
+
 #### Print the number of matches for the query, i.e. the number of (docId, score) pairs. Print the document Ids and their scores ranked from highest to lowest. Along with the document Ids print the url obtained from step 9.
+Using the gathered `url`, array of `document_t*`, and `total`, this information is then printed to stdout through a series of `printf` statements called by *main*.
+
 ### Free memory for the index structure and any other structures used
+*main* calls the `index_delete()` method to free the memory occupied by the index structure, and frees the memory taken up by all non-index `counters struct`s and the memory taken up by the array of `document_t*` using `count_free()` from the *memory* module.
 
 ## Functions:
 
@@ -128,6 +163,8 @@ index_t *index_new(const int num_slots);
 bool index_insert(index_t *index, const char *word, const int docId, const int wordCount);
 // gets the count for a (word, document id) pair
 int index_find(index_t *index, const char *word, const int docId);
+// gets the counters struct for a word
+counters_t *index_find_ctrs(index_t *index, const char *word);
 // prints out the index structure in a human friendly format
 void index_print(index_t *index, FILE *fp);
 // frees memory taken up by index structure
