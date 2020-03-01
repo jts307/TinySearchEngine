@@ -1,116 +1,138 @@
-#!/bin/bash
-#
-# Testing script for indexer.c and indextest.c
-# Author: Jacob Werzinsky
-# Date: Feb 8, 2020
-#
-# usage: bash -v testing.sh
-# 
-# Created by Jacob Werzinsky, CS50, Winter 2020
+DATA_PARENT_DIR=../.. # modify path to specfic data directory
 
-cd ../crawler
-make
-cd ../indexer
-make
-cd ../querier
+# build querier
+# make
 
-# making testing directories, program exits without testing if it cannot create a directory
-# or if it does not already exist
-############################################################################################
-mkdir "testing"
-if [ ! -d "testing" ]
-then 
-	echo 1>&2 "Error creating directory for testing results"
-	exit 1
-fi
-mkdir "testing/letters-depth-5"
-if [ ! -d "testing/letters-depth-5" ]
-then 
-	echo 1>&2 "Error creating directory for testing results"
-	exit 1
-fi
+# # bad parameters
+./querier
+./querier ../data/data3
+./querier ../data/data3 ../data/index3 more
+./querier ../data/data
+./querier ../data/data ../data/index3
+./querier . ../data/index3
+./querier ../data/data3 /indexFile
 
-mkdir "testing/wikipedia-depth-2"
-if [ ! -d "testing/wikipedia-depth-2" ]
-then 
-	echo 1>&2 "Error creating directory for testing results"
-	exit 1
-fi
 
-mkdir "testing/indexerResults"
-if [ ! -d "testing/indexerResults" ]
-then 
-	echo 1>&2 "Error creating directory for testing results"
-	exit 1
-fi
+# ### Small test cases (12 = 1 * 12, 1 point for each)
+# #### T1: check # of arguments
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ ~cs50/data/tse-output/letters-index-6 data
 
-# Creating crawler files and index at depth 5 in the cs letters page
-#######################################################################
-../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/letters/index.html testing/letters-depth-5 5 > /dev/null 2>&1
-../indexer/indexer testing/letters-depth-5 testing/indexerResults/letters5Index > /dev/null 2>&1
+#### T2: check crawler directory
+./querier ../common $DATA_PARENT_DIR/data/letters-index-6
 
-# Creating crawler files and index with the wikipedia page at depth 2
-#####################################################################
-#../crawler/crawler http://old-www.cs.dartmouth.edu/~cs50/data/tse/wikipedia/ testing/wikipedia-depth-2 2 > /dev/null 2>&1
-#../indexer/indexer testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index > /dev/null 2>&1
+#### T3: check existence of index file
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ ../index
 
-# Testing programs with various forms of incorrect parameters
-############################################################
 
-# not three arguments
-./querier testing
-echo "Exit status of not three arguments: $?"
+### Syntax errors in query input (1 point each)
+# Run the querier with any folder names, e.g
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ $DATA_PARENT_DIR/data/tse-output/letters-index-6 <<EOF
+and Dartmouth
+or Dartmouth
+Dartmouth or
+Dartmouth and
+MIT and or Dartmouth
+Boston or and Hanover
+computer science 60
+I love computer science!
+Tiny Search-engine
+EOF
 
-# Testing with non-existent directory
-./querier hello testing/indexerResults/letters5Index
-echo "Exit status of non-existent directory: $?"
 
-# Testing with non-crawler directory
-./querier testing testing/indexerResults/letters5Index
-echo "Exit status of non-crawler directory: $?"
+### Big test cases (18 = 2 * 9, 2 points each, focus on ranking and whether the result is complete)
+#### T13-T21
+./querier $DATA_PARENT_DIR/data/toscrape-depth-1/ $DATA_PARENT_DIR/data/toscrape-index-1 <<EOF
+years
+book or story
+book and history
+art price
+music band or painting
+modern music or classical poem
+political nonfiction or modern art or humor story
+eat fat get thin or the time keeper or the black maria
+paris kitchen recipes baking or white cat bear whale or best reviews
+EOF
 
-# Testing with non-readable directory
-chmod -r testing/ 
-./querier testing/ testing/indexerResults/letters5Index 
-echo "Exit status of non-readable directory: $?"
-chmod +r testing/
 
-# Testing with non-readable file
-chmod -r testing/indexerResults/letters5Index
-./querier testing/letters-depth-5 testing/indexerResults/letters5Index
-echo "Exit status of non-readable file: $?"
-chmod +r testing/indexerResults/letters5Index
+# fuzz testing
 
-# Testing with non-valid file path
-./querier testing/letters-depth-5 testing5/indexfile
-echo "Exit status of non-valid file path: $?"
+#./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 10000 0 | ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 > /dev/null && echo success || echo failed
 
-# Testing with empty crawler directory
-touch testing/.crawler
-./fuzzquery testing/indexerResults/letters5Index 3 1 | ./querier testing/ testing/indexerResults/letters5Index
-echo "Exit status of empty crawler directory: $?"
-rm -f testing/.crawler
 
-# Testing various forms of query imputs:
-#	- invalid characters, i.e. non-alphabetic and non-space.
-#	- operators at the beginning and end of queries
-#	- operators adjacent to each other in a query
-#	- empty query
-#	- capitalized characters
-#	- extra spaces between words
-# 	- a query where no documents satisfy the query
-# These tests are all contained in the testquery file
-./querier testing/letters-depth-5 testing/indexerResults/letters5Index < queryTest
-echo "Exit status of test with testquery file: $?"
+# Memory-leak testing
+VALGRIND='valgrind --leak-check=full --show-leak-kinds=all'
 
-# Testing the querier with a series of queries for letter-depth-5
-# to test its functionality
-./fuzzquery testing/indexerResults/letters5Index 20 2 | ./querier testing/letters-depth-5 testing/indexerResults/letters5Index
-echo "Exit status of letters-index-5: $?"
+$VALGRIND  ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 >/dev/null
 
-# Testing the querier with a series of queries for wikipedia-depth-2
-# To test the speed of queries on larger indexes
-#./fuzzquery testing/indexerResults/wikipedia2Index 20 1 | ./querier testing/wikipedia-depth-2 testing/indexerResults/wikipedia2Index
-#echo "Exit status of wikipedia-index-2: $?"
+#$VALGRIND  ./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 100 0 >/dev/null
 
-exit 0
+#./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 10000 0 | $VALGRIND ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 > /dev/null
+DATA_PARENT_DIR=../.. # modify path to specfic data directory
+
+# build querier
+# make
+
+# # bad parameters
+# ./querier
+# ./querier ../data/data3
+# ./querier ../data/data3 ../data/index3 more
+# ./querier ../data/data
+# ./querier ../data/data ../data/index3
+# ./querier . ../data/index3
+# ./querier ../data/data3 /indexFile
+
+
+# ### Small test cases (12 = 1 * 12, 1 point for each)
+# #### T1: check # of arguments
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ ~cs50/data/tse-output/letters-index-6 data
+
+#### T2: check crawler directory
+./querier ../common $DATA_PARENT_DIR/data/letters-index-6
+
+#### T3: check existence of index file
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ ../index
+
+
+### Syntax errors in query input (1 point each)
+# Run the querier with any folder names, e.g
+./querier $DATA_PARENT_DIR/data/letters-depth-6/ $DATA_PARENT_DIR/data/tse-output/letters-index-6 <<EOF
+and Dartmouth
+or Dartmouth
+Dartmouth or
+Dartmouth and
+MIT and or Dartmouth
+Boston or and Hanover
+computer science 60
+I love computer science!
+Tiny Search-engine
+EOF
+
+
+### Big test cases (18 = 2 * 9, 2 points each, focus on ranking and whether the result is complete)
+#### T13-T21
+./querier $DATA_PARENT_DIR/data/toscrape-depth-1/ $DATA_PARENT_DIR/data/toscrape-index-1 <<EOF
+years
+book or story
+book and history
+art price
+music band or painting
+modern music or classical poem
+political nonfiction or modern art or humor story
+eat fat get thin or the time keeper or the black maria
+paris kitchen recipes baking or white cat bear whale or best reviews
+EOF
+
+
+# fuzz testing
+
+#./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 10000 0 | ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 > /dev/null && echo success || echo failed
+
+
+# Memory-leak testing
+VALGRIND='valgrind --leak-check=full --show-leak-kinds=all'
+
+$VALGRIND  ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 >/dev/null
+
+#$VALGRIND  ./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 100 0 >/dev/null
+
+#./fuzzquery $DATA_PARENT_DIR/data/toscrape-index-2 10000 0 | $VALGRIND ./querier $DATA_PARENT_DIR/data/toscrape-depth-2 $DATA_PARENT_DIR/data/toscrape-index-2 > /dev/null
